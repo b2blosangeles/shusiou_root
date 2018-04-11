@@ -14,7 +14,13 @@ pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
                 result_a.push(o);
             }
         }
-        
+        if (result_a.length) {
+          /*
+              pkg.exec('shutdown -r +1', function(error, stdout, stderr) {
+                res.send('Server will be reboot in 1 minute!');
+              });
+         */     
+        }
         res.send({status:'success', result_a:result_a, data:watch});
   }
 });	
