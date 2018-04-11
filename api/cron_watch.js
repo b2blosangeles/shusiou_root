@@ -19,7 +19,7 @@ pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
                     pkg.exec('shutdown -r +1', function(error, stdout, stderr) {
                       res.send('Server will be reboot in 1 minute!');
                     });
-                     pkg.fs.appendFile('/var/log/cron_watch.js.log', "\n"+new Date() + ">>\n" + JSON.stringify(result_a), function (err) {
+                     pkg.fs.appendFile('/var/log/cron_watch.js.log', "\n\n"+new Date() + ">>\n" + JSON.stringify(result_a), function (err) {
                           if (err) throw err;
                           console.log('Saved!');
                      });                
