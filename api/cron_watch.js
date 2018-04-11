@@ -12,7 +12,7 @@ pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
             
             let t2 = (watch[o].mark) ? 'new Data(watch[o].mark).getTime()' : null;
             let scheduled = watch[o].scheduled;
-            if ((t1) && (scheduled) && (t2 - t1) > (scheduled * 3)) {
+            if ((t1) && (scheduled) && (t2 - t1) > (scheduled * 3 * 1000)) {
                 result_a.push(o);
             }
             
