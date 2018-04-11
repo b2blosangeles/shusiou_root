@@ -5,7 +5,7 @@ let watch_cron_inc = require(__dirname + '/watch_cron.inc.js'),
 watchCron.load('root', 60);
 
 /* --- code for audit ---*/
-/*
+
 let path = require('path'), 
     env = {root_path:path.join(__dirname, '../../..'), config_path:  '/var/qalet_config'};   
 env.site_path = env.root_path + '/sites/root';
@@ -162,4 +162,4 @@ CP.serial(
 		process.stdout.write(JSON.stringify(data.results));		
 	}, 30000
 );
-*/
+
