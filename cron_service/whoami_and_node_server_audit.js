@@ -45,6 +45,7 @@ _f['root_server'] = function(cbk) {
 }
 
 /* get remote server list */
+/*
 _f['servers'] = function(cbk) {
 	let connection = mysql.createConnection(cfg0)
 	connection.connect();
@@ -64,7 +65,7 @@ _f['servers'] = function(cbk) {
 		cbk(list);
 	});	
 }	
-/* scan remote servers */ 
+// scan remote servers 
 _f['scan_server_status'] = function(cbk) {
 	let list = CP.data.servers,
 	    CP1 = new crowdProcess(), 
@@ -160,3 +161,4 @@ CP.serial(
 		process.stdout.write(JSON.stringify(data.results));		
 	}, 30000
 );
+*/
