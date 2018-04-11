@@ -6,43 +6,24 @@ pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
         var watch = {};
         try { watch = JSON.parse(data);} catch (e) {}
         var result_a = [];
-        /*
+  
         for (var o in watch) {
-            let t1 = (watch[o].start) ? new Data(watch[o].start).getTime() : null;
-            let t2 = (watch[o].mark) ? new Data(watch[o].mark).getTime() : null;
+            let t = (watch[o].mark) ? new Date(watch[o].mark).getTime() : null;
             let scheduled = watch[o].scheduled;
-            if ((t1) && (scheduled) && (t2 - t1 > scheduled * 3)) {
+            if ((t) && (scheduled) && (new Date().getTime() - t) > (scheduled * 5 * 1000)) {
                 result_a.push(o);
             }
         }
-        */
-        res.send({status:'success', result_a:result_a, data:data});
-  }
-});	
-/*
-pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
-  if (err){
-      res.send(err.message);
-  } else {
-        var watch = {};
-        try { watch = JSON.parse(data);} catch (e) {}
-        if (watch.start) {
-            res.send('skip!');
-        } else if ((watch.mark)) {
-            var d = new Date().getTime() - new Date(watch.mark).getTime();
-            if (d > 180000) {
-                var watch0 = {start:new Date(), mark:new Date()};
-                pkg.fs.writeFile('/var/.qalet_cron_watch.data', JSON.stringify(watch0), function (err) {
-                    pkg.exec('shutdown -r +1', function(error, stdout, stderr) {
-                      res.send('Server will be reboot in 1 minute!');
-                    });             
-                });
-            } else {
-                res.send('normal');
-            }
+        if (result_a.length) {
+              pkg.fs.unlink('/var/.qalet_cron_watch.data',function(err){
+                     pkg.fs.appendFile('/var/log/cron_watch.js.reboot.log', "\n\n"+new Date() + ">>\n" + JSON.stringify(result_a), function (err) {
+                        pkg.exec('shutdown -r +0', function(error, stdout, stderr) {
+                          res.send('Server will be reboot in 1 minute!');
+                        });
+                     });                
+               });    
         } else {
-            res.send({status:'error', data:data});
+            res.send({status:'success', result_a:result_a, data:watch});
         }
   }
-});	 
-*/
+});	
