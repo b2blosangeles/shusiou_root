@@ -6,6 +6,7 @@ pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
         var watch = {};
         try { watch = JSON.parse(data);} catch (e) {}
         var result_a = [];
+    /*
         for (var o in watch) {
             let t1 = (watch[o].start) ? new Data(watch[o].start).getTime() : null;
             let t2 = (watch[o].mark) ? new Data(watch[o].mark).getTime() : null;
@@ -14,6 +15,7 @@ pkg.fs.readFile('/var/.qalet_cron_watch.data', 'utf8', function(err,data) {
                 result_a.push(o);
             }
         }
+        */
         res.send({status:'success', result_a:result_a, data:watch});
   }
 });	
