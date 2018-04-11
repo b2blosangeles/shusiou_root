@@ -83,10 +83,6 @@ _f['scan_server_status'] = function(cbk) {
 					},
 					timeout: 10000
 				    }, function (error, resp, body) { 
-			//		console.log('**====>');
-			//		console.log(body);
-			//		console.log('<**====>');
-					
 					var changeStatus = function(mark, space, cbk) {
 						var a = [], audit = [], score = 0;
 						try { if (list[i].audit) a = JSON.parse(list[i].audit); } catch(e) {}
