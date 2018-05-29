@@ -16,7 +16,7 @@
 		});
 		setTimeout(
 			function() {
-				socket.emit('clientData', escape(JSON.stringify({ room: 'test_room' , data: "info..rr."})));
+				socket.emit('clientData', encodeURIComponent(JSON.stringify({ room: 'test_room' , data: "info..rr."})));
 			}, 3000
 		);
 		
