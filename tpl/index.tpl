@@ -16,7 +16,7 @@
 		});
 		setTimeout(
 			function() {
-				socket.emit('clientData', { room: 'test_room' , data: 'nicejob'});
+				socket.emit('clientData', JSON.stringify({ room: 'test_room' , data: 'nicejob'}));
 			}, 3000
 		);
 		
