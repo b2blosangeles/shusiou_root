@@ -10,13 +10,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
   	<script>
 		var socket = io.connect('/');
-		socket.emit('createRoom', 'test_room'); 
+		socket.emit('createRoom', 'testroom'); 
 		socket.on('serverData', function(data) {
 			console.log(data);
 		});
 		setTimeout(
 			function() {
-				socket.emit('clientData', encodeURIComponent(JSON.stringify({room: 'test_room' , data: 'dd'})));
+				socket.emit('clientData', encodeURIComponent(JSON.stringify({room: 'testroom' , data: 'dd'})));
 			}, 3000
 		);
 		
