@@ -11,7 +11,7 @@
   	<script>
 		var socket = io.connect('/');
 		socket.emit('createRoom', 'test_room'); 
-		socket.on(serverData', function(data) {
+		socket.on('serverData', function(data) {
 			console.log(data);
 		});
 		socket.emit('clientData', { room: 'test_room' , data: {id:1213, message:'info ...'}});
