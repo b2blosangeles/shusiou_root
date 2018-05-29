@@ -9,9 +9,6 @@
 	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
   	<script>
-		var dd = {};
-		dd.id = 1234;
-		dd.info = 'pppp';
 		var socket = io.connect('/');
 		socket.emit('createRoom', 'test_room'); 
 		socket.on('serverData', function(data) {
