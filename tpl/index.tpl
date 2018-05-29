@@ -14,7 +14,12 @@
 		socket.on('serverData', function(data) {
 			console.log(data);
 		});
-		socket.emit('clientData', { room: 'test_room' , data: 'nicejob'});
+		setTimeout(
+			function() {
+				socket.emit('clientData', { room: 'test_room' , data: 'nicejob'});
+			}, 3000
+		);
+		
     	</script>	
 	<script>
 		var _dns = {$dns},
