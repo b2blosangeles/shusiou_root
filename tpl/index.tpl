@@ -11,10 +11,10 @@
   	<script>
 		var socket = io.connect('/');
 		socket.emit('createRoom', 'test_room'); 
-		socket.on('announcements', function(data) {
-			console.log('Got announcement:', data.message);
+		socket.on('serverData', function(data) {
+			console.log(data);
 		});
-		socket.emit('event', { message: 'some data' });
+		socket.emit('clientData', { room: 'test_room' , data: {id:1213, message:'info ...'}});
     	</script>	
 	<script>
 		var _dns = {$dns},
