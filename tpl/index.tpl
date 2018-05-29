@@ -16,7 +16,7 @@
 		});
 		setTimeout(
 			function() {
-				socket.emit('clientData', JSON.stringify({ room: 'test_room' , data: {"idv":"123", "info":"info..."}}));
+				socket.emit('clientData', JSON.stringify({ room: 'test_room' , data: "info..."}));
 			}, 3000
 		);
 		
