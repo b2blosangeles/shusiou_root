@@ -29,8 +29,7 @@ connection.query(str, function (error, results, fields) {
 		}		
 		pkg.fs.readFile(env.site_path + '/tpl/index.tpl', 'utf-8', function(err, content) {
 			var tpl = new Smarty(content);
-			let str = tpl.fetch({dns:JSON.stringify(servers), master:servers.master[Math.floor(Math.random() * servers.master.length)]});
-			res.send(str += '===');
+			res.send(tpl.fetch({dns:JSON.stringify(servers), master:servers.master[Math.floor(Math.random() * servers.master.length)]}));
 			return true;
 		});
 	}
