@@ -6,21 +6,9 @@
 	<link rel="stylesheet" href="{$master}/js/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{$master}/package/qalet_plugin.css?plus=lang_space">
 	<script src="{$master}/package/qalet_plugin.js?plus=lang_space"></script>
-	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
-  	<script>
-		var socket = io.connect('/');
-		socket.emit('createRoom', 'testroom'); 
-		socket.on('serverData', function(data) {
-			console.log(data);
-		});
-		setTimeout(
-			function() {
-				socket.emit('clientData', encodeURIComponent(JSON.stringify({room: 'testroom' , message: 'dcsf.sdf'})));
-			}, 3000
-		);
-		
-    	</script>	
+	<script src="{$master}/js/shusiou_socket.js"></script>
+	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->	
 	<script>
 		var _dns = {$dns},
 		_master_svr = function() { 
