@@ -14,7 +14,7 @@
 		socket.on('serverData', function(data) {
 			console.log(data);
 		});
-		socket.emit('clientData', { room: 'test_room' , data: {id:1213, message:'info ...'}});
+		socket.emit('clientData', { room: 'test_room' , data: {id:'1213', message:'info ...'}});
     	</script>	
 	<script>
 		var _dns = {$dns},
