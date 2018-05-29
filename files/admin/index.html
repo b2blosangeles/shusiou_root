@@ -10,16 +10,7 @@
 	<link href="package/qalet.css" rel="stylesheet">
 	<title>Admin Shusiou </title>
 	<link href="/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
-  	<script>
-		var socket = io.connect('/');
-		socket.emit('createRoom', 'test_room'); 
-		socket.on('announcements', function(data) {
-			console.log('Got announcement:', data.message);
-		});
-		socket.emit('event', { message: 'some data' });
-    </script>	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">	
 </head>
 <body>
 	<b>Server Log</b><br/>
