@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>速修语言1</title>
+    <title>速修语言</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="{$master}/js/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{$master}/package/qalet_plugin.css?plus=lang_space">
@@ -14,7 +14,7 @@
 		socket.on('serverData', function(data) {
 			console.log(data);
 		});
-		socket.emit('clientData', { room: 'test_room' , data: {id:'1213', message:'info ...'}});
+		socket.emit('clientData', { room: 'test_room' , data: {id:"1213", message:"info ..."}});
     	</script>	
 	<script>
 		var _dns = {$dns},
