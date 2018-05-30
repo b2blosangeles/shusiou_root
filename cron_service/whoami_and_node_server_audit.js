@@ -13,6 +13,21 @@ let config = require(env.config_path + '/config.json');
 let mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
     cfg0 = config.db;
 
+/* -------------*/
+delete require.cache[env.root_path + '/api/inc/socketNodeClient/socketNodeClient.js'];
+var socketNodeClient = require(env.root_path + '/api/inc/socketNodeClient/socketNodeClient.js');
+var socketClient = new socketNodeClient('https://' + config.root + '/');
+
+socketClient.sendToRoom(
+    'VID_NIU',
+    {x:new Date(), Y:70},
+    function(data) {
+	// res.send(data);
+    }
+);
+/* -------------*/
+
+
 var crowdProcess =  require(env.root_path + '/package/crowdProcess/crowdProcess');
 var request = require(env.root_path + '/package/request/node_modules/request');	
 
