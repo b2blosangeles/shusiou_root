@@ -14,9 +14,9 @@ let mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
     cfg0 = config.db;
 
 /* -------------*/
-/*
-delete require.cache[env.root_path + '/api/inc/socketNodeClient/socketNodeClient.js'];
-var socketNodeClient = require(env.root_path + '/api/inc/socketNodeClient/socketNodeClient.js');
+
+delete require.cache[env.root_path + '/sites/master/api/inc/socketNodeClient/socketNodeClient.js'];
+var socketNodeClient = require(env.root_path + '/sites/master/api/inc/socketNodeClient/socketNodeClient.js');
 var socketClient = new socketNodeClient('https://' + config.root + '/');
 
 socketClient.sendToRoom(
@@ -26,7 +26,7 @@ socketClient.sendToRoom(
 	// res.send(data);
     }
 );
-*/
+
 /* -------------*/
 
 
