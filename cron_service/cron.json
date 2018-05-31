@@ -1,3 +1,3 @@
 [
-	{"id":"_node_audit","schedule":"10 * * * * *", "script":"whoami_and_node_server_audit.js"}
+	{"id":"_node_audit","schedule":"10 * * * * *", "script":"whoami_and_node_server_auditA.js"}
 ]
