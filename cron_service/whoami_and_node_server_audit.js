@@ -13,6 +13,19 @@ let config = require(env.config_path + '/config.json');
 let mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
     cfg0 = config.db;
 
+/* --- code for audit ---*/
+
+let path = require('path'), 
+    env = {root_path:path.join(__dirname, '../../..'), config_path:  '/var/qalet_config'};   
+
+env.site_path = env.root_path + '/sites/root';
+let config = require(env.config_path + '/config.json');
+let mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
+    cfg0 = config.db;
+
+/* -------------*/
+
+
 var crowdProcess =  require(env.root_path + '/package/crowdProcess/crowdProcess');
 var request = require(env.root_path + '/package/request/node_modules/request');	
 
