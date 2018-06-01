@@ -16,7 +16,7 @@ let mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
 /* --- code for audit ---*/
 
 /* -------------*/
-/*
+
 delete require.cache[env.root_path + '/sites/master/api/inc/socketNodeClient/socketNodeClient.js'];
 var socketNodeClient = require(env.root_path + '/sites/master/api/inc/socketNodeClient/socketNodeClient.js');
 var socketClient = new socketNodeClient('https://dev.shusiou.win/');
@@ -28,7 +28,7 @@ socketClient.sendToRoom(
 	// res.send(data);
     }
 );
-*/
+
 /* -------------*/
 
 
