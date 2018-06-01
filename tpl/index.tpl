@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>速修语言</title>
+    <title>速修语言A</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="{$master}/js/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{$master}/package/qalet_plugin.css?plus=lang_space">
