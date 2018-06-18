@@ -17,6 +17,9 @@
 		_node_svr = function() { 
 			return _dns.node[Math.floor(Math.random() * _dns.node.length)];
 		};
+		_comm_svr = function() { 
+			return _dns.comm[Math.floor(Math.random() * _dns.comm.length)];
+		};		
 	</script>
 </head>
 <body>
