@@ -7,6 +7,8 @@ let ip = req.body.ip, space = req.body.space, server_type = req.body.server_type
 
 if (server_type === 'master') {
 	server_type_str = '`cloud_master`';
+} else if (server_type === 'comm') {
+	server_type_str = '`cloud_comm`';
 } else if  (server_type === 'node') {
 	server_type_str = '`cloud_node`';
 } else {
