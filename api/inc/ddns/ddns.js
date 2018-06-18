@@ -3,7 +3,7 @@
 		this.validateIPaddress = function (ip)  {
 			let patt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 			return (patt.test(ip)) ?  true : false;
-  		}		
+  		}
 		this.sendNodeNamedIP = function(name, key, req, res) {
 			let me = this, k;
 			 if (isNaN(key) || key === '0') { 
@@ -19,6 +19,56 @@
 				cfg0 = config.db;
 				let ips = [];
 				var str = 'SELECT `ip` from `cloud_node` WHERE `score` < 900 ORDER BY `ip` ASC ';
+				var connection = mysql.createConnection(cfg0);
+				connection.connect();
+				connection.query(str, function (error, results, fields) {
+					connection.end();
+					if (error) {
+						return true;
+					} else {
+						if (results) {
+							for (var i = 0; i < results.length; i++) {
+								ips[ips.length] =  results[i].ip;
+							}
+						} else {
+						}
+
+					}
+					_dns.n.list = ips;
+					_dns.n.tm = new Date().getTime();
+					me.send([{ 
+						name: name,
+						type: 'A',
+						class: 'IN',
+						ttl: 60,
+						data: ips[k]
+					}], req, res);
+				});
+			} else {
+				me.send([{ 
+					name: name,
+					type: 'A',
+					class: 'IN',
+					ttl: 60,
+					data: _dns.n.list[k]
+				}], req, res);			
+			}
+		};		
+		this.sendCommNamedIP = function(name, key, req, res) {
+			let me = this, k;
+			 if (isNaN(key) || key === '0') { 
+			 	res.end(); 
+				return true;
+			} else {
+				k = parseInt(key) - 1;
+			}
+		
+			if (!_dns.n.list.length || (new Date().getTime() - _dns.n.tm) > 60000 ) {
+				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
+				config = require(env.config_path + '/config.json'),
+				cfg0 = config.db;
+				let ips = [];
+				var str = 'SELECT `ip` from `cloud_comm` WHERE `score` < 900 ORDER BY `ip` ASC ';
 				var connection = mysql.createConnection(cfg0);
 				connection.connect();
 				connection.query(str, function (error, results, fields) {
@@ -117,6 +167,7 @@
 				    ip: /^IP\_([0-9\_]+)\.service\./ig,
 				    idx:/node([0-9]+)\.service\./ig,
 				    node:/node([0-9]+)\.service\./ig,
+				    comm:/comm([0-9]+)\.service\./ig,
 				    master:/master([0-9]+)\.service\./ig
 			    },	    
 			    mh = '', m;		
@@ -160,6 +211,10 @@
 				case 'node':
 					m = new RegExp(patt[mh]).exec(question.name);
 					me.sendNodeNamedIP(question.name, m[1], req, res);
+					break;
+				case 'comm':
+					m = new RegExp(patt[mh]).exec(question.name);
+					me.sendCommNamedIP(question.name, m[1], req, res);
 					break;
 				case 'master':	
 					m = new RegExp(patt[mh]).exec(question.name);

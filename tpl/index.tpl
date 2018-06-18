@@ -9,13 +9,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
 	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->	
 	<script>
-		var _dns = {$dns},
+		var _dns = {$dns};
 		_master_svr = function() { 
 			return _dns.master[Math.floor(Math.random() * _dns.master.length)];
 		},
 		_node_svr = function() { 
 			return _dns.node[Math.floor(Math.random() * _dns.node.length)];
 		};
+		_comm_svr = function() { 
+			return _dns.comm[Math.floor(Math.random() * _dns.comm.length)];
+		};		
 	</script>
 </head>
 <body>

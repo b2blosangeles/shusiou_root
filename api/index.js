@@ -9,6 +9,7 @@ var cfg0 = config.db;
 var connection = mysql.createConnection(cfg0);
 connection.connect();
 let str = 'SELECT `ip` IP, "node" TP FROM `cloud_node` WHERE `score` < 900 UNION '+
+    	'SELECT `ip` IP, "comm" TP FROM `cloud_comm` WHERE `score` < 900 UNION '+
 	'SELECT `ip` IP,  "master" TP FROM `cloud_master`  WHERE `score` < 900 ';
 
 connection.query(str, function (error, results, fields) {

@@ -67,7 +67,8 @@ _f['root_server'] = function(cbk) {
 _f['servers'] = function(cbk) {
 	let connection = mysql.createConnection(cfg0)
 	connection.connect();
-	let str = "SELECT `ip` IP, `audit`, 'node' TP FROM `cloud_node` UNION SELECT `ip` IP,  `audit`, 'master' TP FROM `cloud_master`";
+	let str = "SELECT `ip` IP, `audit`, 'node' TP FROM `cloud_node` UNION SELECT `ip` IP,  `audit`, 'master' TP FROM `cloud_master` " +
+	    " UNION SELECT `ip` IP, `audit`, 'comm' TP FROM `cloud_comm`";
 	connection.query(str, function (error, results, fields) {
 		connection.end();
 		var list = [];
@@ -122,6 +123,8 @@ _f['scan_server_status'] = function(cbk) {
 							server_type_str = '`cloud_master`';
 						} else if  (list[i].tp === 'node') {
 							server_type_str = '`cloud_node`';
+						} else if  (list[i].tp === 'comm') {
+							server_type_str = '`cloud_comm`';
 						} else {
 							cbk(false);
 							return true;
