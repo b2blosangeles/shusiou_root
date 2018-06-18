@@ -167,7 +167,7 @@
 				    ip: /^IP\_([0-9\_]+)\.service\./ig,
 				    idx:/node([0-9]+)\.service\./ig,
 				    node:/node([0-9]+)\.service\./ig,
-				    node:/comm([0-9]+)\.service\./ig,
+				    comm:/comm([0-9]+)\.service\./ig,
 				    master:/master([0-9]+)\.service\./ig
 			    },	    
 			    mh = '', m;		
