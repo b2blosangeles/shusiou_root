@@ -214,7 +214,7 @@
 					break;
 				case 'comm':
 					m = new RegExp(patt[mh]).exec(question.name);
-					me.sendNodeCommIP(question.name, m[1], req, res);
+					me.sendCommNamedIP(question.name, m[1], req, res);
 					break;
 				case 'master':	
 					m = new RegExp(patt[mh]).exec(question.name);
