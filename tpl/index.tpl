@@ -10,7 +10,6 @@
 	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->	
 	<script>
 		var _dns = {$dns};
-		console.log(_dns);
 		_master_svr = function() { 
 			return _dns.master[Math.floor(Math.random() * _dns.master.length)];
 		},
