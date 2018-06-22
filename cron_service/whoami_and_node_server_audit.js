@@ -16,15 +16,13 @@ let mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
 /* --- code for audit ---*/
 
 /* ------ test code -------*/
-delete require.cache[env.site_path + '/api/inc/socketNodeClient/socketNodeClient.js'];
-var socketNodeClient = require(env.site_path + '/api/inc/socketNodeClient/socketNodeClient.js');
-var socketClient = new socketNodeClient(
-	{link:'https://comm1.service.dev.shusiou.win/'}, 
-	env);
+delete require.cache[env.root_path + '/sites/master/api/inc/socketNodeClient/socketNodeClient.js'];
+var socketNodeClient = require(env.root_path + '/sites/master/api/inc/socketNodeClient/socketNodeClient.js');
 
 var socketClient = new socketNodeClient(
 	{link:'https://comm1.service.dev.shusiou.win/'}, 
 	env);
+
 
 socketClient.sendToRoom(
     'CRON_REPORT',
