@@ -23,6 +23,7 @@ var socketClient = new socketNodeClient(
 	{link:'https://comm1.service.dev.shusiou.win/'}, 
 	env);
 
+
 socketClient.sendToRoom(
     'CRON_REPORT',
     {x:new Date(), Y:70},
