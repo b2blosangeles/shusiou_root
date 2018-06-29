@@ -18,7 +18,8 @@
 		};
 		_comm_svr = function() { 
 			return _dns.comm[Math.floor(Math.random() * _dns.comm.length)];
-		};		
+		};
+		console.log({$comm});
 	</script>
 </head>
 <body>
