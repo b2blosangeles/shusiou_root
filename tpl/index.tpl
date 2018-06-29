@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="{$master}/js/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{$master}/package/qalet_plugin.css?plus=lang_space">
 	<script src="{$master}/package/qalet_plugin.js?plus=lang_space"></script>
+	<script src="{$comm}/js/qna.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
 	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->	
 	<script>
@@ -19,7 +20,6 @@
 		_comm_svr = function() { 
 			return _dns.comm[Math.floor(Math.random() * _dns.comm.length)];
 		};
-		console.log("{$comm}");
 	</script>
 </head>
 <body>
