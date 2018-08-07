@@ -1,1 +1,18 @@
-test
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      HTML Media Capture
+    </title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  </head>
+  <body>
+        <device type="media" onchange="update(this.data)"></device>
+        <video autoplay></video>
+        <script>
+          function update(stream) {
+            document.querySelector('video').src = stream.url;
+          }
+        </script>
+</body>
+</html>
