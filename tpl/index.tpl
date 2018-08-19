@@ -20,6 +20,9 @@
 		_comm_svr = function() { 
 			return _dns.comm[Math.floor(Math.random() * _dns.comm.length)];
 		};
+		_hub = function(url) {
+			return 'https://comm1.service.dev.shusiou.win/hub.api?url=' + encodeURIComponent(url);
+		}
 	</script>
 </head>
 <body>
