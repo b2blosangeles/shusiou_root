@@ -3,7 +3,7 @@
 		
 		this.ttl = 6;
 		this.config = require(env.config_path + '/config.json');
-		this.cfg0 = config.db;
+		this.cfg0 = this.config.db;
 		
 		this.validateIPaddress = function (ip)  {
 			let patt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
