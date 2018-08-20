@@ -253,7 +253,7 @@
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						 data:  ns_ip
+						data:  null
 						
 					}], req, res);	
 					// data : '167.99.50.202'
