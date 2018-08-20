@@ -168,7 +168,8 @@
 				    idx:/node([0-9]+)\.service\./ig,
 				    node:/node([0-9]+)\.service\./ig,
 				    comm:/comm([0-9]+)\.service\./ig,
-				    master:/master([0-9]+)\.service\./ig
+				    master:/master([0-9]+)\.service\./ig,
+				    db:/^db\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
 			    },	    
 			    mh = '', m;		
 			console.log(question.name + '===' + ns_ip);
