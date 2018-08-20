@@ -218,7 +218,32 @@
 		
 		this.sendRecord = function(req, res) {
 			let me = this;
-			me.mapping(req, res);
+			if (!me.DNS || typeof me.DNS !== 'object') {
+				me.DNS = {};
+				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
+				config = require(env.config_path + '/config.json'),
+				cfg0 = config.db;
+				cfg0.database = 'shusiou';
+				var str = 'SELECT `ip`, `name` from `DNS` WHERE 1';
+				var connection = mysql.createConnection(cfg0);
+				connection.connect();
+				connection.query(str, function (error, results, fields) {
+					connection.end();
+					if (error) {
+						return true;
+					} else {
+						if (results) {
+							for (var i = 0; i < results.length; i++) {
+								me.DNS['name'] =  results[i].ip;
+							}
+						}
+						console.log(me.DNS);
+						me.mapping(req, res);
+					}
+				});			
+			} else {
+				me.mapping(req, res);
+			}
 		};
 		this.mapping = function(req, res) {
 			let me = this, question = req.question[0], 
