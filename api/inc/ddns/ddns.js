@@ -236,8 +236,8 @@
 						class: 'IN',
 						ttl: 6,
 						data : ns_ip
-						// data: '167.99.50.203'
-					}], req, res);					
+					}], req, res);	
+					// data: '167.99.50.203'
 			}
 		};	
 	};
