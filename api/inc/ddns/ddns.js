@@ -77,8 +77,6 @@
 				k = parseInt(key) - 1;
 			}
 			
-			if ((_dns) && (_dns.m))console.log(_dns);
-			
 			if (!_dns.c.list.length || (new Date().getTime() - _dns.c.tm) > 60000 ) {
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
