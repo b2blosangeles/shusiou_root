@@ -1,5 +1,6 @@
 (function () { 
 	var obj =  function (env, _dns, ns_ip) {
+		this.ttl = 6;
 		this.validateIPaddress = function (ip)  {
 			let patt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 			return (patt.test(ip)) ?  true : false;
@@ -238,7 +239,7 @@
 						name: question.name,
 						type: 'A',
 						class: 'IN',
-						ttl: 60,
+						ttl: me.ttl,
 						data: cfg0.host
 					}], req, res);				
 					break;					
@@ -247,7 +248,7 @@
 						name: question.name,
 						type: 'A',
 						class: 'IN',
-						ttl: 6,
+						ttl: me.ttl,
 						 data:  ns_ip
 						
 					}], req, res);	
