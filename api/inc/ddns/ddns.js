@@ -171,7 +171,8 @@
 				    master:/master([0-9]+)\.service\./ig,
 				    db:/^db\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
 			    },	    
-			    mh = '', m;		
+			    mh = '', m;	
+			
 			console.log(question.name + '===' + ns_ip);
 			/* -- for special domain */
 			/*
@@ -230,6 +231,17 @@
 						data: ns_ip
 					}], req, res);				
 					break;
+				case 'db': 
+					let config = require(env.config_path + '/config.json'),
+					cfg0 = config.db;
+					me.send([{ 
+						name: question.name,
+						type: 'A',
+						class: 'IN',
+						ttl: 60,
+						data: cfg0.host
+					}], req, res);				
+					break;					
 				default:
 					me.send([{ 
 						name: question.name,
