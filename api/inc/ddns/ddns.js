@@ -239,7 +239,6 @@
 								}	
 							}
 						}
-						console.log(me.DNS);
 						me.mapping(req, res);
 					}
 				});			
@@ -250,11 +249,11 @@
 		this.mapping = function(req, res) {
 			let me = this, question = req.question[0], 
 			    patt = {
-				    ip: /^IP\_([0-9\_]+)\.service\./ig,
-				    idx:/node([0-9]+)\.service\./ig,
-				    node:/node([0-9]+)\.service\./ig,
-				    comm:/comm([0-9]+)\.service\./ig,
-				    master:/master([0-9]+)\.service\./ig,
+				    ip: /^IP\_([0-9\_]+)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    idx:/node([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    node:/node([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    comm:/comm([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    master:/master([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
 				    db:/^db\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
 				    dns:/^(dev[0-9]+\.|dev\.|qa[0-9]+\.|qa\.|www\.|)([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
