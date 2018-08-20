@@ -244,7 +244,7 @@
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						data: this.cfg0.host
+						data: me.cfg0.host
 					}], req, res);				
 					break;					
 				default:
