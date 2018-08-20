@@ -302,7 +302,7 @@
 				case 'type':
 					m = new RegExp(patt[mh]).exec(question.name);
 					console.log(m);
-					me.sendNodeNamedIP(m[1], question.name, m[2], m[3], req, res);
+					me.sendTypeNamedIP(m[1], question.name, m[2], m[3], req, res);
 					break;
 					/*
 				case 'comm':
