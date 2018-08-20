@@ -64,7 +64,8 @@
 					data: _dns[tp].list[k]
 				}], req, res);			
 			}
-		};		
+		};
+		/*
 		this.sendNodeNamedIP = function(name, key, db_env, req, res) {
 			let me = this, k;
 			if (['dev', 'qa', 'prod'].indexOf(db_env) === -1) {
@@ -229,7 +230,8 @@
 					data : _dns.m.list[k]
 				}], req, res);			
 			}
-		};		
+		};
+		*/
 		this.send = function(v, req, res) {
 			let me = this;
 			v.data =  (me.validateIPaddress(v.data)) ? v.data : null;
