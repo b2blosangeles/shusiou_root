@@ -176,6 +176,9 @@
 				    www:/^www\.([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
 			    mh = '', m;	
+	
+			let config = require(env.config_path + '/config.json'),
+			cfg0 = config.db;		
 			
 			console.log(question.name + '===' + ns_ip);
 			/* -- for special domain */
@@ -227,8 +230,6 @@
 					me.sendMasterNamedIP(question.name, m[1], req, res);
 					break;
 				case 'dev': 
-					let config = require(env.config_path + '/config.json'),
-					cfg0 = config.db;
 					me.send([{ 
 						name: question.name,
 						type: 'A',
@@ -238,8 +239,6 @@
 					}], req, res);				
 					break;					
 				case 'db': 
-					let config = require(env.config_path + '/config.json'),
-					cfg0 = config.db;
 					me.send([{ 
 						name: question.name,
 						type: 'A',
