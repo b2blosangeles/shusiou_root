@@ -313,7 +313,7 @@
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						data: me.DNS[question.name]
+						data: (me.DNS[question.name]) ? me.DNS[question.name] : null
 					}], req, res);				
 					break;	
 				case 'db': 
@@ -332,9 +332,7 @@
 						class: 'IN',
 						ttl: me.ttl,
 						data:  null
-						
 					}], req, res);	
-					// data : '167.99.50.202'
 			}
 		};	
 	};
