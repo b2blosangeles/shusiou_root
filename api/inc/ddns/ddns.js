@@ -170,7 +170,8 @@
 				    node:/node([0-9]+)\.service\./ig,
 				    comm:/comm([0-9]+)\.service\./ig,
 				    master:/master([0-9]+)\.service\./ig,
-				    db:/^db\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
+				    db:/^db\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
+				    root:/^(dev\.|qa\.|www\.|)([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
 			    },	    
 			    mh = '', m;	
 			
@@ -232,6 +233,17 @@
 						data: ns_ip
 					}], req, res);				
 					break;
+				case 'root': 
+					let config = require(env.config_path + '/config.json'),
+					cfg0 = config.db;
+					me.send([{ 
+						name: question.name,
+						type: 'A',
+						class: 'IN',
+						ttl: me.ttl,
+						data: '167.99.50.202'
+					}], req, res);				
+					break;					
 				case 'db': 
 					let config = require(env.config_path + '/config.json'),
 					cfg0 = config.db;
