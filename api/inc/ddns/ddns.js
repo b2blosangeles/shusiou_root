@@ -234,7 +234,7 @@
 					} else {
 						if (results) {
 							for (var i = 0; i < results.length; i++) {
-								me.DNS['name'] =  results[i].ip;
+								me.DNS[results[i].name] =  results[i].ip;
 							}
 						}
 						console.log(me.DNS);
