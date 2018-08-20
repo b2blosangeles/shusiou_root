@@ -171,7 +171,7 @@
 				    master:/master([0-9]+)\.service\./ig
 			    },	    
 			    mh = '', m;		
-			console.log(question.name);
+			console.log(question.name + '===' + ns_ip);
 			/* -- for special domain */
 			/*
 			delete require.cache[env.site_path + '/ddns/specialDomain.json'];
