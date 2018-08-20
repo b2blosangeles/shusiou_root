@@ -234,8 +234,8 @@
 						name: question.name,
 						type: 'A',
 						class: 'IN',
-						ttl: 60,
-						data: null
+						ttl: 6,
+						data: '167.99.50.203'
 					}], req, res);					
 			}
 		};	
