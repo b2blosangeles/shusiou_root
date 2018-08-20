@@ -218,7 +218,7 @@
 		
 		this.sendRecord = function(req, res) {
 			let me = this;
-			me.function(req, res);
+			me.mapping(req, res);
 		};
 		this.mapping = function(req, res) {
 			let me = this, question = req.question[0], 
