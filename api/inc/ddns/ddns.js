@@ -171,7 +171,9 @@
 				    comm:/comm([0-9]+)\.service\./ig,
 				    master:/master([0-9]+)\.service\./ig,
 				    db:/^db\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
-				    root:/^(dev\.|qa\.|www\.|)([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
+				    dev:/^dev\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
+				    qa:/^qa\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
+				    www:/^(www\.|)([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
 			    },	    
 			    mh = '', m;	
 			
@@ -233,7 +235,7 @@
 						data: ns_ip
 					}], req, res);				
 					break;
-				case 'root': 
+				case 'dev': 
 					let config = require(env.config_path + '/config.json'),
 					cfg0 = config.db;
 					me.send([{ 
