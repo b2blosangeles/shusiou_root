@@ -1,6 +1,10 @@
 (function () { 
 	var obj =  function (env, _dns, ns_ip) {
+		
 		this.ttl = 6;
+		this.config = require(env.config_path + '/config.json');
+		this.cfg0 = config.db;
+		
 		this.validateIPaddress = function (ip)  {
 			let patt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 			return (patt.test(ip)) ?  true : false;
@@ -175,10 +179,7 @@
 				    qa:/^qa\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
 				    www:/^www\.([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
-			    mh = '', m;	
-	
-			let config = require(env.config_path + '/config.json'),
-			cfg0 = config.db;		
+			    mh = '', m;			
 			
 			console.log(question.name + '===' + ns_ip);
 			/* -- for special domain */
@@ -244,7 +245,7 @@
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						data: cfg0.host
+						data: this.cfg0.host
 					}], req, res);				
 					break;					
 				default:
