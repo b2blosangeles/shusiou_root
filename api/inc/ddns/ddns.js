@@ -215,10 +215,9 @@
 			let me = this, question = req.question[0], 
 			    patt = {
 				    ip: /^IP\_([0-9\_]+)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
-				    idx:/node([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
-				    node:/node([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
-				    comm:/comm([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
-				    master:/master([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    node:/^node([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    comm:/^comm([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    master:/^master([0-9]+)\_(qa|dev|prod)\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
 				    db:/^db\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
 				    dns:/^(dev[0-9]+\.|dev\.|qa[0-9]+\.|qa\.|www\.|)([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
@@ -246,6 +245,7 @@
 					break;
 				case 'node':
 					m = new RegExp(patt[mh]).exec(question.name);
+					console.log(m);
 					me.sendNodeNamedIP(question.name, m[1], m[2], req, res);
 					break;
 				case 'comm':
