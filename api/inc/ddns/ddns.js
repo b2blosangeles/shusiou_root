@@ -235,10 +235,10 @@
 						type: 'A',
 						class: 'IN',
 						ttl: 6,
-						 data: '167.99.50.202'
+						 data:  ns_ip
 						
 					}], req, res);	
-					// data : ns_ip
+					// data : '167.99.50.202'
 			}
 		};	
 	};
