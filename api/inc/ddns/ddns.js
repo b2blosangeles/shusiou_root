@@ -95,8 +95,6 @@
 								}	
 							}
 						}
-						console.log('_dns.dns.DNS===>');
-						console.log(_dns.dns.DNS);
 						me.mapping(req, res);
 					}
 				});			
@@ -113,8 +111,6 @@
 				    dns:/^(dev[0-9]+\.|dev\.|qa[0-9]+\.|qa\.|www\.|)([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
 			    mh = '', m;			
-			
-			console.log(question.name + '===' + ns_ip);
 			
 			for (var key in patt) {
 				if (patt[key].test(question.name)) {
@@ -136,7 +132,6 @@
 					break;
 				case 'type':
 					m = new RegExp(patt[mh]).exec(question.name);
-					console.log(m);
 					me.sendTypeNamedIP(m[1], question.name, m[2], m[3], req, res);
 					break;
 				case 'dns': 
