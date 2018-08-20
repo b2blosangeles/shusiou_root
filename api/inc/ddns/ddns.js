@@ -9,6 +9,56 @@
 			let patt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 			return (patt.test(ip)) ?  true : false;
   		}
+		this.sendRootIP = function(name, key, req, res) {
+			let me = this, k;
+			 if (isNaN(key) || key === '0') { 
+			 	res.end(); 
+				return true;
+			} else {
+				k = parseInt(key) - 1;
+			}
+		
+			if (!_dns.n.list.length || (new Date().getTime() - _dns.n.tm) > 60000 ) {
+				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
+				config = require(env.config_path + '/config.json'),
+				cfg0 = config.db;
+				let ips = [];
+				var str = 'SELECT `ip` from `cloud_node` WHERE `score` < 900 ORDER BY `ip` ASC ';
+				var connection = mysql.createConnection(cfg0);
+				connection.connect();
+				connection.query(str, function (error, results, fields) {
+					connection.end();
+					if (error) {
+						return true;
+					} else {
+						if (results) {
+							for (var i = 0; i < results.length; i++) {
+								ips[ips.length] =  results[i].ip;
+							}
+						} else {
+						}
+
+					}
+					_dns.n.list = ips;
+					_dns.n.tm = new Date().getTime();
+					me.send([{ 
+						name: name,
+						type: 'A',
+						class: 'IN',
+						ttl: 60,
+						data: ips[k]
+					}], req, res);
+				});
+			} else {
+				me.send([{ 
+					name: name,
+					type: 'A',
+					class: 'IN',
+					ttl: 60,
+					data: _dns.n.list[k]
+				}], req, res);			
+			}
+		};			
 		this.sendNodeNamedIP = function(name, key, req, res) {
 			let me = this, k;
 			 if (isNaN(key) || key === '0') { 
@@ -167,6 +217,10 @@
 		};
 		
 		this.sendRecord = function(req, res) {
+			let me = this;
+			me.function(req, res);
+		};
+		this.mapping = function(req, res) {
 			let me = this, question = req.question[0], 
 			    patt = {
 				    ip: /^IP\_([0-9\_]+)\.service\./ig,
