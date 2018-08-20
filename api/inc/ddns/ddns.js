@@ -254,7 +254,7 @@
 				    comm:/comm([0-9]+)\.service\./ig,
 				    master:/master([0-9]+)\.service\./ig,
 				    db:/^db\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
-				    root:/^(dev\.|qa\.|www\.|)([a-z0-9]+)\.([a-z0-9]+)$/ig
+				    dns:/^(dev[0-9]+\.|dev\.|qa[0-9]+\.|qa\.|www\.|)([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
 			    mh = '', m;			
 			
@@ -307,15 +307,15 @@
 					m = new RegExp(patt[mh]).exec(question.name);
 					me.sendMasterNamedIP(question.name, m[1], req, res);
 					break;
-				case 'root': 
+				case 'dns': 
 					me.send([{ 
 						name: question.name,
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						data: '167.99.50.203'
+						data: me.DNS[question.name]
 					}], req, res);				
-					break;					
+					break;	
 				case 'db': 
 					me.send([{ 
 						name: question.name,
