@@ -9,8 +9,12 @@
 			let patt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 			return (patt.test(ip)) ?  true : false;
   		}		
-		this.sendNodeNamedIP = function(name, key, req, res) {
+		this.sendNodeNamedIP = function(name, key, db_env, req, res) {
 			let me = this, k;
+			if (['dev', 'qa', 'prod'].indexOf(db_env) === -1) {
+				res.end(); 
+				return true;
+			}
 			 if (isNaN(key) || key === '0') { 
 			 	res.end(); 
 				return true;
@@ -22,6 +26,7 @@
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
 				cfg0 = config.db;
+				cfg0.database = (db_env === 'prod') ? 'shusiou' : ('shusiou_' +  db_env);
 				let ips = [];
 				var str = 'SELECT `ip` from `cloud_node` WHERE `score` < 900 ORDER BY `ip` ASC ';
 				var connection = mysql.createConnection(cfg0);
@@ -59,8 +64,12 @@
 				}], req, res);			
 			}
 		};		
-		this.sendCommNamedIP = function(name, key, req, res) {
+		this.sendCommNamedIP = function(name, key, db_env, req, res) {
 			let me = this, k;
+			if (['dev', 'qa', 'prod'].indexOf(db_env) === -1) {
+				res.end(); 
+				return true;
+			}
 			 if (isNaN(key) || key === '0') { 
 			 	res.end(); 
 				return true;
@@ -74,6 +83,7 @@
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
 				cfg0 = config.db;
+				cfg0.database = (db_env === 'prod') ? 'shusiou' : ('shusiou_' +  db_env);
 				let ips = [];
 				var str = 'SELECT `ip` from `cloud_comm` WHERE `score` < 900 ORDER BY `ip` ASC ';
 				var connection = mysql.createConnection(cfg0);
@@ -111,9 +121,13 @@
 				}], req, res);			
 			}
 		};
-		this.sendMasterNamedIP = function(name, key, req, res) {
+		this.sendMasterNamedIP = function(name, key, db_env, req, res) {
 			let me = this, k;
-			 if (isNaN(key) || key === '0') { 
+			if (['dev', 'qa', 'prod'].indexOf(db_env) === -1) {
+				res.end(); 
+				return true;
+			}
+			if (isNaN(key) || key === '0') { 
 			 	res.end(); 
 				return true;
 			} else {
@@ -124,6 +138,7 @@
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
 				cfg0 = config.db;
+				cfg0.database = (db_env === 'prod') ? 'shusiou' : ('shusiou_' +  db_env);
 				let ips = [];
 				var str = 'SELECT `ip` from `cloud_master` WHERE `score` < 900  ORDER BY `ip` ASC ';
 				var connection = mysql.createConnection(cfg0);
@@ -233,16 +248,16 @@
 					break;
 				case 'node':
 					m = new RegExp(patt[mh]).exec(question.name);
-					me.sendNodeNamedIP(question.name, m[1], req, res);
+					me.sendNodeNamedIP(question.name, m[1], m[2], req, res);
 					break;
 				case 'comm':
 					m = new RegExp(patt[mh]).exec(question.name);
 					console.log(m);
-					me.sendCommNamedIP(question.name, m[1], req, res);
+					me.sendCommNamedIP(question.name, m[1], m[2], req, res);
 					break;
 				case 'master':	
 					m = new RegExp(patt[mh]).exec(question.name);
-					me.sendMasterNamedIP(question.name, m[1], req, res);
+					me.sendMasterNamedIP(question.name, m[1], m[2], req, res);
 					break;
 				case 'dns': 
 					me.send([{ 
