@@ -234,7 +234,9 @@
 					} else {
 						if (results) {
 							for (var i = 0; i < results.length; i++) {
-								me.DNS[results[i].name] =  results[i].ip;
+								if (me.validateIPaddress(results[i].ip)) {
+									me.DNS[results[i].name] =  results[i].ip;
+								}	
 							}
 						}
 						console.log(me.DNS);
@@ -259,22 +261,6 @@
 			    mh = '', m;			
 			
 			console.log(question.name + '===' + ns_ip);
-			/* -- for special domain */
-			/*
-			delete require.cache[env.site_path + '/ddns/specialDomain.json'];
-			this.specialNames = require(env.site_path + '/ddns/specialDomain.json');
-			if (me.specialNames[question.name]) {
-				me.send([{ 
-					name: question.name,
-					type: 'A',
-					class: 'IN',
-					ttl: 60,
-					data: me.specialNames[question.name]
-				}], req, res);	
-				return true;
-			}
-			*/
-			/* -- for special domain end */
 			
 			for (var key in patt) {
 				if (patt[key].test(question.name)) {
