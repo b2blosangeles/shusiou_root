@@ -50,7 +50,7 @@
 						name: name,
 						type: 'A',
 						class: 'IN',
-						ttl: 60,
+						ttl: me.ttl,
 						data: ips[k]
 					}], req, res);
 				});
@@ -59,7 +59,7 @@
 					name: name,
 					type: 'A',
 					class: 'IN',
-					ttl: 60,
+					ttl: me.ttl,
 					data: _dns.n.list[k]
 				}], req, res);			
 			}
@@ -105,7 +105,7 @@
 						name: name,
 						type: 'A',
 						class: 'IN',
-						ttl: 60,
+						ttl: me.ttl,
 						data: ips[k]
 					}], req, res);
 				});
@@ -114,7 +114,7 @@
 					name: name,
 					type: 'A',
 					class: 'IN',
-					ttl: 60,
+					ttl: me.ttl,
 					data: _dns.n.list[k]
 				}], req, res);			
 			}
@@ -160,7 +160,7 @@
 						name: name,
 						type: 'A',
 						class: 'IN',
-						ttl: 60,
+						ttl: me.ttl,
 						data: ips[k]
 					}], req, res);
 				});
@@ -169,7 +169,7 @@
 					name: name,
 					type: 'A',
 					class: 'IN',
-					ttl: 60,
+					ttl: me.ttl,
 					data : _dns.m.list[k]
 				}], req, res);			
 			}
@@ -183,8 +183,8 @@
 		
 		this.sendRecord = function(req, res) {
 			let me = this;
-			if (!me.DNS || typeof me.DNS !== 'object') {
-				me.DNS = {};
+			if (!_dns.dns.DNS || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
+				_dns.dns.DNS = {};
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
 				cfg0 = config.db;
@@ -200,10 +200,12 @@
 						if (results) {
 							for (var i = 0; i < results.length; i++) {
 								if (me.validateIPaddress(results[i].ip)) {
-									me.DNS[results[i].name] =  results[i].ip;
+									_dns.dns.DNS[results[i].name] =  results[i].ip;
 								}	
 							}
 						}
+						console.log('_dns.dns.DNS===>');
+						console.log(_dns.dns.DNS);
 						me.mapping(req, res);
 					}
 				});			
@@ -239,7 +241,7 @@
 						name: question.name,
 						type: 'A',
 						class: 'IN',
-						ttl: 60,
+						ttl: me.ttl,
 						data: ip
 					}], req, res);
 					break;
@@ -263,7 +265,7 @@
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						data: (me.DNS[question.name]) ? me.DNS[question.name] : null
+						data: (_dns.dns.DNS[question.name]) ? me.DNS[question.name] : null
 					}], req, res);				
 					break;	
 				case 'db': 
