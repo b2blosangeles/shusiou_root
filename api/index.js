@@ -25,7 +25,7 @@ connection.query(str, function (error, results, fields) {
 		for (let o in v) {
 			if (!servers[o]) servers[o] = [];
 			for (let j = 0; j < v[o].length; j++) {
-				servers[o].push('//' + o + (j + 1) + '.service.' + config.root );
+				servers[o].push('//' + o + (j + 1) + '_' + config.root );
 			}
 		}		
 		pkg.fs.readFile(env.site_path + '/tpl/index.tpl', 'utf-8', function(err, content) {
