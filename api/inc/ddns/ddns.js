@@ -170,10 +170,10 @@
 				    node:/node([0-9]+)\.service\./ig,
 				    comm:/comm([0-9]+)\.service\./ig,
 				    master:/master([0-9]+)\.service\./ig,
-				    db:/^db\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
-				    dev:/^dev\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
-				    qa:/^qa\.([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig,
-				    www:/^(www\.|)([a-zA-Z0-9]+)\.([a-zA-Z0-9]+)$/ig
+				    db:/^db\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    dev:/^dev\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    qa:/^qa\.([a-z0-9]+)\.([a-z0-9]+)$/ig,
+				    www:/^www\.([a-z0-9]+)\.([a-z0-9]+)$/ig
 			    },	    
 			    mh = '', m;	
 			
@@ -225,15 +225,6 @@
 				case 'master':	
 					m = new RegExp(patt[mh]).exec(question.name);
 					me.sendMasterNamedIP(question.name, m[1], req, res);
-					break;	
-				case 'www': 
-					me.send([{ 
-						name: question.name,
-						type: 'A',
-						class: 'IN',
-						ttl: 60,
-						data: ns_ip
-					}], req, res);				
 					break;
 				case 'dev': 
 					let config = require(env.config_path + '/config.json'),
