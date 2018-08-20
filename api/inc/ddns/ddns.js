@@ -115,7 +115,7 @@
 					type: 'A',
 					class: 'IN',
 					ttl: me.ttl,
-					data: _dns.n.list[k]
+					data: _dns.c.list[k]
 				}], req, res);			
 			}
 		};
