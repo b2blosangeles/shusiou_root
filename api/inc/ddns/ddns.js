@@ -75,8 +75,8 @@
 		
 		this.sendRecord = function(req, res) {
 			let me = this;
-			if (!_dns.dns.DNS || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
-				_dns.dns.DNS = {};
+			//if (!_dns.dns.DNS || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
+			//	_dns.dns.DNS = {};
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
 				cfg0 = config.db;
@@ -103,10 +103,10 @@
 						_dns.dns.tm = new Date().getTime();
 					}
 				});			
-			} else {
-				me.mapping(req, res);
-				_dns.dns.tm = new Date().getTime();
-			}
+			//} else {
+			//	me.mapping(req, res);
+			//	_dns.dns.tm = new Date().getTime();
+			//}
 		};
 		this.mapping = function(req, res) {
 			let me = this, question = req.question[0], 
