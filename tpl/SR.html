@@ -18,10 +18,11 @@
 				let cmd = cmds[i];
 				commands[cmd] = function() {
 					console.log('==correct answer AA 1');
-					annyang.end(function() {
+					annyang.abort(function() {
 						
 						console.log('==correct answer');
-					});	
+					});
+					console.log('==correct answer AA 2');
 				};
 			}
 			annyang.addCallback('end', function() {
