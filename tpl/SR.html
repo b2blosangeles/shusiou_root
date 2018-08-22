@@ -19,6 +19,7 @@
 				commands[cmd] = function() {
 					annyang.abort();
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
+					$('.status_on').removeClass('status_on').addClass('status_off');
 					
 				};
 			}
@@ -41,7 +42,8 @@
 			annyang.addCommands(commands);
 			annyang.setLanguage('en-US');
 			// annyang.start({ autoRestart: true});
-			annyang.start();		
+			annyang.start();
+			$('.status_off').removeClass('status_off').addClass('status_on');
 		}
 		
 		
