@@ -57,26 +57,10 @@
 		
 		
 		function afterConnection() {
-			setup_annyang(['good', 'nice']);
-			p.sendToRoom('niu', null, function(data) {});
-			/*
-			console.log('--- *3** ---' );
-
-			p.leaveRoom('niu', function(data) {
-				console.log('leaveRoom . ---> ');
-				console.log(data);					
-			});
-			*/
-			for (var i = 0; i < 6; i++) {
-				p.sendToRoom('niu', {niu:'N -' + i}, function(data) {
-				//	console.log('sendToSocketId . ---> ');
-				//	console.log(data);
-				});
-			}
 		};
 		
 		p.init({ 
-			link : 'https://comm1_dev.shusiou.win/',
+			link : '//{$commserver}/',
 			onConnect : function(socket) {
 				console.log('---socket.id--A->');
 				console.log(socket.id);
