@@ -91,6 +91,7 @@
 						console.log(error.message);
 						return true;
 					} else {
+						console.log('---no dns error---');
 						if (results) {
 							for (var i = 0; i < results.length; i++) {
 								if (me.validateIPaddress(results[i].ip)) {
