@@ -8,7 +8,7 @@
 	<script src="{$master}/package/qalet_plugin.js?plus=lang_space"></script>
 	<script src="{$comm}/js/qna.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
-	<!--script src="//cdnjs.cloudflare.com/ajax/l/ibs/annyang/2.6.0/annyang.min.js"></script-->	
+	<script src="/js/pingball.js"></script>	
 	<script>
 		var _dns = {$dns};
 		_master_svr = function() { 
