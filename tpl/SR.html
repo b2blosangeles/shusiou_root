@@ -69,6 +69,7 @@
 			onClientMessage : function(incomeData) {
 				if ((incomeData.data) && (incomeData.data.sr)) {
 					alert('sr coming');
+					setup_annyang(incomeData.data.sr);
 				}
 			},
 			/*
