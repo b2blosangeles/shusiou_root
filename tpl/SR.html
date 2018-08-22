@@ -67,8 +67,9 @@
 				afterConnection();
 			}, 
 			onClientMessage : function(incomeData) {
-				console.log('---onClientMessage--->');
-				console.log(incomeData);
+				if ((incomeData.data) && (incomeData.data.sr)) {
+					alert('sr coming');
+				}
 			},
 			/*
 			onClientData : function(incomeData, socket) {
