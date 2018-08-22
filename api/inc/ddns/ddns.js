@@ -67,12 +67,14 @@
 		};
 		this.send = function(v, req, res) {
 			let me = this;
-			v.data =  (me.validateIPaddress(v.data)) ? v.data : null;
+			if ((v[0]) && (v[0].data)) {
+				v[0].data =  (me.validateIPaddress(v[0].data)) ? v[0].data : null;
+			}
 			console.log('======vvvvvv======');
 			console.log(v);
-			if (v.data) {
+			// if (v.data) {
 				res.answer = v;
-			}
+			//}
 			// res.answer = (v.data) ? v : null;	
 			res.end();
 		};
