@@ -67,10 +67,9 @@
 				afterConnection();
 			}, 
 			onClientMessage : function(incomeData) {
-				console.log(incomeData);
-				if ((incomeData.data) && (incomeData.data.sr)) {
+				if ((incomeData.data) && (incomeData.data.SR)) {
 					alert('sr coming');
-					setup_annyang(incomeData.data.sr);
+					setup_annyang(incomeData.data.SR);
 				}
 			},
 			/*
