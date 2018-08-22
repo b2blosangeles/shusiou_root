@@ -17,12 +17,9 @@
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
-					console.log('==correct answer AA 1');
-					annyang.abort(function() {
-						
-						console.log('==correct answer');
-					});
-					console.log('==correct answer AA 2');
+					annyang.abort();
+					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
+					
 				};
 			}
 			annyang.addCallback('end', function() {
@@ -31,20 +28,7 @@
 			});
 			annyang.addCallback('error', function(err) {
 				console.log(err);
-				return true;
-				annyang.abort(function() {});
-				setTimeout(
-					function() {
-						console.log('--annyang.isListening()-->');
-						console.log(annyang.isListening());
-					}, 2000
-				
-				);
-						console.log('--annyang.isListening()-AA->');
-						console.log(annyang.isListening());
-				
-				alert(111);
-					
+				return true;		
 			});
 
 			annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
@@ -61,9 +45,7 @@
 		}
 		
 		
-		function afterConnection() {
-			
-		};
+		function afterConnection() {};
 		
 		p.init({ 
 			link : '//{$commlink}/',
