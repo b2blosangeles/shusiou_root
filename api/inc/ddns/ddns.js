@@ -92,6 +92,7 @@
 						return true;
 					} else {
 						console.log('---no dns error---');
+						console.log(results);
 						if (results) {
 							for (var i = 0; i < results.length; i++) {
 								if (me.validateIPaddress(results[i].ip)) {
@@ -99,6 +100,8 @@
 								}	
 							}
 						}
+						console.log('---naaao dns error---');
+						console.log(_dns.dns.DNS);
 						me.mapping(req, res);
 						_dns.dns.tm = new Date().getTime();
 					}
