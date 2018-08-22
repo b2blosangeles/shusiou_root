@@ -96,10 +96,12 @@
 							}
 						}
 						me.mapping(req, res);
+						_dns.dns.tm = new Date().getTime();
 					}
 				});			
 			} else {
 				me.mapping(req, res);
+				_dns.dns.tm = new Date().getTime();
 			}
 		};
 		this.mapping = function(req, res) {
