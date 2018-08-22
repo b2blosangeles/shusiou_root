@@ -103,9 +103,7 @@
 					}
 				});			
 			} else {
-				_dns.dns.tm = new Date().getTime();
-				me.mapping(req, res);
-				
+				me.mapping(req, res);	
 			}
 		};
 		this.mapping = function(req, res) {
