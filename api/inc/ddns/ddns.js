@@ -70,19 +70,16 @@
 			if ((v[0]) && (v[0].data)) {
 				v[0].data =  (me.validateIPaddress(v[0].data)) ? v[0].data : null;
 			}
-			console.log('======vvvvvv======');
-			console.log(v);
-			// if (v.data) {
+			if (v.data) {
 				res.answer = v;
-			//}
-			// res.answer = (v.data) ? v : null;	
+			}	
 			res.end();
 		};
 		
 		this.sendRecord = function(req, res) {
 			let me = this;
-			//if (!_dns.dns.DNS || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
-			//	_dns.dns.DNS = {};
+			if (!_dns.dns.DNS || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
+				_dns.dns.DNS = {};
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
 				cfg0 = config.db;
@@ -93,12 +90,8 @@
 				connection.query(str, function (error, results, fields) {
 					connection.end();
 					if (error) {
-						console.log('---dns error---');
-						console.log(error.message);
 						return true;
 					} else {
-						console.log('---no dns error---');
-						console.log(results);
 						if (results) {
 							for (var i = 0; i < results.length; i++) {
 								if (me.validateIPaddress(results[i].ip)) {
@@ -106,16 +99,14 @@
 								}	
 							}
 						}
-						console.log('---naaao dns error---');
-						console.log(_dns.dns.DNS);
 						me.mapping(req, res);
 						_dns.dns.tm = new Date().getTime();
 					}
 				});			
-			//} else {
-			//	me.mapping(req, res);
-			//	_dns.dns.tm = new Date().getTime();
-			//}
+			} else {
+				me.mapping(req, res);
+				_dns.dns.tm = new Date().getTime();
+			}
 		};
 		this.mapping = function(req, res) {
 			let me = this, question = req.question[0], 
