@@ -1,1 +1,1 @@
-IframPlugin.js
+res.send('IframPlugin.js');
