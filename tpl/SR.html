@@ -63,38 +63,16 @@
 		p.init({ 
 			link : '//{$commlink}/',
 			onConnect : function(socket) {
-				console.log('---socket.id--B->');
-				console.log(socket.id);
 				p.sendToRoom(room, null, function(data) {});
 			}, 
 			onClientMessage : function(incomeData) {
 				console.log(incomeData.data);
 				if ((incomeData.data) && (incomeData.data.SR)) {
-					alert('sr coming');
 					setup_annyang(incomeData.data.SR);
 				}
 			},
-			/*
-			onClientData : function(incomeData, socket) {
-				
-				switch (incomeData.data.cmd) {
-					case 'voiceRecong' :	
-						document.getElementById('income_info').innerHTML = 
-							JSON.stringify(incomeData.data.voiceRecong);
-						setup_annyang(incomeData.data.voiceRecong);
-						break;
-						
-					case 'stop' :
-						annyang.abort();
-						$('.fa-microphone').removeClass('status_on').addClass('status_off');
-						document.getElementById('income_info').innerHTML =  'stopped';
-						break	
-					
-					default:	
-				}
-			},*/
 			afterTimeout : function(data) {
-				console.log('===afterTimeout====');
+				console.log('Timeout ==>');
 				console.log(data);
 			}
 		});
