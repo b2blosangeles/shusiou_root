@@ -67,6 +67,7 @@
 				afterConnection();
 			}, 
 			onClientMessage : function(incomeData) {
+				console.log(incomeData.data);
 				if ((incomeData.data) && (incomeData.data.SR)) {
 					alert('sr coming');
 					setup_annyang(incomeData.data.SR);
