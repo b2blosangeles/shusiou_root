@@ -139,13 +139,6 @@
 					me.sendTypeNamedIP(m[1], question.name, m[2], m[3], req, res);
 					break;
 				case 'dns': 
-					console.log({ 
-						name: question.name,
-						type: 'A',
-						class: 'IN',
-						ttl: me.ttl,
-						data: (_dns.dns.DNS[question.name]) ? _dns.dns.DNS[question.name] : null
-					});
 					me.send([{ 
 						name: question.name,
 						type: 'A',
