@@ -97,13 +97,15 @@
 								}	
 							}
 						}
-						me.mapping(req, res);
 						_dns.dns.tm = new Date().getTime();
+						me.mapping(req, res);
+						
 					}
 				});			
 			} else {
-				me.mapping(req, res);
 				_dns.dns.tm = new Date().getTime();
+				me.mapping(req, res);
+				
 			}
 		};
 		this.mapping = function(req, res) {
