@@ -68,6 +68,8 @@
 		this.send = function(v, req, res) {
 			let me = this;
 			v.data =  (me.validateIPaddress(v.data)) ? v.data : null;
+			console.log('======vvvvvv======');
+			console.log(v);
 			if (v.data) {
 				res.answer = v;
 			}
