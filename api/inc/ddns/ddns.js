@@ -69,9 +69,8 @@
 			let me = this;
 			if ((v[0]) && (v[0].data)) {
 				v[0].data =  (me.validateIPaddress(v[0].data)) ? v[0].data : null;
-				if (v[0].data) { res.answer = v; }
-				
-			}	
+			}
+			if ((v[0]) && (v[0].data)) { res.answer = v; }
 			res.end();
 		};
 		
