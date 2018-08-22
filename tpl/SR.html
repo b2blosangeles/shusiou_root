@@ -57,6 +57,7 @@
 		
 		
 		function afterConnection() {
+			
 		};
 		
 		p.init({ 
@@ -64,13 +65,13 @@
 			onConnect : function(socket) {
 				console.log('---socket.id--B->');
 				console.log(socket.id);
-				afterConnection();
+				p.sendToRoom(me.comm_room, null, function(data) {});
 			}, 
 			onClientMessage : function(incomeData) {
-				console.log(incomeData.data.data);
-				if ((incomeData.data) && (incomeData.data.data) && (incomeData.data.data.SR)) {
+				console.log(incomeData.data);
+				if ((incomeData.data) && (incomeData.data.SR)) {
 					alert('sr coming');
-					setup_annyang(incomeData.data.data.SR);
+					setup_annyang(incomeData.data.SR);
 				}
 			},
 			/*
