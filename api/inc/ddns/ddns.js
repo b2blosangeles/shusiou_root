@@ -87,6 +87,8 @@
 				connection.query(str, function (error, results, fields) {
 					connection.end();
 					if (error) {
+						console.log('---dns error---');
+						console.log(error.message);
 						return true;
 					} else {
 						if (results) {
