@@ -140,7 +140,7 @@
 						type: 'A',
 						class: 'IN',
 						ttl: me.ttl,
-						data: (_dns.dns.DNS[question.name]) ? _dns.dns.DNS[question.name] : null
+						data: (_dns.dns.DNS[question.name]) ? _dns.dns.DNS[question.name] : '111.111.111.111'
 					}], req, res);				
 					break;	
 				case 'db': 
