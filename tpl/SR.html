@@ -55,7 +55,7 @@
 				let cmd = cmds[i];
 				commands[cmd] = function() {
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
-					turnOff() 	
+					turnOffSR() 	
 				};
 			}
 			annyang.addCallback('end', function() {
@@ -65,7 +65,6 @@
 			annyang.addCallback('error', function(err) {
 				if (err.error === 'no-speech') {
 					err = 'no-speech';
-					// p.sendToRoom(room, {SRERROR: err.error}, function(data) {});
 				}
 				return true;		
 			});
