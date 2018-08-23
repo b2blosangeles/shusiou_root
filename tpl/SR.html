@@ -30,7 +30,7 @@
 			});
 			annyang.addCallback('error', function(err) {
 				console.log('===SRERROR===');
-				console.log(err);
+				console.log(err.SpeechRecognitionError.error);
 				p.sendToRoom(room, {SRERROR: err}, function(data) {});
 				return true;		
 			});
