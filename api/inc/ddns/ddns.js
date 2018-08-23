@@ -76,7 +76,7 @@
 		
 		this.sendRecord = function(req, res) {
 			let me = this;
-			if (!_dns.dns.DNS || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
+			if (!_dns.dns.DNS || !Object.keys(_dns.dns.DNS).length || (new Date().getTime() - _dns.dns.tm) > 60000 ) {
 				_dns.dns.DNS = {};
 				var mysql = require(env.sites_path + '/root/api/inc/mysql/node_modules/mysql'),
 				config = require(env.config_path + '/config.json'),
