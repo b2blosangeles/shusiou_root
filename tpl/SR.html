@@ -15,6 +15,17 @@
 		let setup_annyang = function(cmds) {
 			let stime = new Date().getTime();
 			var commands = {};
+			
+			let soundstart = 0, soundresult = 0;
+			function monitor() {
+				if (soundstart - stime > 6000 || soundresult - stime > 30) {
+					console.log('timeout --->');
+				}
+			}
+			
+			var ITV = setInterval(
+				monitor, 1000
+			)
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
@@ -46,10 +57,12 @@
 			annyang.addCallback('soundstart', function(v) {
 			  	console.log('sound detected');
 				console.log(v);
+				soundstart = new Date().getTime();
 			});
 
 			annyang.addCallback('result', function(v) {
 				console.log('result');
+				soundresult = new Date().getTime();
 				console.log(v);
 			});
 			annyang.addCommands(commands);
