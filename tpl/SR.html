@@ -40,16 +40,17 @@
 				console.log(userSaid); // sample output: 'hello'
 				console.log(commandText); // sample output: 'hello (there)'
 				console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+				console.log('===BBB END==='); 
 			});
-annyang.addCallback('soundstart', function(v) {
-  console.log('sound detected');
-	console.log(v);
-});
+			annyang.addCallback('soundstart', function(v) {
+			  	console.log('sound detected');
+				console.log(v);
+			});
 
-annyang.addCallback('result', function(v) {
-  console.log('sound stopped');
-	console.log(v);
-});
+			annyang.addCallback('result', function(v) {
+				console.log('result');
+				console.log(v);
+			});
 			annyang.addCommands(commands);
 			annyang.setLanguage('en-US');
 			// annyang.start({ autoRestart: true});
