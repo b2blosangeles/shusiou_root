@@ -67,6 +67,7 @@
 				commands[cmd] = function() {
 					SRrecongnized = true;
 					console.log('====B=====');
+					clearInterval(_ITV);
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
 					turnOffSR() 	
 				};
