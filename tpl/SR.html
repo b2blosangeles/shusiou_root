@@ -25,7 +25,8 @@
 			//}
 			$('.status_on').show();
 			$('.status_off').hide();			
-		}		
+		}	
+		let _ITV = null;
 		let setup_annyang = function(cmds) {
 			let stime = new Date().getTime(), ptime = 0;
 			var commands = {};
@@ -58,7 +59,7 @@
 				}
 			}
 			clearInterval(_ITV);
-			var _ITV = setInterval(
+			_ITV = setInterval(
 				monitor, 500
 			)
 			for (var i=0; i < cmds.length; i++) {
