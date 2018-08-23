@@ -16,9 +16,9 @@
 			let stime = new Date().getTime();
 			var commands = {};
 			
-			let soundstart = 0, soundresult = 0;
+			let soundstart = 0, soundresult = 0, err = '';
 			function monitor() {
-				if (soundstart - stime > 6000 || soundresult - stime > 30) {
+				if (soundstart - stime > 6000 || soundresult - stime > 30 || err === 'no-speech') {
 					console.log('timeout --->');
 				}
 			}
@@ -42,7 +42,8 @@
 			});
 			annyang.addCallback('error', function(err) {
 				if (err.error === 'no-speech') {
-					p.sendToRoom(room, {SRERROR: err.error}, function(data) {});
+					err = 'no-speech';
+					// p.sendToRoom(room, {SRERROR: err.error}, function(data) {});
 				}
 				return true;		
 			});
