@@ -12,16 +12,17 @@
 	<script>	
 		let p = new _PINGBALL_('p'), room = '{$room}';
 		function turnOffSR() {
-			annyang.abort();
+			annyang.pause();
+			// annyang.abort();
 			$('.status_off').show();
 			$('.status_on').hide();				
 		}
 		function turnOnSR(init) {
-			//if (init) { 
+			if (init) { 
 				annyang.start();
-			//} else {
-			//	annyang.resume();
-			//}
+			} else {
+				annyang.resume();
+			}
 			$('.status_on').show();
 			$('.status_off').hide();			
 		}	
@@ -88,43 +89,14 @@
 				console.log('--annyang.isListening()-CC->');
 			//	console.log(annyang.isListening());
 			});
-			/*
-			annyang.addCallback('error', function(err) {
-				p.sendToRoom(room, {SRERROR: 'NoSpeech'}, function(data) {});
-				clearInterval(_ITV);
-				turnOffSR();		
-			});
-			*/
-			/*
-			annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
-				console.log('===BBB==='); 
-				console.log(userSaid); // sample output: 'hello'
-				console.log(commandText); // sample output: 'hello (there)'
-				console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
-				console.log('===BBB END==='); 
-			});*/
 			annyang.addCallback('soundstart', function(v) {
 			  	console.log('sound detected');
 				console.log(v);
 				soundstarted = 1;
-			//	stime = new Date().getTime();
 			});
 
 			annyang.addCallback('result', function(v) {
-				console.log('*** detected ***');
-				console.log(v);
 				SRdetected = v;
-				// p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : v}, function(data) {});			
-				/*
-				setTimeout(
-					function() {
-						console.log('result');
-						turnOffSR();
-						console.log('====A=====');
-						if (!SRrecongnized) SRdetected = v;				
-					}, 100
-				);
-				*/
 			});
 			annyang.addCommands(commands);
 			annyang.setLanguage('en-US');
@@ -139,7 +111,7 @@
 			link : '//{$commlink}/',
 			onConnect : function(socket) {
 				p.sendToRoom(room, null, function(data) {});
-				// turnOnSR(1); // turnOffSR()
+				turnOnSR(1);  turnOffSR()
 			}, 
 			onClientMessage : function(incomeData) {
 				console.log('===>incomeData.data<===');
