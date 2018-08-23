@@ -92,6 +92,8 @@
 			});
 
 			annyang.addCallback('result', function(v) {
+				onsole.log('*** detected ***');
+				console.log(v);
 				SRdetected = v;
 				// p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : v}, function(data) {});			
 				/*
