@@ -16,10 +16,12 @@
 			let stime = new Date().getTime(), ptime = 0;
 			var commands = {};
 			
-			let soundstart = 0, soundresult = 0, err = '';
+			let soundstarted = 0, soundresult = 0, err = '';
 			function monitor() {
 				ptime = new Date().getTime()
-				if (ptime - stime > 6000 || soundstart - stime > 6000 || soundresult - stime > 30 || err === 'no-speech') {
+				if ((ptime - stime > 6000 && ! soundstarted) || 
+					((soundstarted) &&  ptime - stime > 20000) || 
+					err === 'no-speech') {
 					console.log('timeout --->');
 				}
 			}
@@ -59,7 +61,8 @@
 			annyang.addCallback('soundstart', function(v) {
 			  	console.log('sound detected');
 				console.log(v);
-				soundstart = new Date().getTime();
+				soundstarted = 1;
+				stime = new Date().getTime();
 			});
 
 			annyang.addCallback('result', function(v) {
