@@ -29,7 +29,7 @@
 			let stime = new Date().getTime(), ptime = 0;
 			var commands = {};
 			
-			let soundstarted = 0, soundresult = 0, err = '', SRdetected = null;
+			let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
 			function monitor() {
 				ptime = new Date().getTime()
 				if (ptime - stime > 6000 && !soundstarted) {
@@ -58,7 +58,7 @@
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
-					
+					 SRrecongnized = true;
 					console.log('====B=====');
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
 					turnOffSR() 	
@@ -95,7 +95,7 @@
 						console.log('result');
 						turnOffSR();
 						console.log('====A=====');
-						SRdetected = v;				
+						if (!SRrecongnized) SRdetected = v;				
 					}
 				);
 
