@@ -23,6 +23,7 @@
 					((soundstarted) &&  ptime - stime > 20000) || 
 					err === 'no-speech') {
 					console.log('timeout --->');
+					clearinterval(ITV);
 				}
 			}
 			
