@@ -32,7 +32,9 @@
 			
 			let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
 			function monitor() {
+				
 				ptime = new Date().getTime()
+				console.log('==== ' + ptime  + ' ===');
 				if (ptime - stime > 6000 && !soundstarted) {
 					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
 					clearInterval(_ITV);
