@@ -41,7 +41,7 @@
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 10000) {
+				if ((soundstarted) &&  ptime - stime > 10000 && !SRdetected) {
 					clearInterval(_ITV);
 					turnOffSR();
 					console.log('----SRdetected---');
