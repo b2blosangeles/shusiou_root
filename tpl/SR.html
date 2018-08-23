@@ -19,8 +19,8 @@
 				commands[cmd] = function() {
 					annyang.abort();
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
-					$('.fa-microphone').hide();
-					$('.fa-microphone-slash').show();
+					$('.status_off').hide();
+					$('.status_on').show();
 					
 				};
 			}
@@ -44,8 +44,8 @@
 			annyang.setLanguage('en-US');
 			// annyang.start({ autoRestart: true});
 			annyang.start();
-			$('.fa-microphone').show();
-			$('.fa-microphone-slash').hide();
+			$('.status_on').show();
+			$('.status_off').hide();
 		}
 		
 		
