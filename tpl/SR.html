@@ -27,11 +27,11 @@
 			$('.status_off').hide();			
 		}	
 		let _ITV = null;
+		let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
 		let setup_annyang = function(cmds) {
 			let stime = new Date().getTime(), ptime = 0;
 			var commands = {};
-			
-			let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
+
 			function monitor() {
 				
 				ptime = new Date().getTime()
