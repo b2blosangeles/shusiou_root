@@ -41,7 +41,7 @@
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 15000) {
+				if ((soundstarted) &&  ptime - stime > 10000) {
 					clearInterval(_ITV);
 					turnOffSR();
 					if (!SRdetected) {
@@ -88,7 +88,7 @@
 			  	console.log('sound detected');
 				console.log(v);
 				soundstarted = 1;
-				stime = new Date().getTime();
+			//	stime = new Date().getTime();
 			});
 
 			annyang.addCallback('result', function(v) {
