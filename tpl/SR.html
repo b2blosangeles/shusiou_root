@@ -45,6 +45,7 @@
 					clearInterval(_ITV);
 					turnOffSR();
 					console.log('----SRdetected---');
+					
 					/*
 					console.log(SRdetected);
 					if (!SRdetected) {
@@ -74,7 +75,10 @@
 			annyang.addCallback('end', function() {
 				if (!SRrecongnized && (SRdetected)) {
 					clearInterval(_ITV);
-					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});	
+					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {
+					
+					});
+					urnOffSR() 
 				}
 				console.log('--annyang.isListening()-CC->');
 			//	console.log(annyang.isListening());
