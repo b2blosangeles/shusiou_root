@@ -35,9 +35,8 @@
 			var commands = {};
 
 			function monitor() {
-				
 				ptime = new Date().getTime()
-				console.log('==== ' + ptime  + ' ===');
+				// console.log('==== ' + ptime  + ' ===');
 				if (ptime - stime > 6000 && !soundstarted) {
 					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
 					clearInterval(_ITV);
@@ -47,7 +46,7 @@
 				if ((soundstarted) &&  ptime - stime > 10000) {
 					clearInterval(_ITV);
 					turnOffSR();
-					console.log('----SRdetected---');
+				//	console.log('----SRdetected---');
 					
 					console.log(SRdetected);
 					if (!SRdetected) {
@@ -68,7 +67,7 @@
 				let cmd = cmds[i];
 				commands[cmd] = function() {
 					SRrecongnized = true;
-					console.log('====B=====');
+				//	console.log('====B=====');
 					clearInterval(_ITV);
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
 					turnOffSR() 	
