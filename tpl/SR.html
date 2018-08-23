@@ -23,11 +23,11 @@
 					((soundstarted) &&  ptime - stime > 20000) || 
 					err === 'no-speech') {
 					console.log('timeout --->');
-					clearinterval(ITV);
+					clearInterval(_ITV);
 				}
 			}
 			
-			var ITV = setInterval(
+			var _ITV = setInterval(
 				monitor, 1000
 			)
 			for (var i=0; i < cmds.length; i++) {
