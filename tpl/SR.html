@@ -18,6 +18,7 @@
 			
 			let soundstart = 0, soundresult = 0, err = '';
 			function monitor() {
+				console.log('yy --->');
 				if (soundstart - stime > 6000 || soundresult - stime > 30 || err === 'no-speech') {
 					console.log('timeout --->');
 				}
