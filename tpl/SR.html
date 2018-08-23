@@ -19,7 +19,8 @@
 				commands[cmd] = function() {
 					annyang.abort();
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
-					$('.status_on').removeClass('status_on').addClass('status_off');
+					$('fa-microphone').hide();
+					$('fa-microphone-slash').show();
 					
 				};
 			}
@@ -43,7 +44,8 @@
 			annyang.setLanguage('en-US');
 			// annyang.start({ autoRestart: true});
 			annyang.start();
-			$('.status_off').removeClass('status_off').addClass('status_on');
+			$('fa-microphone').show();
+			$('fa-microphone-slash').hide();
 		}
 		
 		
@@ -75,8 +77,9 @@
 </head>
 	
 <body style="text-align:center"  onunload="onUnload()">
-	<i class="fa fa-microphone status_off" aria-hidden="true" style="font-size:3em;" 
-	   onClick="sendReleaseToServer()"></i><br/><br/>
+	<i class="fa fa-microphone status_on" aria-hidden="true" style="font-size:3em; display:none"></i>
+	<i class="fa fa-microphone-slash status_off" aria-hidden="true" style="font-size:3em;display:none"></i>
+	<br/><br/>
 	<div id="income_info" style="font-size:0.6em;"></div>
 </body>
 </html>
