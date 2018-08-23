@@ -41,16 +41,18 @@
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 10000 && !SRdetected) {
+				if ((soundstarted) &&  ptime - stime > 10000) {
 					clearInterval(_ITV);
 					turnOffSR();
 					console.log('----SRdetected---');
+					/*
 					console.log(SRdetected);
 					if (!SRdetected) {
 						p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
 					}  else {
 						p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});
 					}
+					*/
 				}
 			}
 			clearInterval(_ITV);
