@@ -16,28 +16,46 @@
 			let stime = new Date().getTime(), ptime = 0;
 			var commands = {};
 			
-			let soundstarted = 0, soundresult = 0, err = '';
+			let soundstarted = 0, soundresult = 0, err = '', SRdetected = null;
 			function monitor() {
 				ptime = new Date().getTime()
-				if ((ptime - stime > 6000 && ! soundstarted) || 
-					((soundstarted) &&  ptime - stime > 20000) || 
-					err === 'no-speech') {
-					console.log('timeout --->');
+				if (ptime - stime > 6000 && !soundstarted) {
+					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
 					clearInterval(_ITV);
+					turnOffSR();
+					return true;
+				}
+				if ((soundstarted) &&  ptime - stime > 20000) {
+					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
+					clearInterval(_ITV);
+					turnOffSR();
+					return true;
+				}				
+				if (err === 'no-speech') {
+					p.sendToRoom(room, {SRERROR: 'NoSpeech'}, function(data) {});
+					clearInterval(_ITV);
+					turnOffSR();
+					return true;
 				}
 			}
-			
+			function turnOffSR() {
+				annyang.abort();
+				$('.status_off').show();
+				$('.status_on').hide();				
+			}
+			function turnOnSR() {
+				annyang.start();
+				$('.status_on').show();
+				$('.status_off').hide();			
+			}			
 			var _ITV = setInterval(
 				monitor, 1000
 			)
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
-					annyang.abort();
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
-					$('.status_off').show();
-					$('.status_on').hide();
-					
+					turnOff() 	
 				};
 			}
 			annyang.addCallback('end', function() {
@@ -51,14 +69,14 @@
 				}
 				return true;		
 			});
-
+			/*
 			annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
 				console.log('===BBB==='); 
 				console.log(userSaid); // sample output: 'hello'
 				console.log(commandText); // sample output: 'hello (there)'
 				console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
 				console.log('===BBB END==='); 
-			});
+			});*/
 			annyang.addCallback('soundstart', function(v) {
 			  	console.log('sound detected');
 				console.log(v);
@@ -68,15 +86,12 @@
 
 			annyang.addCallback('result', function(v) {
 				console.log('result');
-				soundresult = new Date().getTime();
-				console.log(v);
+				SRdetected = v;
 			});
 			annyang.addCommands(commands);
 			annyang.setLanguage('en-US');
 			// annyang.start({ autoRestart: true});
-			annyang.start();
-			$('.status_on').show();
-			$('.status_off').hide();
+			turnOnSR()
 		}
 		
 		
