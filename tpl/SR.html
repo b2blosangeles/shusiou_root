@@ -44,19 +44,14 @@
 					clearInterval(_ITV);
 					turnOffSR();
 					return true;
-				}				
+				}/*				
 				if (SRdetected && !SRrecongnized) {
 					clearInterval(_ITV);
 					turnOffSR();
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
 					return true;
 				}				
-				if (err === 'no-speech') {
-					p.sendToRoom(room, {SRERROR: 'NoSpeech'}, function(data) {});
-					clearInterval(_ITV);
-					turnOffSR();
-					return true;
-				}
+				*/
 			}
 			clearInterval(_ITV);
 			var _ITV = setInterval(
@@ -79,10 +74,9 @@
 			//	console.log(annyang.isListening());
 			});
 			annyang.addCallback('error', function(err) {
-				if (err.error === 'no-speech') {
-					err = 'no-speech';
-				}
-				return true;		
+				p.sendToRoom(room, {SRERROR: 'NoSpeech'}, function(data) {});
+				clearInterval(_ITV);
+				turnOffSR();		
 			});
 			/*
 			annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
@@ -100,6 +94,9 @@
 			});
 
 			annyang.addCallback('result', function(v) {
+				clearInterval(_ITV);
+				turnOffSR();
+				p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : v}, function(data) {});			
 				/*
 				setTimeout(
 					function() {
