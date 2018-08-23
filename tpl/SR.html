@@ -38,7 +38,13 @@
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 20000 || (SRdetected)) {
+				if ((soundstarted) &&  ptime - stime > 20000) {
+					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
+					clearInterval(_ITV);
+					turnOffSR();
+					return true;
+				}				
+				if (SRdetected && !SRrecongnized) {
 					clearInterval(_ITV);
 					turnOffSR();
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
@@ -53,7 +59,7 @@
 			}
 			
 			var _ITV = setInterval(
-				monitor, 100
+				monitor, 500
 			)
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
