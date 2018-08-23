@@ -41,12 +41,14 @@
 				console.log(commandText); // sample output: 'hello (there)'
 				console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
 			});
-annyang.addCallback('soundstart', function() {
+annyang.addCallback('soundstart', function(v) {
   console.log('sound detected');
+	console.log(v);
 });
 
-annyang.addCallback('result', function() {
+annyang.addCallback('result', function(v) {
   console.log('sound stopped');
+	console.log(v);
 });
 			annyang.addCommands(commands);
 			annyang.setLanguage('en-US');
