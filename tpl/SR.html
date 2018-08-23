@@ -12,16 +12,17 @@
 	<script>	
 		let p = new _PINGBALL_('p'), room = '{$room}';
 		function turnOffSR() {
-			annyang.pause();
+			//annyang.pause();
+			annyang.abort();
 			$('.status_off').show();
 			$('.status_on').hide();				
 		}
 		function turnOnSR(init) {
-			if (init) { 
+			//if (init) { 
 				annyang.start();
-			} else {
-				annyang.resume();
-			}
+			//} else {
+			//	annyang.resume();
+			//}
 			$('.status_on').show();
 			$('.status_off').hide();			
 		}		
