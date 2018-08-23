@@ -39,8 +39,8 @@
 					return true;
 				}
 				if ((soundstarted) &&  ptime - stime > 20000 || (SRdetected)) {
-					turnOffSR();
 					clearInterval(_ITV);
+					turnOffSR();
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
 					return true;
 				}				
@@ -58,7 +58,7 @@
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
-					 SRrecongnized = true;
+					SRrecongnized = true;
 					console.log('====B=====');
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
 					turnOffSR() 	
