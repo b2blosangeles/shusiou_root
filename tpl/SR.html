@@ -13,6 +13,7 @@
 		let p = new _PINGBALL_('p'), room = '{$room}';
 		
 		let setup_annyang = function(cmds) {
+			let stime = new Date().getTime();
 			var commands = {};
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
