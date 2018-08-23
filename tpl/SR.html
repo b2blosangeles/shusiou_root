@@ -41,19 +41,15 @@
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 20000) {
-					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
+				if ((soundstarted) &&  ptime - stime > 15000) {
 					clearInterval(_ITV);
 					turnOffSR();
-					return true;
-				}/*				
-				if (SRdetected && !SRrecongnized) {
-					clearInterval(_ITV);
-					turnOffSR();
-					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
-					return true;
-				}				
-				*/
+					if (!SRdetected) {
+						p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
+					}  else {
+						p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});
+					}
+				}
 			}
 			clearInterval(_ITV);
 			var _ITV = setInterval(
@@ -96,9 +92,8 @@
 			});
 
 			annyang.addCallback('result', function(v) {
-				clearInterval(_ITV);
-				turnOffSR();
-				p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : v}, function(data) {});			
+				SRdetected = v;
+				// p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : v}, function(data) {});			
 				/*
 				setTimeout(
 					function() {
