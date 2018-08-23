@@ -39,9 +39,10 @@
 					return true;
 				}
 				if ((soundstarted) &&  ptime - stime > 20000 || (SRdetected)) {
+					
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
 					clearInterval(_ITV);
-					turnOffSR();
+					
 					return true;
 				}				
 				if (err === 'no-speech') {
@@ -89,6 +90,7 @@
 
 			annyang.addCallback('result', function(v) {
 				console.log('result');
+				turnOffSR();
 				SRdetected = v;
 			});
 			annyang.addCommands(commands);
