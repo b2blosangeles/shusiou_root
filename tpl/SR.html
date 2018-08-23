@@ -58,6 +58,7 @@
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
+					console.log('====B=====');
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
 					turnOffSR() 	
 				};
@@ -90,6 +91,7 @@
 			annyang.addCallback('result', function(v) {
 				console.log('result');
 				turnOffSR();
+				console.log('====A=====');
 				SRdetected = v;
 			});
 			annyang.addCommands(commands);
