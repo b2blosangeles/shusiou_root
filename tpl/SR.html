@@ -38,7 +38,7 @@
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 20000) {
+				if ((soundstarted) &&  ptime - stime > 20000 || (SRdetected)) {
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
 					clearInterval(_ITV);
 					turnOffSR();
