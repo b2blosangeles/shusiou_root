@@ -46,11 +46,12 @@
 					turnOffSR();
 					console.log('----SRdetected---');
 					
-					/*
 					console.log(SRdetected);
 					if (!SRdetected) {
 						p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
-					}  else {
+					} 
+					/*
+					else {
 						p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});
 					}
 					*/
@@ -78,7 +79,7 @@
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {
 					
 					});
-					urnOffSR() 
+					turnOffSR() 
 				}
 				console.log('--annyang.isListening()-CC->');
 			//	console.log(annyang.isListening());
