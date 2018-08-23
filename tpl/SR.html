@@ -39,10 +39,9 @@
 					return true;
 				}
 				if ((soundstarted) &&  ptime - stime > 20000 || (SRdetected)) {
-					
-					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
+					turnOffSR();
 					clearInterval(_ITV);
-					
+					p.sendToRoom(room, {SRERROR: 'VoiceWrong', SRdetected : SRdetected}, function(data) {});
 					return true;
 				}				
 				if (err === 'no-speech') {
@@ -54,7 +53,7 @@
 			}
 			
 			var _ITV = setInterval(
-				monitor, 1000
+				monitor, 100
 			)
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
