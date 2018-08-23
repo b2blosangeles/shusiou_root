@@ -70,12 +70,9 @@
 			// annyang.removeCallback();
 			
 			annyang.addCallback('end', function() {
-				if (!SRrecongnized) {
+				if (!SRrecongnized && (SRdetected)) {
 					clearInterval(_ITV);
-					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
-					}  else {
-						p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});
-					}	
+					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});	
 				}
 				console.log('--annyang.isListening()-CC->');
 			//	console.log(annyang.isListening());
