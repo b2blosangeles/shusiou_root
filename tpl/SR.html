@@ -11,7 +11,20 @@
 	<script src="/js/pingball.js"></script>
 	<script>	
 		let p = new _PINGBALL_('p'), room = '{$room}';
-		
+		function turnOffSR() {
+			annyang.pause();
+			$('.status_off').show();
+			$('.status_on').hide();				
+		}
+		function turnOnSR(init) {
+			if (init) { 
+				annyang.start();
+			} else {
+				annyang.resume();
+			}
+			$('.status_on').show();
+			$('.status_off').hide();			
+		}		
 		let setup_annyang = function(cmds) {
 			let stime = new Date().getTime(), ptime = 0;
 			var commands = {};
@@ -38,16 +51,7 @@
 					return true;
 				}
 			}
-			function turnOffSR() {
-				annyang.abort();
-				$('.status_off').show();
-				$('.status_on').hide();				
-			}
-			function turnOnSR() {
-				annyang.start();
-				$('.status_on').show();
-				$('.status_off').hide();			
-			}			
+			
 			var _ITV = setInterval(
 				monitor, 1000
 			)
@@ -100,6 +104,7 @@
 			link : '//{$commlink}/',
 			onConnect : function(socket) {
 				p.sendToRoom(room, null, function(data) {});
+				turnOnSR(1); turnOffSR()
 			}, 
 			onClientMessage : function(incomeData) {
 				console.log(incomeData.data);
