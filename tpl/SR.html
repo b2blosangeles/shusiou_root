@@ -19,8 +19,8 @@
 				commands[cmd] = function() {
 					annyang.abort();
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
-					$('.status_off').hide();
-					$('.status_on').show();
+					$('.status_off').show();
+					$('.status_on').hide();
 					
 				};
 			}
