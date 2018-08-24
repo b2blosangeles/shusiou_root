@@ -102,8 +102,6 @@
 				//turnOnSR(1);  turnOffSR()
 			}, 
 			onClientMessage : function(incomeData) {
-				console.log('===>incomeData.data<===');
-				console.log(incomeData.data);
 				if ((incomeData.data) && (incomeData.data.SR)) {
 					setup_annyang(incomeData.data.SR);
 				}
