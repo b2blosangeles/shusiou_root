@@ -12,17 +12,12 @@
 	<script>	
 		let p = new _PINGBALL_('p'), room = '{$room}';
 		function turnOffSR() {
-			// annyang.pause();
 			annyang.abort();
 			$('.status_off').show();
 			$('.status_on').hide();				
 		}
 		function turnOnSR(init) {
-			//if (init) { 
-				annyang.start();
-			//} else {
-			//	annyang.resume();
-			//}
+			annyang.start();
 			$('.status_on').show();
 			$('.status_off').hide();			
 		}	
@@ -104,7 +99,7 @@
 			link : '//{$commlink}/',
 			onConnect : function(socket) {
 				p.sendToRoom(room, null, function(data) {});
-				turnOnSR(1);  turnOffSR()
+				//turnOnSR(1);  turnOffSR()
 			}, 
 			onClientMessage : function(incomeData) {
 				console.log('===>incomeData.data<===');
