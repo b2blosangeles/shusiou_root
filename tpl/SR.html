@@ -12,17 +12,17 @@
 	<script>	
 		let p = new _PINGBALL_('p'), room = '{$room}';
 		function turnOffSR() {
-			//annyang.pause();
-			annyang.abort();
+			annyang.pause();
+			// annyang.abort();
 			$('.status_off').show();
 			$('.status_on').hide();				
 		}
 		function turnOnSR(init) {
-			//if (init) { 
+			if (init) { 
 				annyang.start();
-			//} else {
-			//	annyang.resume();
-			//}
+			} else {
+				annyang.resume();
+			}
 			$('.status_on').show();
 			$('.status_off').hide();			
 		}	
@@ -30,16 +30,8 @@
 		let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
 		let stime = new Date().getTime(), ptime = 0;
 
-		
-		// p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
-		/*
-			annyang.addCallback('error', function() {
-				
-				p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
-			});
-		*/
+		/*---- annyang call ---- */
 			annyang.addCallback('end', function() {
-				
 				if (!SRrecongnized && (SRdetected)) {
 					clearInterval(_ITV);
 					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {
@@ -56,7 +48,10 @@
 
 			annyang.addCallback('result', function(v) {
 				SRdetected = v;
-			});		
+			});
+		/*---- annyang call ---- */
+		
+		
 		let setup_annyang = function(cmds) {
 			soundstarted = 0; soundresult = 0; err = ''; SRdetected = null; SRrecongnized = false;
 			stime = new Date().getTime(), ptime = 0;
@@ -64,7 +59,6 @@
 
 			function monitor() {
 				ptime = new Date().getTime()
-				// console.log('==== ' + ptime  + ' ===');
 				if (ptime - stime > 6000 && !soundstarted) {
 					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
 					clearInterval(_ITV);
@@ -74,17 +68,10 @@
 				if ((soundstarted) &&  ptime - stime > 10000) {
 					clearInterval(_ITV);
 					turnOffSR();
-				//	console.log('----SRdetected---');
-					
 					console.log(SRdetected);
 					if (!SRdetected) {
 						p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
-					} 
-					/*
-					else {
-						p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {});
 					}
-					*/
 				}
 			}
 			clearInterval(_ITV);
@@ -96,7 +83,6 @@
 				let cmd = cmds[i];
 				commands[cmd] = function() {
 					SRrecongnized = true;
-				//	console.log('====B=====');
 					clearInterval(_ITV);
 					p.sendToRoom(room, {SRRELEASE: true}, function(data) {});
 					turnOffSR() 	
@@ -118,7 +104,7 @@
 			link : '//{$commlink}/',
 			onConnect : function(socket) {
 				p.sendToRoom(room, null, function(data) {});
-				//turnOnSR(1);  turnOffSR()
+				turnOnSR(1);  turnOffSR()
 			}, 
 			onClientMessage : function(incomeData) {
 				console.log('===>incomeData.data<===');
