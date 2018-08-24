@@ -29,6 +29,15 @@
 		let _ITV = null;
 		let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
 		let stime = new Date().getTime(), ptime = 0;
+
+		
+		p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
+		
+			annyang.addCallback('error', function() {
+				
+				p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
+			});
+		
 			annyang.addCallback('end', function() {
 				
 				if (!SRrecongnized && (SRdetected)) {
@@ -79,9 +88,10 @@
 				}
 			}
 			clearInterval(_ITV);
+			/*
 			_ITV = setInterval(
 				monitor, 500
-			)
+			)*/
 			for (var i=0; i < cmds.length; i++) {
 				let cmd = cmds[i];
 				commands[cmd] = function() {
