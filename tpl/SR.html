@@ -29,6 +29,25 @@
 		let _ITV = null;
 		let soundstarted = 0, soundresult = 0, err = '', SRdetected = null, SRrecongnized = false;
 		let stime = new Date().getTime(), ptime = 0;
+			annyang.addCallback('end', function() {
+				
+				if (!SRrecongnized && (SRdetected)) {
+					clearInterval(_ITV);
+					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {
+					
+					});
+					turnOffSR() 
+				}
+			});
+			annyang.addCallback('soundstart', function(v) {
+			  	console.log('sound detected');
+				console.log(v);
+				soundstarted = 1;
+			});
+
+			annyang.addCallback('result', function(v) {
+				SRdetected = v;
+			});		
 		let setup_annyang = function(cmds) {
 			soundstarted = 0; soundresult = 0; err = ''; SRdetected = null; SRrecongnized = false;
 			stime = new Date().getTime(), ptime = 0;
@@ -73,30 +92,9 @@
 					turnOffSR() 	
 				};
 			}
-			annyang.removeCallback();
-			annyang.removeCommands();
-			
-			annyang.addCallback('end', function() {
-				
-				if (!SRrecongnized && (SRdetected)) {
-					clearInterval(_ITV);
-					p.sendToRoom(room, {SRERROR: 'VoiceWrong', voice : SRdetected}, function(data) {
-					
-					});
-					turnOffSR() 
-				}
-				console.log('--annyang.isListening()-CC->');
-			//	console.log(annyang.isListening());
-			});
-			annyang.addCallback('soundstart', function(v) {
-			  	console.log('sound detected');
-				console.log(v);
-				soundstarted = 1;
-			});
+			//annyang.removeCallback();
 
-			annyang.addCallback('result', function(v) {
-				SRdetected = v;
-			});
+			annyang.removeCommands();
 			annyang.addCommands(commands);
 			annyang.setLanguage('en-US');
 			annyang.start({ autoRestart: false});
