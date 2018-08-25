@@ -47,7 +47,7 @@
 		/*---- annyang call ---- */
 		
 		
-		let setup_annyang = function(cmds) {
+		let setup_annyang = function(cmds, lang) {
 			soundstarted = 0; soundresult = 0; err = ''; SRdetected = null; SRrecongnized = false;
 			stime = new Date().getTime(), ptime = 0;
 			var commands = {};
@@ -87,7 +87,7 @@
 
 			annyang.removeCommands();
 			annyang.addCommands(commands);
-			annyang.setLanguage('en-US');
+			annyang.setLanguage(lang);
 			annyang.start({ autoRestart: true});
 			turnOnSR()
 		}
@@ -103,7 +103,7 @@
 			}, 
 			onClientMessage : function(incomeData) {
 				if ((incomeData.data) && (incomeData.data.SR)) {
-					setup_annyang(incomeData.data.SR);
+					setup_annyang(incomeData.data.SR, incomeData.data.lang);
 				}
 			},
 			afterTimeout : function(data) {
