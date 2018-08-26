@@ -54,13 +54,13 @@
 
 			function monitor() {
 				ptime = new Date().getTime()
-				if (ptime - stime > 10000 && !soundstarted) {
+				if (ptime - stime > 6000 && !soundstarted) {
 					p.sendToRoom(room, {SRERROR: 'NoVoiceTimeout'}, function(data) {});
 					clearInterval(_ITV);
 					turnOffSR();
 					return true;
 				}
-				if ((soundstarted) &&  ptime - stime > 20000) {
+				if ((soundstarted) &&  ptime - stime > 10000) {
 					clearInterval(_ITV);
 					turnOffSR();
 					console.log(SRdetected);
