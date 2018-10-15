@@ -38,12 +38,8 @@ $( document ).ready(function() {
             var blob = file.slice( start, next_slice );
         
         reader.onloadend = function( event ) {
-             // if !data:;base64,Xz/
             var d = event.target.result.split( ';base64,');
-            if (!img) img = img + event.target.result;
-            else img = img + d[1];
-            $('img').attr('src',img);
-           // img.src = img;
+            img += (!img) ? event.target.result :  d[1];
             if ( event.target.readyState !== FileReader.DONE ) {
                 alert('=AAA=');
                 return;
@@ -51,11 +47,8 @@ $( document ).ready(function() {
                     if ( next_slice < file.size ) { 
                         upload_file( next_slice );
                   } else {
-                      console.log('Done!!!');
+                        $('img').attr('src',img);
                   }
-                
-                // console.log( file.size );
-               // console.log('BBB---' + FileReader.DONE);
             }
 
             // At this point the file data is loaded to event.target.result
