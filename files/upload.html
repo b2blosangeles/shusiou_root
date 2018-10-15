@@ -2,7 +2,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <script>
-  /*
   //  (function( $ ) {
 
     var reader = {};
@@ -40,29 +39,12 @@
     }
 
 //})( jQuery );
-*/
-</script>    
-<!--form>
-    <input type="file" name="dbi_import_file" /><br><br>
-    <hr/>
-    <input id="dbi-file-upload-submit" class="button button-primary" type="submit" value="Upload" onCLick="start_upload()" />
-</form-->
-<!--input type='file' accept='image/*' onchange='openFile(event)'><br-->
-<input type='file' onchange='openFile(event)'><br>
-<img id='output'>
-<script>
-  var openFile = function(event) {
-    var input = event.target;
 
-    var reader = new FileReader();
- 
-    reader.onload = function(){
-      var dataURL = reader.result;
-      var output = document.getElementById('output');
-      var blob = input.files[0].slice( 1, 1000 );
-      console.log('====output.src1====');
-      console.log(output.src);
-    };
-    reader.readAsDataURL(input.files[0]);
-  };
-</script>
+</script>    
+<form>
+    <p id="dbi-upload-progress">Please select a file and click "Upload" to continue.</p>
+
+    <input id="dbi-file-upload" type="file" name="dbi_import_file" /><br><br>
+
+    <input id="dbi-file-upload-submit" class="button button-primary" type="submit" value="Upload" />
+</form>
