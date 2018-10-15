@@ -7,7 +7,7 @@
 $( document ).ready(function() {
     var reader = {};
     var file = {};
-    var slice_size = 1000 * 1024;
+    var slice_size = 1000 * 10;
 
     function start_upload( event ) {
         console.log('---1---');
@@ -34,10 +34,9 @@ console.log('---2---');
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload );
 
     function upload_file( start ) {
-          alert(start+'===');
-       
-        
-
+            alert(start+'<===');
+            var next_slice = start + slice_size + 1;
+            var blob = file.slice( start, next_slice );
     }
 
 });
