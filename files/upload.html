@@ -59,7 +59,7 @@
     reader.onload = function(){
       var dataURL = reader.result;
       var output = document.getElementById('output');
-      var blob = input.files[0].slice( start, next_slice );
+      var blob = input.files[0].slice( 1, 1000 );
       console.log('====output.src1====');
       console.log(output.src);
     };
