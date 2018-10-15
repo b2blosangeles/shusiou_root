@@ -14,11 +14,8 @@ $( document ).ready(function() {
     function start_upload( event ) {
         event.preventDefault();
         reader = new FileReader();
-      //  file = $( '#dbi-file-upload' ).files[0];
-        file = document.querySelector( '#dbi-file-upload' ).files[0];
-        
-         
-        
+        file = $('#dbi-file-upload' )[0].files[0];
+        //file = document.querySelector( '#dbi-file-upload' ).files[0];
         upload_file(0 );
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
