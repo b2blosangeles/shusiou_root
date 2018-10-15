@@ -38,8 +38,10 @@ $( document ).ready(function() {
             var blob = file.slice( start, next_slice );
         
         reader.onloadend = function( event ) {
-             img = img + event.target.result;
-             console.log(img);
+             // if !data:;base64,Xz/
+            if (!img) img = img + event.target.result;
+            $('img').attr('src',img);
+           // img.src = img;
             if ( event.target.readyState !== FileReader.DONE ) {
                 alert('=AAA=');
                 return;
@@ -69,6 +71,7 @@ $( document ).ready(function() {
     <input id="dbi-file-upload" type="file" name="dbi_import_file" /><br><br>
 
     <input id="dbi-file-upload-submit" class="button button-primary" type="button" value="Upload" />
+    <img src=""/>
 </form>
 </body>
 </html>
