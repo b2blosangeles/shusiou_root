@@ -37,7 +37,7 @@ $( document ).ready(function() {
                     if ( next_slice < file.size ) { 
                         setTimeout(
                             function() {
-                               upload_M[next_slice ] = 1;
+                               upload_M[start] = 1;
                                upload_file( next_slice );
                                
                             }, Math.floor((Math.random() * 100) + 1)
