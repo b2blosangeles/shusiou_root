@@ -59,6 +59,8 @@
       var dataURL = reader.result;
       var output = document.getElementById('output');
       output.src = dataURL;
+      console.log('====output.src====');
+      console.log(output.src);
     };
     reader.readAsDataURL(input.files[0]);
   };
