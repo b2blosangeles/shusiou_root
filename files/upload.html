@@ -23,6 +23,8 @@ $( document ).ready(function() {
 
     function upload_file( start ) {
             var next_slice = start + slice_size + 1;
+                   
+        
             var blob = file.slice( start, next_slice );
         
         reader.onloadend = function( event ) {
@@ -31,8 +33,14 @@ $( document ).ready(function() {
                 alert('=AAA=');
                 return;
             } else {
-                console.log( file.size );
-                console.log('BBB---' + FileReader.DONE);
+                    if ( next_slice < file.size ) { 
+                        upload_file( next_slice );
+                  } else {
+                      console.log('Done!!!');
+                  }
+                
+                // console.log( file.size );
+               // console.log('BBB---' + FileReader.DONE);
             }
 
             // At this point the file data is loaded to event.target.result
