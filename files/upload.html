@@ -9,11 +9,11 @@
     var slice_size = 1000 * 1024;
 
     function start_upload( event ) {
-        
+        console.log('---1---');
         event.preventDefault();
-
+console.log('---2---');
         reader = new FileReader();
-      alert(222);
+     console.log('---3---');
         file = $( '#dbi-file-upload' ).files[0];
 
         reader.onloadend = function( event ) {
