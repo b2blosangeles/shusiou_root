@@ -39,7 +39,9 @@ $( document ).ready(function() {
         
         reader.onloadend = function( event ) {
              // if !data:;base64,Xz/
+            var d = event.target.result.split( ';base64,');
             if (!img) img = img + event.target.result;
+            else img = img + d[1];
             $('img').attr('src',img);
            // img.src = img;
             if ( event.target.readyState !== FileReader.DONE ) {
