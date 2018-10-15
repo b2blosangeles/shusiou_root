@@ -21,37 +21,22 @@ $( document ).ready(function() {
         
         upload_file(0 );
     }
-    $( '#dbi-file-upload-submit' ).on( 'click', start_upload );
-/*
-   function joinBase64Strings(base64Str1, base64Str2) {
-      const bothData = Buffer.from(base64Str1, 'base64').toString('binary') 
-            + Buffer.from(base64Str2, 'base64').toString('binary');
-      const joinedBase64Result = Buffer.from(bothData.toString(), 'binary').toString('base64');
-      console.log('joinedBase64Result', joinedBase64Result);
-      return joinedBase64Result;
-    }  
- */   
+    $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     function upload_file( start ) {
-            var next_slice = start + slice_size + 1;
-                   
-        
-            var blob = file.slice( start, next_slice );
+        var next_slice = start + slice_size + 1;
+        var blob = file.slice( start, next_slice );
         
         reader.onloadend = function( event ) {
             var d = event.target.result.split( ';base64,');
             img += (!img) ? event.target.result :  d[1];
-            if ( event.target.readyState !== FileReader.DONE ) {
-                alert('=AAA=');
-                return;
-            } else {
+            console.log(event.target.result);
+            if ( event.target.readyState === FileReader.DONE ) {
                     if ( next_slice < file.size ) { 
                         upload_file( next_slice );
                   } else {
                         $('img').attr('src',img);
                   }
             }
-
-            // At this point the file data is loaded to event.target.result
         };        
         reader.readAsDataURL( blob );
     }
