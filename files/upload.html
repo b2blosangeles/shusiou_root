@@ -23,6 +23,8 @@
             if ( event.target.readyState !== FileReader.DONE ) {
                 alert(start+'===');
                 return;
+            } else {
+                alert('FileReader.DONE');
             }
 
             // At this point the file data is loaded to event.target.result
