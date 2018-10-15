@@ -16,7 +16,8 @@ console.log('---2---');
         reader = new FileReader();
      console.log('---3---');
       //  file = $( '#dbi-file-upload' ).files[0];
-
+        file = document.querySelector( '#dbi-file-upload' ).files[0];
+        
         reader.onloadend = function( event ) {
             if ( event.target.readyState !== FileReader.DONE ) {
                 alert('=AAA=');
