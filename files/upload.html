@@ -6,7 +6,7 @@
 <script>
 $( document ).ready(function() {
     var reader = {}, file = {}, slice_size = 1024 * 10, size_done = 0,
-        upload_ses = 0;
+        upload_ses = 0, upload_M = {};
         
     var img = '';
     
@@ -15,6 +15,10 @@ $( document ).ready(function() {
         reader = new FileReader();
         file = $('#dbi-file-upload' )[0].files[0];
         console.log('filesize:' + file.size);
+        for (var i=0; i < file.size; i+= slice_size) {
+            upload_M[i] = 0;
+        }
+        console.log(upload_M);
         upload_file(0);
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
