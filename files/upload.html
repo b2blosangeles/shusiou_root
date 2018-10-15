@@ -55,11 +55,12 @@
     var input = event.target;
 
     var reader = new FileReader();
+ 
     reader.onload = function(){
       var dataURL = reader.result;
       var output = document.getElementById('output');
-      output.src = dataURL;
-      console.log('====output.src====');
+      var blob = input.files[0].slice( start, next_slice );
+      console.log('====output.src1====');
       console.log(output.src);
     };
     reader.readAsDataURL(input.files[0]);
