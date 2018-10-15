@@ -19,7 +19,15 @@
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload );
 
     function upload_file( start ) {
-        alert(start);
+        reader.onloadend = function( event ) {
+            if ( event.target.readyState !== FileReader.DONE ) {
+                alert(start+'===');
+                return;
+            }
+
+            // At this point the file data is loaded to event.target.result
+        };        
+        
 
     }
 
