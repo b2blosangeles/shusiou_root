@@ -22,7 +22,7 @@ $( document ).ready(function() {
         upload_file( 1000 );
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload );
-
+/*
    function joinBase64Strings(base64Str1, base64Str2) {
       const bothData = Buffer.from(base64Str1, 'base64').toString('binary') 
             + Buffer.from(base64Str2, 'base64').toString('binary');
@@ -30,7 +30,7 @@ $( document ).ready(function() {
       console.log('joinedBase64Result', joinedBase64Result);
       return joinedBase64Result;
     }  
-    
+ */   
     function upload_file( start ) {
             var next_slice = start + slice_size + 1;
                    
