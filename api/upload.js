@@ -1,2 +1,2 @@
-var buf = new Buffer(b64string, req.body.data);
+var buf = new Buffer(req.body.data, 'base64');
 res.send({buf:buf});
