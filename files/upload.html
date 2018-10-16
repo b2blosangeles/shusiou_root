@@ -38,7 +38,7 @@ $( document ).ready(function() {
                     if ( next_slice < file.size ) { 
                         
                         ajaxUpload(start);
-                        
+                        /*
                         setTimeout(
                             function() {
                                upload_M[start] = 1;
@@ -47,6 +47,7 @@ $( document ).ready(function() {
                                
                             }, Math.floor((Math.random() * 100) + 1)
                         )
+                        */
                   } else {
                       upload_M[start] = 1;
                        console.log(upload_M);
