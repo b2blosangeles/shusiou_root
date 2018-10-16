@@ -70,7 +70,7 @@ $( document ).ready(function() {
           url: '/api/upload.api',
           data: {pos:pos, data:dt},
           success: function(data) {
-              if (typeof data == 'function') {
+              if (typeof cbk == 'function') {
                 cbk();
               }
             console.log(data);
