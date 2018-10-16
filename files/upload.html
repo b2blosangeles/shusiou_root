@@ -61,11 +61,11 @@ $( document ).ready(function() {
 });
 
     
-    function ajaxUpload(pos) {
+    function ajaxUpload(pos, dt) {
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
-          data: {pos:0, data:'niu'},
+          data: {pos:pos, data:dt},
           success: function(data) {
             console.log(data);
           },
