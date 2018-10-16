@@ -5,7 +5,7 @@
 </head>
 <script>
 $( document ).ready(function() {
-    var reader = {}, file = {}, slice_size = 1024 * 64, size_done = 0,
+    var reader = {}, file = {}, slice_size = 1024 * 50, size_done = 0,
         upload_ses = 0, upload_M = {};
         
     var img = '';
@@ -32,7 +32,7 @@ $( document ).ready(function() {
         
         reader.onloadend = function( event ) {
             var d = event.target.result.split( ';base64,');
-            img += (!start) ? event.target.result :  d[1];
+            img += (!start) ? event.target.result :  d[1].replace(/\=\=$/, '');
  
             if ( event.target.readyState === FileReader.DONE ) { 
                 ajaxUpload(start, d[1],
