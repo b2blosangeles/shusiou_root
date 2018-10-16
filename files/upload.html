@@ -39,7 +39,7 @@ $( document ).ready(function() {
                         
                         ajaxUpload(start, event.target.result,
                                   function() {
-                        
+                                    alert(start);
                         });
                         /*
                         setTimeout(
@@ -64,12 +64,15 @@ $( document ).ready(function() {
 });
 
     
-    function ajaxUpload(pos, dt) {
+    function ajaxUpload(pos, dt, cbk) {
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
           data: {pos:pos, data:dt},
           success: function(data) {
+              if (typeof data == 'function') {
+                cbk();
+              }
             console.log(data);
           },
           dataType: 'JSON'
