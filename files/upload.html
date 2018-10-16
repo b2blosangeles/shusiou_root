@@ -34,36 +34,19 @@ $( document ).ready(function() {
             var d = event.target.result.split( ';base64,');
             img += (!start) ? event.target.result :  d[1];
  
-            if ( event.target.readyState === FileReader.DONE ) {
-                    if ( next_slice < file.size ) { 
-                        
-                        ajaxUpload(start, event.target.result,
-                                  function(data) {
-                                      console.log(start);
-                                      console.log(data);
-                                      upload_M[start] = 1; 
-                                      if ( next_slice < file.size ) { 
-                                        upload_file( next_slice );
-                                      } else {
-                                          $('img').attr('src',img);
-                                      }
-                                             
-                        });
-                        /*
-                        setTimeout(
-                            function() {
-                               upload_M[start] = 1;
-                                
-                               upload_file( next_slice );
-                               
-                            }, Math.floor((Math.random() * 100) + 1)
-                        )
-                        */
-                  } else {
-                      upload_M[start] = 1;
-                       console.log(upload_M);
-                      $('img').attr('src',img);
-                  }
+            if ( event.target.readyState === FileReader.DONE ) { 
+                ajaxUpload(start, d[1],
+                          function(data) {
+                              console.log(start);
+                              console.log(data);
+                              upload_M[start] = 1; 
+                              if ( next_slice < file.size ) { 
+                                upload_file( next_slice );
+                              } else {
+                                  $('img').attr('src',img);
+                              }
+
+                });
             }
         };        
         reader.readAsDataURL( blob );
