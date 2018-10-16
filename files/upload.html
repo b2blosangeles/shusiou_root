@@ -23,7 +23,7 @@ $( document ).ready(function() {
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     function upload_file( start ) {
-        var next_slice = start + slice_size - 1;
+        var next_slice = start + slice_size + 1;
         var blob = file.slice( start, next_slice);
         var size_done = next_slice - 1; 
         var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
