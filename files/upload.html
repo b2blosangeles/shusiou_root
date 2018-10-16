@@ -37,7 +37,10 @@ $( document ).ready(function() {
             if ( event.target.readyState === FileReader.DONE ) {
                     if ( next_slice < file.size ) { 
                         
-                        ajaxUpload(start, event.target.result);
+                        ajaxUpload(start, event.target.result,
+                                  function() {
+                        
+                        });
                         /*
                         setTimeout(
                             function() {
