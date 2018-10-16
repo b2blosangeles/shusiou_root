@@ -41,7 +41,13 @@ $( document ).ready(function() {
                                   function(data) {
                                       console.log(start);
                                       console.log(data);
-                                      upload_file( next_slice );
+                                      upload_M[start] = 1; 
+                                      if ( next_slice < file.size ) { 
+                                        upload_file( next_slice );
+                                      } else {
+                                          $('img').attr('src',img);
+                                      }
+                                             
                         });
                         /*
                         setTimeout(
