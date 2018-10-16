@@ -36,9 +36,13 @@ $( document ).ready(function() {
  
             if ( event.target.readyState === FileReader.DONE ) {
                     if ( next_slice < file.size ) { 
+                        
+                        ajaxUpload(start);
+                        
                         setTimeout(
                             function() {
                                upload_M[start] = 1;
+                                
                                upload_file( next_slice );
                                
                             }, Math.floor((Math.random() * 100) + 1)
@@ -55,6 +59,20 @@ $( document ).ready(function() {
 
 });
 
+    
+    function ajaxUpload(pos) {
+        $.ajax({
+          type: "POST",
+          url: '/api/upload.api',
+          data: {pos:0, data:'niu'},
+          success: function(data) {
+            console.log(data);
+          },
+          dataType: 'JSON'
+        });
+        
+    
+    }
 </script>
 <body>
 <form>
