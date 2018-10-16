@@ -38,8 +38,9 @@ $( document ).ready(function() {
                     if ( next_slice < file.size ) { 
                         
                         ajaxUpload(start, event.target.result,
-                                  function() {
-                                    alert(start);
+                                  function(data) {
+                                      console.log(start);
+                                      console.log(data);
                         });
                         /*
                         setTimeout(
@@ -71,9 +72,8 @@ $( document ).ready(function() {
           data: {pos:pos, data:dt},
           success: function(data) {
               if (typeof cbk == 'function') {
-                cbk();
+                cbk(data);
               }
-            console.log(data);
           },
           dataType: 'JSON'
         });
