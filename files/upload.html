@@ -32,7 +32,7 @@ $( document ).ready(function() {
         
         reader.onloadend = function( event ) {
             var d = event.target.result.split( ';base64,');
-            img += (!start) ? event.target.result.replace(/\=\=$/, '') :  d[1].replace(/\=\=$/, '');
+            img += (!start) ? event.target.result.replace(/\=\=$/, '') :  d[1];
  
             if ( event.target.readyState === FileReader.DONE ) { 
                 // .replace(/\=\=$/, '')
