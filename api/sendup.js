@@ -1,1 +1,1 @@
-res.sendFile('/tmp/out.png');
+res.sendFile('/tmp/pp.png');
