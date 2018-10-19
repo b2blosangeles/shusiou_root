@@ -1,7 +1,6 @@
 var pos = req.body.pos,
     base64Data = req.body.data.replace(/^data:image\/png;base64,/, "");
-res.send(env);
-return true;
+
 var folderP = require(env.site_path + '/api/inc/folderP/folderP');
 var fp = new folderP();
 fp.build("/tmp/niu", () => {
