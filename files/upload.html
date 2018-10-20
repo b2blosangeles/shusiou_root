@@ -14,7 +14,7 @@ $( document ).ready(function() {
         file = $('#dbi-file-upload' )[0].files[0];
         console.log('filesize:' + file.size);
         for (var i=0; i < file.size; i+= slice_size) {
-            upload_M[i] = 0;
+            upload_M[i] = '';
         }
         console.log(upload_M);
         img = '';
@@ -26,13 +26,13 @@ $( document ).ready(function() {
     
     function upload_file( start ) {
         for(var key in upload_M) {
-            if (isNAN(upload_M[key])) {
+            if (!isNaN(upload_M[key])) {
                 console.log('===hold===');
                 return false;
             }
         }
         for(var key in upload_M) {
-            if (!upload_M[key]) {
+            if (upload_M[key] === '') {
                console.log("====" + key + "=====");
             }
         } 
