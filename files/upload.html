@@ -50,9 +50,6 @@ $( document ).ready(function() {
         };        
         reader.readAsDataURL( blob );
     }
-
-});
-
     
     function ajaxUpload(pos, dt, cbk) {
         $.ajax({
@@ -66,7 +63,12 @@ $( document ).ready(function() {
           },
           dataType: 'JSON'
         }); 
-    }
+    }    
+
+});
+
+    
+
 </script>
 <body>
 <form>
