@@ -43,7 +43,7 @@ $( document ).ready(function() {
                               } else {
                                   console.log(upload_M);
                                   ajaxFinished(function(data) {
-                                        $('img').attr('src','/api/sendup.api?nocache=' + new Date().getTime());
+                                      $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
                                   });
                                   
                               }
@@ -74,6 +74,7 @@ $( document ).ready(function() {
           data: {pos:'finished', ses: ses},
           success: function(data) {
               if (typeof cbk == 'function') {
+                   
                 cbk(data);
               }
           },
