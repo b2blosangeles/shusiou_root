@@ -9,6 +9,6 @@ fp.build('/tmp/niu_' + ses, () => {
             res.send({ses:ses});
         });
     } else {
-        res.send('finished');
+        res.send({status:'success', message:'finished'});
     }
 });
