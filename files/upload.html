@@ -27,7 +27,7 @@ $( document ).ready(function() {
     function upload_file(  ) {
         var start = null;
         for(var key in upload_M) {
-            if (!isNaN(upload_M[key])) {
+            if (isNaN(upload_M[key])) {
                 console.log('===hold===>' + key);
                 console.log(upload_M);
                 return false;
