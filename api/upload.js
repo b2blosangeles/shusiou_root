@@ -10,9 +10,9 @@ fp.build(d_folder, () => {
             res.send({ses:ses});
         });
     } else {
-        pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
-            function (error, stdout, stderr) {
-                res.send({status:'success', message:'finished2'});	
-            });
+        //pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
+          //  function (error, stdout, stderr) {
+                res.send({status:'success', message:'finished3'});	
+          //  });
     }
 });
