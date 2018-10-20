@@ -1,1 +1,1 @@
-res.sendFile('/tmp/pp.png');
+res.sendFile('/tmp/' + req.query.fn);
