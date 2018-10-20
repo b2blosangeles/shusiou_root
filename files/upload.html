@@ -32,10 +32,11 @@ $( document ).ready(function() {
             var d = event.target.result.split( ';base64,');
 
             if ( event.target.readyState === FileReader.DONE ) { 
-                ajaxUpload(ses, start, d[1],
+                ajaxUpload(start, d[1],
                           function(data) {
                               console.log(start);
-                              console.log(data.ses);
+                               ses = data.ses;
+                              console.log(data);
                               upload_M[start] = 1; 
                               if ( next_slice < file.size ) { 
                                 upload_file( next_slice );
@@ -53,7 +54,7 @@ $( document ).ready(function() {
 });
 
     
-    function ajaxUpload(ses, pos, dt, cbk) {
+    function ajaxUpload(pos, dt, cbk) {
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
