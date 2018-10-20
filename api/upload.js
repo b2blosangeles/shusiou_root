@@ -4,7 +4,7 @@ var pos = req.body.pos, ses = (!req.body.ses) ? (new Date().getTime()) : req.bod
 var folderP = require(env.site_path + '/api/inc/folderP/folderP');
 var fp = new folderP();
 var d_folder = '/tmp/niu_' + ses + '/', 
-    f_target = '/tmp/pp.png';
+    f_target = (!req.body.fn) ? '/tmp/pp.png' : '/tmp/' + req.body.fn;
 
 fp.build(d_folder, () => {
     if (pos !== 'finished') {
