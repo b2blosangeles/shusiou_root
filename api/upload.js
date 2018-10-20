@@ -3,14 +3,16 @@ var pos = req.body.pos, ses = (!req.body.ses) ? (new Date().getTime()) : req.bod
 
 var folderP = require(env.site_path + '/api/inc/folderP/folderP');
 var fp = new folderP();
-fp.build('/tmp/niu_' + ses, () => {
+var d_folder = '/tmp/niu_' + ses;
+fp.build(d_folder, () => {
     if (pos !== 'finished') {
         pkg.fs.writeFile("/tmp/niu/sec_" + pos + "_out.png", base64Data, 'base64', function(err) {
             res.send({ses:ses});
         });
     } else {
-        pkg.exec('ls -l', function (error, stdout, stderr) {
-            res.send({status:'success', message:'finished2'});	
-        });
+        pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
+            function (error, stdout, stderr) {
+                res.send({status:'success', message:'finished2'});	
+            });
     }
 });
