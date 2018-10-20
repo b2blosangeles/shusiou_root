@@ -27,16 +27,12 @@ $( document ).ready(function() {
     function upload_file(  ) {
         var start = null;
         for(var key in upload_M) {
-            console.log(key);
-            /*
-            if (!isNaN(upload_M[key])) {
+            if (['','D'].indexOf(upload_M[key]) === -1) {
                 console.log('===hold=is number ==>' + key);
                 console.log(upload_M);
                 return false;
             }
-            */
         }
-        return
         for(var key in upload_M) {
             if (upload_M[key] === '') {
                start = key;
