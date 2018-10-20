@@ -25,6 +25,7 @@ $( document ).ready(function() {
     
     
     function upload_file( start ) {
+        var pos = null;
         for(var key in upload_M) {
             if (isNaN(upload_M[key])) {
                 console.log('===hold===');
@@ -33,10 +34,14 @@ $( document ).ready(function() {
         }
         for(var key in upload_M) {
             if (upload_M[key] === '') {
+                pos = key;
                console.log("====" + key + "=====");
                break;
             }
         } 
+        if (pos === null) {
+            console.log("====finished=====");
+        }
         return true;
         
         var next_slice = start + slice_size;
