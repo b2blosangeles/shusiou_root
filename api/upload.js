@@ -1,4 +1,4 @@
-var pos = req.body.pos, ses = (req.body.ses) ? req.body.ses : (new Date().getTime()) ,
+var pos = req.body.pos, ses = (!req.body.ses) ? (new Date().getTime()) |  req.body.ses,
     base64Data = req.body.data.replace(/^data:image\/png;base64,/, "");
 
 
