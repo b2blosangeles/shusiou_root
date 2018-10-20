@@ -6,7 +6,7 @@ var fp = new folderP();
 var d_folder = '/tmp/niu_' + ses;
 fp.build(d_folder, () => {
     if (pos !== 'finished') {
-        pkg.fs.writeFile("/tmp/niu/sec_" + pos + "_out.png", base64Data, 'base64', function(err) {
+        pkg.fs.writeFile(d_folder + '/sec_' + pos + '_out.png', base64Data, 'base64', function(err) {
             res.send({ses:ses});
         });
     } else {
