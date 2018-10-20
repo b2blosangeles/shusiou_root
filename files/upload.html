@@ -66,6 +66,7 @@ $( document ).ready(function() {
         }); 
     }    
     function ajaxFinished() {
+        console.log('====finished====>>');
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
