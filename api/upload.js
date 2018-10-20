@@ -4,7 +4,7 @@ var pos = req.body.pos, ses = (!req.body.ses) ? (new Date().getTime()) : req.bod
 
 var folderP = require(env.site_path + '/api/inc/folderP/folderP');
 var fp = new folderP();
-fp.build("/tmp/niu", () => {
+fp.build('/tmp/niu_' + ses, () => {
     require("fs").writeFile("/tmp/niu/sec_" + pos + "_out.png", base64Data, 'base64', function(err) {
         res.send({ses:ses});
     });
