@@ -10,12 +10,9 @@ fp.build(d_folder, () => {
             res.send({ses:ses});
         });
     } else {
-        //pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
-        // res.send({status:'success', message:'cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder});	
-       
-        pkg.exec('cd ' + d_folder + '&& cat $(find ./ -name \"sec_*_out.png\" | sort -V) > ./pp1.png ', 
+        pkg.exec('cd ' + d_folder + '&& cat $(find ./ -name \"sec_*_out.png\" | sort -V) > ../pp1.png && cd /tmp && rm -fr ' + d_folder, 
             function (error, stdout, stderr) {
-                res.send({status:'success', message:'finished33'});	
+                res.send({status:'success', message:'finished66'});	
             });
             
     }
