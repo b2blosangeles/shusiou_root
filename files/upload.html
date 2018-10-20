@@ -8,8 +8,6 @@ $( document ).ready(function() {
     var reader = {}, file = {}, slice_size = 1024 * 1, size_done = 0,
         upload_ses = 0, upload_M = {};
         
-    var img = '';
-    
     function start_upload( event ) {
         event.preventDefault();
         reader = new FileReader();
@@ -32,12 +30,9 @@ $( document ).ready(function() {
         
         reader.onloadend = function( event ) {
             var d = event.target.result.split( ';base64,');
-            img += (!start) ? event.target.result.replace(/\=\=$/, '') :  d[1];
- 
+
             if ( event.target.readyState === FileReader.DONE ) { 
-                // .replace(/\=\=$/, '')
                 ajaxUpload(start, d[1],
-                           //.replace(/\=\=$/, ''),
                           function(data) {
                               console.log(start);
                               console.log(data);
@@ -69,9 +64,7 @@ $( document ).ready(function() {
               }
           },
           dataType: 'JSON'
-        });
-        
-    
+        }); 
     }
 </script>
 <body>
