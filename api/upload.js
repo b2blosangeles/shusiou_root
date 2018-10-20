@@ -4,7 +4,7 @@ var pos = req.body.pos, ses = (!req.body.ses) ? (new Date().getTime()) : req.bod
 var folderP = require(env.site_path + '/api/inc/folderP/folderP');
 var fp = new folderP();
 var d_folder = '/tmp/niu_' + ses + '/', 
-    f_target = (!req.body.fn) ? '/tmp/pp.png' : '/tmp/' + req.body.fn;
+    f_target = (!req.body.fn) ? '/tmp/' + ses  : '/tmp/' + req.body.fn;
 
 fp.build(d_folder, () => {
     if (pos !== 'finished') {
@@ -14,7 +14,7 @@ fp.build(d_folder, () => {
     } else {
         pkg.exec('cat $(find ' + d_folder + ' -name "sec_*_out.png" | sort -V) > ' + f_target + ' && rm -fr ' + d_folder, 
             function (error, stdout, stderr) {
-                res.send({status:'success', message:'finished88'});	
+                res.send({status:'success', fn: ses});	
             });
             
     }
