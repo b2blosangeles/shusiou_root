@@ -42,8 +42,10 @@ $( document ).ready(function() {
                                 upload_file( next_slice );
                               } else {
                                   console.log(upload_M);
-                                  ajaxFinished();
-                                  $('img').attr('src','/api/sendup.api');
+                                  ajaxFinished(function(data) {
+                                        $('img').attr('src','/api/sendup.api?nocache=' + new Date().getTime());
+                                  });
+                                  
                               }
 
                 });
@@ -65,15 +67,15 @@ $( document ).ready(function() {
           dataType: 'JSON'
         }); 
     }    
-    function ajaxFinished() {
-        console.log('====finished====>>');
+    function ajaxFinished(cbk) {
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
           data: {pos:'finished', ses: ses},
           success: function(data) {
-               console.log('====finished====');
-              console.log(data);
+              if (typeof cbk == 'function') {
+                cbk(data);
+              }
           },
           dataType: 'JSON'
         }); 
