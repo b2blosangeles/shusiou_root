@@ -11,8 +11,12 @@ fp.build(d_folder, () => {
         });
     } else {
         //pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
-          //  function (error, stdout, stderr) {
+         res.send({status:'success', message:'cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder});	
+        /*
+        pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
+            function (error, stdout, stderr) {
                 res.send({status:'success', message:'finished3'});	
-          //  });
+            });
+            */
     }
 });
