@@ -36,7 +36,8 @@ $( document ).ready(function() {
  
             if ( event.target.readyState === FileReader.DONE ) { 
                 // .replace(/\=\=$/, '')
-                ajaxUpload(start, d[1].replace(/\=\=$/, ''),
+                ajaxUpload(start, d[1],
+                           //.replace(/\=\=$/, ''),
                           function(data) {
                               console.log(start);
                               console.log(data);
