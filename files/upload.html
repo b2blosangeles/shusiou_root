@@ -21,7 +21,23 @@ $( document ).ready(function() {
         upload_file(0);
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
+    
+    
+    
     function upload_file( start ) {
+        for(var key in upload_M) {
+            if (isNAN(upload_M[key])) {
+                console.log('===hold===');
+                return false;
+            }
+        }
+          for(var key in upload_M) {
+            if (!upload_M[key]) {
+               console.log("====" + key + "=====");
+            }
+        } 
+        return true;
+        
         var next_slice = start + slice_size;
         var blob = file.slice( start, next_slice);
         var size_done = next_slice - 1; 
