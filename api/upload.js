@@ -12,7 +12,7 @@ fp.build(d_folder, () => {
             res.send({ses:ses});
         });
     } else {
-        pkg.exec('cat $(find ' + d_folde + ' -name "sec_*_out.png" | sort -V) > ' + f_target + ' && rm -fr ' + d_folder, 
+        pkg.exec('cat $(find ' + d_folder + ' -name "sec_*_out.png" | sort -V) > ' + f_target + ' && rm -fr ' + d_folder, 
             function (error, stdout, stderr) {
                 res.send({status:'success', message:'finished88'});	
             });
