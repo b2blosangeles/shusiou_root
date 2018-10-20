@@ -32,7 +32,7 @@ $( document ).ready(function() {
             var d = event.target.result.split( ';base64,');
 
             if ( event.target.readyState === FileReader.DONE ) { 
-                ajaxUpload(start, d[1],
+                ajaxUpload(ses, start, d[1],
                           function(data) {
                               console.log(start);
                               console.log(data.ses);
@@ -53,7 +53,7 @@ $( document ).ready(function() {
 });
 
     
-    function ajaxUpload(pos, dt, cbk) {
+    function ajaxUpload(ses, pos, dt, cbk) {
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
