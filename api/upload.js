@@ -13,9 +13,9 @@ fp.build(d_folder, () => {
         //pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder, 
         // res.send({status:'success', message:'cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png && rm -fr ' + d_folder});	
        
-        pkg.exec('cat $(find ' + d_folder + '/ -name "sec_*_out.png" | sort -V) > pp1.png ', 
+        pkg.exec('cat $(find ' + d_folder + '/ -name \"sec_*_out.png\" | sort -V) > pp1.png ', 
             function (error, stdout, stderr) {
-                res.send({status:'success', message:'finished31'});	
+                res.send({status:'success', message:'finished32'});	
             });
             
     }
