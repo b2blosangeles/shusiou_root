@@ -28,7 +28,8 @@ $( document ).ready(function() {
         var start = null;
         for(var key in upload_M) {
             if (!isNaN(upload_M[key])) {
-                console.log('===hold===');
+                console.log('===hold===' + key);
+                console.log(upload_M);
                 return false;
             }
         }
