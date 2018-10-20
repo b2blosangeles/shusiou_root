@@ -42,6 +42,7 @@ $( document ).ready(function() {
                                 upload_file( next_slice );
                               } else {
                                   console.log(upload_M);
+                                  ajaxFinished();
                                   $('img').attr('src','/api/sendup.api');
                               }
 
@@ -64,7 +65,18 @@ $( document ).ready(function() {
           dataType: 'JSON'
         }); 
     }    
-
+    function ajaxFinished() {
+        $.ajax({
+          type: "POST",
+          url: '/api/upload.api',
+          data: {pos:'finished', ses: ses},
+          success: function(data) {
+               console.log('====finished====');
+          },
+          dataType: 'JSON'
+        }); 
+    }   
+    
 });
 
     
