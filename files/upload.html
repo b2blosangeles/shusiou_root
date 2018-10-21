@@ -73,7 +73,7 @@ $( document ).ready(function() {
             var me = this;
             event.preventDefault();
             reader = new FileReader();
-            file = setting.fileField.files[0];
+            file = setting.file;
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
@@ -92,7 +92,24 @@ $( document ).ready(function() {
         }
       );
     
-     $('#dbi-file-upload-submit').on( 'click', up1.upload );
+     $('#dbi-file-upload-submit').on( 'click', function() {
+         var files = $('#dbi-file-upload' )[0].files; 
+         up = [];
+         for (var i = 0; i < files.length; i++) {
+            up[i] = new FILEUPLOAD(
+                {
+                    file: files[i], 
+                    progress : function(percent_done) {
+                            $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
+                        },
+                    done : function(data) {
+                             $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
+                        }
+                }
+              )
+             up[i].upload();
+         }
+     });
 });
     
 </script>
