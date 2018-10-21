@@ -18,7 +18,7 @@ $( document ).ready(function() {
             }
             ITV = setInterval(upload_file, 10);
         }
-        trigger.on( 'click', start_upload ); 
+        
 
         function getStart() {
             for(var k in upload_M) {
@@ -90,6 +90,8 @@ $( document ).ready(function() {
              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
         }
       );
+    
+     $('#dbi-file-upload-submit').on( 'click', up1.start_upload );
 });
     
 </script>
