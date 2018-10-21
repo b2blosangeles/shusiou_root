@@ -23,21 +23,20 @@ $( document ).ready(function() {
         trigger.on( 'click', start_upload ); 
 
         function getStart() {
-            var finished = true;
-            for(var k in upload_M)  if (upload_M[k] !== 'D') finished = false;
-            if (finished) { 
+            // var finished = true;
+            for(var k in upload_M) {
+              //  if (upload_M[k] !== 'D') finished = false;
+                if (['','D'].indexOf(upload_M[k]) === -1) {
+                    return false;
+                } else if (upload_M[k] === '') {
+                    return parseInt(k);
+                }                
+            } 
+         //   if (finished) { 
                 clearInterval( ITV);
                 ajaxFinished();
                 return 'finished'
-            }
-            for(var k in upload_M) {
-                if (['','D'].indexOf(upload_M[k]) === -1) {
-                    return false;
-                }
-                if (upload_M[k] === '') {
-                    return parseInt(k);
-                }                
-            }   
+        //    }            
             return false;
         }
 
