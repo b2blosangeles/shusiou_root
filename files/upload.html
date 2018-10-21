@@ -30,6 +30,7 @@ $( document ).ready(function() {
         }  
         if (finished) { 
             clearInterval( ITV);
+            return 'finished'
         }
         for(var k in upload_M) {
             if (['','D'].indexOf(upload_M[k]) === -1) {
@@ -49,6 +50,12 @@ $( document ).ready(function() {
         if (start === false) {
             return true;
         }
+        if (start === 'finished') {
+           ajaxFinished(function(data) {
+              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
+            });           
+            return true;
+        }        
         upload_M[start] = new Date().getTime();
         var next_slice = start + slice_size;
         var blob = file.slice( start, next_slice);
@@ -64,13 +71,7 @@ $( document ).ready(function() {
                               console.log(start);
                                ses = data.ses;
                               console.log(data);
-                              upload_M[start] = 'D'; 
-                              if ( next_slice >= file.size ) { 
-                                  console.log(upload_M);
-                                  ajaxFinished(function(data) {
-                                      $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
-                                  });
-                              }
+                              upload_M[start] = 'D';
                 });
             }
         };        
