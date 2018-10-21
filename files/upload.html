@@ -69,9 +69,9 @@ $( document ).ready(function() {
               dataType: 'JSON'
             }); 
         }  
-        this.upload = function( event ) {
+        this.upload = function() {
             var me = this;
-            event.preventDefault();
+            // event.preventDefault();
             reader = new FileReader();
             // file = setting.fileField.files[setting.fileIDX];
             file = setting.file;
@@ -113,7 +113,7 @@ $( document ).ready(function() {
                         }
                 }
               )
-             up[i].upload(event);
+             up[i].upload();
          }
      });
      
