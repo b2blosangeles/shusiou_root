@@ -61,14 +61,11 @@ $( document ).ready(function() {
                                ses = data.ses;
                               console.log(data);
                               upload_M[start] = 'D'; 
-                              if ( next_slice < file.size ) { 
-                                // upload_file();
-                              } else {
+                              if ( next_slice >= file.size ) { 
                                   console.log(upload_M);
                                   ajaxFinished(function(data) {
                                       $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
                                   });
-                                  
                               }
                 });
             }
