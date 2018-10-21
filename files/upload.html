@@ -25,7 +25,7 @@ $( document ).ready(function() {
 
         function upload_file() {
             console.log('this.upload_file');
-            var pos = me.getPos();
+            var pos = this.getPos();
             if (pos === false || pos === 'finished')  return true;     
             upload_M[pos] = new Date().getTime();
             var blob = file.slice( pos, pos + slice_size);
