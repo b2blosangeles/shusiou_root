@@ -18,7 +18,8 @@ $( document ).ready(function() {
         }
         console.log(upload_M);
         img = '';
-        ITV = setInterval(upload_file, 1000);
+        // ITV = setInterval(upload_file, 1000);
+        upload_file();
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     
@@ -62,7 +63,7 @@ $( document ).ready(function() {
                               console.log(data);
                               upload_M[start] = "D"; 
                               if ( next_slice < file.size ) { 
-                              //  upload_file();
+                                  upload_file();
                               } else {
                                   console.log(upload_M);
                                   ajaxFinished(function(data) {
