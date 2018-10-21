@@ -10,6 +10,7 @@ $( document ).ready(function() {
             ses = null, upload_M = {}, ITV;
 
         this.start_upload = function( event ) {
+            alert(123);
             event.preventDefault();
             reader = new FileReader();
             file = fileField.files[0];
