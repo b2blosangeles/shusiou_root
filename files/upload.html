@@ -24,8 +24,9 @@ $( document ).ready(function() {
     function getStart() {
         for(var k in upload_M) {
             if (upload_M[k] === '0') {
-                upload_file(k);
+                
                 console.log('====>>>' + k);
+                upload_file(k);
                 return k;
             }
         }
