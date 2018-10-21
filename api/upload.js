@@ -14,7 +14,7 @@ fp.build(d_folder, () => {
     } else {
         pkg.exec('cat $(find ' + d_folder + ' -name "sec_*_out.png" | sort -V) > ' + f_target + ' && rm -fr ' + d_folder, 
             function (error, stdout, stderr) {
-                res.send({status:'success', fn: ses});	
+                res.send({status:'success', fn: 'up_' + ses});	
             });
             
     }
