@@ -22,6 +22,15 @@ $( document ).ready(function() {
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     
     function getStart() {
+        var finished = true;
+        for(var k in upload_M) {
+            if (upload_M[k] !== 'D') {
+                finished = false;
+            }
+        }  
+        if (finished) {
+            return 'Finished';
+        }
         for(var k in upload_M) {
             if (['','D'].indexOf(upload_M[k]) === -1) {
                 return false;
@@ -32,7 +41,7 @@ $( document ).ready(function() {
                 return parseInt(k);
             }
         }
-        return 'Finished';
+        return false;
     }
     
     function upload_file() {
