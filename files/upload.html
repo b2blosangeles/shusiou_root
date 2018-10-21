@@ -73,7 +73,7 @@ $( document ).ready(function() {
             var me = this;
             event.preventDefault();
             reader = new FileReader();
-            file = setting.file;
+            file = setting.file.files[0];
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
@@ -82,7 +82,7 @@ $( document ).ready(function() {
     }
     var up1 = new FILEUPLOAD(
         {
-            file: $('#dbi-file-upload' )[0].files[0], 
+            file: $('#dbi-file-upload' )[0],
             progress : function(percent_done) {
                     $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
                 },
