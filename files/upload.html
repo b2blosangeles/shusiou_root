@@ -5,7 +5,7 @@
 </head>
 <script>
 $( document ).ready(function() {
-    (function(fileField) {
+    (function(fileField, trigger) {
         var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
             ses = null, upload_M = {}, ITV;
 
@@ -18,10 +18,9 @@ $( document ).ready(function() {
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-          //  console.log(upload_M);
             ITV = setInterval(upload_file, 10);
         }
-        $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
+        trigger.on( 'click', start_upload ); 
 
         function getStart() {
             var finished = true;
@@ -35,12 +34,10 @@ $( document ).ready(function() {
                 if (['','D'].indexOf(upload_M[k]) === -1) {
                     return false;
                 }
-            }   
-            for(var k in upload_M) {
                 if (upload_M[k] === '') {
                     return parseInt(k);
-                }
-            }
+                }                
+            }   
             return false;
         }
 
@@ -91,7 +88,7 @@ $( document ).ready(function() {
               dataType: 'JSON'
             }); 
         }   
-    })($('#dbi-file-upload' )[0]);
+    })($('#dbi-file-upload' )[0], $( '#dbi-file-upload-submit'));
 });
     
 </script>
