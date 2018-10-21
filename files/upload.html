@@ -25,6 +25,7 @@ $( document ).ready(function() {
         for(var k in upload_M) {
             if (upload_M[k] === '0') {
                 upload_file(k);
+                console.log('====>>>' + k);
                 return k;
             }
         }
