@@ -5,7 +5,7 @@
 </head>
 <script>
 $( document ).ready(function() {
-    (function(fileField, trigger, progress, done) {
+    var FILEUPLOAD = function(fileField, trigger, progress, done) {
         var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
             ses = null, upload_M = {}, ITV;
 
@@ -81,11 +81,12 @@ $( document ).ready(function() {
               dataType: 'JSON'
             }); 
         }   
-    })($('#dbi-file-upload' )[0], $('#dbi-file-upload-submit'),
+    }
+    var up1 = new FILEUPLOAD($('#dbi-file-upload' )[0], $('#dbi-file-upload-submit'),
         function(percent_done) {
             $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
         },
-       function(data) {
+        function(data) {
              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
         }
       );
