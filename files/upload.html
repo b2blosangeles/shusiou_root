@@ -24,7 +24,6 @@ $( document ).ready(function() {
         }
 
        function upload_file() {
-            console.log('this.upload_file');
             var pos = getPos();
             if (pos === false || pos === 'finished')  return true;     
             upload_M[pos] = new Date().getTime();
@@ -39,7 +38,7 @@ $( document ).ready(function() {
                     ajaxUpload(start, d[1],
                               function(data) {
                                   ses = data.ses;
-                                  upload_M[start] = 'D';
+                                  upload_M[pos] = 'D';
                     });
                 }
             };        
