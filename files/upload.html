@@ -6,7 +6,7 @@
 <script>
 $( document ).ready(function() {
     var reader = {}, file = {}, slice_size = 1024 * 16, size_done = 0,
-        ses = null, upload_M = {};
+        ses = null, upload_M = {}, ITV;
         
     function start_upload( event ) {
         event.preventDefault();
@@ -17,7 +17,7 @@ $( document ).ready(function() {
             upload_M[i] = '';
         }
         console.log(upload_M);
-        setInterval(upload_file, 100);
+        ITV = setInterval(upload_file, 100);
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     
@@ -31,13 +31,18 @@ $( document ).ready(function() {
             if (upload_M[k] === '') {
                 return parseInt(k);
             }
-        }        
+        }
+        return 'Finished';
     }
     
     function upload_file() {
         var start = getStart();
         if (start === false) {
             console.log('===skipped==');
+            return true;
+        }
+        if (start === 'Finished') {
+            clearInterval( ITV);
             return true;
         }
         upload_M[start] = new Date().getTime();
