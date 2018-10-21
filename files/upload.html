@@ -80,6 +80,7 @@ $( document ).ready(function() {
             _ITV = setInterval(upload_file, 10);
         }        
     }
+    /*
     var up1 = new FILEUPLOAD(
         {
             fileField: $('#dbi-file-upload' )[0],
@@ -93,14 +94,16 @@ $( document ).ready(function() {
         }
       );
      $('#dbi-file-upload-submit').on( 'click', up1.upload);
-    /*
-     $('#dbi-file-upload-submit').on( 'click', function() {
+   */
+     $('#dbi-file-upload-submit').on( 'click', function(event) {
+         event.preventDefault();
          var files = $('#dbi-file-upload' )[0].files; 
          up = [];
          for (var i = 0; i < files.length; i++) {
             up[i] = new FILEUPLOAD(
                 {
-                    file: files[i], 
+                    fileField: $('#dbi-file-upload' )[0],
+                    fileIDX : i,
                     progress : function(percent_done) {
                             $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
                         },
@@ -109,10 +112,10 @@ $( document ).ready(function() {
                         }
                 }
               )
-             up[i].upload();
+             up[i].upload(event);
          }
      });
-     */
+     
 });
     
 </script>
