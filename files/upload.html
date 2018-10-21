@@ -28,8 +28,8 @@ $( document ).ready(function() {
                 finished = false;
             }
         }  
-        if (finished) {
-            return 'Finished';
+        if (finished) { 
+            clearInterval( ITV);
         }
         for(var k in upload_M) {
             if (['','D'].indexOf(upload_M[k]) === -1) {
@@ -47,11 +47,6 @@ $( document ).ready(function() {
     function upload_file() {
         var start = getStart();
         if (start === false) {
-            console.log('===skipped==');
-            return true;
-        }
-        if (start === 'Finished') {
-            clearInterval( ITV);
             return true;
         }
         upload_M[start] = new Date().getTime();
