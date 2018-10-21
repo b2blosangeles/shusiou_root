@@ -37,7 +37,7 @@ $( document ).ready(function() {
     function upload_file() {
         var start = getStart();
         if (start === false) return true;
-        upload_M[k] = new Date().getTime();
+        upload_M[start] = new Date().getTime();
         var next_slice = start + slice_size;
         var blob = file.slice( start, next_slice);
         var size_done = next_slice - 1; 
