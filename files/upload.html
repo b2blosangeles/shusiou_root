@@ -5,91 +5,92 @@
 </head>
 <script>
 $( document ).ready(function() {
-    var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
-        ses = null, upload_M = {}, ITV;
-        
-    function start_upload( event ) {
-        event.preventDefault();
-        reader = new FileReader();
-        file = $('#dbi-file-upload' )[0].files[0];
-       // console.log('filesize:' + file.size);
-        for (var i=0; i < file.size; i+= slice_size) {
-            upload_M[i] = '';
-        }
-      //  console.log(upload_M);
-        ITV = setInterval(upload_file, 10);
-    }
-    $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
-    
-    function getStart() {
-        var finished = true;
-        for(var k in upload_M)  if (upload_M[k] !== 'D') finished = false;
-        if (finished) { 
-            clearInterval( ITV);
-            ajaxFinished();
-            return 'finished'
-        }
-        for(var k in upload_M) {
-            if (['','D'].indexOf(upload_M[k]) === -1) {
-                return false;
+    (function(file) {
+        var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
+            ses = null, upload_M = {}, ITV;
+
+        function start_upload( event ) {
+            event.preventDefault();
+            reader = new FileReader();
+           // file = $('#dbi-file-upload' )[0].files[0];
+           // console.log('filesize:' + file.size);
+            for (var i=0; i < file.size; i+= slice_size) {
+                upload_M[i] = '';
             }
+          //  console.log(upload_M);
+            ITV = setInterval(upload_file, 10);
+        }
+        $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
+
+        function getStart() {
+            var finished = true;
+            for(var k in upload_M)  if (upload_M[k] !== 'D') finished = false;
+            if (finished) { 
+                clearInterval( ITV);
+                ajaxFinished();
+                return 'finished'
+            }
+            for(var k in upload_M) {
+                if (['','D'].indexOf(upload_M[k]) === -1) {
+                    return false;
+                }
+            }   
+            for(var k in upload_M) {
+                if (upload_M[k] === '') {
+                    return parseInt(k);
+                }
+            }
+            return false;
+        }
+
+        function upload_file() {
+            var start = getStart();
+            if (start === false || start === 'finished')  return true;     
+            upload_M[start] = new Date().getTime();
+            var next_slice = start + slice_size;
+            var blob = file.slice( start, next_slice);
+            var size_done = next_slice - 1; 
+            var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
+            $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
+
+            reader.onloadend = function( event ) {
+                var d = event.target.result.split( ';base64,');
+                if ( event.target.readyState === FileReader.DONE ) { 
+                    ajaxUpload(start, d[1],
+                              function(data) {
+                                  ses = data.ses;
+                                  upload_M[start] = 'D';
+                    });
+                }
+            };        
+            reader.readAsDataURL( blob );
+        }
+
+        function ajaxUpload(pos, dt, cbk) {
+            $.ajax({
+              type: "POST",
+              url: '/api/upload.api',
+              data: {pos:pos, data:dt, ses: ses},
+              success: function(data) {
+                  if (typeof cbk == 'function') {
+                    cbk(data);
+                  }
+              },
+              dataType: 'JSON'
+            }); 
+        }    
+        function ajaxFinished() {
+            $.ajax({
+              type: "POST",
+              url: '/api/upload.api',
+              data: {pos:'finished', ses: ses},
+              success: function(data) {
+                  $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
+              },
+              dataType: 'JSON'
+            }); 
         }   
-        for(var k in upload_M) {
-            if (upload_M[k] === '') {
-                return parseInt(k);
-            }
-        }
-        return false;
-    }
-    
-    function upload_file() {
-        var start = getStart();
-        if (start === false || start === 'finished')  return true;     
-        upload_M[start] = new Date().getTime();
-        var next_slice = start + slice_size;
-        var blob = file.slice( start, next_slice);
-        var size_done = next_slice - 1; 
-        var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
-        $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
-        
-        reader.onloadend = function( event ) {
-            var d = event.target.result.split( ';base64,');
-            if ( event.target.readyState === FileReader.DONE ) { 
-                ajaxUpload(start, d[1],
-                          function(data) {
-                              ses = data.ses;
-                              upload_M[start] = 'D';
-                });
-            }
-        };        
-        reader.readAsDataURL( blob );
-    }
-    
-    function ajaxUpload(pos, dt, cbk) {
-        $.ajax({
-          type: "POST",
-          url: '/api/upload.api',
-          data: {pos:pos, data:dt, ses: ses},
-          success: function(data) {
-              if (typeof cbk == 'function') {
-                cbk(data);
-              }
-          },
-          dataType: 'JSON'
-        }); 
-    }    
-    function ajaxFinished() {
-        $.ajax({
-          type: "POST",
-          url: '/api/upload.api',
-          data: {pos:'finished', ses: ses},
-          success: function(data) {
-              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
-          },
-          dataType: 'JSON'
-        }); 
-    }   
-    
+    })($('#dbi-file-upload' )[0].files[0]);
 });
     
 </script>
