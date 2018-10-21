@@ -35,7 +35,7 @@ $( document ).ready(function() {
             reader.onloadend = function( event ) {
                 var d = event.target.result.split( ';base64,');
                 if ( event.target.readyState === FileReader.DONE ) { 
-                    ajaxUpload(start, d[1],
+                    ajaxUpload(pos, d[1],
                               function(data) {
                                   ses = data.ses;
                                   upload_M[pos] = 'D';
