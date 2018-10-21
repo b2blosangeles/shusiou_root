@@ -25,6 +25,7 @@ $( document ).ready(function() {
 
         this.upload_file = function() {
              var me = this;
+            console.log('this.upload_file');
             var pos = me.getPos();
             if (pos === false || pos === 'finished')  return true;     
             upload_M[pos] = new Date().getTime();
