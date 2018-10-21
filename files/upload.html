@@ -6,7 +6,7 @@
 </head>
 <script>
 $( document ).ready(function() {
-     var completed = {};
+     var completed = {}, uploadResult = {}
      function showComplete() {
           str = '';
           for(k in completed) {
@@ -14,7 +14,13 @@ $( document ).ready(function() {
           }
           $('#upload_completed' ).html(str);
      }
-     
+     function showResult() {
+          str = '';
+          for(k in result) {
+               str += <img src="' + uploadResult[k] '"/><br/><br/>';
+          }
+          $('#upload_result' ).html(str);
+     }   
      
      $('#dbi-file-upload-submit').on( 'click', function(event) {
          event.preventDefault();
@@ -29,8 +35,9 @@ $( document ).ready(function() {
                          showComplete()
                     },
                     done : function(data) {
-                             $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
-                        }
+                         uploadResult[ data.fn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         showResult();
+                    }
                 }
               )
              up[i].upload();
@@ -49,6 +56,6 @@ $( document ).ready(function() {
 </form>
 <br/><hr/><br/>
 <div id = "upload_completed"></div>
-<img src=""/>
+<div id = "upload_result"></div>
 </body>
 </html>
