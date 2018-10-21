@@ -77,10 +77,12 @@ $( document ).ready(function() {
             event.preventDefault();
             reader = new FileReader();
             file = fileField.files[0];
+             console.log('this.upload 2');
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
             me._ITV = setInterval(me.upload_file, 10);
+             console.log('this.upload 3');
         }        
     }
     var up1 = new FILEUPLOAD($('#dbi-file-upload' )[0], 
