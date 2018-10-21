@@ -22,14 +22,16 @@ $( document ).ready(function() {
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     
     function getStart() {
+        var start = null;
         for(var k in upload_M) {
             if (upload_M[k] === '0') {
-                
-                console.log('====>>>' + k);
-                upload_file(k);
-                return k;
+                start = k;
+                break;
             }
         }
+        console.log('---->>>' + k);
+        upload_file(k);
+       // return k;        
     }
     
     
