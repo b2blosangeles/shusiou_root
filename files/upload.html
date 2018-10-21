@@ -5,7 +5,7 @@
 </head>
 <script>
 $( document ).ready(function() {
-    var reader = {}, file = {}, slice_size = 1024 * 16, size_done = 0,
+    var reader = {}, file = {}, slice_size = 1024 * 1, size_done = 0,
         ses = null, upload_M = {}, ITV;
         
     function start_upload( event ) {
@@ -17,7 +17,7 @@ $( document ).ready(function() {
             upload_M[i] = '';
         }
         console.log(upload_M);
-        ITV = setInterval(upload_file, 100);
+        ITV = setInterval(upload_file, 50);
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     
