@@ -30,7 +30,7 @@ $( document ).ready(function() {
             var blob = file.slice( pos, pos + slice_size);
             var size_done = pos + slice_size - 1; 
             var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
-            (setting.progress) ? setting.progress(percent_done) : '';
+            (setting.progress) ? setting.progress(file.name, percent_done) : '';
             
             reader.onloadend = function( event ) {
                 var d = event.target.result.split( ';base64,');
@@ -90,8 +90,8 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: $('#dbi-file-upload' )[0].files[i],
-                    progress : function(percent_done) {
-                            $('#upload_completed' ).html('Completed: ' +  $('#dbi-file-upload' )[0].files[i].name + ':' + percent_done + '%' )
+                    progress : function(filename, percent_done) {
+                            $('#upload_completed' ).html('Completed: ' + filename + ':' + percent_done + '%' )
                         },
                     done : function(data) {
                              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
