@@ -91,7 +91,7 @@ $( document ).ready(function() {
                 {
                     file: $('#dbi-file-upload' )[0].files[i],
                     progress : function(filename, percent_done) {
-                            $('#upload_completed' ).html('Completed: ' + filename + ':' + percent_done + '%' )
+                            $('#upload_completed' ).html(filename + ' Completed: ' + percent_done + '%' )
                         },
                     done : function(data) {
                              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
