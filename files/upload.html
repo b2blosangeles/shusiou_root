@@ -17,17 +17,14 @@ $( document ).ready(function() {
             upload_M[i] = '0';
         }
         console.log(upload_M);
-        var idx =  getStart();
-        console.log('===getStart()===' + getStart());
-        upload_file(0);
+        upload_file(getStart());
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
     
     function getStart() {
-        var start = null;
         for(var k in upload_M) {
             if (upload_M[k] === '0') {
-                return k;
+                return parseInt(k);
             }
         }        
     }
