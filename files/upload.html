@@ -5,7 +5,7 @@
 </head>
 <script>
 $( document ).ready(function() {
-    var FILEUPLOAD = function(fileField, progress, done) {
+    var FILEUPLOAD = function(setting) {
         var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
             ses = null, upload_M = {}, _ITV;
 
@@ -30,7 +30,7 @@ $( document ).ready(function() {
             var blob = file.slice( pos, pos + slice_size);
             var size_done = pos + slice_size - 1; 
             var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
-            (progress) ? progress(percent_done) : '';
+            (setting.progress) ? setting.progress(percent_done) : '';
             
             reader.onloadend = function( event ) {
                 var d = event.target.result.split( ';base64,');
@@ -64,31 +64,31 @@ $( document ).ready(function() {
               url: '/api/upload.api',
               data: {pos:'finished', ses: ses},
               success: function(data) {
-                  (done) ? done(data) : '';
+                  (setting.done) ? setting.done(data) : '';
               },
               dataType: 'JSON'
             }); 
         }  
         this.upload = function( event ) {
             var me = this;
-            console.log('this.upload');
             event.preventDefault();
             reader = new FileReader();
-            file = fileField.files[0];
-             console.log('this.upload 2');
+            file = setting.fileField.files[0];
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
             _ITV = setInterval(upload_file, 10);
-             console.log('this.upload 3' + _ITV );
         }        
     }
-    var up1 = new FILEUPLOAD($('#dbi-file-upload' )[0], 
-        function(percent_done) {
-            $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
-        },
-        function(data) {
-             $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
+    var up1 = new FILEUPLOAD(
+        {
+            fileField: $('#dbi-file-upload' )[0], 
+            progress : function(percent_done) {
+                    $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
+                },
+            done : function(data) {
+                     $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
+                }
         }
       );
     
