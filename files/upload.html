@@ -25,7 +25,7 @@ $( document ).ready(function() {
         function upload_file() {
             var pos = getPos();
             if (pos === false || pos === 'finished')  return true;     
-            upload_M[start] = new Date().getTime();
+            upload_M[pos] = new Date().getTime();
             var blob = file.slice( pos, pos + slice_size);
             var size_done = pos + slice_size - 1; 
             var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
