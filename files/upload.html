@@ -73,6 +73,7 @@ $( document ).ready(function() {
         }  
         this.upload = function( event ) {
             var me = this;
+            console.log('this.upload');
             event.preventDefault();
             reader = new FileReader();
             file = fileField.files[0];
