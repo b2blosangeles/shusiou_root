@@ -23,13 +23,10 @@ $( document ).ready(function() {
     
     function getStart() {
         var finished = true;
-        for(var k in upload_M) {
-            if (upload_M[k] !== 'D') {
-                finished = false;
-            }
-        }  
+        for(var k in upload_M)  if (upload_M[k] !== 'D') finished = false;
         if (finished) { 
             clearInterval( ITV);
+            ajaxFinished();
             return 'finished'
         }
         for(var k in upload_M) {
@@ -47,16 +44,7 @@ $( document ).ready(function() {
     
     function upload_file() {
         var start = getStart();
-        if (start === false) {
-            return true;
-        }
-        if (start === 'finished') {
-            console.log(upload_M);
-           ajaxFinished(function(data) {
-              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
-            });           
-            return true;
-        }        
+        if (start === false || start === 'finished')  return true;     
         upload_M[start] = new Date().getTime();
         var next_slice = start + slice_size;
         var blob = file.slice( start, next_slice);
@@ -69,7 +57,7 @@ $( document ).ready(function() {
             if ( event.target.readyState === FileReader.DONE ) { 
                 ajaxUpload(start, d[1],
                           function(data) {
-                               ses = data.ses;
+                              ses = data.ses;
                               upload_M[start] = 'D';
                 });
             }
@@ -90,16 +78,13 @@ $( document ).ready(function() {
           dataType: 'JSON'
         }); 
     }    
-    function ajaxFinished(cbk) {
+    function ajaxFinished() {
         $.ajax({
           type: "POST",
           url: '/api/upload.api',
           data: {pos:'finished', ses: ses},
           success: function(data) {
-              if (typeof cbk == 'function') {
-                   
-                cbk(data);
-              }
+              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
           },
           dataType: 'JSON'
         }); 
