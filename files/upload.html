@@ -81,21 +81,7 @@ $( document ).ready(function() {
             _ITV = setInterval(upload_file, 10);
         }        
     }
-    /*
-    var up1 = new FILEUPLOAD(
-        {
-            fileField: $('#dbi-file-upload' )[0],
-            fileIDX : 0,
-            progress : function(percent_done) {
-                    $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
-                },
-            done : function(data) {
-                     $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
-                }
-        }
-      );
-     $('#dbi-file-upload-submit').on( 'click', up1.upload);
-   */
+
      $('#dbi-file-upload-submit').on( 'click', function(event) {
          event.preventDefault();
          var files = $('#dbi-file-upload' )[0].files; 
@@ -104,9 +90,8 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: $('#dbi-file-upload' )[0].files[i],
-                    // fileIDX : i,
                     progress : function(percent_done) {
-                            $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
+                            $('#upload_completed' ).html('Completed: ' +  $('#dbi-file-upload' )[0].files[i].name + ':' + percent_done + '%' )
                         },
                     done : function(data) {
                              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
