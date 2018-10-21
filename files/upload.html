@@ -7,9 +7,10 @@
 $( document ).ready(function() {
     var FILEUPLOAD = function(fileField, progress, done) {
         var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
-            ses = null, upload_M = {}, ITV;
+            ses = null, upload_M = {};
 
-        function getPos() {
+        this.getPos = function() {
+            var me = this;
             for(var k in upload_M) {
                 if (['','D'].indexOf(upload_M[k]) === -1) {
                     return false;
@@ -17,13 +18,14 @@ $( document ).ready(function() {
                     return parseInt(k);
                 }                
             }  
-            clearInterval( ITV);
+            clearInterval( me._ITV);
             ajaxFinished();
             return 'finished'
         }
 
-        function upload_file() {
-            var pos = getPos();
+        this.upload_file = function() {
+             var me = this;
+            var pos = me.getPos();
             if (pos === false || pos === 'finished')  return true;     
             upload_M[pos] = new Date().getTime();
             var blob = file.slice( pos, pos + slice_size);
@@ -69,13 +71,14 @@ $( document ).ready(function() {
             }); 
         }  
         this.upload = function( event ) {
+            var me = this;
             event.preventDefault();
             reader = new FileReader();
             file = fileField.files[0];
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-            ITV = setInterval(upload_file, 10);
+            me._ITV = setInterval(me.upload_file, 10);
         }        
     }
     var up1 = new FILEUPLOAD($('#dbi-file-upload' )[0], 
