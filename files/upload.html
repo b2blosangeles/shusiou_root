@@ -14,14 +14,27 @@ $( document ).ready(function() {
         file = $('#dbi-file-upload' )[0].files[0];
         console.log('filesize:' + file.size);
         for (var i=0; i < file.size; i+= slice_size) {
-            upload_M[i] = 0;
+            upload_M[i] = '0';
         }
         console.log(upload_M);
         img = '';
         upload_file(0);
     }
     $( '#dbi-file-upload-submit' ).on( 'click', start_upload ); 
+    
+    function getStart() {
+        for(var k in upload_M) {
+            if (upload_M[k] === '0') {
+                return k;
+            }
+        }
+    }
+    
+    
     function upload_file( start ) {
+        
+        console.log(start + '==getStart()==>' + getStart())
+        
         var next_slice = start + slice_size;
         var blob = file.slice( start, next_slice);
         var size_done = next_slice - 1; 
