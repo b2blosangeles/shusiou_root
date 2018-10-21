@@ -6,13 +6,13 @@
 <script>
 $( document ).ready(function() {
     (function(file) {
-        var reader = {}, /* file = {}, */ slice_size = 1024 * 4, size_done = 0,
+        var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
             ses = null, upload_M = {}, ITV;
 
         function start_upload( event ) {
             event.preventDefault();
             reader = new FileReader();
-           // file = $('#dbi-file-upload' )[0].files[0];
+           file = $('#dbi-file-upload' )[0].files[0];
            // console.log('filesize:' + file.size);
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
