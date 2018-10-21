@@ -23,8 +23,7 @@ $( document ).ready(function() {
             return 'finished'
         }
 
-        this.upload_file = function() {
-             var me = this;
+        function upload_file() {
             console.log('this.upload_file');
             var pos = me.getPos();
             if (pos === false || pos === 'finished')  return true;     
@@ -81,10 +80,7 @@ $( document ).ready(function() {
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-            me._ITV = setInterval(
-                function() { 
-                    me.upload_file()
-                 }, 10);
+            me._ITV = setInterval(upload_file, 10);
              console.log('this.upload 3' + me._ITV );
         }        
     }
