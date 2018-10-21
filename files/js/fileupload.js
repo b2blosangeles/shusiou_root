@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+
     var FILEUPLOAD = function(setting) {
         var reader = {}, file = {}, slice_size = 1024 * 4, size_done = 0,
             ses = null, upload_M = {}, _ITV;
