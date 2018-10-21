@@ -36,6 +36,7 @@ $( document ).ready(function() {
         for(var key in upload_M) {
             if (upload_M[key] === '') {
                start = key;
+                console.log('=-=-=' + key);
                upload_M[key] = new Date().getTime();
                break;
             }
