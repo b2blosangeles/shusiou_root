@@ -82,7 +82,7 @@ $( document ).ready(function() {
     }
     var up1 = new FILEUPLOAD(
         {
-            fileField: $('#dbi-file-upload' )[0].files[0], 
+            file: $('#dbi-file-upload' )[0].files[0], 
             progress : function(percent_done) {
                     $('#upload_completed' ).html('Completed: ' + percent_done + '%' )
                 },
