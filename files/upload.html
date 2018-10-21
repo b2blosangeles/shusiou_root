@@ -6,6 +6,16 @@
 </head>
 <script>
 $( document ).ready(function() {
+     var completed = {};
+     function showComplete() {
+          str = '';
+          for(k in completed) {
+               str += k + ' Completed: ' + completed[k] + '%<br>';
+          }
+          $('#upload_completed' ).html(str);
+     }
+     
+     
      $('#dbi-file-upload-submit').on( 'click', function(event) {
          event.preventDefault();
          var files = $('#dbi-file-upload' )[0].files; 
@@ -15,8 +25,9 @@ $( document ).ready(function() {
                 {
                     file: $('#dbi-file-upload' )[0].files[i],
                     progress : function(filename, percent_done) {
-                            $('#upload_completed' ).html(filename + ' Completed: ' + percent_done + '%' )
-                        },
+                         completed[filename] = percent_done;
+                         showComplete()
+                    },
                     done : function(data) {
                              $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
                         }
