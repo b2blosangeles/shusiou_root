@@ -51,6 +51,7 @@ $( document ).ready(function() {
             return true;
         }
         if (start === 'finished') {
+            console.log(upload_M);
            ajaxFinished(function(data) {
               $('img').attr('src','/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime());
             });           
@@ -68,9 +69,7 @@ $( document ).ready(function() {
             if ( event.target.readyState === FileReader.DONE ) { 
                 ajaxUpload(start, d[1],
                           function(data) {
-                              console.log(start);
                                ses = data.ses;
-                              console.log(data);
                               upload_M[start] = 'D';
                 });
             }
