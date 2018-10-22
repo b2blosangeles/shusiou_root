@@ -46,7 +46,7 @@
               data: {pos:pos, data:dt, ses: ses},
               success: function(data) {
                   if (typeof cbk == 'function') {
-                    cbk(data);
+                    cbk(file.name, data);
                   }
               },
               dataType: 'JSON'
@@ -58,7 +58,7 @@
               url: '/api/upload.api',
               data: {pos:'finished', ses: ses},
               success: function(data) {
-                  (setting.done) ? setting.done(data) : '';
+                  (setting.done) ? setting.done(file.name, data) : '';
               },
               dataType: 'JSON'
             }); 
