@@ -30,11 +30,14 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: files[i],
-                    progress : function(filename, percent_done) {
-                         alert(files[i].name);
-                         completed[filename] = percent_done;
-                         showComplete()
-                    },
+                    progress : 
+                     (function(sourceFn) {
+                         return function(filename, percent_done) {
+                              alert(sourceFn);
+                              completed[filename] = percent_done;
+                              showComplete()
+                         }
+                    })(files[i].name),
                     done : function(data) {
                          uploadResult[data.fn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
