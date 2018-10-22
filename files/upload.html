@@ -35,7 +35,7 @@ $( document ).ready(function() {
                          showComplete()
                     },
                     done : function(data) {
-                         uploadResult[ data.fn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         uploadResult[files[i].name] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
                     }
                 }
