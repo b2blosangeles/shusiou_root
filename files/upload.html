@@ -29,9 +29,9 @@ $( document ).ready(function() {
          for (var i = 0; i < files.length; i++) {
             up[i] = new FILEUPLOAD(
                 {
-                    file: $('#dbi-file-upload' )[0].files[i],
+                    file: files[i],
                     progress : function(filename, percent_done) {
-                         completed[filename] = percent_done;
+                         completed[files[i].name] = percent_done;
                          showComplete()
                     },
                     done : function(data) {
