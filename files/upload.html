@@ -31,16 +31,20 @@ $( document ).ready(function() {
                 {
                     file: files[i],
                     progress : 
-                     (function(sourceFn) {
-                         return function(filename, percent_done) {
-                              alert(sourceFn);
-                              completed[filename] = percent_done;
-                              showComplete()
-                         }
-                    })(files[i].name),
+                          (function(sourceFn) {
+                              return function(filename, percent_done) {
+                                   completed[filename] = percent_done;
+                                   showComplete()
+                              }
+                         })(files[i].name),
                     done : function(data) {
-                         uploadResult[data.fn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
-                         showResult();
+                          (function(sourceFn) {
+                              return function(data) {
+                                   uploadResult[sourceFn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                                   showResult();
+                              }
+                         })(files[i].name),                         
+
                     }
                 }
               )
