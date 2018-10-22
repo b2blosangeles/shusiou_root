@@ -24,7 +24,7 @@
             var blob = file.slice( pos, pos + slice_size);
             var size_done = pos + slice_size - 1; 
             var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
-            (setting.progress) ? setting.progress(percent_done) : '';
+            (setting.progress) ? setting.progress(file.name, percent_done) : '';
             
             reader.onloadend = function( event ) {
                 var d = event.target.result.split( ';base64,');
@@ -46,7 +46,7 @@
               data: {pos:pos, data:dt, ses: ses},
               success: function(data) {
                   if (typeof cbk == 'function') {
-                    cbk(file.name, data);
+                    cbk(data);
                   }
               },
               dataType: 'JSON'
