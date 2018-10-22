@@ -56,7 +56,7 @@
             $.ajax({
               type: "POST",
               url: '/api/upload.api',
-              data: {pos:'finished', ses: ses},
+              data: {pos:'finished', ses: ses, fn : file.name},
               success: function(data) {
                   (setting.done) ? setting.done(data) : '';
               },
