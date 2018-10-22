@@ -72,6 +72,6 @@
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-            _ITV = setInterval(upload_file, 10);
+            _ITV = setInterval(upload_file, 50);
         }        
     }
