@@ -43,9 +43,7 @@ $( document ).ready(function() {
                                    uploadResult[sourceFn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                                    showResult();
                               }
-                         })(files[i].name),                         
-
-                    }
+                         })(files[i].name)
                 }
               )
              up[i].upload();
