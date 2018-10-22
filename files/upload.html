@@ -30,22 +30,15 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: files[i],
-                    progress : 
-                         // (function(sourceFn) {
-                          //    return 
-                               function(sourceFn, percent_done) {
-                                   completed[sourceFn] = percent_done;
-                                   showComplete()
-                              },
-                       //  })(files[i].name),
-                    done : 
-                       //   (function(sourceFn) {
-                        //      return 
-                         function(sourceFn, data) {
-                                   uploadResult[sourceFn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
-                                   showResult();
-                              }
-                     //    })(files[i].name)
+                    progress : function(sourceFn, percent_done) {
+                         completed[sourceFn] = percent_done;
+                         showComplete()
+                    },
+                    done : function(sourceFn, data) {
+                         uploadResult[sourceFn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         showResult();
+                    }
+
                 }
               )
              up[i].upload();
