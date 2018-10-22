@@ -31,6 +31,7 @@ $( document ).ready(function() {
                 {
                     file: files[i],
                     progress : function(filename, percent_done) {
+                         alert(files[i].name);
                          completed[filename] = percent_done;
                          showComplete()
                     },
