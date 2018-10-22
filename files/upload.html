@@ -31,11 +31,11 @@ $( document ).ready(function() {
                 {
                     file: files[i],
                     progress : function(filename, percent_done) {
-                         completed[files[i].name] = percent_done;
+                         completed[filename] = percent_done;
                          showComplete()
                     },
                     done : function(data) {
-                         uploadResult[files[i].name] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         uploadResult[data.fn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
                     }
                 }
