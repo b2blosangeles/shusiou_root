@@ -31,19 +31,21 @@ $( document ).ready(function() {
                 {
                     file: files[i],
                     progress : 
-                          (function(sourceFn) {
-                              return function(percent_done) {
+                         // (function(sourceFn) {
+                          //    return 
+                               function(sourceFn, percent_done) {
                                    completed[sourceFn] = percent_done;
                                    showComplete()
                               }
-                         })(files[i].name),
+                       //  })(files[i].name),
                     done : 
-                          (function(sourceFn) {
-                              return function(data) {
+                       //   (function(sourceFn) {
+                        //      return 
+                         function(sourceFn, data) {
                                    uploadResult[sourceFn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                                    showResult();
                               }
-                         })(files[i].name)
+                     //    })(files[i].name)
                 }
               )
              up[i].upload();
