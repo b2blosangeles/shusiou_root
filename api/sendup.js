@@ -13,5 +13,4 @@ pkg.fs.stat(fn, function(err, data) {
         }, 30000
       );
     }
-  }
 });
