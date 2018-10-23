@@ -1,6 +1,6 @@
 // res.sendFile('/tmp/' + req.query.fn);
 var fn = '/tmp/' + req.query.fn;
-pkg.fs.stat(fn, function(err, data1) {
+pkg.fs.stat(fn, function(err, data) {
   if (err) {  res.send(fn + ' does not exist'); }
   else {
       res.writeHead(200); 
