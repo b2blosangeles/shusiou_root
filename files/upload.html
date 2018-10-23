@@ -13,7 +13,7 @@ $( document ).ready(function() {
                if (uploadResult[k].src) {
                     str += k + ':<img src="' + uploadResult[k].src + '" width="300" /><br/>';
                } else {
-                    str += k + ' Completed: ' + completed[k].perc + '%<br>';
+                    str += k + ' Completed: ' + uploadResult[k].perc + '%<br>';
                }
           }
           $('#upload_result' ).html(str);
