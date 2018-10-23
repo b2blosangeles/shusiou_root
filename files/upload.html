@@ -7,17 +7,14 @@
 <script>
 $( document ).ready(function() {
      var completed = {}, uploadResult = {}
-     function showComplete() {
-          str = '';
-          for(k in completed) {
-               str += k + ' Completed: ' + completed[k] + '%<br>';
-          }
-          $('#upload_completed' ).html(str);
-     }
      function showResult() {
           str = '';
           for(k in uploadResult) {
-               str += k + ':<img src="' + uploadResult[k] + '" width="300" />';
+               if (uploadResult[k].src) {
+                    str += k + ':<img src="' + uploadResult[k].src + '" width="300" /><br/>';
+               } else {
+                    str += k + ' Completed: ' + completed[k].perc + '%<br>';
+               }
           }
           $('#upload_result' ).html(str);
      }   
@@ -31,11 +28,13 @@ $( document ).ready(function() {
                 {
                     file: files[i],
                     progress : function(sourceFn, percent_done) {
-                         completed[sourceFn] = percent_done;
-                         showComplete()
+                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                         uploadResult[sourceFn]['perc'] = percent_done;
+                         showResult();
                     },
                     done : function(sourceFn, data) {
-                         uploadResult[sourceFn] = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                         uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
                     }
 
