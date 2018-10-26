@@ -11,7 +11,9 @@
         this.getPos = function() {
             var me = this;
             for(var k in upload_M) {
-                if (['','D'].indexOf(upload_M[k]) === -1) {
+                if (Object.keys(me.inProcess).length > 6) {
+                    return false;
+                } else if (['','D'].indexOf(upload_M[k]) === -1) {
                     if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
                         if (me.holded[k] > 2) {
@@ -22,9 +24,6 @@
                         upload_M[k] = '';
                     }
                     return false;
-                } else if (Object.keys(me.inProcess).length > 6) {
-                    return false;
-                
                 } else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
                     console.log('--Added---' + k);
