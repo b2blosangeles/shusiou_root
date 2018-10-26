@@ -13,7 +13,8 @@
             for(var k in upload_M) {
                 if (Object.keys(me.inProcess).length > 6) {
                     return false;
-                } else if (['','D'].indexOf(upload_M[k]) === -1) {
+                } else if (['D'].indexOf(upload_M[k]) === -1) {
+                //    else if (['','D'].indexOf(upload_M[k]) === -1) {
                     if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
                         if (me.holded[k] > 2) {
