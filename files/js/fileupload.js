@@ -1,4 +1,4 @@
-alert(62);
+alert(63);
     var FILEUPLOAD = function(setting) {
         this.slice_size = 1024 * 16;
         this.ses = null;
