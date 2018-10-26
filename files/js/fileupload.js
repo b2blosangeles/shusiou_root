@@ -79,7 +79,6 @@
         }  
        this.setSes = function(cbk) {
            var me = this;
-            this.ses = null;
             this.holded = {}; 
             this.file = {};
             this.inProcess = {};
