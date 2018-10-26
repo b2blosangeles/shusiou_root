@@ -2,7 +2,7 @@ alert(61);
     var FILEUPLOAD = function(setting) {
         this.slice_size = 1024 * 16;
         this.ses = null;
-            
+        this.holded = {};    
         
         var reader = {}, file = {}, size_done = 0, upload_M = {};
 
