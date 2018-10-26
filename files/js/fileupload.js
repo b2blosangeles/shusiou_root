@@ -3,7 +3,7 @@ alert(1);
         var reader = {}, file = {}, slice_size = 1024 * 16, size_done = 0,
             ses = null, upload_M = {}, _ITV;
 
-        function getPos() {
+        this.getPos = function() {
             var me = this;
             for(var k in upload_M) {
                 if (['','D'].indexOf(upload_M[k]) === -1) {
@@ -18,7 +18,8 @@ alert(1);
         }
 
        this.upload_file = function() {
-            var pos = getPos();
+            var me = this;
+            var pos = me.getPos();
             if (pos === false || pos === 'finished')  return true;     
             upload_M[pos] = new Date().getTime();
             var blob = file.slice( pos, pos + slice_size);
