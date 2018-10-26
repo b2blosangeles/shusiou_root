@@ -14,7 +14,7 @@
                 if (['','D'].indexOf(upload_M[k]) === -1) {
                     if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
-                        if (me.holded[k] > 2) {
+                        if (me.holded[k] > 6) {
                             clearInterval(me._ITV);
                             (setting.error) ? setting.error() : '';
                             return false;
