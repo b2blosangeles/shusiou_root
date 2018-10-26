@@ -1,7 +1,10 @@
 alert(3);
     var FILEUPLOAD = function(setting) {
-        var reader = {}, file = {}, slice_size = 1024 * 16, size_done = 0,
-            ses = null, upload_M = {}, _ITV;
+        this.slice_size = 1024 * 16;
+        this.ses = null;
+            
+        
+        var reader = {}, file = {}, size_done = 0, upload_M = {};
 
         this.getPos = function() {
             var me = this;
@@ -13,7 +16,7 @@ alert(3);
                 }                
             }  
             clearInterval(me._ITV);
-            ajaxFinished();
+            me.ajaxFinished();
             return 'finished'
         }
 
@@ -23,17 +26,17 @@ alert(3);
                 var pos = me.getPos();
                 if (pos === false || pos === 'finished')  return true;     
                 upload_M[pos] = new Date().getTime();
-                var blob = file.slice( pos, pos + slice_size);
-                var size_done = pos + slice_size - 1; 
+                var blob = file.slice( pos, pos + me.slice_size);
+                var size_done = pos + me.slice_size - 1; 
                 var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
                 (setting.progress) ? setting.progress(file.name, percent_done) : '';
 
                 reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
                     if ( event.target.readyState === FileReader.DONE ) { 
-                        ajaxUpload(pos, d[1],
+                        me.ajaxUpload(pos, d[1],
                                   function(data) {
-                                      ses = data.ses;
+                                      this.ses = data.ses;
                                       upload_M[pos] = 'D';
                         });
                     }
@@ -42,11 +45,12 @@ alert(3);
            }
         }
 
-        function ajaxUpload(pos, dt, cbk) {
-            $.ajax({
+       this.ajaxUpload = function(pos, dt, cbk) {
+           var me = this;
+           $.ajax({
               type: "POST",
               url: '/api/upload.api',
-              data: {pos:pos, data:dt, ses: ses},
+              data: {pos:pos, data:dt, ses: me.ses},
               success: function(data) {
                   if (typeof cbk == 'function') {
                     cbk(data);
@@ -55,11 +59,12 @@ alert(3);
               dataType: 'JSON'
             }); 
         }    
-        function ajaxFinished() {
+        this.ajaxFinished = function () {
+            var me = this;
             $.ajax({
               type: "POST",
               url: '/api/upload.api',
-              data: {pos:'finished', ses: ses},
+              data: {pos:'finished', ses: me.ses},
               success: function(data) {
                   (setting.done) ? setting.done(file.name, data) : '';
               },
@@ -72,7 +77,7 @@ alert(3);
             reader = new FileReader();
             // file = setting.fileField.files[setting.fileIDX];
             file = setting.file;
-            for (var i=0; i < file.size; i+= slice_size) {
+            for (var i=0; i < file.size; i+= me.slice_size) {
                 upload_M[i] = '';
             }
             me._ITV = setInterval(me.upload_file(), 20);
