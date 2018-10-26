@@ -14,7 +14,7 @@ alert(63);
                         upload_M[k] = '';
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
                     }
-                    if (me.holded[k] > 3) {
+                    if (me.holded[k] > 2) {
                         clearInterval(me._ITV);
                         (setting.error) ? setting.error() : '';
                         return true;
