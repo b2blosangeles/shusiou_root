@@ -71,7 +71,7 @@
               url: '/api/upload.api',
               data: {pos:'finished', ses: me.ses},
               success: function(data) {
-                  (setting.done) ? setting.done(file.name, data) : '';
+                  (setting.done) ? setting.done(me.file.name, data) : '';
               },
               dataType: 'JSON'
             }); 
