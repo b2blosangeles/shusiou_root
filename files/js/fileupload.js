@@ -43,27 +43,24 @@ alert(62);
                 reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
                     if ( event.target.readyState === FileReader.DONE ) { 
-                        me.ajaxUpload(pos, d[1],
-                                  function(data) {
-                                      me.ses = data.ses;
-                                      upload_M[pos] = 'D';
-                        });
+                        me.ajaxUpload(pos, d[1]);
                     }
                 };        
                 reader.readAsDataURL( blob );
            }
         }
 
-       this.ajaxUpload = function(pos, dt, cbk) {
+       this.ajaxUpload = function(pos, dt) {
            var me = this;
            $.ajax({
               type: "POST",
               url: '/api/upload.api',
               data: {pos:pos, data:dt, ses: me.ses},
               success: function(data) {
-                  if (typeof cbk == 'function') {
-                    cbk(data);
-                  }
+                    me.ses = data.ses;
+                    if (data.status === 'success') {  
+                        upload_M[pos] = 'D';
+                     }
               },
               dataType: 'JSON'
             }); 
