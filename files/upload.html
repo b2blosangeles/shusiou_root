@@ -18,6 +18,18 @@ $( document ).ready(function() {
           }
           $('#upload_result' ).html(str);
      }   
+
+     function showMatrix(v) {
+          str = '';
+          for(k in v) {
+               if (v[k] === 'D') {
+                    str += '1';
+               } else {
+                    str += '0';
+               }
+          }
+          $('#upload_mitrix' ).html(str);
+     }        
      
      $('#dbi-file-upload-submit').on( 'click', function(event) {
          event.preventDefault();
@@ -27,15 +39,17 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: files[i],
-                    progress : function(sourceFn, percent_done) {
+                    progress : function(M, sourceFn, percent_done) {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn]['perc'] = percent_done;
                          showResult();
+                         showMatrix(M);
                     },
-                    done : function(sourceFn, data) {
+                    done : function(M, sourceFn, data) {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
+                         showMatrix(M);
                     },
                     error : function() {
                          $('#upload_result' ).html('Upload failure!!!');
@@ -59,5 +73,6 @@ $( document ).ready(function() {
 </form>
 <br/><hr/><br/>
 <div id = "upload_result"></div>
+<div id = "upload_mitrix"></div>
 </body>
 </html>
