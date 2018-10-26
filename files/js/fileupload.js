@@ -67,6 +67,8 @@
                     if (data.status === 'success') {
                         delete me.inProcess[pos];
                         upload_M[pos] = 'D';
+                        console.log('====me.inProcess===>');
+                        console.log(me.inProcess);
                      }
               },
               dataType: 'JSON'
