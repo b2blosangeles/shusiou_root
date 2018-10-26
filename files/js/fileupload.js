@@ -1,4 +1,4 @@
-alert(2);
+alert(3);
     var FILEUPLOAD = function(setting) {
         var reader = {}, file = {}, slice_size = 1024 * 16, size_done = 0,
             ses = null, upload_M = {}, _ITV;
@@ -12,12 +12,13 @@ alert(2);
                     return parseInt(k);
                 }                
             }  
-            clearInterval(_ITV);
+            clearInterval(me._ITV);
             ajaxFinished();
             return 'finished'
         }
 
-       this.upload_file = function(me) {
+       this.upload_file = function() {
+           var me = this;
            return function() {
                 var pos = me.getPos();
                 if (pos === false || pos === 'finished')  return true;     
@@ -74,6 +75,6 @@ alert(2);
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-            _ITV = setInterval(me.upload_file(me), 20);
+            me._ITV = setInterval(me.upload_file(), 20);
         }        
     }
