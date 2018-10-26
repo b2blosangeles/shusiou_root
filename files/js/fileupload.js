@@ -68,7 +68,7 @@
               url: '/api/upload.api',
               data: {pos:pos, data:dt, ses: me.ses},
               success: function(data) {
-                    me.ses = data.ses;
+                    if (!me.ses) me.ses = data.ses;
                     if (data.status === 'success') {
                         delete me.inProcess[pos];
                         upload_M[pos] = 'D';
