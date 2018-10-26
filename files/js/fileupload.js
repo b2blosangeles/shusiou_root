@@ -17,7 +17,7 @@
             return 'finished'
         }
 
-       function upload_file() {
+       this.upload_file = function() {
             var pos = getPos();
             if (pos === false || pos === 'finished')  return true;     
             upload_M[pos] = new Date().getTime();
@@ -72,6 +72,6 @@
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-            _ITV = setInterval(upload_file, 20);
+            _ITV = setInterval(me.upload_file, 20);
         }        
     }
