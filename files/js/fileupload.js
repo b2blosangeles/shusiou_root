@@ -1,4 +1,4 @@
-alert(61);
+alert(62);
     var FILEUPLOAD = function(setting) {
         this.slice_size = 1024 * 16;
         this.ses = null;
@@ -10,6 +10,15 @@ alert(61);
             var me = this;
             for(var k in upload_M) {
                 if (['','D'].indexOf(upload_M[k]) === -1) {
+                    if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
+                        upload_M[k] = '';
+                        me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
+                    }
+                    if (me.holded[k] > 3) {
+                        clearInterval(me._ITV);
+                        console.log( me.holded);
+                        return true;
+                    }
                     return false;
                 } else if (upload_M[k] === '') {
                     return parseInt(k);
