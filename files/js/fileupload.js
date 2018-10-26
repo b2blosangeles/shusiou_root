@@ -81,19 +81,16 @@
         }  
        this.setSes = function(cbk) {
            var me = this;
-           if (me.ses) cbk();
-           else {
-               $.ajax({
-                  type: "POST",
-                  url: '/api/upload.api',
-                  data: {},
-                  success: function(data) {
-                      if (!me.ses) me.ses = data.ses;
-                      cbk();
-                  },
-                  dataType: 'JSON'
-                }); 
-           }
+           $.ajax({
+              type: "POST",
+              url: '/api/upload.api',
+              data: {},
+              success: function(data) {
+                  if (!me.ses) me.ses = data.ses;
+                  cbk();
+              },
+              dataType: 'JSON'
+            }); 
         }  
         this.ajaxFinished = function () {
             var me = this;
