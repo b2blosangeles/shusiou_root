@@ -17,27 +17,28 @@ alert(2);
             return 'finished'
         }
 
-       this.upload_file = function() {
-            var me = this;
-            var pos = me.getPos();
-            if (pos === false || pos === 'finished')  return true;     
-            upload_M[pos] = new Date().getTime();
-            var blob = file.slice( pos, pos + slice_size);
-            var size_done = pos + slice_size - 1; 
-            var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
-            (setting.progress) ? setting.progress(file.name, percent_done) : '';
-            
-            reader.onloadend = function( event ) {
-                var d = event.target.result.split( ';base64,');
-                if ( event.target.readyState === FileReader.DONE ) { 
-                    ajaxUpload(pos, d[1],
-                              function(data) {
-                                  ses = data.ses;
-                                  upload_M[pos] = 'D';
-                    });
-                }
-            };        
-            reader.readAsDataURL( blob );
+       this.upload_file = function(me) {
+           return function() {
+                var pos = me.getPos();
+                if (pos === false || pos === 'finished')  return true;     
+                upload_M[pos] = new Date().getTime();
+                var blob = file.slice( pos, pos + slice_size);
+                var size_done = pos + slice_size - 1; 
+                var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
+                (setting.progress) ? setting.progress(file.name, percent_done) : '';
+
+                reader.onloadend = function( event ) {
+                    var d = event.target.result.split( ';base64,');
+                    if ( event.target.readyState === FileReader.DONE ) { 
+                        ajaxUpload(pos, d[1],
+                                  function(data) {
+                                      ses = data.ses;
+                                      upload_M[pos] = 'D';
+                        });
+                    }
+                };        
+                reader.readAsDataURL( blob );
+           }
         }
 
         function ajaxUpload(pos, dt, cbk) {
@@ -73,6 +74,6 @@ alert(2);
             for (var i=0; i < file.size; i+= slice_size) {
                 upload_M[i] = '';
             }
-            _ITV = setInterval(me.upload_file, 20);
+            _ITV = setInterval(me.upload_file(me), 20);
         }        
     }
