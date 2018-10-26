@@ -44,7 +44,7 @@
                 var blob = me.file.slice( pos, pos + me.slice_size);
                 var size_done = pos + me.slice_size - 1; 
                 var percent_done = Math.min(Math.floor( ( size_done / me.file.size ) * 100 ), 100);
-                (setting.progress) ? setting.progress(me.file.name, percent_done) : '';
+                (setting.progress) ? setting.progress(upload_M, me.file.name, percent_done) : '';
 
                 me.reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
@@ -79,7 +79,7 @@
               url: '/api/upload.api',
               data: {pos:'finished', ses: me.ses},
               success: function(data) {
-                  (setting.done) ? setting.done(me.file.name, data) : '';
+                  (setting.done) ? setting.done(upload_M, me.file.name, data) : '';
               },
               dataType: 'JSON'
             }); 
