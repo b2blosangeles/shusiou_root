@@ -1,5 +1,5 @@
     var FILEUPLOAD = function(setting) {
-        this.slice_size = 1024 * 1;
+        this.slice_size = 1024 * 5;
         this.ses = null;
         this.holded = {}; 
         this.file = {};
