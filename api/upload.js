@@ -1,10 +1,11 @@
 var pos = req.body.pos, ses = (!req.body.ses) ? (new Date().getTime()) : req.body.ses,
     base64Data = (req.body.data) ? req.body.data.replace(/^data:image\/png;base64,/, "") : null;
-
+/*
 if (pos > 3000) {
     res.send({status:'falure', message:'timeout', ses:ses});
     return true;
 }
+*/
 var folderP = require(env.site_path + '/api/inc/folderP/folderP');
 var fp = new folderP();
 var d_folder = '/tmp/niu_' + ses + '/', 
