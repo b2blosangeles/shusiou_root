@@ -78,7 +78,23 @@
               },
               dataType: 'JSON'
             }); 
-        }    
+        }  
+       this.setSes = function(cbk) {
+           var me = this;
+           if (me.ses) cbk();
+           else {
+               $.ajax({
+                  type: "POST",
+                  url: '/api/upload.api',
+                  data: {},
+                  success: function(data) {
+                      if (!me.ses) me.ses = data.ses;
+                      cbk();
+                  },
+                  dataType: 'JSON'
+                }); 
+           }
+        }  
         this.ajaxFinished = function () {
             var me = this;
             $.ajax({
@@ -98,6 +114,9 @@
             for (var i=0; i < me.file.size; i+= me.slice_size) {
                 upload_M[i] = '';
             }
-            me._ITV = setInterval(me.upload_file(), 20);
+            me.setSes(
+                function() {
+                     me._ITV = setInterval(me.upload_file(), 20);
+                });
         }        
     }
