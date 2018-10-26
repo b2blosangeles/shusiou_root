@@ -25,10 +25,12 @@
                             return false;
                         }
                         upload_M[k] = '';
-                    } else {
+                    }
+                    /* else {
                         continue;
                     }
-                  //  return false;
+                    */
+                    return false;
                 }  else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
                     console.log('--Added---' + k);
