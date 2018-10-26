@@ -1,9 +1,9 @@
     var FILEUPLOAD = function(setting) {
         this.slice_size = 1024 * 16;
         this.ses = null;
-        this.holded = {};    
-        
-        var reader = {}, file = {}, size_done = 0, upload_M = {};
+        this.holded = {}; 
+        this.file = {};
+        var size_done = 0, upload_M = {};
 
         this.getPos = function() {
             var me = this;
@@ -34,18 +34,18 @@
                 var pos = me.getPos();
                 if (pos === false || pos === 'finished')  return true;     
                 upload_M[pos] = new Date().getTime();
-                var blob = file.slice( pos, pos + me.slice_size);
+                var blob = me.file.slice( pos, pos + me.slice_size);
                 var size_done = pos + me.slice_size - 1; 
-                var percent_done = Math.min(Math.floor( ( size_done / file.size ) * 100 ), 100);
-                (setting.progress) ? setting.progress(file.name, percent_done) : '';
+                var percent_done = Math.min(Math.floor( ( size_done / me.file.size ) * 100 ), 100);
+                (setting.progress) ? setting.progress(me.file.name, percent_done) : '';
 
-                reader.onloadend = function( event ) {
+                me.reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
                     if ( event.target.readyState === FileReader.DONE ) { 
                         me.ajaxUpload(pos, d[1]);
                     }
                 };        
-                reader.readAsDataURL( blob );
+                me.reader.readAsDataURL( blob );
            }
         }
 
@@ -78,11 +78,9 @@
         }  
         this.upload = function() {
             var me = this;
-            // event.preventDefault();
-            reader = new FileReader();
-            // file = setting.fileField.files[setting.fileIDX];
-            file = setting.file;
-            for (var i=0; i < file.size; i+= me.slice_size) {
+            me.reader = new FileReader();
+            me.file = setting.file;
+            for (var i=0; i < me.file.size; i+= me.slice_size) {
                 upload_M[i] = '';
             }
             me._ITV = setInterval(me.upload_file(), 20);
