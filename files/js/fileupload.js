@@ -24,9 +24,12 @@
                             return false;
                         }
                         upload_M[k] = '';
+                    } else {
+                        continue;
                     }
                   //  return false;
-                } else if (upload_M[k] === '') {
+                } // else 
+                if (upload_M[k] === '') {
                    if (Object.keys(me.inProcess).length > 6) {
                         return false;
                    }
