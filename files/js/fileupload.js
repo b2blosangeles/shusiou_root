@@ -70,14 +70,12 @@
                     if (data.status === 'success') {
                         delete me.inProcess[pos];
                         upload_M[pos] = 'D';
-                        console.log('====me.inProcess===>');
-                        console.log(me.inProcess);
                      }
               },
               dataType: 'JSON'
             }); 
         }  
-       this.setSes = function(cbk) {
+       this.init = function(cbk) {
            var me = this;
             this.holded = {}; 
             this.file = {};
@@ -114,7 +112,7 @@
             for (var i=0; i < me.file.size; i+= me.slice_size) {
                 upload_M[i] = '';
             }
-            me.setSes(
+            me.init(
                 function() {
                      me._ITV = setInterval(me.upload_file(), 20);
                 });
