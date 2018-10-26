@@ -12,8 +12,9 @@
             var me = this;
             for(var k in upload_M) {
                 
-                 //               if (Object.keys(me.inProcess).length > 6) {
-                  //  return false;
+               if (Object.keys(me.inProcess).length > 6) {
+                    return false;
+               }
                 
                 if (['','D'].indexOf(upload_M[k]) === -1) {
                     if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
@@ -28,11 +29,7 @@
                         continue;
                     }
                   //  return false;
-                } // else 
-                if (upload_M[k] === '') {
-                   if (Object.keys(me.inProcess).length > 6) {
-                        return false;
-                   }
+                }  else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
                     console.log('--Added---' + k);
                     return parseInt(k);
