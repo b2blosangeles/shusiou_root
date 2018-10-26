@@ -1,4 +1,4 @@
-alert(1);
+alert(2);
     var FILEUPLOAD = function(setting) {
         var reader = {}, file = {}, slice_size = 1024 * 16, size_done = 0,
             ses = null, upload_M = {}, _ITV;
