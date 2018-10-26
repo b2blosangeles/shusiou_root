@@ -77,10 +77,6 @@
         }  
        this.init = function(cbk) {
            var me = this;
-            this.holded = {}; 
-            this.file = {};
-            this.inProcess = {};
-           
            $.ajax({
               type: "POST",
               url: '/api/upload.api',
