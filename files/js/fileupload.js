@@ -27,6 +27,9 @@
                     }
                     return false;
                 } else if (upload_M[k] === '') {
+                   if (Object.keys(me.inProcess).length > 6) {
+                        return false;
+                   }
                     me.inProcess[k] = true;
                     console.log('--Added---' + k);
                     return parseInt(k);
