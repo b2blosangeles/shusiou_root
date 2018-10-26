@@ -27,6 +27,7 @@
                 
                 } else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
+                    console.log('--Added---' + k);
                     return parseInt(k);
                 }                
             }  
