@@ -24,8 +24,10 @@ $( document ).ready(function() {
           for(k in v) {
                if (v[k] === 'D') {
                     str += '1';
-               } else {
-                    str += '0';
+               } else if  (v[k] === '') { 
+                    str += 'o';
+               }else {
+                    str += 'p';
                }
           }
           $('#upload_mitrix' ).html(str);
