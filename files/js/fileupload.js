@@ -81,7 +81,6 @@
         }  
        this.setSes = function(cbk) {
            var me = this;
-           upload_M = {};
            $.ajax({
               type: "POST",
               url: '/api/upload.api',
