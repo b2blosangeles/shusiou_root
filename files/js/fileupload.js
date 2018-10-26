@@ -36,7 +36,7 @@ alert(6);
                     if ( event.target.readyState === FileReader.DONE ) { 
                         me.ajaxUpload(pos, d[1],
                                   function(data) {
-                                      this.ses = data.ses;
+                                      me.ses = data.ses;
                                       upload_M[pos] = 'D';
                         });
                     }
