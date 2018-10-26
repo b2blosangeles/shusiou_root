@@ -10,13 +10,13 @@
             for(var k in upload_M) {
                 if (['','D'].indexOf(upload_M[k]) === -1) {
                     if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
-                        upload_M[k] = '';
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
                         if (me.holded[k] > 2) {
                             clearInterval(me._ITV);
                             (setting.error) ? setting.error() : '';
                             return false;
-                        }                        
+                        }
+                        upload_M[k] = '';
                     }
                     return false;
                 } else if (upload_M[k] === '') {
