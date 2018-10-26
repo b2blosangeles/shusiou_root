@@ -16,7 +16,7 @@ alert(63);
                     }
                     if (me.holded[k] > 3) {
                         clearInterval(me._ITV);
-                        console.log( me.holded);
+                        (setting.error) ? setting.error() : '';
                         return true;
                     }
                     return false;
