@@ -24,12 +24,10 @@
                 }                
             }
             for(var k in upload_M) {
-                /*
+               
                if (Object.keys(me.inProcess).length > 6) {
                     return false;
-               } else 
-               */  
-               if (upload_M[k] === '') {
+               } else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
                     console.log('--Added---' + k);
                     return parseInt(k);
