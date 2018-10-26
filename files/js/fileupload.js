@@ -3,8 +3,11 @@
         this.ses = null;
         this.holded = {}; 
         this.file = {};
+        this.inProcess = {};
         var size_done = 0, upload_M = {};
 
+        
+        
         this.getPos = function() {
             var me = this;
             for(var k in upload_M) {
@@ -19,7 +22,11 @@
                         upload_M[k] = '';
                     }
                     return false;
+                } else if (Object.keys(me.inProcess).length > 2) {
+                    return false;
+                
                 } else if (upload_M[k] === '') {
+                    me.inProcess[k] = true;
                     return parseInt(k);
                 }                
             }  
@@ -57,7 +64,8 @@
               data: {pos:pos, data:dt, ses: me.ses},
               success: function(data) {
                     me.ses = data.ses;
-                    if (data.status === 'success') {  
+                    if (data.status === 'success') {
+                        delete me.inProcess[pos];
                         upload_M[pos] = 'D';
                      }
               },
