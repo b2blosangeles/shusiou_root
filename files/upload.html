@@ -36,6 +36,9 @@ $( document ).ready(function() {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
+                    },
+                    error : function() {
+                         $('#upload_result' ).html('Upload failure!!!')
                     }
 
                 }
