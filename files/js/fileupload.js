@@ -14,7 +14,7 @@
                 
                  //               if (Object.keys(me.inProcess).length > 6) {
                   //  return false;
-                
+                /*
                 if (['','D'].indexOf(upload_M[k]) === -1) {
                     if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
@@ -26,7 +26,9 @@
                         upload_M[k] = '';
                     }
                     return false;
-                } else if (upload_M[k] === '') {
+                } else 
+                */
+                if (upload_M[k] === '') {
                    if (Object.keys(me.inProcess).length > 6) {
                         return false;
                    }
