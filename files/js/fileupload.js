@@ -48,6 +48,10 @@
                 var percent_done = Math.min(Math.floor( ( size_done / me.file.size ) * 100 ), 100);
                 (setting.progress) ? setting.progress(me.upload_M, me.file.name, percent_done) : '';
 
+                me.reader.onload = function( event ) {
+                    alert(111);
+                };
+               
                 me.reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
                     if ( event.target.readyState === FileReader.DONE ) { 
