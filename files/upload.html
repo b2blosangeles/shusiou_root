@@ -49,6 +49,7 @@ $( document ).ready(function() {
                          showMatrix(M);
                     },
                     done : function(M, sourceFn, data) {
+                         $("#dbi-file-upload").val('');
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
