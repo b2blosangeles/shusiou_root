@@ -4,7 +4,7 @@
         this.holded = {}; 
         this.file = {};
         this.inProcess = {};
-        this.threads = (setting.threads) ? setting.threads : 1;
+        
         var size_done = 0, upload_M = {};
 
         this.getPos = function() {
@@ -24,7 +24,7 @@
             }
             for(var k in upload_M) {
                
-               if (Object.keys(me.inProcess).length > me.threads) {
+               if (Object.keys(me.inProcess).length > (me.threads - 1)) {
                     return false;
                } else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
@@ -101,6 +101,7 @@
         }  
         this.upload = function() {
             var me = this;
+            me.threads = (setting.threads) ? setting.threads : 1;
             me.reader = new FileReader();
             me.file = setting.file;
             for (var i=0; i < me.file.size; i+= me.slice_size) {
