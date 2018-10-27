@@ -4,6 +4,7 @@
         this.holded = {}; 
         this.file = {};
         this.inProcess = {};
+        this.threads = (setting.threads) ? setting.threads : 1;
         var size_done = 0, upload_M = {};
 
         this.getPos = function() {
@@ -23,7 +24,7 @@
             }
             for(var k in upload_M) {
                
-               if (Object.keys(me.inProcess).length > 6) {
+               if (Object.keys(me.inProcess).length > me.threads) {
                     return false;
                } else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
