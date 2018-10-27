@@ -6,8 +6,6 @@
         this.inProcess = {};
         var size_done = 0, upload_M = {};
 
-        
-        
         this.getPos = function() {
             var me = this;
             for(var k in upload_M) {
@@ -29,7 +27,6 @@
                     return false;
                } else if (upload_M[k] === '') {
                     me.inProcess[k] = true;
-                    console.log('--Added---' + k);
                     return parseInt(k);
                 }                
             }  
