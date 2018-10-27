@@ -42,6 +42,7 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: files[i],
+                    threads : 5,
                     progress : function(M, sourceFn, percent_done) {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn]['perc'] = percent_done;
