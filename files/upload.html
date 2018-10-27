@@ -48,14 +48,14 @@ $( document ).ready(function() {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn]['perc'] = percent_done;
                          showResult();
-                         showMatrix(M);
+                         showMatrix(up[i].upload_M);
                     },
                     done : function(M, sourceFn, data) {
                          $("#dbi-file-upload").val('');
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
                          showResult();
-                         showMatrix(M);
+                         showMatrix(up[i].upload_M);
                     },
                     error : function() {
                          $('#upload_result' ).html('Upload failure!!!');
