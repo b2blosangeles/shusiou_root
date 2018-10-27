@@ -42,6 +42,7 @@ $( document ).ready(function() {
             up[i] = new FILEUPLOAD(
                 {
                     file: files[i],
+                    sliceSize : 1024 * 1,
                     threads : 5,
                     progress : function(M, sourceFn, percent_done) {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
