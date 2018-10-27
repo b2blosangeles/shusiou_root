@@ -1,5 +1,5 @@
     var FILEUPLOAD = function(setting) {
-        this.slice_size = 1024 * 16;
+        this.slice_size = (setting.sliceSize) ? setting.sliceSize : (1024 * 16);
         this.ses = null;
         this.holded = {}; 
         this.file = {};
