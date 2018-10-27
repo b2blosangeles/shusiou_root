@@ -7,7 +7,10 @@
         this.upload_M = {};
         var size_done = 0;
         // , upload_M = {};
-
+        this.pp = function() {
+            var me = this;
+            return me.upload_M;
+        }
         this.getPos = function() {
             var me = this;
             for(var k in me.upload_M) {
