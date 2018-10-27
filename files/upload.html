@@ -49,6 +49,7 @@ $( document ).ready(function() {
                          uploadResult[sourceFn]['perc'] = percent_done;
                          showResult();
                          showMatrix(M);
+                         console.log(up[i].upload_M);
                     },
                     done : function(M, sourceFn, data) {
                          $("#dbi-file-upload").val('');
