@@ -4,29 +4,30 @@
         this.holded = {}; 
         this.file = {};
         this.inProcess = {};
-        
-        var size_done = 0, upload_M = {};
+        this.upload_M = {};
+        var size_done = 0;
+        // , upload_M = {};
 
         this.getPos = function() {
             var me = this;
-            for(var k in upload_M) {
-                if (['','D'].indexOf(upload_M[k]) === -1) {
-                    if (new Date().getTime() - parseInt(upload_M[k]) > 6000) {
+            for(var k in me.upload_M) {
+                if (['','D'].indexOf(me.upload_M[k]) === -1) {
+                    if (new Date().getTime() - parseInt(me.upload_M[k]) > 6000) {
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
                         if (me.holded[k] > 2) {
                             clearInterval(me._ITV);
                             (setting.error) ? setting.error() : '';
                             return false;
                         }
-                        upload_M[k] = '';
+                        me.upload_M[k] = '';
                     }
                 }                
             }
-            for(var k in upload_M) {
+            for(var k in me.upload_M) {
                
                if (Object.keys(me.inProcess).length > (me.threads - 1)) {
                     return false;
-               } else if (upload_M[k] === '') {
+               } else if (me.upload_M[k] === '') {
                     me.inProcess[k] = true;
                     return parseInt(k);
                 }                
@@ -41,11 +42,11 @@
            return function() {
                 var pos = me.getPos();
                 if (pos === false || pos === 'finished')  return true;     
-                upload_M[pos] = new Date().getTime();
+                me.upload_M[pos] = new Date().getTime();
                 var blob = me.file.slice( pos, pos + me.slice_size);
                 var size_done = pos + me.slice_size - 1; 
                 var percent_done = Math.min(Math.floor( ( size_done / me.file.size ) * 100 ), 100);
-                (setting.progress) ? setting.progress(upload_M, me.file.name, percent_done) : '';
+                (setting.progress) ? setting.progress(me.upload_M, me.file.name, percent_done) : '';
 
                 me.reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
@@ -67,7 +68,7 @@
                     if (!me.ses) me.ses = data.ses;
                     if (data.status === 'success') {
                         delete me.inProcess[pos];
-                        upload_M[pos] = 'D';
+                        me.upload_M[pos] = 'D';
                      }
               },
               dataType: 'JSON'
@@ -94,7 +95,7 @@
               url: '/api/upload.api',
               data: {pos:'finished', ses: me.ses},
               success: function(data) {
-                  (setting.done) ? setting.done(upload_M, me.file.name, data) : '';
+                  (setting.done) ? setting.done(me.upload_M, me.file.name, data) : '';
               },
               dataType: 'JSON'
             }); 
@@ -105,7 +106,7 @@
             me.reader = new FileReader();
             me.file = setting.file;
             for (var i=0; i < me.file.size; i+= me.slice_size) {
-                upload_M[i] = '';
+                me.upload_M[i] = '';
             }
             me.init(
                 function() {
