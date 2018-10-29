@@ -23,11 +23,11 @@ $( document ).ready(function() {
           str = '';
           for(k in v) {
                if (v[k] === 'D') {
-                    str += '1';
+                    str += '*';
                } else if  (v[k] === '') { 
-                    str += 'o';
+                    str += '';
                }else {
-                    str += 'p';
+                    str += '.';
                }
           }
           $('#upload_mitrix' ).html(str);
