@@ -101,9 +101,10 @@ function readfiles(files) {
 if (tests.dnd) { 
   holder.ondragover = function () { this.className = 'hover'; return false; };
   holder.ondragend = function () { 
-    console.log('====niuniu===');
+    console.log('====ondragend===');
     this.className = ''; return false; };
   holder.ondrop = function (e) {
+    console.log('====ondrop===');
     this.className = '';
     e.preventDefault();
     readfiles(e.dataTransfer.files);
