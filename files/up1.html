@@ -3,7 +3,6 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/fileupload.js"></script>
-</head>
 <title>Drag and drop, automatic upload</title>
 <style>
 #holder { border: 10px dashed #ccc; width: 300px; min-height: 300px; margin: 20px auto;}
@@ -74,8 +73,67 @@ function previewfile(file) {
     console.log(file);
   }
 }
+  
+     var uploadResult = {};
+     function showResult() {
+          str = '';
+          for(k in uploadResult) {
+               if (uploadResult[k].src) {
+                    str += k + ':<img src="' + uploadResult[k].src + '" width="300" /><br/>';
+               } else {
+                    str += k + ' Completed: ' + uploadResult[k].perc + '%<br>';
+               }
+          }
+          $('#upload_result' ).html(str);
+     }   
 
+     function showMatrix(v) {
+          str = '';
+          for(k in v) {
+               if (v[k] === 'D') {
+                    str += '*';
+               } else if  (v[k] === '') { 
+                    str += '';
+               }else {
+                    str += '.';
+               }
+          }
+          $('#upload_mitrix' ).html(str);
+     } 
+  
 function readfiles(files) {
+  //  debugger;
+         up = [];
+         for (var i = 0; i < files.length; i++) {
+            up[i] = new FILEUPLOAD(
+                {
+                    file: files[i],
+                    sliceSize : 1024 * 16,
+                    threads : 5,
+                    progress : function(M, sourceFn, percent_done) {
+                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                         uploadResult[sourceFn]['perc'] = percent_done;
+                         showResult();
+                         showMatrix(M);
+                         //console.log(me.upload_M);
+                    },
+                    done : function(M, sourceFn, data) {
+                         $("#dbi-file-upload").val('');
+                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                         uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         showResult();
+                         showMatrix(M);
+                    },
+                    error : function() {
+                         $('#upload_result' ).html('Upload failure!!!');
+                    }
+
+                }
+              )
+             up[i].upload();
+         }
+}
+function readfiles1(files) {
   //  debugger;
   console.log('===readfiles===r');
   console.log(files[0].name);
@@ -126,5 +184,10 @@ if (tests.dnd) {
 }
 
 </script>
+  </head>
+  <body>
+  <br/><hr/><br/>
+<div id = "upload_result"></div>
+<div id = "upload_mitrix"></div>
 </body>
 </html>
