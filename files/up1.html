@@ -100,10 +100,8 @@ function readfiles(files) {
 
 if (tests.dnd) { 
   holder.ondragover = function () { 
-    console.log('===ondragover===');
     this.className = 'hover'; return false; };
   holder.ondragend = function () { 
-    console.log('====ondragend===');
     this.className = ''; return false; };
   holder.ondrop = function (e) {
     console.log('====ondrop===');
@@ -114,6 +112,7 @@ if (tests.dnd) {
 } else {
   fileupload.className = 'hidden';
   fileupload.querySelector('input').onchange = function () {
+    alert(111);
     readfiles(this.files);
   };
 }
