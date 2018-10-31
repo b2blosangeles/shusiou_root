@@ -70,7 +70,7 @@ function previewfile(file) {
 }
 
 function readfiles(files) {
-    debugger;
+  //  debugger;
     var formData = tests.formdata ? new FormData() : null;
     for (var i = 0; i < files.length; i++) {
       if (tests.formdata) formData.append('file', files[i]);
@@ -99,7 +99,9 @@ function readfiles(files) {
 }
 
 if (tests.dnd) { 
-  holder.ondragover = function () { this.className = 'hover'; return false; };
+  holder.ondragover = function () { 
+    console.log('===ondragover===');
+    this.className = 'hover'; return false; };
   holder.ondragend = function () { 
     console.log('====ondragend===');
     this.className = ''; return false; };
