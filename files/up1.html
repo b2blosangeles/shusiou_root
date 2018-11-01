@@ -20,7 +20,7 @@ progress:after { content: '%'; }
   <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
 </article>
 <script>
-var holder = document.getElementById('holder'),
+var holder = document.getElementById('holder')[0],
     tests = {
       filereader: typeof FileReader != 'undefined',
       dnd: 'draggable' in document.createElement('span'),
