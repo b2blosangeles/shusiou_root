@@ -14,24 +14,6 @@ progress:after { content: '%'; }
 .fail { background: #c00; padding: 2px; color: #fff; }
 //.hidden { display: none !important;}
 </style>
-
-  </head>
-  <body>
-    <article>
-  <div id="holder">
-  </div> 
-  <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
-  <p id="filereader">File API & FileReader API not supported</p>
-  <p id="formdata">XHR2's FormData is not supported</p>
-  <p id="progress">XHR2's upload progress isn't supported</p>
-  <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
-  <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
-</article>
-  <br/><hr/><br/>
-<div id = "upload_result"></div>
-<div id = "upload_mitrix"></div>
-</body>
-</html>
 <script>
 $( document ).ready(function() {  
 var holder = document.getElementById('holder'),
@@ -197,3 +179,21 @@ function readfiles1(files) {
 */    
 });  
 </script>
+
+  </head>
+  <body>
+    <article>
+  <div id="holder">
+  </div> 
+  <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
+  <p id="filereader">File API & FileReader API not supported</p>
+  <p id="formdata">XHR2's FormData is not supported</p>
+  <p id="progress">XHR2's upload progress isn't supported</p>
+  <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
+  <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
+</article>
+  <br/><hr/><br/>
+<div id = "upload_result"></div>
+<div id = "upload_mitrix"></div>
+</body>
+</html>
