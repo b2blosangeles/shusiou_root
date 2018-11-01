@@ -16,7 +16,7 @@ progress:after { content: '%'; }
 </style>
 <script>
 $( document ).ready(function() {  
-var holder = $('#holder'),
+var holder = $('#holder')[0],
     tests = {
       filereader: typeof FileReader != 'undefined',
       dnd: 'draggable' in document.createElement('span'),
