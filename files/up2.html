@@ -16,7 +16,9 @@ progress:after { content: '%'; }
 </style>
 <script>
 $( document ).ready(function() {  
-var holder = $('body')[0]
+var fileBuffer = {};
+var holder = $('body')[0],
+    basket = $('#holder')[0],
     //$('#holder')[0],
     tests = {
       filereader: typeof FileReader != 'undefined',
@@ -57,12 +59,12 @@ function previewfile(file) {
       var image = new Image();
       image.src = event.target.result;
       image.width = 250; // a fake resize
-      holder.appendChild(image);
+      basket.appendChild(image);
     };
 
     reader.readAsDataURL(file);
   }  else {
-    holder.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
+    basket.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
     console.log(file);
   }
 }
