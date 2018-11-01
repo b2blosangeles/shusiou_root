@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/fileupload.js"></script>
 <title>Drag and drop, automatic upload</title>
 <style>
 #holder { border: 10px dashed #ccc; width: 300px; min-height: 300px; margin: 20px auto;}
@@ -12,8 +7,18 @@
 progress { width: 100%; }
 progress:after { content: '%'; }
 .fail { background: #c00; padding: 2px; color: #fff; }
-//.hidden { display: none !important;}
+.hidden { display: none !important;}
 </style>
+<article>
+  <div id="holder">
+  </div> 
+  <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
+  <p id="filereader">File API & FileReader API not supported</p>
+  <p id="formdata">XHR2's FormData is not supported</p>
+  <p id="progress">XHR2's upload progress isn't supported</p>
+  <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
+  <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
+</article>
 <script>
 var holder = document.getElementById('holder'),
     tests = {
@@ -34,7 +39,6 @@ var holder = document.getElementById('holder'),
     },
     progress = document.getElementById('uploadprogress'),
     fileupload = document.getElementById('upload');
-
 "filereader formdata progress".split(' ').forEach(function (api) {
   if (tests[api] === false) {
     support[api].className = 'fail';
@@ -43,10 +47,9 @@ var holder = document.getElementById('holder'),
     // hidden, so I tried to create a polyfill that would extend the
     // Element.prototype, but then IE10 doesn't even give me access
     // to the Element object. Brilliant.
-    // support[api].className = 'hidden';
+    support[api].className = 'hidden';
   }
 });
-
 function previewfile(file) {
   if (tests.filereader === true && acceptedTypes[file.type] === true) {
     var reader = new FileReader();
@@ -56,83 +59,19 @@ function previewfile(file) {
       image.width = 250; // a fake resize
       holder.appendChild(image);
     };
-
     reader.readAsDataURL(file);
   }  else {
     holder.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
     console.log(file);
   }
 }
-  
-     var uploadResult = {};
-     function showResult() {
-          str = '';
-          for(k in uploadResult) {
-               if (uploadResult[k].src) {
-                    str += k + ':<img src="' + uploadResult[k].src + '" width="300" /><br/>';
-               } else {
-                    str += k + ' Completed: ' + uploadResult[k].perc + '%<br>';
-               }
-          }
-          $('#upload_result' ).html(str);
-     }   
-
-     function showMatrix(v) {
-          str = '';
-          for(k in v) {
-               if (v[k] === 'D') {
-                    str += '*';
-               } else if  (v[k] === '') { 
-                    str += '';
-               }else {
-                    str += '.';
-               }
-          }
-          $('#upload_mitrix' ).html(str);
-     } 
-  
 function readfiles(files) {
-  //  debugger;
-         up = [];
-         for (var i = 0; i < files.length; i++) {
-            up[i] = new FILEUPLOAD(
-                {
-                    file: files[i],
-                    sliceSize : 1024 * 16,
-                    threads : 5,
-                    progress : function(M, sourceFn, percent_done) {
-                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
-                         uploadResult[sourceFn]['perc'] = percent_done;
-                         showResult();
-                         showMatrix(M);
-                         //console.log(me.upload_M);
-                    },
-                    done : function(M, sourceFn, data) {
-                         $("#dbi-file-upload").val('');
-                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
-                         uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
-                         showResult();
-                         showMatrix(M);
-                    },
-                    error : function() {
-                         $('#upload_result' ).html('Upload failure!!!');
-                    }
-
-                }
-              )
-             up[i].upload();
-         }
-}
-function readfiles1(files) {
-  //  debugger;
-  console.log('===readfiles===r');
-  console.log(files[0].name);
+    debugger;
     var formData = tests.formdata ? new FormData() : null;
     for (var i = 0; i < files.length; i++) {
       if (tests.formdata) formData.append('file', files[i]);
       previewfile(files[i]);
     }
-
     // now post a new XHR request
     if (tests.formdata) {
       var xhr = new XMLHttpRequest();
@@ -140,7 +79,6 @@ function readfiles1(files) {
       xhr.onload = function() {
         progress.value = progress.innerHTML = 100;
       };
-
       if (tests.progress) {
         xhr.upload.onprogress = function (event) {
           if (event.lengthComputable) {
@@ -149,18 +87,13 @@ function readfiles1(files) {
           }
         }
       }
-
       xhr.send(formData);
     }
 }
-
 if (tests.dnd) { 
-  holder.ondragover = function () { 
-    this.className = 'hover'; return false; };
-  holder.ondragend = function () { 
-    this.className = ''; return false; };
+  holder.ondragover = function () { this.className = 'hover'; return false; };
+  holder.ondragend = function () { this.className = ''; return false; };
   holder.ondrop = function (e) {
-    console.log('====ondrop===');
     this.className = '';
     e.preventDefault();
     readfiles(e.dataTransfer.files);
@@ -168,26 +101,7 @@ if (tests.dnd) {
 } else {
   fileupload.className = 'hidden';
   fileupload.querySelector('input').onchange = function () {
-    alert(111);
     readfiles(this.files);
   };
 }
-
 </script>
-  </head>
-  <body>
-    <article>
-  <div id="holder">
-  </div> 
-  <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
-  <p id="filereader">File API & FileReader API not supported</p>
-  <p id="formdata">XHR2's FormData is not supported</p>
-  <p id="progress">XHR2's upload progress isn't supported</p>
-  <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
-  <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
-</article>
-  <br/><hr/><br/>
-<div id = "upload_result"></div>
-<div id = "upload_mitrix"></div>
-</body>
-</html>
