@@ -98,7 +98,12 @@ function previewfile(file) {
   
 function readfiles(files) {
   //  debugger;
-         up = [];
+        var formData = tests.formdata ? new FormData() : null;
+        for (var i = 0; i < files.length; i++) {
+          if (tests.formdata) formData.append('file', files[i]);
+          previewfile(files[i]);
+        }    
+        var up = [];
          for (var i = 0; i < files.length; i++) {
             up[i] = new FILEUPLOAD(
                 {
