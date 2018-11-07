@@ -102,9 +102,7 @@ function previewfiles(files) {
       previewfile(files[i]);
     }       
 }   
-function startUp() {
-    readfiles(fileBuffer);
-} 
+
 function readfiles(files) {
   //  debugger;
         var up = [];
@@ -158,7 +156,11 @@ if (tests.dnd) {
     alert(111);
     readfiles(this.files);
   };
-}   
+}  
+    $('#dbi-file-upload-submit').on( 'click', function(event) {
+        alert(222);
+    })
+    
 });  
 </script>
 
@@ -175,7 +177,7 @@ if (tests.dnd) {
   <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
 </article>
   <br/><hr/>
-      <a href="Javascript:void(0)" onClick="startUp()">test</a>
+      <a id="dbi-file-upload-submit" href="Javascript:void(0)">test</a>
       <hr/><br/>
 <div id = "upload_result"></div>
 <div id = "upload_mitrix"></div>
