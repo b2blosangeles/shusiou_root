@@ -21,6 +21,7 @@ var DropBox = function(setting) {
     };
     
     this.previewfile = function(file) {
+        var me = this;
       if (me.tests.filereader === true && me.acceptedTypes[file.type] === true) {
         var reader = new FileReader();
         reader.onload = function (event) {
