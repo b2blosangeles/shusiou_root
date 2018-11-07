@@ -17,6 +17,10 @@ progress:after { content: '%'; }
 </style>
 <script>
 $( document ).ready(function() {  
+    
+    var D = new DropBox();
+    console.log('===D===');
+    
 var fileBuffer = null;
 var holder = $('body')[0],
     basket = $('#holder')[0],
