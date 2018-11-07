@@ -16,7 +16,7 @@ progress:after { content: '%'; }
 </style>
 <script>
 $( document ).ready(function() {  
-var fileBuffer = {};
+var fileBuffer = null;
 var holder = $('body')[0],
     basket = $('#holder')[0],
     //$('#holder')[0],
@@ -158,8 +158,9 @@ if (tests.dnd) {
   };
 }  
     $('#dbi-file-upload-submit').on( 'click', function(event) {
-        alert(222);
+        if (fileBuffer) {
          readfiles(fileBuffer);
+        }
     })
     
 });  
