@@ -16,6 +16,7 @@ var DropBox = function(setting) {
     this.acceptedTypes = ['image/png','image/jpeg','video/mp4'];
 
     this.previewfiles = function(files) {
+         var me = this;
         var formData = me.tests.formdata ? new FormData() : null;
         for (var i = 0; i < files.length; i++) {
           if (me.tests.formdata) me.formData.append('file', files[i]);
