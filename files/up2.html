@@ -103,7 +103,7 @@ function previewfiles(files) {
     }       
 }   
 function startUp() {
-      alert('startUp');   
+    readfiles(fileBuffer);
 } 
 function readfiles(files) {
   //  debugger;
@@ -150,7 +150,7 @@ if (tests.dnd) {
       fileBuffer = e.dataTransfer.files;
     previewfiles(e.dataTransfer.files);
        console.log('====ondrop===>e.dataTransfer.files');
-      readfiles(fileBuffer);
+      
   }
 } else {
   fileupload.className = 'hidden';
