@@ -13,16 +13,18 @@ var DropBox = function(setting) {
       formdata: document.getElementById('formdata'),
       progress: document.getElementById('progress')
     };
-    this.acceptedTypes = {
-      'image/png': true,
-      'image/jpeg': true,
-      'image/gif': true,
-      'video/mp4': true
-    };
-    
+    this.acceptedTypes = ['image/png','image/jpeg','video/mp4'];
+
+    this.previewfiles = function(files) {
+        var formData = me.tests.formdata ? new FormData() : null;
+        for (var i = 0; i < files.length; i++) {
+          if (me.tests.formdata) me.formData.append('file', files[i]);
+          me.previewfile(files[i]);
+        }       
+    }     
     this.previewfile = function(file) {
         var me = this;
-      if (me.tests.filereader === true && me.acceptedTypes[file.type] === true) {
+      if (me.tests.filereader === true && me.acceptedTypes.indexOf(file.type) !== -1) {
         var reader = new FileReader();
         reader.onload = function (event) {
           var image = new Image();
@@ -50,7 +52,7 @@ var DropBox = function(setting) {
             this.className = '';
             e.preventDefault();
               fileBuffer = e.dataTransfer.files;
-              // me.previewfiles(e.dataTransfer.files);
+              me.previewfiles(e.dataTransfer.files);
               console.log('====ondrop===>e.dataTransfer.files===' + e.dataTransfer.files.length);
 
           }    
