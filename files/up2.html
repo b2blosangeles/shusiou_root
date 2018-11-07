@@ -16,11 +16,8 @@ progress:after { content: '%'; }
 //.hidden { display: none !important;}
 </style>
 <script>
-$( document ).ready(function() {  
-    
-    var D = new DropBox();
-    console.log('===D===');
-    
+
+  
 var fileBuffer = null;
 var holder = $('body')[0],
     basket = $('#holder')[0],
@@ -140,7 +137,12 @@ function readfiles(files) {
              up[i].upload();
          }
 }
-
+$( document ).ready(function() {  
+    
+    var D = new DropBox();
+    D.init();
+    console.log('===D2===');
+/*    
 if (tests.dnd) { 
   holder.ondragover = function () { 
     this.className = 'hover'; return false; };
@@ -162,6 +164,7 @@ if (tests.dnd) {
     readfiles(this.files);
   };
 }  
+*/
     $('#dbi-file-upload-submit').on( 'click', function(event) {
         if (fileBuffer) {
          readfiles(fileBuffer);
