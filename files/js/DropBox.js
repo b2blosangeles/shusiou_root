@@ -50,8 +50,8 @@ var DropBox = function(setting) {
             this.className = '';
             e.preventDefault();
               fileBuffer = e.dataTransfer.files;
-              me.previewfiles(e.dataTransfer.files);
-              console.log('====ondrop===>e.dataTransfer.files');
+              // me.previewfiles(e.dataTransfer.files);
+              console.log('====ondrop===>e.dataTransfer.files===' + e.dataTransfer.files.length);
 
           }    
     }
