@@ -27,12 +27,14 @@ var DropBox = function(setting) {
         var me = this;
       if (me.tests.filereader === true && me.acceptedTypes.indexOf(file.type) !== -1) {
         var reader = new FileReader();
-        reader.onload = function (event) {
-          var image = new Image();
-          image.src = event.target.result;
-          image.width = 250; // a fake resize
-          me.basket.appendChild(image);
-        };
+        reader.onload = (function(me) {
+            return function (event) {
+              var image = new Image();
+              image.src = event.target.result;
+              image.width = 250; // a fake resize
+              me.basket.appendChild(image);
+            }
+        })(me);
 
         reader.readAsDataURL(file);
       }  else {
