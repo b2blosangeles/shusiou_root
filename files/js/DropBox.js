@@ -21,18 +21,18 @@ var DropBox = function(setting) {
     };
     
     this.previewfile = function(file) {
-      if (tests.filereader === true && acceptedTypes[file.type] === true) {
+      if (me.tests.filereader === true && me.acceptedTypes[file.type] === true) {
         var reader = new FileReader();
         reader.onload = function (event) {
           var image = new Image();
           image.src = event.target.result;
           image.width = 250; // a fake resize
-          basket.appendChild(image);
+          me.basket.appendChild(image);
         };
 
         reader.readAsDataURL(file);
       }  else {
-        basket.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
+        me.basket.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
         console.log(file);
       }
     }    
