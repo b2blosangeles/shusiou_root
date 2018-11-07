@@ -145,6 +145,8 @@ if (tests.dnd) {
     this.className = '';
     e.preventDefault();
     previewfiles(e.dataTransfer.files);
+       console.log('====ondrop===>e.dataTransfer.files');
+      readfiles(e.dataTransfer.files);
   }
 } else {
   fileupload.className = 'hidden';
