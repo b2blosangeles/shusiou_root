@@ -144,9 +144,10 @@ if (tests.dnd) {
     console.log('====ondrop===');
     this.className = '';
     e.preventDefault();
+      fileBuffer = e.dataTransfer.files;
     previewfiles(e.dataTransfer.files);
        console.log('====ondrop===>e.dataTransfer.files');
-      readfiles(e.dataTransfer.files);
+      readfiles(fileBuffer);
   }
 } else {
   fileupload.className = 'hidden';
