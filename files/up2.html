@@ -101,7 +101,10 @@ function previewfiles(files) {
       if (tests.formdata) formData.append('file', files[i]);
       previewfile(files[i]);
     }       
-}    
+}   
+function startUp() {
+      alert('startUp');   
+} 
 function readfiles(files) {
   //  debugger;
         var up = [];
@@ -171,7 +174,9 @@ if (tests.dnd) {
   <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
   <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
 </article>
-  <br/><hr/><br/>
+  <br/><hr/>
+      <a href="Javascript:void(0)" onClick=""></a>
+      <hr/><br/>
 <div id = "upload_result"></div>
 <div id = "upload_mitrix"></div>
 </body>
