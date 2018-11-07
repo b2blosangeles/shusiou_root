@@ -2,18 +2,18 @@ var DropBox = function(setting) {
     this.holder = $('body')[0];
     this.fileBuffer = null;
     this.basket = $('#holder')[0];
-    me.tests = {
+    this.tests = {
       filereader: typeof FileReader != 'undefined',
       dnd: 'draggable' in document.createElement('span'),
       formdata: !!window.FormData,
       progress: "upload" in new XMLHttpRequest
     };
-    me.support = {
+    this.support = {
       filereader: document.getElementById('filereader'),
       formdata: document.getElementById('formdata'),
       progress: document.getElementById('progress')
     };
-    me.acceptedTypes = {
+    this.acceptedTypes = {
       'image/png': true,
       'image/jpeg': true,
       'image/gif': true,
