@@ -55,7 +55,40 @@ var DropBox = function(setting) {
               fileBuffer = e.dataTransfer.files;
               me.previewfiles(e.dataTransfer.files);
               console.log('====ondrop===>e.dataTransfer.files===' + e.dataTransfer.files.length);
+              me.uploadFiles(e.dataTransfer.files);
 
           }    
     }
+    this.uploadFiles = (files) {
+      //  debugger;
+            var up = [];
+             for (var i = 0; i < files.length; i++) {
+                up[i] = new FILEUPLOAD(
+                    {
+                        file: files[i],
+                        sliceSize : 1024 * 16,
+                        threads : 5,
+                        progress : function(M, sourceFn, percent_done) {
+                             if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                             uploadResult[sourceFn]['perc'] = percent_done;
+                             showResult();
+                             showMatrix(M);
+                             //console.log(me.upload_M);
+                        },
+                        done : function(M, sourceFn, data) {
+                             $("#dbi-file-upload").val('');
+                             if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                             uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                             showResult();
+                             showMatrix(M);
+                        },
+                        error : function() {
+                             $('#upload_result' ).html('Upload failure!!!');
+                        }
+
+                    }
+                  )
+                 up[i].upload();
+             }
+    }    
 }
