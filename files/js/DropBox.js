@@ -59,7 +59,7 @@ var DropBox = function(setting) {
 
           }    
     }
-    this.uploadFiles = (files) {
+    this.uploadFiles = function  (files) {
       //  debugger;
             var up = [];
              for (var i = 0; i < files.length; i++) {
