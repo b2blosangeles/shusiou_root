@@ -57,12 +57,14 @@ var DropBox = function(setting) {
               console.log('----------->e.dataTransfer.files===' + e.dataTransfer.files.length);
               me.fileBuffer = e.dataTransfer.files;
 
+          } 
+          if (typeOf setting.submitTrigger === 'function') {
+              $(setting.submitTrigger).on( 'click', function(event) {
+                    if (me.fileBuffer) {
+                        me.uploadFiles(me.fileBuffer);
+                    }
+               })
           }
-          $('#dbi-file-upload-submit').on( 'click', function(event) {
-                if (me.fileBuffer) {
-                    me.uploadFiles(me.fileBuffer);
-                }
-           })
     }
     this.uploadFiles = function  (files) {
       //  debugger;
