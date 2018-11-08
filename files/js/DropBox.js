@@ -58,7 +58,7 @@ var DropBox = function(setting) {
               me.fileBuffer = e.dataTransfer.files;
 
           } 
-          if (typeof setting.submitTrigger === 'function') {
+          if (typeof setting.submitTrigger) {
               $(setting.submitTrigger).on( 'click', function(event) {
                     if (me.fileBuffer) {
                         me.uploadFiles(me.fileBuffer);
