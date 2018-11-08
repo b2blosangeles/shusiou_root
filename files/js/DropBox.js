@@ -82,7 +82,7 @@ var DropBox = function(_setting) {
                              _setting.done(M, sourceFn, data);
                         },
                         error : function() {
-                             $('#upload_result' ).html('Upload failure!!!');
+                             if (_setting.error) _setting.error();
                         }
 
                     }
