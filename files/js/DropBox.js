@@ -74,7 +74,7 @@ var DropBox = function(_setting) {
                 up[i] = new FILEUPLOAD(
                     {
                         file: files[i],
-                        sliceSize : 1024 * 16,
+                        sliceSize : (_setting.sliceSize) ? _setting.sliceSize : 1024 * 16,
                         threads : (_setting.threads) ? _setting.threads : 5,
                         progress : function(M, sourceFn, percent_done) {
                              _setting.progress(M, sourceFn, percent_done);
