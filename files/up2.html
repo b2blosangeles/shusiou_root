@@ -47,6 +47,7 @@ function showMatrix(v) {
 $( document ).ready(function() {  
     
     var D = new DropBox({
+                    threads : 10,
                     progress : function(M, sourceFn, percent_done) {
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
                          uploadResult[sourceFn]['perc'] = percent_done;
