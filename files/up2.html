@@ -141,9 +141,11 @@ function readfiles(files) {
 */
 $( document ).ready(function() {  
     
-    var D = new DropBox();
+    var D = new DropBox({
+        submitTrigger : $('#dbi-file-upload-submit')
+    });
     D.init();
-    console.log('===D2===');
+    console.log('===D23===');
 /*    
 if (tests.dnd) { 
   holder.ondragover = function () { 
