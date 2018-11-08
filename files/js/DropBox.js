@@ -19,7 +19,7 @@ var DropBox = function(setting) {
          var me = this;
         var formData = me.tests.formdata ? new FormData() : null;
         for (var i = 0; i < files.length; i++) {
-          if (me.tests.formdata) me.formData.append('file', files[i]);
+          if (me.tests.formdata) formData.append('file', files[i]);
           me.previewfile(files[i]);
         }       
     }     
