@@ -81,7 +81,25 @@ function readfiles(files) {
 $( document ).ready(function() {  
     
     var D = new DropBox({
-        submitTrigger : $('#dbi-file-upload-submit')
+                    progress : function(M, sourceFn, percent_done) {
+                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                         uploadResult[sourceFn]['perc'] = percent_done;
+                         showResult();
+                         showMatrix(M);
+                         //console.log(me.upload_M);
+                    },
+                    done : function(M, sourceFn, data) {
+                         $("#dbi-file-upload").val('');
+                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
+                         uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
+                         showResult();
+                         showMatrix(M);
+                    },
+                    error : function() {
+                         $('#upload_result' ).html('Upload failure!!!');
+                    }        
+         submitTrigger : $('#dbi-file-upload-submit'),
+         
     });
     D.init();
     console.log('===D23===');   
