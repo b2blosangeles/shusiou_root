@@ -47,6 +47,8 @@ function showMatrix(v) {
 $( document ).ready(function() {  
     
     var D = new DropBox({
+                    holder : $('body')[0],
+                    basket : $('#holder')[0],
                     sliceSize : 1024 * 64,
                     threads : 3,
                     progress : function(M, sourceFn, percent_done) {
