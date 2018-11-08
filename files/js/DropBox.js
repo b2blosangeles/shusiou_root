@@ -54,10 +54,15 @@ var DropBox = function(setting) {
             e.preventDefault();
               fileBuffer = e.dataTransfer.files;
               me.previewfiles(e.dataTransfer.files);
-              console.log('====ondrop===>e.dataTransfer.files===' + e.dataTransfer.files.length);
-              me.uploadFiles(e.dataTransfer.files);
+              console.log('----------->e.dataTransfer.files===' + e.dataTransfer.files.length);
+              me.fileBuffer = e.dataTransfer.files;
 
-          }    
+          }
+          $('#dbi-file-upload-submit').on( 'click', function(event) {
+                if (me.fileBuffer) {
+                    me.uploadFiles(me.fileBuffer);
+                }
+           })
     }
     this.uploadFiles = function  (files) {
       //  debugger;
