@@ -17,67 +17,33 @@ progress:after { content: '%'; }
 </style>
 <script>
 
-     var uploadResult = {};
-     function showResult() {
-          str = '';
-          for(k in uploadResult) {
-               if (uploadResult[k].src) {
-                    str += k + ':<img src="' + uploadResult[k].src + '" width="300" /><br/>';
-               } else {
-                    str += k + ' Completed: ' + uploadResult[k].perc + '%<br>';
-               }
+var uploadResult = {};
+function showResult() {
+     str = '';
+     for(k in uploadResult) {
+          if (uploadResult[k].src) {
+               str += k + ':<img src="' + uploadResult[k].src + '" width="300" /><br/>';
+          } else {
+               str += k + ' Completed: ' + uploadResult[k].perc + '%<br>';
           }
-          $('#upload_result' ).html(str);
-     }   
+     }
+     $('#upload_result' ).html(str);
+}   
 
-     function showMatrix(v) {
-          str = '';
-          for(k in v) {
-               if (v[k] === 'D') {
-                    str += '*';
-               } else if  (v[k] === '') { 
-                    str += '';
-               }else {
-                    str += '.';
-               }
+function showMatrix(v) {
+     str = '';
+     for(k in v) {
+          if (v[k] === 'D') {
+               str += '*';
+          } else if  (v[k] === '') { 
+               str += '';
+          }else {
+               str += '.';
           }
-          $('#upload_mitrix' ).html(str);
-     } 
+     }
+     $('#upload_mitrix' ).html(str);
+} 
  
-/*
-function readfiles(files) {
-  //  debugger;
-        var up = [];
-         for (var i = 0; i < files.length; i++) {
-            up[i] = new FILEUPLOAD(
-                {
-                    file: files[i],
-                    sliceSize : 1024 * 16,
-                    threads : 5,
-                    progress : function(M, sourceFn, percent_done) {
-                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
-                         uploadResult[sourceFn]['perc'] = percent_done;
-                         showResult();
-                         showMatrix(M);
-                         //console.log(me.upload_M);
-                    },
-                    done : function(M, sourceFn, data) {
-                         $("#dbi-file-upload").val('');
-                         if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
-                         uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
-                         showResult();
-                         showMatrix(M);
-                    },
-                    error : function() {
-                         $('#upload_result' ).html('Upload failure!!!');
-                    }
-
-                }
-              )
-             up[i].upload();
-         }
-}
-*/
 $( document ).ready(function() {  
     
     var D = new DropBox({
