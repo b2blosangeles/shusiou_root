@@ -1,7 +1,10 @@
 var DropBox = function(_setting) {
-    this.holder = $('body')[0];
+    
+    this.holder = _setting.holder;
+    this.basket = _setting.basket;
+    
     this.fileBuffer = null;
-    this.basket = $('#holder')[0];
+    
     this.tests = {
       filereader: typeof FileReader != 'undefined',
       dnd: 'draggable' in document.createElement('span'),
@@ -49,12 +52,10 @@ var DropBox = function(_setting) {
             this.className = ''; return false; 
           };
           me.holder.ondrop = function (e) {
-            console.log('====ondrop===');
             this.className = '';
             e.preventDefault();
               fileBuffer = e.dataTransfer.files;
               me.previewfiles(e.dataTransfer.files);
-              console.log('----------->e.dataTransfer.files===' + e.dataTransfer.files.length);
               me.fileBuffer = e.dataTransfer.files;
               if (_setting.submitTrigger === 'auto') {
                    if (me.fileBuffer)  me.uploadFiles(me.fileBuffer);
