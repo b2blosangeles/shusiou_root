@@ -34,7 +34,7 @@ var DropBox = function(setting) {
               image.width = 250; // a fake resize
               me.basket.appendChild(image);
             }
-        }(me));
+        })(me);
 
         reader.readAsDataURL(file);
       }  else {
