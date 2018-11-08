@@ -1,4 +1,91 @@
-    var FILEUPLOAD = function(setting) {
+(function () { 
+		var obj =  function () {
+			this.serial = function(q, cbk, timeout) {
+				var me = this;
+				var idx = '', tm = new Date().getTime();
+				var vtime = (isNaN(timeout) || timeout == 0)?6000:timeout
+				me.data = {};	
+				var _f = function(o) {
+					return function(res) {
+						delete q[o];
+						idx = '';
+						me.data[o] = res;
+					}
+				}
+				var _itv = setInterval(
+					function(){
+						if (!idx) {
+							if (!Object.keys(q).length) {
+								clearInterval(_itv);
+								cbk({_spent_time:new Date().getTime() - tm, status:'success', results:me.data});
+							} else {
+								idx = Object.keys(q)[0];
+								if ((q[idx]) && typeof q[idx] == 'function') {
+									if (!me.exit) {
+										q[idx](_f(idx));
+									} else {
+										delete q[idx];
+										idx = '';
+									}
+								} 
+							}
+						}
+						if (new Date().getTime() - tm > vtime) {
+							clearInterval(_itv);
+							cbk({_spent_time:new Date().getTime() - tm, status:'timeout', results:me.data});
+						}				
+						return true;
+					}
+				, 1); 
+			};
+			this.parallel = function(q, cbk, timeout) {
+				var me = this;
+				var tm = new Date().getTime(), vtime = (isNaN(timeout) || timeout == 0)?6000:timeout;
+				
+				me.data = {};	
+				var count_q = 0, count_r = 0;
+				for (var o in q) {
+					count_q++;	
+					var _f = function(o) {
+						return function(res) {
+							count_r++;
+							me.data[o] = res;
+						}
+					}
+					if ((q[o]) && typeof q[o] == 'function') {
+						q[o](_f(o));
+					} 						
+				}
+				var _itv = setInterval(
+					function(){			
+						if (count_q == count_r) {
+							clearInterval(_itv);
+							cbk({_spent_time:new Date().getTime() - tm, status:'success', results:me.data});
+							console.log(new Date());
+						}
+						if (new Date().getTime() - tm > vtime) {
+							clearInterval(_itv);
+							cbk({_spent_time:new Date().getTime() - tm, status:'timeout', results:me.data});
+							console.log(new Date());
+						}				
+						return true;
+					}
+				, 1); 		
+			};
+		};
+
+	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+		module.exports = obj;
+	} else {
+		window.crowdProcess = function() {
+			return obj; 
+		}
+	}
+})();
+
+var CP = crowdProcess();
+
+var FILEUPLOAD = function(setting) {
         this.slice_size = (setting.sliceSize) ? setting.sliceSize : (1024 * 16);
         this.ses = null;
         this.holded = {}; 
@@ -6,12 +93,6 @@
         this.inProcess = {};
         this.upload_M = {};
         var size_done = 0;
-        // , upload_M = {};
-        /*
-        this.pp = function() {
-            var me = this;
-            return me.upload_M;
-        }*/
         this.getPos = function() {
             var me = this;
             for(var k in me.upload_M) {
@@ -52,10 +133,6 @@
                 var percent_done = Math.min(Math.floor( ( size_done / me.file.size ) * 100 ), 100);
                 (setting.progress) ? setting.progress(me.upload_M, me.file.name, percent_done) : '';
 
-               // me.reader.onload = function( event ) {
-                //    alert(111);
-               // };
-               
                 me.reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
                     if ( event.target.readyState === FileReader.DONE ) { 
