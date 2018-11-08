@@ -1,4 +1,4 @@
-var DropBox = function(setting) {
+var DropBox = function(_setting) {
     this.holder = $('body')[0];
     this.fileBuffer = null;
     this.basket = $('#holder')[0];
@@ -58,8 +58,8 @@ var DropBox = function(setting) {
               me.fileBuffer = e.dataTransfer.files;
 
           } 
-          if (typeof setting.submitTrigger) {
-              $(setting.submitTrigger).on( 'click', function(event) {
+          if (typeof _setting.submitTrigger) {
+              $(_setting.submitTrigger).on( 'click', function(event) {
                     if (me.fileBuffer) {
                         me.uploadFiles(me.fileBuffer);
                     }
@@ -76,18 +76,10 @@ var DropBox = function(setting) {
                         sliceSize : 1024 * 16,
                         threads : 5,
                         progress : function(M, sourceFn, percent_done) {
-                             if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
-                             uploadResult[sourceFn]['perc'] = percent_done;
-                             showResult();
-                             showMatrix(M);
-                             //console.log(me.upload_M);
+                             _setting.progress(M, sourceFn, percent_done);
                         },
                         done : function(M, sourceFn, data) {
-                             $("#dbi-file-upload").val('');
-                             if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
-                             uploadResult[sourceFn].src = '/api/sendup.api?fn=' + data.fn + '&nocache=' + new Date().getTime();
-                             showResult();
-                             showMatrix(M);
+                             _setting.done(M, sourceFn, data);
                         },
                         error : function() {
                              $('#upload_result' ).html('Upload failure!!!');
