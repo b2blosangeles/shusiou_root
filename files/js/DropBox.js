@@ -56,13 +56,14 @@ var DropBox = function(_setting) {
               me.previewfiles(e.dataTransfer.files);
               console.log('----------->e.dataTransfer.files===' + e.dataTransfer.files.length);
               me.fileBuffer = e.dataTransfer.files;
+              if (_setting.submitTrigger === 'auto') {
+                   if (me.fileBuffer)  me.uploadFiles(me.fileBuffer);
+              }
 
           } 
-          if (typeof _setting.submitTrigger) {
+          if (typeof _setting.submitTrigger === 'object') {
               $(_setting.submitTrigger).on( 'click', function(event) {
-                    if (me.fileBuffer) {
-                        me.uploadFiles(me.fileBuffer);
-                    }
+                    if (me.fileBuffer) me.uploadFiles(me.fileBuffer);
                })
           }
     }
