@@ -56,7 +56,6 @@ $( document ).ready(function() {
                          uploadResult[sourceFn]['perc'] = percent_done;
                          showResult();
                          showMatrix(M);
-                         //console.log(me.upload_M);
                     },
                     done : function(M, sourceFn, data) {
                          $("#dbi-file-upload").val('');
@@ -68,8 +67,9 @@ $( document ).ready(function() {
                     error : function() {
                          $('#upload_result' ).html('Upload failure!!!');
                     },       
-                    submitTrigger : 'auto'
-                    // $('#dbi-file-upload-submit')
+                    submitTrigger : $('#dbi-file-upload-submit')
+                    // 'auto'
+                    // 
          
     });
     D.init();
