@@ -57,6 +57,7 @@ $( document ).ready(function() {
                          showResult();
                          showMatrix(M);
                     },
+                    UploadServer : '/api/upload.api',
                     done : function(M, sourceFn, data) {
                          $("#dbi-file-upload").val('');
                          if (!uploadResult[sourceFn]) uploadResult[sourceFn] = {};
