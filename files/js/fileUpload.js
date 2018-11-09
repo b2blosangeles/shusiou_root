@@ -1,5 +1,5 @@
-var FILEUPLOAD = function(setting) {
-        this.slice_size = (setting.sliceSize) ? setting.sliceSize : (1024 * 16);
+var FILEUPLOAD = function(_setting) {
+        this.slice_size = (_setting.sliceSize) ? _setting.sliceSize : (1024 * 16);
         this.ses = null;
         this.holded = {}; 
         this.file = {};
@@ -14,7 +14,7 @@ var FILEUPLOAD = function(setting) {
                         me.holded[k] = (!me.holded[k]) ? 1 : me.holded[k] + 1;
                         if (me.holded[k] > 2) {
                             clearInterval(me._ITV);
-                            (setting.error) ? setting.error() : '';
+                            (_setting.error) ? _setting.error() : '';
                             return false;
                         }
                         me.upload_M[k] = '';
@@ -44,7 +44,7 @@ var FILEUPLOAD = function(setting) {
                 var blob = me.file.slice( pos, pos + me.slice_size);
                 var size_done = pos + me.slice_size - 1; 
                 var percent_done = Math.min(Math.floor( ( size_done / me.file.size ) * 100 ), 100);
-                (setting.progress) ? setting.progress(me.upload_M, me.file.name, percent_done) : '';
+                (_setting.progress) ? _setting.progress(me.upload_M, me.file.name, percent_done) : '';
 
                 me.reader.onloadend = function( event ) {
                     var d = event.target.result.split( ';base64,');
@@ -60,7 +60,7 @@ var FILEUPLOAD = function(setting) {
            var me = this;
            $.ajax({
               type: "POST",
-              url: '/api/upload.api',
+              url: _setting.UploadServer,
               data: {pos:pos, data:dt, ses: me.ses},
               success: function(data) {
                     if (!me.ses) me.ses = data.ses;
@@ -76,7 +76,7 @@ var FILEUPLOAD = function(setting) {
            var me = this;
            $.ajax({
               type: "POST",
-              url: '/api/upload.api',
+              url: _setting.UploadServer,
               data: {},
               success: function(data) {
                   if (!me.ses) me.ses = data.ses;
@@ -90,19 +90,19 @@ var FILEUPLOAD = function(setting) {
             
             $.ajax({
               type: "POST",
-              url: '/api/upload.api',
+              url: _setting.UploadServer,
               data: {pos:'finished', ses: me.ses},
               success: function(data) {
-                  (setting.done) ? setting.done(me.upload_M, me.file.name, data) : '';
+                  (_setting.done) ? _setting.done(me.upload_M, me.file.name, data) : '';
               },
               dataType: 'JSON'
             }); 
         }  
         this.upload = function() {
             var me = this;
-            me.threads = (setting.threads) ? setting.threads : 1;
+            me.threads = (_setting.threads) ? _setting.threads : 1;
             me.reader = new FileReader();
-            me.file = setting.file;
+            me.file = _setting.file;
             for (var i=0; i < me.file.size; i+= me.slice_size) {
                 me.upload_M[i] = '';
             }
