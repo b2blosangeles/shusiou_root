@@ -12,25 +12,52 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-
+    var _addVideo =  React.createClass({
+    getInitialState: function() {
+       var me = this;
+    },
+    componentDidMount:function(prevState, prevProps) {
+      var me = this;
+    //  me.loadPlugin();
+    },	     
+    loadPlugin : function() {
+      var me = this;
+      me._asyncModule = null;
+      $.ajax({
+         type: 'POST',
+         url: 'https://master1_dev.shusiou.win/api/JSXhub.api',
+         data: {
+           includes : [],
+           main : '/files/js/module/pullYouTube/main.jsx',
+           code : 'pullYouTube'
+          },
+         dataType: 'JSON',
+         timeout: (2 * 1000),
+         success: function(resultData){
+            me._asyncModule = resultData;
+           // console.log(resultData);
+           me.setState({success: true, update : new Date().getTime()});
+         },
+         error : function(xhr, textStatus, error) { 
+           me._asyncModuleErr = error;
+           me.setState({success: false, update : new Date().getTime()})
+         }
+      });		
+    },     
+     //   <_asyncOBJ parent={me}/>
+     
+    render: function() {
+          var me = this;
+       //  var _asyncOBJ = React.createClass({render: function() { return (<span>niuo</span>)}});
+      //   eval(decodeURIComponent(me._asyncModule.code));
+         return  (<span>123</span>)
+      }
+    });
       ReactDOM.render(
         <h1>Hello, world!</h1>,
         document.getElementById('root')
       );
 
     </script>
-    <!--
-      Note: this page is a great way to try React but it's not suitable for production.
-      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
-
-      Read this section for a production-ready setup with JSX:
-      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
-
-      In a larger project, you can use an integrated toolchain that includes JSX instead:
-      https://reactjs.org/docs/create-a-new-react-app.html
-
-      You can also use React without JSX, in which case you can remove Babel:
-      https://reactjs.org/docs/react-without-jsx.html
-    -->
   </body>
 </html>
