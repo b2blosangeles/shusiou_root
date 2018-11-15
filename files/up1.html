@@ -18,7 +18,7 @@ $( document ).ready(function() {
     },
     componentDidMount:function(prevState, prevProps) {
       var me = this;
-      me.loadPlugin();
+    //  me.loadPlugin();
     },	     
     loadPlugin : function() {
       var me = this;
@@ -47,7 +47,7 @@ $( document ).ready(function() {
     render: function() {
           var me = this;
        //  var _asyncOBJ = React.createClass({render: function() { return (<span>niuo</span>)}});
-         eval(decodeURIComponent(me._asyncModule.code));
+      //   eval(decodeURIComponent(me._asyncModule.code));
          return  (<span>
            <_asyncOBJ parent={me}/>
            {/*Root.lib.landingModal(me)*/}
