@@ -12,47 +12,8 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-    var _addVideo =  React.createClass({
-    getInitialState: function() {
-       var me = this;
-    },
-    componentDidMount:function(prevState, prevProps) {
-      var me = this;
-    //  me.loadPlugin();
-    },	     
-    loadPlugin : function() {
-      var me = this;
-      me._asyncModule = null;
-      $.ajax({
-         type: 'POST',
-         url: 'https://master1_dev.shusiou.win/api/JSXhub.api',
-         data: {
-           includes : [],
-           main : '/files/js/module/pullYouTube/main.jsx',
-           code : 'pullYouTube'
-          },
-         dataType: 'JSON',
-         timeout: (2 * 1000),
-         success: function(resultData){
-            me._asyncModule = resultData;
-           // console.log(resultData);
-           me.setState({success: true, update : new Date().getTime()});
-         },
-         error : function(xhr, textStatus, error) { 
-           me._asyncModuleErr = error;
-           me.setState({success: false, update : new Date().getTime()})
-         }
-      });		
-    },     
-     //   <_asyncOBJ parent={me}/>
-     
-    render: function() {
-          var me = this;
-       //  var _asyncOBJ = React.createClass({render: function() { return (<span>niuo</span>)}});
-      //   eval(decodeURIComponent(me._asyncModule.code));
-         return  (<span>123</span>)
-      }
-    });
+    
+    
       ReactDOM.render(
         <h1>Hello, world!</h1>,
         document.getElementById('root')
