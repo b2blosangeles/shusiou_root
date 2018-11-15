@@ -16,6 +16,10 @@ $( document ).ready(function() {
     getInitialState: function() {
        var me = this;
     },
+    componentDidMount:function(prevState, prevProps) {
+      var me = this;
+      me.loadPlugin();
+    },	     
     loadPlugin : function() {
       var me = this;
       me._asyncModule = null;
