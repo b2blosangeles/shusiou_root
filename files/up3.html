@@ -24,7 +24,7 @@
             },
              loadPlugin : function() {
                 var me = this;
-                me._asyncModule = {};
+                me._asyncModule = null;
                 $.ajax({
                    type: 'POST',
                    url: 'https://master1_dev.shusiou.win/api/JSXhub.api',
@@ -49,8 +49,10 @@
             render() {
                 var me = this;
                 var _asyncOBJ = React.createClass({render: function() { return (<span>niuo</span>)}});
-                console.log(decodeURIComponent(me._asyncModule.code));
-                // eval(decodeURIComponent(me._asyncModule.code));
+                if (me._asyncModule) {
+                    console.log(decodeURIComponent(me._asyncModule.code));
+                    eval(decodeURIComponent(me._asyncModule.code));   
+                }
                 return (
                   <div><_asyncOBJ/></div>
                 );
