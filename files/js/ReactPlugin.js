@@ -43,15 +43,4 @@ var ReactPlugin =  function(cfg) {
             }); 
 
             ReactDOM.render(<_plugin code={'publicNews'} />, cfg.viewPoint);
-      };
-                            
-
-$( document ).ready(function() {  
-  ReactPlugin({
-      package:{
-               includes : [],
-               main : '/files/js/module/publicNews/main.jsx',
-               code : 'publicNews'
-       }, 
-       viewPoint : document.body})
-});
+};
