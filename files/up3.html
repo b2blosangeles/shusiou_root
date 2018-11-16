@@ -12,6 +12,11 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script type="text/babel" src="/js/ReactPlugin.js"></script>
     <script>
+      $(ReactPlugin).ready(
+        function() {
+          alert('ReactPlugin ready');
+        }
+      )
       var _loadingITV = setInterval(
         function() {
             if (!ReactPlugin || !$) return true;
