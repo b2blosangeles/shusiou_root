@@ -1,5 +1,4 @@
-$( document ).ready(function() {  
-      (function(cfg) {
+var ReactPlugin =  function(cfg) {
       var _plugin = React.createClass({
             getInitialState: function() {
                var me = this;
@@ -44,10 +43,15 @@ $( document ).ready(function() {
             }); 
 
             ReactDOM.render(<_plugin code={'publicNews'} />, cfg.viewPoint);
-      })({package:{
+      };
+                            
+
+$( document ).ready(function() {  
+  ReactPlugin({
+      package:{
                includes : [],
                main : '/files/js/module/publicNews/main.jsx',
                code : 'publicNews'
-              }, viewPoint : document.body})
-
+       }, 
+       viewPoint : document.body})
 });
