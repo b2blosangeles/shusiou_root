@@ -48,10 +48,10 @@ var ReactPlugin =  function(cfg) {
         
               ReactPlugin({
                   package:{
-                           master: 'https://master1_dev.shusiou.win/api/JSXhub.api',  
                            includes : [],
                            main : '/files/js/module/publicNews/main.jsx',
                            code : 'publicNews'
-                   }, 
+                   },
+                   master: 'https://master1_dev.shusiou.win/api/JSXhub.api', 
                    viewPoint : document.body})
         }); 
