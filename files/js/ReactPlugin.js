@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      var ReactPlugin =  function(cfg) {
+      $.ReactPlugin =  function(cfg) {
             var _plugin = React.createClass({
                   getInitialState: function() {
                      var me = this;
