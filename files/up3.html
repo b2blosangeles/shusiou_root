@@ -13,7 +13,7 @@
       
     <script type="text/babel">
       $( document ).ready(function() {  
-            (functon(cfg) {
+            (functon(cfg.package) {
             var _plugin = React.createClass({
             getInitialState: function() {
                var me = this;
@@ -57,12 +57,12 @@
               }
             }); 
             
-            ReactDOM.render(<_plugin code={'publicNews'} />,document.body);
-            })({
+            ReactDOM.render(<_plugin code={'publicNews'} />, cfg.viewPoint);
+            })({package:{
                      includes : [],
                      main : '/files/js/module/publicNews/main.jsx',
                      code : 'publicNews'
-                    })
+                    }, document.body})
   
       });
       </script>
