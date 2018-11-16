@@ -43,6 +43,6 @@ $(document).ready(function(){
                     }
                   }); 
 
-                  ReactDOM.render(<_plugin code={'publicNews'} />, cfg.viewPoint);
+                  ReactDOM.render(<_plugin code={'publicNews'} />, document.body);
       };
 });
