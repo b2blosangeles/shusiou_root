@@ -11,6 +11,17 @@
     <script src="https://master1_dev.shusiou.win/js/react/ReactRouter/3.0.2/ReactRouter.min.js"></script>      
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script type="text/babel" src="/js/ReactPlugin.js"></script>
+    <script type="text/babel">
+        $( document ).ready(function() {  
+        ReactPlugin({
+            package:{
+                     includes : [],
+                     main : '/files/js/module/publicNews/main.jsx',
+                     code : 'publicNews'
+             }, 
+             viewPoint : document.body})
+        });    
+    </script>
   </head>
   <body></body>
 </html>
