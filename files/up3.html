@@ -19,17 +19,20 @@
                var me = this;
                return {}
             },
+            componentDidMount:function(prevState, prevProps) {
+              var me = this;
+              console.log('===niu bi ====');
+            //  me.loadPlugin();
+            },	
             render() {
                 return (
                   <div>niubb68</div>
                 );
               }
             }); 
-      ReactDOM.render(
-        <h1>Hello, world!=6=<_addVideo/></h1>,
-        document.body
-      );
-});
+
+      });
+      ReactDOM.render(<_addVideo/>,document.body);
     </script>
       
   </head>
