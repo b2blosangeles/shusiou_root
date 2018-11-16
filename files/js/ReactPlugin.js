@@ -1,4 +1,4 @@
-$( document ).ready(function() {  
+
 var ReactPlugin =  function(cfg) {
       var _plugin = React.createClass({
             getInitialState: function() {
@@ -45,13 +45,4 @@ var ReactPlugin =  function(cfg) {
 
             ReactDOM.render(<_plugin code={'publicNews'} />, cfg.viewPoint);
 };
-        
-              ReactPlugin({
-                  package:{
-                           includes : [],
-                           main : '/files/js/module/publicNews/main.jsx',
-                           code : 'publicNews'
-                   },
-                   master: 'https://master1_dev.shusiou.win/api/JSXhub.api', 
-                   viewPoint : document.body})
-        }); 
+
