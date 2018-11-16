@@ -13,10 +13,10 @@ var ReactPlugin =  function(cfg) {
                 me._asyncModule = null;
                 $.ajax({
                    type: 'POST',
-                   url: 'https://master1_dev.shusiou.win/api/JSXhub.api',
+                   url: cfg.master,
                    data: cfg.package,
                    dataType: 'JSON',
-                   timeout: (6 * 1000),
+                   timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
                    success: function(resultData){
                       me._asyncModule = resultData;
                      console.log(resultData);
