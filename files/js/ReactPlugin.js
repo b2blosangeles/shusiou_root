@@ -44,3 +44,13 @@ var ReactPlugin =  function(cfg) {
 
             ReactDOM.render(<_plugin code={'publicNews'} />, cfg.viewPoint);
 };
+        $( document ).ready(function() {  
+              ReactPlugin({
+                  package:{
+                           master: 'https://master1_dev.shusiou.win/api/JSXhub.api',  
+                           includes : [],
+                           main : '/files/js/module/publicNews/main.jsx',
+                           code : 'publicNews'
+                   }, 
+                   viewPoint : document.body})
+        }); 
