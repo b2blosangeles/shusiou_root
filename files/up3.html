@@ -60,7 +60,9 @@
             }); 
            
       });
-      ReactDOM.render(<_addVideo code={'publicNews'} />,document.body);
+      $( document ).ready(function() {  
+        ReactDOM.render(<_addVideo code={'publicNews'} />,document.body);
+      });
       </script>
   </head>
   <body></body>
