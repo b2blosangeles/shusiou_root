@@ -14,9 +14,9 @@
     <script>
       var _loadingITV = setInterval(
         function() {
-            if (!ReactPlugin || !$) return true;
+            if (!$ || !$.ReactPlugin) return true;
             clearInterval(_loadingITV);
-            ReactPlugin({
+            $.ReactPlugin({
                   package:{
                            includes : [],
                            main : '/files/js/module/publicNews/main.jsx',
