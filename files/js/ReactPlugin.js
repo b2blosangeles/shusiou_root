@@ -34,7 +34,7 @@ $(document).ready(function(){
                       var me = this;
                       var _asyncOBJ = React.createClass({render: function() { return (<span>Loading .... </span>)}});
                       if (me._asyncModule) {
-                          console.log(decodeURIComponent(me._asyncModule.code));
+                          // console.log(decodeURIComponent(me._asyncModule.code));
                           eval(decodeURIComponent(me._asyncModule.code));   
                       }
                       return (
