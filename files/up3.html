@@ -13,6 +13,7 @@
       
     <script type="text/babel">
       $( document ).ready(function() {  
+            (functon(cfg) {
             var _plugin = React.createClass({
             getInitialState: function() {
                var me = this;
@@ -28,11 +29,7 @@
                 $.ajax({
                    type: 'POST',
                    url: 'https://master1_dev.shusiou.win/api/JSXhub.api',
-                   data: {
-                     includes : [],
-                     main : '/files/js/module/publicNews/main.jsx',
-                     code : 'publicNews'
-                    },
+                   data: cfg,
                    dataType: 'JSON',
                    timeout: (6 * 1000),
                    success: function(resultData){
@@ -61,7 +58,12 @@
             }); 
             
             ReactDOM.render(<_plugin code={'publicNews'} />,document.body);
-      //      ReactDOM.render(_plugin,document.body);
+            })({
+                     includes : [],
+                     main : '/files/js/module/publicNews/main.jsx',
+                     code : 'publicNews'
+                    })
+  
       });
       </script>
   </head>
