@@ -1,4 +1,8 @@
 
+$.fn.extend({
+      ReactPlugin: function() {
+      }
+});
 var ReactPlugin =  function(cfg) {
       var _plugin = React.createClass({
             getInitialState: function() {
