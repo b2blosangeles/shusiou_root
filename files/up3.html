@@ -12,9 +12,11 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script type="text/babel" src="/js/ReactPlugin.js"></script>
     <script>
-      //$( document ).ready(function() {
-      setTimeout(function () {
-              ReactPlugin({
+      var _loadingITV = setInterval(
+        function() {
+            if (!ReactPlugin) return true;
+            clearInterval(_loadingITV);
+            ReactPlugin({
                   package:{
                            includes : [],
                            main : '/files/js/module/publicNews/main.jsx',
@@ -22,8 +24,8 @@
                    },
                    master: 'https://master1_dev.shusiou.win/api/JSXhub.api', 
                    viewPoint : document.body})
-      },3000);
-      //});
+        }, 100   
+      )
     </script>
   </head>
   <body></body>
