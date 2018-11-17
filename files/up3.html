@@ -22,12 +22,24 @@
                            main : '/files/js/module/publicNews/main.jsx'
                    },
                    master: '//master1_dev.shusiou.win/api/JSXhub.api', 
-                   viewPoint : document.getElementById('niu')})
+                   viewPoint : document.getElementById('niu')});
+        
+        $.ReactPlugin({
+                  extend:{
+                           includes : ['/files/js/module/publicNews/dataList.jsx'],
+                           main : '/files/js/module/publicNews/main.jsx'
+                   },
+                   master: '//master1_dev.shusiou.win/api/JSXhub.api', 
+                   viewPoint : document.getElementById('niu1')})
+        
         }, 100   
       )
     </script>
   </head>
-  <body>ggg
+  <body>
     <hr/>
-    <div id="niu"></div></body>
+    <div id="niu"></div>
+    <div>============</div>
+    <div id="niu1"></div>
+    </body>
 </html>
