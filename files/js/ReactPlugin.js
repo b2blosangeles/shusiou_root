@@ -9,7 +9,8 @@ $(document).ready(function(){
              timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
              success: function(resultData){
                 //me._asyncModule = resultData;
-                console.log(resultData);
+                console.log(resultData.niu);
+                   eval(decodeURIComponent(resultData.niu));
             //   me.setState({success: true, update : new Date().getTime()});
              },
              error : function(xhr, textStatus, error) { 
