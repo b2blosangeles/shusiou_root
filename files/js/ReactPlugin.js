@@ -1,6 +1,5 @@
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
-            console.log('=====$.ReactPlugin=====');
           $.ajax({
              type: 'POST',
              url: cfg.master,
