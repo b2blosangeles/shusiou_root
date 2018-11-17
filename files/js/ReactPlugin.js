@@ -3,7 +3,7 @@ $(document).ready(function(){
           $.ajax({
              type: 'POST',
              url: cfg.master,
-             data: cfg.package,
+             data: cfg.extend,
              dataType: 'JSON',
              timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
              success: function(resultData){
