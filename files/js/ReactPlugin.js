@@ -9,8 +9,8 @@ $(document).ready(function(){
              timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
              success: function(resultData){
                 //me._asyncModule = resultData;
-                console.log(resultData.niu);
-                   eval(decodeURIComponent(resultData.code));
+                // console.log(resultData.niu);
+                   console.log(decodeURIComponent(resultData.code));
                    eval(decodeURIComponent(resultData.niu));
             //   me.setState({success: true, update : new Date().getTime()});
              },
