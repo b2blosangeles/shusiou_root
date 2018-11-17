@@ -13,9 +13,7 @@
     <!---script type="text/babel" src="/js/ReactPlugin.js"></script--->
     <script src="/js/ReactPlugin.js"></script>
     <script>
-      var _loadingITV = setInterval(
-        function() {
-          console.log('==AA===$.ReactPlugin=====');
+      var _loadingITV = setInterval(function() {
             if (!$ || !$.ReactPlugin) return true;
             clearInterval(_loadingITV);
             $.ReactPlugin({
