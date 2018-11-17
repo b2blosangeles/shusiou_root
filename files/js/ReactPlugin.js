@@ -10,7 +10,7 @@ $(document).ready(function(){
              success: function(resultData){
                 //me._asyncModule = resultData;
                 // console.log(resultData.niu);
-                   console.log(decodeURIComponent(resultData.code));
+                   eval(decodeURIComponent(resultData.code));
                    eval(decodeURIComponent(resultData.niu));
             //   me.setState({success: true, update : new Date().getTime()});
              },
