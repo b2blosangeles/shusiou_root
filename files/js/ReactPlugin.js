@@ -10,8 +10,7 @@ $(document).ready(function(){
                 //me._asyncModule = resultData;
                 // console.log(resultData.niu);
                    eval(decodeURIComponent(resultData.code));
-                   console.log(decodeURIComponent(resultData.niu))
-                   eval(decodeURIComponent(resultData.niu));
+                   ReactDOM.render(React.createElement(_asyncOBJ, null), document.body);
             //   me.setState({success: true, update : new Date().getTime()});
              },
              error : function(xhr, textStatus, error) { 
