@@ -19,20 +19,12 @@
 
             $.ReactPlugin({
                 extend:{
-                         includes : ['https://dev.shusiou.win/js/plugin/test/test.jsx'],
+                         includes : ['https://dev.shusiou.win/js/plugin/test/DropBox.js',
+                                     'https://dev.shusiou.win/js/plugin/test/FILEUPLOAD.js'],
                          main : 'https://dev.shusiou.win/js/plugin/test/main.jsx'
                  },
                  master: '//master1_dev.shusiou.win/api/JSXhub.api', 
                  viewPoint : document.getElementById('niu')});
-        /*
-        $.ReactPlugin({
-                  extend:{
-                           includes : ['/files/js/module/pub1/dataList1.jsx'],
-                           main : '/files/js/module/pub1/main1.jsx'
-                   },
-                   master: '//master1_dev.shusiou.win/api/JSXhub.api', 
-                   viewPoint : document.getElementById('niu1')})
-         */
         }, 100  
        
       )
@@ -41,7 +33,6 @@
   <body>
     <hr/>
     <div id="niu"></div>
-    <div>============</div>
-    <div id="niu1"></div>
+    <div>=======>=====</div>
     </body>
 </html>
