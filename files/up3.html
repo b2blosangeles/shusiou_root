@@ -16,20 +16,14 @@
       var _loadingITV = setInterval(function() {
             if (!$ || !$.ReactPlugin) return true;
             clearInterval(_loadingITV);
+
             $.ReactPlugin({
-                  extend:{
-                           includes : ['https://dev.shusiou.win/js/plugin/test.jsx', '/files/js/module/publicNews/dataList.jsx'],
-                           main : 'https://dev.shusiou.win/js/plugin/main.jsx'
-                   },
-                   master: '//master1_dev.shusiou.win/api/JSXhub.api', 
-                   viewPoint : document.getElementById('niu')});
-        $.ReactPlugin({
-                  extend:{
-                           includes : ['https://dev.shusiou.win/js/plugin/test.jsx', '/files/js/module/publicNews/dataList.jsx'],
-                           main : 'https://dev.shusiou.win/js/plugin/main.jsx'
-                   },
-                   master: '//master1_dev.shusiou.win/api/JSXhub.api', 
-                   viewPoint : document.getElementById('niu1')});
+                extend:{
+                         includes : ['https://dev.shusiou.win/js/plugin/test/test.jsx'],
+                         main : 'https://dev.shusiou.win/js/plugin/test/main.jsx'
+                 },
+                 master: '//master1_dev.shusiou.win/api/JSXhub.api', 
+                 viewPoint : document.getElementById('niu')});
         /*
         $.ReactPlugin({
                   extend:{
