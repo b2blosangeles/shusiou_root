@@ -104,4 +104,4 @@ React.createClass({
                                 <div id = "upload_mitrix"></div>                        
                  </span>)
         }
-});
+})
