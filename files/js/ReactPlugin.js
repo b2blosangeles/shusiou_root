@@ -12,7 +12,7 @@ $(document).ready(function(){
                         var _asyncOBJ;
                         eval(decodeURIComponent(resultData.inc));
                          
-                        eval('ReactDOM.render(' + decodeURIComponent(resultData.master));
+                     //   eval('ReactDOM.render(' + decodeURIComponent(resultData.master));
                         eval('ReactDOM.render(React.createElement(' + decodeURIComponent(resultData.master) + 
                              ', null), document.getElementById("' + cfg.vv + '"))');                         
                        
