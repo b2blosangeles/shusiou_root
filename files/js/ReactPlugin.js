@@ -10,11 +10,11 @@ $(document).ready(function(){
              success: function(resultData){
                         eval(decodeURIComponent(resultData.inc));
                         eval('var ppp = "' + cfg.vv + '"; var _asyncOBJ = ' + decodeURIComponent(resultData.master)
-                            + ' ReactDOM.render(React.createElement(_asyncOBJ, null), "' + cfg.viewPoint + '"); '
+                            + '; ReactDOM.render(React.createElement(_asyncOBJ, null), document.getElementById("' + cfg.vv + '")); '
                             );
                      //   ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
                    console.log('=>==>' + cfg.vv);
-                   console.log('-->--->' + ppp);
+                   console.log('-->--ss->' + ppp);
                    console.log(resultData);
 
              },
