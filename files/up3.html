@@ -17,23 +17,23 @@
             if (!$ || !$.ReactPlugin) return true;
             clearInterval(_loadingITV);
       
-            new $.ReactPlugin().load({
+            new $.ReactPlugin({
                 extend:{
                          includes : ['https://dev.shusiou.win/js/plugin/test/DropBox.js',
                                      'https://dev.shusiou.win/js/plugin/test/FILEUPLOAD.js'],
                          main : 'https://dev.shusiou.win/js/plugin/test/main.jsx'
                  },
                  master: '//master1_dev.shusiou.win/api/JSXhub.api', 
-                 viewPoint : document.getElementById('niu')});
+                 viewPoint : document.getElementById('niu')}).load();
 
           setTimeout(function() {
-                  new $.ReactPlugin().load({
+                  new $.ReactPlugin({
                     extend:{
                              includes : [],
                              main : 'https://dev.shusiou.win/js/plugin/newsfeed/main.jsx'
                      },
                      master: '//master1_dev.shusiou.win/api/JSXhub.api',
-                     viewPoint : document.getElementById('niuA')});
+                     viewPoint : document.getElementById('niuA')}).load();
             }, 10);
       });
     </script>
