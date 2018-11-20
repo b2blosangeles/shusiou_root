@@ -7,9 +7,11 @@ $(document).ready(function(){
              dataType: 'JSON',
              timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
              success: function(resultData){
-                   eval(decodeURIComponent(resultData.inc));
-                   eval('var _asyncOBJ = ' + decodeURIComponent(resultData.master));
-                   ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
+                   (function() {
+                        eval(decodeURIComponent(resultData.inc));
+                        eval('var _asyncOBJ = ' + decodeURIComponent(resultData.master));
+                        ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
+                   })();
              },
              error : function(xhr, textStatus, error) { 
                 console.log(error);
