@@ -3,6 +3,7 @@ $(document).ready(function(){
             var me = this;
             me.cfg = cfg;
             this.load = function() {
+                  console.log('me.cfg.extend.main==>' + me.cfg.extend.main);
                 $.ajax({
                    type: 'POST',
                    url: me.cfg.master,
