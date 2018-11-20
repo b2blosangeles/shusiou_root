@@ -15,8 +15,8 @@ $(document).ready(function(){
                               eval('(function() { ' + decodeURIComponent(resultData.inc)+ 'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
                                    ', null), me.cfg.viewPoint); console.log(cfg.vv); ' + 
-                                   + 'console.log(resultData.masterUrl); ' + 
-                                   + ' console.log(unescape(resultData.master)); })()');                         
+                                   'console.log(resultData.masterUrl); ' + 
+                                   ' console.log(unescape(resultData.master)); })()');                         
 
                               // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                               // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
