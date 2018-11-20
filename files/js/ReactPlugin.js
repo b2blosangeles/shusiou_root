@@ -8,14 +8,16 @@ $(document).ready(function(){
              dataType: 'JSON',
              timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
              success: function(resultData){
+                   try {
                         eval(decodeURIComponent(resultData.inc));
-                        eval('var ppp = "' + cfg.vv + '"; var _asyncOBJ = ' + decodeURIComponent(resultData.master)
-                            + '; ReactDOM.render(React.createElement(_asyncOBJ, null), document.getElementById("' + cfg.vv + '")); '
-                            );
-                     //   ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
+                        eval('var _asyncOBJ = ' + decodeURIComponent(resultData.master));
+                        ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
                    console.log('=>==>' + cfg.vv);
                    console.log('-->--ss->' + ppp);
                    console.log(resultData);
+                   } catch {
+                        console.log('something wrong ===!!!');
+                   }
 
              },
              error : function(xhr, textStatus, error) { 
