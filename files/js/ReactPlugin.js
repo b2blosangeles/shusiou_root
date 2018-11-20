@@ -10,7 +10,7 @@ $(document).ready(function(){
              success: function(resultData){
                         eval(decodeURIComponent(resultData.inc));
                         eval('var _asyncOBJ = ' + decodeURIComponent(resultData.master));
-                        ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
+                        ReactDOM.render(React.createElement('_asyncOBJ', null), cfg.viewPoint);
                    console.log('===>' + cfg.vv);
                    console.log(resultData);
 
