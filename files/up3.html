@@ -25,6 +25,14 @@
                  },
                  master: '//master1_dev.shusiou.win/api/JSXhub.api', 
                  viewPoint : document.getElementById('niu')});
+        
+            $.ReactPlugin({
+                extend:{
+                         includes : [],
+                         main : 'https://dev.shusiou.win/js/plugin/newsfeed/main.jsx'
+                 },
+                 master: '//master1_dev.shusiou.win/api/JSXhub.api', 
+                 viewPoint : document.getElementById('niuA')});        
         }, 100  
        
       )
@@ -34,5 +42,6 @@
     <hr/>
     <div id="niu"></div>
     <div>=======>=====</div>
+    <div id="niuA"></div>
     </body>
 </html>
