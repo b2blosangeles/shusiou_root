@@ -1,6 +1,6 @@
 $(document).ready(function(){
-      $.ReactPlugin =  function() {
-            this.load = function(cfg) {
+      $.ReactPlugin =  function(cfg) {
+            this.load = function() {
                 $.ajax({
                    type: 'POST',
                    url: cfg.master,
