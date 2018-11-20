@@ -18,7 +18,7 @@ $(document).ready(function(){
 
                               // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                               // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
-                                   console.log('DDD');
+                                //   console.log('DDD');
                       //   console.log(resultData);
                          } catch {
                                console.log('EEE');
