@@ -15,7 +15,7 @@ $(document).ready(function(){
                      //   eval('ReactDOM.render(' + decodeURIComponent(resultData.master));
                         eval('ReactDOM.render(React.createElement(' + 
                              decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
-                             ', null), ' + cfg.viewPoint + '))');                         
+                             ', null), cfg.viewPoint))');                         
                        
                         // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                         // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
