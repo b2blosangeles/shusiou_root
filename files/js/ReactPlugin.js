@@ -11,8 +11,13 @@ $(document).ready(function(){
                    try {
                         var _asyncOBJ;
                         eval(decodeURIComponent(resultData.inc));
-                        eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
-                        ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
+                         
+                        eval('ReactDOM.render(' + decodeURIComponent(resultData.master));
+                        eval('ReactDOM.render(React.createElement(' + decodeURIComponent(resultData.master) + 
+                             ', null), document.getElementById("' + cfg.vv + '"))');                         
+                       
+                        // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
+                        // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
                    console.log('=B==>' + cfg.vv);
                    console.log(resultData);
                    } catch {
