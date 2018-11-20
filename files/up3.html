@@ -23,7 +23,7 @@
                                      'https://dev.shusiou.win/js/plugin/test/FILEUPLOAD.js'],
                          main : 'https://dev.shusiou.win/js/plugin/test/main.jsx'
                  },
-                 master: '//master1_dev.shusiou.win/api/JSXhub.api', 
+                 master: '//master1_dev.shusiou.win/api/JSXhub.api?tm=' + new Date().getTime(), 
                  vv : 'niu',
                  viewPoint : document.getElementById('niu')}).load();
 
@@ -33,7 +33,7 @@
                              includes : [],
                              main : 'https://dev.shusiou.win/js/plugin/newsfeed/main.jsx'
                      },
-                     master: '//master1_dev.shusiou.win/api/JSXhub.api',
+                     master: '//master1_dev.shusiou.win/api/JSXhub.api?tm=' + new Date().getTime(),
                     vv : 'niuA',
                      viewPoint : document.getElementById('niuA')}).load();
             }, 10);
