@@ -1,5 +1,6 @@
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
+            (function(cfg) {
           $.ajax({
              type: 'POST',
              url: cfg.master,
@@ -19,5 +20,6 @@ $(document).ready(function(){
               // me.setState({success: false, update : new Date().getTime()})
              }
           });
+            })(cfg)
       };
 });
