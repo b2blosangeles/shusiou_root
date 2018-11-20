@@ -1,18 +1,20 @@
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
+            var me = this;
+            me.cfg = cfg;
             this.load = function() {
                 $.ajax({
                    type: 'POST',
-                   url: cfg.master,
-                   data: cfg.extend,
+                   url: me.cfg.master,
+                   data: me.cfg.extend,
                    dataType: 'JSON',
-                   timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
+                   timeout: (me.cfg.timeout) ? me.cfg.timeout : (6 * 1000),
                    success: function(resultData){
                          try {
                            //   var _asyncOBJ;
                               eval('(function() { ' + decodeURIComponent(resultData.inc)+ 'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
-                                   ', null), cfg.viewPoint);  })()');                         
+                                   ', null), me.cfg.viewPoint);  })()');                         
 
                               // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                               // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
