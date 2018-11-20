@@ -25,14 +25,20 @@
                  },
                  master: '//master1_dev.shusiou.win/api/JSXhub.api', 
                  viewPoint : document.getElementById('niu')});
-        
-            $.ReactPlugin({
-                extend:{
-                         includes : [],
-                         main : 'https://dev.shusiou.win/js/plugin/newsfeed/main.jsx'
-                 },
-                 master: '//master1_dev.shusiou.win/api/JSXhub.api', 
-                 viewPoint : document.getElementById('niuA')});        
+            setTimeout(
+              function() {
+                  $.ReactPlugin({
+                    extend:{
+                             includes : [],
+                             main : 'https://dev.shusiou.win/js/plugin/newsfeed/main.jsx'
+                     },
+                     master: '//master1_dev.shusiou.win/api/JSXhub.api', 
+                     viewPoint : document.getElementById('niuA')});              
+
+                  }
+            
+            6000);
+      
         }, 100  
        
       )
