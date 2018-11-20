@@ -9,8 +9,9 @@ $(document).ready(function(){
              timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
              success: function(resultData){
                    try {
+                        var _asyncOBJ;
                         eval(decodeURIComponent(resultData.inc));
-                        eval('var _asyncOBJ = ' + decodeURIComponent(resultData.master));
+                        eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                         ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
                    console.log('=>==>' + cfg.vv);
                    console.log(resultData);
