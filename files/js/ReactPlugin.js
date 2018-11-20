@@ -14,7 +14,9 @@ $(document).ready(function(){
                            //   var _asyncOBJ;
                               eval('(function() { ' + decodeURIComponent(resultData.inc)+ 'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
-                                   ', null), me.cfg.viewPoint); console.log(cfg.vv); console.log(unescape(resultData.master)); })()');                         
+                                   ', null), me.cfg.viewPoint); console.log(cfg.vv); ' + 
+                                   + 'console.log(unescape(resultData.masterUrl)); ' + 
+                                   + ' console.log(unescape(resultData.master)); })()');                         
 
                               // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                               // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
