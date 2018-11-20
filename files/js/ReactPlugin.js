@@ -2,6 +2,7 @@ $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
             var me = this;
             me.cfg = cfg;
+            console.log(JSON.parse(JSON.stringify(cfg)));
             // me.cfg = JSON.parse(JSON.stringify(cfg));
             this.load = function() {
                   console.log('me.cfg.extend.main==>' + me.cfg.extend.main);
