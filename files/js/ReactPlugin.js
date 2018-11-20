@@ -16,7 +16,7 @@ $(document).ready(function(){
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
                                    ', null), me.cfg.viewPoint); console.log(cfg.vv); ' + 
                                    'console.log(resultData.masterUrl); ' + 
-                                   'console.log(cfg.master); ' + 
+                                   'console.log(cfg.extend.main); ' + 
                                    ' console.log(unescape(resultData.master)); })()');                         
 
                               // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
