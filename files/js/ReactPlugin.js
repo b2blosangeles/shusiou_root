@@ -13,7 +13,7 @@ $(document).ready(function(){
                         eval(decodeURIComponent(resultData.inc));
                         eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                         ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
-                   console.log('=>==>' + cfg.vv);
+                   console.log('=B==>' + cfg.vv);
                    console.log(resultData);
                    } catch {
                         console.log('something wrong ===!!!');
