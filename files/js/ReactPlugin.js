@@ -16,7 +16,7 @@ $(document).ready(function(){
 
                               // eval('_asyncOBJ = ' + decodeURIComponent(resultData.master));
                               // ReactDOM.render(React.createElement(_asyncOBJ, null), cfg.viewPoint);
-                         console.log('=F==>' + cfg.vv);
+            
                          console.log(resultData);
                          } catch {
                               console.log('something wrong ===!!!');
