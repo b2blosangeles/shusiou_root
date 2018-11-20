@@ -17,7 +17,7 @@
             if (!$ || !$.ReactPlugin) return true;
             clearInterval(_loadingITV);
       
-            $.ReactPlugin().load({
+            new $.ReactPlugin().load({
                 extend:{
                          includes : ['https://dev.shusiou.win/js/plugin/test/DropBox.js',
                                      'https://dev.shusiou.win/js/plugin/test/FILEUPLOAD.js'],
@@ -27,7 +27,7 @@
                  viewPoint : document.getElementById('niu')});
 
           setTimeout(function() {
-                  $.ReactPlugin().load({
+                  new $.ReactPlugin().load({
                     extend:{
                              includes : [],
                              main : 'https://dev.shusiou.win/js/plugin/newsfeed/main.jsx'
