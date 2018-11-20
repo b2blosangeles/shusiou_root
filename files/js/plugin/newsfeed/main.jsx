@@ -14,4 +14,4 @@ React.createClass({
           var me = this;
           return  (<span>News List</span>)
         }
-});
+})
