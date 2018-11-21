@@ -19,6 +19,7 @@ React.createClass({
         },
         render: function() {
           var me = this;
+	  
           return  (
                     <div className="container">
                         <div className="row">
@@ -40,7 +41,8 @@ React.createClass({
 				<div className="jumbotron mt-1">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
-						return(<span>{m.module} --- {(<_sectionA1/>)}</span>)
+						const CustomTag = `${m.code}`;
+						return(<span>{m.module} -66- <CustomTag/></span>)
 					}
 				})}
                                 </div>
