@@ -33,7 +33,7 @@ React.createClass({
 						{m.code}
 					</button>
 				})}
-                                </div>)
+                                </div>
                          </div>
                     </div>          
           )
