@@ -36,7 +36,6 @@ React.createClass({
 						return(<button className="btn btn-default">
 								{m.code}
 							</button>)
-						})}
 					}
 				})}
                                 </div>
