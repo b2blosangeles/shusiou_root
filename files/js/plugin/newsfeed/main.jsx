@@ -41,6 +41,7 @@ React.createClass({
                                 </div>
                          </div>
                         <div className="row">
+				<br/>
 				<div className="jumbotron border-primary">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
