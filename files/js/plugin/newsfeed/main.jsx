@@ -42,7 +42,7 @@ React.createClass({
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
 						var Tag = '_sectionA1';
-						return(<span><Tag/> -929-<_sectionA1/></span>)
+						return(<span> -929-<_sectionA1/></span>)
 					}
 				})}
                                 </div>
