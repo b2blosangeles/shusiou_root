@@ -8,6 +8,7 @@ React.createClass({
         },        
         pickMenu : function(code) {
                 var me = this;
+                alert(code);
         },
         render: function() {
           var me = this;
