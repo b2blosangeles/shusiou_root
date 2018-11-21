@@ -41,8 +41,8 @@ React.createClass({
 				<div className="jumbotron mt-1">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
-						var Tag = 'div';
-						return(<span><Tag>niu</Tag> -989-</span>)
+						var Tag = '_sectionA1';
+						return(<span><Tag>niu</Tag> -929-</span>)
 					}
 				})}
                                 </div>
