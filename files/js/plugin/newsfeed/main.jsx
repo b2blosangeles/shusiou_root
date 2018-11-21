@@ -5,9 +5,8 @@ React.createClass({
         },
         componentDidMount:function() {
                var me = this;
-               me.init();
         },        
-        init : function() {
+        pickMenu : function(code) {
                 var me = this;
         },
         render: function() {
@@ -17,7 +16,7 @@ React.createClass({
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-2">
-                                <button className="btn btn-success">
+                                <button className="btn btn-success" onClick={me.pickMenu.bind(me, 'key')}>
                                  Go Back
                                 </button>
                             </div>
