@@ -12,11 +12,12 @@ React.createClass({
         },
         render: function() {
           var me = this;
+                /*me. goBackMyVideos.bind(me)*/
           return  (
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-2">
-                                <button className="btn btn-success" onClick={/*me. goBackMyVideos.bind(me)*/}>
+                                <button className="btn btn-success">
                                  Go Back
                                 </button>
                             </div>
