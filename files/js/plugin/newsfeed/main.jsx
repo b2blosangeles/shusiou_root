@@ -30,11 +30,11 @@ React.createClass({
                             	{me.menu.map(function(m){
 					if (m.code !== me.state.option) {
 						return(<button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
-								{m.code}
+								{m.caption}
 							</button>)
 					}  else {
 						return(<button className="btn btn-default disabled">
-								{m.code}
+								{m.caption}
 							</button>)
 					}
 				})}
