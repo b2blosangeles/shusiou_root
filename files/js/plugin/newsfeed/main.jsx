@@ -12,6 +12,20 @@ React.createClass({
         },
         render: function() {
           var me = this;
-          return  (<span>News List ==> <_list/></span>)
+          return  (
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-2">
+                              One of three columns
+                            </div>
+                            <div class="col-sm-2">
+                              One of three columns
+                            </div>
+                            <div class="col-sm-2">
+                              One of three columns
+                            </div>
+                         </div>
+                    </div>          
+          )
         }
 })
