@@ -42,7 +42,7 @@ React.createClass({
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
 						var Tag = 'div';
-						return(<span><Tag/>niu</Tag> -818-</span>)
+						return(<span><Tag>niu</Tag> -989-</span>)
 					}
 				})}
                                 </div>
