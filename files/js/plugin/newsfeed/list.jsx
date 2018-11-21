@@ -1,6 +1,6 @@
-var _list = React.createClass({
+var _sectionA = React.createClass({
         render: function() {
           var me = this;
-          return  (<span>News feed List {new Date().getTime()} </span>)
+          return  (<span>Section A - {new Date().getTime()} </span>)
         }
 })
