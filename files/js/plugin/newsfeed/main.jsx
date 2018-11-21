@@ -15,11 +15,11 @@ React.createClass({
 			{code: 'A2', module:'A2'},
 			{code: 'A3', module:'A3'}
 		];
-		me.setState({update: 1});
+		me.setState({option: ''});
         },        
         pickMenu : function(code) {
                 var me = this;
-                alert(code);
+                me.setState({option: code});
         },
         render: function() {
           var me = this;
@@ -27,11 +27,18 @@ React.createClass({
                     <div className="container">
                         <div className="row">
 				<div className="col-sm-12">
-                            	{me.menu.map(function(m){ 
-				return(<button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
-						{m.code}
-					</button>)
-				})}
+                            	{me.menu.map(function(m){
+				if (m.code === me.state.option) {
+					return(<button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
+							{m.code}
+						</button>)
+					})}
+				}  else {
+					return(<button className="btn btn-default">
+							{m.code}
+						</button>)
+					})}
+				}
                                 </div>
                          </div>
                     </div>          
