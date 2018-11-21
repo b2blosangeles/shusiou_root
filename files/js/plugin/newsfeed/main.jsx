@@ -33,7 +33,7 @@ React.createClass({
 								{m.caption}
 							</button>)
 					}  else {
-						return(<button className="btn btn-default disabled">
+						return(<button className="btn btn-default">
 								{m.caption}
 							</button>)
 					}
