@@ -25,7 +25,7 @@ React.createClass({
                     <div className="container">
                         <div className="row">
 				{'123'}
-				{me.menu.map(function(m){ return '123'; })}
+				{me.menu.map(function(m){ return (<span>22</span>) })}
                             {/*me.menu.map(function(m){ 
 				return(
                                 <div className="col-sm-2">
