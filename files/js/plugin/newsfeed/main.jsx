@@ -30,7 +30,7 @@ React.createClass({
 							</button>)
 					}  else {
 						return(<button className="btn btn-default">
-								{m.caption}
+								{m.module}
 							</button>)
 					}
 				})}
