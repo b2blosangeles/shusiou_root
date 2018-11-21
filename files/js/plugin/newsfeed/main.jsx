@@ -1,12 +1,8 @@
 React.createClass({
         getInitialState: function() {
-          var me = this;
-	me.menu = [
-		{code: 'A1', module:'A1'},
-		{code: 'A2', module:'A2'},
-		{code: 'A3', module:'A3'}
-	];		
-          return {}
+		var me = this;
+		me.menu = [];		
+          	return {}
         },
         componentDidMount:function() {
                var me = this;
@@ -14,7 +10,11 @@ React.createClass({
         }, 
         init : function(code) {
                 var me = this;
-                
+ 		me.menu = [
+			{code: 'A1', module:'A1'},
+			{code: 'A2', module:'A2'},
+			{code: 'A3', module:'A3'}
+		];               
         },        
         pickMenu : function(code) {
                 var me = this;
