@@ -10,11 +10,7 @@ React.createClass({
         }, 
         init : function(code) {
                 var me = this;
- 		me.menu = [
-			{code: 'A1', caption: 'A1', module:'A1'},
-			{code: 'A2', caption: 'A2', module:'A2'},
-			{code: 'A3', caption: 'A3', module:'A3'}
-		];
+ 		me.menu = _global.menu;
 		me.setState({option: ''});
         },        
         pickMenu : function(code) {
