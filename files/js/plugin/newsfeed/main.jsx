@@ -16,7 +16,9 @@ React.createClass({
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-2">
-                              One of three columns
+                                <button className="btn btn-success" onClick={me. goBackMyVideos.bind(me)}>
+                                 Go Back
+                                </button>
                             </div>
                             <div className="col-sm-2">
                               One of three columns
