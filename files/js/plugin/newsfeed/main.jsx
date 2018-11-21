@@ -13,15 +13,15 @@ React.createClass({
         render: function() {
           var me = this;
           return  (
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-2">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-2">
                               One of three columns
                             </div>
-                            <div class="col-sm-2">
+                            <div className="col-sm-2">
                               One of three columns
                             </div>
-                            <div class="col-sm-2">
+                            <div className="col-sm-2">
                               One of three columns
                             </div>
                          </div>
