@@ -12,6 +12,6 @@ React.createClass({
         },
         render: function() {
           var me = this;
-          return  (<span>News List</span>)
+          return  (<span>News List ==> <_list/></span>)
         }
 })
