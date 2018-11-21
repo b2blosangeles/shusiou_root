@@ -14,7 +14,8 @@ React.createClass({
 			{code: 'A1', module:'A1'},
 			{code: 'A2', module:'A2'},
 			{code: 'A3', module:'A3'}
-		];               
+		];
+		me.setState({update: new Date().getTime()})
         },        
         pickMenu : function(code) {
                 var me = this;
