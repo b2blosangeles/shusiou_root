@@ -41,7 +41,7 @@ React.createClass({
 				<div className="jumbotron mt-1">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
-						return React.createElement('div', null, 'Hello')						
+						return React.createElement(`_${m.module}`, null, 'Hello')						
 						
 						
 						//var Tag = `_${m.module}`
