@@ -15,7 +15,7 @@ React.createClass({
 			{code: 'A2', module:'A2'},
 			{code: 'A3', module:'A3'}
 		];
-		me.setState({update: 1});
+		//me.setState({update: 1});
         },        
         pickMenu : function(code) {
                 var me = this;
