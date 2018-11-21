@@ -5,14 +5,15 @@ React.createClass({
         },
         componentDidMount:function() {
                var me = this;
+		me.init();
         }, 
-        inti : function(code) {
+        init : function(code) {
                 var me = this;
                 me.menu = [
                         {code: 'A1', module:'A1'},
                         {code: 'A2', module:'A2'},
                         {code: 'A3', module:'A3'}
-                ]
+                ];
         },        
         pickMenu : function(code) {
                 var me = this;
@@ -20,7 +21,6 @@ React.createClass({
         },
         render: function() {
           var me = this;
-                /*me. goBackMyVideos.bind(me)*/
           return  (
                     <div className="container">
                         <div className="row">
