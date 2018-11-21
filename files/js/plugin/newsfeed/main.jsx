@@ -23,15 +23,15 @@ React.createClass({
           var me = this;
           return  (
                     <div className="container">
-                        <div className="row">
-                            {me.menu.map(function(m){ 
+                        <div className="row">11
+                            {/*me.menu.map(function(m){ 
 				return(
                                 <div className="col-sm-2">
 					<button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
 						{m.code}
 					</button>
                                 </div>)
-                             })}
+                             })*/}
                          </div>
                     </div>          
           )
