@@ -41,7 +41,7 @@ React.createClass({
                                 </div>
                          </div>
                         <div className="row">
-				<div className="jumbotron">
+				<div className="jumbotron border-primary">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
 						return(<span>{m.caption}</span>)
