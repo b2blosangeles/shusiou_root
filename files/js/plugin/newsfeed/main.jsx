@@ -24,17 +24,14 @@ React.createClass({
           return  (
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-2">
-                                <button className="btn btn-success" onClick={me.pickMenu.bind(me, 'key')}>
-                                 Go Back
-                                </button>
-                            </div>
-                            <div className="col-sm-2">
-                              One of three columns
-                            </div>
-                            <div className="col-sm-2">
-                              One of three columns
-                            </div>
+                            {me.menu.map(function(m){ 
+				return(
+                                <div className="col-sm-2">
+                                                <button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
+                                                        {m.code}
+                                                </button>
+                                </div>)
+                             })}
                          </div>
                     </div>          
           )
