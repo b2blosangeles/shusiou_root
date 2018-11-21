@@ -30,7 +30,7 @@ React.createClass({
 							</button>)
 					}  else {
 						return(<button className="btn btn-default">
-								{m.module}
+								{m.caption}
 							</button>)
 					}
 				})}
@@ -40,7 +40,7 @@ React.createClass({
 				<div className="jumbotron mt-1">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
-						return(<span>{m.caption}</span>)
+						return(<span>{m.module}</span>)
 					}
 				})}
                                 </div>
