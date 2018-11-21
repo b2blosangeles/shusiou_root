@@ -27,9 +27,9 @@ React.createClass({
                             {me.menu.map(function(m){ 
 				return(
                                 <div className="col-sm-2">
-                                                <button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
-                                                        {m.code}
-                                                </button>
+					<button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
+						{m.code}
+					</button>
                                 </div>)
                              })}
                          </div>
