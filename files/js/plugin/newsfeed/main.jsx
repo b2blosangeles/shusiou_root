@@ -40,6 +40,15 @@ React.createClass({
 				})}
                                 </div>
                          </div>
+                        <div className="row">
+				<div className="col-sm-12">
+                            	{me.menu.map(function(m){
+					if (m.code === me.state.option) {
+						return(<span>{m.caption}</span>)
+					}
+				})}
+                                </div>
+                         </div>			  
                     </div>          
           )
         }
