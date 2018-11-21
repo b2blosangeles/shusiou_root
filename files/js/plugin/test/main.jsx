@@ -80,7 +80,7 @@ React.createClass({
         render: function() {
           var me = this;
           return  (<span>
-                         File Upload &nbsp;
+                         File Upload &nbsp; <_list/>
                          <button className="btn btn-success" onClick={me. goBackMyVideos.bind(me)}>
                                  Go Back
                          </button>
