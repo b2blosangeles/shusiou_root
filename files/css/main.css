@@ -55,3 +55,8 @@ video#gumVideo {
     margin: 0 10px 10px 0;
   }
 }
+
+
+ button_large {
+  margin: 6px; width: 99px;  height: 99px;
+}
