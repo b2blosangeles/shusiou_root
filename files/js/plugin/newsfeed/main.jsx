@@ -41,7 +41,7 @@ React.createClass({
 				<div className="jumbotron mt-1">
                             	{me.menu.map(function(m){
 					if (m.code === me.state.option) {
-						return (<_sectionA1>/)						
+						return (<_sectionA1/>)						
 					}
 				})}
                                 </div>
