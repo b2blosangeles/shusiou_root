@@ -38,11 +38,11 @@ React.createClass({
                                 </div>
                         </div>
                         <div className="row">
-				<div className="col-sm-2">
+				<div className="col-sm-1">
 					<button className="btn btn-default">Inventor</button>
 				</div>
 				<div className="col-sm-8"></div>
-				<div className="col-sm-2">
+				<div className="col-sm-1">
 					<button className="btn btn-default">Investorr</button>
 				</div>
                          </div>			  
