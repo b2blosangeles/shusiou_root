@@ -36,7 +36,16 @@ React.createClass({
 					}
 				})}
                                 </div>
-                         </div>
+                        </div>
+                        <div className="row">
+				<div className="col-sm-2">
+					<button className="btn btn-default">Inventor</button>
+				</div>
+				<div className="col-sm-8"></div>
+				<div className="col-sm-2">
+					<button className="btn btn-default">Investorr</button>
+				</div>
+                         </div>			  
                         <div className="row">
 				<div className="jumbotron mt-1">
                             	{me.menu.map(function(m){
