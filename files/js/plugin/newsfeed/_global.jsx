@@ -5,7 +5,7 @@ var _global = {
 			{code: 'A3', caption: 'A3', module:'_sectionA1'}
 		],
 	options : {
-		inventors: 'Invenrtors',
+		inventors: 'Inventors',
 		investors: 'Investors'
 	}
 };
