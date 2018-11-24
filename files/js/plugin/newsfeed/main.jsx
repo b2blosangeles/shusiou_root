@@ -32,12 +32,10 @@ React.createClass({
         },
         render: function() {
           var me = this;
-	  
           return  (
                     <div className="container">
                         <div className="row">
-				<div className="col-sm-12">
-                                </div>
+				<div className="col-sm-12"></div>
                         </div>
                         <div className="row">
 				<div className="col-sm-1">
