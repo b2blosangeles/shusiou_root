@@ -17,7 +17,7 @@ React.createClass({
         },
         showBody : function(code) {
                 var me = this;
-		switch {
+		switch (code) {
 			case: 'inventors' : 
 				return (<_sectionA1/>);
 				break;
@@ -53,13 +53,7 @@ React.createClass({
 				</div>
                          </div>			  
                         <div className="row">
-				<div className="jumbotron mt-1">
-                            	{me.menu.map(function(m){
-					if (m.code === me.state.option) {
-						return (<_sectionA1/>)						
-					}
-				})}
-                                </div>
+				<div className="jumbotron mt-1">{me.showBody(me.state.option)}</div>
                          </div>			  
                     </div>          
           )
