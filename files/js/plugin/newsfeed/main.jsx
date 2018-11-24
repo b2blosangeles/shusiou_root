@@ -19,7 +19,7 @@ React.createClass({
 			case: 'inventors' : 
 				return (<_sectionA1/>);
 				break;
-			case: 'inventors' 
+			case: 'inventors' :
 				return (<_sectionA1/>);
 				break;
 			default : 
