@@ -17,6 +17,16 @@ React.createClass({
         },
         showBody : function(code) {
                 var me = this;
+		switch {
+			case: 'inventors' : 
+				return <_sectionA1/>;
+				break;
+			case: 'inventors' 
+				return <_sectionA1/>;
+				break;
+			default : 
+				return '';
+		}
         }, 
         pickMenu : function(code) {
                 var me = this;
