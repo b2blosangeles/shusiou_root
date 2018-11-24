@@ -42,7 +42,7 @@ React.createClass({
 				</div>			  
 			</div> 
 			<div className="container">
-				<div className="row">&#169; {new Date().year()}</div>
+				<div className="row">&#169; {new Date().getFullYear()}</div>
 			</div>
 		</span>
           )
