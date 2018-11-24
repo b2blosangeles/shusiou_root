@@ -29,4 +29,5 @@ var rolesMenu = React.createClass({
                          </div>	  
                     </div>          
           )
-}          
+	}          
+});
