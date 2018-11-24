@@ -17,10 +17,10 @@ React.createClass({
                 var me = this;
 		switch (me.state.role) {
 			case 'inventors' : 
-				return (<_sectionA1/>);
+				return (<sectionInventors/>);
 				break;
 			case 'inventors' :
-				return (<_sectionA1/>);
+				return (<sectionInventors/>);
 				break;
 			default : 
 				return '';
