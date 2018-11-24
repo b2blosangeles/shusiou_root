@@ -29,17 +29,19 @@ React.createClass({
         render: function() {
           var me = this;
           return  (
-		<div className="container">
-			<div className="row"><div className="col-sm-12"></div></div>
-		</div>
-		  
-		<_rolesMenu parent={me}>
-		  </_rolesMenu>
-		<div className="container">
-			<div className="row">
-				<div className="jumbotron mt-1">{me.showBody()}</div>
-			</div>			  
-		</div>      
+		<span>
+			<div className="container">
+				<div className="row"><div className="col-sm-12"></div></div>
+			</div>
+
+			<_rolesMenu parent={me}/>
+	
+			<div className="container">
+				<div className="row">
+					<div className="jumbotron mt-1">{me.showBody()}</div>
+				</div>			  
+			</div> 
+		</span>
           )
         }
 })
