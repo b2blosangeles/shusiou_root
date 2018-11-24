@@ -42,7 +42,10 @@ React.createClass({
 				</div>			  
 			</div> 
 			<div className="container">
-				<div className="row center">Copyright  &#169; {new Date().getFullYear()}</div>
+				<div className="row"><div className="pull-right">
+					Copyright  &#169; {new Date().getFullYear()}
+					</div>
+				</div>
 			</div>
 		</span>
           )
