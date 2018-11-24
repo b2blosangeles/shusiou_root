@@ -16,10 +16,10 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		switch (me.state.role) {
-			case: 'inventors' : 
+			case 'inventors' : 
 				return (<_sectionA1/>);
 				break;
-			case: 'inventors' :
+			case 'inventors' :
 				return (<_sectionA1/>);
 				break;
 			default : 
