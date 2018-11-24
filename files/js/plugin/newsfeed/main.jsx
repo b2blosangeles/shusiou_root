@@ -11,7 +11,7 @@ React.createClass({
         init : function(code) {
                 var me = this;
  		me.menu = _global.menu;
-		me.options = _global.options;
+		//me.options = _global.options;
 		me.setState({option: ''});
         },        
         pickMenu : function(code) {
@@ -40,11 +40,11 @@ React.createClass({
                         </div>
                         <div className="row">
 				<div className="col-sm-1">
-					<button className="btn btn_large">{me.options.inventors}</button>
+					<button className="btn btn_large">{/*me.options.inventors*/}</button>
 				</div>
 				<div className="col-sm-8"></div>
 				<div className="col-sm-1">
-					<button className="btn btn_large">{me.options.investors}</button>
+					<button className="btn btn_large">{/*me.options.investors*/}</button>
 				</div>
                          </div>			  
                         <div className="row">
