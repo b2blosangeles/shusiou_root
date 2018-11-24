@@ -19,10 +19,10 @@ React.createClass({
                 var me = this;
 		switch {
 			case: 'inventors' : 
-				return <_sectionA1/>;
+				return (<_sectionA1/>);
 				break;
 			case: 'inventors' 
-				return <_sectionA1/>;
+				return (<_sectionA1/>);
 				break;
 			default : 
 				return '';
