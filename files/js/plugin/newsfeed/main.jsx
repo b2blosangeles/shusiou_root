@@ -11,6 +11,7 @@ React.createClass({
         init : function(code) {
                 var me = this;
  		me.menu = _global.menu;
+		me.options = _global.options;
 		me.setState({option: ''});
         },        
         pickMenu : function(code) {
