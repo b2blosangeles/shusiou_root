@@ -41,6 +41,9 @@ React.createClass({
 					<div className="jumbotron mt-1">{me.showBody()}</div>
 				</div>			  
 			</div> 
+			<div className="container">
+				<div className="row">&#169; {new Date().year()}</div>
+			</div>
 		</span>
           )
         }
