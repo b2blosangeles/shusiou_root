@@ -15,6 +15,7 @@ $(document).ready(function(){
     
                          } catch {
                               console.log('something wrong ===!!!');
+                              console.log(resultData);
                          }
 
                    },
