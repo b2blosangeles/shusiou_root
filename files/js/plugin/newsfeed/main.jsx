@@ -51,7 +51,7 @@ React.createClass({
 				</div>
                          </div>			  
                         <div className="row">
-				<div className="jumbotron mt-1">{/*me.showBody()*/}</div>
+				<div className="jumbotron mt-1">{me.showBody()}</div>
                          </div>			  
                     </div>          
           )
