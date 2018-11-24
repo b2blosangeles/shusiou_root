@@ -32,7 +32,9 @@ React.createClass({
 		<div className="container">
 			<div className="row"><div className="col-sm-12"></div></div>
 		</div>
-		<_rolesMenu parent={me}></_rolesMenu>
+		  
+		<_rolesMenu parent={me}>
+		  </_rolesMenu>
 		<div className="container">
 			<div className="row">
 				<div className="jumbotron mt-1">{me.showBody()}</div>
