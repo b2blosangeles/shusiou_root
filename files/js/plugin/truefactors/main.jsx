@@ -20,7 +20,7 @@ React.createClass({
 				return (<_sectionInventors/>);
 				break;
 			case 'inventors' :
-				return (<_sectionInventors/>);
+				return (<_sectionInvestors/>);
 				break;
 			default : 
 				return '';
