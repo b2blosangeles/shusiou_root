@@ -42,7 +42,7 @@ React.createClass({
 				</div>			  
 			</div> 
 			<div className="container">
-				<div className="row">Copyright  &#169; {new Date().getFullYear()}</div>
+				<div className="row center">Copyright  &#169; {new Date().getFullYear()}</div>
 			</div>
 		</span>
           )
