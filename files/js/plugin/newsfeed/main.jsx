@@ -17,6 +17,7 @@ React.createClass({
         },        
         pickMenu : function(code) {
                 var me = this;
+		alert(code);
                 me.setState({option: code});
         },
         render: function() {
@@ -26,17 +27,6 @@ React.createClass({
                     <div className="container">
                         <div className="row">
 				<div className="col-sm-12">
-                            	{/*me.menu.map(function(m){
-					if (m.code !== me.state.option) {
-						return(<button className="btn btn-success" onClick={me.pickMenu.bind(me, m.code)}>
-								{m.caption}
-							</button>)
-					}  else {
-						return(<button className="btn btn-default">
-								{m.caption}
-							</button>)
-					}
-				})*/}
                                 </div>
                         </div>
                         <div className="row">
