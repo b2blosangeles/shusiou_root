@@ -1,4 +1,4 @@
-var rolesMenu = React.createClass({
+var _rolesMenu = React.createClass({
     /*
     getInitialState: function() {
 		var me = this;
