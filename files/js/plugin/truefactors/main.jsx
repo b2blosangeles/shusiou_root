@@ -26,22 +26,18 @@ React.createClass({
 				return '';
 		}
         }, 
-        pickMenu : function(code) {
-                var me = this;
-                me.setState({role: code});
-        },
         render: function() {
           var me = this;
           return  (
 		<div className="container">
 			<div className="row"><div className="col-sm-12"></div></div>
 		</div>
-		<rolesMenu/>
+		<rolesMenu parent={me}/>
 		<div className="container">
 			<div className="row">
 				<div className="jumbotron mt-1">{me.showBody()}</div>
 			</div>			  
-		</div>          
+		</div>      
           )
         }
 })
