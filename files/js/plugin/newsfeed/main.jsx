@@ -33,12 +33,12 @@ React.createClass({
                         </div>
                         <div className="row">
 				<div className="col-sm-1">
-					<button className="btn btn-success btn-lg" onClick={me.pickMenu.bind(me, 'inventors')}>
+					<button className="btn btn-success btn-large" onClick={me.pickMenu.bind(me, 'inventors')}>
 						{me.options.inventors}</button>
 				</div>
 				<div className="col-sm-8"></div>
 				<div className="col-sm-1">
-					<button className="btn btn-success btn-lg" onClick={me.pickMenu.bind(me, 'inventors')}>
+					<button className="btn btn-success btn-large" onClick={me.pickMenu.bind(me, 'inventors')}>
 						{me.options.investors}</button>
 				</div>
                          </div>			  
