@@ -1,8 +1,7 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-		me.menu = [];
-		me.options = {};
+		me.roles = {};
           	return {}
         },
         componentDidMount:function() {
@@ -11,13 +10,12 @@ React.createClass({
         }, 
         init : function(code) {
                 var me = this;
- 		me.menu = _global.menu;
-		me.options = _global.options;
-		me.setState({option: ''});
+		me.roles = _global.options;
+		me.setState({role: ''});
         },
-        showBody : function(code) {
+        showBody : function() {
                 var me = this;
-		switch (code) {
+		switch (me.state.role) {
 			case: 'inventors' : 
 				return (<_sectionA1/>);
 				break;
@@ -30,7 +28,7 @@ React.createClass({
         }, 
         pickMenu : function(code) {
                 var me = this;
-                me.setState({option: code});
+                me.setState({role: code});
         },
         render: function() {
           var me = this;
@@ -44,16 +42,16 @@ React.createClass({
                         <div className="row">
 				<div className="col-sm-1">
 					<button className="btn btn-success btn-large" onClick={me.pickMenu.bind(me, 'inventors')}>
-						{me.options.inventors}</button>
+						{me.roles.inventors}</button>
 				</div>
 				<div className="col-sm-8"></div>
 				<div className="col-sm-1">
 					<button className="btn btn-success btn-large" onClick={me.pickMenu.bind(me, 'inventors')}>
-						{me.options.investors}</button>
+						{me.roles.investors}</button>
 				</div>
                          </div>			  
                         <div className="row">
-				<div className="jumbotron mt-1">{me.showBody(me.state.option)}</div>
+				<div className="jumbotron mt-1">{me.showBody()}</div>
                          </div>			  
                     </div>          
           )
