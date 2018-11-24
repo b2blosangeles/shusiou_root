@@ -58,5 +58,5 @@ video#gumVideo {
 
 
 .btn .btn-large {
- margin: 6px; width: 99px;  height: 99px;
+ margin: 6px; width: 99px !important;  height: 99px  !important;
 }
