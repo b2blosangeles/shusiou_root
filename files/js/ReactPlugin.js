@@ -8,10 +8,10 @@ $(document).ready(function(){
                    timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
                    success: function(resultData){
                          try {
-                              new Function('(function() { ' + decodeURIComponent(resultData.inc) + 
+                              new Function('cfg', '(function() { ' + decodeURIComponent(resultData.inc) + 
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
-                                   ', null), cfg.viewPoint); })()')();                         
+                                   ', null), cfg.viewPoint); })()')(cfg);                         
     
                          } catch {
                               console.log('something wrong ===!!!');
