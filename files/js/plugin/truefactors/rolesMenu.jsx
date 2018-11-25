@@ -13,14 +13,14 @@ var _rolesMenu = React.createClass({
           return  (
                     <div className="container">
                         <div className="row">
-				<div className="col-sm-2">
+				<div className="col-sm-2 text-center">
 					<button className="btn btn-success btn-large" 
 					onClick={me.pickMenu.bind(me, 'inventors')}>
 					{me.roles.inventors}</button>
 				</div>
 
-				<div className="col-sm-2">
-					<button className="btn btn-success btn-large pull-right" 
+				<div className="col-sm-2 text-center">
+					<button className="btn btn-success btn-large" 
 					onClick={me.pickMenu.bind(me, 'investors')}>
 					{me.roles.investors}</button>
 				</div>
