@@ -22,8 +22,6 @@ $(document).ready(function(){
                    },
                    error : function(xhr, textStatus, error) { 
                       console.log(error);
-                    // me._asyncModuleErr = error;
-                    // me.setState({success: false, update : new Date().getTime()})
                    }
                 });
       };
