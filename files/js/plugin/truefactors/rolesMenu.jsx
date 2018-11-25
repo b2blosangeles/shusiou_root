@@ -19,14 +19,6 @@ var _rolesMenu = React.createClass({
 						onClick={me.pickMenu.bind(me, idx)}>
 						{me.roles[idx]}</button>
 					})}
-
-					<button className="btn btn-success btn-large" 
-					onClick={me.pickMenu.bind(me, 'inventors')}>
-					{me.roles.inventors}</button>
-
-					<button className="btn btn-success btn-large" 
-					onClick={me.pickMenu.bind(me, 'investors')}>
-					{me.roles.investors}</button>
 				</div>
                          </div>	  
                     </div>          
