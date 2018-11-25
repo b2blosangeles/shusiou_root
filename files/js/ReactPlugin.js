@@ -8,7 +8,7 @@ $(document).ready(function(){
                    timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
                    success: function(resultData){
                          try {
-                              eval('(function() { ' + decodeURIComponent(resultData.inc) + 
+                              new Function('(function() { ' + decodeURIComponent(resultData.inc) + 
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
                                    ', null), cfg.viewPoint); })()');                         
