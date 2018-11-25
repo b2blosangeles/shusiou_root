@@ -13,7 +13,7 @@ var _rolesMenu = React.createClass({
           return  (
                     <div className="container">
                         <div className="row">
-				<div className="col-sm-12 text-center">
+				<div className="col-sm-12 text-left">
 					<button className="btn btn-success btn-large" 
 					onClick={me.pickMenu.bind(me, 'inventors')}>
 					{me.roles.inventors}</button>
