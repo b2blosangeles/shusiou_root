@@ -11,7 +11,7 @@ $(document).ready(function(){
                               new Function('(function() { ' + decodeURIComponent(resultData.inc) + 
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
-                                   ', null), cfg.viewPoint); })()');                         
+                                   ', null), cfg.viewPoint); })()')();                         
     
                          } catch {
                               console.log('something wrong ===!!!');
