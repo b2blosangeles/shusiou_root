@@ -16,6 +16,9 @@ var _rolesMenu = React.createClass({
 				<div className="col-sm-12 text-right">
 					{Object.keys(me.roles).map(function(idx){
 					  return <li key={idx}>{idx}={me.roles[Object.keys(me.roles)[idx]]}</li>
+					  	<button className="btn btn-success btn-large" 
+						onClick={me.pickMenu.bind(me, Object.keys(me.roles)[idx])}>
+						  {me.roles[Object.keys(me.roles)[idx]]}</button>
 					})}
 
 					<button className="btn btn-success btn-large" 
