@@ -10,7 +10,7 @@ $(document).ready(function(){
                          try {
                               var code =  decodeURIComponent(resultData.inc) + 
                                    'ReactDOM.render(React.createElement(' + 
-                                   decodeURIComponent(resultData.master).replace(/\;$/ig, '') + 
+                                   decodeURIComponent(resultData.master).replace(/(\s|\;)+$/g, '') + 
                                    ', null), cfg.viewPoint);';
                               new Function('cfg', code)(cfg);                         
     
