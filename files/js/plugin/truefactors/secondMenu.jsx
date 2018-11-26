@@ -9,7 +9,7 @@ var _secondMenu = React.createClass({
           return  (
             <div className="bg-secondary container-fluid" style={{'min-height' : '2.5em', color:'#fff'}}>
               <div className="container">
-                <div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} San Ramon Project</div>
+                <div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} Polo Alto Project</div>
               </div>			
             </div>          
           )
