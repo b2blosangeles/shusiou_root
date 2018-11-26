@@ -40,7 +40,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<p className="float-sm-right">
-					Copyright &#169; {new Date().getFullYear()}
+					Copyright - &#169; {new Date().getFullYear()}
 					</p>
 				</div>
 			</div>
