@@ -7,7 +7,17 @@ React.createClass({
         componentDidMount:function() {
                var me = this;
 		me.init();
-        }, 
+        },
+	asyncModule : function(v) {
+		var me = this;
+		return <_asyncModule plugin={{extend: {
+								includes : [],
+								main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
+							}, 
+							master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+							info={'niceInfo'}
+							parent={me} />
+	},
         init : function(code) {
                 var me = this;
 		me.roles = _global.roles;
@@ -35,13 +45,7 @@ React.createClass({
 			<div className="container">
 				<div className="row border border-secondary alert-info rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					<_asyncModule plugin={{extend: {
-								includes : [],
-								main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
-							}, 
-							master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-							info={'niceInfo'}
-							parent={me} />
+					{me.asyncModule({})}
 				</div>			  
 			</div>
 			  
