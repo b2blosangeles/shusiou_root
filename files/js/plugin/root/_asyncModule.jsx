@@ -1,5 +1,4 @@
 try {
-	var Root = {};
 	var _asyncModule = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -48,6 +47,7 @@ try {
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
 						
+						var Root = {};
 						
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 							code)((_asyncModule) ? _asyncModule : {}, 
