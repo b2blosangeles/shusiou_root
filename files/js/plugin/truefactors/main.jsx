@@ -38,8 +38,10 @@ React.createClass({
 				</div>			  
 			</div> 
 			<div className="container">
-				<div className="row text-right" style={{'padding-right':'1em'}}>
+				<div className="row">
+					<div class="float-sm-right">
 					Copyright &#169; {new Date().getFullYear()}
+					</div>
 				</div>
 			</div>
 		</span>
