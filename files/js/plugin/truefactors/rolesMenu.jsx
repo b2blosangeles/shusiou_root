@@ -10,7 +10,7 @@ var _rolesMenu = React.createClass({
     },
     render: function() {
           var me = this;
-          return  (<span>
+          return  (
                     <div className="container">
                         <div className="row">
 				<div className="col-sm-3 text-left site-logo pt-0">
@@ -26,7 +26,5 @@ var _rolesMenu = React.createClass({
 				</div>
                          </div>
                     </div>
-	`	    <div className="bg-secondary container-fluid" style={{'min-height' : '3em'}}></div>
-		</span>)
 	}          
 });
