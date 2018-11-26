@@ -11,7 +11,7 @@ React.createClass({
 			extend: {
 				  includes : [
 					'https://dev.shusiou.win/js/plugin/truefactors/_global.jsx',
-					'https://dev.shusiou.win/js/plugin/root/_asyncModule.jsx',
+					/*'https://dev.shusiou.win/js/plugin/root/_asyncModule.jsx',*/
 					  
 					'https://dev.shusiou.win/js/plugin/truefactors/rolesMenu.jsx',
 					'https://dev.shusiou.win/js/plugin/truefactors/secondMenu.jsx',
