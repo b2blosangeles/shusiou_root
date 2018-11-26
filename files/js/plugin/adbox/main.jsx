@@ -16,7 +16,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			adx {new Date().getTime()} --> {Root.lib.test('adx')} ***> {(me.props.info) ? me.props.info : 'niu'}
+			adx {new Date().getTime()} --> {Root.lib.test('adx')} ***> {(me.props.info) ? me.props.info : 'no one'}
 		</span>
           )
         }
