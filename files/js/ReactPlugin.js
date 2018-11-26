@@ -1,6 +1,6 @@
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
-                cfg.viewPoint.innerHTML = (cfg.extend) ? cfg.extend.loadingInfo : '';
+                cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
                 $.ajax({
                    type: 'POST',
                    url: cfg.master,
