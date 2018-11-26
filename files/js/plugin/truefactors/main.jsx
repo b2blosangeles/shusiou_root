@@ -30,7 +30,7 @@ React.createClass({
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
-			<div className="bg-secondary container-fluid" style={{'min-height' : '3em', color:'#fff'}}>
+			<div className="bg-secondary container-fluid" style={{'min-height' : '2.5em', color:'#fff'}}>
 				<div className="container">
 					<div className="float-sm-right pt-2">&#169; {new Date().getFullYear()}</div>
 				</div>			
