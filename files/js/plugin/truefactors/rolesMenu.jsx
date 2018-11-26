@@ -8,7 +8,7 @@ var _rolesMenu = React.createClass({
             var parent = this.props.parent;
 	    
             parent.setState({role: code});
-	    console.log(' pickMenu =---=' + this.props.parent.state.code);
+	    console.log(' pickMenu =---=' + this.props.parent.state.role);
     },
     render: function() {
           var me = this;
