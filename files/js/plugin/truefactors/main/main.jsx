@@ -30,10 +30,6 @@ React.createClass({
 			master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 			data={{}} parent={me} />
 	},
-	setV : function(v) {
-		var me = this;
-		me.setState({v: v});
-	},
         init : function(code) {
                 var me = this;
 		me.roles = _global.roles;
@@ -56,8 +52,6 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			  <a href="JavaScript:void(0)" onClick={me.setV.bind(me, 'AAA')}>AAA</a>
-			   <a href="JavaScript:void(0)" onClick={me.setV.bind(me, 'BBB')}>BBB</a>
 			  <_rolesMenu parent={me}/>
 			{/*<_secondMenu parent={me}/>*/}
 			<div className="container">
