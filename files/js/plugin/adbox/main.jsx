@@ -5,7 +5,7 @@ React.createClass({
         },
         componentDidMount:function() {
                var me = this;
-		if (me.props.data.sk === '1') {
+		if (me.props.data.sk === '2') {
 		setInterval(
 			function() {
 				me.setState({tm:new Date().getTime()})
