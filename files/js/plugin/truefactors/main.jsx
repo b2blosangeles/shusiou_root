@@ -36,7 +36,7 @@ React.createClass({
 			  
 			<div className="container">
 				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
-					style={{'min-height' : '64em'}}>
+					style={{'min-height' : '36em'}}>
 					{me.showBody()}
 				</div>			  
 			</div>
