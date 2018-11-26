@@ -20,7 +20,7 @@ React.createClass({
 							main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-					data={{role: me.state.role, v : me.state.v}}
+					data={{role: me.state.role, v : me.state.v, sk:v}}
 					parent={me} />
 	},
 	setV : function(v) {
@@ -49,8 +49,8 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			  <a href="JavaScript:void(o)" onClick={me.setV.bind(me, 'AAA')}>AAA</a>
-			   <a href="JavaScript:void(o)" onClick={me.setV.bind(me, 'BBB')}>BBB</a>
+			  <a href="JavaScript:void(0)" onClick={me.setV.bind(me, 'AAA')}>AAA</a>
+			   <a href="JavaScript:void(0)" onClick={me.setV.bind(me, 'BBB')}>BBB</a>
 			  <_rolesMenu parent={me}/>
 			{/*<_secondMenu parent={me}/>*/}
 			<div className="container">
