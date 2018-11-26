@@ -7,8 +7,8 @@ var _commLib = function () {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
     }
 
-    this.test = function() {
-    	return '===From Test ===';
+    this.test = function(v) {
+    	return '=== ' + v + ' ===';
     }
 	
 	
