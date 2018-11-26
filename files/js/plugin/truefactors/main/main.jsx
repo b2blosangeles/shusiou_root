@@ -28,7 +28,7 @@ React.createClass({
 				main : 'https://dev.shusiou.win/js/plugin/truefactors/salesForce/main.jsx'
 			}, 
 			master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-			code="upload_video" parent={me} />
+			data={{}} parent={me} />
 	},
 	setV : function(v) {
 		var me = this;
