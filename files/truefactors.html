@@ -21,6 +21,21 @@
             $.ReactPlugin({
                 extend:{
                          includes : [
+                           'https://dev.shusiou.win/js/plugin/truefactors/_asyncModule.jsx',
+                         ],
+                         main : 'https://dev.shusiou.win/js/plugin/root/main.jsx',
+                         cacheTime : 1000
+                 },
+                 master: '//master1_dev.shusiou.win/api/JSXhub.api?tm=' + new Date().getTime(), 
+                 viewPoint : document.body});
+      });      
+      /*
+      var _loadingITV = setInterval(function() {
+            if (!$ || !$.ReactPlugin) return true;
+            clearInterval(_loadingITV);
+            $.ReactPlugin({
+                extend:{
+                         includes : [
                            'https://dev.shusiou.win/js/plugin/truefactors/_global.jsx',
                            'https://dev.shusiou.win/js/plugin/truefactors/_asyncModule.jsx',
                            
@@ -36,6 +51,7 @@
                  master: '//master1_dev.shusiou.win/api/JSXhub.api?tm=' + new Date().getTime(), 
                  viewPoint : document.body});
       });
+      */
     </script>
   </head>
   <body></body>
