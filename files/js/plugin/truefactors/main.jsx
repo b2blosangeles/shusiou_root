@@ -30,7 +30,9 @@ React.createClass({
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
-			<div className="bg-secondary container-fluid" style={{'min-height' : '3em'}}></div>
+			<div className="bg-secondary container-fluid" style={{'min-height' : '3em'}}>
+			
+			</div>
 			  
 			<div className="container">
 				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
