@@ -34,7 +34,7 @@ React.createClass({
 			<div className="bg-secondary container-fluid" style={{'min-height' : '3em'}}></div>
 			  
 			<div className="container">
-				<div className="row border border-secondary rounded-top p-2" 
+				<div className="row border border-secondary rounded-bottom p-2 mt-2" 
 					style={{'min-height' : '20em'}}>
 					{me.showBody()}
 				</div>			  
