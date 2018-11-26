@@ -6,6 +6,7 @@ React.createClass({
         componentDidMount:function() {
                var me = this;
 		console.log('---componentDidMount---');
+		console.log(me.props);
         }, 
         componentDidUpdate:function() {
                var me = this;
