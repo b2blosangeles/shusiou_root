@@ -38,14 +38,11 @@ React.createClass({
 				</div>			  
 			</div> 
 <div className="container">
-  <h1>Vertical Align</h1>
-  <p>Change the alignment of elements with the align classes (only works on inline, inline-block, inline-table and table cell elements):</p>
-  <span className="align-baseline">baseline</span>
-  <span className="align-top">top</span>
-  <span className="align-middle">middle</span>
-  <span className="align-text-right">bottom</span>
-  <span className="align-text-top">text-top</span>
-  <span class=Name"align-text-bottom">text-bottom</span>
+<div className="float-sm-right">Float right on small screens or wider</div><br>
+<div className="float-md-right">Float right on medium screens or wider</div><br>
+<div className="float-lg-right">Float right on large screens or wider</div><br>
+<div className="float-xl-right">Float right on extra large screens or wider</div><br>
+<div className="float-none">Float none</div>
 </div>
 			  
 			<div className="container">
