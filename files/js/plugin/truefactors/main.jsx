@@ -33,6 +33,9 @@ React.createClass({
 	
 			<div className="container">
 				<div className="row border border-primary">
+					<div className="border border-primary">
+						Test
+					</div>
 					<div className="jumbotron mt-1 border-success" style={{'background-color':'#ffffff'}}>
 						{me.showBody()}
 					</div>
