@@ -19,7 +19,7 @@ React.createClass({
 					'https://dev.shusiou.win/js/plugin/truefactors/main/sectionInvestors.jsx'
 					 ],
 				   loadingInfo : 'Loading ...',
-				   main : 'https://dev.shusiou.win/js/plugin/truefactors/main.jsx',
+				   main : 'https://dev.shusiou.win/js/plugin/truefactors/main/main.jsx',
                          	   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
