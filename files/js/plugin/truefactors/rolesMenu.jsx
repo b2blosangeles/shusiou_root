@@ -13,7 +13,7 @@ var _rolesMenu = React.createClass({
           return  (
                     <div className="container">
                         <div className="row">
-				<div className="col-sm-4 text-left">
+				<div className="col-sm-4 text-left align-middle">
 					<h3 className="pull-left"><b>Polo Alto Project</b></h3>
 				</div>
 				<div className="col-sm-8 text-right">
