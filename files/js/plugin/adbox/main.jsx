@@ -7,7 +7,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			adx {new Date().getTime()} --> {Root.lib.test()}
+			adx {new Date().getTime()} --> {Root.lib.test('adx')}
 		</span>
           )
         }
