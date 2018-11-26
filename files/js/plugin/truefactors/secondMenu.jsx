@@ -20,7 +20,7 @@ var _secondMenu = React.createClass({
 						</li>
 						<li className="nav-item">
 							<a className="nav-link disabled" href="#">
-								<span style={{color:'eee'}}>Disabled</span></a>
+								<span style={{color:'#eee'}}>Disabled</span></a>
 						</li>
 					</ul>
 				</div>
