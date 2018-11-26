@@ -11,12 +11,12 @@ React.createClass({
 	asyncModule : function(v) {
 		var me = this;
 		return <_asyncModule plugin={{extend: {
-								includes : [],
-								main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
-							}, 
-							master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-							info={'niceInfo'}
-							parent={me} />
+							includes : [],
+							main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
+						}, 
+						master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+					info={v}
+					parent={me} />
 	},
         init : function(code) {
                 var me = this;
@@ -45,19 +45,14 @@ React.createClass({
 			<div className="container">
 				<div className="row border border-secondary alert-info rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					{me.asyncModule({})}
+					{me.asyncModule('123')}
 				</div>			  
 			</div>
 			  
 			<div className="container">
 				<div className="row border border-secondary alert-success rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					<_asyncModule plugin={{extend: {
-								includes : [],
-								main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
-							}, 
-							master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-							code="upload_video" parent={me} />
+					{me.asyncModule('456')}
 				</div>			  
 			</div>
 			<div className="container">
