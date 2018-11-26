@@ -1,8 +1,8 @@
 var _global = {
 	roles : {
-		inventor	:	'Inventors',
-		/* attorney	:	'Attorneys',
-		factorie	:	'Factories', */
-		investor	:	'Investors'
+		inventor	:	'Inventor',
+		/* attorney	:	'Attorney',
+		factorie	:	'Factory', */
+		investor	:	'Investor'
 	}
 };
