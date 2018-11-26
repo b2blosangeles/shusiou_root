@@ -40,8 +40,8 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			  {/*<_rolesMenu parent={me}/>
-			<_secondMenu parent={me}/>*/}
+			  <_rolesMenu parent={me}/>
+			{/*<_secondMenu parent={me}/>*/}
 			<div className="container">
 				<div className="row border border-secondary alert-info rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
