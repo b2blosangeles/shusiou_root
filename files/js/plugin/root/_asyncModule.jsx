@@ -49,7 +49,7 @@ try {
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 							code)((_asyncModule) ? _asyncModule : {}, 
-							      (Root) ? Root : {}); 
+							      (!Root) ? {} : Root); 
 					}
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}/>)						
 				} catch (err) {
