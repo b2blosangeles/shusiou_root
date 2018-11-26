@@ -49,10 +49,10 @@ React.createClass({
 			{/*<div className="container">
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>*/}
-			<_asyncModule plugin={
+			<_asyncModule plugin={{
 						includes : [],
 						main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
-					}, 
+					}}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 					code="upload_video" parent={me} />
 		</span>
