@@ -39,6 +39,13 @@ React.createClass({
 				</div>			  
 			</div>
 
+			<div className="container">
+				<div className="row border border-secondary bg-secondary rounded-bottom p-2 mt-1" 
+					style={{'min-height' : '6em'}}>
+					{me.showBody()}
+				</div>			  
+			</div>
+			  
 			{/*<div className="container">
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>*/}
