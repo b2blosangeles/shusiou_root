@@ -25,6 +25,7 @@ React.createClass({
 			}
 		}
         }, 
+	
         render: function() {
           var me = this;
           return  (
@@ -42,19 +43,19 @@ React.createClass({
 			<div className="container">
 				<div className="row border border-secondary alert-success rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					{me.showBody()}
+					<_asyncModule plugin={{extend: {
+								includes : [],
+								main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
+							}, 
+							master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+							code="upload_video" parent={me} />
 				</div>			  
 			</div>
 			  
 			{/*<div className="container">
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>*/}
-			<_asyncModule plugin={{extend: {
-						includes : [],
-						main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
-					}, 
-					master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-					code="upload_video" parent={me} />
+
 		</span>
           )
         }
