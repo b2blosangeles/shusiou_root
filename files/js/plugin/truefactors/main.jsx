@@ -30,8 +30,8 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			<_rolesMenu parent={me}/>
-			<_secondMenu parent={me}/>
+			  {/*<_rolesMenu parent={me}/>
+			<_secondMenu parent={me}/>*/}
 
 			<div className="container">
 				<div className="row border border-secondary alert-success rounded-bottom p-2 mt-1" 
@@ -56,12 +56,12 @@ React.createClass({
 				</div>			  
 			</div>			  
 			  
-			<div className="container">
+			{/*<div className="container">
 				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '36em'}}>
 					{me.showBody()}
 				</div>			  
-			</div>
+			</div>*/}
 
 			  
 			{/*<div className="container">
