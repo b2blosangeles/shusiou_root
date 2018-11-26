@@ -24,13 +24,15 @@ React.createClass({
 
 					adx {new Date().getTime()} --> {Root.lib.test('adx')} ***> {me.props.data.role} || {me.props.data.v}
 					  || {me.props.data.sk}
+					  <hr/>
+					  {me.state.tm}
 				</span>
 			  )
 		else if (me.props.data.sk === '2')
 			return  (
 				<span>
 
-					solution 2 {me.state.tm}
+					solution 2 <hr/>{me.state.tm}
 				</span>
 			  )
 		else 
