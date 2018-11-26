@@ -38,11 +38,10 @@ React.createClass({
 				</div>			  
 			</div> 
 			<div className="container">
-				<div className="row">
+
 					<p className="pull-right">
 					Copyright &#169; {new Date().getFullYear()}
 					</p>
-				</div>
 			</div>
 		</span>
           )
