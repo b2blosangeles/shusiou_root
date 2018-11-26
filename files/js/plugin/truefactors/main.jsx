@@ -39,7 +39,7 @@ React.createClass({
 			</div> 
 			<div className="container">
 				<div className="row text-right" style={{'pading':'3em'}}>
-					Copyright  &#169; {new Date().getFullYear()}
+					Copyright -- &#169; {new Date().getFullYear()}
 				</div>
 			</div>
 		</span>
