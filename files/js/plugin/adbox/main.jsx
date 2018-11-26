@@ -7,7 +7,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			adx
+			adx {new Date().getTime()}
 		</span>
           )
         }
