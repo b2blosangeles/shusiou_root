@@ -29,6 +29,7 @@ var _secondMenu = React.createClass({
 			<div className="col-sm-4 text-left site-logo pt-0">
                			<div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} Polo Alto Project</div>
 			</div>
+		</div>
               </div>			
             </div>          
           )
