@@ -32,13 +32,6 @@ React.createClass({
 		<span>
 			<_rolesMenu parent={me}/>
 			<_secondMenu parent={me}/>
-			  
-			<div className="container">
-				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
-					style={{'min-height' : '36em'}}>
-					{me.showBody()}
-				</div>			  
-			</div>
 
 			<div className="container">
 				<div className="row border border-secondary alert-success rounded-bottom p-2 mt-1" 
@@ -62,6 +55,15 @@ React.createClass({
 							code="upload_video" parent={me} />
 				</div>			  
 			</div>			  
+			  
+			<div className="container">
+				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
+					style={{'min-height' : '36em'}}>
+					{me.showBody()}
+				</div>			  
+			</div>
+
+			  
 			{/*<div className="container">
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>*/}
