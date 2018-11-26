@@ -68,3 +68,4 @@ video#gumVideo {
    height: 58px  !important;
 }
 .secondMenu a { color : #fff }
+.secondMenu a disabled { color : #eee }
