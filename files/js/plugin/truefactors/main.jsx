@@ -26,10 +26,6 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			<div className="container">
-				<div className="row"><div className="col-sm-12"></div></div>
-			</div>
-
 			<_rolesMenu parent={me}/>
 	
 			<div className="container">
