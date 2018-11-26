@@ -47,7 +47,7 @@ try {
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
 						
-						if (typeof Root === 'undefined') var Root = {};
+						if (typeof Root === 'undefined') var Root = {lib : new _commLib()};
 						
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 							code)((_asyncModule) ? _asyncModule : {}, 
