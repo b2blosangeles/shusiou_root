@@ -52,7 +52,7 @@ React.createClass({
 			<_asyncModule plugin={{
 						includes : [],
 						main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
-					}}, 
+					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 					code="upload_video" parent={me} />
 		</span>
