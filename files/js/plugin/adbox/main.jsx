@@ -2,6 +2,10 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
           	return {}
+        },
+        componentDidUpdate:function() {
+               var me = this;
+		console.log('---TA componentDidUpdate---');
         },	
         render: function() {
           var me = this;
