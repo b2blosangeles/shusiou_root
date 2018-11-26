@@ -20,7 +20,7 @@ React.createClass({
 							main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-					data={{role: me.state.role}}
+					data={{role: me.state.role, v : v}}
 					parent={me} />
 	},
         init : function(code) {
