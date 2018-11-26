@@ -32,7 +32,8 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 	
 			<div className="container">
-				<div className="row border border-primary rounded-top p-2">
+				<div className="row border border-primary rounded-top p-2" 
+					style={{'min-height' : '10em'}}>
 					{me.showBody()}
 				</div>			  
 			</div> 
