@@ -30,11 +30,7 @@ React.createClass({
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
-			<div className="bg-secondary container-fluid" style={{'min-height' : '2.5em', color:'#fff'}}>
-				<div className="container">
-					<div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} San Ramon Project</div>
-				</div>			
-			</div>
+			<_secondMenu parent={me}/>
 			  
 			<div className="container">
 				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
