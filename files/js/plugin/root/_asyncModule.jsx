@@ -48,7 +48,8 @@ try {
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
-							code)(_asyncModule, Root); 
+							code)((_asyncModule) ? _asyncModule : {}, 
+							      (Root) ? Root : {}); 
 					}
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}/>)						
 				} catch (err) {
