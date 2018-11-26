@@ -15,11 +15,14 @@ React.createClass({
         },
         showBody : function() {
                 var me = this;
-		switch (me.state.role) {
-			case 'inventor' :  return (<_sectionInventors/>);
-			case 'investor' : return (<_sectionInvestors/>);
-			default : 
-				return 'Error: undefined section <' + me.state.role + '/>';
+		if (!me.state.role) return (<span/>);
+		else {
+			switch (me.state.role) {
+				case 'inventor' :  return (<_sectionInventors/>);
+				case 'investor' : return (<_sectionInvestors/>);
+				default :
+					return 'Error: undefined section <' + me.state.role + '/>';
+			}
 		}
         }, 
         render: function() {
