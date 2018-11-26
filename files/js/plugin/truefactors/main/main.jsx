@@ -11,7 +11,7 @@ React.createClass({
         componentDidUpdate:function() {
                var me = this;
         },	
-	asyncModule : function(v) {
+	asyncAdbox : function(v) {
 		var me = this;
 		return <_asyncModule plugin={{extend: {
 							includes : [],
@@ -20,6 +20,15 @@ React.createClass({
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 					data={{role: me.state.role, v : me.state.v, sk:v}}
 					parent={me} />
+	},
+	asyncSalesForce : function() {
+		var me = this;
+		return 	<_asyncModule plugin={{extend: {
+				includes : [],
+				main : 'https://dev.shusiou.win/js/plugin/truefactors/salesForce/main.jsx'
+			}, 
+			master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+			code="upload_video" parent={me} />
 	},
 	setV : function(v) {
 		var me = this;
@@ -67,12 +76,7 @@ React.createClass({
 			<div className="container">
 				<div className="row border border-secondary alert-warning rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					<_asyncModule plugin={{extend: {
-								includes : [],
-								main : 'https://dev.shusiou.win/js/plugin/truefactors/salesForce/main.jsx'
-							}, 
-							master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-							code="upload_video" parent={me} />
+					{me.asyncSalesForce()}
 				</div>			  
 			</div>			  
 			  
