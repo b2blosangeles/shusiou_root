@@ -19,7 +19,9 @@ var _sectionInventors = React.createClass({
             <button type="button" className="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
           </div>
         </div>
-       </div>  
+       </div>
+       <div className="card mb-4 shadow-sm"></div>
+            <div className="card mb-4 shadow-sm"></div>
     </div>  
                   </span>)
         }
