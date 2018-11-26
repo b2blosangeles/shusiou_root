@@ -3,6 +3,15 @@ React.createClass({
 		var me = this;
           	return {}
         },
+        componentDidMount:function() {
+               var me = this;
+		if (me.props.data.sk === '1') {
+		setInterval(
+			function() {
+				me.setState({tm:new Date().getTime()})
+			}, 3000
+		)}
+        },		
         componentDidUpdate:function() {
                var me = this;
 		console.log('---TA componentDidUpdate---');
@@ -21,7 +30,7 @@ React.createClass({
 			return  (
 				<span>
 
-					solution 2
+					solution 2 {me.state.tm}
 				</span>
 			  )
 		else 
