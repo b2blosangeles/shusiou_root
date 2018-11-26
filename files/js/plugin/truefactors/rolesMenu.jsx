@@ -14,7 +14,7 @@ var _rolesMenu = React.createClass({
                     <div className="container">
                         <div className="row">
 				<div className="col-sm-3 text-left site-logo pt-3">
-					<h2><b>Polo Alto Project</b></h2>
+					<img srv="/imgs/inventions.png"/>
 					{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
 				</div>
 				<div className="col-sm-9 text-right">
