@@ -10,13 +10,13 @@ React.createClass({
 		<_asyncModule plugin={{
 			extend: {
 				  includes : [
-					'https://dev.shusiou.win/js/plugin/truefactors/_global.jsx',
+					'https://dev.shusiou.win/js/plugin/truefactors/main/_global.jsx',
 					  
-					'https://dev.shusiou.win/js/plugin/truefactors/rolesMenu.jsx',
-					'https://dev.shusiou.win/js/plugin/truefactors/secondMenu.jsx',
+					'https://dev.shusiou.win/js/plugin/truefactors/main/rolesMenu.jsx',
+					'https://dev.shusiou.win/js/plugin/truefactors/main/secondMenu.jsx',
 
-					'https://dev.shusiou.win/js/plugin/truefactors/sectionInventors.jsx',
-					'https://dev.shusiou.win/js/plugin/truefactors/sectionInvestors.jsx'
+					'https://dev.shusiou.win/js/plugin/truefactors/main/sectionInventors.jsx',
+					'https://dev.shusiou.win/js/plugin/truefactors/main/sectionInvestors.jsx'
 					 ],
 				   loadingInfo : 'Loading ...',
 				   main : 'https://dev.shusiou.win/js/plugin/truefactors/main.jsx',
