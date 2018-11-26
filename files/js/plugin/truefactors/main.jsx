@@ -37,19 +37,8 @@ React.createClass({
 					{me.showBody()}
 				</div>			  
 			</div> 
-<div className="container">
-<div className="float-sm-right">Float right on small screens or wider</div><br/>
-<div className="float-md-right">Float right on medium screens or wider</div><br/>
-<div className="float-lg-right">Float right on large screens or wider</div><br/>
-<div className="float-xl-right">Float right on extra large screens or wider</div><br/>
-<div className="float-none">Float none</div>
-</div>
-			  
 			<div className="container">
-
-					<p className="pull-right">
-					Copyright &#169; {new Date().getFullYear()}
-					</p>
+				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>
 		</span>
           )
