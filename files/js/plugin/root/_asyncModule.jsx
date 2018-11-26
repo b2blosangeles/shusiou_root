@@ -45,6 +45,7 @@ try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
 					// if (me._asyncCode === me.props.code) {
 					if (me._asyncCode) {
+						console.log('====me._asyncCode====' + me._asyncCode);
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
 						
