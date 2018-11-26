@@ -18,8 +18,9 @@ React.createClass({
 					'https://dev.shusiou.win/js/plugin/truefactors/sectionInventors.jsx',
 					'https://dev.shusiou.win/js/plugin/truefactors/sectionInvestors.jsx'
 					 ],
-					main : 'https://dev.shusiou.win/js/plugin/truefactors/main.jsx',
-                         		cacheTime : 1000
+				   loadingInfo : 'Loading ...',
+				   main : 'https://dev.shusiou.win/js/plugin/truefactors/main.jsx',
+                         	   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 		code="sectionInventors" root={me} />
