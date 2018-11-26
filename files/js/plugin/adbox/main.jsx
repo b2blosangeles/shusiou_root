@@ -14,7 +14,6 @@ React.createClass({
         },		
         componentDidUpdate:function() {
                var me = this;
-		console.log('---TA componentDidUpdate---');
         },	
         render: function() {
           var me = this;
