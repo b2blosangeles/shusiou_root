@@ -33,7 +33,7 @@ React.createClass({
 	
 			<div className="container">
 				<div className="row">
-					<div className="jumbotron mt-1" style={{backgroundcolor:'#ffffff'}}>
+					<div className="jumbotron mt-1" style={{'background-color':'#ffffff'}}>
 						{me.showBody()}
 					</div>
 				</div>			  
