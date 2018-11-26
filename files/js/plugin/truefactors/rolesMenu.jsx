@@ -13,8 +13,10 @@ var _rolesMenu = React.createClass({
           return  (
                     <div className="container">
                         <div className="row">
-				<div className="col-sm-12 text-right">
+				<div className="col-sm-2 text-left">
 					<h3 className="pull-left">Polo Alto Project</h3>
+				</div>
+				<div className="col-sm-10 text-right">
 					{Object.keys(me.roles).map(function(idx){
 					  return <button className="btn btn-success btn-large" 
 						onClick={me.pickMenu.bind(me, idx)}>
