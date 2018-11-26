@@ -56,8 +56,7 @@ try {
 							code)((_asyncModule) ? _asyncModule : {}, 
 							      Root); 
 					}
-					return new _asyncOBJ({parent:(me.props.parent) ? me.props.parent : me, 
-							      info:(me.props.info) ? me.props.info : '999'}).render();
+					return new _asyncOBJ(me.props.parent).render();
 					/*
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 info={(me.props.info) ? me.props.info : ''}
