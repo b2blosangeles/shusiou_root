@@ -8,6 +8,11 @@ React.createClass({
                var me = this;
 		me.init();
         },
+        componentDidUpdate:function() {
+               var me = this;
+		console.log('---componentDidUpdate---');
+		console.log(me.state);
+        },	
 	asyncModule : function(v) {
 		var me = this;
 		return <_asyncModule plugin={{extend: {
