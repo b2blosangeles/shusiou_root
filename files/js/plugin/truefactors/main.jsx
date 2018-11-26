@@ -32,13 +32,8 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 	
 			<div className="container">
-				<div className="row border border-primary rounded p-3">
-					<div>
-						Test
-					</div>
-					<div className="jumbotron mt-1 border-success" style={{'background-color':'#ffffff'}}>
-						{me.showBody()}
-					</div>
+				<div className="row border border-primary rounded-top p-2">
+					{me.showBody()}
 				</div>			  
 			</div> 
 			<div className="container">
