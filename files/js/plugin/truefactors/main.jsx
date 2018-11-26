@@ -50,8 +50,8 @@ React.createClass({
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>*/}
 			<_asyncModule plugin={
-						includes : ['/files/js/module/addSharedVideo/test.jsx'],
-						main : '/files/js/module/addSharedVideo/main.jsx'
+						includes : [],
+						main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 					code="upload_video" parent={me} />
