@@ -54,7 +54,7 @@ try {
 					return  (<span>Script Error: {err.message}</span>)
 				}
 			} else {
-				return  (<span>Loading ...</span>)
+				return  (<span>{me.props.plugin.loadingInfo}</span>)
 			}
 		}
 	});	
