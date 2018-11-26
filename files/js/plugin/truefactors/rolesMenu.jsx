@@ -14,7 +14,7 @@ var _rolesMenu = React.createClass({
                     <div className="container">
                         <div className="row">
 				<div className="col-sm-3 text-left site-logo">
-					<h3 className="pull-left  align-middle"><b>Polo Alto Project</b></h3>
+					<h2 className="pull-left  align-bottom"><b>Polo Alto Project</b></h2>
 				</div>
 				<div className="col-sm-9 text-right">
 					{Object.keys(me.roles).map(function(idx){
