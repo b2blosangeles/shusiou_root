@@ -21,7 +21,7 @@ React.createClass({
                          cacheTime : 1000
 		}, 
 		master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-		code="upload_video" parent={me} />
+		code="sectionInventors" parent={me} />
           )
         }
 })
