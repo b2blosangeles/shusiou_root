@@ -46,10 +46,11 @@ try {
 					if (me._asyncCode === me.props.code) {
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
-
+						
+						var ParaRoot = (!Root) ? {} : Root
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 							code)((_asyncModule) ? _asyncModule : {}, 
-							      (!Root) ? {} : Root); 
+							      ParaRoot); 
 					}
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}/>)						
 				} catch (err) {
