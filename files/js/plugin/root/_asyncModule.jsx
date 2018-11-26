@@ -56,12 +56,12 @@ try {
 							code)((_asyncModule) ? _asyncModule : {}, 
 							      Root); 
 					}
-					return new _asyncOBJ(me.props).render();
-					/*
+					/*return new _asyncOBJ(me.props).render();*/
+					
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 info={(me.props.info) ? me.props.info : ''}
 							 />)
-							 */
+							 
 				} catch (err) {
 					return  (<span>Script Error: {err.message}</span>)
 				}
