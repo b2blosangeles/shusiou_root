@@ -32,7 +32,7 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 	
 			<div className="container">
-				<div className="row border border-primary rounded">
+				<div className="row border border-primary rounded p-3">
 					<div>
 						Test
 					</div>
