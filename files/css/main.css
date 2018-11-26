@@ -62,3 +62,7 @@ video#gumVideo {
    width: 99px !important;  
    height: 58px  !important;
 }
+.logo {
+   margin: 0.3em !important; 
+   height: 58px  !important;
+}
