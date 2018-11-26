@@ -25,7 +25,6 @@ var _rolesMenu = React.createClass({
 					})}
 				</div>
                          </div>
-			 
                     </div>
 	`	    <div className="bg-secondary container-fluid" style={{'min-height' : '3em'}}></div>
 		</span>)
