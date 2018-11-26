@@ -10,8 +10,6 @@ React.createClass({
         },
         componentDidUpdate:function() {
                var me = this;
-		console.log('---componentDidUpdate---');
-		console.log(me.state);
         },	
 	asyncModule : function(v) {
 		var me = this;
