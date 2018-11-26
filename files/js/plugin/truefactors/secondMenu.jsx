@@ -9,6 +9,21 @@ var _secondMenu = React.createClass({
           return  (
             <div className="bg-secondary container-fluid" style={{'min-height' : '2.5em', color:'#fff'}}>
               <div className="container">
+		      
+<ul className="nav">
+  <li className="nav-item">
+    <a className="nav-link active" href="#">Active</a>
+  </li>
+  <li className="nav-item">
+    <a className="nav-link" href="#">Link</a>
+  </li>
+  <li className="nav-item">
+    <a className="nav-link" href="#">Link</a>
+  </li>
+  <li className="nav-item">
+    <a className="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
                 <div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} Polo Alto Project</div>
               </div>			
             </div>          
