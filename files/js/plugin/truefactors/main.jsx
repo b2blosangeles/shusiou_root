@@ -56,14 +56,14 @@ React.createClass({
 			<div className="container">
 				<div className="row border border-secondary alert-info rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					{me.asyncModule('123')}
+					{me.asyncModule('2')}
 				</div>			  
 			</div>
 			  
 			<div className="container">
 				<div className="row border border-secondary alert-success rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '6em'}}>
-					{me.asyncModule('456')}
+					{me.asyncModule('1')}
 				</div>			  
 			</div>
 			<div className="container">
