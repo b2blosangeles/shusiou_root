@@ -31,11 +31,14 @@ React.createClass({
 		<span>
 			<_rolesMenu parent={me}/>
 			<div className="container">
-				<div className="row border border-secondary rounded-bottom p-2 mt-2" 
+				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
 					style={{'min-height' : '20em'}}>
 					{me.showBody()}
 				</div>			  
-			</div> 
+			</div>
+
+			<div className="bg-secondary container-fluid" style={{'min-height' : '3em'}}></div>
+			  
 			<div className="container">
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>
