@@ -49,7 +49,7 @@ React.createClass({
 			{/*<div className="container">
 				<div className="float-sm-right">Copyright &#169; {new Date().getFullYear()}</div>
 			</div>*/}
-			<_asyncModule plugin={{
+			<_asyncModule plugin={{extend: {
 						includes : [],
 						main : 'https://dev.shusiou.win/js/plugin/adbox/main.jsx'
 					}, 
