@@ -56,10 +56,10 @@ try {
 							code)((_asyncModule) ? _asyncModule : {}, 
 							      Root); 
 					}
-					return new _asyncOBJ({props:me.props}).render({props:me.props});
+					//return new _asyncOBJ({props:me.props}).render({props:me.props});
 					
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
-							 info={(me.props.info) ? me.props.info : ''}
+							 data={(me.props.data) ? me.props.data : ''}
 							 />)
 							 
 				} catch (err) {
