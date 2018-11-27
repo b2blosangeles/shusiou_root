@@ -17,7 +17,7 @@ var _commUI = {
                         var me = this;
                         return (
                             <div className="col-sm-12 p-1">
-                                <div className="shadow border border-secondary alert-warning rounded p-2 m-3" 
+                                <div className="shadow border border-secondary alert-warning rounded p-2" 
                                     style={{'min-height' : '6em'}}>
                                     {me.props.data}
                                 </div>
