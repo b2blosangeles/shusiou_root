@@ -58,7 +58,7 @@ React.createClass({
 			<div className="container">
 				<div className="row border border-secondary alert-secondary p-2 mt-1">
 					{/*<div className="col-sm-12 border border-secondary alert-secondary p-2 mt-1">*/}
-						<div className="col-sm-3 p-1 pull-left">
+							<div className="col-sm-3 p-1 pull-left">
 								<div className="border border-secondary alert-light 
 										rounded p-2 m-1" 
 									style={{'min-height' : '8em'}}>
@@ -90,7 +90,7 @@ React.createClass({
 							
 							{me.showBody()}
 						</div>*/}
-					</div>
+					
 				</div>
 			</div>
 			  
