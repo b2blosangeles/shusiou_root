@@ -56,76 +56,40 @@ React.createClass({
 			<_secondMenu parent={me}/>
 
 			<div className="container">
-				<div className="row">
-					<div className="col-sm-12 p-1">
-						{/* border border-secondary rounded-bottom  */}
+				<div className="row border border-secondary alert-secondary p-2 mt-1">
+					{/*<div className="col-sm-12 border border-secondary alert-secondary p-2 mt-1">*/}
+						<div className="col-sm-3 p-1 pull-left">
+								<div className="border border-secondary alert-light 
+										rounded p-2 m-1" 
+									style={{'min-height' : '8em'}}>
+									{me.asyncAdbox('2')}
+								</div>
+							</div>
+
+							<div className="col-sm-3 p-1 pull-left">
+								<div className="border border-secondary alert-light 
+										rounded p-2 m-1" 
+									style={{'min-height' : '8em'}}>
+									{me.asyncAdbox('2')}
+								</div>
+							</div>
+
+							<div className="col-sm-3 p-1 pull-left">
+								<div className="border border-secondary alert-light 
+										rounded p-2 m-1" 
+									style={{'min-height' : '8em'}}>
+									{me.asyncAdbox('2')}
+								</div>
+							</div>						
+						{/* border border-secondary rounded-bottom  
 						<div className="border border-secondary alert-secondary p-2 mt-1" 
 							style={{'min-height' : '28em'}}>
 							
-							<div className="col-sm-3 p-1 pull-left">
-								<div className="border border-secondary alert-light 
-										rounded p-2 m-1" 
-									style={{'min-height' : '8em'}}>
-									{me.asyncAdbox('2')}
-								</div>
-							</div>
-
-							<div className="col-sm-3 p-1 pull-left">
-								<div className="border border-secondary alert-light 
-										rounded p-2 m-1" 
-									style={{'min-height' : '8em'}}>
-									{me.asyncAdbox('2')}
-								</div>
-							</div>
-
-							<div className="col-sm-3 p-1 pull-left">
-								<div className="border border-secondary alert-light 
-										rounded p-2 m-1" 
-									style={{'min-height' : '8em'}}>
-									{me.asyncAdbox('2')}
-								</div>
-							</div>
-						
-							<div className="container">
-									<div className="row">
-										<div className="col-sm-3 p-1">
-											<div className="border border-secondary alert-light 
-													rounded-bottom p-2 pull-left" 
-												style={{'min-height' : '8em', 'margin-right' : '2px'}}>
-												{me.asyncAdbox('2')}
-											</div>
-										</div>
-										<div className="col-sm-3 p-1">
-											<div className="border border-secondary alert-info 
-													rounded-bottom p-2" 
-												style={{'min-height' : '8em', 
-													'margin-right' : '2px',
-													'margin-left' : '2px'}}>
-												{me.asyncAdbox('2')}
-											</div>
-										</div>
-										<div className="col-sm-3 p-1">
-											<div className="border border-secondary alert-info 
-													rounded-bottom p-2" 
-												style={{'min-height' : '8em', 
-													'margin-right' : '2px',
-													'margin-left' : '2px'}}>
-												{me.asyncAdbox('2')}
-											</div>
-										</div>
-										<div className="col-sm-3 p-1">
-											<div className="border border-secondary alert-info 
-													rounded-bottom p-2 pull-right" 
-												style={{'min-height' : '8em', 'margin-left' : '2px'}}>
-												{me.asyncAdbox('32')}
-											</div>
-										</div>
-									</div>
-								</div>							
+							
 							
 							
 							{me.showBody()}
-						</div>
+						</div>*/}
 					</div>
 				</div>
 			</div>
