@@ -62,27 +62,51 @@ React.createClass({
 					<div className="container">
 					<div className="row ">
 						<div className="col-sm-3 p-1 pull-left">
-							<div className="border border-secondary alert-light 
-									rounded p-2 m-1" 
-								style={{'min-height' : '8em'}}>
-								{me.asyncAdbox('2')}
-							</div>
+						<div className="border border-secondary alert-light 
+								rounded p-2 m-1" 
+							style={{'min-height' : '8em'}}>
+							{me.asyncAdbox('2')}
+						</div>
 						</div>
 
 						<div className="col-sm-3 p-1 pull-left">
-							<div className="border border-secondary alert-light 
-									rounded p-2 m-1" 
-								style={{'min-height' : '8em'}}>
-								{me.asyncAdbox('2')}
-							</div>
+						<div className="border border-secondary alert-light 
+								rounded p-2 m-1" 
+							style={{'min-height' : '8em'}}>
+							{me.asyncAdbox('2')}
+						</div>
 						</div>
 
 						<div className="col-sm-3 p-1 pull-left">
-							<div className="border border-secondary alert-light 
-									rounded p-2 m-1" 
-								style={{'min-height' : '8em'}}>
-								{me.asyncAdbox('2')}
-							</div>
+						<div className="border border-secondary alert-light 
+								rounded p-2 m-1" 
+							style={{'min-height' : '8em'}}>
+							{me.asyncAdbox('2')}
+						</div>
+						</div>
+
+						<div className="col-sm-3 p-1 pull-left">
+						<div className="border border-secondary alert-light 
+								rounded p-2 m-1" 
+							style={{'min-height' : '8em'}}>
+							{me.asyncAdbox('2')}
+						</div>
+						</div>
+						
+						<div className="col-sm-3 p-1 pull-left">
+						<div className="border border-secondary alert-light 
+								rounded p-2 m-1" 
+							style={{'min-height' : '8em'}}>
+							{me.asyncAdbox('2')}
+						</div>
+						</div>
+
+						<div className="col-sm-3 p-1 pull-left">
+						<div className="border border-secondary alert-light 
+								rounded p-2 m-1" 
+							style={{'min-height' : '8em'}}>
+							{me.asyncAdbox('2')}
+						</div>
 						</div>
 					</div>
 					</div>
