@@ -21,7 +21,7 @@ var _rolesMenu = React.createClass({
 							<img src="/app/truefactors/imgs/inventions.png"/>
 							{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
 						</div>
-						<div className="col-sm-9 text-right pt-2">
+						<div className="col-sm-9 text-right pt-3">
 							{Object.keys(me.roles).map(function(idx){
 							  return <button className="border border-success btn-large rounded" 
 								onClick={me.pickMenu.bind(me, idx)}>
