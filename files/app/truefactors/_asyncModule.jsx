@@ -50,7 +50,11 @@ try {
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
 						
 						if (typeof Root === 'undefined') {
-							var Root = (_commLib) ? {lib : new _commLib()} : {};
+							var Root = (!_commLib) ? {} : 
+							{
+								lib : new _commLib(),
+								global : _global
+							};
 						} 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 							code)((_asyncModule) ? _asyncModule : {}, 
