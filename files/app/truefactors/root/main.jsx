@@ -55,12 +55,12 @@ React.createClass({
         render: function() {
           var me = this;
 		
-		var videoBox = React.createClass({
+		var _videoBox = React.createClass({
                     render : function () { 
                         return (<span>test</span>)
                     }
                 })
-		return <videoBox/>
+		return <_videoBox/>
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
