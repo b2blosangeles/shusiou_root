@@ -129,7 +129,7 @@ React.createClass({
 			</div>
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 p-1"}}>
+					<div className="col-sm-12 p-1">
 						<div className="alert-secondary p-2" 
 							style={{'min-height' : '12em'}}>
 							{me.asyncSalesForce()}
