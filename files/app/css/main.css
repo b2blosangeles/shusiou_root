@@ -62,8 +62,8 @@ body {
 }
 
 .btn-large { margin: 0.3em !important;  width: 128px !important;   height: 55px  !important;}
-.site-logo { min-height: 72px  !important;}
-.bg-top-bar  { background: rgba(139,157,19, 0.4); }
+.site-logo { min-height: 88px  !important;}
+.bg-top-bar  { background: rgba(139,157,195, 0.4); }
 .secondMenu { background: rgba(59,89,152, 0.6); }
 .secondMenu a { color : #fff }
 
