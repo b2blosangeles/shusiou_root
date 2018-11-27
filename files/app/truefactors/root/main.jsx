@@ -116,27 +116,15 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					
-					<div className="col-sm-12 p-1">
-						<div className="p-2">
-						{me.infoBox('')}
-						</div>	
+					<div className="col-sm-12 p-3">
+						{me.infoBox(me.asyncSalesForce())}
 					</div>
 				</div>
 			</div>
+
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 p-1">
-						<div className="alert-secondary p-2" 
-							style={{'min-height' : '12em'}}>
-							{me.asyncSalesForce()}
-						</div>
-					</div>
-				</div>
-			</div>			  
-			  
-			<div className="container">
-				<div className="row">
-					<div className="col-sm-12 p-1">
+					<div className="col-sm-12 p-3">
 						<div className="border border-secondary bg-secondary 
 								text-center rounded-bottom p-2" 
 							style={{'min-height' : '2em', 'color' : '#fff'}}>
