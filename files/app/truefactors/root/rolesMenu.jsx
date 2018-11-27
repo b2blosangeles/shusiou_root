@@ -14,16 +14,22 @@ var _rolesMenu = React.createClass({
           return  (
                     <div className="container-fluid">
                         <div className="row alert-secondary">
-				<div className="col-sm-3 text-left site-logo pt-2">
-					<img src="/app/truefactors/imgs/inventions.png"/>
-					{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
+				<div className="row">
+				<div className="col-sm-12 text-left site-logo pt-0">
+					<div className="row">
+						<div className="col-sm-3 text-left site-logo pt-2">
+							<img src="/app/truefactors/imgs/inventions.png"/>
+							{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
+						</div>
+						<div className="col-sm-9 text-right">
+							{Object.keys(me.roles).map(function(idx){
+							  return <button className="border border-success btn-large rounded" 
+								onClick={me.pickMenu.bind(me, idx)}>
+								{me.roles[idx]}</button>
+							})}
+						</div>
+					</div>
 				</div>
-				<div className="col-sm-9 text-right">
-					{Object.keys(me.roles).map(function(idx){
-					  return <button className="border border-success btn-large rounded" 
-						onClick={me.pickMenu.bind(me, idx)}>
-						{me.roles[idx]}</button>
-					})}
 				</div>
                          </div>
                     </div>)
