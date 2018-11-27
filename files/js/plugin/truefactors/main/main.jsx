@@ -56,7 +56,7 @@ React.createClass({
 			<_secondMenu parent={me}/>
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-6 p-1" style={{'min-height' : '8em'}}>
+					<div className="col-sm-6 p-1">
 						<div className="row border border-secondary alert-info 
 								rounded-bottom p-2" 
 							style={{'min-height' : '8em', 'margin-right':'1px'}}>
