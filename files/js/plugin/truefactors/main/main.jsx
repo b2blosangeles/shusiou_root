@@ -74,10 +74,12 @@ React.createClass({
 			</div>
 			  
 			<div className="container">
-				<div className="col-sm-12 p-1">
-					<div className="row border border-secondary alert-success rounded-bottom p-2" 
-						style={{'min-height' : '6em'}}>
-						{me.asyncAdbox('1')}
+				<div className="row">
+					<div className="col-sm-12 p-1">
+						<div className="row border border-secondary alert-success rounded-bottom p-2" 
+							style={{'min-height' : '6em'}}>
+							{me.asyncAdbox('1')}
+						</div>
 					</div>
 				</div>
 			</div>
