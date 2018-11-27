@@ -64,6 +64,10 @@ React.createClass({
 				<div className="alert-secondary rounded p-2 mt-1"
 					style={{'min-height' : '32em'}}
 					>
+											<hr/>
+						{me.videoBox()}
+					<hr/>
+					
 					<div className="container">
 					<div className="row ">
 						<div className="col-sm-3 p-1 pull-left">
@@ -113,8 +117,7 @@ React.createClass({
 							{me.asyncAdbox('2')}
 						</div>
 						</div>
-						<hr/>
-						{me.videoBox()}
+
 					</div>
 					</div>
 				</div>
