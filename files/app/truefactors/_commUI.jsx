@@ -1,7 +1,10 @@
 var _commUI = function () {
-    this.videoBox = React.createClass({
+    this.videoBox = 
+        function() { 
+             return   React.createClass({
                     render : function () { 
                         return (<span>test</span>)
                     }
                 })
+        }
 };
