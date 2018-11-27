@@ -127,7 +127,11 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12 p-1 bg-secondary">
-						&#169; {new Date().getFullYear()} Polo Alto Project
+						<div className="row border border-secondary alert-secondary rounded-bottom p-2" 
+							style={{'min-height' : '2em'}}>
+							&#169; {new Date().getFullYear()} Polo Alto Project
+						</div>
+						
 						{/*<div className="bg-secondary p-2" 
 							style={{'min-height' : '2em', 'align' : 'center', 'color' : '#fff'}}>
 							&#169; {new Date().getFullYear()} Polo Alto Project
