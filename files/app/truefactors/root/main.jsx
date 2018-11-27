@@ -113,7 +113,7 @@ React.createClass({
 							{me.asyncAdbox('2')}
 						</div>
 						</div>
-						
+						<hr/>
 						{me.videoBox()}
 					</div>
 					</div>
