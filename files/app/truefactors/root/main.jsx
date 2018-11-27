@@ -63,51 +63,6 @@ React.createClass({
 			<_secondMenu parent={me}/>
 
 			<div className="container">
-			<div className="row">
-				<div className="col-sm-12 mt-2" style={{'min-height' : '32em'}}>
-					<div className="container">
-						<div className="row ">
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							{me.videoBox('')}
-							
-							{/*me.videoBox(me.asyncAdbox('2'))}
-							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))}
-							{me.videoBox(me.asyncAdbox('2'))}
-							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))}
-							{me.videoBox(me.asyncAdbox('2'))}
-							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))}
-
-							{me.videoBox(me.asyncAdbox('2'))}
-							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))}
-							{me.videoBox(me.asyncAdbox('2'))}
-							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))}
-							{me.videoBox(me.asyncAdbox('2'))}
-							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))*/}							
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-			  
-			<div className="container">
 				<div className="row">
 					<div className="col-sm-12">
 					<div className="row">
@@ -115,8 +70,53 @@ React.createClass({
 					</div>
 					</div>
 				</div>
-			</div>
+			</div>			  
+			  
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-12 mt-2" style={{'min-height' : '32em'}}>
+						<div className="container">
+							<div className="row ">
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
+								{me.videoBox('')}
 
+								{/*me.videoBox(me.asyncAdbox('2'))}
+								{me.videoBox(me.asyncAdbox('1'))}
+								{me.videoBox(me.asyncAdbox('3'))}
+								{me.videoBox(me.asyncAdbox('2'))}
+								{me.videoBox(me.asyncAdbox('1'))}
+								{me.videoBox(me.asyncAdbox('3'))}
+								{me.videoBox(me.asyncAdbox('2'))}
+								{me.videoBox(me.asyncAdbox('1'))}
+								{me.videoBox(me.asyncAdbox('3'))}
+
+								{me.videoBox(me.asyncAdbox('2'))}
+								{me.videoBox(me.asyncAdbox('1'))}
+								{me.videoBox(me.asyncAdbox('3'))}
+								{me.videoBox(me.asyncAdbox('2'))}
+								{me.videoBox(me.asyncAdbox('1'))}
+								{me.videoBox(me.asyncAdbox('3'))}
+								{me.videoBox(me.asyncAdbox('2'))}
+								{me.videoBox(me.asyncAdbox('1'))}
+								{me.videoBox(me.asyncAdbox('3'))*/}							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			  
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12">
