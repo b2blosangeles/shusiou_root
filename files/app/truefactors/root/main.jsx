@@ -66,7 +66,7 @@ React.createClass({
 					style={{'min-height' : '32em'}}
 					>
 					<hr/>
-						{me.videoBox()}
+						{Root.commUI.videoBox()}
 					<hr/>
 					
 					<div className="container">
