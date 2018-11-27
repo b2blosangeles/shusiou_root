@@ -52,8 +52,8 @@ try {
 						if (typeof Root === 'undefined') {
 							var Root = (!_commLib) ? {} : 
 							{
-								lib : new _commLib(),
-								global : _global
+								lib	: new _commLib(),
+								global	: _global
 							};
 						} 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
