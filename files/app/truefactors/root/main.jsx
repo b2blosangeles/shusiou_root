@@ -67,9 +67,9 @@ React.createClass({
 					<div className="container">
 					<div className="row ">
 						
-						{me.videoBox({})}
-						{me.videoBox({})}
-						{me.videoBox({})}
+						{me.videoBox('1')}
+						{me.videoBox('2')}
+						{me.videoBox('3')}
 						
 						<div className="col-sm-3 p-1 pull-left">
 						<div className="border border-secondary alert-light 
