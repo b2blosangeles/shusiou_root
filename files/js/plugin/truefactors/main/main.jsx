@@ -95,10 +95,14 @@ React.createClass({
 			</div>			  
 			  
 			<div className="container">
-				<div className="row border border-secondary rounded-bottom p-2 mt-1" 
-					style={{'min-height' : '36em'}}>
-					{me.showBody()}
-				</div>			  
+				<div className="row">
+					<div className="col-sm-12 p-1">
+						<div className="row border border-secondary rounded-bottom p-2 mt-1" 
+							style={{'min-height' : '36em'}}>
+							{me.showBody()}
+						</div>
+					</div>
+				</div>
 			</div>
 
 			  
