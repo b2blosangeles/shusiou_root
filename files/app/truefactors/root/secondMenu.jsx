@@ -1,8 +1,8 @@
 var _secondMenu = React.createClass({
     getInitialState: function() {
-		        var me = this;
-		        me.roles = _global.roles;
-          	return {}
+	var me = this;
+	me.roles = Root.global.roles;
+	return {}
     },
     render: function() {
           var me = this;
