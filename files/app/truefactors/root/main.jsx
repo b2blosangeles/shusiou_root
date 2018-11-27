@@ -68,8 +68,22 @@ React.createClass({
 					
 					<div className="container">
 						<div className="row ">
-
-							{me.videoBox(me.asyncAdbox('2'))}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							{me.videoBox('')}
+							
+							{/*me.videoBox(me.asyncAdbox('2'))}
 							{me.videoBox(me.asyncAdbox('1'))}
 							{me.videoBox(me.asyncAdbox('3'))}
 							{me.videoBox(me.asyncAdbox('2'))}
@@ -87,7 +101,7 @@ React.createClass({
 							{me.videoBox(me.asyncAdbox('3'))}
 							{me.videoBox(me.asyncAdbox('2'))}
 							{me.videoBox(me.asyncAdbox('1'))}
-							{me.videoBox(me.asyncAdbox('3'))}							
+							{me.videoBox(me.asyncAdbox('3'))*/}							
 						</div>
 					</div>
 				</div>
