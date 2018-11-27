@@ -52,8 +52,8 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			  <_rolesMenu parent={me}/>
-			{/*<_secondMenu parent={me}/>*/}
+			<_rolesMenu parent={me}/>
+			<_secondMenu parent={me}/>
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-6 p-1" style={{'min-height' : '8em'}}>
