@@ -65,61 +65,17 @@ React.createClass({
 					style={{'min-height' : '32em'}}>
 				
 					<div className="container">
-					<div className="row ">
-						
-						{me.videoBox(me.asyncAdbox('2'))}
-						{me.videoBox(me.asyncAdbox('1'))}
-						{me.videoBox(me.asyncAdbox('3'))}
-						
-						<div className="col-sm-3 p-1 pull-left">
-						<div className="border border-secondary alert-light 
-								rounded p-2 m-1" 
-							style={{'min-height' : '8em'}}>
-							{me.asyncAdbox('2')}
+						<div className="row ">
+							{me.videoBox(me.asyncAdbox('2'))}
+							{me.videoBox(me.asyncAdbox('1'))}
+							{me.videoBox(me.asyncAdbox('3'))}
+							{me.videoBox(me.asyncAdbox('2'))}
+							{me.videoBox(me.asyncAdbox('1'))}
+							{me.videoBox(me.asyncAdbox('3'))}
+							{me.videoBox(me.asyncAdbox('2'))}
+							{me.videoBox(me.asyncAdbox('1'))}
+							{me.videoBox(me.asyncAdbox('3'))}
 						</div>
-						</div>
-
-						<div className="col-sm-3 p-1 pull-left">
-						<div className="border border-secondary alert-light 
-								rounded p-2 m-1" 
-							style={{'min-height' : '8em'}}>
-							{me.asyncAdbox('2')}
-						</div>
-						</div>
-
-						<div className="col-sm-3 p-1 pull-left">
-						<div className="border border-secondary alert-light 
-								rounded p-2 m-1" 
-							style={{'min-height' : '8em'}}>
-							{me.asyncAdbox('2')}
-						</div>
-						</div>
-
-						<div className="col-sm-3 p-1 pull-left">
-						<div className="border border-secondary alert-light 
-								rounded p-2 m-1" 
-							style={{'min-height' : '8em'}}>
-							{me.asyncAdbox('2')}
-						</div>
-						</div>
-						
-						<div className="col-sm-3 p-1 pull-left">
-						<div className="border border-secondary alert-light 
-								rounded p-2 m-1" 
-							style={{'min-height' : '8em'}}>
-							{me.asyncAdbox('2')}
-						</div>
-						</div>
-
-						<div className="col-sm-3 p-1 pull-left">
-						<div className="border border-secondary alert-light 
-								rounded p-2 m-1" 
-							style={{'min-height' : '8em'}}>
-							{me.asyncAdbox('2')}
-						</div>
-						</div>
-
-					</div>
 					</div>
 				</div>
 				</div>
