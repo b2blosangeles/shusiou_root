@@ -55,7 +55,11 @@ React.createClass({
         render: function() {
           var me = this;
 		
-		var videoBox = Root.commUI.videoBox();
+		var videoBox = React.createClass({
+                    render : function () { 
+                        return (<span>test</span>)
+                    }
+                })
 		return <videoBox/>
           return  (
 		<span>
