@@ -67,7 +67,7 @@ React.createClass({
 					<div className="container">
 					<div className="row ">
 						
-						{me.videoBox('1')}
+						{me.videoBox(me.asyncAdbox('2'))}
 						{me.videoBox('2')}
 						{me.videoBox('3')}
 						
