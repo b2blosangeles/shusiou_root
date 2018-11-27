@@ -63,10 +63,11 @@ React.createClass({
 							{me.asyncAdbox('2')}
 						</div>
 					</div>
-					<div className="col-sm-7 pt-2 pb-1">
+					<div className="col-sm-6 pt-2 pb-1" 
+						style={{'min-height' : '8em', 'padding-left':'1px'}}>
 						<div className="row border border-secondary alert-info 
 								rounded-bottom p-2" 
-							style={{'min-height' : '8em', 'margin-left':'1px'}}>
+							style={{'min-height' : '8em'}}>
 							{me.asyncAdbox('32')}
 						</div>
 					</div>
