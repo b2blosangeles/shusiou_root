@@ -32,7 +32,7 @@ React.createClass({
 	},
         init : function(code) {
                 var me = this;
-		me.roles = _global.roles;
+		me.roles = Root.global.roles;
 		me.setState({role: ''});
         },
         showBody : function() {
