@@ -68,6 +68,6 @@ body {
 }
 .site-logo {
    /* margin: 0.3em !important; */
-   height: 58px  !important;
+   min-height: 68px  !important;
 }
 .secondMenu a { color : #fff }
