@@ -3,5 +3,5 @@ var _commUI = {
                     render : function () { 
                         return (<span>testB</span>)
                     }
-                });
+                })
 };
