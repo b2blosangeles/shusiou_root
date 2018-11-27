@@ -13,7 +13,10 @@ $(document).ready(function(){
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/(\s|\;)+$/g, '') + 
                                    ', null), cfg.viewPoint);';
-                              new Function('cfg', code)(cfg);                         
+                              new Function('cfg', code)(cfg);  
+                               
+                               console.log('Error log:');
+                               console.log(resultData.err);
     
                          } catch {
                               console.log('something wrong ===!!!');
