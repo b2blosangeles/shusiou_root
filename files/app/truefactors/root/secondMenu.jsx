@@ -7,7 +7,7 @@ var _secondMenu = React.createClass({
     render: function() {
           var me = this;
           return  (
-            <div className="secondMenu bgMenuBar container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
+            <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
 		<div className="container">
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
