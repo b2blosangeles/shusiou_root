@@ -110,6 +110,8 @@ React.createClass({
 							{me.asyncAdbox('2')}
 						</div>
 						</div>
+						
+						{Root.commUI.videoBox()}
 					</div>
 					</div>
 				</div>
