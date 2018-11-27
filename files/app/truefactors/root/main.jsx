@@ -54,6 +54,9 @@ React.createClass({
 	},
         render: function() {
           var me = this;
+		
+		var videoBox = Root.commUI.videoBox();
+		return <videoBox/>
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
