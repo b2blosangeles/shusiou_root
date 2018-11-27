@@ -69,14 +69,14 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-3 p-1">
-						<div className="row border border-secondary alert-info 
+						<div className="border border-secondary alert-info 
 								rounded-bottom p-2 pull-left" 
 							style={{'min-height' : '8em', 'margin-right' : '2px'}}>
 							{me.asyncAdbox('2')}
 						</div>
 					</div>
 					<div className="col-sm-3 p-1">
-						<div className="row border border-secondary alert-info 
+						<div className="border border-secondary alert-info 
 								rounded-bottom p-2" 
 							style={{'min-height' : '8em', 
 								'margin-right' : '2px',
@@ -85,7 +85,7 @@ React.createClass({
 						</div>
 					</div>
 					<div className="col-sm-3 p-1">
-						<div className="row border border-secondary alert-info 
+						<div className="border border-secondary alert-info 
 								rounded-bottom p-2" 
 							style={{'min-height' : '8em', 
 								'margin-right' : '2px',
@@ -94,7 +94,7 @@ React.createClass({
 						</div>
 					</div>
 					<div className="col-sm-3 p-1">
-						<div className="row border border-secondary alert-info 
+						<div className="border border-secondary alert-info 
 								rounded-bottom p-2 pull-right" 
 							style={{'min-height' : '8em', 'margin-left' : '2px'}}>
 							{me.asyncAdbox('32')}
@@ -106,7 +106,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12 p-1">
-						<div className="row border border-secondary alert-success rounded-bottom p-2" 
+						<div className="border border-secondary alert-success rounded-bottom p-2" 
 							style={{'min-height' : '6em'}}>
 							{me.asyncAdbox('1')}
 						</div>
