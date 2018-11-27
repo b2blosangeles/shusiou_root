@@ -57,6 +57,7 @@ React.createClass({
 
 			<div className="container">
 				<div className="row ">
+					<div className="row ">
 					<div className="border border-secondary alert-secondary p-1 mt-1">
 						<div className="container">
 						<div className="row ">
@@ -86,6 +87,7 @@ React.createClass({
 						</div>
 						</div>
 					</div>
+					/div>
 				</div>
 			</div>
 			  
