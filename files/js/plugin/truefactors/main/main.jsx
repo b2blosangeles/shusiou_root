@@ -65,7 +65,7 @@ React.createClass({
 							<div className="container">
 									<div className="row">
 										<div className="col-sm-3 p-1">
-											<div className="border border-secondary alert-info 
+											<div className="border border-secondary alert-light 
 													rounded-bottom p-2 pull-left" 
 												style={{'min-height' : '8em', 'margin-right' : '2px'}}>
 												{me.asyncAdbox('2')}
