@@ -10,7 +10,7 @@ var _secondMenu = React.createClass({
             <div className="secondMenu bg-secondary container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
 		<div className="container">
 			<div className="row">
-				<div className="col-sm-8 text-left site-logo pt-0">
+				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">
 						<li className="nav-item">
 							<a className="nav-link active" href="#">Active</a>
@@ -24,9 +24,9 @@ var _secondMenu = React.createClass({
 						</li>
 					</ul>
 				</div>
-				<div className="col-sm-4 text-left site-logo pt-0">
+				{/*<div className="col-sm-4 text-left site-logo pt-0">
 					<div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} Polo Alto Project</div>
-				</div>
+				</div>*/}
 			</div>
 		</div>
             </div>          
