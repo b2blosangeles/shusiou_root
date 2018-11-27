@@ -25,7 +25,7 @@ React.createClass({
 		var me = this;
 		return 	<_asyncModule plugin={{extend: {
 				includes : [],
-				main : 'https://dev.shusiou.win/js/plugin/truefactors/salesForce/main.jsx'
+				main : 'https://dev.shusiou.win/app/truefactors/salesForce/main.jsx'
 			}, 
 			master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 			data={{}} parent={me} />
