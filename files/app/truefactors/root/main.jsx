@@ -64,7 +64,7 @@ React.createClass({
 
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12">
+					<div className="col-sm-12 mt-2">
 					<div className="row">
 						{me.infoBox(me.asyncSalesForce(), {type: 'warning'})}
 					</div>
@@ -74,7 +74,7 @@ React.createClass({
 			  
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 mt-2" style={{'min-height' : '32em'}}>
+					<div className="col-sm-12" style={{'min-height' : '32em'}}>
 						<div className="container">
 							<div className="row ">
 								{me.videoBox('')}
