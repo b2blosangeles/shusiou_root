@@ -51,9 +51,9 @@ React.createClass({
 		var _videoBox = Root.commUI.videoBox;
 		return <_videoBox data={v} />
 	},
-	infoBox : function(v) {
+	infoBox : function(data, class) {
 		var _infoBox = Root.commUI.infoBox;
-		return <_infoBox data={v} />
+		return <_infoBox data={data} class={class} />
 	},
         render: function() {
           var me = this;
@@ -111,7 +111,7 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-12">
 					<div className="row">
-						{me.infoBox(me.asyncSalesForce())}
+						{me.infoBox(me.asyncSalesForce(), {type: 'success'})}
 					</div>
 					</div>
 				</div>
