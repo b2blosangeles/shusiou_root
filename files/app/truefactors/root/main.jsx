@@ -49,18 +49,11 @@ React.createClass({
         }, 
 	videoBox : function() {
 
-		var videoBox = Root.commUI.videoBox();
-		return <videoBox/>
+		var _videoBox = Root.commUI.videoBox();
+		return <_videoBox/>
 	},
         render: function() {
           var me = this;
-		
-		var _videoBox = React.createClass({
-                    render : function () { 
-                        return (<span>test</span>)
-                    }
-                })
-		return <_videoBox/>
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
