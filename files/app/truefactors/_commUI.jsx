@@ -1,7 +1,15 @@
 var _commUI = {
     videoBox : React.createClass({
                     render : function () { 
-                        return (<span>testD</span>)
+                        return (
+                            <div className="col-sm-3 p-1">
+                            <div className="border border-secondary alert-light 
+                                    rounded p-2 m-1" 
+                                style={{'min-height' : '8em'}}>
+                                {me.asyncAdbox('2')}
+                            </div>
+                            </div>                        
+                        )
                     }
                 })
 };
