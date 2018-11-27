@@ -10,7 +10,7 @@ React.createClass({
 		<_asyncModule plugin={{
 			extend: {
 				  includes : [
-					'https://dev.shusiou.win/app/truefactors/_global.jsx',
+
 					'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
 					'https://dev.shusiou.win/app/truefactors/root/secondMenu.jsx',
 
