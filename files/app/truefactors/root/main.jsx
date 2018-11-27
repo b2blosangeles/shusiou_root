@@ -51,6 +51,10 @@ React.createClass({
 		var _videoBox = Root.commUI.videoBox;
 		return <_videoBox data={v} />
 	},
+	infoBox : function(v) {
+		var _infoBox = Root.commUI.infoBox;
+		return <_infoBox data={v} />
+	},
         render: function() {
           var me = this;
           return  (
@@ -112,10 +116,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12 p-1">
-						<div className="border border-warning alert-warning rounded p-2" 
-							style={{'min-height' : '6em'}}>
-							{me.asyncAdbox('1')}
-						</div>
+						{me.infoBox('')}
 					</div>
 				</div>
 			</div>
