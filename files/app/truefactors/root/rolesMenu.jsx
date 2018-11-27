@@ -14,7 +14,7 @@ var _rolesMenu = React.createClass({
           return  (
                     <div className="container-fluid">
                         <div className="row alert-secondary">
-				<div className="col-sm-12 text-left" style={{'min-height' : '64px'}}>
+				<div className="col-sm-12 text-left">
 					<div className="container">
 					<div className="row">
 						<div className="col-sm-3 text-left site-logo pt-2">
