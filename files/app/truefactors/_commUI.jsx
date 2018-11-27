@@ -17,8 +17,8 @@ var _commUI = {
                         var me = this;
                         return (
                             <div className="col-sm-12 p-1">
-                                <div className="shadow border border-secondary bg-cellBox rounded p-2 m-1" 
-                                    style={{'min-height' : '9em'}}>
+                                <div className="shadow border border-secondary alert-warning rounded p-2 m-1" 
+                                    style={{'min-height' : '6em'}}>
                                     {me.props.data}
                                 </div>
                             </div>                        
