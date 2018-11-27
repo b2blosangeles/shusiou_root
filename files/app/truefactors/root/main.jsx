@@ -62,16 +62,15 @@ React.createClass({
 			<div className="row ">
 				<div className="col-sm-12 p-1">
 				<div className="alert-secondary rounded p-2 mt-1"
-					style={{'min-height' : '32em'}}
-					>
-					<hr/>
-						{me.videoBox({})}
-						{me.videoBox({})}
-						{me.videoBox({})}
-					<hr/>
-					
+					style={{'min-height' : '32em'}}>
+				
 					<div className="container">
 					<div className="row ">
+						
+						{me.videoBox({})}
+						{me.videoBox({})}
+						{me.videoBox({})}
+						
 						<div className="col-sm-3 p-1 pull-left">
 						<div className="border border-secondary alert-light 
 								rounded p-2 m-1" 
