@@ -15,7 +15,7 @@ React.createClass({
 		var me = this;
 		return <_asyncModule plugin={{extend: {
 							includes : [],
-							main : 'https://dev.shusiou.win/js/plugin/truefactors/adbox/main.jsx'
+							main : 'https://dev.shusiou.win/app/truefactors/adbox/main.jsx'
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
 					data={{role: me.state.role, v : me.state.v, sk:v}}
