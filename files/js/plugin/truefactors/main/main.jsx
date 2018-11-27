@@ -56,14 +56,14 @@ React.createClass({
 			{/*<_secondMenu parent={me}/>*/}
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-6 text-left pt-2 pb-1">
+					<div className="col-sm-6 pt-2 pb-1">
 						<div className="row border border-secondary alert-info 
 								rounded-bottom p-2" 
 							style={{'min-height' : '8em', 'margin-right':'1px'}}>
 							{me.asyncAdbox('2')}
 						</div>
 					</div>
-					<div className="col-sm-6 text-left pt-2 pb-1">
+					<div className="col-sm-6 pt-2 pb-1">
 						<div className="row border border-secondary alert-info 
 								rounded-bottom p-2" 
 							style={{'min-height' : '8em', 'margin-left':'1px'}}>
