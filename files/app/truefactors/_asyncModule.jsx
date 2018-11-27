@@ -53,7 +53,7 @@ try {
 							var Root = (!_commLib) ? {} : 
 							{
 								lib	: new _commLib(),
-								commUI	: new _commUI(),
+								commUI	: _commUI,
 								global	: _global
 							};
 						} 
