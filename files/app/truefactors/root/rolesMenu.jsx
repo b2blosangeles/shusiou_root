@@ -13,7 +13,7 @@ var _rolesMenu = React.createClass({
           var me = this;
           return  (
                     <div className="container">
-                        <div className="row">
+                        <div className="row bg-secondary">
 				<div className="col-sm-3 text-left site-logo pt-2">
 					<img src="/app/truefactors/imgs/inventions.png"/>
 					{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
