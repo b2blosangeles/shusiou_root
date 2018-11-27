@@ -1,5 +1,5 @@
-var _commUI = {
-    videoBox : React.createClass({
+var _commUI = function () {
+    this.videoBox = React.createClass({
                     render : function () { 
                         return (<span>testB</span>)
                     }
