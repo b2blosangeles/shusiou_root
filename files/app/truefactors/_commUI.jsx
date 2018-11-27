@@ -6,7 +6,7 @@ var _commUI = {
                             <div className="border border-secondary alert-light 
                                     rounded p-2 m-1" 
                                 style={{'min-height' : '8em'}}>
-                                {me.asyncAdbox('2')}
+                                {me.props.data}
                             </div>
                             </div>                        
                         )
