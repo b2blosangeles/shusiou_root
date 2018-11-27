@@ -63,7 +63,7 @@ body {
 
 .btn-large { margin: 0.3em !important;  width: 128px !important;   height: 55px  !important;}
 .site-logo { min-height: 72px  !important;}
-.bg-top-bar  { background: rgba(0, 0, 0, 0.1); }
+.bg-top-bar  { background: rgba(0, 0, 0, 0.2); }
 .secondMenu { background: rgba(0, 0, 0, 0.4); }
 .secondMenu a { color : #fff }
 
