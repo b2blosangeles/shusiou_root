@@ -17,8 +17,7 @@ var _commUI = {
                         var me = this;
                         var classType = (!me.props.class || !me.props.class.type) ? 'info' : me.props.class.type;
                         var className = 
-                                    'border ' +
-                                    'border-' + classType + ' alert-' + classType + ' ' +
+                                    'border border-' + classType + ' alert-' + classType + ' ' +
                                     'rounded p-2 m-1 mx-3';
                         return (
                             <div className="col-sm-12 p-1">
