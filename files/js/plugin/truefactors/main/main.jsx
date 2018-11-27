@@ -120,7 +120,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12 p-1">
-						<div className="border border-secondary alert-warning rounded-bottom p-2" 
+						<div className="border border-warning alert-warning rounded p-2" 
 							style={{'min-height' : '6em'}}>
 							{me.asyncAdbox('1')}
 						</div>
@@ -129,9 +129,9 @@ React.createClass({
 			</div>
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 p-1">
-						<div className="alert-secondary rounded p-2" 
-							style={{'min-height' : '6em'}}>
+					<div className="col-sm-12 p-1"}}>
+						<div className="alert-secondary p-2" 
+							style={{'min-height' : '12em'}}>
 							{me.asyncSalesForce()}
 						</div>
 					</div>
