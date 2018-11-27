@@ -71,3 +71,4 @@ body {
    min-height: 72px  !important;
 }
 .secondMenu a { color : #fff }
+.bgMenuBar { background: rgba(255, 0, 0, 0.2); }
