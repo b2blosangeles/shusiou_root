@@ -50,7 +50,7 @@ React.createClass({
 	videoBox : function() {
 
 		var videoBox = Root.commUI.videoBox();
-		return <span>222</span>
+		return <videoBox/>
 	},
         render: function() {
           var me = this;
