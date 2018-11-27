@@ -47,9 +47,9 @@ React.createClass({
 			}
 		}
         }, 
-	videoBox : function() {
+	videoBox : function(data) {
 		var _videoBox = Root.commUI.videoBox;
-		return <_videoBox/>
+		return <_videoBox data={data} />
 	},
         render: function() {
           var me = this;
