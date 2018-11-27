@@ -58,14 +58,14 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-6 p-2">
 						<div className="row border border-secondary alert-info 
-								rounded-bottom p-2" 
+								rounded-bottom p-2 pull-left" 
 							style={{'min-height' : '8em'}}>
 							{me.asyncAdbox('2')}
 						</div>
 					</div>
 					<div className="col-sm-6 p-2">
 						<div className="row border border-secondary alert-info 
-								rounded-bottom p-2" 
+								rounded-bottom p-2 pull-right" 
 							style={{'min-height' : '8em'}}>
 							{me.asyncAdbox('32')}
 						</div>
