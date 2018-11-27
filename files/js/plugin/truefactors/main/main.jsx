@@ -124,7 +124,16 @@ React.createClass({
 				</div>
 			</div>			  
 			  
-
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-12 p-1">
+						<div className="row border border-secondary alert-warning rounded-bottom p-2" 
+							style={{'min-height' : '2em'}}>
+							&#169; {new Date().getFullYear()} Polo Alto Project
+						</div>
+					</div>
+				</div>
+			</div>
 
 			  
 			{/*<div className="container">
