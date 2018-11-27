@@ -56,7 +56,7 @@ React.createClass({
 			<_secondMenu parent={me}/>
 
 			<div className="container">
-				<div className="row border border-secondary alert-secondary p-2 mt-1">
+				<div className="row border border-secondary alert-secondary p-1">
 					{/*<div className="col-sm-12 border border-secondary alert-secondary p-2 mt-1">*/}
 							<div className="col-sm-3 p-1 pull-left">
 								<div className="border border-secondary alert-light 
