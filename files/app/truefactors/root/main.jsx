@@ -65,7 +65,7 @@ React.createClass({
 				<div className="alert-secondary rounded p-2 mt-1"
 					style={{'min-height' : '32em'}}
 					>
-											<hr/>
+					<hr/>
 						{me.videoBox()}
 					<hr/>
 					
