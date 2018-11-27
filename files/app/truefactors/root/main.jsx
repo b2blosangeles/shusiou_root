@@ -115,8 +115,11 @@ React.createClass({
 			  
 			<div className="container">
 				<div className="row">
+					
 					<div className="col-sm-12 p-1">
+						<div className="p-2">
 						{me.infoBox('')}
+						</div>	
 					</div>
 				</div>
 			</div>
