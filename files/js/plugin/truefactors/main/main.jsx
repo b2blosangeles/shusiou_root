@@ -61,7 +61,16 @@ React.createClass({
 						{/* border border-secondary rounded-bottom  */}
 						<div className="border border-secondary alert-secondary p-2 mt-1" 
 							style={{'min-height' : '28em'}}>
+							
+							<div className="col-sm-3 p-1">
+								<div className="border border-secondary alert-light 
+										rounded p-2" 
+									style={{'min-height' : '8em', 'margin' : '2px'}}>
+									{me.asyncAdbox('2')}
+								</div>
+							</div>
 
+							
 							<div className="container">
 									<div className="row">
 										<div className="col-sm-3 p-1">
