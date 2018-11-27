@@ -126,7 +126,7 @@ React.createClass({
 			  
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 p-1">
+					<div className="col-sm-12 p-1 bg-secondary">
 						<div className="bg-secondary p-2" 
 							style={{'min-height' : '2em', 'align' : 'center', 'color' : '#fff'}}>
 							&#169; {new Date().getFullYear()} Polo Alto Project
