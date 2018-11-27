@@ -127,7 +127,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12 p-1">
-						<div className="row border border-secondary bg-secondary 
+						<div className="border border-secondary bg-secondary 
 								text-center rounded-bottom p-2" 
 							style={{'min-height' : '2em', 'textAlign' : 'right', 
 								'color' : '#fff'}}>
