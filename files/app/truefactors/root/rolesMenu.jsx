@@ -1,7 +1,7 @@
 var _rolesMenu = React.createClass({
     getInitialState: function() {
 		var me = this;
-		me.roles = _global.roles;
+		me.roles = Root.global.roles;
           	return {}
     },
     pickMenu : function(code) {
