@@ -67,8 +67,8 @@ React.createClass({
 				<div className="col-sm-12 p-1">
 				{/*<div className="alert-secondary rounded p-2 mt-1"
 					style={{'min-height' : '32em'}}>*/}
-				<div className="p-2"
-					style={{'min-height' : '32em'}}>
+					{/*<div className="p-2"
+					style={{'min-height' : '32em'}}>*/}
 					
 					<div className="container">
 						<div className="row ">
@@ -109,7 +109,7 @@ React.createClass({
 						</div>
 					</div>
 				</div>
-				</div>
+				{/*</div>*/}
 			</div>
 			</div>
 			  
