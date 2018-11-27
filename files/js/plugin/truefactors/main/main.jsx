@@ -58,7 +58,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12 p-1">
-						<div className="row border border-secondary rounded-bottom p-2 mt-1" 
+						<div className="border border-secondary rounded-bottom p-2 mt-1" 
 							style={{'min-height' : '28em'}}>
 							{me.showBody()}
 						</div>
@@ -129,8 +129,7 @@ React.createClass({
 					<div className="col-sm-12 p-1">
 						<div className="border border-secondary bg-secondary 
 								text-center rounded-bottom p-2" 
-							style={{'min-height' : '2em', 'textAlign' : 'right', 
-								'color' : '#fff'}}>
+							style={{'min-height' : '2em', 'color' : '#fff'}}>
 							&#169; {new Date().getFullYear()} Polo Alto Project
 						</div>
 					</div>
