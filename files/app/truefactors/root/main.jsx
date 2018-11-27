@@ -65,9 +65,9 @@ React.createClass({
 					style={{'min-height' : '32em'}}
 					>
 					<hr/>
-						{me.videoBox({data : me.asyncAdbox('2'})}
-						{me.videoBox({data : me.asyncAdbox('3'})}
-						{me.videoBox({data : me.asyncAdbox('1'})}
+						{me.videoBox({data : me.asyncAdbox('2')})}
+						{me.videoBox({data : me.asyncAdbox('3')})}
+						{me.videoBox({data : me.asyncAdbox('1')})}
 					<hr/>
 					
 					<div className="container">
