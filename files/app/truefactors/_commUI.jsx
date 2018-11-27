@@ -1,7 +1,7 @@
 var _commUI = {
     videoBox : React.createClass({
                     render : function () { 
-                        return (<span>testA</span>)
+                        return (<span>testB</span>)
                     }
                 });
 };
