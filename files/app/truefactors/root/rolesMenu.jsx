@@ -13,7 +13,7 @@ var _rolesMenu = React.createClass({
           var me = this;
           return  (
                     <div className="container-fluid">
-                        <div className="row alert-secondary">
+                        <div className="row bg-top-bar">
 				<div className="col-sm-12 text-left">
 					<div className="container">
 					<div className="row">
