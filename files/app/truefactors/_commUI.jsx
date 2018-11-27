@@ -16,13 +16,13 @@ var _commUI = {
                     render : function () { 
                         var me = this;
                         var classType = (!me.props.class || !me.props.class.type) ? 'info' : me.props.class.type;
-                        var class = (me.props.class.type) ?
+                        var className = 
                                     'border ' +
                                     'border-' + classType + ' alert-' + classType + ' ' +
                                     'rounded p-2 m-1 mx-3';
                         return (
                             <div className="col-sm-12 p-1">
-                                <div className={class} 
+                                <div className={className} 
                                     style={{'min-height' : '2em'}}>
                                     {me.props.data}
                                 </div>
