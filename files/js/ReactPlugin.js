@@ -15,8 +15,10 @@ $(document).ready(function(){
                                    ', null), cfg.viewPoint);';
                               new Function('cfg', code)(cfg);  
                                
-                               console.log('Error log:');
-                               console.log(resultData.err);
+                             if  ((resultData.err) && (resultData.err.length)) {
+                                   console.log('Error log:');
+                                    console.log(resultData.err);
+                             }      
     
                          } catch {
                               console.log('something wrong ===!!!');
