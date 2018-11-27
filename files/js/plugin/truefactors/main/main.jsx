@@ -55,9 +55,11 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 			<_secondMenu parent={me}/>
 
-			<div className="container border border-secondary alert-secondary p-1 m-1">
+			<div className="container">
 				<div className="row ">
-					{/*<div className="col-sm-12 border border-secondary alert-secondary p-2 mt-1">*/}
+					<div className="col-sm-12 border border-secondary alert-secondary p-2 mt-1">
+						<div className="container">
+						<div className="row ">
 							<div className="col-sm-3 p-1 pull-left">
 								<div className="border border-secondary alert-light 
 										rounded p-2 m-1" 
@@ -80,17 +82,10 @@ React.createClass({
 									style={{'min-height' : '8em'}}>
 									{me.asyncAdbox('2')}
 								</div>
-							</div>						
-						{/* border border-secondary rounded-bottom  
-						<div className="border border-secondary alert-secondary p-2 mt-1" 
-							style={{'min-height' : '28em'}}>
-							
-							
-							
-							
-							{me.showBody()}
-						</div>*/}
-					
+							</div>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			  
