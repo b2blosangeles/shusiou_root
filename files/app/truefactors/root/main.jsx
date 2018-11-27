@@ -64,12 +64,7 @@ React.createClass({
 
 			<div className="container">
 			<div className="row">
-				<div className="col-sm-12 mt-1" style={{'min-height' : '32em'}}>
-				{/*<div className="alert-secondary rounded p-2 mt-1"
-					style={{'min-height' : '32em'}}>*/}
-					{/*<div className="p-2"
-					style={{'min-height' : '32em'}}>*/}
-					
+				<div className="col-sm-12 mt-2" style={{'min-height' : '32em'}}>
 					<div className="container">
 						<div className="row ">
 							{me.videoBox('')}
@@ -109,13 +104,12 @@ React.createClass({
 						</div>
 					</div>
 				</div>
-				{/*</div>*/}
 			</div>
 			</div>
 			  
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 p-3">
+					<div className="col-sm-12">
 						{me.infoBox(me.asyncSalesForce())}
 					</div>
 				</div>
