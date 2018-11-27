@@ -111,7 +111,7 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-12">
 					<div className="row">
-						{me.infoBox(me.asyncSalesForce(), {type: 'success'})}
+						{me.infoBox(me.asyncSalesForce(), {type: 'warning'})}
 					</div>
 					</div>
 				</div>
@@ -121,8 +121,7 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-12">
 						<div className="row ">
-						<div className="col-sm-12 p-1">	
-							{me.infoBox('&#169; ' + new Date().getFullYear() + ' Polo Alto Project', {type: 'success'})}
+						<div className="col-sm-12 p-1">
 							<div className="border border-secondary bg-secondary 
 									text-center align-bottom rounded p-1 m-1 mx-3" 
 								style={{'height' : '2.25em', 'color' : '#fff'}}>
