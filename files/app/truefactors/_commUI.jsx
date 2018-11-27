@@ -4,4 +4,4 @@ var _commUI = function () {
                         return (<span>test</span>)
                     }
                 })
-});
+};
