@@ -70,7 +70,7 @@ body {
    /* margin: 0.3em !important; */
    min-height: 72px  !important;
 }
-.bg-top-bar  { background: rgba(0, 0, 0, 0.2); }
+.bg-top-bar  { background: rgba(0, 0, 0, 0.1); }
 .secondMenu { background: rgba(0, 0, 0, 0.4); }
 .secondMenu a { color : #fff }
 
