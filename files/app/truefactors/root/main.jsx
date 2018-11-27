@@ -47,7 +47,10 @@ React.createClass({
 			}
 		}
         }, 
-	
+	videoBox : function() {
+		var videoBox = Root.commUI.videoBox;
+		return <videoBox/>
+	},
         render: function() {
           var me = this;
           return  (
@@ -111,7 +114,7 @@ React.createClass({
 						</div>
 						</div>
 						
-						{Root.commUI.videoBox()}
+						{me.videoBox()}
 					</div>
 					</div>
 				</div>
