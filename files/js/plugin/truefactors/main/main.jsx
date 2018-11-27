@@ -57,7 +57,7 @@ React.createClass({
 
 			<div className="container">
 				<div className="row ">
-					<div className="col-sm-12 border border-secondary alert-secondary p-2 mt-1">
+					<div className="col-sm-12 border border-secondary alert-secondary p-1">
 						<div className="container">
 						<div className="row ">
 							<div className="col-sm-3 p-1 pull-left">
