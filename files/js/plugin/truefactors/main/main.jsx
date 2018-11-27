@@ -54,6 +54,18 @@ React.createClass({
 		<span>
 			<_rolesMenu parent={me}/>
 			<_secondMenu parent={me}/>
+
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-12 p-1">
+						<div className="row border border-secondary rounded-bottom p-2 mt-1" 
+							style={{'min-height' : '28em'}}>
+							{me.showBody()}
+						</div>
+					</div>
+				</div>
+			</div>			  
+			  
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-6 p-1 pt-2">
@@ -94,16 +106,7 @@ React.createClass({
 				</div>
 			</div>			  
 			  
-			<div className="container">
-				<div className="row">
-					<div className="col-sm-12 p-1">
-						<div className="row border border-secondary rounded-bottom p-2 mt-1" 
-							style={{'min-height' : '36em'}}>
-							{me.showBody()}
-						</div>
-					</div>
-				</div>
-			</div>
+
 
 			  
 			{/*<div className="container">
