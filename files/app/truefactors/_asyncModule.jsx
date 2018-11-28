@@ -42,6 +42,8 @@ try {
 			if (me.state.success === false) {
 				return  (<span>Script Error: {me._asyncModuleErr}</span>)
 			} else if (me._asyncModule) {
+				console.log('===me._asyncModule===>')
+				console.log(me._asyncModule)
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
 					if (me._asyncObjId === me.props.objId) {
@@ -68,7 +70,7 @@ try {
 							 
 				} catch (err) {
 					return  (<span>Script Error: {err.message}</span>)
-					console.log(me._asyncModule.err)
+					console.log(me._asyncModule)
 				}
 			} else {
 				return  (<span>{me.props.plugin.extend.loadingInfo}</span>)
