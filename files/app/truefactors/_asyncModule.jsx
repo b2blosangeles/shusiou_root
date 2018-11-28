@@ -8,11 +8,12 @@ try {
 			var me = this;
 			console.log('---componentDidMount--==');
 			me.props.objId = 'AAA';
+			me.setState({updated : new Date().getTime() })
 			//me.loadPlugin();
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
-			console.log('updated -> ' + prevProps.objId);
+			console.log('updated -> ' + prevProps.objId + '=nn=' + me.props.objId);
 			if (me.props.objId !== prevProps.objId) { 
 				console.log('---componentDidUpdate--');
 				me.loadPlugin();
