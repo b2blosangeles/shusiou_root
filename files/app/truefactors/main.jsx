@@ -6,8 +6,8 @@ React.createClass({
         }, 
         render: function() {
         	var me = this;
-		__asyncObjId = (!__asyncObjId || __asyncObjId > 1000000) ? 1 : (__asyncObjId + 1);
-		var _objId = __asyncObjId + '-' + new Date().getTime();
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		var _oId = __asyncOId + '=' + new Date().getTime();
 		return  (
 			<_asyncModule plugin={{
 			extend: {
