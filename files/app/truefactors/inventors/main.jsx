@@ -9,7 +9,12 @@ React.createClass({
 		return  (
 			<div className="container">
 				<div className="row ">
-				{Root.commUI.show('infoBox', me, 'Test', {type: 'success'})}
+				{Root.commUI.show({
+						code: 'infoBox', 
+						parent : me, 
+						data : 'Test', 
+						setting : {type: 'success'}
+					})}
 				</div>
 				<div className="row ">
 					{list.map(function(m) {
@@ -30,12 +35,15 @@ React.createClass({
 		var me = this;
 		return (<div className="container">
 				<div className="row ">
-				  {Root.commUI.show('infoBox', me, me.showBody(), 
-					{
-						type: 'success', 
-						style: {'min-height' : '28em'}
-					})
-				 }
+				  {Root.commUI.show({
+						code: 'infoBox', 
+						parent : me, 
+						data : me.showBody(), 
+						setting : {
+							type: 'success',
+							style: {'min-height' : '28em'}
+						  }
+					})}
 				</div>
 			</div>)
         }
