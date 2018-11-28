@@ -34,7 +34,7 @@ React.createClass({
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'
 			}, ''
-		)}	
+		)	
         }, 
         render: function() {
           var me = this;
