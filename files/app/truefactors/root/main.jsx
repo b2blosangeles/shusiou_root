@@ -18,7 +18,7 @@ React.createClass({
 						main : 'https://dev.shusiou.win/app/truefactors/myVideos/main.jsx'
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
-				}, 'aaa'
+				}, ''
 			)
 		} else
 		if (me.state.role === 'investor') {
@@ -28,7 +28,7 @@ React.createClass({
 						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
-				}, 'bbb'
+				}, ''
 			)
 		} else		
 		return 666
