@@ -6,9 +6,9 @@ var _commLib = function () {
     this.asyncModule = function(setting, data) {
 		var me = this;
 		console.log('called=A==' + data);
-		$.ReactPlugin_objId = (!$.ReactPlugin_objId || $.ReactPlugin_objId > 1000000) ? 1 : ($.ReactPlugin_objId + 1);
-		var _objId = $.ReactPlugin_objId + '=' + new Date().getTime();
-		return <_asyncModule plugin={setting} data={data} parent={me} objId={_objId}/>
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		var _oId = __asyncOId + '=' + new Date().getTime();
+		return <_asyncModule plugin={setting} data={data} parent={me} objId={_oId}/>
     }
 	
     this.getAuth = function() {
