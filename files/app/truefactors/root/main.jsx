@@ -41,7 +41,7 @@ React.createClass({
 		else {
 			switch (true) {
 				case (me.state.role === 'inventor') :  return (<_sectionInventors/>);
-				case (me.state.role === 'investor' : return (<_sectionInvestors/>);
+				case (me.state.role === 'investor') : return (<_sectionInvestors/>);
 				default :
 					return 'Error: undefined section <' + me.state.role + '/>';
 			}			
