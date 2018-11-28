@@ -1,7 +1,7 @@
 var _commUI = {
     show : function(cfg) {
         var me = this, _CommUI = me[cfg.code];
-	return <_CommUI data={cfg.data} setting={cfg.setting} parent={cfg.parent} /> 
+	return (!_CommUI) ? (<span>No cfg.code</span>) : <_CommUI data={cfg.data} setting={cfg.setting} parent={cfg.parent} /> 
     },
     cellBox : React.createClass({
                     render : function () { 
