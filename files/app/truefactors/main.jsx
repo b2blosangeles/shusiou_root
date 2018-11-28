@@ -6,27 +6,7 @@ React.createClass({
         }, 
         render: function() {
         	var me = this;
-		// return (<span>555</span>);
-		/*
-		return Root.lib.asyncModule(
-			{
-				extend: {
-					  includes : [
-						'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
-						'https://dev.shusiou.win/app/truefactors/root/submenu.jsx',
-
-						'https://dev.shusiou.win/app/truefactors/root/sectionInventors.jsx',
-						'https://dev.shusiou.win/app/truefactors/root/sectionInvestors.jsx'
-						 ],
-					   loadingInfo : 'Loading ...',
-					   main : 'https://dev.shusiou.win/app/truefactors/root/main.jsx',
-					   cacheTime : 1000
-				},
-				master: '//master1_dev.shusiou.win/api/JSXhub.api'
-			}, 'gg');*/
-	//	console.log(Root);
           return  (
-		 
 		<_asyncModule plugin={{
 			extend: {
 				  includes : [
