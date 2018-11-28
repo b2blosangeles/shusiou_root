@@ -7,12 +7,11 @@ var _subMenu = React.createClass({
     },
     clickOption : function(v) {
 	var me = this;    
-	me.props.parent.setStatus({ menuOption : v})    
+	me.props.parent.setState({ menuOption : v})    
     },
     render: function() {
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : Root.global.menuTree[me.props.parent.state.role];
-	    console.log(menu);
           return  (
             <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
 		<div className="container">
