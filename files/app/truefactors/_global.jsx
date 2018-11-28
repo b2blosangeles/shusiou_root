@@ -11,8 +11,8 @@ var _global = {
 			{code:  'myInvention', caption : 'My Invention'} 
 		],
 		investor : [
-			{code: 'info 1'},
-			{code:  'about 1'}			
+			{code: 'browseInvention', caption : 'Browse Inventions'},
+			{code:  'myRequest', caption : 'My Request'}			
 		]
 	}
 };
