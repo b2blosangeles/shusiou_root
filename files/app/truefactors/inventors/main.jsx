@@ -14,6 +14,7 @@ React.createClass({
 						parent : me, 
 						data : 'Test', 
 						setting : {
+							noshadow :true,
 							type: 'success'
 						}
 					})}
