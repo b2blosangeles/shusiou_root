@@ -20,13 +20,13 @@ var _secondMenu = React.createClass({
 						</li></span>)
 					})}
 
-					<li className="nav-item">
+						{/*<li className="nav-item">
 						<a className="nav-link" href="#">Link</a>
 					</li>
 					<li className="nav-item">
 						<a className="nav-link disabled" href="#">
 							<span style={{color:'yellow'}}>Disabled</span></a>
-					</li>
+					</li>*/}
 					</ul>
 				</div>
 				{/*<div className="col-sm-4 text-left site-logo pt-0">
