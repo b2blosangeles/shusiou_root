@@ -51,7 +51,7 @@ React.createClass({
 				}, ''
 			)
 		}
-		return <span/>
+		return <span>Nothing</span>
         }, 
 	infoBox : function(data, classCFG) {
 		var _infoBox = Root.commUI.infoBox;
