@@ -7,8 +7,10 @@ var _commLib = function () {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
     }
 
-    this.test = function(v) {
-    	return '=== ' + v + ' ===';
+    this.getNumberList = function(n) {
+    	var r = [];
+	for (var i = 0;  i < n; i++) r[i] = i;
+	return r;
     }
 	
 	
