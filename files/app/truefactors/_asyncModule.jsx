@@ -10,8 +10,8 @@ try {
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
-			console.log('updated' + prevProps.code);
-			if (me.props.code !== prevProps.code) { 
+			console.log('updated' + prevProps.objId);
+			if (me.props.objId !== prevProps.objId) { 
 				me.loadPlugin();
 			}	
 		},		
@@ -44,7 +44,7 @@ try {
 			} else if (me._asyncModule) {
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
-					if (me._asyncCode === me.props.code) {
+					if (me._asyncCode === me.props.objId) {
 					//if (me._asyncCode) {
 						//console.log('====me._asyncCode====' + me._asyncCode);
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
