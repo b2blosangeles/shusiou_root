@@ -6,7 +6,6 @@ React.createClass({
 	myVideos : function() {
 		var me = this;
 		var list = Root.lib.getNumberList(10);
-		return <span>niu</span>
 		return  (
 			<div className="container">
 				<div className="row ">
