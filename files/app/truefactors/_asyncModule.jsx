@@ -21,8 +21,7 @@ try {
 
 			var cfg = me.props.plugin;
 			if (__asyncCache[me.props.plugin.master]) {
-				var resultData = __asyncCache[me.props.plugin.master];
-				me._asyncModule = resultData;
+				me._asyncModule = __asyncCache[me.props.plugin.master];
 				me.setState({success: true, update : new Date().getTime()});
 			} else {  
 				$.ajax({
