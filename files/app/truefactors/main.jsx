@@ -6,7 +6,7 @@ React.createClass({
         }, 
         render: function() {
         	var me = this;
-		//return '555';
+		return (<span>555</span>);
           return  (
 		 
 		<_asyncModule plugin={{
