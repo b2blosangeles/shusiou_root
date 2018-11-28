@@ -1,4 +1,8 @@
 var _commUI = {
+    show : function(code, parent, data, setting) {
+        var me = this, _CommUI = me[code];
+		return <_CommUI data={data} setting={setting} parent={parent} /> 
+    },
     cellBox : React.createClass({
                     render : function () { 
                         var me = this;
