@@ -11,7 +11,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : 'Home <hr/><div className="spinner"></div> Page', 
+					data : (<span>Home <hr/><div className="spinner"></div> Page</span>), 
 					setting : {
 						type: 'success',
 						style: {'min-height' : '28em'}
