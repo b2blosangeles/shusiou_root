@@ -53,10 +53,6 @@ React.createClass({
 		}
 		return <span/>
         }, 
-	videoBox : function(v) {
-		var _videoBox = Root.commUI.videoBox;
-		return <_videoBox data={v} />
-	},
 	infoBox : function(data, classCFG) {
 		var _infoBox = Root.commUI.infoBox;
 		return <_infoBox data={data} class={classCFG} />
