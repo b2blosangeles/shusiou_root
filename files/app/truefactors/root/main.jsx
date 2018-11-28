@@ -57,7 +57,7 @@ React.createClass({
 	},
         render: function() {
           var me = this;
-	  var list = Root.lib.getNumberList(10);
+	  var list = Root.lib.getNumberList(16);
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
@@ -79,7 +79,7 @@ React.createClass({
 						<div className="container">
 							<div className="row ">
 							{list.map(function(m) {
-								return me.videoBox(m)
+								return me.videoBox('v' + m)
 							})}							
 							</div>
 						</div>
