@@ -11,7 +11,7 @@ React.createClass({
 			extend: {
 				  includes : [
 					'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
-					'https://dev.shusiou.win/app/truefactors/root/menu.jsx',
+					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx',
 
 					'https://dev.shusiou.win/app/truefactors/root/sectionInventors.jsx',
 					'https://dev.shusiou.win/app/truefactors/root/sectionInvestors.jsx'
