@@ -18,7 +18,7 @@ try {
 		loadPlugin : function() {
 			var me = this;
 			me._asyncModule = null;
-			me._asyncCode = me.props.objId;
+			me._asyncObjId = me.props.objId;
 			// me._asyncCode = new Date().getTime();
 			var cfg = me.props.plugin;
 			  $.ajax({
@@ -44,7 +44,7 @@ try {
 			} else if (me._asyncModule) {
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
-					if (me._asyncCode === me.props.objId) {
+					if (me._asyncObjId === me.props.objId) {
 					//if (me._asyncCode) {
 						//console.log('====me._asyncCode====' + me._asyncCode);
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
