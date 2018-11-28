@@ -14,11 +14,7 @@ $(document).ready(function(){
                                    decodeURIComponent(resultData.master).replace(/(\s|\;)+$/g, '') + 
                                    ', null), cfg.viewPoint);';
                               
-                              if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
-                                    var Root = {};
-                              }
-                               
-                              new Function('cfg', 'Root', code)(cfg, Root);  
+                              new Function('cfg', code)(cfg);  
                                
                              if  ((resultData.err) && (resultData.err.length)) {
                                    console.log('Error log:');
