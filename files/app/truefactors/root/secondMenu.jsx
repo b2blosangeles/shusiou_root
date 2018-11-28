@@ -14,10 +14,10 @@ var _secondMenu = React.createClass({
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">
-					{menu.map(function(m){ return(
+					{menu.map(function(m){ return(<span>
 						<li className="nav-item">
 							<a className="nav-link active" href="JavaScript: void(0)">{m.caption}</a>
-						</li>)
+						</li></span>)
 					})}
 
 					<li className="nav-item">
