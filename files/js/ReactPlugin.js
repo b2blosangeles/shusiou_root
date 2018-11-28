@@ -13,7 +13,16 @@ $(document).ready(function(){
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/(\s|\;)+$/g, '') + 
                                    ', null), cfg.viewPoint);';
-                              new Function('cfg', code)(cfg);  
+                              
+                              if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
+                                    var Root = {
+                                          lib	: (!_commLib) ? {} : new _commLib(),
+                                          commUI	:  (!_commUI) ? {} : _commUI,
+                                          global	:  (!_global) ? {} :  _global
+                                    };
+                              }
+                               
+                              new Function('cfg', Root, code)(cfg, Root);  
                                
                              if  ((resultData.err) && (resultData.err.length)) {
                                    console.log('Error log:');
