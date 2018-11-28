@@ -16,7 +16,7 @@ var _secondMenu = React.createClass({
 					<ul className="nav">
 					{menu.map(function(m){ return(
 						<li className="nav-item">
-							<a className="nav-link active" href="JavaScript: void(0)">{m.code}</a>
+							<a className="nav-link active" href="JavaScript: void(0)">{m.caption}</a>
 						</li>)
 					})}
 
