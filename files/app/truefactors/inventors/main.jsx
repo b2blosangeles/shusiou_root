@@ -3,7 +3,8 @@ React.createClass({
 		var me = this;
           	return {}
         },
-	showBody : function() {	
+	showBody : function() {
+		var me = this;
 		var list = Root.lib.getNumberList(10);
 		return  (
 			<div className="container">
