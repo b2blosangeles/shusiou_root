@@ -7,7 +7,7 @@ React.createClass({
 	asyncModule : function(setting, data) {
 		var me = this;
 		console.log('called===' + data);
-		return <_asyncModule plugin={setting} data={data} parent={me} code={new Date().getTime()}/>
+		return <_asyncModule plugin={setting} data={data} parent={me} objid={new Date().getTime()}/>
 	},
         showBody : function() {
                 var me = this;
