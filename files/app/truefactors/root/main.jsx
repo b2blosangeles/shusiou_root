@@ -12,7 +12,7 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		if (me.state.role === 'inventor' && me.state.menuOption === 'myVideos') {
-			return me.asyncModule(
+			return Root.lib.asyncModule(
 				{	extend: {
 						includes : [],
 						main : 'https://dev.shusiou.win/app/truefactors/myVideos/main.jsx'
@@ -22,7 +22,7 @@ React.createClass({
 			)
 		} else
 		if (me.state.role === 'investor') {
-			return me.asyncModule(
+			return Root.lib.asyncModule(
 				{	extend: {
 						includes : [],
 						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
