@@ -20,7 +20,6 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			console.log('===>' + me.props.plugin.extend.main);
 			if (__asyncCache[me.props.plugin.extend.main]) {
 				me._asyncModule = __asyncCache[me.props.plugin.extend.main];
 				me.setState({success: true, update : new Date().getTime()});
