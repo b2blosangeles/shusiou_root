@@ -1,4 +1,4 @@
-var _menu = React.createClass({
+var _subMenu = React.createClass({
     getInitialState: function() {
 	var me = this;
 	me.roles = Root.global.roles;
