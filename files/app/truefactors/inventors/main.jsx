@@ -3,8 +3,7 @@ React.createClass({
 		var me = this;
           	return {}
         },
-        render: function() {
-		var me = this;
+	showBody : function() {	
 		var list = Root.lib.getNumberList(10);
 		return  (
 			<div className="container">
@@ -16,6 +15,10 @@ React.createClass({
 						return Root.commUI.show('cellBox', me, '<b>v' + m + '</b>')
 					})}							
 				</div>
-			</div>)
+			</div>)	
+	},
+        render: function() {
+		var me = this;
+		return  me.showBody();
         }
 })
