@@ -22,7 +22,7 @@ $(document).ready(function(){
                                     };
                               }
                                
-                              new Function('cfg', Root, code)(cfg, Root);  
+                              new Function('cfg', 'Root', code)(cfg, Root);  
                                
                              if  ((resultData.err) && (resultData.err.length)) {
                                    console.log('Error log:');
