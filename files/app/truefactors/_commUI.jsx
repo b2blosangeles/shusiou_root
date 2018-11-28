@@ -1,5 +1,5 @@
 var _commUI = {
-    videoBox : React.createClass({
+    cellBox : React.createClass({
                     render : function () { 
                         var me = this;
                         return (
@@ -27,7 +27,6 @@ var _commUI = {
                                     style={style} >
                                     {(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
                                     : me.props.data}
-                                    {/*me.props.data*/}
                                 </div>
                             </div>                        
                         )
