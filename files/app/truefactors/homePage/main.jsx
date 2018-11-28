@@ -1,4 +1,4 @@
-eact.createClass({
+React.createClass({
         getInitialState: function() {
 		var me = this;
           	return {}
