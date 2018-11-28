@@ -21,7 +21,7 @@ var _subMenu = React.createClass({
 					<ul className="nav">
 					{menu.map(function(m){ 	
 						return
-							(me.props.parent.state.menuOption !== m.code) ?
+							//(me.props.parent.state.menuOption !== m.code) ?
 								(<span>
 									<li className="nav-item">
 										<a className="nav-link active" 
