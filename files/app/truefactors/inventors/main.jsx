@@ -28,7 +28,8 @@ React.createClass({
 								noshadow :true,
 								type: 'success'
 							}
-						})}							
+						});
+					})}							
 				</div>
 			</div>)			
 	},
