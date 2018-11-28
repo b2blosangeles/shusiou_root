@@ -42,7 +42,7 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		if (me.state.role === 'inventor') {
-			me.asyncModule(
+			return me.asyncModule(
 				{	extend: {
 						includes : [],
 						main : 'https://dev.shusiou.win/app/truefactors/adbox/main.jsx'
