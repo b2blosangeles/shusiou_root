@@ -10,9 +10,7 @@ try {
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
-			//console.log('updated -> ' + prevProps.objId + '=nn=' + me.props.objId);
 			if (me.props.objId !== prevProps.objId) { 
-				//console.log('---componentDidUpdate--');
 				me.loadPlugin();
 			}	
 		},		
@@ -20,7 +18,7 @@ try {
 			var me = this;
 			me._asyncModule = null;
 			me._asyncObjId = me.props.objId;
-			// me._asyncCode = new Date().getTime();
+
 			var cfg = me.props.plugin;
 			  $.ajax({
 			     type: 'POST',
@@ -49,8 +47,6 @@ try {
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
 					if (me._asyncObjId === me.props.objId) {
-					//if (me._asyncCode) {
-						//console.log('====me._asyncCode====' + me._asyncCode);
 						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
 						
