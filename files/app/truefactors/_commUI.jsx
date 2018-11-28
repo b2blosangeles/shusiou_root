@@ -19,7 +19,7 @@ var _commUI = {
                         var shadow = (!me.props.class || !me.props.class.noshadow) ? ' shadow ' : '';
                         var className = shadow + 
                                     'border border-' + classType + ' alert-' + classType + ' ' +
-                                    'rounded p-2 m-1 mx-3';
+                                    'rounded p-2';
                         return (
                             <div className="col-sm-12 p-1">
                                 <div className={className} 
