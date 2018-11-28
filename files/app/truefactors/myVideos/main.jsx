@@ -17,7 +17,7 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {me.infoBox('', {type: 'success'})}
+			  {me.infoBox('Test', {type: 'success'})}
 			</div>
 			<div className="row ">
 				{list.map(function(m) {
