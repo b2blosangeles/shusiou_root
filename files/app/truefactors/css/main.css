@@ -103,17 +103,30 @@ body {
    from {transform: rotate(0deg);}
    to {transform: rotate(359deg);}
 }
-    .overlay {
-        background: #ffffff;
-        color: #666666;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        z-index: 5000;
-        top: 0;
-        left: 0;
-        float: left;
-        text-align: center;
-        padding-top: 25%;
-        opacity: 0.5
-    }
+.overlay_loading {
+    background: transparent;
+    color: #666666;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5001;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 0;
+    opacity: 1
+}
+.overlay_bg {
+    background: #000000;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 25%;
+    opacity: 0.5
+}
