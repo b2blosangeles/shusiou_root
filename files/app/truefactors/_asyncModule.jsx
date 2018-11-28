@@ -68,6 +68,7 @@ try {
 							 
 				} catch (err) {
 					return  (<span>Script Error: {err.message}</span>)
+					console.log(me._asyncModule.err)
 				}
 			} else {
 				return  (<span>{me.props.plugin.extend.loadingInfo}</span>)
