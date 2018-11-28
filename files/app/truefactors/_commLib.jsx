@@ -9,16 +9,17 @@ var _commLib = function () {
 		var _oId = __asyncOId + '.' + new Date().getTime();
 		return <_asyncModule plugin={setting} data={data} parent={me} objId={_oId}/>
     }
-	
-    this.getAuth = function() {
-		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
-    }
-
     this.getNumberList = function(n) {
     	var r = [];
 	for (var i = 0;  i < n; i++) r[i] = i;
 	return r;
     }
+	/*========== Need review ====*/
+    this.getAuth = function() {
+		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
+    }
+
+
 	
 	
     this.inte_array = function (a, b) {
