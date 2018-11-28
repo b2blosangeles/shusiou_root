@@ -7,7 +7,7 @@ React.createClass({
           var me = this;
           return  (
 		<div className="container">
-			<div className="row ">
+			<div className="row overlay">
 			{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
