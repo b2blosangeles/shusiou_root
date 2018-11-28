@@ -6,8 +6,9 @@ try {
 		},
 		componentDidMount:function(prevState, prevProps) {
 			var me = this;
-			console.log('---componentDidMount--');
-			me.loadPlugin();
+			console.log('---componentDidMount--==');
+			me.props.objId = 'AAA';
+			//me.loadPlugin();
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
