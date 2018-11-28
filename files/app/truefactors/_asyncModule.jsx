@@ -75,7 +75,6 @@ try {
 
 				}
 			} else {
-				console.log('===me._asyncModule=Err==>')
 				return  (<span>{me.props.plugin.extend.loadingInfo}</span>)
 			}
 		}
