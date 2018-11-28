@@ -2,13 +2,7 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
-          	return {role: ''}
-        },
-        componentDidMount:function() {
-               var me = this;
-        },
-        componentDidUpdate:function() {
-               var me = this;
+          	return {role: '', menuOption:''}
         },
 	asyncModule : function(setting, data) {
 		var me = this;
@@ -26,7 +20,14 @@ React.createClass({
 				}, ''
 			)
 		}
-		return <span></span>
+		return me.asyncModule(
+			{	extend: {
+					includes : [],
+					main : 'https://dev.shusiou.win/app/truefactors/myVideos/main.jsx'
+				}, 
+				master: '//master1_dev.shusiou.win/api/JSXhub.api'
+			}, ''
+		)
         }, 
         render: function() {
           var me = this;
