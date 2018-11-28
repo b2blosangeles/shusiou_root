@@ -15,12 +15,12 @@ var _commUI = {
       infoBox : React.createClass({
                     render : function () { 
                         var me = this;
-                        var classType = (!me.props.class || !me.props.class.type) ? 'info' : me.props.class.type;
-                        var shadow = (!me.props.class || !me.props.class.noshadow) ? ' shadow ' : '';
+                        var classType = (!me.props.setting || !me.props.setting.type) ? 'info' : me.props.setting.type;
+                        var shadow = (!me.props.setting || !me.props.setting.noshadow) ? ' shadow ' : '';
                         var className = shadow + 
                                     'border border-' + classType + ' alert-' + classType + ' ' +
                                     'rounded p-2 m-1';
-                        var style = (!me.props.style) ? {'min-height' : '2em'} : me.props.style;
+                        var style = (!me.props.setting.style) ? {'min-height' : '2em'} : me.props.setting.style;
                         return (
                             <div className="col-sm-12 p-1">
                                 <div className={className} 
