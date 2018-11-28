@@ -6,6 +6,7 @@ React.createClass({
         },
 	asyncModule : function(setting, data) {
 		var me = this;
+		console.log('called===' + data);
 		return <_asyncModule plugin={setting} data={data} parent={me} />
 	},
         showBody : function() {
