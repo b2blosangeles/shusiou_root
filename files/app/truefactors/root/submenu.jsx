@@ -31,7 +31,7 @@ var _subMenu = React.createClass({
 									<li className="nav-item">
 										<a className="nav-link disabled" 
 										href="JavaScript: void(0)">
-										{m.caption}</a>
+										<span style={{color:'yellow'}}>{m.caption}</span></a>
 									</li></span>)
 							})}
 
