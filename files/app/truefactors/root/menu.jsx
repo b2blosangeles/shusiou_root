@@ -5,6 +5,10 @@ var _menu = React.createClass({
 	
 	return {}
     },
+    clickOption : function(v) {
+	var me = this;    
+	me.props.parent.setStatus({ menuOption : v})    
+    },
     render: function() {
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : Root.global.menuTree[me.props.parent.state.role];
@@ -16,7 +20,9 @@ var _menu = React.createClass({
 					<ul className="nav">
 					{menu.map(function(m){ return(<span>
 						<li className="nav-item">
-							<a className="nav-link active" href="JavaScript: void(0)">{m.caption}</a>
+							<a className="nav-link active" 
+								onClick={me.clickOption.bind(me, m.code)}
+								href="JavaScript: void(0)">{m.caption}</a>
 						</li></span>)
 					})}
 
