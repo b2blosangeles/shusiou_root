@@ -17,8 +17,7 @@ $(document).ready(function(){
                               if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
                                     var Root = {
                                           lib	: (!_commLib) ? {} : new _commLib(),
-                                          commUI	:  (!_commUI) ? {} : _commUI,
-                                          global	:  (!_global) ? {} :  _global
+                                          commUI	:  (!_commUI) ? {} : _commUI
                                     };
                               }
                                
