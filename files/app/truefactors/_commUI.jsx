@@ -20,10 +20,11 @@ var _commUI = {
                         var className = shadow + 
                                     'border border-' + classType + ' alert-' + classType + ' ' +
                                     'rounded p-2 m-1';
+                        var style = (!me.props.style) ? {'min-height' : '2em'} ? me.props.style;
                         return (
                             <div className="col-sm-12 p-1">
                                 <div className={className} 
-                                    style={{'min-height' : '2em'}}>
+                                    style={style}>
                                     {me.props.data}
                                 </div>
                             </div>                        
