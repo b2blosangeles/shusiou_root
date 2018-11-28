@@ -4,11 +4,6 @@ React.createClass({
 		me.roles = Root.global.roles;
           	return {role: '', menuOption:''}
         },
-	asyncModule : function(setting, data) {
-		var me = this;
-		console.log('called===' + data);
-		return <_asyncModule plugin={setting} data={data} parent={me} objId={new Date().getTime()}/>
-	},
         showBody : function() {
                 var me = this;
 		if (me.state.role === 'inventor' && me.state.menuOption === 'myVideos') {
