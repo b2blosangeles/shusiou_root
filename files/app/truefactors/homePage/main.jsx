@@ -11,7 +11,9 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : (<span><span className="overlay"></span><span className="spinner"></span>Home <hr/> a Page</span>), 
+					data : (<span><span className="overlay_bg"></span>
+							<span className="overlay_loading"><span className="spinner"></span></span>
+							Home <hr/> a Page</span>), 
 					setting : {
 						type: 'success',
 						style: {'min-height' : '28em'}
