@@ -13,11 +13,9 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			{me.showBody()}	
-				<hr/>
-			{list.map(function(m) {
-				return me.videoBox('v' + m)
-			})}							
+				{list.map(function(m) {
+					return me.videoBox('v' + m)
+				})}							
 			</div>
 		</div>)
         }
