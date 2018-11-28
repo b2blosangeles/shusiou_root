@@ -3,11 +3,11 @@ var _commLib = function () {
 	
     _LibIndex = (!_LibIndex || _LibIndex > 1000000) ? 1 : (_LibIndex + 1);
 
-    this.asyncModule = function(setting, data, parent) {
+    this.asyncModule = function(cfg) {
 		var me = this;
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '.' + new Date().getTime();
-		return <_asyncModule plugin={setting} data={data} parent={parent} objId={_oId}/>
+		return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
     }
     this.getNumberList = function(n) {
     	var r = [];
