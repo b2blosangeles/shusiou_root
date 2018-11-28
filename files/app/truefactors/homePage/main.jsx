@@ -12,7 +12,12 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {me.infoBox('Home Page', {type: 'success'})}
+			  {me.infoBox('Home Page', 
+				{
+					type: 'success', 
+					style: {'min-height' : '11em'}
+				})
+			}
 			</div>
 		</div>)
         }
