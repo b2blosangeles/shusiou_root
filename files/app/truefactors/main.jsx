@@ -7,6 +7,7 @@ React.createClass({
         render: function() {
         	var me = this;
 		// return (<span>555</span>);
+		/*
 		return Root.lib.asyncModule(
 			{
 				extend: {
@@ -22,8 +23,8 @@ React.createClass({
 					   cacheTime : 1000
 				},
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'
-			}, 'gg');
-		
+			}, 'gg');*/
+		console.log(Root);
           return  (
 		 
 		<_asyncModule plugin={{
