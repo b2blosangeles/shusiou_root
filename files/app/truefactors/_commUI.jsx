@@ -24,7 +24,8 @@ var _commUI = {
                         return (
                             <div className="col-sm-12 p-1">
                                 <div className={className} 
-                                    style={style} dangerouslySetInnerHTML={{__html: me.props.data}}>
+                                    style={style} >
+                                    <span dangerouslySetInnerHTML={{__html: me.props.data}}/>
                                     {/*me.props.data*/}
                                 </div>
                             </div>                        
