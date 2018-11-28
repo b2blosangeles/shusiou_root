@@ -8,11 +8,15 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {Root.commUI.show('infoBox', me, 'Error: Empty Module!!!', {
-					type: 'danger', 
-					style: {'min-height' : '36em'}
-				})
-			  }   
+				{Root.commUI.show({
+					code: 'infoBox', 
+					parent : me, 
+					data : 'Error: Empty Module!!!', 
+					setting : {
+						type: 'danger',
+						style: {'min-height' : '28em'}
+						  }
+				})} 
 			</div>
 		</div>)
         }
