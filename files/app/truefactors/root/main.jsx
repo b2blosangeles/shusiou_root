@@ -38,7 +38,7 @@ React.createClass({
 			  
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12" style={{'min-height' : '48em'}}>
+					<div className="col-sm-12" style={{'min-height' : '40em'}}>
 						{me.showBody()}
 					</div>
 				</div>
