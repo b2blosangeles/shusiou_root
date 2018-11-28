@@ -41,7 +41,7 @@ React.createClass({
 	},
         showBody : function() {
                 var me = this;
-		if (me.state.role === 'inventor') {
+		if (me.state.role === 'inventor' && me.state.menuOption === 'myVideos') {
 			return me.asyncModule(
 				{	extend: {
 						includes : [],
@@ -51,7 +51,7 @@ React.createClass({
 				}, ''
 			)
 		}
-		return <span>Nothing</span>
+		return <span>--</span>
         }, 
 	infoBox : function(data, classCFG) {
 		var _infoBox = Root.commUI.infoBox;
