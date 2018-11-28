@@ -1,9 +1,9 @@
 var _global = {
 	roles : {
-		inventor	:	'Inventor',
-		/* attorney	:	'Attorney',
-		factorie	:	'Factory', */
-		investor	:	'Investor'
+		inventor :	{caption: 'Inventor'},
+		/* attorney :	{caption: 'Attorney'},
+		factorie :	{caption: 'Factory'}, */
+		investor :	{caption: 'Investor'}
 	},
 	menuTree : {
 		inventor : [
