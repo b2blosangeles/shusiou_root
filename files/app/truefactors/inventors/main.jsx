@@ -28,6 +28,15 @@ React.createClass({
 	},
         render: function() {
 		var me = this;
-		return  me.showBody();
+		return (<div className="container">
+				<div className="row ">
+				  {Root.commUI.show('infoBox', me, me.showBody(), 
+					{
+						type: 'success', 
+						style: {'min-height' : '28em'}
+					})
+				 }
+				</div>
+			</div>)
         }
 })
