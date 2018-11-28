@@ -7,8 +7,8 @@ var _global = {
 	},
 	menuTree : {
 		inventor : [
-			{code: 'info'},
-			{code:  'about'}
+			{code: 'uploadVideo', caption : 'Upload Video'},
+			{code:  'myInvention', caption : 'My Invention'} 
 		],
 		investor : [
 			{code: 'info 1'},
