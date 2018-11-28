@@ -31,22 +31,12 @@ var _subMenu = React.createClass({
 									<li className="nav-item">
 										<a className="nav-link disabled" 
 										href="JavaScript: void(0)">
-										<span style={{color:'yellow'}}>{m.caption}</span></a>
+										<span style={{color:'yellow'}}>
+											{m.caption}</span></a>
 									</li></span>)
 							})}
-
-						{/*<li className="nav-item">
-						<a className="nav-link" href="#">Link</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link disabled" href="#">
-							<span style={{color:'yellow'}}>Disabled</span></a>
-					</li>*/}
 					</ul>
 				</div>
-				{/*<div className="col-sm-4 text-left site-logo pt-0">
-					<div className="float-sm-right pt-2">&#169; {new Date().getFullYear()} Polo Alto Project</div>
-				</div>*/}
 			</div>
 		</div>
             </div>          
