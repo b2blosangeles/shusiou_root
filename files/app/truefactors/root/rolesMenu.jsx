@@ -25,7 +25,7 @@ var _rolesMenu = React.createClass({
 							{Object.keys(me.roles).map(function(idx){
 							  return <button className="border border-success btn-large rounded" 
 								onClick={me.pickMenu.bind(me, idx)}>
-								{me.roles[idx]}</button>
+								{me.roles[idx].caption}</button>
 							})}
 						</div>
 					</div>
