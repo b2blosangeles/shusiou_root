@@ -13,16 +13,10 @@ eact.createClass({
 	},
         render: function() {
           var me = this;
-	  var list = Root.lib.getNumberList(10);
           return  (
 		<div className="container">
 			<div className="row ">
-			  {me.infoBox('Test', {type: 'success'})}
-			</div>
-			<div className="row ">
-				{list.map(function(m) {
-					return me.videoBox('v' + m)
-				})}							
+			  {me.infoBox('Test', {type: 'info'})}
 			</div>
 		</div>)
         }
