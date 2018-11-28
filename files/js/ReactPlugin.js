@@ -1,5 +1,5 @@
+var __asyncOId = 0;
 $(document).ready(function(){
-      var __asyncOId = 0;
       $.ReactPlugin =  function(cfg) {
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
                 $.ajax({
