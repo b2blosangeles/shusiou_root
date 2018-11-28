@@ -15,8 +15,8 @@ var _secondMenu = React.createClass({
 				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">
 						<li className="nav-item">
-							<a className="nav-link active" href="#">Active</a>
-							{JSON.stringify(menu)}
+							<a className="nav-link active" href="#">Active = {JSON.stringify(menu)}</a>
+							
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="#">Link</a>
