@@ -3,9 +3,9 @@ React.createClass({
 		var me = this;
           	return {}
         },
-	videoBox : function(v) {
-		var _videoBox = Root.commUI.videoBox;
-		return <_videoBox data={v} />
+	cellBox : function(v) {
+		var _videoBox = Root.commUI.cellBox;
+		return <_cellBox data={v} />
 	},
 	infoBox : function(data, setting) {
 		var _infoBox = Root.commUI.infoBox;
@@ -21,7 +21,7 @@ React.createClass({
 			</div>
 			<div className="row ">
 				{list.map(function(m) {
-					return me.videoBox('v' + m)
+					return me.cellBox('v' + m)
 				})}							
 			</div>
 		</div>)
