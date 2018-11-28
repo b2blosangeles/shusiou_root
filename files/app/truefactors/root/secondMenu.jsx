@@ -2,10 +2,12 @@ var _secondMenu = React.createClass({
     getInitialState: function() {
 	var me = this;
 	me.roles = Root.global.roles;
+	
 	return {}
     },
     render: function() {
           var me = this;
+	  var menu = Root.global.menuTree[me.props.parent.state.role];
           return  (
             <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
 		<div className="container">
@@ -14,6 +16,7 @@ var _secondMenu = React.createClass({
 					<ul className="nav">
 						<li className="nav-item">
 							<a className="nav-link active" href="#">Active</a>
+							{JSON.stringify(menu)}
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="#">Link</a>
