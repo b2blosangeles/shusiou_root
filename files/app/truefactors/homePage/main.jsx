@@ -16,7 +16,7 @@ eact.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {me.infoBox('Test', {type: 'info'})}
+			  {me.infoBox('Empty Module!!!', {type: 'danger'})}
 			</div>
 		</div>)
         }
