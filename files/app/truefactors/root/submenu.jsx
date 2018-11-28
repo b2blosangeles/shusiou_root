@@ -27,7 +27,6 @@ var _subMenu = React.createClass({
 											onClick={me.clickOption.bind(me, m.code)}
 											href="JavaScript: void(0)">{m.caption}</a>
 									</li></span>)
-								})
 								:
 								(<span>
 									<li className="nav-item">
