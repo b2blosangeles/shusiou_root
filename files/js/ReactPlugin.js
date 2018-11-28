@@ -1,6 +1,5 @@
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
-                $.ReactPlugin_objId = (!$.ReactPlugin_objId || $.ReactPlugin_objId > 10000) ? 1 : ($.ReactPlugin_objId + 1)
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
                 $.ajax({
                    type: 'POST',
