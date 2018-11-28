@@ -20,7 +20,7 @@ React.createClass({
 		}		
 		
 		if (me.state.role === 'investor') {
-			return Root.lib.asyncModule(
+			return Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [],
 							main : 'https://dev.shusiou.win/app/truefactors/errPage/main.jsx'
@@ -31,7 +31,7 @@ React.createClass({
 				parent : me
 			})
 		} 
-		return Root.lib.asyncModule(
+		return Root.lib.asyncModule({
 			setting:{	extend: {
 						includes : [],
 						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
