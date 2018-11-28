@@ -13,12 +13,21 @@ React.createClass({
 						code: 'infoBox', 
 						parent : me, 
 						data : 'Test', 
-						setting : {type: 'success'}
+						setting : {
+							type: 'success'
+						}
 					})}
 				</div>
 				<div className="row ">
 					{list.map(function(m) {
-						return Root.commUI.show('cellBox', me, '<b>v' + m + '</b>')
+						return Root.commUI.show({
+						code: 'cellBox', 
+						parent : me, 
+						data : ''<b>v' + m + '</b>', 
+						setting : {
+							noshadow :true,
+							type: 'success'
+						}
 					})}							
 				</div>
 			</div>)			
