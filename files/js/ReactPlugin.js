@@ -1,4 +1,5 @@
 $(document).ready(function(){
+      var __asyncOId = 0;
       $.ReactPlugin =  function(cfg) {
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
                 $.ajax({
@@ -9,7 +10,6 @@ $(document).ready(function(){
                    timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
                    success: function(resultData){
                          try {
-                              var __asyncOId = 0;
                               var code =  decodeURIComponent(resultData.inc) + 
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/(\s|\;)+$/g, '') + 
