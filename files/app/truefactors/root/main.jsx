@@ -14,19 +14,25 @@ React.createClass({
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
 				}, ''
-			)
-		} else
+			)}
 		if (me.state.role === 'investor') {
 			return Root.lib.asyncModule(
 				{	extend: {
 						includes : [],
-						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
+						main : 'https://dev.shusiou.win/app/truefactors/errPage/main.jsx'
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
 				}, ''
-			)
-		} else		
-		return 666
+			)} 
+		
+		return Root.lib.asyncModule(
+			{	extend: {
+					includes : [],
+					main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
+				}, 
+				master: '//master1_dev.shusiou.win/api/JSXhub.api'
+			}, ''
+		)}	
         }, 
         render: function() {
           var me = this;
