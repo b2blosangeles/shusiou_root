@@ -14,17 +14,19 @@ var _secondMenu = React.createClass({
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">
+					{menu.map(function(m){ return(
 						<li className="nav-item">
-							<a className="nav-link active" href="#">Active = {JSON.stringify(menu)}</a>
-							
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">Link</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link disabled" href="#">
-								<span style={{color:'yellow'}}>Disabled</span></a>
-						</li>
+							<a className="nav-link active" href="JavaScript: void(0)">{m.code}</a>
+						</li>)
+					})}
+
+					<li className="nav-item">
+						<a className="nav-link" href="#">Link</a>
+					</li>
+					<li className="nav-item">
+						<a className="nav-link disabled" href="#">
+							<span style={{color:'yellow'}}>Disabled</span></a>
+					</li>
 					</ul>
 				</div>
 				{/*<div className="col-sm-4 text-left site-logo pt-0">
