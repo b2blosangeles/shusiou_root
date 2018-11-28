@@ -9,6 +9,7 @@ $(document).ready(function(){
                    timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
                    success: function(resultData){
                          try {
+                              var _asyncObjId = 0;
                               var code =  decodeURIComponent(resultData.inc) + 
                                    'ReactDOM.render(React.createElement(' + 
                                    decodeURIComponent(resultData.master).replace(/(\s|\;)+$/g, '') + 
