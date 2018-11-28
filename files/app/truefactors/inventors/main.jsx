@@ -23,7 +23,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.myVideos();
 		} else {
-			<span>No update</span>
+			return (<span>No update</span>)
 		}	
 	},
         render: function() {
