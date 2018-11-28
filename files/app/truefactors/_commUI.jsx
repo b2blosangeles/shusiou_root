@@ -6,7 +6,8 @@ var _commUI = {
                             <div className="col-sm-3 p-1">
                                 <div className="shadow border border-secondary bg-cellBox rounded p-2 m-1" 
                                     style={{'min-height' : '9em'}}>
-                                    {me.props.data}
+                                     {(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+                                    : me.props.data}
                                 </div>
                             </div>                        
                         )
