@@ -18,7 +18,7 @@ React.createClass({
 					'https://dev.shusiou.win/app/truefactors/root/sectionInventors.jsx',
 					'https://dev.shusiou.win/app/truefactors/root/sectionInvestors.jsx'
 					 ],
-				   loadingInfo : 'Loading ...',
+				   loadingInfo : '', // 'Loading ...',
 				   main : 'https://dev.shusiou.win/app/truefactors/root/main.jsx',
 				   cacheTime : 1000
 				}, 
