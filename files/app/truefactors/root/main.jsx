@@ -39,12 +39,20 @@ React.createClass({
                 var me = this;
 		if (!me.state.role) return (<span/>);
 		else {
+			switch (true) {
+				case (me.state.role === 'inventor') :  return (<_sectionInventors/>);
+				case (me.state.role === 'investor' : return (<_sectionInvestors/>);
+				default :
+					return 'Error: undefined section <' + me.state.role + '/>';
+			}			
+			/*
 			switch (me.state.role) {
 				case 'inventor' :  return (<_sectionInventors/>);
 				case 'investor' : return (<_sectionInvestors/>);
 				default :
 					return 'Error: undefined section <' + me.state.role + '/>';
 			}
+			*/
 		}
         }, 
 	videoBox : function(v) {
