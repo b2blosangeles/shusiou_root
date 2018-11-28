@@ -7,35 +7,40 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		if (me.state.role === 'inventor') {
-			return Root.lib.asyncModule(
-				{	extend: {
-						includes : [],
-						main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
-					}, 
-					master: '//master1_dev.shusiou.win/api/JSXhub.api'
-				}, '', me
-			)
+			return Root.lib.asyncModule({
+				setting:{	extend: {
+							includes : [],
+							main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
+						}, 
+						master: '//master1_dev.shusiou.win/api/JSXhub.api'
+					},
+				data : '',
+				parent : me
+			})
 		}		
 		
 		if (me.state.role === 'investor') {
 			return Root.lib.asyncModule(
-				{	extend: {
+				setting:{	extend: {
+							includes : [],
+							main : 'https://dev.shusiou.win/app/truefactors/errPage/main.jsx'
+						}, 
+						master: '//master1_dev.shusiou.win/api/JSXhub.api'
+					},
+				data : '',
+				parent : me
+			})
+		} 
+		return Root.lib.asyncModule(
+			setting:{	extend: {
 						includes : [],
-						main : 'https://dev.shusiou.win/app/truefactors/errPage/main.jsx'
+						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
-				}, ''
-			)
-		} 
-		
-		return Root.lib.asyncModule(
-			{	extend: {
-					includes : [],
-					main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
-				}, 
-				master: '//master1_dev.shusiou.win/api/JSXhub.api'
-			}, ''
-		)	
+				},
+			data : '',
+			parent : me
+		})	
         }, 
         render: function() {
           var me = this;
