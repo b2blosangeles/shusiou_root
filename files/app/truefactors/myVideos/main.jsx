@@ -4,7 +4,7 @@ React.createClass({
           	return {}
         },
 	cellBox : function(v) {
-		var _videoBox = Root.commUI.cellBox;
+		var _cellBox = Root.commUI.cellBox;
 		return <_cellBox data={v} />
 	},
 	infoBox : function(data, setting) {
