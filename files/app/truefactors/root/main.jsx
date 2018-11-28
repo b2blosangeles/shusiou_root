@@ -57,7 +57,7 @@ React.createClass({
 	},
         render: function() {
           var me = this;
-	  var list = Root.lib.getNumberList(16);
+	  var list = Root.lib.getNumberList(10);
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
