@@ -24,7 +24,7 @@ React.createClass({
 				},
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'
 			}, 'gg');*/
-		console.log(Root);
+	//	console.log(Root);
           return  (
 		 
 		<_asyncModule plugin={{
