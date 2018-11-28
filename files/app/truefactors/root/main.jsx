@@ -30,7 +30,7 @@ React.createClass({
 				}, 'bbb'
 			)
 		} else		
-		return 333
+		return 666
         }, 
         render: function() {
           var me = this;
