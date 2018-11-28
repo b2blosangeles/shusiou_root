@@ -8,12 +8,15 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {Root.commUI.show('infoBox', me, 'Home <br> Page', 
-				{
-					type: 'success', 
-					style: {'min-height' : '28em'}
-				})
-			}
+			{Root.commUI.show({
+					code: 'infoBox', 
+					parent : me, 
+					data : 'Home <hr/> Page', 
+					setting : {
+						type: 'success',
+						style: {'min-height' : '28em'}
+						  }
+				})}
 			</div>
 		</div>)
         }
