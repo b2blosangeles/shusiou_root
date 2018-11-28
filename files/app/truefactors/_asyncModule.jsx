@@ -18,7 +18,7 @@ try {
 		loadPlugin : function() {
 			var me = this;
 			me._asyncModule = null;
-			me._asyncCode = me.props.code;
+			me._asyncCode = me.props.objId;
 			// me._asyncCode = new Date().getTime();
 			var cfg = me.props.plugin;
 			  $.ajax({
