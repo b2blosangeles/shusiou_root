@@ -42,16 +42,16 @@ try {
 			if (me.state.success === false) {
 				return  (<span>Script Error: {me._asyncModuleErr}</span>)
 			} else if (me._asyncModule) {
-				console.log('===me._asyncModule==1=>')
-				console.log(me._asyncModule)
+				if ((me._asyncModule.err) && (me._asyncModule.err.length)) {
+					console.log(me._asyncModule.err)
+				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
 					if (me._asyncObjId === me.props.objId) {
 					//if (me._asyncCode) {
 						//console.log('====me._asyncCode====' + me._asyncCode);
-						var code = 'try {' + decodeURIComponent(me._asyncModule.inc) + 'return ' + 
-						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '') +
-						"\n } catch (e) { console.log(888) } ";
+						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
+						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
 						
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
@@ -72,8 +72,6 @@ try {
 							 />)
 							 
 				} catch (err) {
-					console.log('===me._asyncModule==2=>')
-					console.log(err)
 					return  (<span>Script Error: {err.message}</span>)
 
 				}
