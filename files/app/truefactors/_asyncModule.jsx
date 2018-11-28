@@ -6,12 +6,14 @@ try {
 		},
 		componentDidMount:function(prevState, prevProps) {
 			var me = this;
+			console.log('---componentDidMount--');
 			me.loadPlugin();
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
 			console.log('updated -> ' + prevProps.objId);
 			if (me.props.objId !== prevProps.objId) { 
+				console.log('---componentDidUpdate--');
 				me.loadPlugin();
 			}	
 		},		
