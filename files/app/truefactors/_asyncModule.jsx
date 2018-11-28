@@ -10,6 +10,7 @@ try {
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
+			console.log('updated' + prevProps.code);
 			if (me.props.code !== prevProps.code) { 
 				me.loadPlugin();
 			}	
