@@ -50,17 +50,16 @@ try {
 						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
 						
-						if (typeof Root === 'undefined') {
-							var Root = (!_commLib) ? {} : 
-							{
-								lib	: new _commLib(),
-								commUI	: _commUI,
-								global	: _global
+						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
+							var Root = {
+								lib	: (!_commLib) ? {} : new _commLib(),
+								commUI	:  (!_commUI) ? {} : _commUI,
+								global	:  (!_global) ? {} :  _global
 							};
-						} 
+						}
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
-							code)((_asyncModule) ? _asyncModule : {}, 
-							      Root); 
+						code)((_asyncModule) ? _asyncModule : {}, 
+						Root); 
 					}
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data) ? me.props.data : {}}
