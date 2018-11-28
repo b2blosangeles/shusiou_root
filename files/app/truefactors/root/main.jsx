@@ -6,16 +6,6 @@ React.createClass({
         },
         showBody : function() {
                 var me = this;
-		if (me.state.role === 'inventor' && me.state.menuOption === 'myVideos') {
-			return Root.lib.asyncModule(
-				{	extend: {
-						includes : [],
-						main : 'https://dev.shusiou.win/app/truefactors/myVideos/main.jsx'
-					}, 
-					master: '//master1_dev.shusiou.win/api/JSXhub.api'
-				}, ''
-			)
-		}
 		if (me.state.role === 'inventor') {
 			return Root.lib.asyncModule(
 				{	extend: {
