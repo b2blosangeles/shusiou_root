@@ -49,8 +49,9 @@ try {
 					if (me._asyncObjId === me.props.objId) {
 					//if (me._asyncCode) {
 						//console.log('====me._asyncCode====' + me._asyncCode);
-						var code =  decodeURIComponent(me._asyncModule.inc) + 'return ' + 
-						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, ''); 
+						var code = 'try {' decodeURIComponent(me._asyncModule.inc) + 'return ' + 
+						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '') +
+						' } catch (e) { console.log(888) } ';
 						
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
