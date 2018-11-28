@@ -20,20 +20,20 @@ var _subMenu = React.createClass({
 					<ul className="nav">
 					{menu.map(function(m){ 	
 						return
-							(me.props.parent.state.menuOption === m.code) ?
+							//(me.props.parent.state.menuOption === m.code) ?
 								(<span>
 									<li className="nav-item">
 										<a className="nav-link active" 
 											onClick={me.clickOption.bind(me, m.code)}
 											href="JavaScript: void(0)">{m.caption}</a>
 									</li></span>)
-								:
+								/*:
 								(<span>
 									<li className="nav-item">
 										<a className="nav-link disabled" 
 										href="JavaScript: void(0)">
 										{m.caption}</a>
-									</li></span>)
+									</li></span>)*/
 							})}
 
 						{/*<li className="nav-item">
