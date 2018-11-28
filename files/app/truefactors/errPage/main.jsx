@@ -4,7 +4,7 @@ React.createClass({
           	return {}
         },
 	infoBox : function(data, setting) {
-		var _infoBox = Root.commUI.infoBox;
+		var _infoBox = Root.commUI.show;
 		return <_infoBox data={data} setting={setting} />
 	},
         render: function() {
@@ -12,7 +12,7 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {me.infoBox('Error: Empty Module!!!', {
+			  {Root.commUI.show('infoBox', me, 'Error: Empty Module!!!', {
 					type: 'danger', 
 					style: {'min-height' : '36em'}
 				})
