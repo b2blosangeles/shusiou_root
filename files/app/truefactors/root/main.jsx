@@ -16,6 +16,17 @@ React.createClass({
 				}, ''
 			)
 		}
+		if (me.state.role === 'inventor') {
+			return Root.lib.asyncModule(
+				{	extend: {
+						includes : [],
+						main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
+					}, 
+					master: '//master1_dev.shusiou.win/api/JSXhub.api'
+				}, ''
+			)
+		}		
+		
 		if (me.state.role === 'investor') {
 			return Root.lib.asyncModule(
 				{	extend: {
