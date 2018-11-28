@@ -16,7 +16,8 @@ var _commUI = {
                     render : function () { 
                         var me = this;
                         var classType = (!me.props.class || !me.props.class.type) ? 'info' : me.props.class.type;
-                        var className = 
+                        var shadow = (!me.props.class || !me.props.class.noshadow) ? ' shadow ' : '';
+                        var className = shadow + 
                                     'border border-' + classType + ' alert-' + classType + ' ' +
                                     'rounded p-2 m-1 mx-3';
                         return (
