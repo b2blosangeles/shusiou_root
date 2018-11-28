@@ -72,7 +72,7 @@ body {
 .spinner {
    position: absolute;
    left: 50%;
-   top: 50%;
+   top: 20%;
    height:60px;
    width:60px;
    margin:0px auto;
