@@ -15,7 +15,7 @@ React.createClass({
 					setting : {
 						type: 'danger',
 						style: {'min-height' : '28em'}
-						  }
+					}
 				})} 
 			</div>
 		</div>)
