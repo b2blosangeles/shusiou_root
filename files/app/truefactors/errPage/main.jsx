@@ -15,7 +15,8 @@ React.createClass({
 			  {me.infoBox('Error: Empty Module!!!', {
 					type: 'danger', 
 					style: {'min-height' : '36em'}
-				})     
+				})
+			  }   
 			</div>
 		</div>)
         }
