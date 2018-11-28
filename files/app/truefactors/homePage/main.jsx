@@ -15,7 +15,7 @@ React.createClass({
 			  {me.infoBox('Home Page', 
 				{
 					type: 'success', 
-					style: {'min-height' : '11em'}
+					style: {'min-height' : '36em'}
 				})
 			}
 			</div>
