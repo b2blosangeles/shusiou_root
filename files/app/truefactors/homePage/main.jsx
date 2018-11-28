@@ -12,7 +12,7 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-			  {me.infoBox('Empty Module!!!', {type: 'danger'})}
+			  {me.infoBox('Home Page', {type: 'success'})}
 			</div>
 		</div>)
         }
