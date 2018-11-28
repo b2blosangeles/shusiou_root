@@ -1,4 +1,4 @@
-var __asyncOId = 0;
+var __asyncOId = 0, __asyncCache = {};
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
