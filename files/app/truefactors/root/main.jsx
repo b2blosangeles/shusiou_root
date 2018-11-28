@@ -11,6 +11,7 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		if (me.state.role === 'inventor' && me.state.menuOption === 'myVideos') {
+			return 111;
 			return me.asyncModule(
 				{	extend: {
 						includes : [],
