@@ -3,7 +3,7 @@ var _commLib = function () {
 	
     _LibIndex = (!_LibIndex || _LibIndex > 1000000) ? 1 : (_LibIndex + 1);
 
-    this.asyncModule : function(setting, data) {
+    this.asyncModule = function(setting, data) {
 		var me = this;
 		console.log('called=A==' + data);
 		return <_asyncModule plugin={setting} data={data} parent={me} objId={new Date().getTime()}/>
