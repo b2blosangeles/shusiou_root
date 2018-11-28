@@ -23,7 +23,7 @@ React.createClass({
 		return me.asyncModule(
 			{	extend: {
 					includes : [],
-					main : 'https://dev.shusiou.win/app/truefactors/myVideos/main.jsx'
+					main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'
 			}, ''
