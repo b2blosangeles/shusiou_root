@@ -63,7 +63,6 @@ React.createClass({
 	},
         render: function() {
           var me = this;
-	  var list = Root.lib.getNumberList(10);
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
@@ -82,15 +81,7 @@ React.createClass({
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12" style={{'min-height' : '32em'}}>
-						<div className="container">
-							<div className="row ">
-							{me.showBody()}	
-								<hr/>
-							{list.map(function(m) {
-								return me.videoBox('v' + m)
-							})}							
-							</div>
-						</div>
+						{me.showBody()}
 					</div>
 				</div>
 			</div>
