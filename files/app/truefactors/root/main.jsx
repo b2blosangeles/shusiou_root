@@ -35,25 +35,23 @@ React.createClass({
 		me.roles = Root.global.roles;
 		me.setState({role: ''});
         },
+	asyncModule : function(setting, data) {
+		var me = this;
+		return <_asyncModule plugin={setting} data={data} parent={me} />
+	},
         showBody : function() {
                 var me = this;
-		if (!me.state.role) return (<span/>);
-		else {
-			switch (true) {
-				case (me.state.role === 'inventor') :  return (<_sectionInventors/>);
-				case (me.state.role === 'investor') : return (<_sectionInvestors/>);
-				default :
-					return 'Error: undefined section <' + me.state.role + '/>';
-			}			
-			/*
-			switch (me.state.role) {
-				case 'inventor' :  return (<_sectionInventors/>);
-				case 'investor' : return (<_sectionInvestors/>);
-				default :
-					return 'Error: undefined section <' + me.state.role + '/>';
-			}
-			*/
+		if (me.state.role === 'inventor') {
+			me.asyncModule(
+				{	extend: {
+						includes : [],
+						main : 'https://dev.shusiou.win/app/truefactors/adbox/main.jsx'
+					}, 
+					master: '//master1_dev.shusiou.win/api/JSXhub.api'
+				}, ''
+			)
 		}
+		return <span/>
         }, 
 	videoBox : function(v) {
 		var _videoBox = Root.commUI.videoBox;
@@ -86,6 +84,8 @@ React.createClass({
 					<div className="col-sm-12" style={{'min-height' : '32em'}}>
 						<div className="container">
 							<div className="row ">
+							{me.showBody()}	
+								<hr/>
 							{list.map(function(m) {
 								return me.videoBox('v' + m)
 							})}							
