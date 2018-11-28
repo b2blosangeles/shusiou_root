@@ -21,14 +21,14 @@ React.createClass({
 				<div className="row ">
 					{list.map(function(m) {
 						return Root.commUI.show({
-						code: 'cellBox', 
-						parent : me, 
-						data : '<b>v' + m + '</b>', 
-						setting : {
-							noshadow :true,
-							type: 'success'
-						}
-					})}							
+							code: 'cellBox', 
+							parent : me, 
+							data : '<b>v' + m + '</b>', 
+							setting : {
+								noshadow :true,
+								type: 'success'
+							}
+						})}							
 				</div>
 			</div>)			
 	},
