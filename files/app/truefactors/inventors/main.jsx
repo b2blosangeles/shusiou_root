@@ -3,7 +3,7 @@ React.createClass({
 		var me = this;
           	return {}
         },
-	showBody : function() {
+	myVideos : function() {
 		var me = this;
 		var list = Root.lib.getNumberList(10);
 		return  (
@@ -16,7 +16,15 @@ React.createClass({
 						return Root.commUI.show('cellBox', me, '<b>v' + m + '</b>')
 					})}							
 				</div>
-			</div>)	
+			</div>)			
+	},
+	showBody : function() {
+		var me = this;
+		if (me.props.parent.state.menuOption === 'myVideos') {
+			return me.myVideos();
+		} else {
+			<span>No update</span>
+		}	
 	},
         render: function() {
 		var me = this;
