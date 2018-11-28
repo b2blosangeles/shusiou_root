@@ -13,10 +13,7 @@ React.createClass({
 			extend: {
 				  includes : [
 					'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
-					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx',
-
-					'https://dev.shusiou.win/app/truefactors/root/sectionInventors.jsx',
-					'https://dev.shusiou.win/app/truefactors/root/sectionInvestors.jsx'
+					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
 				   loadingInfo : '', // 'Loading ...',
 				   main : 'https://dev.shusiou.win/app/truefactors/root/main.jsx',
