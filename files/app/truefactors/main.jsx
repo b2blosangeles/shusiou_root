@@ -6,6 +6,8 @@ React.createClass({
         }, 
         render: function() {
         	var me = this;
+		$.ReactPlugin_objId = (!$.ReactPlugin_objId || $.ReactPlugin_objId > 1000000) ? 1 : ($.ReactPlugin_objId + 1);
+		var _objId = $.ReactPlugin_objId + '-' + new Date().getTime();
 		return  (
 			<_asyncModule plugin={{
 			extend: {
@@ -21,7 +23,7 @@ React.createClass({
 				   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-		parent={me} objId={$.ReactPlugin_objId + '_' + new Date().getTime()} />
+		parent={me} objId={_objId} />
 		)
         }
 })
