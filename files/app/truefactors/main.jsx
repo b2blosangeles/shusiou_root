@@ -5,8 +5,10 @@ React.createClass({
           	return {}
         }, 
         render: function() {
-          var me = this;
+        	var me = this;
+		return 555;
           return  (
+		 
 		<_asyncModule plugin={{
 			extend: {
 				  includes : [
