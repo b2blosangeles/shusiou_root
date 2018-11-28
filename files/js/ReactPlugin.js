@@ -29,9 +29,9 @@ $(document).ready(function(){
                                     console.log(resultData.err);
                              }      
     
-                         } catch {
+                         } catch (err) {
                               console.log('something wrong ===!!!');
-                              console.log(resultData.err);
+                              console.log(err);
                          }
 
                    },
