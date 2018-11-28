@@ -64,15 +64,7 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 
-			<div className="container">
-				<div className="row">
-					<div className="col-sm-12 mt-2">
-					<div className="row">
-						{me.infoBox(me.asyncSalesForce(), {type: 'success'})}
-					</div>
-					</div>
-				</div>
-			</div>			  
+		  
 			  
 			<div className="container">
 				<div className="row">
@@ -81,6 +73,18 @@ React.createClass({
 					</div>
 				</div>
 			</div>
+			
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-12 mt-2">
+						<div className="row">
+						<div className="row">
+							{me.infoBox(me.asyncSalesForce(), {type: 'success'})}
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>				  
 			  
 			<div className="container">
 				<div className="row">
