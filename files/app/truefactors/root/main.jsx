@@ -61,7 +61,7 @@ React.createClass({
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
-			<_menu parent={me}/>
+			<_subMenu parent={me}/>
 
 			<div className="container">
 				<div className="row">
