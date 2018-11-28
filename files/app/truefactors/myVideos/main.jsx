@@ -21,7 +21,7 @@ React.createClass({
 			</div>
 			<div className="row ">
 				{list.map(function(m) {
-					return me.cellBox('v' + m)
+					return me.cellBox('<b>v' + m + '</b>')
 				})}							
 			</div>
 		</div>)
