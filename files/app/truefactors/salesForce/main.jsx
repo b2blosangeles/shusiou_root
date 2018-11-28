@@ -7,7 +7,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			infopad {new Date().getTime()} --> {Root.lib.test('salesForce')}
+			infopad {new Date().getTime()} 
 		</span>
           )
         }
