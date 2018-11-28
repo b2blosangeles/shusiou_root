@@ -3,10 +3,6 @@ React.createClass({
 		var me = this;
           	return {}
         },
-	infoBox : function(data, setting) {
-		var _infoBox = Root.commUI.show;
-		return <_infoBox data={data} setting={setting} />
-	},
         render: function() {
           var me = this;
           return  (
