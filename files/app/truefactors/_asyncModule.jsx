@@ -7,7 +7,7 @@ try {
 		componentDidMount:function(prevState, prevProps) {
 			var me = this;
 			console.log('---componentDidMount--==');
-			me.props.objId = 'AAA';
+			// me.props.objId = 'AAA';
 			me.setState({updated : new Date().getTime() })
 			//me.loadPlugin();
 		},		
