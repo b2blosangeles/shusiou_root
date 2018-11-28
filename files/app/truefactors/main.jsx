@@ -21,7 +21,7 @@ React.createClass({
 				   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-		parent={me} objId={$.ReactPlugin__objId + '_' + new Date().getTime()} />
+		parent={me} objId={$.ReactPlugin_objId + '_' + new Date().getTime()} />
 		)
         }
 })
