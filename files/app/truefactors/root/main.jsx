@@ -67,7 +67,7 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-12 mt-2">
 					<div className="row">
-						{me.infoBox(me.asyncSalesForce(), {type: 'warning'})}
+						{me.infoBox(me.asyncSalesForce(), {type: 'success'})}
 					</div>
 					</div>
 				</div>
