@@ -23,7 +23,7 @@ React.createClass({
 						return Root.commUI.show({
 						code: 'cellBox', 
 						parent : me, 
-						data : ''<b>v' + m + '</b>', 
+						data : '<b>v' + m + '</b>', 
 						setting : {
 							noshadow :true,
 							type: 'success'
