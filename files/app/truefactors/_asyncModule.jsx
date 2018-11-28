@@ -20,8 +20,9 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			if (__asyncCache[me.props.plugin.master]) {
-				me._asyncModule = __asyncCache[me.props.plugin.master];
+			console.log('===>' + me.props.plugin.extend.main);
+			if (__asyncCache[me.props.plugin.extend.main]) {
+				me._asyncModule = __asyncCache[me.props.plugin.extend.main];
 				me.setState({success: true, update : new Date().getTime()});
 			} else {  
 				$.ajax({
@@ -31,7 +32,7 @@ try {
 				     dataType: 'JSON',
 				     timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
 				     success: function(resultData){
-					   __asyncCache[me.props.plugin.master] = resultData;
+					   __asyncCache[me.props.plugin.extend.main] = resultData;
 					   me._asyncModule = resultData;
 					   me.setState({success: true, update : new Date().getTime()});
 				     },
