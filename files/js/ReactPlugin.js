@@ -15,10 +15,7 @@ $(document).ready(function(){
                                    ', null), cfg.viewPoint);';
                               
                               if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
-                                    var Root = {
-                                          lib	: (!_commLib) ? {} : new _commLib(),
-                                          commUI	:  (!_commUI) ? {} : _commUI
-                                    };
+                                    var Root = {};
                               }
                                
                               new Function('cfg', 'Root', code)(cfg, Root);  
