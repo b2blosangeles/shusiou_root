@@ -20,21 +20,28 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			  $.ajax({
-			     type: 'POST',
-			     url: me.props.plugin.master,
-			     data: me.props.plugin.extend,
-			     dataType: 'JSON',
-			     timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
-			     success: function(resultData){
-				   me._asyncModule = resultData;
-				   me.setState({success: true, update : new Date().getTime()});
-			     },
-			     error : function(xhr, textStatus, error) { 
-			       me._asyncModuleErr = error;
-			       me.setState({success: false, update : new Date().getTime()})
-			     }
-			  }); 			
+			if (__asyncCache[me.props.plugin.master]) {
+				var resultData = __asyncCache[me.props.plugin.master];
+				me._asyncModule = resultData;
+				me.setState({success: true, update : new Date().getTime()});
+			} else {  
+				$.ajax({
+				     type: 'POST',
+				     url: me.props.plugin.master,
+				     data: me.props.plugin.extend,
+				     dataType: 'JSON',
+				     timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
+				     success: function(resultData){
+					   __asyncCache[me.props.plugin.master] = resultData;
+					   me._asyncModule = resultData;
+					   me.setState({success: true, update : new Date().getTime()});
+				     },
+				     error : function(xhr, textStatus, error) { 
+				       me._asyncModuleErr = error;
+				       me.setState({success: false, update : new Date().getTime()})
+				     }
+				  }); 
+			}
 		},
 		render: function() {
 			var me = this;
