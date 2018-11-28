@@ -20,14 +20,17 @@ React.createClass({
 				}, ''
 			)
 		}
-		return me.asyncModule(
-			{	extend: {
-					includes : [],
-					main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
-				}, 
-				master: '//master1_dev.shusiou.win/api/JSXhub.api'
-			}, ''
-		)
+		if (me.state.role === 'investor') {
+			return me.asyncModule(
+				{	extend: {
+						includes : [],
+						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
+					}, 
+					master: '//master1_dev.shusiou.win/api/JSXhub.api'
+				}, ''
+			)
+		}		
+		return 222
         }, 
         render: function() {
           var me = this;
