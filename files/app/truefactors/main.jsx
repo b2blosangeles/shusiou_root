@@ -6,7 +6,7 @@ React.createClass({
         }, 
         render: function() {
         	var me = this;
-		return (<span>555</span>);
+		// return (<span>555</span>);
 		return Root.lib.asyncModule(
 			{
 				extend: {
