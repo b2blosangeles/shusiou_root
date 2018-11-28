@@ -57,6 +57,7 @@ React.createClass({
 	},
         render: function() {
           var me = this;
+	  var list = Root.lib.getNumberList(10);
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
@@ -77,40 +78,9 @@ React.createClass({
 					<div className="col-sm-12" style={{'min-height' : '32em'}}>
 						<div className="container">
 							<div className="row ">
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-								{me.videoBox('')}
-
-								{/*me.videoBox(me.asyncAdbox('2'))}
-								{me.videoBox(me.asyncAdbox('1'))}
-								{me.videoBox(me.asyncAdbox('3'))}
-								{me.videoBox(me.asyncAdbox('2'))}
-								{me.videoBox(me.asyncAdbox('1'))}
-								{me.videoBox(me.asyncAdbox('3'))}
-								{me.videoBox(me.asyncAdbox('2'))}
-								{me.videoBox(me.asyncAdbox('1'))}
-								{me.videoBox(me.asyncAdbox('3'))}
-
-								{me.videoBox(me.asyncAdbox('2'))}
-								{me.videoBox(me.asyncAdbox('1'))}
-								{me.videoBox(me.asyncAdbox('3'))}
-								{me.videoBox(me.asyncAdbox('2'))}
-								{me.videoBox(me.asyncAdbox('1'))}
-								{me.videoBox(me.asyncAdbox('3'))}
-								{me.videoBox(me.asyncAdbox('2'))}
-								{me.videoBox(me.asyncAdbox('1'))}
-								{me.videoBox(me.asyncAdbox('3'))*/}							
+							{list.map(function(m) {
+								return me.videoBox(m)
+							})}							
 							</div>
 						</div>
 					</div>
