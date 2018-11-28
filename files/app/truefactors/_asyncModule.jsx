@@ -59,9 +59,11 @@ try {
 								global	:  (!_global) ? {} :  _global
 							};
 						}
+						console.log('===me._asyncModule==A=>')
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root); 
+						console.log('===me._asyncModule==B=>')
 					}
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data) ? me.props.data : {}}
