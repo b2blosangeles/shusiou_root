@@ -21,7 +21,7 @@ React.createClass({
                          	   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-		root={me} />
+		root={me} objId={new Date().getTime()} />
           )
         }
 })
