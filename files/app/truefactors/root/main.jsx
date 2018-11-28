@@ -14,7 +14,8 @@ React.createClass({
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
 				}, ''
-			)}
+			)
+		}
 		if (me.state.role === 'investor') {
 			return Root.lib.asyncModule(
 				{	extend: {
@@ -23,7 +24,8 @@ React.createClass({
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
 				}, ''
-			)} 
+			)
+		} 
 		
 		return Root.lib.asyncModule(
 			{	extend: {
@@ -32,7 +34,7 @@ React.createClass({
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'
 			}, ''
-		)}	
+		)	
         }, 
         render: function() {
           var me = this;
