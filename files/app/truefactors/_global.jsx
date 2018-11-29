@@ -6,7 +6,10 @@ var _global = {
 		investor :	{caption: 'Investor'}
 	},
 	menuTree : {
-		inventor : [
+		common	 : [
+			{code: 'about', caption : 'About Plato Plan'},
+			{code:  'contact', caption : 'Contact Us'} 		
+		], inventor : [
 			{code: 'myVideos', caption : 'My Videos'},
 			{code:  'myInvention', caption : 'My Inventions'} 
 		],
