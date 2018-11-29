@@ -132,7 +132,7 @@ body {
     top: 0; left: 0;
     float: left;
     text-align: center;
-    padding-top: 30%;
+    padding-top: 10em;
     opacity: 1
 }
 .overlay_popup_cover {
