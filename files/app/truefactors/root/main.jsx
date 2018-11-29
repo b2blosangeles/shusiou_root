@@ -45,7 +45,7 @@ React.createClass({
         render: function() {
           var me = this;
           return  (
-		<span>
+		<span>{Root.commUI.show({code: 'spinner', parent: me})}
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			  
