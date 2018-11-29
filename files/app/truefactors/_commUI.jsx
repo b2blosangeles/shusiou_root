@@ -40,5 +40,14 @@ var _commUI = {
                             </div>                        
                         )
                     }
+                }),
+	spinner : React.createClass({
+                    render : function () { 
+                        var me = this;
+                        return (<span><span className="overlay_cover"></span>   
+    				<span className="overlay_page"></span>
+				<span className="spinner"></span>
+                            </span>)
+                    }
                 })
 };
