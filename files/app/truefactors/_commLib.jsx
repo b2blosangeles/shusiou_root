@@ -15,8 +15,11 @@ var _commLib = function () {
 	return r;
     }
     this.setSpinner = function(parent, s) {
-	parent.setState({spinner : (s) ? true : null})
+	parent.setState({_spinner : (s) ? true : null})
     }
+    this.setPopup = function(parent, s) {
+	parent.setState({_popup : (s) ? true : null})
+    }    
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
