@@ -21,6 +21,7 @@ try {
 
 			var cfg = me.props.plugin;
 			//if (!me.props.plugin.extend.main || !__asyncCache[me.props.plugin.extend.main]) {
+			setTimeout( function() {
 				$.ajax({
 				     type: 'POST',
 				     url: me.props.plugin.master,
@@ -37,6 +38,7 @@ try {
 				       me.setState({success: false, update : new Date().getTime()})
 				     }
 				  }); 
+			}, 3000);
 			//} else {
 			//	me._asyncModule = __asyncCache[me.props.plugin.extend.main];
 			//	me.setState({success: true, update : new Date().getTime()});
