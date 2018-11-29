@@ -34,7 +34,7 @@ React.createClass({
 					setting : {
 						type : 'light',
 						noshadow : true,
-						style : {'min-height' : '48em'},
+						style : {'min-height' : '40em'},
 						class : 'documentPage mt-2 p-2',
 						rounded : true
 					}
