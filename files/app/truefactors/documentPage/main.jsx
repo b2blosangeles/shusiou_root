@@ -11,9 +11,6 @@ React.createClass({
 	},
 	showContent : function() {
 		var me = this;
-		return '<_about/>';
-		return me.props.data;
-		/*
 		switch (me.props.data) {
 			case 'about' : 
 				return (<_about/>)
@@ -23,7 +20,7 @@ React.createClass({
 				break;
 			default :
 				return (<span>No {me.props.data} document</span>)		
-		}*/
+		}
 	},
         render : function() {
           var me = this;
@@ -33,7 +30,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'documentPage', 
 					parent : me, 
-					data : (<_about/>), 
+					data : me.showContent(), 
 					setting : {
 						type : 'light',
 						noshadow : true,
