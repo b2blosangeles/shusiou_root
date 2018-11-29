@@ -1,11 +1,23 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
+		me.list = [];
           	return {}
         },
+	componentDidMount : function() {
+		var me = this;
+		setTimeout(
+			function() {
+				me.list = Root.lib.getNumberList(10);
+				me.setState({updated : new Date().getTime()});
+			}, 1000
+		)
+	},
+	componentWillUnmount : function() {
+		var me = this;
+	},
 	myVideos : function() {
 		var me = this;
-		var list = Root.lib.getNumberList(10);
 		return  (
 			<div className="container">
 				<div className="row ">
@@ -20,7 +32,7 @@ React.createClass({
 					})}
 				</div>
 				<div className="row ">
-					{list.map(function(m) {
+					{me.list.map(function(m) {
 						return Root.commUI.show({
 							code: 'cellBox', 
 							parent : me, 
