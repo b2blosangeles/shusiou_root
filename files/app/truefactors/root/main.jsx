@@ -4,6 +4,7 @@ React.createClass({
 		me.roles = Root.global.roles;
           	return {role: '', menuOption:'', spinner: true}
         },
+	
 	componentDidMount : function() {
 		var me = this;
 		Root.lib.setSpinner(me, true);
@@ -11,9 +12,12 @@ React.createClass({
 				Root.lib.setSpinner(me, false);
 			}, 1000);
 	},
+	changeContentPage : function(code) {
+		var me = this;
+		me.setState({menuOption : code});
+	},
 	loadContentPage : function(data) {
 		var me = this;
-		alert(data);
 		return Root.lib.asyncModule({
 			setting:{	extend: {
 						includes : [
@@ -79,9 +83,9 @@ React.createClass({
 			</div>  
 			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="JavaScript:void(0)" onClick={me.loadContentPage.bind(me, 'privacy')}>Privacy</a>
+				<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="JavaScript:void(0)" onClick={me.loadContentPage.bind(me, 'terms')}>Terms</a>
+				<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'terms')}>Terms</a>
 			</div>
 		</span>
           )
