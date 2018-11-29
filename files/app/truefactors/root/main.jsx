@@ -2,7 +2,7 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
-          	return {role: '', menuOption:''}
+          	return {role: '', menuOption:'', spinner: true}
         },
         showBody : function() {
                 var me = this;
