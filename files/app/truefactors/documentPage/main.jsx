@@ -15,7 +15,7 @@ React.createClass({
 		<div className="container">
 			<div className="row">
 			{Root.commUI.show({
-					code: 'infoBox', 
+					code: 'documentPage', 
 					parent : me, 
 					data : (<span>Document Page</span>), 
 					setting : {
