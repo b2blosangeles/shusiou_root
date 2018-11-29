@@ -25,6 +25,10 @@ React.createClass({
 	popup : function() {
 		var me = this;
 		Root.lib.setPopup(me, true);	
+	},
+	closePopup : function() {
+		var me = this;
+		Root.lib.setPopup(me, false);	
 	},	
 	myVideos : function() {
 		var me = this;
