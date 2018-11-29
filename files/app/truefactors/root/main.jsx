@@ -76,8 +76,10 @@ React.createClass({
 					</div>
 				</div>
 			</div>  
-			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan 
+			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
+				&nbsp;&nbsp;
 				<a onClick={me.loadContentPage(me, 'privacy')}>Privacy</a>
+				&nbsp;&nbsp;
 				<a onClick={me.loadContentPage(me, 'terms')}>Terms</a>
 			</div>
 		</span>
