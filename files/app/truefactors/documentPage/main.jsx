@@ -27,7 +27,7 @@ React.createClass({
 	},
         render : function() {
           var me = this;
-          return  (
+          return  (<span>
 		  {Root.commUI.show({
 			code: 'infoBox', 
 			parent : me, 
@@ -39,7 +39,7 @@ React.createClass({
 				class : 'documentPageBody p-3'
 			}
 		})}
-		)
+		</span>)
           return  (
 		<div className="container">
 			<div className="row documentPageFrame mt-3 mb-5 p-1">
