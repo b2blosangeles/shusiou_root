@@ -77,6 +77,11 @@ React.createClass({
 				</div>
 			</div>  
 			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
+				<ul className="nav">
+					<li>&#169; {new Date().getFullYear()} Plato Plan</li>
+					<li>&nbsp;Privacy</li>
+					<li>&nbsp;Privacy</li>
+				</u>	
 				&nbsp;Privacy
 				&nbsp;Terms	
 			</div>
