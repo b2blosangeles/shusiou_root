@@ -5,11 +5,6 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		setTimeout(
-			function() {
-				me.cleanSpinner();
-			}, 6000
-		)
 	},
         render : function() {
           var me = this;
