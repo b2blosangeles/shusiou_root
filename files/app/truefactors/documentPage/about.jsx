@@ -5,7 +5,7 @@ var _about = React.createClass({
     },
     render: function() {
 	return  (<span>
-			<h3>About Us<h3/>
+			<h3>About Us</h3>
 			<p>
 			Balabala Platform is to inspire every dream maker on the earth. She will provide easy access to
 			file and publish innovative concept, ideas, products, works. More importantly, Balabala will help those
@@ -14,7 +14,6 @@ var _about = React.createClass({
 			will attract individuals’ inventors, investors, enterprises and normal human beings, to search the origins
 			of the innovations on Balabala. Then its commercial value and social impact will be valueless.		
 			</p>
-		
 		</span>)
     }
 });
