@@ -18,6 +18,9 @@ React.createClass({
 			case 'contact' :
 				return (<_contact/>)
 				break;
+			case 'homePage' :
+				return (<_homePage/>)
+				break;
 			default :
 				return (<span>No {me.props.data} document</span>)		
 		}
