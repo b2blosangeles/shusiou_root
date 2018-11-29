@@ -10,7 +10,10 @@ React.createClass({
 		setTimeout(function() {
 				Root.lib.setSpinner(me, false);
 			}, 1000);
-	},	
+	},
+	loadContentsPage : function() {
+	
+	},
         showBody : function() {
                 var me = this;
 		
@@ -44,7 +47,7 @@ React.createClass({
 			return Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [
-								'https://dev.shusiou.win/app/truefactors/documentPage/homepage.js
+								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js
 								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 							],
@@ -60,7 +63,7 @@ React.createClass({
 		Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [
-								'https://dev.shusiou.win/app/truefactors/documentPage/homepage.js
+								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js
 								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 							],
