@@ -15,7 +15,7 @@ var _commLib = function () {
 	return r;
     }
     this.setSpinner = function(parent, s) {
-	parent.setStatus({spinnner : (s) ? true : null})
+	parent.setStates({spinnner : (s) ? true : null})
     }
    /*========== Need review ====*/
     this.getAuth = function() {
