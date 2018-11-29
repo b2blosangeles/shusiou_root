@@ -79,7 +79,7 @@ try {
 				}
 			} else {
 				return  (<span>
-						{Root.commUI.show({code: 'spinner', parent: me})}
+						{/*Root.commUI.show({code: 'spinner', parent: me})*/}
 						{me.props.plugin.extend.loadingInfo}
 					</span>)
 			}
