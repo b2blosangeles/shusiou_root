@@ -17,7 +17,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'documentPage', 
 					parent : me, 
-					data : (<span>{me.props.data}</span>), 
+					data : (<span>me.props.data</span>), 
 					setting : {
 						type : 'light',
 						noshadow : true,
