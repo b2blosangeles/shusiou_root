@@ -12,7 +12,7 @@ React.createClass({
 				Root.lib.setSpinner(me, false);
 			}, 1000);
 	},
-	changheContentPage : function(v) {
+	changeContentPage : function(v) {
 		var me = this; 
 		if (!v) {
 			me.setState({ role : null, menuOption : null})
