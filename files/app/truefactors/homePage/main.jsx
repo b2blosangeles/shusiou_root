@@ -17,7 +17,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : (<span>{Root.commUI.show({code: 'spinner', parent: me})}
+					data : (<span>{/*Root.commUI.show({code: 'spinner', parent: me})*/}
 							Home <hr/> 2 Page</span>), 
 					setting : {
 						type: 'success',
