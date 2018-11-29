@@ -36,7 +36,7 @@ var _subMenu = React.createClass({
 											{m.caption}</span></a>
 									</li></span>)
 							})}
-					</ul>
+					
 					{common.map(function(m){ 	
 						return (me.props.parent.state.menuOption !== m.code) ?
 								(<span>
