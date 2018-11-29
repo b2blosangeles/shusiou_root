@@ -64,7 +64,7 @@ React.createClass({
 					</div>
 				</div>
 			</div>  
-			<div className="container">
+			  {/*<div className="container">
 				<div className="row">
 					<div className="col-sm-12">
 						<div className="row ">
@@ -78,7 +78,7 @@ React.createClass({
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>*/}
 			<div className="footer">&#169; {new Date().getFullYear()} Polo Alto Project</div>
 		</span>
           )
