@@ -9,7 +9,7 @@ React.createClass({
 		Root.lib.setSpinner(me, true);
 		setTimeout(function() {
 				Root.lib.setSpinner(me, false);
-			}, 6000);
+			}, 1000);
 	},	
         showBody : function() {
                 var me = this;
