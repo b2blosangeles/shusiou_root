@@ -14,7 +14,11 @@ React.createClass({
 	},
 	changeContentPage : function(code) {
 		var me = this;
-		me.setState({menuOption : code});
+		if (!code) {
+			me.setState({role : null, menuOption : null});
+		} else {
+			me.setState({menuOption : code});
+		}
 	},
 	loadContentPage : function(data) {
 		var me = this;
