@@ -68,8 +68,7 @@ React.createClass({
 						setting : {
 							type : 'light',
 							noshadow : true,
-							style : {'min-height' : '40em'},
-							class : 'documentPageBody p-3'
+							style : {'min-height' : '2em'}
 						}
 					})}
 				</div>
