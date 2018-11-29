@@ -71,6 +71,20 @@ React.createClass({
 		//} 
 		//return me.loadContentPage('homePage');	
         }, 
+	showPageFrame : function(data) {
+		var me = this;
+		{Root.commUI.show({
+				code: 'infoBox', 
+				parent : me, 
+				data : data, 
+				setting : {
+					type : 'light',
+					noshadow : true,
+					style : {'min-height' : '40em'},
+					class : 'documentPageBody p-3'
+				}
+			})}
+	},
         render: function() {
           var me = this;
           return  (
@@ -78,13 +92,15 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			
-			<div className="container">
+			{me.showPageFrame(me.showBody())}
+			  
+			 {/* <div className="container">
 				<div className="row documentPageFrame mt-3 mb-5 p-1">
-					{/*<div className="col-sm-12" style={{'min-height' : '32em'}}>*/}
+					<div className="col-sm-12" style={{'min-height' : '32em'}}>*/}
 						{me.showBody()}
-					{/*</div>*/}
+					{/*</div>
 				</div>
-			</div>  
+			</div> */} 
 			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
