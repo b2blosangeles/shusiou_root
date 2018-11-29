@@ -39,6 +39,20 @@ React.createClass({
 				parent : me
 			})
 		} 
+		
+		if (me.state.menuOption) {
+			return Root.lib.asyncModule({
+				setting:{	extend: {
+							includes : [],
+							main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
+						}, 
+						master: '//master1_dev.shusiou.win/api/JSXhub.api'
+					},
+				data : '',
+				parent : me
+			})
+		} 
+		
 		return Root.lib.asyncModule({
 			setting:{	extend: {
 						includes : [],
