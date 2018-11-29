@@ -29,7 +29,8 @@ React.createClass({
 	closePopup : function() {
 		var me = this;
 		Root.lib.setPopup(me, false);	
-	},	
+	},
+	
 	myVideos : function() {
 		var me = this;
 		var btnLoad = (
@@ -54,7 +55,17 @@ React.createClass({
 				</div>
 				<div className="row ">
 					{Root.commUI.show({code: 'spinner', parent: me})}
-					{Root.commUI.show({code: 'popup', parent: me})}
+					{Root.commUI.show({
+						data: (<span>{Root.commUI.show({
+							code: 'infoBox', 
+							parent : me, 
+							data : 'Test', 
+							setting : {
+								noshadow :true,
+								type: 'success'
+							}
+						})}</span>),
+						code: 'popup', parent: me})}
 					
 					{me.list.map(function(m) {
 						return Root.commUI.show({
