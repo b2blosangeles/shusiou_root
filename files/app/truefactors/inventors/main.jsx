@@ -107,8 +107,10 @@ React.createClass({
 						parent : me, 
 						data : me.showBody(), 
 						setting : {
-							type: 'success',
-							style: {'min-height' : '28em'}
+							type : 'light',
+							noshadow : true,
+							style : {'min-height' : '40em'},
+							class : 'documentPageBody p-3'
 						  }
 					})}
 				</div>
