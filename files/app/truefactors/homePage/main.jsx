@@ -1,5 +1,5 @@
 React.createClass({
-        getInitialState: function() {
+        getInitialState : function() {
 		var me = this;
           	return {spinner:true}
         },
@@ -7,11 +7,11 @@ React.createClass({
 		var me = this;
 		setTimeout(
 			function() {
-				me.setState({spinner:false});
+				me.cleanSpinner();
 			}, 6000
 		)
 	},
-        render: function() {
+        render : function() {
           var me = this;
           return  (
 		<div className="container">
