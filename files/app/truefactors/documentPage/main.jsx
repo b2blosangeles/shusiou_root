@@ -11,6 +11,7 @@ React.createClass({
 	},
 	showContent : function() {
 		var me = this;
+		return (<_about/>);
 		return me.props.data;
 		/*
 		switch (me.props.data) {
