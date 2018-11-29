@@ -11,8 +11,21 @@ React.createClass({
 				Root.lib.setSpinner(me, false);
 			}, 1000);
 	},
-	loadContentsPage : function() {
-	
+	loadContentPage : function(data) {
+		return Root.lib.asyncModule({
+			setting:{	extend: {
+						includes : [
+							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js',
+							'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
+							'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
+						],
+						main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
+					}, 
+					master: '//master1_dev.shusiou.win/api/JSXhub.api'
+				},
+			data : data,
+			parent : me
+		})	
 	},
         showBody : function() {
                 var me = this;
@@ -44,36 +57,9 @@ React.createClass({
 		} 
 		
 		if (me.state.menuOption) {
-			return Root.lib.asyncModule({
-				setting:{	extend: {
-							includes : [
-								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js',
-								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
-								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
-							],
-							main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
-						}, 
-						master: '//master1_dev.shusiou.win/api/JSXhub.api'
-					},
-				data : me.state.menuOption,
-				parent : me
-			})
+			return me.loadContentPage(me.state.menuOption);
 		} 
-		
-		Root.lib.asyncModule({
-				setting:{	extend: {
-							includes : [
-								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js',
-								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
-								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
-							],
-							main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
-						}, 
-						master: '//master1_dev.shusiou.win/api/JSXhub.api'
-					},
-				data : 'homePage',
-				parent : me
-			})	
+		return me.loadContentPage('homePage');	
         }, 
         render: function() {
           var me = this;
