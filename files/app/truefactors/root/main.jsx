@@ -44,6 +44,7 @@ React.createClass({
 			return Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [
+								'https://dev.shusiou.win/app/truefactors/documentPage/homepage.js
 								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 							],
@@ -56,16 +57,20 @@ React.createClass({
 			})
 		} 
 		
-		return Root.lib.asyncModule({
-			setting:{	extend: {
-						includes : [],
-						main : 'https://dev.shusiou.win/app/truefactors/homePage/main.jsx'
-					}, 
-					master: '//master1_dev.shusiou.win/api/JSXhub.api'
-				},
-			data : '',
-			parent : me
-		})	
+		Root.lib.asyncModule({
+				setting:{	extend: {
+							includes : [
+								'https://dev.shusiou.win/app/truefactors/documentPage/homepage.js
+								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
+								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
+							],
+							main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
+						}, 
+						master: '//master1_dev.shusiou.win/api/JSXhub.api'
+					},
+				data : 'homePage',
+				parent : me
+			})	
         }, 
         render: function() {
           var me = this;
