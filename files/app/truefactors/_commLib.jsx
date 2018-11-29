@@ -14,7 +14,10 @@ var _commLib = function () {
 	for (var i = 0;  i < n; i++) r[i] = i;
 	return r;
     }
-	/*========== Need review ====*/
+    this.setSpinner = function(parent, s) {
+	parent.setStatus({spinnner : (s) ? true : null})
+    }
+   /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
     }
