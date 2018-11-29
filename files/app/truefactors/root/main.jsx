@@ -79,7 +79,7 @@ React.createClass({
 			<_subMenu parent={me}/>
 			
 			<div className="container">
-				<div className="row">
+				<div className="row documentPageFrame mt-3 mb-5 p-1">
 					<div className="col-sm-12" style={{'min-height' : '32em'}}>
 						{me.showBody()}
 					</div>
