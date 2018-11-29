@@ -63,7 +63,7 @@ body {
 
 .btn-large { margin: 0.3em !important;  width: 128px !important;   height: 64px  !important;}
 .site-logo { min-height: 88px  !important;}
-.bg-top-bar  { background: rgba(139,157,195, 0.5); }
+.bg-top-bar  { background: rgba(139,157,195, 0.3); }
 .secondMenu { background: rgba(59,89,152, 0.6); }
 .secondMenu a { color : #fff }
 
@@ -155,13 +155,12 @@ body {
     text-align: right;
 }
 .documentPageFrame {
-    background: rgba(139,157,195, 0.5);
-    color: #333;
+    background: rgba(139,157,195, 0.3);
     text-align: left;
     border-radius: 1em;
 }
 .documentPageBody {
-    background: rgba(255,255,245, 0.9);
+    background: rgba(255,255,250, 0.8);
     color: #333;
     text-align: left;
 }
