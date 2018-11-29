@@ -21,8 +21,9 @@ React.createClass({
 					setting : {
 						type : 'light',
 						noshadow : true,
-						style : {'min-height' : '58em'}
-						  }
+						style : {'min-height' : '58em'},
+						class : ' border border-warning '
+					}
 				})}
 			</div>
 		</div>)
