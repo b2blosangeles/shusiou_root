@@ -22,10 +22,18 @@ React.createClass({
 			}, 1000
 		)	
 	},
+	popup : function() {
+		var me = this;
+		Root.lib.setPopup(me, true);	
+	},	
 	myVideos : function() {
 		var me = this;
 		var btnLoad = (
+		<span>	
 			<button type="button" className="btn btn-warning" onClick={me.loadData.bind(me)}>Load Data</button>
+			&nbsp;
+			<button type="button" className="btn btn-warning" onClick={me.popup.bind(me)}>Popup Window</button>
+		</span>
 		)
 		return  (
 			<div className="container">
@@ -41,7 +49,8 @@ React.createClass({
 					})}
 				</div>
 				<div className="row ">
-					 {Root.commUI.show({code: 'spinner', parent: me})}
+					{Root.commUI.show({code: 'spinner', parent: me})}
+					{Root.commUI.show({code: 'popup', parent: me})}
 					
 					{me.list.map(function(m) {
 						return Root.commUI.show({
