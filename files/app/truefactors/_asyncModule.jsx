@@ -11,7 +11,7 @@ try {
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
 			if (me.props.objId !== prevProps.objId) { 
-				me.loadPlugin();
+				setTimeout(me.loadPlugin, 2000)
 			}	
 		},		
 		loadPlugin : function() {
