@@ -48,7 +48,7 @@ var _commUI = {
                         var shadow = (!me.props.setting || !me.props.setting.noshadow) ? ' shadow ' : '';
                         var className = shadow + 
                                    ((!me.props.setting || !me.props.setting.class) ? 
-				    'border border-' + classType + ' alert-' + classType + ' ') : me.props.setting.class) + ' ' +
+				    'border border-' + classType + ' alert-' + classType + ' ' : me.props.setting.class) + ' ' +
 			    	    ((!me.props.setting || !me.props.setting.rounded) ? '' : ' rounded') +
                                     ' p-2 m-1';
                         var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '2em'} : me.props.setting.style;
