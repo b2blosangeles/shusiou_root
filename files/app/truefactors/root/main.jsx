@@ -79,11 +79,14 @@ React.createClass({
 			<div className="footer">{/* &#169; {new Date().getFullYear()} Plato Plan */}
 				<div className="container">
 					<div className="row">
+						<div className="col-sm-12">
 						<ul className="nav nav-right">
+						
 							<li>&#169; {new Date().getFullYear()} Plato Plan</li>
 							<li><a>Privacy</a></li>
 							<li><a>Terms</a></li>
 						</ul>
+						</div>
 					</div>
 				</div>
 			</div>
