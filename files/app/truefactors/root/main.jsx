@@ -76,7 +76,10 @@ React.createClass({
 					</div>
 				</div>
 			</div>  
-			<div className="footer">&#169; {new Date().getFullYear()} Polo Alto Project</div>
+			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
+				&nbsp;Privacy
+				&nbsp;Terms	
+			</div>
 		</span>
           )
         }
