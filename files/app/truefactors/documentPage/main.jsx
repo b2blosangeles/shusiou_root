@@ -33,7 +33,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'documentPage', 
 					parent : me, 
-					data : me.showContent(), 
+					data : (<_about/>), 
 					setting : {
 						type : 'light',
 						noshadow : true,
