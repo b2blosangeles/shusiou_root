@@ -12,6 +12,7 @@ React.createClass({
 			}, 1000);
 	},
 	loadContentPage : function(data) {
+		var me = this;
 		return Root.lib.asyncModule({
 			setting:{	extend: {
 						includes : [
