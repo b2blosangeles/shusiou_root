@@ -31,7 +31,7 @@ React.createClass({
 		<div className="container">
 			<div className="row documentPageFrame mt-3 mb-5 p-1">
 			{Root.commUI.show({
-					code: 'documentPage', 
+					code: 'infoBox', 
 					parent : me, 
 					data : me.showContent(), 
 					setting : {
