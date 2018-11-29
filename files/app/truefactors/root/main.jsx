@@ -33,7 +33,7 @@ React.createClass({
 					}, 
 					master: '//master1_dev.shusiou.win/api/JSXhub.api'
 				},
-			data : data,
+			data : (!data) ? 'homePage' : data,
 			parent : me
 		})	
 	},
