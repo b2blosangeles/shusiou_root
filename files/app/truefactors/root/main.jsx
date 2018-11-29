@@ -77,10 +77,10 @@ React.createClass({
 				</div>
 			</div>  
 			<div className="footer">{/* &#169; {new Date().getFullYear()} Plato Plan */}
-				<ul className="nav pull-right">
+				<ul className="nav nav-right">
 					<li>&#169; {new Date().getFullYear()} Plato Plan</li>
-					<li>&nbsp;Privacy</li>
-					<li>&nbsp;Privacy</li>
+					<li><a>Privacy</a></li>
+					<li><a>Terms</a></li>
 				</ul>	
 			</div>
 		</span>
