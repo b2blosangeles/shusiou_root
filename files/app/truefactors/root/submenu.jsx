@@ -23,7 +23,7 @@ var _subMenu = React.createClass({
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">
-					{(!me.props.parent.state.menuOption) ?
+					{(me.props.parent.state.menuOption) ?
 						(<span>
 						<li className="nav-item">
 							<a className="nav-link active" 
