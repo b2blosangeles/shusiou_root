@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState : function() {
 		var me = this;
-          	return {spinner:true}
+          	return {}
         },
 	componentDidMount : function() {
 		var me = this;
