@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {}
+          	return {spinner:true}
         },
         render: function() {
           var me = this;
@@ -11,7 +11,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : (<span>{Root.commUI.show({code: 'spinner'})}
+					data : (<span>{Root.commUI.show({code: 'spinner', parent: me})}
 							Home <hr/> 2 Page</span>), 
 					setting : {
 						type: 'success',
