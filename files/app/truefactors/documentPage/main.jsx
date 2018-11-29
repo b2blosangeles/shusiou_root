@@ -34,8 +34,8 @@ React.createClass({
 					setting : {
 						type : 'light',
 						noshadow : true,
-						style : {'min-height' : '58em'},
-						class : ' border border-warning '
+						style : {'min-height' : '48em'},
+						class : 'documentPage'
 					}
 				})}
 			</div>
