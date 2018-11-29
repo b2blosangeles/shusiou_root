@@ -78,7 +78,7 @@ try {
 
 				}
 			} else {
-				return  (<span>{me.props.plugin.extend.loadingInfo}</span>)
+				return  (<span>{Root.commUI.show({code: 'spinner', parent: me})}{me.props.plugin.extend.loadingInfo}</span>)
 			}
 		}
 	});	
