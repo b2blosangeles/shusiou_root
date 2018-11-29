@@ -16,7 +16,7 @@ React.createClass({
 				return (<_about/>)
 				break;
 			case 'contact' :
-				return (<_contact/>
+				return (<_contact/>)
 				break;
 			default :
 				return (<span>No {me.props.data} document</span>)		
