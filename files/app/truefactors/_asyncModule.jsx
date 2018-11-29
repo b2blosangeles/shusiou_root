@@ -11,7 +11,7 @@ try {
 		componentDidUpdate:function(prevProps, prevState) {
 			var me = this;
 			if (me.props.objId !== prevProps.objId) { 
-				setTimeout(me.loadPlugin, 2000)
+				me.loadPlugin();
 			}	
 		},		
 		loadPlugin : function() {
@@ -79,7 +79,7 @@ try {
 				}
 			} else {
 				return  (<span>
-					{(!Root || !Root.commUI) ? '' : Root.commUI.show({code: 'spinner', parent: me})}
+					{(!Root || !Root.commUI) ? 'uuu' : Root.commUI.show({code: 'spinner', parent: me})}
 						{me.props.plugin.extend.loadingInfo}
 					</span>)
 			}
