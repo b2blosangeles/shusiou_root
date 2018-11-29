@@ -30,9 +30,10 @@ React.createClass({
 				  {Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
-						data : 'Test 2', 
+						data : (<button type="button" className="btn btn-warning" 
+								onClick={me.closePopup.bind(me)}>Popup Window</button>), 
 						setting : {
-							type: 'success',
+							type: 'info',
 							style: {'min-height' : '18em'}
 						  }
 					})}
