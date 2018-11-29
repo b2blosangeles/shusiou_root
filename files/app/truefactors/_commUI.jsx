@@ -54,15 +54,25 @@ var _commUI = {
                                     ' p-2 m-1';
                         var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '2em'} : me.props.setting.style;
                         return (
-                            <div className="col-sm-12 p-1">
                                 <div className={className} style={style} >
                                     {(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
                                     : me.props.data}
-                                </div>
-                            </div>                        
+                                </div>                     
                         )
                     }
                 }),	
+	pageFrame :  React.createClass({
+		render : function () { 
+			return (<div className="container">
+				<div className="row documentPageFrame mt-3 mb-5 p-1">
+					<div className="col-sm-12 p-1">
+					    {(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+					    : me.props.data}						
+					</div>
+				</div>
+			</div>)}
+		}),
+			
 	spinner : React.createClass({
                     render : function () { 
                         var me = this;
