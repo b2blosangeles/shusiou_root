@@ -74,7 +74,7 @@ React.createClass({
 	showPageFrame : function(data) {
 		var me = this;
 		return Root.commUI.show({
-				code: 'infoBox', 
+				code: 'pageFrame', 
 				parent : me, 
 				data : data, 
 				setting : {
