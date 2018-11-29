@@ -66,8 +66,10 @@ React.createClass({
 						parent : me, 
 						data : btnLoad, 
 						setting : {
-							noshadow :true,
-							type: 'success'
+							type : 'light',
+							noshadow : true,
+							style : {'min-height' : '40em'},
+							class : 'documentPageBody p-3'
 						}
 					})}
 				</div>
