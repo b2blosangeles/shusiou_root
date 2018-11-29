@@ -12,14 +12,6 @@ React.createClass({
 				Root.lib.setSpinner(me, false);
 			}, 1000);
 	},
-	changeContentPage : function(code) {
-		var me = this;
-		if (!code) {
-			me.setState({role : null, menuOption : null});
-		} else {
-			me.setState({menuOption : code});
-		}
-	},
 	loadContentPage : function(data) {
 		var me = this;
 		return Root.lib.asyncModule({
