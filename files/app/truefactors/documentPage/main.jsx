@@ -19,8 +19,9 @@ React.createClass({
 					parent : me, 
 					data : (<span>Document Page</span>), 
 					setting : {
-						type: 'success',
-						style: {'min-height' : '28em'}
+						type : 'light',
+						noshadow : true,
+						style : {'min-height' : '28em'}
 						  }
 				})}
 			</div>
