@@ -22,6 +22,7 @@ var _commUI = {
                         )
                     }
                 }),
+	/*
       infoBox : React.createClass({
                     render : function () { 
                         var me = this;
@@ -40,8 +41,8 @@ var _commUI = {
                             </div>                        
                         )
                     }
-                }),
-      documentPage : React.createClass({
+                }),*/
+      infoBox : React.createClass({
                     render : function () { 
                         var me = this;
                         var classType = (!me.props.setting || !me.props.setting.type) ? 'info' : me.props.setting.type;
