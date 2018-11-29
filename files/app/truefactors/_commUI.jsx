@@ -44,7 +44,7 @@ var _commUI = {
 	spinner : React.createClass({
                     render : function () { 
                         var me = this;
-                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_sping_cover"></span>   
+                        return (me.props.parent.state._spinner) ? (<span><span className="overlay_sping_cover"></span>   
     				<span className="overlay_sping_page"><span className="spinner"></span></span>
                             </span>) : (<span></span>)
                     }
@@ -52,9 +52,12 @@ var _commUI = {
 	popup : React.createClass({
                     render : function () { 
                         var me = this;
-                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_popup_cover"></span>   
-    				<span className="overlay_popup_page">{me.props.data}</span>
-                            </span>) : (<span></span>)
+                        return (me.props.parent.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
+    				<span className="overlay_popup_page">
+				{(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+                                    : me.props.data}
+				</span>
+                            	</span>) : (<span></span>)
                     }
                 })	
 };
