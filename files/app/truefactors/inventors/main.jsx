@@ -34,6 +34,8 @@ React.createClass({
 					})}
 				</div>
 				<div className="row ">
+					 {Root.commUI.show({code: 'spinner', parent: me})}
+					
 					{me.list.map(function(m) {
 						return Root.commUI.show({
 							code: 'cellBox', 
@@ -60,8 +62,6 @@ React.createClass({
 		var me = this;
 		return (<div className="container">
 				<div className="row ">
-				 {Root.commUI.show({code: 'spinner', parent: me})}	
-					
 				  {Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
