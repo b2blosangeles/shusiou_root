@@ -29,7 +29,7 @@ React.createClass({
           var me = this;
           return  (
 		<div className="container">
-			<div className="row documentPageFrame mt-3 mb-3 p-1">
+			<div className="row documentPageFrame mt-3 mb-5 p-1">
 			{Root.commUI.show({
 					code: 'documentPage', 
 					parent : me, 
