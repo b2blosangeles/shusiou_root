@@ -6,8 +6,12 @@ var _subMenu = React.createClass({
 	return {}
     },
     clickOption : function(v) {
-	var me = this;    
-	me.props.parent.setState({ menuOption : v})    
+	var me = this; 
+	if (!v) {
+		me.props.parent.setState({ role : null, menuOption : null})
+	} else {
+		me.props.parent.setState({ menuOption : v})   
+	}
     },
     render: function() {
           var me = this;
