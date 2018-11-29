@@ -43,7 +43,9 @@ React.createClass({
 		if (me.state.menuOption) {
 			return Root.lib.asyncModule({
 				setting:{	extend: {
-							includes : [],
+							includes : [
+								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx'
+							],
 							main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'
