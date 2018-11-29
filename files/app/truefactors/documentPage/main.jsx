@@ -38,7 +38,7 @@ React.createClass({
 						type : 'light',
 						noshadow : true,
 						style : {'min-height' : '40em'},
-						class : 'documentPageBody p-3 rounded-bottom'
+						class : 'documentPageBody p-3'
 					}
 				})}
 			</div>
