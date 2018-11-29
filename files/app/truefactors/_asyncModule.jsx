@@ -20,8 +20,7 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			//if (!me.props.plugin.extend.main || !__asyncCache[me.props.plugin.extend.main]) {
-			setTimeout( function() {
+			if (!me.props.plugin.extend.main || !__asyncCache[me.props.plugin.extend.main]) {
 				$.ajax({
 				     type: 'POST',
 				     url: me.props.plugin.master,
@@ -38,11 +37,10 @@ try {
 				       me.setState({success: false, update : new Date().getTime()})
 				     }
 				  }); 
-			}, 3000);
-			//} else {
-			//	me._asyncModule = __asyncCache[me.props.plugin.extend.main];
-			//	me.setState({success: true, update : new Date().getTime()});
-			//}
+			} else {
+				me._asyncModule = __asyncCache[me.props.plugin.extend.main];
+				me.setState({success: true, update : new Date().getTime()});
+			}
 		},
 		render: function() {
 			var me = this;
@@ -81,7 +79,6 @@ try {
 				}
 			} else {
 				return  (<span>
-					{(!Root || !Root.commUI) ? 'uuu' : "Root.commUI.show({code: 'spinner', parent: me})"}
 						{me.props.plugin.extend.loadingInfo}
 					</span>)
 			}
