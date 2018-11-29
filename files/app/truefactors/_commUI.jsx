@@ -44,10 +44,10 @@ var _commUI = {
 	spinner : React.createClass({
                     render : function () { 
                         var me = this;
-                        return (<span><span className="overlay_cover"></span>   
+                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_cover"></span>   
     				<span className="overlay_page"></span>
 				<span className="spinner"></span>
-                            </span>)
+                            </span>) : (<span></span>)
                     }
                 })
 };
