@@ -79,6 +79,7 @@ try {
 				}
 			} else {
 				return  (<span>
+					{(!Root || !Root.commUI) ? '' : Root.commUI.show({code: 'spinner', parent: me})}
 						{me.props.plugin.extend.loadingInfo}
 					</span>)
 			}
