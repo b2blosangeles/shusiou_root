@@ -9,6 +9,19 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
+	showContent : function() {
+		var me = this;
+		switch (me.props.data) {
+			case 'about' : 
+				return (<_about/>)
+				break;
+			case 'contact' :
+				return (<_contact/>
+				break;
+			default :
+				return (<span>No {me.props.data} document</span>)		
+		}
+	},
         render : function() {
           var me = this;
           return  (
@@ -17,7 +30,7 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'documentPage', 
 					parent : me, 
-					data : (<span>{me.props.data}</span>), 
+					data : me.showContent(), 
 					setting : {
 						type : 'light',
 						noshadow : true,
