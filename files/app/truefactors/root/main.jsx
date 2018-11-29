@@ -4,6 +4,13 @@ React.createClass({
 		me.roles = Root.global.roles;
           	return {role: '', menuOption:'', spinner: true}
         },
+	componentDidMount : function() {
+		var me = this;
+		Root.lib.setSpinner(me, true);
+		setTimeout(function() {
+				Root.lib.setSpinner(me, false);
+			}, 6000);
+	},	
         showBody : function() {
                 var me = this;
 		
