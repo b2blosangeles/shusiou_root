@@ -3,6 +3,14 @@ React.createClass({
 		var me = this;
           	return {spinner:true}
         },
+	componentDidMount : function() {
+		var me = this;
+		setTimeout(
+			function() {
+				me.setState({spinner:false});
+			}, 6000
+		)
+	},
         render: function() {
           var me = this;
           return  (
