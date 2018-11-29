@@ -19,6 +19,11 @@ var _subMenu = React.createClass({
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">
+					<li className="nav-item">
+						<a className="nav-link active" 
+							onClick={me.clickOption.bind(me, 'homePage')}
+							href="JavaScript: void(0)">Home</a>
+					</li>
 					{menu.map(function(m){ 	
 						return (me.props.parent.state.menuOption !== m.code) ?
 								(<span>
