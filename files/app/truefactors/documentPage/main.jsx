@@ -17,11 +17,11 @@ React.createClass({
 			{Root.commUI.show({
 					code: 'documentPage', 
 					parent : me, 
-					data : (<span>Document Page</span>), 
+					data : (<span>{me.props.data}</span>), 
 					setting : {
 						type : 'light',
 						noshadow : true,
-						style : {'min-height' : '28em'}
+						style : {'min-height' : '58em'}
 						  }
 				})}
 			</div>
