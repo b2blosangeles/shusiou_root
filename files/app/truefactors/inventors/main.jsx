@@ -6,9 +6,11 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
+		Root.lib.setSpinner(me, true);
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(10);
+				Root.lib.setSpinner(me, false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
 		)
@@ -58,6 +60,8 @@ React.createClass({
 		var me = this;
 		return (<div className="container">
 				<div className="row ">
+				 {Root.commUI.show({code: 'spinner', parent: me})}	
+					
 				  {Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
