@@ -48,7 +48,7 @@ React.createClass({
 		<span>
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
-			  
+			 {Root.commUI.show({code: 'spinner', parent: me})}
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12" style={{'min-height' : '32em'}}>
