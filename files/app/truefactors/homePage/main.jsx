@@ -6,6 +6,9 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 	},
+	componentWillUnmount : function() {
+		var me = this;
+	},
         render : function() {
           var me = this;
           return  (
