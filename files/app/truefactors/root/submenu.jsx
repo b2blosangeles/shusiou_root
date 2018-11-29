@@ -34,6 +34,7 @@ var _subMenu = React.createClass({
 						(<span>
 							<li className="nav-item">
 								<a className="nav-link disabled" 
+								onClick={me.clickOption.bind(me, '')}
 								href="JavaScript: void(0)">
 								<span style={{color:'yellow'}}>
 									Home</span></a>
