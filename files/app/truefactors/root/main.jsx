@@ -81,7 +81,7 @@ React.createClass({
 					<li>&#169; {new Date().getFullYear()} Plato Plan</li>
 					<li>&nbsp;Privacy</li>
 					<li>&nbsp;Privacy</li>
-				</u>	
+				</ul>	
 				&nbsp;Privacy
 				&nbsp;Terms	
 			</div>
