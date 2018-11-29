@@ -35,7 +35,8 @@ React.createClass({
 						type : 'light',
 						noshadow : true,
 						style : {'min-height' : '48em'},
-						class : 'documentPage'
+						class : 'documentPage mt-2 p-2',
+						rounded : true
 					}
 				})}
 			</div>
