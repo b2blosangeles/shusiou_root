@@ -11,6 +11,8 @@ React.createClass({
 	},
 	showContent : function() {
 		var me = this;
+		return me.props.data;
+		/*
 		switch (me.props.data) {
 			case 'about' : 
 				return (<_about/>)
@@ -20,7 +22,7 @@ React.createClass({
 				break;
 			default :
 				return (<span>No {me.props.data} document</span>)		
-		}
+		}*/
 	},
         render : function() {
           var me = this;
