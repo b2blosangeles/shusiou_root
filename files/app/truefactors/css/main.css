@@ -58,7 +58,7 @@ video#gumVideo {
 }
 
 body { 
-    background: #fff url("/app/truefactors/imgs/invention_bg.jpg") repeat; 
+    background: #fff url("/app/truefactors/imgs/invention_bg.jpg") repeat; overflow-y: scroll;
 }
 
 .btn-large { margin: 0.3em !important;  width: 128px !important;   height: 64px  !important;}
