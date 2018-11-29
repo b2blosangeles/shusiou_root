@@ -161,7 +161,8 @@ body {
     border-radius: 1em;
 }
 .documentPageBody {
-    background: #fff;
+    background: rgba(255,255,255, 0.8);
     color: #333;
+    border-radius: 1em;
     text-align: left;
 }
