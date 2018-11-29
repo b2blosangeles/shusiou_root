@@ -44,16 +44,16 @@ var _commUI = {
 	spinner : React.createClass({
                     render : function () { 
                         var me = this;
-                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_cover"></span>   
-    				<span className="overlay_page"><span className="spinner"></span></span>
+                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_sping_cover"></span>   
+    				<span className="overlay_sping_page"><span className="spinner"></span></span>
                             </span>) : (<span></span>)
                     }
                 }),
 	popup : React.createClass({
                     render : function () { 
                         var me = this;
-                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_cover"></span>   
-    				<span className="overlay_page">{me.props.data}</span>
+                        return (me.props.parent.state.spinner) ? (<span><span className="overlay_popup_cover"></span>   
+    				<span className="overlay_popup_page">{me.props.data}</span>
                             </span>) : (<span></span>)
                     }
                 })	
