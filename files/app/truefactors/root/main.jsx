@@ -78,9 +78,9 @@ React.createClass({
 			</div>  
 			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="JavaScript:void(0)" onClick={me.loadContentPage(me, 'privacy')}>Privacy</a>
+				<a href="JavaScript:void(0)" onClick={me.loadContentPage.bind(me, 'privacy')}>Privacy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="JavaScript:void(0)" onClick={me.loadContentPage(me, 'terms')}>Terms</a>
+				<a href="JavaScript:void(0)" onClick={me.loadContentPage.bind(me, 'terms')}>Terms</a>
 			</div>
 		</span>
           )
