@@ -47,7 +47,7 @@ React.createClass({
 			return Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [
-								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js
+								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js',
 								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 							],
@@ -63,7 +63,7 @@ React.createClass({
 		Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [
-								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js
+								'https://dev.shusiou.win/app/truefactors/documentPage/homePage.js',
 								'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 								'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 							],
