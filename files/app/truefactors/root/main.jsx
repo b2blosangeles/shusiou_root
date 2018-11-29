@@ -73,7 +73,7 @@ React.createClass({
         }, 
 	showPageFrame : function(data) {
 		var me = this;
-		{Root.commUI.show({
+		return Root.commUI.show({
 				code: 'infoBox', 
 				parent : me, 
 				data : data, 
@@ -83,7 +83,7 @@ React.createClass({
 					style : {'min-height' : '40em'},
 					class : 'documentPageBody p-3'
 				}
-			})}
+			})
 	},
         render: function() {
           var me = this;
