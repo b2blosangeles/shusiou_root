@@ -6,6 +6,7 @@ React.createClass({
         },
         showBody : function() {
                 var me = this;
+		Root.lib.setSpinner(me, true);
 		if (me.state.role === 'inventor') {
 			return Root.lib.asyncModule({
 				setting:{	extend: {
