@@ -48,7 +48,7 @@ React.createClass({
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'
 					},
-				data : '',
+				data : me.state.menuOption,
 				parent : me
 			})
 		} 
