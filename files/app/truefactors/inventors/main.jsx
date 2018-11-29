@@ -22,6 +22,24 @@ React.createClass({
 			}, 1000
 		)	
 	},
+	popupBody : function() {
+		var me = this;
+		return (
+			<div className="container">
+				<div className="row ">
+				  {Root.commUI.show({
+						code: 'infoBox', 
+						parent : me, 
+						data : 'Test 2', 
+						setting : {
+							type: 'success',
+							style: {'min-height' : '28em'}
+						  }
+					})}
+				</div>
+			</div		
+		)
+	},
 	popup : function() {
 		var me = this;
 		Root.lib.setPopup(me, true);	
@@ -55,17 +73,7 @@ React.createClass({
 				</div>
 				<div className="row ">
 					{Root.commUI.show({code: 'spinner', parent: me})}
-					{Root.commUI.show({
-						data: (<span>{Root.commUI.show({
-							code: 'infoBox', 
-							parent : me, 
-							data : 'Test', 
-							setting : {
-								noshadow :true,
-								type: 'success'
-							}
-						})}</span>),
-						code: 'popup', parent: me})}
+					{Root.commUI.show({ data: me.popupBody(),code: 'popup', parent: me})}
 					
 					{me.list.map(function(m) {
 						return Root.commUI.show({
