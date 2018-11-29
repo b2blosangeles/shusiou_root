@@ -33,12 +33,11 @@ React.createClass({
 						data : 'Test 2', 
 						setting : {
 							type: 'success',
-							style: {'min-height' : '28em'}
+							style: {'min-height' : '18em'}
 						  }
 					})}
 				</div>
-			</div		
-		)
+			</div>)
 	},
 	popup : function() {
 		var me = this;
