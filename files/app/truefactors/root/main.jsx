@@ -66,10 +66,10 @@ React.createClass({
 			})
 		} 
 		
-		if (me.state.menuOption) {
+		//if (me.state.menuOption) {
 			return me.loadContentPage(me.state.menuOption);
-		} 
-		return me.loadContentPage('homePage');	
+		//} 
+		//return me.loadContentPage('homePage');	
         }, 
         render: function() {
           var me = this;
