@@ -6,6 +6,13 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
+		me.loadData();
+	},
+	componentWillUnmount : function() {
+		var me = this;
+	},
+	loadData : function() {
+		var me = this;
 		Root.lib.setSpinner(me, true);
 		setTimeout(
 			function() {
@@ -13,20 +20,20 @@ React.createClass({
 				Root.lib.setSpinner(me, false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
-		)
-	},
-	componentWillUnmount : function() {
-		var me = this;
+		)	
 	},
 	myVideos : function() {
 		var me = this;
+		var btnLoad = (
+			<button type="button" className="btn btn-warning" onClick={me.loadData.bind(me)}>Load Data</button>
+		)
 		return  (
 			<div className="container">
 				<div className="row ">
 				{Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
-						data : 'Test', 
+						data : btnLoad, 
 						setting : {
 							noshadow :true,
 							type: 'success'
