@@ -13,11 +13,11 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		Root.lib.setSpinner(me, true);
+		Root.overLay.spin(true);
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(18);
-				Root.lib.setSpinner(me, false);
+				Root.overLay.spin(false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
 		)	
@@ -34,14 +34,6 @@ React.createClass({
 						style: {'min-height' : '18em'}
 					  }
 					})}</span>)	
-	},
-	popup : function() {
-		var me = this;
-		Root.lib.setPopup(me, true);	
-	},
-	closePopup : function() {
-		var me = this;
-		Root.lib.setPopup(me, false);	
 	},
 	myVideos : function() {
 		var me = this;
