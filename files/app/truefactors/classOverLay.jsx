@@ -3,6 +3,7 @@ React.createClass({
 		var me = this;
 		me.popupSetting = '';
 		me.spinPool={};
+		me.sno = 0;
 		return {};
 	},
 	componentDidMount : function() {
@@ -11,6 +12,11 @@ React.createClass({
 	},
 	componentDidUpdate : function() {
 		var me = this;
+	},
+	getSno : function() {
+		var me = this;
+		me.sno = (!me.sno || me.sno > 1000000) ? 1 : (me.sno + 1);
+		return 'SNO-' + me.sno + '-' + new Date().getTime();
 	},
 	showSpinner : function() {
 		var me = this;
@@ -35,17 +41,17 @@ React.createClass({
 			</span>
 			</span>) : (<span></span>)
 	},
-	spinOn : function(code) {
+	spinOn : function() {
 		var me = this;
-		var rcode = code + '-' + new Date().getTime();
-		me.spinPool[rcode] = new Date().getTime();
-		me.setState({update : new Date().getTime()})
+		var code = me.getSno();
+		me.spinPool[code] = new Date().getTime();
+		me.setState({_update : new Date().getTime()})
 		return rcode;
 	},
 	spinOff : function(code) {
 		var me = this;
 		delete me.spinPool[code];
-		me.setState({update : new Date().getTime()})
+		me.setState({_update : new Date().getTime()})
 	},		
 	popup : function(setting) {
 		var me = this;
