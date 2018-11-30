@@ -110,10 +110,10 @@ try {
 			)}
 	})						
 							
-							_overLay = (_classOverLay) ? 
+							_overLay = (_classOverLayB) ? 
 									new Function('_classOverLayB', 'Root', 
-										     'return _classOverLayB;')
-							(_classOverLay, Root) 
+										     'return ' + _classOverLayB.toString())
+							(_classOverLayB, Root) 
 									: _overLay;
 						}
 
