@@ -3,7 +3,7 @@ React.createClass({
 		var me = this;
 		me.loading = [];
 
-		return {_spinner : false};
+		return {};
 	},
 	componentDidMount : function() {
 		var me = this;
@@ -16,6 +16,7 @@ React.createClass({
 		console.log('componentDidUpdate--->');
 	},
 	spinner : function() {
+		var me = this;
 		return (me.state._spinner) ? (<span><span className="overlay_sping_cover"></span>   
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
