@@ -43,7 +43,7 @@ try {
 			}
 		},
 		test : function() {
-			alert(123);
+			alert(1237);
 		},
 		render: function() {
 			var me = this;
@@ -72,10 +72,10 @@ try {
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root); 
 					}
-					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
+					return  (<span><_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
-							 />)
+							 /></span>)
 							 
 				} catch (err) {
 					return  (<span>Script Error: {err.message}</span>)
