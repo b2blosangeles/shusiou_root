@@ -14,7 +14,7 @@ React.createClass({
 	},
 	showSpinner : function() {
 		var me = this;
-		return ((Object.keys(spinPool).length) ? (<span><span className="overlay_sping_cover"></span>   
+		return ((Object.keys(me.spinPool).length) ? (<span><span className="overlay_sping_cover"></span>   
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
