@@ -45,7 +45,8 @@ React.createClass({
 	},
 	spin : function() {
 		var me = this;
-		Root.lib.spin();
+		alert(123);
+		//Root.lib.spin();
 	},
 	myVideos : function() {
 		var me = this;
