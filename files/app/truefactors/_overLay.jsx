@@ -15,6 +15,7 @@ try {
 			if ((Root) && (!Root.overLay)) {
 				console.log('Parking overLay');
 				Root.overLay = me;
+				Root.overLay.test();
 				me.setState({RootReady : true})
 			}
 		},
