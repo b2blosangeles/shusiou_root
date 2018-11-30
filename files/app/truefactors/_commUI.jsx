@@ -50,7 +50,7 @@ var _commUI = {
 				<span className="overlay_popup_page">
 					<div className="container">
 					<div className="row ">
-							<div className="col-sm-12 rounded border border-dark">
+							<div className="col-sm-12">
 							{(typeof me.props.data === 'string' || me.props.data === '') ? 
 							(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 							: me.props.data}
