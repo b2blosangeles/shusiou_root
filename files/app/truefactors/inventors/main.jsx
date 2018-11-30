@@ -69,7 +69,7 @@ React.createClass({
 							parent : me, 
 							data : btnLoad, 
 							setting : {
-								type : 'light',
+								class : ' p-0 ',
 								noshadow :  true,
 								style : {'min-height' : '2em'}
 							}
