@@ -18,6 +18,8 @@ var _commLib = function () {
 	parent.setState({_spinner : (s) ? true : null})
     }
     this.spin = function(parent, s) {
+	    alert(5);
+	    return true;
 	if (!Root || !Root.overLay) {
 		alert('No Root or Root.overLay');
 	} else {
