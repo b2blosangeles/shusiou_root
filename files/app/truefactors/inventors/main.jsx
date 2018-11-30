@@ -13,11 +13,13 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		Root.lib.setSpinner(me, true);
+		Root.lib.setSpinner(Root.pointObj, true);
+		// Root.lib.setSpinner(me, true);
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(18);
-				Root.lib.setSpinner(me, false);
+				// Root.lib.setSpinner(me, false);
+				Root.lib.setSpinner(Root.pointObj, false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
 		)	
