@@ -69,7 +69,7 @@ try {
 						Root); 
 					}
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
-							 data={(me.props.data !== null) ? me.props.data : {}}
+							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />)
 							 
