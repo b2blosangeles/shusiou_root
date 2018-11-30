@@ -54,10 +54,10 @@ React.createClass({
 	myVideos : function() {
 		var me = this;
 		var btnLoad = (
-		<span>	
-			<button type="button" className="btn btn-info pull-right" onClick={me.loadData.bind(me)}>Load Data</button>
+		<span className="pull-right">	
+			<button type="button" className="btn btn-info" onClick={me.loadData.bind(me)}>Load Data</button>
 			&nbsp;
-			<button type="button" className="btn btn-info pull-right" onClick={me.popup.bind(me)}>Popup Window</button>
+			<button type="button" className="btn btn-info" onClick={me.popup.bind(me)}>Popup Window</button>
 		</span>
 		)
 		return  (
