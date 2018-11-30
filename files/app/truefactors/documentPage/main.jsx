@@ -40,4 +40,4 @@ React.createClass({
 			}
 		})}
 		</span>)
-})
+	})
