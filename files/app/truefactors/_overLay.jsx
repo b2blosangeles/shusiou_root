@@ -28,7 +28,7 @@ try {
 		},
 		render: function() {
 			var me = this;
-			// var Root = me.props.Root;
+			var Root = me.props.Root;
 		//	return (<span>NND --- {typeof Root}---</span>)}
 			
 			return ((typeof Root === 'undefined') ? (<span>No ROOT</span>):
