@@ -27,7 +27,7 @@ try {
 		},
 		render: function() {
 			var me = this;
-			return (<span>NND</span>)
+			return (<span>NND{typeof Root}</span>)
 			/*
 			return ((!Root ||!Root.overLay) ? (<span/>):
 				(<span>
