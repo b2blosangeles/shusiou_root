@@ -9,7 +9,7 @@ try {
 		},
 		componentDidMount : function() {
 			var me = this;
-			window.__root_verLay = me;
+			window.__rootOverLay = me;
 			console.log('componentDidMount--1->');
 		},
 		componentDidUpdate : function() {
