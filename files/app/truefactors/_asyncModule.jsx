@@ -118,7 +118,7 @@ try {
 									(function(Root) {
 										return _classOverLay
 									});
-								}	
+									
 								
 							}
 						}
