@@ -10,7 +10,7 @@ try {
 		componentDidMount : function() {
 			var me = this;
 			window.__rootOverLay = me;
-			console.log('componentDidMount--1->');
+			console.log('componentDidMount--2->');
 			me.setState({RootReady : true})
 		},
 		componentDidUpdate : function() {
@@ -29,7 +29,7 @@ try {
 		},
 		render: function() {
 			var me = this;
-			return ((typeof Root === 'undefined' || !Root.overLay) ? (<span>No ROOT{me.state.RootReady}</span>):
+			return ((typeof Root === 'undefined' || !Root.overLay) ? (<span>No ROOT--{me.state.RootReady}</span>):
 				(<span>
 					Overlay ready ===
 					{Root.commUI.show({code: 'spinner', parent: me})}
