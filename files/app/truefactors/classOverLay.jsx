@@ -3,7 +3,7 @@ React.createClass({
 		var me = this;
 		me.loading = [];
 
-		return {};
+		return {_spinner : false};
 	},
 	componentDidMount : function() {
 		var me = this;
