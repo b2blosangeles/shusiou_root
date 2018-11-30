@@ -112,10 +112,15 @@ try {
 									
 								}
 							};
-
-							_overLay = new Function('_classOverLay', 'Root', 
+							if (_classOverLay) {
+								_overLay = new Function('_classOverLay', 
 										     'return _classOverLay ')
-							(me.overlay(Root), Root);
+									(function(Root) {
+										return _classOverLay
+									});
+								}	
+								
+							}
 						}
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
