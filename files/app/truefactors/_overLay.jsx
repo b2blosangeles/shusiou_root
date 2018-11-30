@@ -14,7 +14,7 @@ try {
 		componentDidUpdate : function() {
 			var me = this;
 			console.log('componentDidUpdate--->');
-			if (Root) {
+			if (!Root) {
 				//if ((Root) && (!Root.overLay)) {
 				
 				console.log('Parking overLay');
