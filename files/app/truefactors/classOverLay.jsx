@@ -3,30 +3,21 @@ React.createClass({
 		var me = this;
 		me.loading = [];
 
-		return {RootReady : 'A'};
+		return {};
 	},
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
 	//	Root.overlay = me;
-		console.log('componentDidMount--21->');
-		me.setState({RootReady : 'B'})
+		console.log('componentDidMount--26->');
 	},
 	componentDidUpdate : function() {
 		var me = this;
 		console.log('componentDidUpdate--->');
-		//if (!Root) {
-			//if ((Root) && (!Root.overLay)) {
-
-		//	console.log('Parking overLay');
-			//Root.overLay = me;
-		//	me.setState({RootReady : true})
-		//}
 	},
 	test : function() {
-		if (typeof Root === 'undefined' ) alert('test 1');
-		else  alert('test 2');
-		// || !Root.overLay
+		var me = this;
+		me.setState({_spinner : true})
 	},
 	render: function() {
 		var me = this;
