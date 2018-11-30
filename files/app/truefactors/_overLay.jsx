@@ -1,5 +1,9 @@
 try {
 	var _overLay = React.createClass({
+		componentDidMount : function() {
+			var me = this;
+			console.log('componentDidMount--->');
+		},
 		render: function() {
 			var me = this;
 			console.log('Root--->');
