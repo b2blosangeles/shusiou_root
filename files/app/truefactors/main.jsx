@@ -9,10 +9,11 @@ React.createClass({
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
-		<span><_overLay />919
+		<span>
 			<_asyncModule plugin={{
 			extend: {
 				  includes : [
+                           		'https://dev.shusiou.win/app/truefactors/_overLay.jsx'
 					'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
 					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
