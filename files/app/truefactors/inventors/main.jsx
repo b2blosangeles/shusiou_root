@@ -13,13 +13,13 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		Root.lib.setSpinner(Root.pointObj, true);
-		// Root.lib.setSpinner(me, true);
+		// Root.lib.setSpinner(Root.pointObj, true);
+		Root.lib.setSpinner(me, true);
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(18);
-				// Root.lib.setSpinner(me, false);
-				Root.lib.setSpinner(Root.pointObj, false);
+				Root.lib.setSpinner(me, false);
+				// Root.lib.setSpinner(Root.pointObj, false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
 		)	
@@ -39,13 +39,13 @@ React.createClass({
 	},
 	popup : function() {
 		var me = this;
-		Root.lib.setPopup(Root.pointObj, true);
-		// Root.lib.setPopup(me, true);	
+		// Root.lib.setPopup(Root.pointObj, true);
+		Root.lib.setPopup(me, true);	
 	},
 	closePopup : function() {
 		var me = this;
-		Root.lib.setPopup(Root.pointObj, false);
-		// Root.lib.setPopup(me, false);	
+		// Root.lib.setPopup(Root.pointObj, false);
+		Root.lib.setPopup(me, false);	
 	},
 	
 	myVideos : function() {
@@ -77,8 +77,8 @@ React.createClass({
 					</div>
 				</div>
 				<div className="row mt-2">
-					{/*Root.commUI.show({code: 'spinner', parent: me})*/}
-					{/*Root.commUI.show({code: 'popup',  data: me.popupBody(), parent: me})*/}
+					{Root.commUI.show({code: 'spinner', parent: me})}
+					{Root.commUI.show({code: 'popup',  data: me.popupBody(), parent: me})}
 					
 					{me.list.map(function(m) {
 					return (<div className="col-sm-3 p-1">
