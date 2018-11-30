@@ -5,7 +5,7 @@ React.createClass({
         },
 	showContent : function() {
 		var me = this;
-		return (me.props.data)? me.props.data : '';
+		return (<span>{(me.props.data)? me.props.data : ''}</span>);
 	},
         render: function() {
           	var me = this;
