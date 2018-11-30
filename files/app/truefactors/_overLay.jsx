@@ -1,6 +1,6 @@
 try {
 
-	var _overLay = React.createClass({
+	var _PoverLay = React.createClass({
 		getInitialState: function() {
 			var me = this;
 			me.loading = [];
