@@ -37,7 +37,8 @@ try {
 				</span>)                   
 			)}
 			*/
-		})
+		}
+	})
 } catch (err) {
 	console.log(err.message);
 }
