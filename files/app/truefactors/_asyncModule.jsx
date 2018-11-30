@@ -52,7 +52,7 @@ try {
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
-					var _overLay = React.createClass({render: function() { return (<span/>)}});
+					var _overLay = React.createClass({render: function() { return (<span>HHH</span>)}});
 					
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
 					
