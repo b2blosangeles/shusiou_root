@@ -80,7 +80,7 @@ try {
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />
-							{(typeof _overLay === 'undefined') ? '===ppppp====' : 'uuu'+_classOverLay.toString()}
+							{(typeof _classOverLay === 'undefined') ? '===ppppp====' : 'uuu'+_classOverLay.toString()}
 						</span>)
 							 
 				} catch (err) {
