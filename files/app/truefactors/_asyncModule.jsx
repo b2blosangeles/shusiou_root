@@ -110,6 +110,8 @@ try {
 			)}
 	})						
 							console.log(_classOverLayB.toString());
+							console.log(_classOverLay.toString());
+							
 							_overLay = (_classOverLayB) ? 
 									new Function('_classOverLayB', 'Root', 
 										     'return ' + _classOverLayB.toString())
