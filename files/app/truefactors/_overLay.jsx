@@ -1,4 +1,5 @@
 try {
+	var __overLay {};
 	var _overLay = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -12,7 +13,9 @@ try {
 		componentDidUpdate : function() {
 			var me = this;
 			console.log('componentDidUpdate--->');
-			if ((Root) && (!Root.overLay)) {
+			if (Root) {
+				//if ((Root) && (!Root.overLay)) {
+				__overLay = me;
 				console.log('Parking overLay');
 				Root.overLay = me;
 				me.setState({RootReady : true})
