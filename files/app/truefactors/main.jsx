@@ -10,15 +10,7 @@ React.createClass({
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
 		<span>
-			<_asyncModule plugin={{
-			extend: {
-				  includes : [],
-				   loadingInfo : '', // 'Loading ...',
-				   main : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
-				   cacheTime : 1000
-				}, 
-				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-			parent={me} objId={_oId} />
+
 				
 			<_asyncModule plugin={{
 			extend: {
