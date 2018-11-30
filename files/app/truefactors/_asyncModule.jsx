@@ -42,48 +42,6 @@ try {
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
-		overlay : function(Root) {
-			return React.createClass({
-					getInitialState: function() {
-						var me = this;
-						me.loading = [];
-
-						return {RootReady : 'A'};
-					},
-					componentDidMount : function() {
-						var me = this;
-						window.__rootOverLay = me;
-						console.log('componentDidMount--2->');
-						me.setState({RootReady : 'C'})
-					},
-					componentDidUpdate : function() {
-						var me = this;
-						console.log('componentDidUpdate--->');
-						//if (!Root) {
-							//if ((Root) && (!Root.overLay)) {
-
-						//	console.log('Parking overLay');
-							//Root.overLay = me;
-						//	me.setState({RootReady : true})
-						//}
-					},
-					test : function() {
-						if (typeof Root === 'undefined' ) alert('test 1');
-						else  alert('test 2');
-						// || !Root.overLay
-					},
-					render: function() {
-						var me = this;
-						var Root = me.props.Root;
-						return ((typeof Root === 'undefined' ) ? (<span>No ROOT--{me.state.RootReady}</span>):
-							(<span>
-								Overlay ready ===
-								{Root.commUI.show({code: 'spinner', parent: me})}
-								{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
-							</span>)                   
-						)}
-				})					
-		},
 		render: function() {
 			var me = this;
 			if (me.state.success === false) {
@@ -94,8 +52,7 @@ try {
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
-					var _overLay = React.createClass({render: function() { return (<span>HHH</span>)}});
-					
+
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
 					
 					if (me._asyncObjId === me.props.objId) {
@@ -112,16 +69,6 @@ try {
 									
 								}
 							};
-							/*
-							if (_classOverLay) {
-								_overLay = new Function('_classOverLay', 
-										     'return _classOverLay ')
-									(function(Root) {
-										return _classOverLay
-									})(Root);
-									
-								
-							}*/
 						}
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
@@ -129,13 +76,10 @@ try {
 						Root);
 					}
 					
-					return  (<span>
-							<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
+					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
-							 />
-							<_overLay Root={Root} />
-						</span>)
+							 />)
 							 
 				} catch (err) {
 					return  (<span>Script Error: {err.message}</span>)
