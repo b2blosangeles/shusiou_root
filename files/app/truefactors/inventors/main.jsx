@@ -86,8 +86,8 @@ React.createClass({
 							parent : me, 
 							data : '<b>v' + m + '</b>', 
 							setting : {
-								noshadow :true,
-								type: 'success'
+								noshadow :false,
+								type: 'light'
 							}
 						});
 					})}							
