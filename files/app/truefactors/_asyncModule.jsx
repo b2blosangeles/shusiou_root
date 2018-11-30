@@ -81,7 +81,7 @@ try {
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />
 							{(typeof _classOverLay === 'undefined') ? '===ppppp====' : 
-							(<_classOverLay Root={Root} />)}
+							'(<_classOverLay Root={Root} />)'}
 						</span>)
 							 
 				} catch (err) {
