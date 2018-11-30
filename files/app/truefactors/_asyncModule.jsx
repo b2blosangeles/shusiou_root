@@ -58,10 +58,13 @@ try {
 		
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
-								overLay : false,
+								overLay : __overLay,
 								lib	: (!_commLib) ? {} : new _commLib(),
 								commUI	:  (!_commUI) ? {} : _commUI,
-								global	:  (!_global) ? {} :  _global
+								global	:  (!_global) ? {} :  _global,
+								setModule : function() {
+									
+								}
 							};
 						}
 
