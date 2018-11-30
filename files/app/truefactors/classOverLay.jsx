@@ -46,7 +46,7 @@ React.createClass({
 		var code = me.getSno();
 		me.spinPool[code] = new Date().getTime();
 		me.setState({_update : new Date().getTime()})
-		return rcode;
+		return code;
 	},
 	spinOff : function(code) {
 		var me = this;
