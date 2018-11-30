@@ -54,7 +54,7 @@ React.createClass({
 	myVideos : function() {
 		var me = this;
 		var btnLoad = (
-		<span className="pull-right">	
+		<span>	
 			<button type="button" className="btn btn-info" onClick={me.loadData.bind(me)}>Load Data</button>
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={me.popup.bind(me)}>Popup Window</button>
@@ -69,7 +69,7 @@ React.createClass({
 							parent : me, 
 							data : btnLoad, 
 							setting : {
-								class : ' p-0 ',
+								class : ' p-0 text-right ',
 								noshadow :  true,
 								style : {'min-height' : '2em'}
 							}
