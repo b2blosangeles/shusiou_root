@@ -18,7 +18,6 @@ try {
 		},
 		render: function() {
 			var me = this;
-			console.log('Root--->');
 			return ((!Root ||!Root.overLay) ? (<span/>):
 				(<span>{Root.commUI.show({code: 'spinner', parent: me})}
 					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
