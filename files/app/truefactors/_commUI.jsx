@@ -60,5 +60,23 @@ var _commUI = {
 				</span>
 				</span>) : (<span></span>)
 		    }
+		}),
+	popupA : React.createClass({
+		    render : function () { 
+			var me = this;
+			return (me.props.parent.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
+				<span className="overlay_popup_page">
+					<div className="container">
+					<div className="row ">
+							<div className="col-sm-12 rounded border border-dark">
+							{(typeof me.props.data === 'string' || me.props.data === '') ? 
+							(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+							: me.props.data}
+							</div>
+					</div>
+					</div>				
+				</span>
+				</span>) : (<span></span>)
+		    }
 		})	
 };
