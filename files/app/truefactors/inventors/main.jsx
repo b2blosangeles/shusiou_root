@@ -63,10 +63,7 @@ React.createClass({
 						})}
 					</div>
 				</div>
-				<div className="row mt-2">
-					{Root.commUI.show({code: 'spinner', parent: me})}
-					{Root.commUI.show({code: 'popup',  data: me.popupBody(), parent: me})}
-					
+				<div className="row mt-2">				
 					{me.list.map(function(m) {
 					return (<div className="col-sm-3 p-1">
 						{Root.commUI.show({
