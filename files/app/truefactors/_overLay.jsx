@@ -19,12 +19,12 @@ try {
 		render: function() {
 			var me = this;
 			console.log('Root--->');
-			return (!me.state.RootReady) ? (<span>Init overlay</span>): 
-				(
-				<span>_overLay====
+			return ((!me.state.RootReady) ? (<span>Init overlay</span>)
+				:
+				(<span>_overLay====
 					{Root.commUI.show({code: 'spinner', parent: me})}
 					{Root.commUI.show({code: 'popup',  data: me.popupBody(), parent: me})}
-				</span>                   
+				</span>)                   
 			)}
 		})
 } catch (err) {
