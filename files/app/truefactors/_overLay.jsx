@@ -25,7 +25,8 @@ try {
 			//}
 		},
 		test : function() {
-			alert('test');
+			if (typeof Root === 'undefined' ) alert('test');
+			else  alert('test 2');
 			// || !Root.overLay
 		},
 		render: function() {
