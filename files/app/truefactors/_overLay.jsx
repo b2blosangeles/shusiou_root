@@ -1,5 +1,5 @@
 try {
-	var __overLay = {};
+
 	var _overLay = React.createClass({
 		getInitialState: function() {
 			var me = this;
