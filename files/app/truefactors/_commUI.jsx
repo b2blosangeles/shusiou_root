@@ -34,7 +34,7 @@ var _commUI = {
 				</div>
 			</div>)}
 		}),
-
+	/*
 	spinner : React.createClass({
 		    render : function () { 
 			var me = this;
@@ -43,6 +43,7 @@ var _commUI = {
 			    </span>) : (<span></span>)
 		    }
 		}),
+	
 	popup : React.createClass({
 		    render : function () { 
 			var me = this;
@@ -60,7 +61,8 @@ var _commUI = {
 				</span>
 				</span>) : (<span></span>)
 		    }
-		}),
+		}),*/
+	/*
 	popupA : React.createClass({
 		    render : function () { 
 			var me = this;
@@ -79,4 +81,5 @@ var _commUI = {
 				</span>) : (<span></span>)
 		    }
 		})	
+		*/
 };
