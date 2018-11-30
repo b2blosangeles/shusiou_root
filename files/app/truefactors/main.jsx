@@ -14,7 +14,7 @@ React.createClass({
 			extend: {
 				  includes : [],
 				   loadingInfo : '', // 'Loading ...',
-				   main : 'https://dev.shusiou.win/app/truefactors/_overLay.jsx',
+				   main : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
 				   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
