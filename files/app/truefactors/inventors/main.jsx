@@ -13,13 +13,11 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		// Root.lib.setSpinner(Root.pointObj, true);
 		Root.lib.setSpinner(me, true);
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(18);
 				Root.lib.setSpinner(me, false);
-				// Root.lib.setSpinner(Root.pointObj, false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
 		)	
@@ -39,12 +37,10 @@ React.createClass({
 	},
 	popup : function() {
 		var me = this;
-		// Root.lib.setPopup(Root.pointObj, true);
 		Root.lib.setPopup(me, true);	
 	},
 	closePopup : function() {
 		var me = this;
-		// Root.lib.setPopup(Root.pointObj, false);
 		Root.lib.setPopup(me, false);	
 	},
 	
@@ -55,8 +51,6 @@ React.createClass({
 			<button type="button" className="btn btn-info" onClick={me.loadData.bind(me)}>Load Data</button>
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={me.popup.bind(me)}>Popup Window</button>
-			&nbsp;
-			<button type="button" className="btn btn-info" onClick={Root.pointObj.test.bind(me)}>niu</button>
 		</span>
 		)
 		return  (
