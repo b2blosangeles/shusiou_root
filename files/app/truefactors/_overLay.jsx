@@ -8,7 +8,7 @@ try {
 		},
 		componentDidMount : function() {
 			var me = this;
-			__overLay = me;
+			 window._overLay = me;
 			console.log('componentDidMount--1->');
 		},
 		componentDidUpdate : function() {
