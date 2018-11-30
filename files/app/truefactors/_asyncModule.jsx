@@ -84,7 +84,7 @@ try {
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />
-							{(typeof _classOverLay === 'undefined') ? '===ppppp====' : 
+							{(typeof _overLay === 'undefined') ? '===ppppp====' : 
 							(<_overLay />)}
 						</span>)
 							 
