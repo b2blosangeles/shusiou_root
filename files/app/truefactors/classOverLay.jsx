@@ -32,7 +32,7 @@ React.createClass({
 	},
 	showSpinner : function() {
 		var me = this;
-		return (isSpin()) ? (<span><span className="overlay_sping_cover"></span>   
+		return (me.isSpin()) ? (<span><span className="overlay_sping_cover"></span>   
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
