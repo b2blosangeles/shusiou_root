@@ -109,7 +109,7 @@ try {
 				</span>)                   
 			)}
 	})						
-							
+							console.log(_classOverLayB.toString());
 							_overLay = (_classOverLayB) ? 
 									new Function('_classOverLayB', 'Root', 
 										     'return ' + _classOverLayB.toString())
