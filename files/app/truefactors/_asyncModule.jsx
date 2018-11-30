@@ -68,6 +68,9 @@ try {
 									
 								}
 							};
+							if (typeof _classOverLay !== 'undefined') {
+								var _classOverLay = _classOverLay;
+							}
 						}
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
