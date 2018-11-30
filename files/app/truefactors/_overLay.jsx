@@ -38,8 +38,6 @@ try {
 					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 				</span>)                   
 			)}
-			
-		}
 	})
 } catch (err) {
 	console.log(err.message);
