@@ -2,6 +2,7 @@ try {
 	var _overLay = React.createClass({
 		getInitialState: function() {
 			var me = this;
+			me.loading = [];
 			return {RootReady : false};
 		},
 		componentDidMount : function() {
@@ -15,6 +16,9 @@ try {
 				Root.overLay = me;
 				me.setState({RootReady : true})
 			}
+		},
+		test : function() {
+			alert('test');
 		},
 		render: function() {
 			var me = this;
