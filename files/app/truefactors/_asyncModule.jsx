@@ -42,7 +42,7 @@ try {
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
-		overlay : function() {
+		overlay : function(Root) {
 			return React.createClass({
 					getInitialState: function() {
 						var me = this;
@@ -115,7 +115,7 @@ try {
 
 							_overLay = new Function('_classOverLay', 'Root', 
 										     'return _classOverLay ')
-							(me.overlay(), Root);
+							(me.overlay(Root), Root);
 						}
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
