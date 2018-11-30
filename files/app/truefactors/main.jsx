@@ -18,6 +18,7 @@ React.createClass({
 				   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+			parent={me} objId={_oId} />
 				
 			<_asyncModule plugin={{
 			extend: {
