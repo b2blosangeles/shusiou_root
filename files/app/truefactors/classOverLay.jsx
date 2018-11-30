@@ -19,7 +19,7 @@ React.createClass({
 		return React.createClass({
 		    render : function () { 
 			var me = this;
-			return (me._spinner) ? (<span><span className="overlay_sping_cover"></span>   
+			return (me.state._spinner) ? (<span><span className="overlay_sping_cover"></span>   
 				<span className="overlay_sping_page"><span className="spinner"></span></span>
 			    </span>) : (<span></span>)
 		    }
