@@ -110,9 +110,10 @@ try {
 			)}
 	})						
 							
-							_overLay = (_classOverLayB) ? 
+							_overLay = (_classOverLay) ? 
 									new Function('_classOverLayB', 'Root', 
-										     'return _classOverLayB;')(_classOverLayB, Root) 
+										     'return _classOverLayB;')
+							(_classOverLay, Root) 
 									: _overLay;
 						}
 
