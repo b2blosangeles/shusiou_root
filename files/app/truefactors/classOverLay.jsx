@@ -7,8 +7,8 @@ React.createClass({
 	},
 	componentDidMount : function() {
 		var me = this;
-		//window.__rootOverLay = me;
-		Root.overlay = me;
+		window.__rootOverLay = me;
+	//	Root.overlay = me;
 		console.log('componentDidMount--21->');
 		me.setState({RootReady : 'B'})
 	},
