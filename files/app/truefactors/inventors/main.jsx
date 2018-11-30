@@ -16,7 +16,7 @@ React.createClass({
 		Root.lib.setSpinner(me, true);
 		setTimeout(
 			function() {
-				me.list = Root.lib.getNumberList(10);
+				me.list = Root.lib.getNumberList(18);
 				Root.lib.setSpinner(me, false);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
@@ -69,7 +69,7 @@ React.createClass({
 							parent : me, 
 							data : btnLoad, 
 							setting : {
-								class : ' alert-info text-right ',
+								class : ' alert-primary text-right ',
 								noshadow :  true,
 								rounded : true,
 								style : {'min-height' : '2em'}
