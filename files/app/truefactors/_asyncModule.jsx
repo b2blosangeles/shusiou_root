@@ -75,8 +75,8 @@ try {
 						Root); 
 						if (typeof _classOverLay !== 'undefined') {
 							console.log(_classOverLay.toString());
-							var _overLay = new Function('Root', 
-							'return ' + _classOverLay.toString())(Root); 
+							var _overLay = new Function('_classOverLay', 'Root', 
+							'return _classOverLay;')(_classOverLay, Root); 
 						}
 					}
 					
