@@ -9,7 +9,7 @@ React.createClass({
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
-		<span><_overLay r={Root} />919
+		<span><_overLay />919
 			<_asyncModule plugin={{
 			extend: {
 				  includes : [
