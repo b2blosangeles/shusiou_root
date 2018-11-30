@@ -70,13 +70,13 @@ React.createClass({
 							data : btnLoad, 
 							setting : {
 								type : 'light',
-								noshadow : false,
+								noshadow :  true,
 								style : {'min-height' : '2em'}
 							}
 						})}
 					</div>
 				</div>
-				<div className="row mt-2">
+				<div className="row mt-3">
 					{Root.commUI.show({code: 'spinner', parent: me})}
 					{Root.commUI.show({ data: me.popupBody(),code: 'popup', parent: me})}
 					
