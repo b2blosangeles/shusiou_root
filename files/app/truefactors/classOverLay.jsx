@@ -43,6 +43,11 @@ React.createClass({
 		me.popupSetting = setting;
 		me.setState({_popup : true})
 	},
+	closePopup : function() {
+		var me = this;
+		me.popupSetting = null;
+		me.setState({_popup : false})
+	},	
 	render: function() {
 		var me = this;
 		return ((typeof Root === 'undefined' ) ? (<span>No ROOT--{me.state.RootReady}</span>):
