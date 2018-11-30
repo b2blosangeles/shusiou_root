@@ -69,7 +69,10 @@ try {
 								}
 							};
 							if (typeof _classOverLay !== 'undefined') {
-								var _classOverLay = _classOverLay;
+								code += 'var _overLay = _classOverLay;';
+							}
+							if (typeof _classOverLay !== 'undefined') {
+								var _overLay = _classOverLay;
 							}
 						}
 
@@ -84,7 +87,7 @@ try {
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />
 							{(typeof _classOverLay === 'undefined') ? '===ppppp====' : 
-							(<_classOverLay Root={Root} />)}
+							(<_overLay />)}
 						</span>)
 							 
 				} catch (err) {
