@@ -19,7 +19,7 @@ try {
 		render: function() {
 			var me = this;
 			console.log('Root--->');
-			return ((!me.state.RootReady) ? (<span>Init overlay</span>)
+			return ((!Root) ? (<span>Init overlay</span>)
 				:
 				(<span>_overLay====
 					{Root.commUI.show({code: 'spinner', parent: me})}
