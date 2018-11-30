@@ -52,7 +52,7 @@ try {
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
-					window.__rootOverLay = (!window.__rootOverLay) ? window.__rootOverLay : {}
+					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
 					
 					if (me._asyncObjId === me.props.objId) {
 						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
