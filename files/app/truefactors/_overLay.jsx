@@ -5,13 +5,13 @@ try {
 			var me = this;
 			me.loading = [];
 			
-			return {RootReady : false};
+			return {RootReady : 'A'};
 		},
 		componentDidMount : function() {
 			var me = this;
 			window.__rootOverLay = me;
 			console.log('componentDidMount--2->');
-			me.setState({RootReady : true})
+			me.setState({RootReady : 'B'})
 		},
 		componentDidUpdate : function() {
 			var me = this;
