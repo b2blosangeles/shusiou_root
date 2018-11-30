@@ -18,9 +18,21 @@ React.createClass({
 		me.sno = (!me.sno || me.sno > 1000000) ? 1 : (me.sno + 1);
 		return 'SNO-' + me.sno + '-' + new Date().getTime();
 	},
+	isSpin : function() {
+		var me = this, tm = new Date().getTime();
+		for (var v in me.spinPool) {
+			if (tm - me.spinPool[v].end > 0) {
+				delete me.spinPool[v];
+			}
+		}
+		for (var v in me.spinPool) {
+			if (tm - me.spinPool[v].start > 0) return true;
+		}
+		return false;
+	},
 	showSpinner : function() {
 		var me = this;
-		return (Object.keys(me.spinPool).length) ? (<span><span className="overlay_sping_cover"></span>   
+		return (isSpin()) ? (<span><span className="overlay_sping_cover"></span>   
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
@@ -41,10 +53,12 @@ React.createClass({
 			</span>
 			</span>) : (<span></span>)
 	},
-	spinOn : function() {
-		var me = this;
+	spinOn : function(setting) {
+		var me = this, tm = new Date().getTime();
 		var code = me.getSno();
-		me.spinPool[code] = new Date().getTime();
+		var s = tm + ((setting.delay) ?  setting.delay : 0)
+		var e = tm + s + ((setting.max) ?  setting.max : 600 * 1000)
+		me.spinPool[code] = {start : s, end : e};
 		me.setState({_update : new Date().getTime()})
 		return code;
 	},
