@@ -73,10 +73,13 @@ try {
 						Root); 
 					}
 					
-					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
+					return  (<span>
+							<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
-							 />)
+							 />
+							{(!_overLay) ? '' : (<_overLay />)}
+						</span>)
 							 
 				} catch (err) {
 					return  (<span>Script Error: {err.message}</span>)
