@@ -27,7 +27,8 @@ React.createClass({
 		return (
 			<div className="container">
 				<div className="row ">
-				  {Root.commUI.show({
+					<div className="col-sm-12">
+				  	{Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
 						data : (<button type="button" className="btn btn-warning" 
@@ -37,6 +38,7 @@ React.createClass({
 							style: {'min-height' : '18em'}
 						  }
 					})}
+					</div>
 				</div>
 			</div>)
 	},
@@ -61,6 +63,7 @@ React.createClass({
 		return  (
 			<div className="container">
 				<div className="row ">
+					
 				{Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
@@ -100,8 +103,7 @@ React.createClass({
 	},
         render: function() {
 		var me = this;
-		return (<span>
-			  {Root.commUI.show({
+		return (<span>{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
 					data : me.showBody(), 
