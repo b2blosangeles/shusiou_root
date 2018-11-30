@@ -29,7 +29,7 @@ try {
 		},
 		render: function() {
 			var me = this;
-			return ((typeof Root === 'undefined' || !Root.overLay) ? (<span>No ROOT</span>):
+			return ((typeof Root === 'undefined' || !Root.overLay) ? (<span>No ROOT{me.state.RootReady}</span>):
 				(<span>
 					Overlay ready ===
 					{Root.commUI.show({code: 'spinner', parent: me})}
