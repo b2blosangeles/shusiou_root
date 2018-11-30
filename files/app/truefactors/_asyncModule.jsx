@@ -52,7 +52,7 @@ try {
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
-					window.__root_verLay = (!window.__root_verLay) ? window.__root_verLay : {}
+					window.__rootOverLay = (!window.__rootOverLay) ? window.__rootOverLay : {}
 					
 					if (me._asyncObjId === me.props.objId) {
 						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
@@ -60,7 +60,7 @@ try {
 
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
-								overLay :  window.__root_verLay,
+								overLay :  window.__rootOverLay,
 								lib	: (!_commLib) ? {} : new _commLib(),
 								commUI	:  (!_commUI) ? {} : _commUI,
 								global	:  (!_global) ? {} :  _global,
