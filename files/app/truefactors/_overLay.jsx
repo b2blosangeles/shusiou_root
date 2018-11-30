@@ -29,8 +29,8 @@ try {
 		render: function() {
 			var me = this;
 			var Root = me.props.Root;
-			return (<span>NND--{typeof Root}</span>)
-			/*
+			//return (<span>NND--{typeof Root}</span>)
+			
 			return ((!Root ||!Root.overLay) ? (<span/>):
 				(<span>
 					Overlay ready ===
@@ -38,7 +38,7 @@ try {
 					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 				</span>)                   
 			)}
-			*/
+			
 		}
 	})
 } catch (err) {
