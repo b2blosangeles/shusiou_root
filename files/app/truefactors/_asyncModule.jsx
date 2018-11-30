@@ -70,7 +70,6 @@ try {
 									
 								}
 							};
-							_classOverLay
 							_overLay = (_classOverLay) ? 
 									new Function('_classOverLay', 'Root', 'return _classOverLay;')(_classOverLay, Root) 
 									: _overLay;
