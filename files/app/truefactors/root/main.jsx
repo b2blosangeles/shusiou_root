@@ -61,7 +61,7 @@ React.createClass({
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'
 					},
-				data : '4<hr/>5',
+				data : '',
 				parent : me
 			})
 		} 
