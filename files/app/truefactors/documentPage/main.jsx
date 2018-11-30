@@ -27,7 +27,7 @@ React.createClass({
 	},
         render : function() {
           var me = this;
-          return  Root.commUI.show({
+          return  ({Root.commUI.show({
 			code: 'infoBox', 
 			parent : me, 
 			data : me.showContent(), 
@@ -37,6 +37,7 @@ React.createClass({
 				style : {'min-height' : '40em'},
 				class : 'documentPageBody p-3'
 			}
+			})
 		})
 		
           return  (<span>
