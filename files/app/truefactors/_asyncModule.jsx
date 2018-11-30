@@ -58,15 +58,14 @@ try {
 					if (me._asyncObjId === me.props.objId) {
 						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
-						var firstRoot = false;
+		
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
-								pointObj : me,
+								overLay : true,
 								lib	: (!_commLib) ? {} : new _commLib(),
 								commUI	:  (!_commUI) ? {} : _commUI,
 								global	:  (!_global) ? {} :  _global
 							};
-							firstRoot = true;
 						}
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
@@ -74,15 +73,7 @@ try {
 						Root); 
 					}
 					
-					return  (firstRoot) ? (<span>
-							{Root.commUI.show({code: 'spinner', parent: me})}
-							{Root.commUI.show({code: 'popup',  data: '1234', parent: me})}
-							
-							<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
-							 data={(me.props.data !== null) ? me.props.data : null}
-							 update = {(me.props.update) ? me.props.update : ''}
-							 /></span>) :
-							(<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
+					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />)
