@@ -24,7 +24,9 @@ try {
 		render: function() {
 			var me = this;
 			return ((!Root ||!Root.overLay) ? (<span/>):
-				(<span>{Root.commUI.show({code: 'spinner', parent: me})}
+				(<span>
+					Overlay ready ===
+					{Root.commUI.show({code: 'spinner', parent: me})}
 					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 				</span>)                   
 			)}
