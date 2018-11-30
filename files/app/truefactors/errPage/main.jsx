@@ -3,6 +3,10 @@ React.createClass({
 		var me = this;
           	return {}
         },
+	showContent : function() {
+		var me = this;
+		return (me.props.data)? me.props.data : '';
+	},
         render: function() {
           	var me = this;
 		return  (
@@ -12,7 +16,7 @@ React.createClass({
 				{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : (me.props.data)? me.props.data : '', 
+					data : me.showContent(), 
 					setting : {
 						type: 'danger',
 						style: {'min-height' : '28em'}
