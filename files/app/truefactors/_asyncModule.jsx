@@ -112,10 +112,10 @@ try {
 							console.log(_classOverLayB.toString());
 							console.log(_classOverLay.toString());
 							
-							_overLay = (_classOverLayB) ? 
-									new Function('_classOverLayB', 'Root', 
+							_overLay = (_classOverLay) ? 
+									new Function('_classOverLay', 'Root', 
 										     'return _classOverLay ')
-							(_classOverLayB, Root) 
+							(_classOverLay, Root) 
 									: _overLay;
 						}
 
