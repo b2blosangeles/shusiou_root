@@ -81,15 +81,17 @@ React.createClass({
 					{Root.commUI.show({ data: me.popupBody(),code: 'popup', parent: me})}
 					
 					{me.list.map(function(m) {
-						return Root.commUI.show({
-							code: 'cellBox', 
+					return (<div className="col-sm-3 p-1">
+						{Root.commUI.show({
+							code: 'infoBox', 
 							parent : me, 
 							data : '<b>v' + m + '</b>', 
 							setting : {
 								noshadow :false,
 								type: 'light'
 							}
-						});
+						})}
+						</div>)
 					})}							
 				</div>
 			</div>)			
