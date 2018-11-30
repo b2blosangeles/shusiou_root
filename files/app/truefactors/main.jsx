@@ -10,7 +10,7 @@ React.createClass({
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
 		<span>
-			(/*<_classOverLay/>*/}
+			{/*<_classOverLay/>*/}
 			<_asyncModule plugin={{
 			extend: {
 				  includes : [
