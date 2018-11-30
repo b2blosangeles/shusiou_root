@@ -18,7 +18,9 @@ var _commLib = function () {
 	parent.setState({_spinner : (s) ? true : null})
     }
     this.spin = function(Root, s) {
-	if (!Root || !Root.overLay) {
+	if (!Root) {
+		alert('No Root ');
+	} else if (!Root || !Root.overLay) {
 		alert('No Root or Root.overLay');
 	} else {
 		Root.overLay.test();
