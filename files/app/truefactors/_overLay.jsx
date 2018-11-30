@@ -27,6 +27,8 @@ try {
 		},
 		render: function() {
 			var me = this;
+			return (<span>NND</span>)
+			/*
 			return ((!Root ||!Root.overLay) ? (<span/>):
 				(<span>
 					Overlay ready ===
@@ -34,6 +36,7 @@ try {
 					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 				</span>)                   
 			)}
+			*/
 		})
 } catch (err) {
 	console.log(err.message);
