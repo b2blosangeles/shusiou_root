@@ -12,6 +12,7 @@ React.createClass({
 	},
 	componentDidUpdate : function() {
 		var me = this;
+		console.log('--updated classOverLay ---');
 	},
 	getSno : function() {
 		var me = this;
@@ -26,7 +27,7 @@ React.createClass({
 			}
 		}
 		for (var v in me.spinPool) {
-			if (tm - me.spinPool[v].start > 0) return true;
+			if ((tm - me.spinPool[v].start) > 0) return true;
 		}
 		return false;
 	},
