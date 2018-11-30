@@ -153,6 +153,7 @@ body {
     background-color: transparent;
     color: #666;
     text-align: right;
+    z-index: 4999;
 }
 .documentPageFrame {
     background: rgba(139,157,195, 0.3);
