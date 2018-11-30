@@ -83,11 +83,23 @@ React.createClass({
 	},
         render: function() {
           var me = this;
+	__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		var _oId = __asyncOId + '-' + new Date().getTime();
           return  (
 		<span>
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
-			
+
+			<_asyncModule plugin={{
+			extend: {
+				  includes : [],
+				   loadingInfo : '', // 'Loading ...',
+				   main : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
+				   cacheTime : 1000
+				}, 
+				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+			parent={me} objId={_oId} />  
+			  
 			{me.showPageFrame(me.showBody())}
 			  
 			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
