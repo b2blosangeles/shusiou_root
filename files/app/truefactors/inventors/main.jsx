@@ -42,7 +42,8 @@ React.createClass({
 	},
 	closePopup : function() {
 		var me = this;
-		Root.lib.setPopup(me, false);	
+		Root.lib.setPopup(Root.pointObj, false);
+		// Root.lib.setPopup(me, false);	
 	},
 	
 	myVideos : function() {
