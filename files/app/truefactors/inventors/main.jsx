@@ -43,7 +43,10 @@ React.createClass({
 		var me = this;
 		Root.lib.setPopup(me, false);	
 	},
-	
+	spin : function() {
+		var me = this;
+		Root.lib.spin();
+	},
 	myVideos : function() {
 		var me = this;
 		var btnLoad = (
@@ -52,7 +55,7 @@ React.createClass({
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={me.popup.bind(me)}>Popup Window</button>
 			&nbsp;
-			<button type="button" className="btn btn-info" onClick={Root.lib.spin.bind(me)}>For test</button>
+			<button type="button" className="btn btn-info" onClick={me.spin.bind(me)}>For test</button>
 		</span>
 		)
 		return  (
