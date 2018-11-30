@@ -76,7 +76,7 @@ React.createClass({
 						})}
 					</div>
 				</div>
-				<div className="row ">
+				<div className="row mt-2">
 					{Root.commUI.show({code: 'spinner', parent: me})}
 					{Root.commUI.show({ data: me.popupBody(),code: 'popup', parent: me})}
 					
@@ -88,7 +88,8 @@ React.createClass({
 							data : '<b>v' + m + '</b>', 
 							setting : {
 								noshadow :false,
-								type: 'light'
+								type: 'light',
+								style : {'min-height' : '9em'}
 							}
 						})}
 						</div>)
