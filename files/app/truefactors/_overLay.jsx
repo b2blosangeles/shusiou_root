@@ -4,6 +4,10 @@ try {
 			var me = this;
 			console.log('componentDidMount--->');
 		},
+		componentDidUpdate : function() {
+			var me = this;
+			console.log('componentDidUpdate--->');
+		},
 		render: function() {
 			var me = this;
 			console.log('Root--->');
