@@ -55,9 +55,9 @@ React.createClass({
 		var me = this;
 		var btnLoad = (
 		<span>	
-			<button type="button" className="btn btn-warning" onClick={me.loadData.bind(me)}>Load Data</button>
+			<button type="button" className="btn btn-info pull-right" onClick={me.loadData.bind(me)}>Load Data</button>
 			&nbsp;
-			<button type="button" className="btn btn-warning" onClick={me.popup.bind(me)}>Popup Window</button>
+			<button type="button" className="btn btn-info pull-right" onClick={me.popup.bind(me)}>Popup Window</button>
 		</span>
 		)
 		return  (
