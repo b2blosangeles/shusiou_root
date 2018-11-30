@@ -23,7 +23,7 @@ try {
 				:
 				(<span>_overLay====
 					{Root.commUI.show({code: 'spinner', parent: me})}
-					{Root.commUI.show({code: 'popup',  data: me.popupBody(), parent: me})}
+					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 				</span>)                   
 			)}
 		})
