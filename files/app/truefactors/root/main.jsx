@@ -84,7 +84,7 @@ React.createClass({
         render: function() {
           var me = this;
           return  (
-		<span><_overLay />929<hr/>
+		<span><_overLay />
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			
