@@ -37,8 +37,10 @@ React.createClass({
 	},
 	spinOn : function(code) {
 		var me = this;
-		me.spinPool[code] = new Date().getTime();
+		var rcode = code + '-' + new Date().getTime();
+		me.spinPool[rcode] = new Date().getTime();
 		me.setState({update : new Date().getTime()})
+		return rcode;
 	},
 	spinOff : function(code) {
 		var me = this;
