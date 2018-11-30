@@ -28,7 +28,7 @@ React.createClass({
 			<span className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
-						<div className="col-sm-12 rounded border border-dark alert-success">
+						<div className="col-sm-12">
 						{(typeof v === 'string') ? 
 						(<span dangerouslySetInnerHTML={{__html: v}}/>)
 						: v}
