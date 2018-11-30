@@ -4,6 +4,7 @@ try {
 		getInitialState: function() {
 			var me = this;
 			me.loading = [];
+			
 			return {RootReady : false};
 		},
 		componentDidMount : function() {
@@ -27,6 +28,7 @@ try {
 		},
 		render: function() {
 			var me = this;
+			var Root = me.props.Root;
 			return (<span>NND--{typeof Root}</span>)
 			/*
 			return ((!Root ||!Root.overLay) ? (<span/>):
