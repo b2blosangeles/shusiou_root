@@ -69,10 +69,9 @@ React.createClass({
 							parent : me, 
 							data : btnLoad, 
 							setting : {
-								class : ' p-0 text-right ',
+								class : ' border border-secondary text-right ',
 								noshadow :  true,
-								style : {'min-height' : '2em', 
-									 'border-bottom' : '1px dashed #666'}
+								style : {'min-height' : '2em'}
 							}
 						})}
 					</div>
