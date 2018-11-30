@@ -31,7 +31,7 @@ try {
 			var Root = me.props.Root;
 			//return (<span>NND--{typeof Root}</span>)
 			
-			return ((!Root ||!Root.overLay) ? (<span/>):
+			return ((!Root) ? (<span/>):
 				(<span>
 					Overlay ready ===
 					{Root.commUI.show({code: 'spinner', parent: me})}
