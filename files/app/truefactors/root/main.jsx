@@ -65,11 +65,7 @@ React.createClass({
 				parent : me
 			})
 		} 
-		
-		//if (me.state.menuOption) {
-			return me.loadContentPage(me.state.menuOption);
-		//} 
-		//return me.loadContentPage('homePage');	
+		return me.loadContentPage(me.state.menuOption);	
         }, 
 	showPageFrame : function(data) {
 		var me = this;
