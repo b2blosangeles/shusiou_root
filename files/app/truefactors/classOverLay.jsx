@@ -37,13 +37,13 @@ React.createClass({
 	},
 	spinOn : function(code) {
 		var me = this;
-		me.spingPool[code] = new Date().getTime();
-		me.setState({_spinner : new Date().getTime()})
+		me.spinPool[code] = new Date().getTime();
+		me.setState({update : new Date().getTime()})
 	},
 	spinOff : function(code) {
 		var me = this;
-		delete me.spingPool[code];
-		me.setState({_spinner : new Date().getTime()})
+		delete me.spinPool[code];
+		me.setState({update : new Date().getTime()})
 	},		
 	popup : function(setting) {
 		var me = this;
