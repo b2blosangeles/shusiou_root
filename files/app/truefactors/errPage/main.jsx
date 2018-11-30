@@ -15,7 +15,7 @@ React.createClass({
 					data : (me.props.data)? me.props.data : '', 
 					setting : {
 						type: 'danger',
-						style: {'min-height' : '28em'}
+						style: {'min-height' : '2em'}
 					}
 				})}
 				</div>
