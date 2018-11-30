@@ -6,6 +6,7 @@ try {
 			return (
 				<span>_overLay</span>                   
 			)}
+			}
 		})
 } catch (err) {
 	console.log(err.message);
