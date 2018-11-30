@@ -69,7 +69,7 @@ React.createClass({
 							parent : me, 
 							data : btnLoad, 
 							setting : {
-								class : ' alert-primary text-right ',
+								class : ' alert-secondary text-right ',
 								noshadow :  true,
 								rounded : true,
 								style : {'min-height' : '2em'}
