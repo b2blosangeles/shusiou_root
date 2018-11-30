@@ -17,6 +17,13 @@ var _commLib = function () {
     this.setSpinner = function(parent, s) {
 	parent.setState({_spinner : (s) ? true : null})
     }
+    this.spin = function(parent, s) {
+	if (!Root || !Root.overLay) {
+		alert('No Root or Root.overLay');
+	} else {
+		Root.overLay.test();
+	}
+    }
     this.setPopup = function(parent, s) {
 	parent.setState({_popup : (s) ? true : null})
     }    
