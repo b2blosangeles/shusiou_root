@@ -1,4 +1,4 @@
-/*try {
+try {
 	var _overLay = React.createClass({
 		render: function() {
 
@@ -11,4 +11,4 @@
 } catch (err) {
 	console.log(err.message);
 }
-*/
+
