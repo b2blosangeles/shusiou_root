@@ -31,7 +31,9 @@ React.createClass({
 							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>), 
 					setting : {
 						type: 'light',
+						rounded : true,
 						style: {'min-height' : '18em'}
+						
 					  }
 					})}</span>)	
 	},
