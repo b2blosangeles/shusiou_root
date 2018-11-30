@@ -9,8 +9,7 @@ React.createClass({
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
-		<span>
-
+		<span>				
 			<_asyncModule plugin={{
 			extend: {
 				  includes : [],
@@ -32,7 +31,7 @@ React.createClass({
 				   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-				parent={me} objId={_oId} />
+				parent={me} objId={'B' + _oId} />
 		</span>
 		)
         }
