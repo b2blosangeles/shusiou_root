@@ -52,12 +52,12 @@ try {
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
+					window.__root_verLay = (!window.__root_verLay) ? window.__root_verLay : {}
+					
 					if (me._asyncObjId === me.props.objId) {
 						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
-						
-						window.__root_verLay = (!window.__root_verLay) ? window.__root_verLay : {}
-						
+
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
 								overLay :  window.__root_verLay,
