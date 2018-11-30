@@ -73,8 +73,7 @@ try {
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root); 
-						if (typeof _classOverLay !== 'undefined' && Root) {
-							console.log(_classOverLay.toString());
+						if (typeof _classOverLay !== 'undefined' && typeof Root !== 'undefined') {
 							var _overLay = new Function('_classOverLay', 'Root', 
 							'return _classOverLay;')(_classOverLay, Root); 
 						}
