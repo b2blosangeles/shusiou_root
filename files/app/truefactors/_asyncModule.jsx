@@ -74,8 +74,9 @@ try {
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root); 
 						if (typeof _classOverLay !== 'undefined') {
-							var _overLay = new Function('Root', 
-							 _classOverLay.toString())(Root); 
+							console.log(_classOverLay.toString());
+							//var _overLay = new Function('Root', 
+							// _classOverLay.toString())(Root); 
 						}
 					}
 					
