@@ -11,6 +11,7 @@ try {
 			var me = this;
 			window.__rootOverLay = me;
 			console.log('componentDidMount--1->');
+			me.setState({RootReady : true})
 		},
 		componentDidUpdate : function() {
 			var me = this;
