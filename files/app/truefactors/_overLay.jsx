@@ -31,7 +31,7 @@ try {
 			// var Root = me.props.Root;
 		//	return (<span>NND --- {typeof Root}---</span>)}
 			
-			return ((!Root) ? (<span>No ROOT</span>):
+			return ((typeof Root === 'undefined') ? (<span>No ROOT</span>):
 				(<span>
 					Overlay ready ===
 					{Root.commUI.show({code: 'spinner', parent: me})}
