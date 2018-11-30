@@ -8,7 +8,7 @@ React.createClass({
           return  (
 		<div className="container">
 			<div className="row ">
-				div className="col-sm-12 p-1">
+				<div className="col-sm-12 p-1">
 				{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
