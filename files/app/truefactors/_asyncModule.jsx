@@ -43,7 +43,7 @@ try {
 			}
 		},
 		test : function() {
-			alert(1237);
+			alert(12888);
 		},
 		render: function() {
 			var me = this;
