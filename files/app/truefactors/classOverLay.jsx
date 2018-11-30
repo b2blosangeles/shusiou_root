@@ -2,22 +2,19 @@ React.createClass({
 	getInitialState: function() {
 		var me = this;
 		me.popupSetting = '';
-
+		me.spinPool={};
 		return {};
 	},
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-	//	Root.overlay = me;
-		console.log('componentDidMount--26->');
 	},
 	componentDidUpdate : function() {
 		var me = this;
-		console.log('componentDidUpdate--->');
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.state._spinner) ? (<span><span className="overlay_sping_cover"></span>   
+		return ((Object.keys(spinPool).length) ? (<span><span className="overlay_sping_cover"></span>   
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
@@ -38,10 +35,16 @@ React.createClass({
 			</span>
 			</span>) : (<span></span>)
 	},
-	spin : function(s) {
+	spinOn : function(code) {
 		var me = this;
-		me.setState({_spinner : (s) ? true : false})
+		me.spingPool[code] = new Date().getTime();
+		me.setState({_spinner : new Date().getTime()})
 	},
+	spinOff : function(code) {
+		var me = this;
+		delete me.spingPool[code];
+		me.setState({_spinner : new Date().getTime()})
+	},		
 	popup : function(setting) {
 		var me = this;
 		me.popupSetting = setting;
