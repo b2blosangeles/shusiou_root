@@ -2,7 +2,7 @@ try {
 	var _overLay = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			return {};
+			return {RootReady : false};
 		},
 		componentDidMount : function() {
 			var me = this;
@@ -13,12 +13,13 @@ try {
 			console.log('componentDidUpdate--->');
 			if ((Root) && (Root.overLay === true)) {
 				Root.overLay = me;
+				me.setState({RootReady : true})
 			}
 		},
 		render: function() {
 			var me = this;
 			console.log('Root--->');
-			return (!Root) ? (<span>Init overlay</span>): 
+			return (!me.state.RootReady) ? (<span>Init overlay</span>): 
 				(
 				<span>_overLay====
 					{Root.commUI.show({code: 'spinner', parent: me})}
