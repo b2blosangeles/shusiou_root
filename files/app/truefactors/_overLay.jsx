@@ -1,8 +1,8 @@
 try {
 	var _overLay = React.createClass({
 		render: function() {
-
 			var me = this;
+			console.log(Root);
 			return (
 				<span>_overLay</span>                   
 			)}
