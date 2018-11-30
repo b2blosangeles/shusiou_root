@@ -7,7 +7,6 @@ try {
 		render: function() {
 			var me = this;
 			console.log('Root--->');
-			console.log(Root);
 			return (
 				<span>_overLay</span>                   
 			)}
