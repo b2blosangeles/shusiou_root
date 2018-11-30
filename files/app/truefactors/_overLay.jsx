@@ -29,7 +29,7 @@ try {
 		render: function() {
 			var me = this;
 			// var Root = me.props.Root;
-			return (<span>NND</span>)}
+			return (<span>NND --- {typeof Root}---</span>)}
 			/*
 			return ((!Root) ? (<span>No ROOT</span>):
 				(<span>
