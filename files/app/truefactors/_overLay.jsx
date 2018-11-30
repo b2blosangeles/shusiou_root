@@ -12,7 +12,7 @@ try {
 		componentDidUpdate : function() {
 			var me = this;
 			console.log('componentDidUpdate--->');
-			if ((Root) && (Root.overLay === true)) {
+			if ((Root) && (!Root.overLay)) {
 				Root.overLay = me;
 				me.setState({RootReady : true})
 			}
