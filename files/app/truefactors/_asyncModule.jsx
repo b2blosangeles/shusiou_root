@@ -42,9 +42,6 @@ try {
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
-		test : function() {
-			alert(12888);
-		},
 		render: function() {
 			var me = this;
 			if (me.state.success === false) {
