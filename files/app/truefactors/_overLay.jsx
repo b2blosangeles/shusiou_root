@@ -28,16 +28,13 @@ try {
 		},
 		render: function() {
 			var me = this;
-		//	var Root = me.props.Root;
-			return (<span>NND --- {typeof Root}---</span>)}
-			/*
 			return ((typeof Root === 'undefined' || !Root.overLay) ? (<span>No ROOT</span>):
 				(<span>
 					Overlay ready ===
 					{Root.commUI.show({code: 'spinner', parent: me})}
 					{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 				</span>)                   
-			)}*/
+			)}
 	})
 } catch (err) {
 	console.log(err.message);
