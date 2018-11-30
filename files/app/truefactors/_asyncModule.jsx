@@ -114,7 +114,7 @@ try {
 							};
 							if (_classOverLay) {
 								_overLay = /*new Function('_classOverLay', 
-										     'return _classOverLay ')*/}
+										     'return _classOverLay ')*/
 									(function(Root) {
 										return _classOverLay
 									})(Root);
