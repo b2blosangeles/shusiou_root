@@ -12,7 +12,7 @@ React.createClass({
 				{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : me.props.data, 
+					data : 'me.props.data', 
 					setting : {
 						type: 'danger',
 						style: {'min-height' : '28em'}
