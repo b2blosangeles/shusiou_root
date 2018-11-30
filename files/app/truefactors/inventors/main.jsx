@@ -34,7 +34,7 @@ React.createClass({
 						data : (<button type="button" className="btn btn-warning" 
 								onClick={me.closePopup.bind(me)}>Popup Window</button>), 
 						setting : {
-							type: 'info',
+							type: 'light',
 							style: {'min-height' : '18em'}
 						  }
 					})}
