@@ -15,6 +15,16 @@ React.createClass({
 		var me = this;
 		console.log('componentDidUpdate--->');
 	},
+	spinner : function() {
+		return React.createClass({
+		    render : function () { 
+			var me = this;
+			return (me._spinner) ? (<span><span className="overlay_sping_cover"></span>   
+				<span className="overlay_sping_page"><span className="spinner"></span></span>
+			    </span>) : (<span></span>)
+		    }
+		})
+	},
 	test : function() {
 		var me = this;
 		me.setState({_spinner : true})
@@ -23,8 +33,8 @@ React.createClass({
 		var me = this;
 		return ((typeof Root === 'undefined' ) ? (<span>No ROOT--{me.state.RootReady}</span>):
 			(<span>
-				Overlay ready ===
-				{Root.commUI.show({code: 'spinner', parent: me})}
+				{me.spinner()}
+				{/*Root.commUI.show({code: 'spinner', parent: me})*/}
 				{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
 			</span>)                   
 		)}
