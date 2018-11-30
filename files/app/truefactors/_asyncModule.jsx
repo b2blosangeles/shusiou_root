@@ -52,6 +52,8 @@ try {
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
+					var _overLay = React.createClass({render: function() { return (<span/>)}});
+					
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
 					
 					if (me._asyncObjId === me.props.objId) {
@@ -68,15 +70,15 @@ try {
 									
 								}
 							};
+							_classOverLay
+							_overLay = (_classOverLay) ? 
+									new Function('_classOverLay', 'Root', 'return _classOverLay;')(_classOverLay, Root) 
+									: _overLay;
 						}
 
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
-						Root); 
-						if (typeof _classOverLay !== 'undefined' && typeof Root !== 'undefined') {
-							var _overLay = new Function('_classOverLay', 'Root', 
-							'return _classOverLay;')(_classOverLay, Root); 
-						}
+						Root);
 					}
 					
 					return  (<span>
@@ -84,8 +86,7 @@ try {
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />
-							{(typeof _overLay === 'undefined') ? '===ppppp====' : 
-							(<_overLay />)}
+							<_overLay />
 						</span>)
 							 
 				} catch (err) {
