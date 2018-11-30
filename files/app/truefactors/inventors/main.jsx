@@ -13,11 +13,12 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		Root.overLay.spinOn('A');
+		var spin_id = Root.overLay.spinOn('A');
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(18);
-				Root.overLay.spinOff('A');
+				Root.overLay.spinOff(spin_id);
+				console.log(spin_id);
 				me.setState({updated : new Date().getTime()});
 			}, 1000
 		)	
