@@ -4,10 +4,10 @@ React.createClass({
           	return {}
         },
         render: function() {
-          var me = this;
-          return  (
+          	var me = this;
+		return  (
 		<div className="container">
-			<div className="row ">
+			<div className="row">
 				<div className="col-sm-12 p-1">
 				{Root.commUI.show({
 					code: 'infoBox', 
