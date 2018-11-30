@@ -13,7 +13,6 @@ React.createClass({
 			<_asyncModule plugin={{
 			extend: {
 				  includes : [
-                           		'https://dev.shusiou.win/app/truefactors/_overLay.jsx',
 					'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
 					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
