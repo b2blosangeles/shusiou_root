@@ -7,10 +7,6 @@ React.createClass({
 	
 	componentDidMount : function() {
 		var me = this;
-		Root.lib.setSpinner(me, true);
-		setTimeout(function() {
-				Root.lib.setSpinner(me, false);
-			}, 1000);
 	},
 	changeContentPage : function(v) {
 		var me = this; 
