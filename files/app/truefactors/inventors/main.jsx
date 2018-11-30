@@ -24,23 +24,16 @@ React.createClass({
 	},
 	popupBody : function() {
 		var me = this;
-		return (
-			<div className="container">
-				<div className="row ">
-					<div className="col-sm-12">
-				  	{Root.commUI.show({
-						code: 'infoBox', 
-						parent : me, 
-						data : (<button type="button" className="btn btn-warning" 
-								onClick={me.closePopup.bind(me)}>Popup Window</button>), 
-						setting : {
-							type: 'light',
-							style: {'min-height' : '18em'}
-						  }
-					})}
-					</div>
-				</div>
-			</div>)
+		return (<span>{Root.commUI.show({
+					code: 'infoBox', 
+					parent : me, 
+					data : (<button type="button" className="btn btn-warning" 
+							onClick={me.closePopup.bind(me)}>Popup Window</button>), 
+					setting : {
+						type: 'light',
+						style: {'min-height' : '18em'}
+					  }
+					})}</span>)	
 	},
 	popup : function() {
 		var me = this;
