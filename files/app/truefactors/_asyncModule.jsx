@@ -114,7 +114,7 @@ try {
 							
 							_overLay = (_classOverLayB) ? 
 									new Function('_classOverLayB', 'Root', 
-										     'return _classOverLayB ')
+										     'return _classOverLay ')
 							(_classOverLayB, Root) 
 									: _overLay;
 						}
