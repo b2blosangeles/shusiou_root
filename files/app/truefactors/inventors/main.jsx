@@ -63,17 +63,18 @@ React.createClass({
 		return  (
 			<div className="container">
 				<div className="row ">
-					
-				{Root.commUI.show({
-						code: 'infoBox', 
-						parent : me, 
-						data : btnLoad, 
-						setting : {
-							type : 'light',
-							noshadow : true,
-							style : {'min-height' : '2em'}
-						}
-					})}
+					<div className="col-sm-12 p-1">	
+					{Root.commUI.show({
+							code: 'infoBox', 
+							parent : me, 
+							data : btnLoad, 
+							setting : {
+								type : 'light',
+								noshadow : false,
+								style : {'min-height' : '2em'}
+							}
+						})}
+					</div>
 				</div>
 				<div className="row ">
 					{Root.commUI.show({code: 'spinner', parent: me})}
