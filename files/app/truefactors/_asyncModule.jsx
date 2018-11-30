@@ -42,6 +42,9 @@ try {
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
+		test : function() {
+			alert(123);
+		},
 		render: function() {
 			var me = this;
 			if (me.state.success === false) {
@@ -58,6 +61,7 @@ try {
 						
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
+								pointObj : me,
 								lib	: (!_commLib) ? {} : new _commLib(),
 								commUI	:  (!_commUI) ? {} : _commUI,
 								global	:  (!_global) ? {} :  _global
