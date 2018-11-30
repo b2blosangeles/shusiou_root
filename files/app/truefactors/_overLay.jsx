@@ -8,14 +8,15 @@ try {
 		},
 		componentDidMount : function() {
 			var me = this;
-			console.log('componentDidMount--->');
+			__overLay = me;
+			console.log('componentDidMount--1->');
 		},
 		componentDidUpdate : function() {
 			var me = this;
 			console.log('componentDidUpdate--->');
 			if (Root) {
 				//if ((Root) && (!Root.overLay)) {
-				__overLay = me;
+				
 				console.log('Parking overLay');
 				Root.overLay = me;
 				me.setState({RootReady : true})
