@@ -28,7 +28,7 @@ React.createClass({
 					code: 'infoBox', 
 					parent : me, 
 					data : (<button type="button" className="btn btn-warning" 
-							onClick={me.closePopup.bind(me)}>Popup Window</button>), 
+							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>), 
 					setting : {
 						type: 'light',
 						style: {'min-height' : '18em'}
@@ -51,7 +51,7 @@ React.createClass({
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={me.popup.bind(me)}>Popup Window</button>
 			&nbsp;
-			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, 'AAAA')}>For - test</button>
+			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, me.popupBody())}>For - test</button>
 		</span>
 		)
 		return  (
