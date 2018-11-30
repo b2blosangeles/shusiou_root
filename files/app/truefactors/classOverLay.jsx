@@ -21,16 +21,16 @@ React.createClass({
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
-	popup : function() {
+	popup : function(v) {
 		var me = this;
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
 						<div className="col-sm-12 rounded border border-dark">
-						{(typeof me.props.data === 'string' || me.props.data === '') ? 
-						(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
-						: me.props.data}
+						{(typeof v === 'string') ? 
+						(<span dangerouslySetInnerHTML={{__html: v}}/>)
+						: v}
 						</div>
 				</div>
 				</div>				
@@ -47,7 +47,7 @@ React.createClass({
 			(<span>
 				{me.spinner()}
 				{/*Root.commUI.show({code: 'spinner', parent: me})*/}
-				{Root.commUI.show({code: 'popup',  data: 'me.popupBody()', parent: me})}
+				{me.popup('7788')}
 			</span>)                   
 		)}
 })
