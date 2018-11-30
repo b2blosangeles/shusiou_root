@@ -37,7 +37,8 @@ React.createClass({
 	},
 	popup : function() {
 		var me = this;
-		Root.lib.setPopup(me, true);	
+		Root.lib.setPopup(Root.pointObj, true);
+		// Root.lib.setPopup(me, true);	
 	},
 	closePopup : function() {
 		var me = this;
