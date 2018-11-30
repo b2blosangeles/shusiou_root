@@ -11,6 +11,7 @@ try {
 		componentDidUpdate : function() {
 			var me = this;
 			console.log('componentDidUpdate--->');
+			if (Root) console.log('componentDidUpdate Root Exist->');
 		},
 		render: function() {
 			var me = this;
