@@ -51,7 +51,8 @@ var _commUI = {
 					<div className="container">
 					<div className="row ">
 							<div className="col-sm-12 rounded border border-dark">
-							{(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+							{(typeof me.props.data === 'string' || me.props.data === '') ? 
+							(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 							: me.props.data}
 							</div>
 					</div>
