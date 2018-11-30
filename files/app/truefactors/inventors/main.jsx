@@ -72,7 +72,7 @@ React.createClass({
 								class : ' p-0 text-right ',
 								noshadow :  true,
 								style : {'min-height' : '2em', 
-									 'border_bottom' : '1px solid red'}
+									 'border-bottom' : '1px dashed #666'}
 							}
 						})}
 					</div>
