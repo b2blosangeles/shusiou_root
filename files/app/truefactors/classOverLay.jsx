@@ -21,9 +21,25 @@ React.createClass({
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
+	popup : function() {
+		var me = this;
+		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
+			<span className="overlay_popup_page">
+				<div className="container">
+				<div className="row ">
+						<div className="col-sm-12 rounded border border-dark">
+						{(typeof me.props.data === 'string' || me.props.data === '') ? 
+						(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+						: me.props.data}
+						</div>
+				</div>
+				</div>				
+			</span>
+			</span>) : (<span></span>)
+	},	
 	test : function() {
 		var me = this;
-		me.setState({_spinner : true})
+		me.setState({_popup : true})
 	},
 	render: function() {
 		var me = this;
