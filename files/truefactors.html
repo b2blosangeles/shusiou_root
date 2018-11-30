@@ -19,6 +19,7 @@
       var _loadingITV = setInterval(function() {
             if (!$ || !$.ReactPlugin) return true;
             clearInterval(_loadingITV);
+        	  var __overLay = {};
             $.ReactPlugin({
                 extend:{
                          includes : [
