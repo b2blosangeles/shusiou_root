@@ -69,10 +69,7 @@ try {
 								}
 							};
 							if (typeof _classOverLay !== 'undefined') {
-								code += '; var _overLay = _classOverLay;';
-							}
-							if (typeof _classOverLay !== 'undefined') {
-								var _overLay = _classOverLay;
+								code += "\n" + 'var _overLay = _classOverLay;';
 							}
 						}
 
