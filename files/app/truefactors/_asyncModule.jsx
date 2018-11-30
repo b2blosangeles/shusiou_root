@@ -74,6 +74,7 @@ try {
 					},
 					render: function() {
 						var me = this;
+						var Root = me.props.Root;
 						return ((typeof Root === 'undefined' ) ? (<span>No ROOT--{me.state.RootReady}</span>):
 							(<span>
 								Overlay ready ===
@@ -127,7 +128,7 @@ try {
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
 							 />
-							<_overLay />
+							<_overLay Root={Root} />
 						</span>)
 							 
 				} catch (err) {
