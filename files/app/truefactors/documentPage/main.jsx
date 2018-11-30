@@ -27,6 +27,18 @@ React.createClass({
 	},
         render : function() {
           var me = this;
+          return  Root.commUI.show({
+			code: 'infoBox', 
+			parent : me, 
+			data : me.showContent(), 
+			setting : {
+				type : 'light',
+				noshadow : true,
+				style : {'min-height' : '40em'},
+				class : 'documentPageBody p-3'
+			}
+		})
+		
           return  (<span>
 		  {Root.commUI.show({
 			code: 'infoBox', 
@@ -40,21 +52,4 @@ React.createClass({
 			}
 		})}
 		</span>)
-          return  (
-		<div className="container">
-			<div className="row documentPageFrame mt-3 mb-5 p-1">
-			{Root.commUI.show({
-					code: 'infoBox', 
-					parent : me, 
-					data : me.showContent(), 
-					setting : {
-						type : 'light',
-						noshadow : true,
-						style : {'min-height' : '40em'},
-						class : 'documentPageBody p-3'
-					}
-				})}
-			</div>
-		</div>)
-        }
 })
