@@ -37,7 +37,11 @@ React.createClass({
 				</div>				
 			</span>
 			</span>) : (<span></span>)
-	},	
+	},
+	spin : function(s) {
+		var me = this;
+		me.setState({_spinner : (s) ? true : false})
+	},
 	popup : function(setting) {
 		var me = this;
 		me.popupSetting = setting;
