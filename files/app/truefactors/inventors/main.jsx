@@ -8,17 +8,18 @@ React.createClass({
 		var me = this;
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			// console.log(_load);
-			me.loadData();
+			loadVideos(me, Root);
+			// me.loadData();
 		}
 	},
 	componentWillUnmount : function() {
 		var me = this;
 	},
+	/*
 	loadData : function() {
 		var me = this;
 		loadVideos(me, Root);
-	},
+	},*/
 	popupBody : function() {
 		var me = this;
 		return (<span>{Root.commUI.show({
