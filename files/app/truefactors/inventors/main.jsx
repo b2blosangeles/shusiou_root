@@ -6,8 +6,9 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		console.log(_load);
+		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
+			console.log(_load);
 			me.loadData();
 		}
 	},
