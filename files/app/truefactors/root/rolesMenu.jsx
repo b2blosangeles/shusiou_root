@@ -32,7 +32,7 @@ var _rolesMenu = React.createClass({
     									'background-position': 'center center'
 								  }}
 								onClick={me.pickMenu.bind(me, idx)}>
-								{me.roles[idx].caption}</button>
+								<b>{me.roles[idx].caption}</b></button>
 							})}
 						</div>
 					</div>
