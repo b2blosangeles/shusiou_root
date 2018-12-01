@@ -27,7 +27,7 @@ var _rolesMenu = React.createClass({
 								style={{
 									'background-image' : 
 									'url(//dev.shusiou.win/app/truefactors/imgs/check_bg.png)',
-									'background-size': 'cover',
+									'background-size': 'contain',
 								  	'background-repeat':   'no-repeat',
     									'background-position': 'center center'
 								  }}
