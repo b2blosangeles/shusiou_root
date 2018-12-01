@@ -12,5 +12,5 @@ var loadVideos = function(me, Root) {
 }
 var showImage = function() {
 
-	return '<img class="p-100" src="https://i.ytimg.com/an_webp/vjhiERkfvG4/mqdefault_6s.webp?du=3000&sqp=CK7xh-AF&rs=AOn4CLCo8EFruYbRz8rnnQ8RZua389qa2Q"/>';
+	return '<img class="w-100" src="https://i.ytimg.com/an_webp/vjhiERkfvG4/mqdefault_6s.webp?du=3000&sqp=CK7xh-AF&rs=AOn4CLCo8EFruYbRz8rnnQ8RZua389qa2Q"/>';
 }
