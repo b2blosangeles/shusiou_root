@@ -49,6 +49,6 @@ var _commUI = {
 				    {(typeof me.props.data === 'string' && me.props.data !== '') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 				    : me.props.data}
 				</div>)}                     	
-		}},
+		}}
 	
 };
