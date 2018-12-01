@@ -68,7 +68,7 @@ React.createClass({
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : showImage(), 
+							data : showImage(m), 
 							setting : {
 								noshadow :false,
 								type: 'light',
