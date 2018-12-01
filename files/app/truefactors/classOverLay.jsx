@@ -32,11 +32,11 @@ React.createClass({
 		}
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].start) > 0) {
-				me.setStatus({_spinStatus, true});
+				me.setState({_spinStatus, true});
 				return true;
 			}
 		}
-		me.setStatus({_spinStatus, false});
+		me.setState({_spinStatus, false});
 	},
 	showSpinner : function() {
 		var me = this;
