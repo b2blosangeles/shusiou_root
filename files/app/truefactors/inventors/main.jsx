@@ -38,7 +38,7 @@ React.createClass({
 		var me = this;
 		var btnLoad = (
 		<span>	
-			<button type="button" className="btn btn-info" onClick={me.loadData.bind(me)}>Load Data</button>
+			<button type="button" className="btn btn-info" onClick={loadVideos.bind(me, me, Root)}>Load Data</button>
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, me.popupBody())}>Popup Window</button>
 		</span>
