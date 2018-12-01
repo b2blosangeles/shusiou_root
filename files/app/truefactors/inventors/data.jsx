@@ -1,5 +1,5 @@
 var _compData = function(me, Root) {
-	this.loadVideos = function(me, Root) {
+	this.loadVideos = function() {
 		var spin_id = Root.overLay.spinOn();
 		me.list = [];
 		me.setState({updated : new Date().getTime()});
