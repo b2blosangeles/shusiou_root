@@ -9,7 +9,7 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		setInterval(me.scanSpin, 300);
+		setInterval(me.scanSpin, 500);
 	},
 	componentDidUpdate : function() {
 		var me = this;
@@ -33,7 +33,6 @@ React.createClass({
 			}
 		}
 		me.setState({_spinStatus : false});
-		
 	},
 	showSpinner : function() {
 		var me = this;
