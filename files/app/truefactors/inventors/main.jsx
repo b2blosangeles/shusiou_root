@@ -89,7 +89,7 @@ React.createClass({
 	},
 	showBody : function() {
 		var me = this;
-		if (me.props.parent.state.menuOption === 'myVideos') {
+		if (me.props.parent.state.menuOption === 'myVideos' || me.props.parent.state.menuOption === '') {
 			return me.myVideos();
 		} else {
 			return (<span>No update</span>)
