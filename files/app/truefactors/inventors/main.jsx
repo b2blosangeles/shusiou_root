@@ -86,7 +86,7 @@ React.createClass({
 			return (<span>No update
 					<span className="section_spin_cover"></span>
 					<span className="section_spin_page">
-						<span className="spinner"></spin>
+						<span className="spinner"></span>
 					</span>
 				</span>)
 		}	
