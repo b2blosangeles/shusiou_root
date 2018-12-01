@@ -23,7 +23,7 @@ var _rolesMenu = React.createClass({
 						</div>
 						<div className="col-sm-9 text-right pt-2">
 							{Object.keys(me.roles).map(function(idx){
-							  return <button className="border border-success btn-large rounded"
+							  return <button className="btn-large rounded"
 								style={{
 									'background-image' : 
 									'url(//dev.shusiou.win/app/truefactors/imgs/check_bg.png)',
