@@ -40,8 +40,8 @@ React.createClass({
 			return Root.lib.asyncModule({
 				setting:{	extend: {
 							includes : [
-							'https://dev.shusiou.win/app/truefactors/inventors/data.js',
-							'https://dev.shusiou.win/app/truefactors/inventors/view.js'	
+								'https://dev.shusiou.win/app/truefactors/inventors/data.js',
+								'https://dev.shusiou.win/app/truefactors/inventors/view.js'	
 							],
 							main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
 						}, 
