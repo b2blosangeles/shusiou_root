@@ -36,8 +36,8 @@ React.createClass({
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.state._spinStatus) ? (<span><span className="overlay_sping_cover"></span>   
-			<span className="overlay_sping_page"><span className="spinner"></span></span>
+		return (me.state._spinStatus) ? (<span><span className="overlay_spin_cover"></span>   
+			<span className="overlay_spin_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
 	showPopup : function() {
