@@ -6,7 +6,7 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		// me.loadData();
+		me.loadData();
 	},
 	componentWillUnmount : function() {
 		var me = this;
