@@ -24,4 +24,4 @@ var _Compdata = function() {
 	}
 	
 };
-var Compdata = new _Compdata(me, Root);
+var Compdata = new _Compdata();
