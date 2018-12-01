@@ -6,7 +6,7 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		me.loadData();
+		
 	},
 	componentWillUnmount : function() {
 		var me = this;
@@ -49,6 +49,7 @@ React.createClass({
 			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, me.popupBody())}>Popup Window</button>
 		</span>
 		)
+		
 		return  (
 			<div className="container">
 				<div className="row ">
@@ -87,6 +88,7 @@ React.createClass({
 	showBody : function() {
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myVideos') {
+			me.loadData();
 			return me.myVideos();
 		} else {
 			return (<span>No update</span>)
