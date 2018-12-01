@@ -33,53 +33,5 @@ var _commUI = {
 					</div>
 				</div>
 			</div>)}
-		}),
-	/*
-	spinner : React.createClass({
-		    render : function () { 
-			var me = this;
-			return (me.props.parent.state._spinner) ? (<span><span className="overlay_sping_cover"></span>   
-				<span className="overlay_sping_page"><span className="spinner"></span></span>
-			    </span>) : (<span></span>)
-		    }
-		}),
-	
-	popup : React.createClass({
-		    render : function () { 
-			var me = this;
-			return (me.props.parent.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-				<span className="overlay_popup_page">
-					<div className="container">
-					<div className="row ">
-							<div className="col-sm-12">
-							{(typeof me.props.data === 'string' || me.props.data === '') ? 
-							(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
-							: me.props.data}
-							</div>
-					</div>
-					</div>				
-				</span>
-				</span>) : (<span></span>)
-		    }
-		}),*/
-	/*
-	popupA : React.createClass({
-		    render : function () { 
-			var me = this;
-			return (me.props.parent.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-				<span className="overlay_popup_page">
-					<div className="container">
-					<div className="row ">
-							<div className="col-sm-12 rounded border border-dark">
-							{(typeof me.props.data === 'string' || me.props.data === '') ? 
-							(<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
-							: me.props.data}
-							</div>
-					</div>
-					</div>				
-				</span>
-				</span>) : (<span></span>)
-		    }
-		})	
-		*/
+		})
 };
