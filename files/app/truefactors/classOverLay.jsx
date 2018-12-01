@@ -60,6 +60,7 @@ React.createClass({
 	},
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
+		if (!setting) var setting = {};
 		var code = me.getSno();
 		var s = tm + ((setting.delay) ?  setting.delay : 0)
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
