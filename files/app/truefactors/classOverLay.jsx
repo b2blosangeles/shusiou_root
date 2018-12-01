@@ -9,7 +9,7 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		setInterval(me.scanSpin, 1000);
+		setInterval(me.scanSpin, 100);
 	},
 	componentDidUpdate : function() {
 		var me = this;
