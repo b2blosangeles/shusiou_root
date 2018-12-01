@@ -2,13 +2,14 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.list = [];
+		me.compData = new _compData(me, Root);
           	return {}
         },
 	componentDidMount : function() {
 		var me = this;
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			Compdata.loadVideos(me, Root);
+			me.compData.loadVideos(me, Root);
 			// me.loadData();
 		}
 	},
@@ -39,7 +40,7 @@ React.createClass({
 		var me = this;
 		var btnLoad = (
 		<span>	
-			<button type="button" className="btn btn-info" onClick={Compdata.loadVideos.bind(me, me, Root)}>Load Data</button>
+			<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me, me, Root)}>Load Data</button>
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, me.popupBody())}>Popup Window</button>
 		</span>
