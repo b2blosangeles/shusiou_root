@@ -24,15 +24,12 @@ React.createClass({
 	popupBody : function() {
 		var me = this;
 		return (<span>{Root.commUI.show({
-					code: 'infoBox', 
+					code: 'popUpFrame', 
 					parent : me, 
 					data : (<button type="button" className="btn btn-warning" 
 							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>), 
 					setting : {
-						type: 'light',
-						rounded : true,
-						style: {'min-height' : '18em'}
-						
+						type: 'light'
 					  }
 					})}</span>)	
 	},
