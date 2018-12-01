@@ -13,13 +13,17 @@ var _commLib = function () {
     	var r = [];
 	for (var i = 0;  i < n; i++) r[i] = i;
 	return r;
-    }/*
-    this.setSpinner = function(parent, s) {
-	parent.setState({_spinner : (s) ? true : null})
     }
-    this.setPopup = function(parent, s) {
-	parent.setState({_popup : (s) ? true : null})
-    }  */  
+    
+    this.spinAnchor = function() {
+    	return(
+  		<span>
+			<span className="section_spin_cover"></span>
+			<span className="section_spin_page">
+				<span className="section-spinner"></span>
+			</span>
+		</span>) 
+    }
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
