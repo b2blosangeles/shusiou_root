@@ -23,6 +23,7 @@ React.createClass({
 	},
 	isSpin : function() {
 		var me = this, tm = new Date().getTime();
+		/*
 		console.log('---isSpin---');
 		console.log(me.spinPool);
 		for (var v in me.spinPool) {
@@ -37,6 +38,7 @@ React.createClass({
 			}
 		}
 		me.setState({_spinStatus, false});
+		*/
 	},
 	showSpinner : function() {
 		var me = this;
