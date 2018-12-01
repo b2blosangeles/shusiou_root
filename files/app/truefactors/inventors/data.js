@@ -1,4 +1,4 @@
-var Compdata = new function(me, Root) {
+var _Compdata = function(me, Root) {
 	this.loadVideos = function() {
 		var spin_id = Root.overLay.spinOn();
 		me.list = [];
@@ -23,4 +23,5 @@ var Compdata = new function(me, Root) {
 		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
 	}
 	
-}(me, Root);
+};
+var Compdata = new _Compdata(me, Root);
