@@ -17,7 +17,7 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		loadVideos(me);
+		loadVideos(me, Root);
 	},
 	popupBody : function() {
 		var me = this;
