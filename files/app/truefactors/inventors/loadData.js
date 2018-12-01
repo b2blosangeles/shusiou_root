@@ -10,3 +10,7 @@ var loadVideos = function(me, Root) {
 		},1000
 	)
 }
+var showImage = function() {
+
+	return '<img src="https://i.ytimg.com/an_webp/vjhiERkfvG4/mqdefault_6s.webp?du=3000&sqp=CK7xh-AF&rs=AOn4CLCo8EFruYbRz8rnnQ8RZua389qa2Q"/>';
+}
