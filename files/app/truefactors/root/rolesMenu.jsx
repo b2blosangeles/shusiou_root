@@ -27,12 +27,13 @@ var _rolesMenu = React.createClass({
 								style={{
 									'background-image' : 
 									'url(//dev.shusiou.win/app/truefactors/imgs/check_bg.png)',
-									'background-size': 'contain',
-								  	'background-repeat':   'no-repeat',
-    									'background-position': 'center center'
+									'background-size' : 'contain',
+								  	'background-repeat' :   'no-repeat',
+    									'background-position' : 'center center',
+									'color' : '#3b5998'
 								  }}
 								onClick={me.pickMenu.bind(me, idx)}>
-								<b className="text-info">{me.roles[idx].caption}</b></button>
+								<b>{me.roles[idx].caption}</b></button>
 							})}
 						</div>
 					</div>
