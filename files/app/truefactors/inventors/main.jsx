@@ -42,6 +42,7 @@ React.createClass({
 	},
 	myVideos : function() {
 		var me = this;
+		me.loadData();
 		var btnLoad = (
 		<span>	
 			<button type="button" className="btn btn-info" onClick={me.loadData.bind(me)}>Load Data</button>
