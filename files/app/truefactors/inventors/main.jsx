@@ -17,6 +17,8 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
+		loadVideos();
+		/*
 		var spin_id = Root.overLay.spinOn();
 		me.list = [];
 		me.setState({updated : new Date().getTime()});
@@ -27,7 +29,7 @@ React.createClass({
 				console.log(spin_id);
 				me.setState({updated : new Date().getTime()});
 			},1000
-		)	
+		)*/	
 	},
 	popupBody : function() {
 		var me = this;
