@@ -24,8 +24,8 @@ var _rolesMenu = React.createClass({
 						<div className="col-sm-9 text-right pt-2">
 							{Object.keys(me.roles).map(function(idx){
 							  return <button className={'btn btn-large rounded ' + 
-								(me.props.parent.state.role === me.roles[idx].code) ? 
-									  'role_checked' : 'role_unchecked'}
+								((me.props.parent.state.role === me.roles[idx].code) ? 
+									  'role_checked' : 'role_unchecked')}
 								onClick={me.pickMenu.bind(me, idx)}>
 								<b>{me.roles[idx].caption}</b></button>
 							})}
