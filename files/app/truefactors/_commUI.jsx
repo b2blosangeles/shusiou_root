@@ -33,5 +33,22 @@ var _commUI = {
 					</div>
 				</div>
 			</div>)}
-		})
+		}),
+	popUpFrame :  React.createClass({
+			render :  function() {
+				var me = this;
+				
+			var classType = (!me.props.setting || !me.props.setting.type) ? 'light' : me.props.setting.type;
+			var className = ' shadow rounded border ' + 
+				   ((!me.props.setting || !me.props.setting.class) ? 
+				    (' border-' + classType + ' alert-' + classType) : me.props.setting.class + ' ') +
+				    ' p-2';
+			var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '2em'} : me.props.setting.style;
+			return (
+				<div className={className} style={style} >
+				    {(typeof me.props.data === 'string' && me.props.data !== '') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
+				    : me.props.data}
+				</div>)}                     	
+		}},
+	
 };
