@@ -85,11 +85,10 @@ React.createClass({
 	},	
 	render: function() {
 		var me = this;
-		return ((typeof Root === 'undefined' ) ? (<span>No ROOT--{me.state.RootReady}</span>):
-			(<span>
+		return (<span>
 				{me.showSpinner()}
 				{me.showPopup()}
 			</span>)                   
-		)}
+	}
 })
 
