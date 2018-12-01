@@ -17,11 +17,13 @@ React.createClass({
 	getSno : function() {
 		var me = this;
 		me.sno = (!me.sno || me.sno > 1000000) ? 1 : (me.sno + 1);
+		
 		return 'SNO-' + me.sno + '-' + new Date().getTime();
 	},
 	isSpin : function() {
 		var me = this, tm = new Date().getTime();
 		console.log('---isSpin---');
+		console.log(me.spinPool);
 		/*
 		for (var v in me.spinPool) {
 			if (tm - me.spinPool[v].end > 0) {
