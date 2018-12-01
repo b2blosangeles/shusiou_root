@@ -6,7 +6,7 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		if (me.props.parent.state.menuOption === 'myVideos' || me.props.parent.state.menuOption === 'myVideos') {
+		if (me.props.parent.state.menuOption === 'myVideos' || me.props.parent.state.menuOption === '') {
 			me.loadData();
 		}
 	},
