@@ -84,8 +84,10 @@ React.createClass({
 			return me.myVideos();
 		} else {
 			return (<span>No update
-				<span className="section_spin_cover"></span>
-				<span className="section_spin_page"><span className="spinner"></spin></span>
+					<span className="section_spin_cover"></span>
+					<span className="section_spin_page">
+						<span className="spinner"></spin>
+					</span>
 				</span>)
 		}	
 	},
