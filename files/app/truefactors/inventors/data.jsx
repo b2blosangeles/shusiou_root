@@ -20,7 +20,8 @@ var _compData = function(me, Root) {
 		'https://i.ytimg.com/an_webp/Dmmi-dQFz_8/mqdefault_6s.webp?du=3000&sqp=CK3ph-AF&rs=AOn4CLD9Sr0pTvw6dCx-w7hSwX3LcVdQqQ',
 		'https://i.ytimg.com/an_webp/aeXAOzV6wyk/mqdefault_6s.webp?du=3000&sqp=CI_yh-AF&rs=AOn4CLDyZOEny1mWEPlrmXoElCpI1K0jKA',
 		'https://i.ytimg.com/an_webp/4vzKlaD_ih4/mqdefault_6s.webp?du=3000&sqp=COr4h-AF&rs=AOn4CLCN-7CovoE6_oITag-_qjMWm-1m5Q',
-		'https://i.ytimg.com/an_webp/sXtekwuT8R0/mqdefault_6s.webp?du=3000&sqp=CIjYiOAF&rs=AOn4CLBrBr497j3ZoL70r-y9K3beP_yRSA'
+		'https://i.ytimg.com/an_webp/sXtekwuT8R0/mqdefault_6s.webp?du=3000&sqp=CIjYiOAF&rs=AOn4CLBrBr497j3ZoL70r-y9K3beP_yRSA',
+		'https://i.ytimg.com/an_webp/QEQAt1l2_VA/mqdefault_6s.webp?du=3000&sqp=CLC9iOAF&rs=AOn4CLDbmxH1gK8ZL03L6OMm7aREywbjgQ'
 		]
 		var item = list[Math.floor(Math.random()*list.length)];
 		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
