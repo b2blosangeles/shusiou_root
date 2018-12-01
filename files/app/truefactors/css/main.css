@@ -165,3 +165,17 @@ body {
     color: #333;
     text-align: left;
 }
+
+.role_checked {
+   background-image : url(//dev.shusiou.win/app/truefactors/imgs/check_bg.png),
+   background-size : contain,
+   background-repeat :   no-repeat,
+   background-position : center center,
+   color : #3b5998,
+   border : 3px solid #3b5998
+}
+
+.role_unchecked {
+   color : #3b5998,
+   border : 3px solid #3b5998
+}
