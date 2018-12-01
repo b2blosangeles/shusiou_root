@@ -9,23 +9,18 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		setInterval(me.scanSpin, 100);
+		setInterval(me.scanSpin, 300);
 	},
 	componentDidUpdate : function() {
 		var me = this;
-	//	console.log('--updated classOverLay ---');
 	},
 	getSno : function() {
 		var me = this;
 		me.sno = (!me.sno || me.sno > 1000000) ? 1 : (me.sno + 1);
-		
 		return 'SNO-' + me.sno + '-' + new Date().getTime();
 	},
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
-		
-		//console.log('---isSpin---');
-		//console.log(me.spinPool);
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
@@ -66,17 +61,15 @@ React.createClass({
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
 		var code = me.getSno();
-		var s = tm + ((setting.delay) ?  parseInt(setting.delay) : 0)
-		var e = s + ((setting.max) ?  parseInt(setting.max) : (600 * 1000))
+		var s = tm + ((setting.delay) ?  setting.delay : 0)
+		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
 		console.log(me.spinPool);
-		me.setState({_update : new Date().getTime()})
 		return code;
 	},
 	spinOff : function(code) {
 		var me = this;
 		delete me.spinPool[code];
-		me.setState({_update : new Date().getTime()})
 	},		
 	popup : function(setting) {
 		var me = this;
