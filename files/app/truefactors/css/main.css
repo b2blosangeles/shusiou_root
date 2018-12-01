@@ -125,6 +125,16 @@ body {
     /* display:none; */
 }
 
+
+.section_spin_page {
+    background: transparent;  position: relative;
+    height: 100%; width: 100%;
+    z-index: 2;
+    top: 0; left: 0;
+    text-align: center;
+    padding-top: 0;  opacity: 1
+}
+
 .section_spin_cover {
     position: absolute;
     top:0; left:0;
