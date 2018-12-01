@@ -35,8 +35,8 @@ var _commUI = {
 			</div>)}
 		}),
 	popUpFrame :  React.createClass({
-			render :  function() {
-				var me = this;
+		render :  function() {
+			var me = this;
 				
 			var classType = (!me.props.setting || !me.props.setting.type) ? 'light' : me.props.setting.type;
 			var className = ' shadow rounded border ' + 
