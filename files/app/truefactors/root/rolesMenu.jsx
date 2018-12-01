@@ -23,16 +23,7 @@ var _rolesMenu = React.createClass({
 						</div>
 						<div className="col-sm-9 text-right pt-2">
 							{Object.keys(me.roles).map(function(idx){
-							  return <button className="btn-large rounded"
-								style={{
-									'background-image' : 
-									'url(//dev.shusiou.win/app/truefactors/imgs/check_bg.png)',
-									'background-size' : 'contain',
-								  	'background-repeat' :   'no-repeat',
-    									'background-position' : 'center center',
-									'color' : '#3b5998',
-									'border' : '3px solid #3b5998'
-								  }}
+							  return <button className={'btn-large rounded role_checked'}
 								onClick={me.pickMenu.bind(me, idx)}>
 								<b>{me.roles[idx].caption}</b></button>
 							})}
