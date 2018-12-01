@@ -1,5 +1,5 @@
 var _load = '1234';
-var loadVideos = function() {
+var loadVideos = function(me, Root) {
 		var spin_id = Root.overLay.spinOn();
 		me.list = [];
 		me.setState({updated : new Date().getTime()});
