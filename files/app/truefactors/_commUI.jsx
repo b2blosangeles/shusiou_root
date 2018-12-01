@@ -43,7 +43,7 @@ var _commUI = {
 				   ((!me.props.setting || !me.props.setting.class) ? 
 				    (' border-' + classType + ' alert-' + classType) : me.props.setting.class + ' ') +
 				    ' p-2';
-			var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '2em'} : me.props.setting.style;
+			var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '18em'} : me.props.setting.style;
 			return (
 				<div className={className} style={style} >
 				    {(typeof me.props.data === 'string' && me.props.data !== '') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
