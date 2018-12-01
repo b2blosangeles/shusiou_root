@@ -23,7 +23,8 @@ var _compData = function(me, Root) {
 		'https://i.ytimg.com/an_webp/sXtekwuT8R0/mqdefault_6s.webp?du=3000&sqp=CIjYiOAF&rs=AOn4CLBrBr497j3ZoL70r-y9K3beP_yRSA',
 		'https://i.ytimg.com/an_webp/QEQAt1l2_VA/mqdefault_6s.webp?du=3000&sqp=CLC9iOAF&rs=AOn4CLDbmxH1gK8ZL03L6OMm7aREywbjgQ',
 		'https://i.ytimg.com/an_webp/Yirc35yIjfc/mqdefault_6s.webp?du=3000&sqp=CPioiOAF&rs=AOn4CLA-4Q37yLoTRlVDAz9GL2OxQ9R49Q',
-		'https://i.ytimg.com/an_webp/m-PJmmvyP10/mqdefault_6s.webp?du=3000&sqp=CJagiOAF&rs=AOn4CLCynaAM6JFByFl_49SCRtsB_NOq7g'
+		'https://i.ytimg.com/an_webp/m-PJmmvyP10/mqdefault_6s.webp?du=3000&sqp=CJagiOAF&rs=AOn4CLCynaAM6JFByFl_49SCRtsB_NOq7g',
+		'https://i.ytimg.com/an_webp/IYKU4nVL9AY/mqdefault_6s.webp?du=3000&sqp=CLquiOAF&rs=AOn4CLDAUJNJfSozySxlUchWCPuvnAZozA'
 		]
 		var item = list[Math.floor(Math.random()*list.length)];
 		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
