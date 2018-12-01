@@ -61,7 +61,7 @@ React.createClass({
 		var me = this, tm = new Date().getTime();
 		var code = me.getSno();
 		var s = tm + ((setting.delay) ?  setting.delay : 0)
-		var e = tm + s + ((setting.max) ?  setting.max : 600 * 1000)
+		var e = tm + s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
 		me.setState({_update : new Date().getTime()})
 		return code;
