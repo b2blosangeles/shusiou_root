@@ -83,7 +83,10 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.myVideos();
 		} else {
-			return (<span>No update</span>)
+			return (<span>No update
+				<span className="section_spin_cover"></span>
+				
+				</span>)
 		}	
 	},
         render: function() {
