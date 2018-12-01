@@ -15,7 +15,7 @@ var _commLib = function () {
 	return r;
     }
     
-    this.spinAnchor = function() {
+    this.spinAnchor = function(code, viewPoint, controlPoint) {
     	return(
   		<span>
 			<span className="section_spin_cover"></span>
