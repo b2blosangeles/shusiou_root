@@ -88,7 +88,7 @@ React.createClass({
 	showBody : function() {
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myVideos') {
-			me.loadData();
+			
 			return me.myVideos();
 		} else {
 			return (<span>No update</span>)
