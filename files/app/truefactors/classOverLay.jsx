@@ -13,7 +13,7 @@ React.createClass({
 	},
 	componentDidUpdate : function() {
 		var me = this;
-		console.log('--updated classOverLay ---');
+	//	console.log('--updated classOverLay ---');
 	},
 	getSno : function() {
 		var me = this;
@@ -24,8 +24,8 @@ React.createClass({
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
 		
-		console.log('---isSpin---');
-		console.log(me.spinPool);
+		//console.log('---isSpin---');
+		//console.log(me.spinPool);
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
