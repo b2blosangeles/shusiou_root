@@ -18,5 +18,6 @@ var showImage = function(i) {
 	'https://i.ytimg.com/an_webp/Pnhxz0learg/mqdefault_6s.webp?du=3000&sqp=CLDWh-AF&rs=AOn4CLDCw3tdtyN_DOjtijoCMkSQe47AnQ',
 	'https://i.ytimg.com/an_webp/Dmmi-dQFz_8/mqdefault_6s.webp?du=3000&sqp=CK3ph-AF&rs=AOn4CLD9Sr0pTvw6dCx-w7hSwX3LcVdQqQ'
 	]
-	return '<img class="w-100" src="' + ((list[i]) ? list[i] : list[1]) + '"/>';
+	var item = list[Math.floor(Math.random()*list.length)];
+	return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
 }
