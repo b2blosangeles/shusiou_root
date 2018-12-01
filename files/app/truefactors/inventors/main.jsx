@@ -85,7 +85,7 @@ React.createClass({
 		} else {
 			return (<span>No update
 				<span className="section_spin_cover"></span>
-				<span className="section_spin_page">niu bi</span>
+				<span className="section_spin_page"><span className="spinner"></spin></span>
 				</span>)
 		}	
 	},
