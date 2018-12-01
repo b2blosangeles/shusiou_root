@@ -8,7 +8,7 @@ React.createClass({
 		var me = this;
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			console.log(_load);
+			// console.log(_load);
 			me.loadData();
 		}
 	},
