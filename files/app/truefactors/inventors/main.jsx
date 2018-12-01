@@ -22,7 +22,7 @@ React.createClass({
 				Root.overLay.spinOff(spin_id);
 				console.log(spin_id);
 				me.setState({updated : new Date().getTime()});
-			},3000
+			},2000
 		)	
 	},
 	popupBody : function() {
