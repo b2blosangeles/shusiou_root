@@ -9,7 +9,7 @@ React.createClass({
 		var me = this;
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			me.compData.loadVideos(me, Root);
+			me.compData.loadVideos();
 			// me.loadData();
 		}
 	},
@@ -40,7 +40,7 @@ React.createClass({
 		var me = this;
 		var btnLoad = (
 		<span>	
-			<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me, me, Root)}>Load Data</button>
+			<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, me.popupBody())}>Popup Window</button>
 		</span>
@@ -69,7 +69,7 @@ React.createClass({
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : Compdata.showImage(m), 
+							data : me.compData.showImage(m), 
 							setting : {
 								noshadow :false,
 								type: 'light',
