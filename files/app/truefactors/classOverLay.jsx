@@ -64,7 +64,7 @@ React.createClass({
 		var s = tm + ((setting.delay) ?  setting.delay : 0)
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
-		console.log(me.spinPool);
+		// console.log(me.spinPool);
 		return code;
 	},
 	spinOff : function(code) {
