@@ -9,7 +9,7 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		setInterval(me.isSpin, 1000);
+		setInterval(me.scanSpin, 1000);
 	},
 	componentDidUpdate : function() {
 		var me = this;
@@ -21,7 +21,7 @@ React.createClass({
 		
 		return 'SNO-' + me.sno + '-' + new Date().getTime();
 	},
-	isSpin : function() {
+	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
 		
 		console.log('---isSpin---');
@@ -37,7 +37,7 @@ React.createClass({
 				return true;
 			}
 		}
-		me.setState({_spinStatus, false});
+		me.setState({_spinStatus : false});
 		
 	},
 	showSpinner : function() {
