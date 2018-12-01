@@ -30,7 +30,8 @@ var _rolesMenu = React.createClass({
 									'background-size' : 'contain',
 								  	'background-repeat' :   'no-repeat',
     									'background-position' : 'center center',
-									'color' : '#3b5998'
+									'color' : '#3b5998',
+									'border' : '3px solid #3b5998'
 								  }}
 								onClick={me.pickMenu.bind(me, idx)}>
 								<b>{me.roles[idx].caption}</b></button>
