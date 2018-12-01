@@ -17,7 +17,7 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		loadVideos();
+		loadVideos(me, Root);
 		/*
 		var spin_id = Root.overLay.spinOn();
 		me.list = [];
