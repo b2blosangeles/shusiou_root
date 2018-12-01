@@ -14,13 +14,14 @@ React.createClass({
 	loadData : function() {
 		var me = this;
 		var spin_id = Root.overLay.spinOn({delay:3000, max: 3000});
+		me.list = [];
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(18);
 				Root.overLay.spinOff(spin_id);
 				console.log(spin_id);
 				me.setState({updated : new Date().getTime()});
-			}, 7000
+			},12000
 		)	
 	},
 	popupBody : function() {
