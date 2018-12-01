@@ -13,7 +13,7 @@ React.createClass({
 	},
 	loadData : function() {
 		var me = this;
-		var spin_id = Root.overLay.spinOn({});
+		var spin_id = Root.overLay.spinOn();
 		me.list = [];
 		me.setState({updated : new Date().getTime()});
 		setTimeout(
