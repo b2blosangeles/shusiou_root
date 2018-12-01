@@ -27,7 +27,7 @@ React.createClass({
 		console.log('---isSpin---');
 		console.log(me.spinPool);
 		for (var v in me.spinPool) {
-			if (tm - me.spinPool[v].end > 0) {
+			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
 			}
 		}
