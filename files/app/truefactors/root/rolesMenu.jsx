@@ -20,7 +20,7 @@ var _rolesMenu = React.createClass({
 						<div className="col-sm-3 text-left site-logo pt-2">
 							<img src="/app/truefactors/imgs/platoplan_logo.png" height="72"/>
 							{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
-						</div>gg
+						</div>
 						<div className="col-sm-9 text-right pt-2">
 							{Object.keys(me.roles).map(function(idx){
 							  return <button className="border border-success btn-large rounded"
