@@ -22,11 +22,13 @@ React.createClass({
 	isSpin : function() {
 		var me = this, tm = new Date().getTime();
 		console.log('---isSpin---');
+		/*
 		for (var v in me.spinPool) {
 			if (tm - me.spinPool[v].end > 0) {
 				delete me.spinPool[v];
 			}
 		}
+		*/
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].start) > 0) return true;
 		}
