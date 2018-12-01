@@ -68,7 +68,7 @@ React.createClass({
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : '<b><img src="https://i.ytimg.com/an_webp/yYWuCWDxF_s/mqdefault_6s.webp?du=3000&sqp=CPjXh-AF&rs=AOn4CLAwec0WOB7wKEpwG6gSZwrRHjyA6Q"></b>', 
+							data : '<b>uuu</b>', 
 							setting : {
 								noshadow :false,
 								type: 'light',
