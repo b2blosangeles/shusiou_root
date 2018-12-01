@@ -4,11 +4,12 @@ React.createClass({
 		me.popupSetting = '';
 		me.spinPool={};
 		me.sno = 0;
-		return {};
+		return {_spinStatus : false};
 	},
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
+		setInterval(me.isSpin, 1000);
 	},
 	componentDidUpdate : function() {
 		var me = this;
@@ -24,21 +25,22 @@ React.createClass({
 		var me = this, tm = new Date().getTime();
 		console.log('---isSpin---');
 		console.log(me.spinPool);
-		/*
 		for (var v in me.spinPool) {
 			if (tm - me.spinPool[v].end > 0) {
 				delete me.spinPool[v];
 			}
 		}
-		*/
 		for (var v in me.spinPool) {
-			if ((tm - me.spinPool[v].start) > 0) return true;
+			if ((tm - me.spinPool[v].start) > 0) {
+				me.setStatus({_spinStatus, true});
+				return true;
+			}
 		}
-		return false;
+		me.setStatus({_spinStatus, false});
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.isSpin()) ? (<span><span className="overlay_sping_cover"></span>   
+		return (me.state._spinStatus) ? (<span><span className="overlay_sping_cover"></span>   
 			<span className="overlay_sping_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
