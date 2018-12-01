@@ -15,7 +15,7 @@ var _commUI = {
 				    ' p-2 m-1';
 			var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '2em'} : me.props.setting.style;
 			return (
-				<div className={className} style={style} >{me.props.data}
+				<div className={className} style={style} >
 				    {(typeof me.props.data === 'string' && me.props.data !== '') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 				    : me.props.data}
 				</div>                     
