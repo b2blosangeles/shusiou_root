@@ -41,7 +41,7 @@ var _commUI = {
 			var classType = (!me.props.setting || !me.props.setting.type) ? 'light' : me.props.setting.type;
 			var className = ' shadow rounded border ' + 
 				   ((!me.props.setting || !me.props.setting.class) ? 
-				    (' border-' + classType + ' alert-' + classType) : me.props.setting.class + ' ') +
+				    (' border-secondary alert-' + classType) : me.props.setting.class + ' ') +
 				    ' p-2';
 			var style = (!me.props.setting || !me.props.setting.style) ? {'min-height' : '18em'} : me.props.setting.style;
 			return (
