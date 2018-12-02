@@ -21,10 +21,6 @@ React.createClass({
 		me.setState({spinAnchor_A : new Date().getTime()});
 		console.log(me.state.spinAnchor);
 	},
-	showPP : function() {
-		var me = this;
-		return me.state.A;
-	},
 	popupBody : function() {
 		var me = this;
 		return (<span>{Root.commUI.show({
