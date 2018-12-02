@@ -16,7 +16,7 @@ var _commLib = function () {
     }
  
     this.setSpinAnchor = function(o, code, status) {
-	var v = o.state.spinAnchor;
+	var v = (o.state.spinAnchor) ? o.state.spinAnchor : {};
 	if (status)  v[code]  = new Date().getTime();
 	else delete  v[code];
 	o.setState(v)
