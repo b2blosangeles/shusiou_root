@@ -19,7 +19,7 @@ React.createClass({
 	spinAnchor : function() {
 		var me = this;
 		me.setState({spinAnchor:
-			     {A : new Date().getTime()}
+			     {A : new Date().getTime()}, updated : new Date().getTime()
 			    });
 		console.log(me.state.spinAnchor);
 	},
