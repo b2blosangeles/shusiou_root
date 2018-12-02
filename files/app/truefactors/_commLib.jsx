@@ -38,9 +38,9 @@ var _commLib = function () {
 	*/
     }
 	this.showPP = function(state) {
-		if (state.spinAnchor_A) return (<span><span className="section_spin_cover"></span><span className="section_spin_page">
+		return (state.spinAnchor_A) ? (<span><span className="section_spin_cover"></span><span className="section_spin_page">
 		 <span className="section-spinner"></span></span></span>)
-		else return (<span>nothing</span>)
+		: (<span>nothing</span>)
 	}
    /*========== Need review ====*/
     this.getAuth = function() {
