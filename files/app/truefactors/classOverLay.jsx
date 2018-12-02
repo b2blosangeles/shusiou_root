@@ -9,32 +9,16 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		
+		setInterval(me.scanSpin, 500);
 	},
 	componentDidUpdate : function() {
 		var me = this;
-		if (!me.watchItv) {
-			me.watchItv = setInterval(me.watch, 500);
-		}
 	},
 	getSno : function() {
 		var me = this;
 		me.sno = (!me.sno || me.sno > 1000000) ? 1 : (me.sno + 1);
 		return 'SNO-' + me.sno + '-' + new Date().getTime();
 	},
-	watch : function() {
-		var me = this, tm = new Date().getTime();
-		
-		console.log('===weatching===');
-		if (!Object.keys(me.spinPool).length) {
-			clearInterval(me.watchItv);
-			delete me.watchItv;
-			me.setState({_updated : new Date().getTime()});
-		} else {
-			me.setState({_updated : new Date().getTime()});
-		}
-		
-	},	
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
 		for (var v in me.spinPool) {
@@ -48,15 +32,11 @@ React.createClass({
 				return true;
 			}
 		}
-		return false;
-	//	if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
+		if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.scanSpin()) ? (<span>
-				-- me.state._spinStatus --{me.state._updated}
-				
-				<span className="overlay_spin_cover"></span>   
+		return (me.state._spinStatus) ? (<span><span className="overlay_spin_cover"></span>   
 			<span className="overlay_spin_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
@@ -85,14 +65,11 @@ React.createClass({
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
 		// console.log(me.spinPool);
-		me.setState({_updated : new Date().getTime()});
-		me.scanSpin();
 		return code;
 	},
 	spinOff : function(code) {
 		var me = this;
 		delete me.spinPool[code];
-		me.setState({_updated : new Date().getTime()});
 	},		
 	popup : function(setting) {
 		var me = this;
@@ -107,9 +84,8 @@ React.createClass({
 	render: function() {
 		var me = this;
 		return (<span>
-				{me.showSpinner()} == me.state._spinStatus =={me.state._updated}
+				{me.showSpinner()}
 				{me.showPopup()}
 			</span>)                   
 	}
 })
-
