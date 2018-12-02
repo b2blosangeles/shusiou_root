@@ -20,28 +20,7 @@ var _commLib = function () {
 		(!me.state.spinAnchor || !me.state.spinAnchor[code]) ? (<span>nothing</span>) :
 		(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 		 <span className="section-spinner"></span></span></span>)   
-	    /*
-	var _spinAnchor = React.createClass({
-		getInitialState: function() {
-			//var me = this;
-			return {};
-		},	
-		render: function() {
-			//var me = this;
-			return
-			(!me.state.spinAnchor || !me.state.spinAnchor[code]) ? (<span>nothing</span>) :
-			(<span><span className="section_spin_cover"></span><span className="section_spin_page">
-			 <span className="section-spinner"></span></span></span>)                    
-		}
-	});
-	return _spinAnchor;
-	*/
     }
-	this.showPP = function(state) {
-		return (state.spinAnchor_A) ? (<span><span className="section_spin_cover"></span><span className="section_spin_page">
-		 <span className="section-spinner"></span></span></span>)
-		: (<span>nothing</span>)
-	}
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
