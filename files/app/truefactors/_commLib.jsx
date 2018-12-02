@@ -23,7 +23,7 @@ var _commLib = function () {
     }    
     
     this.spinAnchor = function(o, code) {
-	return(!o.state.spinAnchor || !o.state.spinAnchor[code]) ? (<span>nothing</span>) :
+	return(!o.state.spinAnchor || !o.state.spinAnchor[code]) ? (<span></span>) :
 		(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 		 <span className="section-spinner"></span></span></span>)   
     }
