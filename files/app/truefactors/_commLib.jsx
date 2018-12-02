@@ -38,6 +38,7 @@ var _commLib = function () {
 	*/
     }
 	this.showPP = function(state) {
+		return state.A
 		if (state.A) return 7777
 		else return 8888
 	}
