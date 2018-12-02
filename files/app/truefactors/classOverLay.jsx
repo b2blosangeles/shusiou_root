@@ -9,7 +9,7 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-	//	setInterval(me.scanSpin, 500);
+		setInterval(me.scanSpin, 500);
 	},
 	componentDidUpdate : function() {
 		var me = this;
@@ -28,22 +28,17 @@ React.createClass({
 		}
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].start) > 0) {
-			//	me.setState({_spinStatus: true, _updated : new Date().getTime() });
+				me.setState({_spinStatus: true});
 				return true;
 			}
 		}
-		return false;
-		// if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
+		if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.scanSpin()) ? (<span><span className="overlay_spin_cover"></span>   
-			<span className="overlay_spin_page"><span className="spinner"></span></span>
-		    </span>) : (<span></span>)
-		/*
 		return (me.state._spinStatus) ? (<span><span className="overlay_spin_cover"></span>   
 			<span className="overlay_spin_page"><span className="spinner"></span></span>
-		    </span>) : (<span></span>)*/
+		    </span>) : (<span></span>)
 	},
 	showPopup : function() {
 		var me = this;
@@ -70,23 +65,21 @@ React.createClass({
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
 		// console.log(me.spinPool);
-		me.setState({_updated : new Date().getTime() });
 		return code;
 	},
 	spinOff : function(code) {
 		var me = this;
 		delete me.spinPool[code];
-		me.setState({_updated : new Date().getTime() });
 	},		
 	popup : function(setting) {
 		var me = this;
 		me.popupSetting = setting;
-		me.setState({_popup : true, _updated : new Date().getTime()})
+		me.setState({_popup : true})
 	},
 	closePopup : function() {
 		var me = this;
 		me.popupSetting = null;
-		me.setState({_popup : false, _updated : new Date().getTime()})
+		me.setState({_popup : false})
 	},	
 	render: function() {
 		var me = this;
