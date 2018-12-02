@@ -83,7 +83,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.myVideos();
 		} else {
-			return (<span>--uuuu--<br/><span>
+			return (<span>--uuuu--<hr/><span>
 					{Root.lib.spinAnchor('A', '', me)}
 					No update AA
 				</span></span>)
