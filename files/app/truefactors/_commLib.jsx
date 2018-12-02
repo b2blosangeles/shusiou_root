@@ -14,9 +14,16 @@ var _commLib = function () {
 	for (var i = 0;  i < n; i++) r[i] = i;
 	return r;
     }
+ 
+    this.setSpinAnchor = function(o, code, status) {
+	var v = o.state.spinAnchor;
+	if (status)  v[code]  = new Date().getTime();
+	else delete  v[code];
+	o.setState(v)
+    }    
     
-    this.spinAnchor = function(code, viewPoint, me) {
-	return(!me.state.spinAnchor || !me.state.spinAnchor[code]) ? (<span>nothing</span>) :
+    this.spinAnchor = function(o, code) {
+	return(!o.state.spinAnchor || !o.state.spinAnchor[code]) ? (<span>nothing</span>) :
 		(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 		 <span className="section-spinner"></span></span></span>)   
     }
