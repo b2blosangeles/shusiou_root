@@ -10,7 +10,7 @@ var _compData = function(me, Root) {
 				// Root.lib.setSpinAnchor(me, 'AA', false)
 				Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
-			},1000
+			},4000
 		)
 	},
 	this.showImage = function(i) {
