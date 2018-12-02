@@ -41,6 +41,7 @@ React.createClass({
 		
 		return  (
 			<div className="container">
+				{Root.lib.spinAnchor(me, 'AA')}
 				<div className="row ">
 					<div className="col-sm-12 p-1">	
 					{Root.commUI.show({
@@ -80,7 +81,7 @@ React.createClass({
 			return me.myVideos();
 		} else {
 			return (<span>--<a href="JavaScript:void(0)" onClick={Root.lib.setSpinAnchor.bind(me, me, 'AA', true)}>uuuu</a>--<hr/>
-					{Root.lib.spinAnchor(me, 'AA')}
+					
 					<hr/>
 					<span>
 					
