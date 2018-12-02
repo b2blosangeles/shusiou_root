@@ -25,11 +25,11 @@ React.createClass({
 	watch : function() {
 		var me = this, tm = new Date().getTime();
 		
-		console.log('===eatching===');
+		console.log('===weatching===');
 		if (!Object.keys(me.spinPool).length) {
 			clearInterval(me.watchItv);
 			delete me.watchItv;
-			me.setState({_updated : tm});
+			me.setState({_updated : new Date().getTime()});
 		}
 		
 	},	
@@ -43,7 +43,6 @@ React.createClass({
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].start) > 0) {
 				me.setState({_spinStatus: true});
-				me.setState({_updated : new Date().getTime()});
 				return true;
 			}
 		}
