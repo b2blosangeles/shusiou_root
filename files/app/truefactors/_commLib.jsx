@@ -17,7 +17,7 @@ var _commLib = function () {
     
     this.spinAnchor = function(code, viewPoint, me) {
 	return
-		(!me.state.spinAnchor || !me.state.spinAnchor[code]) ? (<span>nothing</span>) :
+		(!me.state.spinAnchor_A || !me.state.spinAnchor_A) ? (<span>nothing</span>) :
 		(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 		 <span className="section-spinner"></span></span></span>)   
     }
