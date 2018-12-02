@@ -90,7 +90,7 @@ React.createClass({
 			return me.myVideos();
 		} else {
 			return (<span>--<a href="JavaScript:void(0)" onClick={me.spinAnchor.bind(me)}>uuuu</a>--<hr/>
-					..{me.showPP()}..
+					..{me.showPP()}..==..{Root.lib.showPP(me)}..
 					<hr/>
 					<span>
 					{Root.lib.spinAnchor('A', '', me)}
