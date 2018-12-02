@@ -19,7 +19,7 @@ React.createClass({
 	spinAnchor : function() {
 		var me = this;
 		me.setState({spinAnchor_A : new Date().getTime()});
-		console.log(me.state.spinAnchor);
+		console.log(me.state.spinAnchor_A);
 	},
 	popupBody : function() {
 		var me = this;
