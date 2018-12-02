@@ -28,7 +28,7 @@ React.createClass({
 		}
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].start) > 0) {
-				me.setState({_spinStatus: true, _updated : new Date().getTime() });
+			//	me.setState({_spinStatus: true, _updated : new Date().getTime() });
 				return true;
 			}
 		}
