@@ -18,8 +18,9 @@ React.createClass({
 	},
 	spinAnchor : function(code) {
 		var me = this;
-		me.setState({spinAnchor : { A : new Date().getTime()}});
-		console.log(me.state.spinAnchor_A);
+		var v = me.state.spinAnchor;
+		v[code] = new Date().getTime();
+		me.setState({spinAnchor : v});
 	},
 	popupBody : function() {
 		var me = this;
@@ -84,7 +85,7 @@ React.createClass({
 			return me.myVideos();
 		} else {
 			return (<span>--<a href="JavaScript:void(0)" onClick={me.spinAnchor.bind(me)}>uuuu</a>--<hr/>
-					{Root.lib.spinAnchor('A', '', me)}
+					{Root.lib.spinAnchor(me, 'AA')}
 					<hr/>
 					<span>
 					
