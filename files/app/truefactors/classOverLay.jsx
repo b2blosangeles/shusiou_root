@@ -9,7 +9,7 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		setInterval(me.scanSpin, 500);
+	//	setInterval(me.scanSpin, 500);
 	},
 	componentDidUpdate : function() {
 		var me = this;
@@ -32,13 +32,18 @@ React.createClass({
 				return true;
 			}
 		}
-		if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
+		return false;
+		// if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.state._spinStatus) ? (<span><span className="overlay_spin_cover"></span>   
+		return (me.scanSpin()) ? (<span><span className="overlay_spin_cover"></span>   
 			<span className="overlay_spin_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
+		/*
+		return (me.state._spinStatus) ? (<span><span className="overlay_spin_cover"></span>   
+			<span className="overlay_spin_page"><span className="spinner"></span></span>
+		    </span>) : (<span></span>)*/
 	},
 	showPopup : function() {
 		var me = this;
