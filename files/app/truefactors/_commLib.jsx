@@ -15,14 +15,11 @@ var _commLib = function () {
 	return r;
     }
     
-    this.spinAnchor = function(code, viewPoint, controlPoint) {
-    	return(
-  		<span>
-			<span className="section_spin_cover"></span>
-			<span className="section_spin_page">
-				<span className="section-spinner"></span>
-			</span>
-		</span>) 
+    this.spinAnchor = function(code, viewPoint, me) {
+    	return
+	(!me.state.spinAnchor || !me.state.spinAnchor[code]) ? (<span>nothing</span>) :
+	(<span><span className="section_spin_cover"></span><span className="section_spin_page">
+	 <span className="section-spinner"></span></span></span>) 
     }
    /*========== Need review ====*/
     this.getAuth = function() {
