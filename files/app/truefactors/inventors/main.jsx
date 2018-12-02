@@ -16,12 +16,7 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
-	spinAnchor : function(code) {
-		var me = this;
-		var v = me.state.spinAnchor;
-		v[code] = new Date().getTime();
-		me.setState({spinAnchor : v});
-	},
+
 	popupBody : function() {
 		var me = this;
 		return (<span>{Root.commUI.show({
@@ -84,8 +79,8 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.myVideos();
 		} else {
-			return (<span>--<a href="JavaScript:void(0)" onClick={me.spinAnchor.bind(me)}>uuuu</a>--<hr/>
-					{Root.lib.spinAnchor(me, 'AA')}
+			return (<span>--<a href="JavaScript:void(0)" onClick={Root.lib.setSpinAnchor.bind(me, me, 'AA', true)}>uuuu</a>--<hr/>
+					{Root.lib.parkSpinAnchor(me, 'AA')}
 					<hr/>
 					<span>
 					
