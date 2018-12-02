@@ -38,7 +38,8 @@ var _commLib = function () {
 	*/
     }
 	this.showPP = function(state) {
-		return state.updated;
+		if (state.A) return (<span>AAA</span>)
+		else return (<span>BBBB</span>)
 	}
    /*========== Need review ====*/
     this.getAuth = function() {
