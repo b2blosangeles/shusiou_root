@@ -38,8 +38,8 @@ var _commLib = function () {
 	*/
     }
 	this.showPP = function(state) {
-		if (state.A) return (<span>AAA</span>)
-		else return (<span>BBBB</span>)
+		if (state.A) return 7777
+		else return 8888
 	}
    /*========== Need review ====*/
     this.getAuth = function() {
