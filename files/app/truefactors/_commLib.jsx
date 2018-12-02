@@ -29,7 +29,7 @@ var _commLib = function () {
 			 <span className="section-spinner"></span></span></span>)                    
 		}
 	});
-	return (<_spinAnchor>)
+	return (<_spinAnchor/>)
     }
    /*========== Need review ====*/
     this.getAuth = function() {
