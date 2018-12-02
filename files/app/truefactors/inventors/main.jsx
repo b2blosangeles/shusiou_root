@@ -84,7 +84,7 @@ React.createClass({
 			return me.myVideos();
 		} else {
 			return (<span>--<a href="JavaScript:void(0)" onClick={me.spinAnchor.bind(me)}>uuuu</a>--<hr/>
-					{Root.lib.spinAnchor(me.state)}.=>
+					{Root.lib.spinAnchor(me)}.=>
 					<hr/>
 					<span>
 					{Root.lib.spinAnchor('A', '', me)}
