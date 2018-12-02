@@ -24,6 +24,8 @@ React.createClass({
 	},
 	watch : function() {
 		var me = this, tm = new Date().getTime();
+		
+		console.log('===eatching===');
 		if (!Object.keys(me.spinPool).length) {
 			clearInterval(me.watchItv);
 			delete me.watchItv;
