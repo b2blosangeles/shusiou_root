@@ -37,8 +37,8 @@ var _commLib = function () {
 	return _spinAnchor;
 	*/
     }
-	this.showPP = function(me) {
-		return me.state.updated;
+	this.showPP = function(state) {
+		return state.updated;
 	}
    /*========== Need review ====*/
     this.getAuth = function() {
