@@ -30,6 +30,8 @@ React.createClass({
 			clearInterval(me.watchItv);
 			delete me.watchItv;
 			me.setState({_updated : new Date().getTime()});
+		} else {
+			me.setState({_updated : new Date().getTime()});
 		}
 		
 	},	
