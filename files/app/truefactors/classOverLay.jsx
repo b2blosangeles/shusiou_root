@@ -65,11 +65,13 @@ React.createClass({
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
 		// console.log(me.spinPool);
+		me.scanSpin();
 		return code;
 	},
 	spinOff : function(code) {
 		var me = this;
 		delete me.spinPool[code];
+		me.scanSpin();
 	},		
 	popup : function(setting) {
 		var me = this;
