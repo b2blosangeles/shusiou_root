@@ -89,4 +89,3 @@ React.createClass({
 			</span>)                   
 	}
 })
-
