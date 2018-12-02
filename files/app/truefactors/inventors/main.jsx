@@ -16,11 +16,10 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
-	/*
-	loadData : function() {
+	spinAnchor : function() {
 		var me = this;
-		loadVideos(me, Root);
-	},*/
+		me.setState({spinAnchor:{A : new Date().getTime()}}})
+	},
 	popupBody : function() {
 		var me = this;
 		return (<span>{Root.commUI.show({
@@ -83,7 +82,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.myVideos();
 		} else {
-			return (<span>--uuuu--<hr/><span>
+			return (<span>--<a href="JavaScript:void(0)" onClick={me.spinAnchor.bind(me)}>uuuu--<hr/><span>
 					{Root.lib.spinAnchor('A', '', me)}
 					No update AA
 				</span></span>)
