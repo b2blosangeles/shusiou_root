@@ -80,7 +80,7 @@ React.createClass({
 			return me.myVideos();
 		} else {
 			return (<span>--<a href="JavaScript:void(0)" onClick={Root.lib.setSpinAnchor.bind(me, me, 'AA', true)}>uuuu</a>--<hr/>
-					{Root.lib.parkSpinAnchor(me, 'AA')}
+					{Root.lib.spinAnchor(me, 'AA')}
 					<hr/>
 					<span>
 					
