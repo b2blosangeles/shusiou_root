@@ -2,7 +2,7 @@ var _compData = function(me, Root) {
 	this.loadVideos = function() {
 		// var spin_id = Root.overLay.spinOn();
 		Root.lib.setSpinAnchor(me, 'AA', true);
-		me.list = [];
+		//me.list = [];
 		me.setState({updated : new Date().getTime()});
 		setTimeout(
 			function() {
