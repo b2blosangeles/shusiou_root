@@ -9,10 +9,13 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		setInterval(me.watch, 500);
+		
 	},
 	componentDidUpdate : function() {
 		var me = this;
+		if (!me.watchItv) {
+			me.watchItv = setInterval(me.watch, 500);
+		}
 	},
 	getSno : function() {
 		var me = this;
@@ -21,7 +24,12 @@ React.createClass({
 	},
 	watch : function() {
 		var me = this, tm = new Date().getTime();
-		me.setState({_updated : tm});
+		if (!Object.keys(me.spinPool).length) {
+			clearInterval(me.watchItv);
+			delete me.watchItv;
+			me.setState({_updated : tm});
+		}
+		
 	},	
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
