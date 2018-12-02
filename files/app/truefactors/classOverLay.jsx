@@ -28,7 +28,7 @@ React.createClass({
 				delete me.spinPool[v];
 			}
 		}
-		if (!JSON.keys(me.spinPool).length) {
+		if (!Object.keys(me.spinPool).length) {
 			clearInterval(me.watchItv);
 			delete me.watchItv;
 		}
