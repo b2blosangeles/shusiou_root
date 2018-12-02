@@ -80,14 +80,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.myVideos();
 		} else {
-			return (<span>--<a href="JavaScript:void(0)" onClick={Root.lib.setSpinAnchor.bind(me, me, 'AA', true)}>uuuu</a>--<hr/>
-					
-					<hr/>
-					<span>
-					
-					No update BB 
-					</span>
-				</span>)
+			return (<span>No document</span>)
 		}	
 	},
         render: function() {
