@@ -69,6 +69,7 @@ React.createClass({
 		me.spinPool[code] = {start : s, end : e};
 		// console.log(me.spinPool);
 		me.setState({_updated : new Date().getTime()});
+		me.scanSpin();
 		return code;
 	},
 	spinOff : function(code) {
