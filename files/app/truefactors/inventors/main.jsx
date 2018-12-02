@@ -87,7 +87,7 @@ React.createClass({
 		} else {
 			return (<span>--<a href="JavaScript:void(0)" onClick={me.spinAnchor.bind(me)}>uuuu</a>--<hr/>
 					<span>
-					{Root.lib.spinAnchor('A', '', me)}
+					{Root.lib.spinAnchor('A', '', me).bind(me)}
 					No update AA
 					</span>
 				</span>)
