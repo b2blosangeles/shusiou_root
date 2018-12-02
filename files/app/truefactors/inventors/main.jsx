@@ -25,7 +25,7 @@ React.createClass({
 	},
 	showPP : function() {
 		var me = this;
-		return me.state.updated;
+		return me.state.A;
 	},
 	popupBody : function() {
 		var me = this;
