@@ -18,9 +18,7 @@ React.createClass({
 	},
 	spinAnchor : function() {
 		var me = this;
-		me.setState({spinAnchor:
-			     {A : new Date().getTime()}, updated : new Date().getTime()
-			    });
+		me.setState({spinAnchor: new Date().getTime()});
 		console.log(me.state.spinAnchor);
 	},
 	showPP : function() {
