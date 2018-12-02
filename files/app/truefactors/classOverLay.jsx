@@ -36,7 +36,10 @@ React.createClass({
 	},
 	showSpinner : function() {
 		var me = this;
-		return (me.state._spinStatus) ? (<span><span className="overlay_spin_cover"></span>   
+		return (me.state._spinStatus) ? (<span>
+				-- me.state._spinStatus --{me.state._spinStatus}
+				
+				<span className="overlay_spin_cover"></span>   
 			<span className="overlay_spin_page"><span className="spinner"></span></span>
 		    </span>) : (<span></span>)
 	},
@@ -84,7 +87,7 @@ React.createClass({
 	render: function() {
 		var me = this;
 		return (<span>
-				{me.showSpinner()}
+				{me.showSpinner()} == me.state._spinStatus =={me.state._spinStatus}
 				{me.showPopup()}
 			</span>)                   
 	}
