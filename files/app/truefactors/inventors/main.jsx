@@ -89,7 +89,7 @@ React.createClass({
 					..{me.state.updated}..
 					<hr/>
 					<span>
-					{Root.lib.spinAnchor('A', '', me).bind(me)}
+					{Root.lib.spinAnchor('A', '', me)}
 					No update AA 
 					</span>
 				</span>)
