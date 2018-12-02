@@ -22,7 +22,7 @@ var _commLib = function () {
 			return {};
 		},	
 		render: function() {
-			var me = this;
+			//var me = this;
 			return
 			(!me.state.spinAnchor || !me.state.spinAnchor[code]) ? (<span>nothing</span>) :
 			(<span><span className="section_spin_cover"></span><span className="section_spin_page">
