@@ -47,7 +47,7 @@ React.createClass({
 		var me = this;
 		var v = me.popupSetting;
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-			<span className="overlay_popup_page">
+			<span className="overlay_popup_page"> close popup
 				<div className="container">
 				<div className="row ">
 						<div className="col-sm-12">
