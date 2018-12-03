@@ -53,10 +53,11 @@ React.createClass({
 			    (' border-secondary alert-' + classType) : v.class + ' ') +
 			    ' p-2';
 		var style = (!v || !v.style) ? {'min-height' : '28em'} : v.style;
-		var closeIcon = (v.closeIcon) ? (<button type="button" className="close pull-right" 
+		var closeIcon = (!v || !v.closeIcon) ? (<span/>) : (<button type="button" className="close pull-right" 
 								onClick={me.closePopup.bind(me)}>
 							  <span aria-hidden="true">&times;</span>
-							</button>) : (<span/>);
+							</button>);
+		
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span className="overlay_popup_page">
 				<div className="container">
