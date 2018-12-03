@@ -20,7 +20,7 @@ React.createClass({
 		var me = this;
 		var popupSetting = {
 			type : 'light', 
-			style : {'min-height' : '12em', 'border-style' : '3px solid #666 !important'},
+			style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
 			closeIcon : true,
 			closeIconClass : 'text-sencondary',
 			data : (<span>
