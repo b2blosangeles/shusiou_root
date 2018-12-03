@@ -20,7 +20,7 @@ React.createClass({
 	},
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
-		console.log('====watch====>');
+		console.log('====watch= 2===>');
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
