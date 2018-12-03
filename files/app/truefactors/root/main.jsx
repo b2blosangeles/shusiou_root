@@ -89,16 +89,16 @@ React.createClass({
 					<div className="col-sm-12 text-right">
 						<span className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
-						&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;|&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;|&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'terms')}>Terms</a>
 						</span>
 						
 						<span className="pull-left">
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
-							  &nbsp;&nbsp;&nbsp;&nbsp;
+							  &nbsp;&nbsp;|&nbsp;&nbsp;
 							  <a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me,  m.code)}>
 								  {m.caption}</a>
 							</span>)
