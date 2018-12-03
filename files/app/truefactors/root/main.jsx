@@ -96,7 +96,7 @@ React.createClass({
 				</div></div>
 			</div>
 		)
-	}
+	},
         render: function() {
           var me = this;
           return  (
