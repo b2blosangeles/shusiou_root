@@ -12,7 +12,7 @@ React.createClass({
 	},
 	componentDidUpdate : function() {
 		var me = this;
-		if ((me.watchItv) && !me.state._spinRequested) {
+		if (!me.state._spinRequested) {
 		 	clearInterval(me.watchItv);
 		}
 		if (!me.watchItv && (me.state._spinRequested)) {
