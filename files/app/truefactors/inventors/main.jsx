@@ -16,25 +16,20 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
-
-	popupSetting : function() {
+	myVideos : function() {
 		var me = this;
-		return {
+		var popupSetting = {
 			type : 'danger',
 			closeIcon : true,
 			data : (<button type="button" className="btn btn-warning"  
-					onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>)
-		}
-	},
-	myVideos : function() {
-		var me = this;
+					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>)
+		};		
+		
 		var btnLoad = (
 		<span>	
 			<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 			&nbsp;
-			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, 
-													
-				me.popupSetting())}>Popup Window</button>
+			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, popupSetting)}>Popup Window</button>
 		</span>
 		)
 		
