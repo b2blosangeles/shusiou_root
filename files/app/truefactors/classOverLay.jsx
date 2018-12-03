@@ -47,7 +47,8 @@ React.createClass({
 		var me = this;
 		var v = me.popupSetting;
 		
-		var classType = (!v || !v.type) ? 'light' : v.type;
+		var classType = 'success';
+		    //(!v || !v.type) ? 'light' : v.type;
 		var className = ' shadow rounded border ' + 
 			   ((!v || !v.class) ? 
 			    (' border-secondary alert-' + classType) : v.class + ' ') +
