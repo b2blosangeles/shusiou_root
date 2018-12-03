@@ -60,10 +60,10 @@ React.createClass({
 				<div className="row ">
 					<div className="col-sm-12">
 						<div className={className} style={style} >
-							
-						<button type="button" className="btn btn-danger" 
-							onClick={me.closePopup.bind(me)}>Popup Window</button>	
-							<hr/>
+							<button type="button" className="close pull-right" 
+								onClick={me.closePopup.bind(me)}>
+							  <span aria-hidden="true">&times;</span>
+							</button>
 						{(typeof v === 'string') ? 
 						(<span dangerouslySetInnerHTML={{__html: v}}/>)
 						: v}
