@@ -12,7 +12,10 @@ React.createClass({
 	},
 	componentDidUpdate : function() {
 		var me = this;
-		if (!me.watchItv) {
+		if ((me.watchItv) && !me.state._spinRequested) {
+		 	clearInterval(me.watchItv);
+		}
+		if (!me.watchItv && (me.state._spinRequested)) {
 			me.watchItv = setInterval(me.scanSpin, 500); 
 		}	
 	},
@@ -35,6 +38,7 @@ React.createClass({
 				return true;
 			}
 		}
+		me.setState({_spinRequested: null});
 		if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
 	},
 	showSpinner : function() {
