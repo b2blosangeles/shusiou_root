@@ -65,6 +65,7 @@ React.createClass({
 			</span>) : (<span></span>)
 	},
 	spinOn : function(setting) {
+		console.log(setting);
 		var me = this, tm = new Date().getTime();
 		if (!setting) var setting = {};
 		var code = me.getSno();
