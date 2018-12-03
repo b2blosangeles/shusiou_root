@@ -56,7 +56,7 @@ try {
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
 					
 					if (me._asyncObjId === me.props.objId) {
-						var code = decodeURIComponent(me._asyncModule.inc) + 
+						var code = decodeURIComponent(me._asyncModule.consts) + 
 						    decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
 
