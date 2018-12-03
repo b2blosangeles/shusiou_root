@@ -1,5 +1,5 @@
-/* --- this version with an ever last setInterval */
 React.createClass({
+	/* --- this version with an ever last setInterval */
 	getInitialState: function() {
 		var me = this;
 		me.popupSetting = '';
