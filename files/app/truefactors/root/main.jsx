@@ -84,18 +84,18 @@ React.createClass({
 		var me = this;
 		return (
 			<div className="copyright_section">
-				<div className="container">
+				<div className="container-fluid">
 				<div className="row">
 					<div className="col-sm-12">
-						<span className="pull-right">
+						<div className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'terms')}>Terms</a>
-						</span>
+						</div>
 						
-						<span className="pull-left">
+						<div className="pull-left">
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
 							  &nbsp;&nbsp;&nbsp;&nbsp;
@@ -103,7 +103,7 @@ React.createClass({
 								  {m.caption}</a>
 							</span>)
 							})}
-						</span>
+						</div>
 					</div>
 				</div></div>
 			</div>
