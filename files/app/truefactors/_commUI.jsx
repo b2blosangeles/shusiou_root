@@ -34,7 +34,7 @@ var _commUI = {
 				</div>
 			</div>)}
 		}),
-	popUpFrame :  React.createClass({
+	popUpFrameA :  React.createClass({
 		render :  function() {
 			var me = this;
 				
