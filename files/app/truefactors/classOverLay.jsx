@@ -15,7 +15,6 @@ React.createClass({
 		if (!me.state._spinRequested) {
 		 	clearInterval(me.watchItv);
 			delete me.watchItv;
-			console.log('---triggle--- clearInterval---' );
 		}
 		if (!me.watchItv && (me.state._spinRequested)) {
 			me.watchItv = setInterval(me.scanSpin, 500); 
@@ -28,7 +27,7 @@ React.createClass({
 	},
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
-		console.log('====watch====');
+		console.log('====watch====>');
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
@@ -74,13 +73,7 @@ React.createClass({
 		var s = tm + ((setting.delay) ?  setting.delay : 0)
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
-		me.setState({_spinRequested: tm}, function() {
-			console.log('----ttt----->' + tm);
-			console.log(me.state._spinRequested);
-		});
-		console.log('------------>' + tm);
-		
-		console.log(code);
+		me.setState({_spinRequested: tm});
 		return code;
 	},
 	spinOff : function(code) {
