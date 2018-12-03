@@ -20,6 +20,7 @@ React.createClass({
 		var me = this;
 		var popupSetting = {
 			/* type : 'danger', */
+			
 			closeIcon : true,
 			data : (<span>
 				<button type="button" className="btn btn-warning"  
