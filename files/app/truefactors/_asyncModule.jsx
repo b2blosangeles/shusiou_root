@@ -56,7 +56,8 @@ try {
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
 					
 					if (me._asyncObjId === me.props.objId) {
-						var code = decodeURIComponent(me._asyncModule.inc) + 'return ' + 
+						var code = decodeURIComponent(me._asyncModule.inc) + 
+						    decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
 
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
