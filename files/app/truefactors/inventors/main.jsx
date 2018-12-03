@@ -19,10 +19,13 @@ React.createClass({
 	myVideos : function() {
 		var me = this;
 		var popupSetting = {
-			type : 'danger',
+			/* type : 'danger', */
 			closeIcon : true,
-			data : (<button type="button" className="btn btn-warning"  
-					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>)
+			data : (<span>
+				<button type="button" className="btn btn-warning"  
+					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
+				</span>
+				)
 		};		
 		
 		var btnLoad = (
