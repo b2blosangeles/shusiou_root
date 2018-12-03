@@ -46,12 +46,20 @@ React.createClass({
 	showPopup : function() {
 		var me = this;
 		var v = me.popupSetting;
+		
+		var classType = (!v || !v.type) ? 'light' : v.type;
+		var className = ' shadow rounded border ' + 
+			   ((!v || !v.class) ? 
+			    (' border-secondary alert-' + classType) : v.class + ' ') +
+			    ' p-2';
+		var style = (!v || !v.style) ? {'min-height' : '28em'} : v.style;
+		
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
-					<div className="border border-sencondary rounded alert-light" style={{}} >nou		
+					<div className={className} style={style} >hhi		
 					</div>		
 							
 						{/*(typeof v === 'string') ? 
