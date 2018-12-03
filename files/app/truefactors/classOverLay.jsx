@@ -53,7 +53,7 @@ React.createClass({
 			    (' border-secondary alert-' + classType) : v.class + ' ') +
 			    ' p-2';
 		var style = (!v || !v.style) ? {'min-height' : '28em'} : v.style;
-		var closeIconClass = (v.closeIconClass) ? v.closeIconClass : 'text-secondary';
+		var closeIconClass = (!v || !v.closeIconClass) ? 'text-secondary' : v.closeIconClass;
 		var closeIcon = (!v || !v.closeIcon) ? (<span/>) : (<button type="button" className="close pull-right" 
 								onClick={me.closePopup.bind(me)}>
 							  <span className={closeIconClass}>&times;</span>
