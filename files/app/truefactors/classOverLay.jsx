@@ -9,11 +9,12 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 		window.__rootOverLay = me;
-		me.watchItv = setInterval(me.scanSpin, 500);
-		console.log('---componentDidMount---');
 	},
 	componentDidUpdate : function() {
 		var me = this;
+		if (!me.watchItv) {
+			me.watchItv = setInterval(me.scanSpin, 500); 
+		}	
 	},
 	getSno : function() {
 		var me = this;
