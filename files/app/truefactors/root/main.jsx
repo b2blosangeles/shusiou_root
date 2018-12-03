@@ -55,8 +55,11 @@ React.createClass({
 		if (me.state.role === 'investor') {
 			return Root.lib.asyncModule({
 				setting:{	extend: {
-							includes : [],
-							main : 'https://dev.shusiou.win/app/truefactors/errPage/main.jsx'
+							includes : [
+								'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
+								'https://dev.shusiou.win/app/truefactors/investors/view.jsx'	
+							],
+							main : 'https://dev.shusiou.win/app/truefactors/investors/main.jsx'
 						}, 
 						master: '//master1_dev.shusiou.win/api/JSXhub.api'
 					},
