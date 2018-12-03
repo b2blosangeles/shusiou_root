@@ -60,12 +60,15 @@ React.createClass({
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
-					<div className={className} style={style} >hhi		
-					</div>		
-							
-						{/*(typeof v === 'string') ? 
+						<div className={className} style={style} >hhi	
+
+						{(typeof v === 'string') ? 
 						(<span dangerouslySetInnerHTML={{__html: v}}/>)
-						: v*/}
+						: v}
+
+						</div>		
+							
+						
 					</div>
 				</div>
 				</div>				
