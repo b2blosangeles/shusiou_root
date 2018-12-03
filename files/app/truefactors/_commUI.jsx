@@ -47,8 +47,9 @@ var _commUI = {
 			var overlay = me.props.setting.overLay;
 			return (
 				<div className={className} style={style} >
-					<button type="button" className="btn btn-danger" 
-						onClick={overlay.closePopup.bind(me)}>Popup Window</button>
+					{JSON.stringify(me.props.setting)}
+					{/*<button type="button" className="btn btn-danger" 
+						onClick={overlay.closePopup.bind(me)}>Popup Window</button>*/}
 				    {(typeof me.props.data === 'string' && me.props.data !== '') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 				    : me.props.data}
 				</div>)}                     	
