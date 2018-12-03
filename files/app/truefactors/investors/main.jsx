@@ -4,7 +4,7 @@ React.createClass({
 		me.list = [];
 		me.compData = new _compData(me, Root);
 		me.compView = new _compView(me, Root);
-		me.compConst = _compConst;
+		me.compConst = _compConsts;
           	return {}
         },
 	componentDidMount : function() {
