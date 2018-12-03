@@ -48,9 +48,8 @@ React.createClass({
 		var v = me.popupSetting;
 		
 		var classType = (!v || !v.type) ? 'light' : v.type;
-		var className = ' shadow rounded border ' + 
-			   ((!v || !v.class) ? 
-			    (' border-secondary alert-' + classType) : v.class + ' ') +
+		var className = ((!v || !v.class) ? 
+			    (' shadow rounded border border-secondary alert-' + classType) : v.class + ' ') +
 			    ' p-2';
 		var style = (!v || !v.style) ? {'min-height' : '28em'} : v.style;
 		var closeIcon = (!v || !v.closeIcon) ? (<span/>) : (<button type="button" 
