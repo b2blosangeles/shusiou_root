@@ -19,15 +19,8 @@ React.createClass({
 
 	popupBody : function() {
 		var me = this;
-		return (<span>{Root.commUI.show({
-					code: 'popUpFrame', 
-					parent : me, 
-					data : (<button type="button" className="btn btn-warning" 
-							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>), 
-					setting : {
-						type: 'light'
-					  }
-					})}</span>)	
+		return (<button type="button" className="btn btn-warning" 
+							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>))	
 	},
 	myVideos : function() {
 		var me = this;
