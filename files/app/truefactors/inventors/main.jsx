@@ -17,14 +17,10 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
-	myVideos : function() {
-		var me = this;
-		return me.compView.showVideos();
-	},
 	showBody : function() {
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			return me.myVideos();
+			return me.compView.showVideos();
 		} else {
 			return (<span>No document</span>)
 		}	
