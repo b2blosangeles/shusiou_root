@@ -57,7 +57,7 @@ try {
 					
 					if (me._asyncObjId === me.props.objId) {
 						console.log(me._asyncModule.consts);
-						var code = // me._asyncModule.consts + 
+						var code = ((me._asyncModule.consts) ? me._asyncModule.consts : '') + 
 						    decodeURIComponent(me._asyncModule.inc) + 'return ' + 
 						    decodeURIComponent(me._asyncModule.master).replace(/(\s|\;)+$/g, '');
 
