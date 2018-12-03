@@ -39,7 +39,7 @@ React.createClass({
 			}
 		}
 		if (me.state._spinStatus !== false) me.setState({_spinStatus : false});
-		me.setState({_spinRequested: null});
+		me.setState({_spinRequested: false});
 		
 	},
 	showSpinner : function() {
