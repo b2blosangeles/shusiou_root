@@ -54,9 +54,9 @@ React.createClass({
 			    ' p-2';
 		var style = (!v || !v.style) ? {'min-height' : '28em'} : v.style;
 		var closeIconClass = (!v || !v.closeIconClass) ? 'text-dander' : v.closeIconClass;
-		var closeIcon = (!v || !v.closeIcon) ? (<span/>) : (<button type="button" className="close pull-right" 
-								onClick={me.closePopup.bind(me)}>
-							  <span className={closeIconClass}>&times;</span>
+		var closeIcon = (!v || !v.closeIcon) ? (<span/>) : (<button type="button" 
+				className={'close pull-right' +  closeIconClass} onClick={me.closePopup.bind(me)}>
+							  <span>&times;</span>
 							</button>);
 		
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
