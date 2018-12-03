@@ -47,8 +47,7 @@ React.createClass({
 		var me = this;
 		var v = me.popupSetting;
 		
-		var classType = 'success';
-		    //(!v || !v.type) ? 'light' : v.type;
+		var classType = (!v || !v.type) ? 'light' : v.type;
 		var className = ' shadow rounded border ' + 
 			   ((!v || !v.class) ? 
 			    (' border-secondary alert-' + classType) : v.class + ' ') +
@@ -60,8 +59,11 @@ React.createClass({
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
-						<div className={className} style={style} >hhi	
-
+						<div className={className} style={style} >
+							
+						<button type="button" className="btn btn-danger" 
+							onClick={me.closePopup.bind(me)}>Popup Window</button>	
+							<hr/>
 						{(typeof v === 'string') ? 
 						(<span dangerouslySetInnerHTML={{__html: v}}/>)
 						: v}
