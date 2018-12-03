@@ -183,11 +183,11 @@ body {
     height:100%;
 }
 .copyright_section {
-    position: fixed;
-    left: 0;
-    top: 0;
+//    position: fixed;
+ //   left: 0;
+ //   top: 0;
     padding : 1em;
-    padding-top : 3px;
+    padding-top : 1px;
     width: 100%;
     background-color: transparent;
     color: #666;
