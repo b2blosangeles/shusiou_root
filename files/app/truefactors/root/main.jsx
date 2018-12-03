@@ -80,15 +80,9 @@ React.createClass({
 				}
 			})
 	},
-        render: function() {
-          var me = this;
-          return  (
-		<span>
-			<_rolesMenu parent={me}/>
-			<_subMenu parent={me}/>
-
-			{me.showPageFrame(me.showBody())}
-			  
+	copyRightSection : function() {
+		var me = this;
+		return (
 			<div className="copyright_section">
 				<div className="container">
 				<div className="row">
@@ -101,6 +95,16 @@ React.createClass({
 					</div>
 				</div></div>
 			</div>
+		)
+	}
+        render: function() {
+          var me = this;
+          return  (
+		<span>
+			<_rolesMenu parent={me}/>
+			<_subMenu parent={me}/>
+			{me.showPageFrame(me.showBody())}
+			{me.copyRightSection()}
 		</span>
           )
         }
