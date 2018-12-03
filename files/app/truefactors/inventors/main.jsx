@@ -17,10 +17,13 @@ React.createClass({
 		var me = this;
 	},
 
-	popupBody : function() {
+	popupSetting : function() {
 		var me = this;
-		return (<button type="button" className="btn btn-warning" 
-				onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>)	
+		return {
+			type : 'danger',
+			data : (<button type="button" className="btn btn-warning" 
+				onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>)
+		}
 	},
 	myVideos : function() {
 		var me = this;
@@ -28,7 +31,9 @@ React.createClass({
 		<span>	
 			<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 			&nbsp;
-			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, me.popupBody())}>Popup Window</button>
+			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, 
+													
+				me.popupSetting())}>Popup Window</button>
 		</span>
 		)
 		
