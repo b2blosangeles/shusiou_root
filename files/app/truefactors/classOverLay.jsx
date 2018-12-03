@@ -73,7 +73,10 @@ React.createClass({
 		var s = tm + ((setting.delay) ?  setting.delay : 0)
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
-		me.setState({_spinRequested: tm});
+
+		if (!me.watchItv) {
+			me.watchItv = setInterval(me.scanSpin, 500); 
+		}
 		return code;
 	},
 	spinOff : function(code) {
