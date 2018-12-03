@@ -59,9 +59,9 @@ React.createClass({
 								'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
 								'https://dev.shusiou.win/app/truefactors/investors/view.jsx'	
 							],
-							main : 'https://dev.shusiou.win/app/truefactors/investors/main.jsx'
+							controller : 'https://dev.shusiou.win/app/truefactors/investors/main.jsx'
 						}, 
-						master: '//master1_dev.shusiou.win/api/JSXhub.api'
+						master: '//master1_dev.shusiou.win/api/DVCHub.api'
 					},
 				data : '',
 				parent : me
