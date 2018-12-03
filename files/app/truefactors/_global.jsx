@@ -10,7 +10,7 @@ var _global = {
 			{code: 'about', caption : 'About Plato Plan'},
 			{code:  'contact', caption : 'Contact Us'} 		
 		],
-		public: [
+		publicMenu: [
 			{code: 'howToStart', caption : 'how to start'},
 			{code:  'FAQ', caption : 'FAQ'} 		
 		],
