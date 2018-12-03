@@ -91,11 +91,15 @@ React.createClass({
 			  
 			{me.showPageFrame(me.showBody())}
 			  
-			<div className="copyright_section">&#169; {new Date().getFullYear()} Plato Plan
+			<div className="copyright_section">
+				<div className="row">
+				<div className="col-sm-12 text-right">
+				&#169; {new Date().getFullYear()} Plato Plan
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'terms')}>Terms</a>
+				</div></div>
 			</div>
 		</span>
           )
