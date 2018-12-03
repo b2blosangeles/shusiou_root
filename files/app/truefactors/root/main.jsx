@@ -55,6 +55,9 @@ React.createClass({
 		if (me.state.role === 'investor') {
 			return Root.lib.asyncModule({
 				setting:{	extend: {
+							consts : {
+								info: 'https://dev.shusiou.win/app/truefactors/investors/consts_info.txt'
+							},					
 							includes : [
 								'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
 								'https://dev.shusiou.win/app/truefactors/investors/view.jsx'	
