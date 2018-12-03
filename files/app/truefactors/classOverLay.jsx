@@ -69,6 +69,7 @@ React.createClass({
 		me.spinPool[code] = {start : s, end : e};
 
 		if (!me.watchItv) {
+			me.scanSpin();
 			me.watchItv = setInterval(me.scanSpin,300); 
 		}
 		return code;
