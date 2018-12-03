@@ -14,6 +14,7 @@ React.createClass({
 		var me = this;
 		if (!me.state._spinRequested) {
 		 	clearInterval(me.watchItv);
+			console.log('---triggle--- clearInterval---' );
 		}
 		if (!me.watchItv && (me.state._spinRequested)) {
 			me.watchItv = setInterval(me.scanSpin, 500); 
