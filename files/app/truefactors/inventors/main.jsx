@@ -20,7 +20,7 @@ React.createClass({
 		var me = this;
 		var popupSetting = {
 			type : 'light', 
-			style : {'min-height' : '12em', 'border' : '3px solid #666'},
+			style : {'min-height' : '12em', 'border-style' : '3px solid #666'},
 			closeIcon : true,
 			data : (<span>
 				<button type="button" className="btn btn-warning"  
