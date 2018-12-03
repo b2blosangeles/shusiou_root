@@ -104,7 +104,7 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			{me.showPageFrame(me.showBody())}
-			aa{me.copyRightSection()}
+			{me.copyRightSection()}
 		</span>
           )
         }
