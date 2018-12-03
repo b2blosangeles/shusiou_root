@@ -4,6 +4,7 @@ React.createClass({
 		me.list = [];
 		me.compData = new _compData(me, Root);
 		me.compView = new _compView(me, Root);
+		me.Const = _compConst["info"];
           	return {}
         },
 	componentDidMount : function() {
@@ -30,7 +31,7 @@ React.createClass({
 		return Root.commUI.show({
 				code: 'infoBox', 
 				parent : me, 
-				data : 'test only', 
+				data : 'test only ---' + me.Const["info"], 
 				setting : {
 					type : 'light',
 					noshadow : true,
