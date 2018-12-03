@@ -21,7 +21,7 @@ var _rolesMenu = React.createClass({
 							<img src="/app/truefactors/imgs/platoplan_logo.png" height="72"/>
 							{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
 						</div>
-						<div className="col-sm-9 text-right pt-5">
+						<div className="col-sm-9 text-right pt-4">
 							{Object.keys(me.roles).map(function(idx){
 							  return <button className={'btn btn-large rounded ' + 
 								((me.props.parent.state.role === idx) ? 
