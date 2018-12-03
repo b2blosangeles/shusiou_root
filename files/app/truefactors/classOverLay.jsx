@@ -1,3 +1,4 @@
+/* --- this version do setInterval only need, no ever last setInterval */
 React.createClass({
 	getInitialState: function() {
 		var me = this;
@@ -20,7 +21,6 @@ React.createClass({
 	},
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
-		console.log('====watch= 66===>');
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
