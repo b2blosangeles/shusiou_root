@@ -1,3 +1,4 @@
+/* --- this version with an ever last setInterval */
 React.createClass({
 	getInitialState: function() {
 		var me = this;
