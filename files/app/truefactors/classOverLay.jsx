@@ -74,7 +74,7 @@ React.createClass({
 		var e = s + ((setting.max) ?  setting.max : (600 * 1000))
 		me.spinPool[code] = {start : s, end : e};
 		me.setState({_spinRequested: tm});
-		console.log('------------>');
+		console.log('------------>' + tm);
 		console.log(me.state._spinRequested);
 		console.log(code);
 		return code;
