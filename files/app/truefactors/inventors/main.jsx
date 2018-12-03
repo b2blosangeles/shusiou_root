@@ -3,6 +3,7 @@ React.createClass({
 		var me = this;
 		me.list = [];
 		me.compData = new _compData(me, Root);
+		me.compView = new _compView(me, Root);
           	return {}
         },
 	componentDidMount : function() {
@@ -30,7 +31,8 @@ React.createClass({
 		};		
 		
 		var btnLoad = (
-		<span>	
+		<span>	{me.compView.test()}
+			&nbsp;	
 			<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 			&nbsp;
 			<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, popupSetting)}>Popup Window</button>
