@@ -16,7 +16,7 @@ var _subMenu = React.createClass({
     render: function() {
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : Root.global.menuTree[me.props.parent.state.role];
-	  var public = Root.global.menuTree.public;
+	  var publicMenu = Root.global.menuTree.publicMenu;
           return  (
             <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
 		<div className="container">
@@ -58,7 +58,7 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}
 					
-					{public.map(function(m){ 	
+					{publicMenu.map(function(m){ 	
 						return (me.props.parent.state.menuOption !== m.code) ?
 								(<span>
 									<li className="nav-item">
