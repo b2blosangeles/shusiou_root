@@ -98,7 +98,7 @@ React.createClass({
 							  <a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me,  m.code)}>
 								  {m.caption}</a>
 							</span>)
-						}
+						})}
 					</div>
 				</div></div>
 			</div>
