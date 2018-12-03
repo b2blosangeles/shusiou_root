@@ -81,7 +81,7 @@ React.createClass({
 	popup : function(setting) {
 		var me = this;
 		me.popupSetting = setting;
-		me.popupSetting.overLay = me;
+		me.popupSetting._overLay = 'me';
 		me.setState({_popup : true})
 	},
 	closePopup : function() {
