@@ -9,7 +9,7 @@ React.createClass({
 		var me = this;
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			me.compData.loadVideos();
+		//	me.compData.loadVideos();
 			// me.loadData();
 		}
 	},
