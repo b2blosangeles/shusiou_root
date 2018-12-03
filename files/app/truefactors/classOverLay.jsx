@@ -47,10 +47,10 @@ React.createClass({
 		var me = this;
 		var v = me.popupSetting;
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-			<span className="overlay_popup_page"> close popup
+			<span className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
-						<div className="col-sm-12">
+						<div className="col-sm-12">NND
 						{(typeof v === 'string') ? 
 						(<span dangerouslySetInnerHTML={{__html: v}}/>)
 						: v}
