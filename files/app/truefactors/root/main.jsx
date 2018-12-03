@@ -92,6 +92,13 @@ React.createClass({
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'terms')}>Terms</a>
+						{(Root.global.menuTree.common.map(function(m) {
+							return(<span>
+							  &nbsp;&nbsp;&nbsp;&nbsp;
+							  <a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me,  m.code)}>
+								  {m.caption}</a>
+							</span>)
+						}
 					</div>
 				</div></div>
 			</div>
