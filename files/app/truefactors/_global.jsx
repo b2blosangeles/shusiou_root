@@ -9,7 +9,12 @@ var _global = {
 		common	 : [
 			{code: 'about', caption : 'About Plato Plan'},
 			{code:  'contact', caption : 'Contact Us'} 		
-		], inventor : [
+		],
+		public: [
+			{code: 'howToStart', caption : 'how to start'},
+			{code:  'FAQ', caption : 'FAQ'} 		
+		],
+		inventor : [
 			{code: 'myVideos', caption : 'My Videos'},
 			{code:  'myInvention', caption : 'My Inventions'} 
 		],
