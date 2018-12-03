@@ -22,7 +22,6 @@ React.createClass({
 			type : 'light', 
 			style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
 			closeIcon : true,
-			closeIconClass : 'text-sencondary',
 			data : (<span>
 				<button type="button" className="btn btn-warning"  
 					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
