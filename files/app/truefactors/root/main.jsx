@@ -84,13 +84,6 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			<_rolesMenu parent={me}/>
-			<_subMenu parent={me}/>
-
-
-			  
-			{me.showPageFrame(me.showBody())}
-			  
 			<div className="copyright_section">
 				<div className="container">
 				<div className="row">
@@ -103,6 +96,12 @@ React.createClass({
 					</div>
 				</div></div>
 			</div>
+			<_rolesMenu parent={me}/>
+			<_subMenu parent={me}/>
+
+			{me.showPageFrame(me.showBody())}
+			  
+
 		</span>
           )
         }
