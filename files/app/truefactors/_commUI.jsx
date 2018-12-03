@@ -47,7 +47,7 @@ var _commUI = {
 			return (
 				<div className={className} style={style} >
 					<button type="button" className="btn btn-danger" 
-							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>
+							onClick={me.props.parent.closePopup.bind(me)}>Popup Window</button>
 				    {(typeof me.props.data === 'string' && me.props.data !== '') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 				    : me.props.data}
 				</div>)}                     	
