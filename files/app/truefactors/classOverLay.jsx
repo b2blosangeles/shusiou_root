@@ -1,5 +1,5 @@
-/* --- this version do setInterval only need, no ever last setInterval */
 React.createClass({
+	/* --- this version do setInterval only need, no ever last setInterval */
 	getInitialState: function() {
 		var me = this;
 		me.popupSetting = '';
