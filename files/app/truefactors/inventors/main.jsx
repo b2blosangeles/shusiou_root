@@ -20,7 +20,7 @@ React.createClass({
 	popupBody : function() {
 		var me = this;
 		return (<button type="button" className="btn btn-warning" 
-							onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>))	
+				onClick={Root.overLay.closePopup.bind(me)}>Popup Window</button>)	
 	},
 	myVideos : function() {
 		var me = this;
