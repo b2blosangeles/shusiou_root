@@ -11,7 +11,7 @@ var _global = {
 			{code:  'contact', caption : 'Contact Us'} 		
 		],
 		publicMenu: [
-			{code: 'howToStart', caption : 'how to start'},
+			{code: 'howToStart', caption : 'How to start'},
 			{code:  'FAQ', caption : 'FAQ'} 		
 		],
 		inventor : [
