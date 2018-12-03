@@ -96,7 +96,7 @@ React.createClass({
 	},		
 	popup : function(setting) {
 		var me = this;
-		me.popupSetting = setting;
+		me.popupSetting = { type : 'danger', closeIcon: true};
 		me.setState({_popup : true})
 	},
 	closePopup : function() {
