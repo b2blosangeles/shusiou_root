@@ -91,7 +91,7 @@ React.createClass({
 			  
 			{me.showPageFrame(me.showBody())}
 			  
-			<div className="footer">&#169; {new Date().getFullYear()} Plato Plan
+			<div className="copyright_section">&#169; {new Date().getFullYear()} Plato Plan
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
