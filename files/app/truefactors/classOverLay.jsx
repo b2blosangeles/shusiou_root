@@ -20,7 +20,7 @@ React.createClass({
 	},
 	scanSpin : function() {
 		var me = this, tm = new Date().getTime();
-		console.log('====watch= 3===>');
+		console.log('====watch= 66===>');
 		for (var v in me.spinPool) {
 			if ((tm - me.spinPool[v].end) > 0) {
 				delete me.spinPool[v];
@@ -70,7 +70,7 @@ React.createClass({
 
 		if (!me.watchItv) {
 			me.scanSpin();
-			me.watchItv = setInterval(me.scanSpin,300); 
+			me.watchItv = setInterval(me.scanSpin,100); 
 		}
 		return code;
 	},
