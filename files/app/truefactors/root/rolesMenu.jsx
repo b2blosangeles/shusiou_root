@@ -19,7 +19,7 @@ var _rolesMenu = React.createClass({
 		var me = this;
 		$(event.target);
 		me.animation($(event.target), $('.documentPageFrame'));
-		console.log('====' +  code)
+		console.log('--->' +  code)
 		alert(event.target);
 		return true;
 		var parent = me.props.parent;
