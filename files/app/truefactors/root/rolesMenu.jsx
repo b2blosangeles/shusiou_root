@@ -17,7 +17,7 @@ var _rolesMenu = React.createClass({
 	},
 	animation : function(sobj, tobj) {
 		console.log(sobj);
-		$( sobj ).transfer( {
+		$( sobj ).effect( "transfer", {
 		    to: $( tobj ).eq( 0 ),
 		    duration: 1000
 		  } );
