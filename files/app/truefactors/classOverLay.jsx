@@ -105,9 +105,13 @@ React.createClass({
 		var me = this;
 		me.popupSetting = null;
 		
+		$('.overlay_popup_page').toggle( "clip", function() {
+			alert(12);
+		});
+		/*
 		$('.overlay_popup_page').slideUp(300, function() {
 			me.setState({_popup : false})
-		});
+		});*/
 	},	
 	render: function() {
 		var me = this;
