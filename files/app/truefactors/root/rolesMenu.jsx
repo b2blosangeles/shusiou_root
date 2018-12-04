@@ -16,6 +16,7 @@ var _rolesMenu = React.createClass({
 		console.log('=== niu 3 ===');
 	},
 	animation : function(sobj, tobj) {
+		$( '#tpp' ).html('yyyyyy');
 		//sobj = $('#tpp');
 		// $( sobj ).html('===niu A===');
 		// tobj.html('===niu===');
