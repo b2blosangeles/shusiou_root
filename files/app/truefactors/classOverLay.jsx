@@ -95,6 +95,8 @@ React.createClass({
 		me.popupSetting = setting;
 		me.setState({_popup : true})
 		// 'puff', 'clip', 'explode'
+		// myArray[Math.floor(Math.random()*myArray.length)];
+		// 
 		setTimeout(function() { 
 			//$('.overlay_popup_page').hide().show( "slide", {direction: "left" }, 300 )
 			$('.overlay_popup_page').hide().toggle( "explode", 600 )
