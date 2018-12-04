@@ -6,10 +6,20 @@ var _rolesMenu = React.createClass({
 	},
 	pickMenu : function(event) {
 		var me = this;
+		var parent = me.props.parent;
+		parent.setState({role: code, menuOption: null});
+		setTimeout(
+			function() {
+			//	me.animation(sobj, $('.documentPageFrame'));
+			}
+		);
+	},
+	clickMenu : function(event) {
+		var me = this;
 		//$(event.target);
 		me.animation($(event.target), $('.documentPageFrame'));
 		//alert(event);
-		//return true;
+		return true;
 		var parent = me.props.parent;
 		//parent.setState({role: code, menuOption: null});
 		setTimeout(
@@ -45,7 +55,12 @@ var _rolesMenu = React.createClass({
 							  return <button className={'btn btn-large rounded ' + 
 								((me.props.parent.state.role === idx) ? 
 									  'role-checked' : 'role-unchecked')}
-								onClick={me.pickMenu}>
+								onClick={me.clickMenu}>
+								<b>{me.roles[idx].caption}</b></button>
+							  <button className={'btn btn-large rounded ' + 
+								((me.props.parent.state.role === idx) ? 
+									  'role-checked' : 'role-unchecked')}
+								onClick={me.pickMenu.bind(me, idx)}>
 								<b>{me.roles[idx].caption}</b></button>
 							})}
 						</div>
