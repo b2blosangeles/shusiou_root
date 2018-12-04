@@ -13,7 +13,6 @@ var _rolesMenu = React.createClass({
 				me.animation(sobj, $('.documentPageFrame'));
 			}
 		);
-		console.log('=== niu 3 ===');
 	},
 	animation : function(sobj, tobj) {
 		$( 'img' ).html('yyyyyy');
@@ -23,8 +22,8 @@ var _rolesMenu = React.createClass({
 		//return true;
 		// console.log(sobj);
 		$( 'body' ).effect( "transfer", {
-		    to: $( '.documentPageFrame' ),
-		    duration: 600
+		    to: tobj,
+		    duration: 100
 		  } );
 		console.log('-===666===');
 	},
