@@ -15,12 +15,12 @@ var _rolesMenu = React.createClass({
 			}
 		);
 	},
-	clickMenu : function(code) {
+	clickMenu : function(e, code) {
 		var me = this;
 		$(event.target);
-		me.animation(event.target, $('.documentPageFrame'));
+		me.animation($(e.target), $('.documentPageFrame'));
 		console.log('--->' +  code)
-		alert(event.target);
+		alert(e.target);
 		return true;
 		var parent = me.props.parent;
 		//parent.setState({role: code, menuOption: null});
