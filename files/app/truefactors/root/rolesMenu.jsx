@@ -23,10 +23,11 @@ var _rolesMenu = React.createClass({
 		console.log(e.target);
 		// return true;
 		var parent = me.props.parent;
-		parent.setState({role: code, menuOption: null});
+		me.animation($(e.target), $('.documentPageFrame'));
+		// parent.setState({role: code, menuOption: null});
 		setTimeout(
 			function() {
-				me.animation($('body'), $('.documentPageFrame'));
+				
 				// me.animation(sobj, $('.documentPageFrame'));
 			}
 		);
