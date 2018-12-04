@@ -4,17 +4,6 @@ var _rolesMenu = React.createClass({
 		me.roles = Root.global.roles;
 		return {}
 	},
-	pickMenu : function(code) {
-		var me = this;
-		var parent = me.props.parent;
-		parent.setState({role: code, menuOption: null});
-		
-		setTimeout(
-			function() {
-			//	me.animation(sobj, $('.documentPageFrame'));
-			}
-		);
-	},
 	clickMenu : function(code, e) {
 		var me = this;
 		console.log(e.target);
@@ -33,13 +22,7 @@ var _rolesMenu = React.createClass({
 		);
 	},
 	animation : function(sobj, tobj) {
-		//$('div')
-			sobj.effect( "transfer", {
-		    to: tobj,
-		    duration: 1000
-		  } );
-		console.log('-===666===');
-		//me.pickMenu.bind(me, idx, this)
+		sobj.effect( "transfer", { to: tobj,duration: 600} );
 	},
 	render: function() {
 	  var me = this;
