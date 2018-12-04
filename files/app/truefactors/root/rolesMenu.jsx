@@ -25,8 +25,7 @@ var _rolesMenu = React.createClass({
 		    to: $( 'body' ),
 		    duration: 1000
 		  } );
-		console.log('-===111===');
-		$( this ).effect( "transfer", { to: $( 'body') }, 1000 );
+		console.log('-===222===');
 	},
 	render: function() {
 	  var me = this;
