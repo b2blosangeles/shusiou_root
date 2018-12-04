@@ -97,19 +97,15 @@ React.createClass({
 		
 		setTimeout(function() {
 			$('.overlay_popup_page').hide();
-			$('.overlay_popup_page').slideDown(600 );
+			$('.overlay_popup_page').slideDown(300 );
 		});
 	},
 	closePopup : function() {
 		var me = this;
 		me.popupSetting = null;
-	
-		//setTimeout(function() {
-			$('.overlay_popup_page').slideUp(1000, function() {
-			//$(me.app).render().slideUp(1000, function() {
-				me.setState({_popup : false})
-			});
-		//});
+		$('.overlay_popup_page').slideUp(300, function() {
+			me.setState({_popup : false})
+		});
 	},	
 	render: function() {
 		var me = this;
