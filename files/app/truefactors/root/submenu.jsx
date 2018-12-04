@@ -15,7 +15,8 @@ var _subMenu = React.createClass({
     },
     render: function() {
           var me = this;
-	  var menu = (!me.props.parent.state.role) ? [] : Root.global.menuTree[me.props.parent.state.role];
+	  var menu = (!me.props.parent.state.role) ? [] : (!Root.global.menuTree[me.props.parent.state.role]) 
+	  	? [] : Root.global.menuTree[me.props.parent.state.role];
 	  var publicMenu = Root.global.menuTree.publicMenu;
           return  (
             <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
