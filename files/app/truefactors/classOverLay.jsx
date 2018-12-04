@@ -59,7 +59,7 @@ React.createClass({
 		if (me.state._popup) {
 
 		}
-		var me.ppp =  (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
+		me.ppp =  (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span id={'nnuu'} className="overlay_popup_page" style={{display:'none'}}>
 				<div className="container">
 				<div className="row ">
