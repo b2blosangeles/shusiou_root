@@ -61,7 +61,7 @@ React.createClass({
 			$('#nnuu').fadeIn( 600 );
 		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-			<span id={'nnuu'} className="overlay_popup_page" style={{display:none}}>
+			<span id={'nnuu'} className="overlay_popup_page" style={{display:'none'}}>
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
