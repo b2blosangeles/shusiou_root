@@ -24,7 +24,7 @@ var _rolesMenu = React.createClass({
 		// return true;
 		var parent = me.props.parent;
 		me.animation($(e.target), $('.documentPageFrame'));
-		// parent.setState({role: code, menuOption: null});
+		parent.setState({role: code, menuOption: null});
 		setTimeout(
 			function() {
 				
