@@ -22,7 +22,7 @@ var _rolesMenu = React.createClass({
 		// tobj.html('===niu===');
 		//return true;
 		// console.log(sobj);
-		$( 'img' ).effect( "transfer", {
+		$( '.documentPageFrame' ).effect( "transfer", {
 		    to: $( 'body' ),
 		    duration: 1000
 		  } );
