@@ -107,11 +107,11 @@ React.createClass({
 		var me = this;
 		me.popupSetting = null;
 	
-		setTimeout(function() {
-			$('.overlay_popup_page').slideUp(1000 function() {
+		//setTimeout(function() {
+			$('.overlay_popup_page').slideUp(1000, function() {
 				me.setState({_popup : false})
 			});
-		});
+		//});
 		
 	},	
 	render: function() {
