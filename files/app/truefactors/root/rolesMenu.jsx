@@ -11,7 +11,7 @@ var _rolesMenu = React.createClass({
 		setTimeout(
 			function() {
 				me.animation(sobj, $('.documentPageFrame'));
-			}, 5000
+			}, 1000
 		);
 		console.log('=== niu 3 ===');
 	},
@@ -22,8 +22,8 @@ var _rolesMenu = React.createClass({
 		// tobj.html('===niu===');
 		//return true;
 		// console.log(sobj);
-		$( '.documentPageFrame' ).effect( "transfer", {
-		    to: $( 'body' ),
+		$( 'body' ).effect( "transfer", {
+		    to: $( '.documentPageFrame' ),
 		    duration: 1000
 		  } );
 		console.log('-===666===');
