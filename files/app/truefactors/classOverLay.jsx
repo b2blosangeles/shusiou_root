@@ -59,7 +59,8 @@ React.createClass({
 		if (me.state._popup) {
 			$('.overlay_popup_page').hide();
 			setTimeout(function() {
-				$('.overlay_popup_page').slideDown(600 );
+				$('.overlay_popup_page').animate({ 'zoom': 1 }, 400);
+				// $('.overlay_popup_page').slideDown(600 );
 			});
 		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
