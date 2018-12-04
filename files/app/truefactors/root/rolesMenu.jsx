@@ -1,19 +1,22 @@
 var _rolesMenu = React.createClass({
-    getInitialState: function() {
+	getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
-          	return {}
-    },
-    pickMenu : function(code) {
+		return {}
+	},
+	pickMenu : function(code) {
 	    var me = this;
-            var parent = me.props.parent;
-            parent.setState({role: code, menuOption: null});
-    },
-    render: function() {
-          var me = this;
-          return  (
-                    <div className="container-fluid">
-                        <div className="row bg-top-bar">
+	    var parent = me.props.parent;
+	    parent.setState({role: code, menuOption: null});
+	},
+	animation : function() {
+	
+	},
+	render: function() {
+	  var me = this;
+	  return  (
+		    <div className="container-fluid">
+			<div className="row bg-top-bar">
 				<div className="col-sm-12 text-left">
 					{/*me.props.parent.copyRightSection()*/}
 					<div className="container">
@@ -34,7 +37,7 @@ var _rolesMenu = React.createClass({
 					</div>
 					</div>
 				</div>
-                         </div>
-                    </div>)
+			 </div>
+		    </div>)
 	}          
 });
