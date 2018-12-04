@@ -97,7 +97,7 @@ React.createClass({
 		
 		setTimeout(function() { 
 			//$('.overlay_popup_page').hide().show( "slide", {direction: "left" }, 300 )
-			$('.overlay_popup_page').toggle( "clip" )
+			$('.overlay_popup_page').hide().toggle( "clip" )
 		//	$('.overlay_popup_page').hide().slideDown(600);
 		});
 	},
