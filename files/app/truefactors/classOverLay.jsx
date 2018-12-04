@@ -57,11 +57,7 @@ React.createClass({
 							  <span>&times;</span>
 							</button>);
 		if (me.state._popup) {
-			$('.overlay_popup_page').hide();
-			setTimeout(function() {
-				$('.overlay_popup_page').slideDown(1000);
-				// $('.overlay_popup_page').slideDown(600 );
-			});
+
 		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span id={'nnuu'} className="overlay_popup_page" style={{display:'none'}}>
@@ -101,11 +97,22 @@ React.createClass({
 		var me = this;
 		me.popupSetting = setting;
 		me.setState({_popup : true})
+		$('.overlay_popup_page').hide();
+		setTimeout(function() {
+			$('.overlay_popup_page').slideDown(1000);
+			// $('.overlay_popup_page').slideDown(600 );
+		});
 	},
 	closePopup : function() {
 		var me = this;
 		me.popupSetting = null;
-		me.setState({_popup : false})
+	
+		setTimeout(function() {
+			$('.overlay_popup_page').slideUp(1000 function() {
+				me.setState({_popup : false})
+			});
+		});
+		
 	},	
 	render: function() {
 		var me = this;
