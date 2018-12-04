@@ -73,6 +73,7 @@ React.createClass({
 			</span>
 			</span>) : (<span></span>)
 			*/
+		/*
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span id={'nnuu'} className="overlay_popup_page">
 				<div className="container">
@@ -88,7 +89,7 @@ React.createClass({
 				</div>				
 			</span>
 			</span>) : (<span></span>)
-		/*
+		*/
 		me.ppp = (<span className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
@@ -102,11 +103,12 @@ React.createClass({
 				</div>
 				</div>				
 			</span>);
+			
 		return 
-			 (<span><span className="overlay_popup_cover"></span> 
-			{(me.state._popup) ? me.ppp : (<span></span>)}
-			</span>)
-			*/
+			 (me.state._popup) ? (<span><span className="overlay_popup_cover"></span> 
+				{me.ppp} </span>: (<span></span>)
+		
+			
 	},
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
