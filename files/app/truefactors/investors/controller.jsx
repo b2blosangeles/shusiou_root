@@ -32,7 +32,6 @@ React.createClass({
 				code: 'infoBox', 
 				parent : me, 
 				data : 'test only =b= ' + me.compContents["info"],
-			 		//(<span dangerouslySetInnerHTML={{__html: me.compContents["info"]}}/>),
 				setting : {
 					type : 'light',
 					noshadow : true,
