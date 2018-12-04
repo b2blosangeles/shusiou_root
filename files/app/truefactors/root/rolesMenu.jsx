@@ -16,13 +16,13 @@ var _rolesMenu = React.createClass({
 		console.log('=== niu 3 ===');
 	},
 	animation : function(sobj, tobj) {
-		$( '#tpp' ).html('yyyyyy');
+		$( 'img' ).html('yyyyyy');
 		//sobj = $('#tpp');
 		// $( sobj ).html('===niu A===');
 		// tobj.html('===niu===');
 		//return true;
 		// console.log(sobj);
-		$( '#tpp' ).effect( "transfer", {
+		$( 'img' ).effect( "transfer", {
 		    to: $( 'body' ),
 		    duration: 1000
 		  } );
