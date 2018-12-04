@@ -98,8 +98,9 @@ React.createClass({
 		var me = this;
 		me.popupSetting = setting;
 		me.setState({_popup : true})
-		$('.overlay_popup_page').hide();
+		
 		setTimeout(function() {
+			$('.overlay_popup_page').hide();
 			// $(me.ppp).slideDown(1000);
 			$('.overlay_popup_page').slideDown(600 );
 		});
