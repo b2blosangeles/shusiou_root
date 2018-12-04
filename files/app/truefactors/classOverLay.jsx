@@ -57,8 +57,11 @@ React.createClass({
 							  <span>&times;</span>
 							</button>);
 		if (me.state._popup) {
-			console.log('=== overlay_popup_page =3==');
-			$('#nnuu').fadeIn( 600 );
+			console.log('=== overlay_popup_page =31==');
+			setTimeout(function() {
+					$('#nnuu').fadeIn( 600 );
+				}, 3000
+			);
 		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span id={'nnuu'} className="overlay_popup_page" style={{display:'none'}}>
