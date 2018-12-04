@@ -56,9 +56,7 @@ React.createClass({
 				className="close pull-right" onClick={me.closePopup.bind(me)}>
 							  <span>&times;</span>
 							</button>);
-		if (me.state._popup) {
-
-		}
+		/*
 		me.ppp =  (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span id={'nnuu'} className="overlay_popup_page">
 				<div className="container">
@@ -74,7 +72,22 @@ React.createClass({
 				</div>				
 			</span>
 			</span>) : (<span></span>)
-		return me.ppp;
+			*/
+		me.ppp = (<span><span className="overlay_popup_cover"></span>   
+			<span id={'nnuu'} className="overlay_popup_page">
+				<div className="container">
+				<div className="row ">
+					<div className="col-sm-12">
+						<div className={className} style={style}>{closeIcon}
+						{(typeof v.data === 'string') ? 
+						(<span dangerouslySetInnerHTML={{__html: v.data}}/>)
+						: v.data}
+						</div>
+					</div>
+				</div>
+				</div>				
+			</span>)
+		return (me.state._popup) ? me.ppp : (<span></span>);
 	},
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
