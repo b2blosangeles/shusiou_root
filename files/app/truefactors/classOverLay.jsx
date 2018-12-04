@@ -115,10 +115,10 @@ React.createClass({
 		me.setState({_popup : true})
 		
 		setTimeout(function() {
-			//$('.overlay_popup_page').hide();
+			$('.overlay_popup_page').hide();
 			$(me.ppp).hide();
-			$(me.ppp).slideDown(1000);
-			// $('.overlay_popup_page').slideDown(600 );
+			//$(me.ppp).slideDown(1000);
+			$('.overlay_popup_page').slideDown(600 );
 		});
 	},
 	closePopup : function() {
@@ -126,8 +126,8 @@ React.createClass({
 		me.popupSetting = null;
 	
 		//setTimeout(function() {
-			// $('.overlay_popup_page').slideUp(1000, function() {
-			$(me.app).slideUp(1000, function() {
+			$('.overlay_popup_page').slideUp(1000, function() {
+			//$(me.app).slideUp(1000, function() {
 				me.setState({_popup : false})
 			});
 		//});
