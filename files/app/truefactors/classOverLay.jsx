@@ -116,7 +116,7 @@ React.createClass({
 		
 		setTimeout(function() {
 			$('.overlay_popup_page').hide();
-			$(me.ppp).hide();
+			//$(me.ppp).hide();
 			//$(me.ppp).slideDown(1000);
 			$('.overlay_popup_page').slideDown(600 );
 		});
