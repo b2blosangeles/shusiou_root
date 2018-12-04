@@ -57,7 +57,7 @@ var _rolesMenu = React.createClass({
 							  return <button className={'btn btn-large rounded ' + 
 								((me.props.parent.state.role === idx) ? 
 									  'role-checked' : 'role-unchecked')}
-								onClick={me.clickMenu(e, idx)}>
+								onClick={me.clickMenu(idx)}>
 								<b>{me.roles[idx].caption}</b></button>
 							  {/* <button className={'btn btn-large rounded ' + 
 								((me.props.parent.state.role === idx) ? 
