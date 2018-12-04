@@ -73,8 +73,7 @@ React.createClass({
 			</span>
 			</span>) : (<span></span>)
 			*/
-		me.ppp = (<span><span className="overlay_popup_cover"></span>   
-			<span id={'nnuu'} className="overlay_popup_page">
+		me.ppp = (<span id={'nnuu'} className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
