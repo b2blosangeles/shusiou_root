@@ -9,8 +9,12 @@ var _rolesMenu = React.createClass({
 	    var parent = me.props.parent;
 	    parent.setState({role: code, menuOption: null});
 	},
-	animation : function() {
-	
+	animation : function(sobj, tobg) {
+		var i = 1 - sobj.index( sobj );
+		$( sobj ).transfer( {
+		    to: $( tobj ).eq( i ),
+		    duration: 1000
+		  } );
 	},
 	render: function() {
 	  var me = this;
