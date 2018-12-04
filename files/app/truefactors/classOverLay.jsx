@@ -106,7 +106,7 @@ React.createClass({
 		me.popupSetting = null;
 		
 		$('.overlay_popup_page').toggle( "clip", function() {
-			alert(12);
+			me.setState({_popup : false})
 		});
 		/*
 		$('.overlay_popup_page').slideUp(300, function() {
