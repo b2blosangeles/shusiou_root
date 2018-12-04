@@ -100,7 +100,7 @@ React.createClass({
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
 		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];
 		setTimeout(function() { 
-			$('.overlay_popup_page').hide().toggle( Effect,  {direction: direction}, 300 )
+			$('.overlay_popup_page').hide().toggle( Effect,  {direction: direction}, 600 )
 		});
 	},
 	closePopup : function() {
@@ -112,13 +112,9 @@ React.createClass({
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
 		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];
 		
-		$('.overlay_popup_page').toggle(  Effect,  {direction: direction}, 300, function() {
+		$('.overlay_popup_page').toggle(  Effect,  {direction: direction}, 600, function() {
 			me.setState({_popup : false})
 		});
-		/*
-		$('.overlay_popup_page').slideUp(300, function() {
-			me.setState({_popup : false})
-		});*/
 	},	
 	render: function() {
 		var me = this;
