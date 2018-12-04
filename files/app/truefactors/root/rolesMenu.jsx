@@ -13,9 +13,9 @@ var _rolesMenu = React.createClass({
 				me.animation(sobj, $('.documentPageFrame'));
 			}
 		);
-		console.log('===niu===');
+		console.log('=== niu 2===');
 	},
-	animation : function(sobj, tobg) {
+	animation : function(sobj, tobj) {
 		$( sobj ).transfer( {
 		    to: $( tobj )[0],
 		    duration: 1000
