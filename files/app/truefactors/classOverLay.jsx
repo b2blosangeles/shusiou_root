@@ -87,7 +87,8 @@ React.createClass({
 				</div>
 				</div>				
 			</span>)
-		return (me.state._popup) ? me.ppp : (<span></span>);
+		return (<span><span className="overlay_popup_cover"></span>
+				{(me.state._popup) ? me.ppp : (<span></span>)}</span>);
 	},
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
