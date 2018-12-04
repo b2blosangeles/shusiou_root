@@ -15,9 +15,9 @@ var _rolesMenu = React.createClass({
 			}
 		);
 	},
-	clickMenu : function(e, code) {
+	clickMenu : function(code, e) {
 		var me = this;
-		$(event.target);
+		$(e.target);
 		me.animation($(e.target), $('.documentPageFrame'));
 		console.log('--->' +  code)
 		alert(e.target);
@@ -57,7 +57,7 @@ var _rolesMenu = React.createClass({
 							  return <button className={'btn btn-large rounded ' + 
 								((me.props.parent.state.role === idx) ? 
 									  'role-checked' : 'role-unchecked')}
-								onClick={((e) => me.clickMenu(e, idx))}>
+								onClick={me.clickMenu.bind(me, idx)}>
 								<b>{me.roles[idx].caption}</b></button>
 							  {/* <button className={'btn btn-large rounded ' + 
 								((me.props.parent.state.role === idx) ? 
