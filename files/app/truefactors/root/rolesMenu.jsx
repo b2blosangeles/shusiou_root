@@ -11,7 +11,7 @@ var _rolesMenu = React.createClass({
 		//alert(event);
 		//return true;
 		var parent = me.props.parent;
-		parent.setState({role: code, menuOption: null});
+		//parent.setState({role: code, menuOption: null});
 		setTimeout(
 			function() {
 				me.animation(sobj, $('.documentPageFrame'));
@@ -22,7 +22,7 @@ var _rolesMenu = React.createClass({
 		//$('div')
 			sobj.effect( "transfer", {
 		    to: tobj,
-		    duration: 100
+		    duration: 1000
 		  } );
 		console.log('-===666===');
 		//me.pickMenu.bind(me, idx, this)
