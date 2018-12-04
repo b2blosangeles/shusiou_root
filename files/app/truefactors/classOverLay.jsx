@@ -134,8 +134,8 @@ React.createClass({
 		
 		setTimeout(function() {
 			// $('.overlay_popup_page').hide();
-			$(me.ppp).hide();
-			$(me.ppp).slideDown(1000);
+			$(me.ppp).render().hide();
+			$(me.ppp).render().slideDown(1000);
 			// $('.overlay_popup_page').slideDown(600 );
 		});
 	},
@@ -145,7 +145,7 @@ React.createClass({
 	
 		//setTimeout(function() {
 			// $('.overlay_popup_page').slideUp(1000, function() {
-			$(me.app).slideUp(1000, function() {
+			$(me.app).render().slideUp(1000, function() {
 				me.setState({_popup : false})
 			});
 		//});
