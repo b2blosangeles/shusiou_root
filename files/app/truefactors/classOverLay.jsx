@@ -95,7 +95,7 @@ React.createClass({
 				<div className="row ">
 					<div className="col-sm-12">
 						<div className={className} style={style}>{closeIcon}
-						{(typeof v.data === 'string') ? 
+						{(!v) ? '' : (typeof v.data === 'string') ? 
 						(<span dangerouslySetInnerHTML={{__html: v.data}}/>)
 						: v.data}
 						</div>
