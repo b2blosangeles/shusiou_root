@@ -60,7 +60,7 @@ React.createClass({
 			console.log('=== overlay_popup_page =31==');
 			setTimeout(function() {
 					$('#nnuu').fadeIn( 600 );
-				}, 3000
+				}, 100
 			);
 		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
