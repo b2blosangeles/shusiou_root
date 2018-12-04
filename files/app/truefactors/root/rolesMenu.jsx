@@ -15,13 +15,7 @@ var _rolesMenu = React.createClass({
 		);
 	},
 	animation : function(sobj, tobj) {
-		$( 'img' ).html('yyyyyy');
-		//sobj = $('#tpp');
-		// $( sobj ).html('===niu A===');
-		// tobj.html('===niu===');
-		//return true;
-		// console.log(sobj);
-		$( 'body' ).effect( "transfer", {
+		$( sobj).effect( "transfer", {
 		    to: tobj,
 		    duration: 100
 		  } );
