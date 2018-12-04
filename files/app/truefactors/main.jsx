@@ -14,11 +14,11 @@ React.createClass({
 			extend: {
 				  includes : [],
 				   loadingInfo : '', // 'Loading ...',
-				   main : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
+				   controller : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
 				   cacheTime : 1000
 				}, 
-				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
-			parent={me} objId={_oId} />
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
+			parent={me} objId={'A' + _oId} />
 				
 			<_asyncModule plugin={{
 			extend: {
@@ -27,10 +27,10 @@ React.createClass({
 					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
 				   loadingInfo : '', // 'Loading ...',
-				   main : 'https://dev.shusiou.win/app/truefactors/root/main.jsx',
+				   controller : 'https://dev.shusiou.win/app/truefactors/root/main.jsx',
 				   cacheTime : 1000
 				}, 
-				master: '//master1_dev.shusiou.win/api/JSXhub.api'}} 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
 				parent={me} objId={'B' + _oId} />
 		</span>
 		)
