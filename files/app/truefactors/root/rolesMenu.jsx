@@ -24,7 +24,7 @@ var _rolesMenu = React.createClass({
 		// console.log(sobj);
 		$( '#tpp' ).effect( "transfer", {
 		    to: $( 'body' ),
-		    duration: 1000
+		    duration: 5000
 		  } );
 		console.log('-===222===');
 	},
