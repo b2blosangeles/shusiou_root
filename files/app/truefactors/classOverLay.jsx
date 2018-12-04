@@ -89,20 +89,20 @@ React.createClass({
 	spinOff : function(code) {
 		var me = this;
 		delete me.spinPool[code];
-	},		
+	},
 	popup : function(setting) {
 		var me = this;
 		me.popupSetting = setting;
 		me.setState({_popup : true})
 		
-		setTimeout(function() {
-			$('.overlay_popup_page').hide();
-			$('.overlay_popup_page').slideDown(600 );
+		setTimeout(function() { 
+			$('.overlay_popup_page').hide().slideDown(600);
 		});
 	},
 	closePopup : function() {
 		var me = this;
 		me.popupSetting = null;
+		
 		$('.overlay_popup_page').slideUp(300, function() {
 			me.setState({_popup : false})
 		});
