@@ -97,7 +97,7 @@ React.createClass({
 		
 		setTimeout(function() { 
 			//$('.overlay_popup_page').hide().show( "slide", {direction: "left" }, 300 )
-			$('.overlay_popup_page').hide().toggle( "clip" )
+			$('.overlay_popup_page').hide().toggle( "clip", 600 )
 		//	$('.overlay_popup_page').hide().slideDown(600);
 		});
 	},
@@ -105,7 +105,7 @@ React.createClass({
 		var me = this;
 		me.popupSetting = null;
 		
-		$('.overlay_popup_page').toggle( "clip", function() {
+		$('.overlay_popup_page').toggle( "clip", 600, function() {
 			me.setState({_popup : false})
 		});
 		/*
