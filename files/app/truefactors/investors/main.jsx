@@ -31,8 +31,8 @@ React.createClass({
 		return Root.commUI.show({
 				code: 'infoBox', 
 				parent : me, 
-				data : 'test only == ' + 
-			 		(<span dangerouslySetInnerHTML={{__html: me.compContents["info"]}}/>),
+				data : 'test only =b= ' + me.compContents["info"],
+			 		//(<span dangerouslySetInnerHTML={{__html: me.compContents["info"]}}/>),
 				setting : {
 					type : 'light',
 					noshadow : true,
