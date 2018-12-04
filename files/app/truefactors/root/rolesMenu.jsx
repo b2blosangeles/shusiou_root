@@ -4,10 +4,16 @@ var _rolesMenu = React.createClass({
 		me.roles = Root.global.roles;
 		return {}
 	},
-	pickMenu : function(code) {
+	pickMenu : function(code, sobj) {
 	    var me = this;
 	    var parent = me.props.parent;
 	    parent.setState({role: code, menuOption: null});
+		setTimeout(
+			function() {
+				me.animation(sobj, $('.documentPageFrame'));
+			}
+		);
+		console.log('===niu===');
 	},
 	animation : function(sobj, tobg) {
 		var i = 1 - sobj.index( sobj );
