@@ -96,7 +96,7 @@ React.createClass({
 		me.setState({_popup : true})
 		
 		setTimeout(function() { 
-			$('.overlay_popup_page').hide().show( "slide", {direction: "up" }, 2000 )
+			$('.overlay_popup_page').hide().show( "slide", {direction: "right" }, 2000 )
 		//	$('.overlay_popup_page').hide().slideDown(600);
 		});
 	},
