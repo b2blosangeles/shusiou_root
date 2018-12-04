@@ -17,7 +17,7 @@ var _rolesMenu = React.createClass({
 	},
 	clickMenu : function(code, e) {
 		var me = this;
-		$(e.target);
+		console.log(e.target);
 		me.animation($('body'), $('.documentPageFrame'));
 		console.log('--->' +  code)
 		alert(e.target);
