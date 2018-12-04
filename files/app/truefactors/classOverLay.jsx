@@ -56,7 +56,9 @@ React.createClass({
 				className="close pull-right" onClick={me.closePopup.bind(me)}>
 							  <span>&times;</span>
 							</button>);
-		
+		if (me.state._popup) {
+			console.log('=== trigger overlay_popup_cover ===');
+		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span className="overlay_popup_page">
 				<div className="container">
