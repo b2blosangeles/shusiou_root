@@ -16,10 +16,12 @@ var _rolesMenu = React.createClass({
 		console.log('=== niu 3 ===');
 	},
 	animation : function(sobj, tobj) {
+		console.log(sobj);
 		$( sobj ).transfer( {
 		    to: $( tobj ).eq( 0 ),
 		    duration: 1000
 		  } );
+		console.log('-===111===');
 	},
 	render: function() {
 	  var me = this;
