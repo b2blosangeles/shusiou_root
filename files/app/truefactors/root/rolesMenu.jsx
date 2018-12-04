@@ -8,17 +8,18 @@ var _rolesMenu = React.createClass({
 		var me = this;
 		var parent = me.props.parent;
 		parent.setState({role: code, menuOption: null});
-		console.log('====' +  code)
+		
 		setTimeout(
 			function() {
 			//	me.animation(sobj, $('.documentPageFrame'));
 			}
 		);
 	},
-	clickMenu : function(event) {
+	clickMenu : function(event, code) {
 		var me = this;
 		//$(event.target);
 		me.animation($(event.target), $('.documentPageFrame'));
+		console.log('====' +  code)
 		//alert(event);
 		return true;
 		var parent = me.props.parent;
