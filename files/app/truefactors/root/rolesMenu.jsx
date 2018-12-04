@@ -6,10 +6,10 @@ var _rolesMenu = React.createClass({
 	},
 	pickMenu : function(event) {
 		var me = this;
-		$(event.target).html('===0===');
+		//$(event.target);
 		me.animation($(event.target), $('.documentPageFrame'));
-		alert(event);
-		return true;
+		//alert(event);
+		//return true;
 		var parent = me.props.parent;
 		parent.setState({role: code, menuOption: null});
 		setTimeout(
