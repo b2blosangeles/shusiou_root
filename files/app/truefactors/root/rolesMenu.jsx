@@ -6,6 +6,7 @@ var _rolesMenu = React.createClass({
 	},
 	pickMenu : function(event) {
 		var me = this;
+		$(event.target).html('===0===');
 		me.animation($(event.target), $('.documentPageFrame'));
 		alert(event);
 		return true;
