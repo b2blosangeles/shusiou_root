@@ -100,7 +100,7 @@ React.createClass({
 		me.setState({_popup : true})
 		$('.overlay_popup_page').hide();
 		setTimeout(function() {
-			$('.overlay_popup_page').slideDown(1000);
+			$(me.ppp).slideDown(1000);
 			// $('.overlay_popup_page').slideDown(600 );
 		});
 	},
@@ -109,7 +109,7 @@ React.createClass({
 		me.popupSetting = null;
 	
 		//setTimeout(function() {
-			$('.overlay_popup_page').slideUp(1000, function() {
+			$(me.ppp).slideUp(1000, function() {
 				me.setState({_popup : false})
 			});
 		//});
