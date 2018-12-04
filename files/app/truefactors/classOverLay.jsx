@@ -56,24 +56,6 @@ React.createClass({
 				className="close pull-right" onClick={me.closePopup.bind(me)}>
 							  <span>&times;</span>
 							</button>);
-		/*
-		me.ppp =  (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-			<span id={'nnuu'} className="overlay_popup_page">
-				<div className="container">
-				<div className="row ">
-					<div className="col-sm-12">
-						<div className={className} style={style}>{closeIcon}
-						{(typeof v.data === 'string') ? 
-						(<span dangerouslySetInnerHTML={{__html: v.data}}/>)
-						: v.data}
-						</div>
-					</div>
-				</div>
-				</div>				
-			</span>
-			</span>) : (<span></span>)
-			*/
-		/*
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
 			<span id={'nnuu'} className="overlay_popup_page">
 				<div className="container">
@@ -88,26 +70,7 @@ React.createClass({
 				</div>
 				</div>				
 			</span>
-			</span>) : (<span></span>)
-		*/
-		me.ppp = (<span className="overlay_popup_page">
-				<div className="container">
-				<div className="row ">
-					<div className="col-sm-12">
-						<div className={className} style={style}>{closeIcon}
-						{(!v) ? '' : (typeof v.data === 'string') ? 
-						(<span dangerouslySetInnerHTML={{__html: v.data}}/>)
-						: v.data}
-						</div>
-					</div>
-				</div>
-				</div>				
-			</span>);
-			
-		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span> 
-				{me.ppp} </span>) : (<span></span>)
-		
-			
+			</span>) : (<span></span>)		
 	},
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
@@ -133,10 +96,8 @@ React.createClass({
 		me.setState({_popup : true})
 		
 		setTimeout(function() {
-			// $('.overlay_popup_page').hide();
-			$(me.ppp).render().hide();
-			$(me.ppp).render().slideDown(1000);
-			// $('.overlay_popup_page').slideDown(600 );
+			$('.overlay_popup_page').hide();
+			$('.overlay_popup_page').slideDown(600 );
 		});
 	},
 	closePopup : function() {
@@ -144,12 +105,11 @@ React.createClass({
 		me.popupSetting = null;
 	
 		//setTimeout(function() {
-			// $('.overlay_popup_page').slideUp(1000, function() {
-			$(me.app).render().slideUp(1000, function() {
+			$('.overlay_popup_page').slideUp(1000, function() {
+			//$(me.app).render().slideUp(1000, function() {
 				me.setState({_popup : false})
 			});
 		//});
-		
 	},	
 	render: function() {
 		var me = this;
