@@ -59,7 +59,7 @@ React.createClass({
 		if (me.state._popup) {
 			$('.overlay_popup_page').hide();
 			setTimeout(function() {
-				$('.overlay_popup_page').onZoomOut();
+				$('.overlay_popup_page').fadeIn()1000;
 				// $('.overlay_popup_page').slideDown(600 );
 			});
 		}
