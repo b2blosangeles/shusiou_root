@@ -73,6 +73,22 @@ React.createClass({
 			</span>
 			</span>) : (<span></span>)
 			*/
+		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
+			<span id={'nnuu'} className="overlay_popup_page">
+				<div className="container">
+				<div className="row ">
+					<div className="col-sm-12">
+						<div className={className} style={style}>{closeIcon}
+						{(typeof v.data === 'string') ? 
+						(<span dangerouslySetInnerHTML={{__html: v.data}}/>)
+						: v.data}
+						</div>
+					</div>
+				</div>
+				</div>				
+			</span>
+			</span>) : (<span></span>)
+		/*
 		me.ppp = (<span className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
@@ -90,6 +106,7 @@ React.createClass({
 			 (<span><span className="overlay_popup_cover"></span> 
 			{(me.state._popup) ? me.ppp : (<span></span>)}
 			</span>)
+			*/
 	},
 	spinOn : function(setting) {
 		var me = this, tm = new Date().getTime();
