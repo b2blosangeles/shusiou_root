@@ -18,7 +18,7 @@ var _rolesMenu = React.createClass({
 	clickMenu : function(code) {
 		var me = this;
 		$(event.target);
-		me.animation($(event.target), $('.documentPageFrame'));
+		me.animation(event.target, $('.documentPageFrame'));
 		console.log('--->' +  code)
 		alert(event.target);
 		return true;
@@ -26,7 +26,7 @@ var _rolesMenu = React.createClass({
 		//parent.setState({role: code, menuOption: null});
 		setTimeout(
 			function() {
-				me.animation(sobj, $('.documentPageFrame'));
+				// me.animation(sobj, $('.documentPageFrame'));
 			}
 		);
 	},
