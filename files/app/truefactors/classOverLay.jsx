@@ -97,7 +97,7 @@ React.createClass({
 		
 		setTimeout(function() {
 			$('.overlay_popup_page').hide();
-			$('.overlay_popup_page').slideDown(300 );
+			$('.overlay_popup_page').slideDown(600 );
 		});
 	},
 	closePopup : function() {
