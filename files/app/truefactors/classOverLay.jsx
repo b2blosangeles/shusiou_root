@@ -104,9 +104,8 @@ React.createClass({
 				</div>				
 			</span>);
 			
-		return 
-			 (me.state._popup) ? (<span><span className="overlay_popup_cover"></span> 
-				{me.ppp} </span>): (<span></span>)
+		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span> 
+				{me.ppp} </span>) : (<span></span>)
 		
 			
 	},
