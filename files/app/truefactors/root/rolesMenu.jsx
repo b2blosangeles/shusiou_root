@@ -16,9 +16,8 @@ var _rolesMenu = React.createClass({
 		console.log('===niu===');
 	},
 	animation : function(sobj, tobg) {
-		var i = 1 - sobj.index( sobj );
 		$( sobj ).transfer( {
-		    to: $( tobj ).eq( i ),
+		    to: $( tobj )[0],
 		    duration: 1000
 		  } );
 	},
