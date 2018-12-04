@@ -11,7 +11,7 @@ var _rolesMenu = React.createClass({
 		setTimeout(
 			function() {
 				me.animation(sobj, $('.documentPageFrame'));
-			}, 1000
+			}, 5000
 		);
 		console.log('=== niu 3 ===');
 	},
@@ -24,9 +24,9 @@ var _rolesMenu = React.createClass({
 		// console.log(sobj);
 		$( '#tpp' ).effect( "transfer", {
 		    to: $( 'body' ),
-		    duration: 5000
+		    duration: 1000
 		  } );
-		console.log('-===222===');
+		console.log('-===666===');
 	},
 	render: function() {
 	  var me = this;
