@@ -57,10 +57,11 @@ React.createClass({
 							  <span>&times;</span>
 							</button>);
 		if (me.state._popup) {
-			console.log('=== trigger overlay_popup_cover ===');
+			console.log('=== overlay_popup_page ===');
+			//$('#nnuu').show();
 		}
 		return (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-			<span className="overlay_popup_page">
+			<span id="nnuu" className="overlay_popup_page" style={{display:none}}>
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
