@@ -5,9 +5,9 @@ var _rolesMenu = React.createClass({
 		return {}
 	},
 	pickMenu : function(code, sobj) {
-	    var me = this;
-	    var parent = me.props.parent;
-	    parent.setState({role: code, menuOption: null});
+		var me = this;
+		var parent = me.props.parent;
+		parent.setState({role: code, menuOption: null});
 		setTimeout(
 			function() {
 				me.animation(sobj, $('.documentPageFrame'));
