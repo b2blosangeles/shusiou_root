@@ -90,29 +90,34 @@ React.createClass({
 		var me = this;
 		delete me.spinPool[code];
 	},
-	popup : function(setting) {
-		var me = this;
-		me.popupSetting = setting;
-		me.setState({_popup : true})
+	animationIn : function() {
 		// 'puff', 'clip', 'explode', 'fold', 'slide'
 		var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
 		    direction_a = ['up', 'down', 'left', 'right'],
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
-		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];
+		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];		
+		$('.overlay_popup_page').hide().toggle( Effect,  {direction: direction}, 600 )
+	},
+	animationOut : function() {
+		// 'puff', 'clip', 'explode', 'fold', 'slide'
+		var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
+		    direction_a = ['up', 'down', 'left', 'right'],
+		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
+		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];		
+		$('.overlay_popup_page').toggle( Effect,  {direction: direction}, 600 )
+	},
+	popup : function(setting) {
+		var me = this;
+		me.popupSetting = setting;
+		me.setState({_popup : true})
 		setTimeout(function() { 
-			$('.overlay_popup_page').hide().toggle( Effect,  {direction: direction}, 600 )
+			me.animationIn();
 		});
 	},
 	closePopup : function() {
 		var me = this;
 		me.popupSetting = null;
-		
-		var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
-		    direction_a = ['up', 'down', 'left', 'right'],
-		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
-		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];
-		
-		$('.overlay_popup_page').toggle(  Effect,  {direction: direction}, 600, function() {
+		me.animationOut(function() {
 			me.setState({_popup : false})
 		});
 	},	
