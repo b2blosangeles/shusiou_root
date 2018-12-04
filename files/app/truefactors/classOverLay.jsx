@@ -60,7 +60,7 @@ React.createClass({
 
 		}
 		me.ppp =  (me.state._popup) ? (<span><span className="overlay_popup_cover"></span>   
-			<span id={'nnuu'} className="overlay_popup_page" style={{display:'none'}}>
+			<span id={'nnuu'} className="overlay_popup_page">
 				<div className="container">
 				<div className="row ">
 					<div className="col-sm-12">
@@ -98,7 +98,7 @@ React.createClass({
 		var me = this;
 		me.popupSetting = setting;
 		me.setState({_popup : true})
-		$('.overlay_popup_page').hide();
+		$(me.ppp).hide();
 		setTimeout(function() {
 			$(me.ppp).slideDown(1000);
 			// $('.overlay_popup_page').slideDown(600 );
