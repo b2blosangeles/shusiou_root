@@ -53,8 +53,8 @@ try {
 					  if (me.props.plugin.extend.controller) {   
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
-					     console.log('===__asyncCache===');
-					     console.log(__asyncCache);
+					     console.log('===__localStorage===');
+					     console.log(localStorage);
 					   me._asyncModule = resultData;
 					   me.setState({success: true, update : new Date().getTime()});
 				     },
