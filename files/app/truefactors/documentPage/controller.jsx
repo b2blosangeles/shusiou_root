@@ -14,8 +14,8 @@ React.createClass({
 		var me = this;
 		
 		var menuItem = (!me.props.data) ? 'homePage' : me.props.data;
-		if (me.compContents[me.props.data]) {
-			return me.compContents[me.props.data];
+		if (me.compContents[menuItem]) {
+			return me.compContents[menuItem];
 		} else {
 			switch (menuItem) {
 				case 'about' : 
