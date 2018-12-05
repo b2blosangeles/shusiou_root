@@ -13,7 +13,7 @@ React.createClass({
 		return (
 			<span>
 			{me.matrix.map(function(m){  						
-				return(<Route path={m.route} env={me} component={me.test()} />)	
+				return(<Route path={m.route} env={me} component={m.component} />)	
 			})};
 			</span>	
 		);
