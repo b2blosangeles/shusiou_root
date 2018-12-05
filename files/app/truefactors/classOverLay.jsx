@@ -92,7 +92,8 @@ React.createClass({
 	},
 	animationIn : function() {
 		// 'puff', 'clip', 'explode', 'fold', 'slide'
-		var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
+		// var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
+		var Effect_a = ['clip'],
 		    direction_a = ['up', 'down', 'left', 'right'],
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
 		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];		
@@ -100,7 +101,8 @@ React.createClass({
 	},
 	animationOut : function(cbk) {
 		// 'puff', 'clip', 'explode', 'fold', 'slide'
-		var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
+		// var Effect_a = ['puff', 'clip', 'fold', 'slide', 'drop'],
+		var Effect_a = ['clip'],
 		    direction_a = ['up', 'down', 'left', 'right'],
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
 		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];
