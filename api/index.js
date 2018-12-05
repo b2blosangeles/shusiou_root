@@ -20,7 +20,7 @@ connection.query(str, function (error, results, fields) {
 	var indextpl = '';
 	
 	// if(req.headers.host.match(/^(www\.|dev\.|qa\.|)(platoplan)\.(com|win)$/)) { 
-	if(req.headers.host.match(/^dev\.|qa\.|)(platoplan)\.(com|win)$/)) { 
+	if(req.headers.host.match(/^(dev\.|qa\.|)(platoplan)\.(com|win)$/)) { 
 		indextpl = 'platoplan.html'
 	} else {
 		indextpl = 'index.tpl';
