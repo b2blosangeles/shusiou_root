@@ -28,7 +28,9 @@ connection.query(str, function (error, results, fields) {
 				servers[o].push('//' + o + (j + 1) + '_' + config.root );
 			}
 		}		
-		pkg.fs.readFile(env.site_path + '/tpl/index.tpl', 'utf-8', function(err, content) {
+//		pkg.fs.readFile(env.site_path + '/tpl/index.tpl', 'utf-8', function(err, content) {
+		pkg.fs.readFile(env.site_path + '/tpl/truefactors.html', 'utf-8', function(err, content) {	
+			
 			var tpl = new Smarty(content);
 			res.send(tpl.fetch({
 					dns:JSON.stringify(servers), 
