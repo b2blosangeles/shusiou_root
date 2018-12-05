@@ -6,7 +6,7 @@ var _compData = function(me, Root) {
 		me.setState({updated : new Date().getTime()});
 		setTimeout(
 			function() {
-				me.list = Root.lib.getNumberList(11);
+				me.list = Root.lib.getNumberList(20);
 				Root.lib.setSpinAnchor(me, 'AA', false)
 			//	Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
