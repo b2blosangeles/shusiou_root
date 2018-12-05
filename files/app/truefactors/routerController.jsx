@@ -6,9 +6,9 @@ React.createClass({
 		var me = this;
 
 		me.matrix = [
-			{route:'/test', component:me.test()},
+		/*	{route:'/test', component:me.test()},
 			{route:'/', role:['*'], auth:false, component:me.test()},
-			{route:'*', role:['*'], auth:false, component:me.test()}
+			{route:'*', role:['*'], auth:false, component:me.test()}*/
 		];			
 		return (
 			<span>
