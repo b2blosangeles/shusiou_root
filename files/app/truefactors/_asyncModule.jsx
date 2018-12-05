@@ -25,7 +25,7 @@ try {
 			//if (!localStorage) {
 				__asyncCache[k] = v;
 			//} else {
-				localStorage.setItem(k, v);
+				localStorage.setItem(k, v.toString());
 			//}
 		},
 		getAsyncCache : function(k) {
