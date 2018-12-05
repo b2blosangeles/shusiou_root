@@ -12,6 +12,9 @@ let str = 'SELECT `ip` IP, "node" TP FROM `cloud_node` WHERE `score` < 900 UNION
     	'SELECT `ip` IP, "comm" TP FROM `cloud_comm` WHERE `score` < 900 UNION '+
 	'SELECT `ip` IP,  "master" TP FROM `cloud_master`  WHERE `score` < 900 ';
 
+res.sed(results);
+return true;
+
 connection.query(str, function (error, results, fields) {
 	connection.end();
 	if (error) {
