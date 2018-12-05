@@ -28,12 +28,6 @@ var _commLib = function () {
 		 <span className="section-spinner"></span></span></span>)   
 	}
 	
-	this.animation = {
-		transfer : function(startObj, duration) {
-			startObj.effect( "transfer", { to: $('.animation-flag'), duration: (!duration) ? 600 : duration} );
-		}
-	}	
-	
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
