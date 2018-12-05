@@ -15,24 +15,24 @@ try {
 			}	
 		},
 		asyncCacheExist : function(k) {
-			if (!localStorage) {
+			if (!sessionStorage) {
 				return (!__asyncCache[k]) ? false : true;
 			} else {
-				return (!localStorage.getItem(k)) ? false : true;
+				return (!sessionStorage.getItem(k)) ? false : true;
 			}
 		},
 		setAsyncCache : function(k, v) {
-			if (!localStorage) {
+			if (!sessionStorage) {
 				__asyncCache[k] = v;
 			} else {
-				localStorage.setItem(k, JSON.stringify(v));
+				sessionStorage.setItem(k, JSON.stringify(v));
 			}
 		},
 		getAsyncCache : function(k) {
-			if (!localStorage) {
+			if (!sessionStorage) {
 				return __asyncCache[k];
 			} else {
-				return JSON.parse(localStorage.getItem(k));
+				return JSON.parse(sessionStorage.getItem(k));
 			}
 		},
 		loadPlugin : function() {
