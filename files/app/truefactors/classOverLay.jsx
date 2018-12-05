@@ -97,7 +97,7 @@ React.createClass({
 		    direction_a = ['up', 'down', 'left', 'right'],
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
 		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];		
-		$('.overlay_popup_page').hide().show( Effect,  600 )
+		$('.overlay_popup_page').hide().show( Effect,  300 )
 	},
 	animationOut : function(cbk) {
 		// 'puff', 'clip', 'explode', 'fold', 'slide'
@@ -108,7 +108,7 @@ React.createClass({
 		    Effect = Effect_a[Math.floor(Math.random() * Effect_a.length)],
 		    direction = direction_a[Math.floor(Math.random() * direction_a.length)];
 		
-		$('.overlay_popup_page').toggle( Effect, 600 ,
+		$('.overlay_popup_page').toggle( Effect, 300 ,
 			function() {
 				cbk();
 			});
