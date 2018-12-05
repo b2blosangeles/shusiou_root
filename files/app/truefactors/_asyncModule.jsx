@@ -34,7 +34,7 @@ try {
 			} else {
 				return localStorage.getItem(k);
 			}
-		}
+		},
 		loadPlugin : function() {
 			var me = this;
 			me._asyncModule = null;
@@ -53,6 +53,8 @@ try {
 					  if (me.props.plugin.extend.controller) {   
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
+					     console.log('===__asyncCache===');
+					     console.log(__asyncCache);
 					   me._asyncModule = resultData;
 					   me.setState({success: true, update : new Date().getTime()});
 				     },
