@@ -24,7 +24,6 @@ React.createClass({
 			<_asyncModule plugin={{
 			extend: {
 					contents : {
-						home : 'https://dev.shusiou.win/app/truefactors/contents/home.text',
 					},   
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
