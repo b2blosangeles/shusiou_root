@@ -31,7 +31,7 @@ React.createClass({
 		return Root.commUI.show({
 				code: 'infoBox', 
 				parent : me, 
-				data : 'test only =b= ' + me.compContents["info"],
+				data : me.compContents["info"],
 				setting : {
 					type : 'light',
 					noshadow : true,
