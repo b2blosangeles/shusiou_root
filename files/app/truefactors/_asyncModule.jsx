@@ -50,15 +50,11 @@ try {
 				     dataType: 'JSON',
 				     timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
 				     success: function(resultData){
-					     console.log('====resultData====');
-					     console.log(resultData);
 					  if (me.props.plugin.extend.controller) {   
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
-					     console.log('===__localStorage===');
-					     console.log(__asyncCache);
-					   me._asyncModule = resultData;
-					   me.setState({success: true, update : new Date().getTime()});
+					  me._asyncModule = resultData;
+					  me.setState({success: true, update : new Date().getTime()});
 				     },
 				     error : function(xhr, textStatus, error) { 
 				       me._asyncModuleErr = error;
