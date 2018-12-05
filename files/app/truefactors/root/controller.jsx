@@ -26,8 +26,10 @@ React.createClass({
 	},
 	loadContentPage : function(data) {
 		var me = this;
+		console.log('===data===>');
+		console.log(data);
 		if (me.compContents[data]) {
-			console.log(data);
+			
 			return me.compContents[data];
 		} else return Root.lib.asyncModule({
 			setting:{	extend: {
