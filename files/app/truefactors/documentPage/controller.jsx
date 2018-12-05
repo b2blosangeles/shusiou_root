@@ -2,8 +2,6 @@ React.createClass({
         getInitialState : function() {
 		var me = this;
 		me.compContents = _compContents;
-		console.log('----me.compContents--->>');
-		console.log(me.compContents);
           	return {}
         },
 	componentDidMount : function() {
@@ -14,7 +12,7 @@ React.createClass({
 	},
 	showContent : function() {
 		var me = this;
-		console.log('----me.props.data--->');
+		
 		var menuItem = (!me.props.data) ? 'homePage' : me.props.data;
 		if (me.compContents[me.props.data]) {
 			return me.compContents[me.props.data];
