@@ -8,8 +8,13 @@ React.createClass({
 	componentDidMount : function() {
 		var me = this;
 	},
-	changeContentPage : function(v) {
+	changeContentPage : function(v, e) {
 		var me = this; 
+		
+		if ((e) && e.target) {
+			Root.lib.animation.transfer($(e.target), $('.documentPageFrame'));
+		}
+		
 		if (!v) {
 			me.setState({ role : null, menuOption : null})
 		} else {
