@@ -27,7 +27,7 @@ React.createClass({
 					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
 				   loadingInfo : '', // 'Loading ...',
-				   controller : 'https://dev.shusiou.win/app/truefactors/root/main.jsx',
+				   controller : 'https://dev.shusiou.win/app/truefactors/root/controller.jsx',
 				   cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
