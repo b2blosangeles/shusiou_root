@@ -16,13 +16,10 @@ var _compData = function(me, Root) {
 	this.showImage = function(i) {
 		var list = [
 			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp',
-			'/app/truefactors/resource/webp/mqdefault_6s.webp'
+			'/app/truefactors/resource/webp/100.webp',
+			'/app/truefactors/resource/webp/101.webp',
+			'/app/truefactors/resource/webp/102.webp',
+			'/app/truefactors/resource/webp/103.webp'
 		]
 		var item = list[Math.floor(Math.random()*list.length)];
 		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
