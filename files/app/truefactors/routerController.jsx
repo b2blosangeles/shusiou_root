@@ -1,4 +1,3 @@
-
 React.createClass({
 	render: function() {
 		var me = this;
