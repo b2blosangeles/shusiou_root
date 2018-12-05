@@ -26,6 +26,7 @@ React.createClass({
 	},
 	loadContentPage : function(data) {
 		var me = this;
+		var menuItem = (data) ? data ; 'home';
 		console.log('===data===>');
 		console.log(data);
 		if (me.compContents[data]) {
