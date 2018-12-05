@@ -12,7 +12,7 @@ var _global = {
 		],
 		publicMenu: [
 			{code: 'howToStart', caption : 'How to start'},
-			{code:  'FAQ', caption : 'FAQ'} 		
+			{code:  'faq', caption : 'FAQ'} 		
 		],
 		inventor : [
 			{code: 'myVideos', caption : 'My Videos'},
