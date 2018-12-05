@@ -27,7 +27,7 @@ React.createClass({
 			setting:{	extend: {
 						contents : {
 							terms : 'https://dev.shusiou.win/app/truefactors/contents/terms.text',
-							faq: 'https://dev.shusiou.win/app/truefactors/contents/FAQ.text'
+							faq: 'https://dev.shusiou.win/app/truefactors/contents/faq.text'
 						},
 						includes : [
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
