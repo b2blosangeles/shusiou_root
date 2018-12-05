@@ -21,7 +21,7 @@ React.createClass({
 			me.setState({ menuOption : v})   
 		}
 	},
-	loadContentPage : function(data) {
+	loadContentPage : function(menuItem) {
 		var me = this;
 		return Root.lib.asyncModule({
 			setting:{	extend: {
@@ -37,7 +37,7 @@ React.createClass({
 					}, 
 					master: '//master1_dev.shusiou.win/api/DVCHub.api'
 				},
-			data : (!data) ? 'homePage' : data,
+			data : menuItem,
 			parent : me
 		})	
 	},
