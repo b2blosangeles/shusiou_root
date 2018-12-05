@@ -56,9 +56,9 @@ try {
 					     console.log('===__asyncCache===');
 					      console.log(__asyncCache);
 					     console.log('===sessionstorage===');
-					      console.log(sessionstorage);
+					      console.log(sessionStorage);
 					     console.log('===localstorage===');
-					     console.log(localstorage);
+					     console.log(localStorage);
 					  me._asyncModule = resultData;
 					  me.setState({success: true, update : new Date().getTime()});
 				     },
