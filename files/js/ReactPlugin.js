@@ -1,15 +1,6 @@
 var __asyncOId = 0, __asyncCache = {};
 localStorage.clear();
 
-	var { Router,
-		  Route,
-		  browserHistory,
-		  createMemoryHistory,
-		  hashHistory,
-		  IndexRoute,
-		  IndexLink,
-		  Link } = ReactRouter;
-
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
