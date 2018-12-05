@@ -1,6 +1,5 @@
 var __asyncOId = 0, __asyncCache = {};
 localStorage.clear();
-
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
