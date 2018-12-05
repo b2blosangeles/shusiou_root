@@ -7,7 +7,7 @@ var _rolesMenu = React.createClass({
 	clickMenu : function(code, e) {
 		var me = this;
 		var parent = me.props.parent;
-		Root.lib.animation.transfe($(e.target), $('.documentPageFrame'));
+		Root.lib.animation.transfer($(e.target), $('.documentPageFrame'));
 		parent.setState({role: code, menuOption: null});
 	},
 	render: function() {
