@@ -28,7 +28,7 @@ React.createClass({
 					return (<_homePage/>)
 					break;
 				default :
-					return (<span>No {me.props.data} document</span>)		
+					return (<span>Document {me.props.data} does not exist!!</span>)		
 			}
 		}
 	},
