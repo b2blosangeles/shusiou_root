@@ -25,14 +25,14 @@ try {
 			//if (!localStorage) {
 				__asyncCache[k] = v;
 			//} else {
-				localStorage.setItem(k, v.toString());
+				localStorage.setItem(k, JSON.stringify(v));
 			//}
 		},
 		getAsyncCache : function(k) {
 			//if (!localStorage) {
 				return __asyncCache[k];
 			//} else {
-			//	return localStorage.getItem(k);
+			//	return JSON.parse(localStorage.getItem(k));
 			//}
 		},
 		loadPlugin : function() {
