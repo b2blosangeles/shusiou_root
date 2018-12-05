@@ -33,5 +33,10 @@ var _commUI = {
 					</div>
 				</div>
 			</div>)}
-		})
+		}),
+	animation : {
+		transfer : function(startObj, duration) {
+			startObj.effect( "transfer", { to: $('.animation-flag'), duration: (!duration) ? 600 : duration} );
+		}
+	}	
 };
