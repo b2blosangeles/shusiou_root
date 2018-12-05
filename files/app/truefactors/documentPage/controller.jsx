@@ -14,22 +14,23 @@ React.createClass({
 		var me = this;
 		
 		var menuItem = (!me.props.data) ? 'homePage' : me.props.data;
-		if (me.compContents[menuItem]) {
-			return me.compContents[menuItem];
-		} else {
-			switch (menuItem) {
-				case 'about' : 
-					return (<_about/>)
-					break;
-				case 'contact' :
-					return (<_contact/>)
-					break;
-				case 'homePage' :
-					return (<_homePage/>)
-					break;
-				default :
+		
+		switch (menuItem) {
+			case 'about' : 
+				return (<_about/>)
+				break;
+			case 'contact' :
+				return (<_contact/>)
+				break;
+			case 'homePage' :
+				return (<_homePage/>)
+				break;
+			default :
+				if (me.compContents[menuItem]) {
+					return me.compContents[menuItem];
+				} else {
 					return (<span>Document {me.props.data} does not exist!!</span>)		
-			}
+				}
 		}
 	},
         render : function() {
