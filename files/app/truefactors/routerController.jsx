@@ -2,10 +2,10 @@ React.createClass({
 	render: function() {
 		var me = this;
 		
-		var Router = window.ReactRouter;
-		var hashHistory = Router.hashHistory;
-		console.log('-----hashHistory-------');
-		console.log(hashHistory);
+		//var Router = window.ReactRouter;
+		//var hashHistory = Router.hashHistory;
+		//console.log('-----hashHistory-------');
+		//console.log(hashHistory);
 		
 		return (<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me}/>
