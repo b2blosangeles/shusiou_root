@@ -1,8 +1,6 @@
 React.createClass({
 	routeMatrix:function() {
 		var me = this;
-		var my_role = ((me.state.userInfo) && (me.state.userInfo.roles)) ? 
-		    me.state.userInfo.roles : [];
 
 		me.matrix = [
 			{route:'/test', component:My_curriculums},
