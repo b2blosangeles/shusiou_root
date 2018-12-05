@@ -30,7 +30,7 @@ var _commLib = function () {
 	
 	this.animation = {
 		transfer : function(sobj, tobj, duration) {
-			sobj.effect( "transfer", { to: tobj, duration: (!duration) ? 600 : duration} );
+			sobj.effect( "transfer", { to: tobj, duration: (!duration) ? 300 : duration} );
 		}
 	}	
 	
