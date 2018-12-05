@@ -1,6 +1,17 @@
 var __asyncOId = 0, __asyncCache = {};
 localStorage.clear();
+
 $(document).ready(function(){
+	var { Router,
+		  Route,
+		  browserHistory,
+		  createMemoryHistory,
+		  hashHistory,
+		  IndexRoute,
+		  IndexLink,
+		  Link } = ReactRouter;      
+      
+      
       $.ReactPlugin =  function(cfg) {
                 cfg.viewPoint.innerHTML = ((cfg.extend) && (cfg.extend.loadingInfo)) ? cfg.extend.loadingInfo : '';
                 $.ajax({
