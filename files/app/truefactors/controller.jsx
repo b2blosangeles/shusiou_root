@@ -38,7 +38,7 @@ React.createClass({
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
 				parent={me} objId={'B' + _oId} />*/}
 				
-				
+			<span>tttt</span>	
 			<_asyncModule plugin={{
 			extend: {
 					contents : {},
