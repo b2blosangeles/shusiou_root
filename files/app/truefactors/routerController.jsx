@@ -21,9 +21,9 @@ React.createClass({
 	render: function() {
 		var me = this;
 		
-		return (<span>oooo<ReactRouter.Router history={hashHistory}>
+		return (<span>oooo===NBNBNB===<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me}/>
-				{me.routeMatrix()}===NBNBNB===
+				{me.routeMatrix()}
 			</ReactRouter.Router></span>)  
 		/* return (<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me} component={Ad}/>
