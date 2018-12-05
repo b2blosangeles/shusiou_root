@@ -8,7 +8,7 @@ var _subMenu = React.createClass({
     clickOption : function(v, e) {
 	var me = this; 
 	if ((e) && e.target) {
-		Root.lib.animation.transfer($(e.target), $('.documentPageFrameA'));
+		Root.lib.animation.transfer($(e.target), $('.animation-flag'));
 	}
 	if (!v) {
 		me.props.parent.setState({ role : null, menuOption : null})
