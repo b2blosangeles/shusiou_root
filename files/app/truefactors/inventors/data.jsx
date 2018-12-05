@@ -25,7 +25,15 @@ var _compData = function(me, Root) {
 			'/app/truefactors/resource/webp/106.webp',
 			'/app/truefactors/resource/webp/107.webp',
 			'/app/truefactors/resource/webp/108.webp',
-			'/app/truefactors/resource/webp/109.webp'
+			'/app/truefactors/resource/webp/109.webp',
+			'/app/truefactors/resource/webp/110.webp',
+			'/app/truefactors/resource/webp/111.webp',
+			'/app/truefactors/resource/webp/112.webp',
+			'/app/truefactors/resource/webp/113.webp',
+			'/app/truefactors/resource/webp/114.webp',
+			'/app/truefactors/resource/webp/115.webp',
+			'/app/truefactors/resource/webp/116.webp',
+			'/app/truefactors/resource/webp/117.webp'
 		]
 		var item = list[Math.floor(Math.random()*list.length)];
 		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
