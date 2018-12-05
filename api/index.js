@@ -17,7 +17,7 @@ let str = 'SELECT `ip` IP, "node" TP FROM `cloud_node` WHERE `score` < 900 UNION
 connection.query(str, function (error, results, fields) {
 	connection.end();
 	
-	 res.send(request.headers.host);
+	 res.send('request.headers.host');
 	 return true;
 	
 	if (error) {
