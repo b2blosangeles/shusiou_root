@@ -19,7 +19,13 @@ var _compData = function(me, Root) {
 			'/app/truefactors/resource/webp/100.webp',
 			'/app/truefactors/resource/webp/101.webp',
 			'/app/truefactors/resource/webp/102.webp',
-			'/app/truefactors/resource/webp/103.webp'
+			'/app/truefactors/resource/webp/103.webp',
+			'/app/truefactors/resource/webp/104.webp',
+			'/app/truefactors/resource/webp/105.webp',
+			'/app/truefactors/resource/webp/106.webp',
+			'/app/truefactors/resource/webp/107.webp',
+			'/app/truefactors/resource/webp/108.webp',
+			'/app/truefactors/resource/webp/109.webp'
 		]
 		var item = list[Math.floor(Math.random()*list.length)];
 		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
