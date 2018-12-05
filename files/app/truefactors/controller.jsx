@@ -34,6 +34,18 @@ React.createClass({
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
 				parent={me} objId={'B' + _oId} />
+				
+				
+			<_asyncModule plugin={{
+			extend: {
+					contents : {},
+					includes : [],
+					loadingInfo : '', // 'Loading ...',
+					controller : 'https://dev.shusiou.win/app/truefactors/routerController.jsx',
+					cacheTime : 1000
+				}, 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
+			parent={me} objId={'C' + _oId} />				
 		</span>
 		)
         }
