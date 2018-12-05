@@ -28,7 +28,6 @@ var _commUI = {
 			return (<div className="container">
 				<div className="row documentPageFrame mt-3 mb-5 p-1">
 					<div className="col-sm-12 p-1 animation-flag">
-						<span className=""></span>
 					    {(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
 					    : me.props.data}						
 					</div>
