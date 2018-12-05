@@ -8,6 +8,9 @@ React.createClass({
         	var me = this;
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
+		
+		let hashHistory = Router.hashHistory;
+		
 		return  (
 		<span>				
 			<_asyncModule plugin={{
