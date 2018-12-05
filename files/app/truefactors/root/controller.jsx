@@ -33,9 +33,9 @@ React.createClass({
 							'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 							'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 						],
-						main : 'https://dev.shusiou.win/app/truefactors/documentPage/main.jsx'
+						controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx'
 					}, 
-					master: '//master1_dev.shusiou.win/api/JSXhub.api'
+					master: '//master1_dev.shusiou.win/api/DVCHub.api'
 				},
 			data : (!data) ? 'homePage' : data,
 			parent : me
