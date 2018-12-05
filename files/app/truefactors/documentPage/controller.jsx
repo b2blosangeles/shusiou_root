@@ -15,19 +15,23 @@ React.createClass({
 	showContent : function() {
 		var me = this;
 		console.log('----me.props.data--->');
-		return me.compContents[me.props.data];
-		switch (me.props.data) {
-			case 'about' : 
-				return (<_about/>)
-				break;
-			case 'contact' :
-				return (<_contact/>)
-				break;
-			case 'homePage' :
-				return (<_homePage/>)
-				break;
-			default :
-				return (<span>No {me.props.data} document</span>)		
+		var menuItem = (!me.props.data) ? 'home' : me.props.data;
+		if (me.compContents[me.props.data]) {
+			return me.compContents[me.props.data];
+		} else {
+			switch (menuItem) {
+				case 'about' : 
+					return (<_about/>)
+					break;
+				case 'contact' :
+					return (<_contact/>)
+					break;
+				case 'homePage' :
+					return (<_homePage/>)
+					break;
+				default :
+					return (<span>No {me.props.data} document</span>)		
+			}
 		}
 	},
         render : function() {
