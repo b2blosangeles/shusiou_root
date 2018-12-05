@@ -12,23 +12,27 @@ React.createClass({
 		<span>				
 			<_asyncModule plugin={{
 			extend: {
-				  includes : [],
-				   loadingInfo : '', // 'Loading ...',
-				   controller : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
-				   cacheTime : 1000
+					contents : {},
+					includes : [],
+					loadingInfo : '', // 'Loading ...',
+					controller : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
+					cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
 			parent={me} objId={'A' + _oId} />
 				
 			<_asyncModule plugin={{
 			extend: {
-				  includes : [
-					'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
-					'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
+					contents : {
+						home : 'https://dev.shusiou.win/app/truefactors/contents/home.text',
+					},   
+					includes : [
+						'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
+						'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
-				   loadingInfo : '', // 'Loading ...',
-				   controller : 'https://dev.shusiou.win/app/truefactors/root/controller.jsx',
-				   cacheTime : 1000
+					loadingInfo : '', // 'Loading ...',
+					controller : 'https://dev.shusiou.win/app/truefactors/root/controller.jsx',
+					cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
 				parent={me} objId={'B' + _oId} />
