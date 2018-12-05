@@ -2,6 +2,9 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
+		me.compContents = _compContents;
+		console.log('----me.compContents--->>');
+		console.log(me.compContents);
           	return {role: '', menuOption:'', spinner: true}
         },
 	
