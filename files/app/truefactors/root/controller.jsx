@@ -33,6 +33,9 @@ React.createClass({
 			return me.compContents[menuItem];
 		} else return Root.lib.asyncModule({
 			setting:{	extend: {
+						contents : {
+							info: 'https://dev.shusiou.win/app/truefactors/investors/contents/consts_info.txt'
+						},
 						includes : [
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
 							'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
