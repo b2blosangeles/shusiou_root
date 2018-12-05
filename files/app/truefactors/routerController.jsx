@@ -1,16 +1,19 @@
 React.createClass({
+	test : function() {
+		return (<span>aaa<>/span>)
+		},
 	routeMatrix:function() {
 		var me = this;
 
 		me.matrix = [
-			{route:'/test', component:My_curriculums},
-			{route:'/', role:['*'], auth:false, component:Ad},
-			{route:'*', role:['*'], auth:false, component:ErrorPage}
+			{route:'/test', component:me.test()},
+			{route:'/', role:['*'], auth:false, component:me.test()},
+			{route:'*', role:['*'], auth:false, component:me.test()}
 		];			
 		return (
 			<span>
 			{me.matrix.map(function(m){  						
-				return(<Route path={m.route} env={me} component={m.component} />)	
+				return(<Route path={m.route} env={me} component={me.test()} />)	
 			})};
 			</span>	
 		);
