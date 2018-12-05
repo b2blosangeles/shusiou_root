@@ -29,8 +29,8 @@ var _commLib = function () {
 	}
 	
 	this.animation = {
-		transfer : function(sobj, tobj, duration) {
-			sobj.effect( "transfer", { to: tobj, duration: (!duration) ? 600 : duration} );
+		transfer : function(startObj, duration) {
+			startObj.effect( "transfer", { to: $('.animation-flag'), duration: (!duration) ? 600 : duration} );
 		}
 	}	
 	
