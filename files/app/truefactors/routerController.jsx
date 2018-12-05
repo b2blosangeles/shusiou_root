@@ -1,7 +1,7 @@
 React.createClass({
 	render: function() {
 		var me = this;
-		return (<ReactRouter.Router history={/*hashHistory*/}>
+		return (<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me}/>
 				{/*me.routeMatrix()*/}NBNBNB
 			</ReactRouter.Router>)  
