@@ -28,7 +28,8 @@ React.createClass({
 						contents : {
 							terms : 'https://dev.shusiou.win/app/truefactors/contents/terms.text',
 							faq: 'https://dev.shusiou.win/app/truefactors/contents/faq.text',
-							privacy : 'https://dev.shusiou.win/app/truefactors/contents/privacy.text'
+							privacy : 'https://dev.shusiou.win/app/truefactors/contents/privacy.text',
+							howToStart : 'https://dev.shusiou.win/app/truefactors/contents/howToStart.txt'
 						},
 						includes : [
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
