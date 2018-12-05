@@ -1,32 +1,39 @@
 var _LibIndex = 0;
 var _commLib = function () {
 	
-    _LibIndex = (!_LibIndex || _LibIndex > 1000000) ? 1 : (_LibIndex + 1);
+	_LibIndex = (!_LibIndex || _LibIndex > 1000000) ? 1 : (_LibIndex + 1);
 
-    this.asyncModule = function(cfg) {
+	this.asyncModule = function(cfg) {
 		var me = this;
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '.' + new Date().getTime();
 		return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
-    }
-    this.getNumberList = function(n) {
-    	var r = [];
+	}
+	this.getNumberList = function(n) {
+	var r = [];
 	for (var i = 0;  i < n; i++) r[i] = i;
 	return r;
-    }
- 
-    this.setSpinAnchor = function(o, code, status) {
+	}
+
+	this.setSpinAnchor = function(o, code, status) {
 	var v = (o.state.spinAnchor) ? o.state.spinAnchor : {};
 	if (status)  v[code]  = new Date().getTime();
 	else delete  v[code];
 	o.setState({spinAnchor: v, _update : new Date().getTime()});
-    }    
-    
-    this.spinAnchor = function(o, code) {
+	}    
+
+	this.spinAnchor = function(o, code) {
 	return(!o.state.spinAnchor || !o.state.spinAnchor[code]) ? (<span></span>) :
 		(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 		 <span className="section-spinner"></span></span></span>)   
-    }
+	}
+	
+	this.animation : {
+		transfer : function(sobj, tobj, duration) {
+			sobj.effect( "transfer", { to: tobj, duration: (!duration) ? 600 : duration} );
+		}
+	},	
+	
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
