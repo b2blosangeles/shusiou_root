@@ -2,9 +2,6 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
-		me.compContents = _compContents;
-		console.log('----me.compContents--->>');
-		console.log(me.compContents);
           	return {role: '', menuOption:'', spinner: true}
         },
 	
@@ -29,7 +26,7 @@ React.createClass({
 		return Root.lib.asyncModule({
 			setting:{	extend: {
 						contents : {
-							info: 'https://dev.shusiou.win/app/truefactors/investors/contents/consts_info.txt'
+							home: 'https://dev.shusiou.win/app/truefactors/investors/contents/consts_info.txt'
 						},
 						includes : [
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
