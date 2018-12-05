@@ -1,7 +1,3 @@
-React.createClass({
-	render: function() {
-		var me = this;
-		
 	var { Router,
 		  Route,
 		  browserHistory,
@@ -10,6 +6,11 @@ React.createClass({
 		  IndexRoute,
 		  IndexLink,
 		  Link } = ReactRouter;
+React.createClass({
+	render: function() {
+		var me = this;
+		
+
 		
 		return (<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me}/>
