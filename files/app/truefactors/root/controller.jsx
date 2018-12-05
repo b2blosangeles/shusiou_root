@@ -26,7 +26,7 @@ React.createClass({
 		return Root.lib.asyncModule({
 			setting:{	extend: {
 						contents : {
-							homePage: 'https://dev.shusiou.win/app/truefactors/investors/contents/consts_info.txt'
+							homePage: 'https://dev.shusiou.win/app/truefactors/contents/home.txt'
 						},
 						includes : [
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
