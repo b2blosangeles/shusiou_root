@@ -17,8 +17,13 @@ let str = 'SELECT `ip` IP, "node" TP FROM `cloud_node` WHERE `score` < 900 UNION
 connection.query(str, function (error, results, fields) {
 	connection.end();
 	
-	 res.send(req.headers.host);
-	 return true;
+	var indextpl = '';
+	
+	if(req.headers.host.match(/^(www\.|dev\.|qa\.|)(platoplan)\.(com|win)$/)) { 
+		indextpl = 'platoplan.html'
+	} else {
+		indextpl = 'index.tpl';
+	}
 	
 	if (error) {
 		res.send({status:'error', value:error.message});
@@ -34,8 +39,7 @@ connection.query(str, function (error, results, fields) {
 				servers[o].push('//' + o + (j + 1) + '_' + config.root );
 			}
 		}		
-		pkg.fs.readFile(env.site_path + '/tpl/index.tpl', 'utf-8', function(err, content) {
-//		pkg.fs.readFile(env.site_path + '/tpl/truefactors.html', 'utf-8', function(err, content) {	
+		pkg.fs.readFile(env.site_path + '/tpl/' + indextpl, 'utf-8', function(err, content) {	
 			
 			var tpl = new Smarty(content);
 			res.send(tpl.fetch({
