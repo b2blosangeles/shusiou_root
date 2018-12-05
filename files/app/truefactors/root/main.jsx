@@ -12,7 +12,7 @@ React.createClass({
 		var me = this; 
 		
 		if ((e) && e.target) {
-			Root.lib.animation.transfer($(e.target));
+			Root.commUI.animation.transfer($(e.target));
 		}
 		
 		if (!v) {
