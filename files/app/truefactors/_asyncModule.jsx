@@ -13,14 +13,36 @@ try {
 			if (me.props.objId !== prevProps.objId) { 
 				me.loadPlugin();
 			}	
-		},		
+		},
+		asyncCacheExist : function(k) {
+			if (!localStorage) {
+				return (!__asyncCache[k]) ? false : true;
+			} else {
+				return (!localStorage.getItem(k)) ? false : true;
+			}
+		},
+		setAsyncCache : function(k, v) {
+			if (!localStorage) {
+				__asyncCache[k] = v;
+			} else {
+				localStorage.setItem(k, v);
+			}
+		},
+		getAsyncCache : function(k) {
+			if (!localStorage) {
+				return __asyncCache[k];
+			} else {
+				return localStorage.getItem(k);
+			}
+		}
 		loadPlugin : function() {
 			var me = this;
 			me._asyncModule = null;
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			if (!me.props.plugin.extend.controller || !__asyncCache[me.props.plugin.extend.controller]) {
+
+			if (!me.props.plugin.extend.controller || !me.asyncCacheExist(me.props.plugin.extend.controller)) {
 				$.ajax({
 				     type: 'POST',
 				     url: me.props.plugin.master,
@@ -28,7 +50,9 @@ try {
 				     dataType: 'JSON',
 				     timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
 				     success: function(resultData){
-					   __asyncCache[me.props.plugin.extend.controller] = resultData;
+					  if (me.props.plugin.extend.controller) {   
+					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
+					  }
 					   me._asyncModule = resultData;
 					   me.setState({success: true, update : new Date().getTime()});
 				     },
@@ -38,7 +62,7 @@ try {
 				     }
 				  }); 
 			} else {
-				me._asyncModule = __asyncCache[me.props.plugin.extend.controller];
+				me._asyncModule = me.getAsyncCache(me.props.plugin.extend.controller);
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
