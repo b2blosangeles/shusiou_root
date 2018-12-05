@@ -15,7 +15,7 @@ React.createClass({
 	showContent : function() {
 		var me = this;
 		console.log('----me.props.data--->');
-		var menuItem = (!me.props.data) ? 'home' : me.props.data;
+		var menuItem = (!me.props.data) ? 'homePage' : me.props.data;
 		if (me.compContents[me.props.data]) {
 			return me.compContents[me.props.data];
 		} else {
