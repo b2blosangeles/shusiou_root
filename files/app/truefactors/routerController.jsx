@@ -1,6 +1,6 @@
 React.createClass({
 	test : function() {
-		return (<span>aaa<>/span>)
+		return (<span>aaa</span>)
 		},
 	routeMatrix:function() {
 		var me = this;
