@@ -1,11 +1,4 @@
-	var { Router,
-		  Route,
-		  browserHistory,
-		  createMemoryHistory,
-		  hashHistory,
-		  IndexRoute,
-		  IndexLink,
-		  Link } = ReactRouter;
+
 React.createClass({
 	render: function() {
 		var me = this;
