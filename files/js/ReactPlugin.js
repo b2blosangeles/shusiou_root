@@ -1,5 +1,5 @@
 var __asyncOId = 0, __asyncCache = {};
-// localStorage.clear();
+localStorage.clear();
 
 $(document).ready(function(){
       $.ReactPlugin =  function(cfg) {
