@@ -28,11 +28,11 @@ var _commLib = function () {
 		 <span className="section-spinner"></span></span></span>)   
 	}
 	
-	this.animation : {
+	this.animation = {
 		transfer : function(sobj, tobj, duration) {
 			sobj.effect( "transfer", { to: tobj, duration: (!duration) ? 600 : duration} );
 		}
-	},	
+	}	
 	
    /*========== Need review ====*/
     this.getAuth = function() {
