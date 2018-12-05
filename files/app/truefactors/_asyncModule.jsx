@@ -50,6 +50,8 @@ try {
 				     dataType: 'JSON',
 				     timeout: (cfg.timeout) ? cfg.timeout : (6 * 1000),
 				     success: function(resultData){
+					     console.log('====resultData====');
+					     console.log(resultData);
 					  if (me.props.plugin.extend.controller) {   
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
