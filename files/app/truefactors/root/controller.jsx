@@ -26,7 +26,10 @@ React.createClass({
 	},
 	loadContentPage : function(data) {
 		var me = this;
-		return Root.lib.asyncModule({
+		if (me.compContents[data]) {
+			console.log(data);
+			return me.compContents[data];
+		} else return Root.lib.asyncModule({
 			setting:{	extend: {
 						includes : [
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
