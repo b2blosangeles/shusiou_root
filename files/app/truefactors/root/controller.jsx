@@ -69,7 +69,6 @@ React.createClass({
 			return Root.lib.asyncModule({
 				setting:{	extend: {
 							contents : {
-								info: 'https://dev.shusiou.win/app/truefactors/investors/contents/consts_info.txt'
 							},					
 							includes : [
 								'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
