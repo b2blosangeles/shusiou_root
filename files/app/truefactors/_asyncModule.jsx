@@ -15,25 +15,25 @@ try {
 			}	
 		},
 		asyncCacheExist : function(k) {
-			//if (!localStorage) {
+			if (!localStorage) {
 				return (!__asyncCache[k]) ? false : true;
-			//} else {
-			//	return (!localStorage.getItem(k)) ? false : true;
-			//}
+			} else {
+				return (!localStorage.getItem(k)) ? false : true;
+			}
 		},
 		setAsyncCache : function(k, v) {
-			//if (!localStorage) {
+			if (!localStorage) {
 				__asyncCache[k] = v;
-			//} else {
+			} else {
 				localStorage.setItem(k, JSON.stringify(v));
-			//}
+			}
 		},
 		getAsyncCache : function(k) {
-			//if (!localStorage) {
+			if (!localStorage) {
 				return __asyncCache[k];
-			//} else {
-			//	return JSON.parse(localStorage.getItem(k));
-			//}
+			} else {
+				return JSON.parse(localStorage.getItem(k));
+			}
 		},
 		loadPlugin : function() {
 			var me = this;
@@ -56,7 +56,7 @@ try {
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
 					     console.log('===__localStorage===');
-					     console.log(localStorage);
+					     console.log(__asyncCache);
 					   me._asyncModule = resultData;
 					   me.setState({success: true, update : new Date().getTime()});
 				     },
