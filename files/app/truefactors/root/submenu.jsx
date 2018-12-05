@@ -5,8 +5,11 @@ var _subMenu = React.createClass({
 	
 	return {}
     },
-    clickOption : function(v) {
+    clickOption : function(v, e) {
 	var me = this; 
+	if ((e) && e.target) {
+		Root.lib.animation.transfe($(e.target), $('.documentPageFrame'));
+	}
 	if (!v) {
 		me.props.parent.setState({ role : null, menuOption : null})
 	} else {
