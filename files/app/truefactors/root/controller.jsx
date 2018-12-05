@@ -26,12 +26,7 @@ React.createClass({
 	},
 	loadContentPage : function(data) {
 		var me = this;
-		var menuItem = (data) ? data : 'home';
-		console.log('===data==menuItem =>');
-		console.log(menuItem);
-		if (me.compContents[menuItem]) {
-			return me.compContents[menuItem];
-		} else return Root.lib.asyncModule({
+		return Root.lib.asyncModule({
 			setting:{	extend: {
 						contents : {
 							info: 'https://dev.shusiou.win/app/truefactors/investors/contents/consts_info.txt'
