@@ -15,25 +15,25 @@ try {
 			}	
 		},
 		asyncCacheExist : function(k) {
-			if (!localStorage) {
+			//if (!localStorage) {
 				return (!__asyncCache[k]) ? false : true;
-			} else {
-				return (!localStorage.getItem(k)) ? false : true;
-			}
+			//} else {
+			//	return (!localStorage.getItem(k)) ? false : true;
+			//}
 		},
 		setAsyncCache : function(k, v) {
-			if (!localStorage) {
+			//if (!localStorage) {
 				__asyncCache[k] = v;
-			} else {
-				localStorage.setItem(k, v);
-			}
+			//} else {
+			//	localStorage.setItem(k, v);
+			//}
 		},
 		getAsyncCache : function(k) {
-			if (!localStorage) {
+			//if (!localStorage) {
 				return __asyncCache[k];
-			} else {
-				return localStorage.getItem(k);
-			}
+			//} else {
+			//	return localStorage.getItem(k);
+			//}
 		},
 		loadPlugin : function() {
 			var me = this;
