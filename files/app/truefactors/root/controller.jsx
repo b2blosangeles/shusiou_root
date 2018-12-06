@@ -134,7 +134,7 @@ React.createClass({
 					alert('B');
 				}			
 		}
-	}
+	},
         render: function() {
           var me = this;
           return  (
