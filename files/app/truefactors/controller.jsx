@@ -28,6 +28,7 @@ React.createClass({
 			extend: {
 					contents : {},   
 					includes : [
+						'https://dev.shusiou.win/app/truefactors/copyrightSection.jsx',
 						'https://dev.shusiou.win/app/truefactors/_routerController.jsx',
 						'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
 						'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
