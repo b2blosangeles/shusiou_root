@@ -136,8 +136,8 @@ React.createClass({
 		var me = this;
 		return {
 			'_default' : function(path) {
-				me.setState({ menuOption : path});
-				//console.log(path);
+				var path_a = explode(path, '/')
+				if (path_a[1]) me.setState({ menuOption : path_a[1]});
 			}			
 		}
 	},
