@@ -18,7 +18,7 @@ var _global = {
 	menuTree : {
 		common	 	: ['about', 'contact'],
 		publicMenu	: ['howToStart', 'faq'],
-		inventor 	: ['myVideos', 'myInvention'], 
+		inventor 	: ['myVideos', 'howToStart', 'myInvention', 'faq'], 
 		investor 	: ['inventions', 'myRequest']
 	}
 };
