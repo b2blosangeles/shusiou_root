@@ -109,7 +109,12 @@ React.createClass({
 			<div className="copyright_section">
 				<div className="container-fluid">
 				<div className="row">
-					<div className="col-sm-12 text-right">
+					<div className="col-sm-3 text-left">
+						<a href={'#' + me.state.role + '/'} onClick={me.animationTransfer}>English</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;							
+						<a href={'#' + me.state.role + '/privacy'} onClick={me.animationTransfer}>Chinese</a>					
+					</div>
+					<div className="col-sm-9 text-right">
 						<span className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
 						&nbsp;&nbsp;&nbsp;&nbsp;
@@ -128,14 +133,7 @@ React.createClass({
 								  {Root.global.menuItems[m]}</a>
 							</span>)
 							})}
-						</span>
-						
-						
-						<span className="pull-left">
-						<a href={'#' + me.state.role + '/'} onClick={me.animationTransfer}>English</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;							
-						<a href={'#' + me.state.role + '/privacy'} onClick={me.animationTransfer}>Chinese</a>
-						</span>						
+						</span>					
 					</div>
 				</div></div>
 			</div>
