@@ -1,4 +1,4 @@
-var routerControl = React.createClass({
+var _routerControl = React.createClass({
 	componentDidMount : function() {
 		var me = this;
 	},
