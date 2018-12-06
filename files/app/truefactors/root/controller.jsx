@@ -105,8 +105,8 @@ React.createClass({
 	copyRightSection : function() {
 		var me = this;
 		// onClick={/*me.changeContentPage.bind(me,  m.code)*/}
-		return (
-			<div className="copyright_section">
+		return (<_copyrightSection parent={me}/>
+			{/*<div className="copyright_section">
 				<div className="container-fluid">
 				<div className="row">
 					<div className="col-sm-3 text-left">
@@ -136,7 +136,7 @@ React.createClass({
 						</span>					
 					</div>
 				</div></div>
-			</div>
+			</div>*}
 		)
 	},
 	routeRule : function() {
