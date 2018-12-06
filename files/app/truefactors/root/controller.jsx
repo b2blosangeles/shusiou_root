@@ -125,12 +125,22 @@ React.createClass({
 			</div>
 		)
 	},
+	routeRule : function() {
+		return {
+			'/test' : function() {
+					alert('A');
+				},
+			'_default' : function() {
+					alert('B');
+				}			
+		}
+	}
         render: function() {
           var me = this;
           return  (
 		<span>
 			<_routerControl parent={me}/>
-			<_rolesMenu parent={me}/>
+			<_rolesMenu parent={me} routeRule={me.routeRule()} />
 			<_subMenu parent={me}/>
 			{me.showPageFrame(me.showBody())}
 			{me.copyRightSection()}
