@@ -22,6 +22,7 @@ var _routerControl = React.createClass({
 		var me = this;
 		this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes==>' + location);
+			console.log(location);
 			me.props.parent.setState({route:me.route});
 		});
 		setTimeout(function() {
