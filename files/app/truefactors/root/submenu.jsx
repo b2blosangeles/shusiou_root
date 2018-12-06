@@ -11,7 +11,7 @@ var _subMenu = React.createClass({
 		Root.commUI.animation.transfer($(e.target));
 	}
 	if (!v) {
-		me.props.parent.setState({ role : null, menuOption : null})
+		me.props.parent.setState({menuOption : null})
 	} else {
 		me.props.parent.setState({ menuOption : v})   
 	}
