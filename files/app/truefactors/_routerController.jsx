@@ -25,14 +25,13 @@ var _routerControl = React.createClass({
 			console.log(location);
 			me.props.parent.setState({route:location.hash});
 		});
-		setTimeout(function() {
-			//me.props.parent.setState({route:location.hash});
-		});
+		me.props.parent.setState({route:location.hash});
 	    },
 	    componentWillUnmount() {
 		this.unlisten();
 
 	    },
+	/*
 	test : function(t) {
 		var me = this;
 		me.route = t;
@@ -57,13 +56,14 @@ var _routerControl = React.createClass({
 			})};
 			</span>	
 		);
-	},	
+	},*/	
 	render: function() {
 		var me = this;
+		return (<span>niu</span>)
 		
 		return (<span><ReactRouter.Router history={hashHistory}>
 				{/*<IndexRoute env={me} component={me.test('niu')}/>*/}
-				{me.routeMatrix()}
+				{/*me.routeMatrix()*/}
 			</ReactRouter.Router></span>)
 	}
 })
