@@ -17,9 +17,9 @@ var _routerControl = React.createClass({
 			
 		});
 		var v = location.hash.replace('#', '');
-		if (me.routeMatrix[v]) me.routeMatrix[v]();
-		else me.routeMatrix['_defult']();
-		me.props.parent.setState({route : v});
+		if (me.routeMatrix(v)) me.routeMatrix(v)();
+		else me.routeMatrix('_defult')();
+		me.props.parent.setState({route : v})
 	},
 	componentWillUnmount() {
 		this.unlisten();
@@ -47,7 +47,7 @@ var _routerControl = React.createClass({
 				alert('C');
 			}
 		}			
-		return me.matrix(route);
+		return me.matrix[route];
 	},	
 	render: function() {
 		var me = this;
