@@ -136,7 +136,7 @@ React.createClass({
 						</span>					
 					</div>
 				</div></div>
-			</div>*}
+			</div>*/}
 		)
 	},
 	routeRule : function() {
