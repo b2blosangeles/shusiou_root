@@ -1,7 +1,6 @@
 var _routerControl = React.createClass({
 	getInitialState: function() {
 		var me = this;
-		me.route = '';
 		return {}
 	},
 	componentDidMount : function () {
