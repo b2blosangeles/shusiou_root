@@ -47,7 +47,9 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
-		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1) {
+		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1 && 
+		    Root.global.menuTree._publicMenu.indexOf(me.state.menuOption) === -1 
+		   ) {
 			if (me.state.role === 'inventor') {
 				return Root.lib.asyncModule({
 					setting:{	extend: {
