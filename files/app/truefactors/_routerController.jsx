@@ -4,7 +4,7 @@ var _routerControl = React.createClass({
 	me.route = '';
 	return {}
 	},
-	componentDidMount() {
+	componentDidMount : function () {
 		var me = this;
 		this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes==>' + location.hash);
@@ -14,10 +14,10 @@ var _routerControl = React.createClass({
 		me.routeRule(location.hash)
 	},
 	
-	componentWillUnmount() {
+	componentWillUnmount : function() {
 		this.unlisten();
 	},
-	routeRule:function(route) {
+	routeRule : function(route) {
 		var me = this;
 		if (!me.prop.routeRule) return true;
 		if (typeof me.prop.routeRule[route] === 'function') {
