@@ -8,8 +8,8 @@ var _routerControl = React.createClass({
 	},
 	test : function(t) {
 		var me = this;
+		me.props.parent.setState({route:t});
 		return React.createClass({
-			me.props.parent.setState({route:t});
 			render: function() {
 				return (<span>uuu---{t}</span>)
 			}
