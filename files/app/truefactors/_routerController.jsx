@@ -1,12 +1,14 @@
 var _routerControl = React.createClass({
 	getInitialState: function() {
+		var me = this;
+		me.route = '';
 		return {}
 	},
 	/*
 	componentDidMount : function() {
 		var me = this;
 		
-	},*/
+	},
 	    componentDidUpdate(prevProps, prevState) {
 		    var me = this;
 		if (me.state.route !== prevState.route) {
@@ -14,22 +16,22 @@ var _routerControl = React.createClass({
 		//	me.props.parent.setState({route:me.state.route});
 		}
 
-	    },
-	/*
+	    },*/
+	
 	    componentDidMount() {
 		  this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes');
-
+			me.props.parent.setState({route:me.route});
 		   });
 
 	    },
 	    componentWillUnmount() {
 		this.unlisten();
 
-	    },*/
+	    },
 	test : function(t) {
 		var me = this;
-		me.setState({route:t});
+		me.route = t;
 		return React.createClass({
 			render: function() {
 				return (<span>uuu---{t}</span>)
