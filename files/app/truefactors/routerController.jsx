@@ -29,7 +29,7 @@ React.createClass({
 		var me = this;
 		
 		return (<ReactRouter.Router history={hashHistory}>
-				<IndexRoute env={me}/>
+				<IndexRoute env={me} component={me.test('niu')}/>
 				{me.routeMatrix()}
 			</ReactRouter.Router>)
 	}
