@@ -23,9 +23,9 @@ var _rolesMenu = React.createClass({
 							<img id="t99" src="/app/truefactors/imgs/platoplan_logo.png" height="72"/>
 							{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
 						</div>
-						<div className="col-sm-9 text-right pt-3 mt-3">
+						<div className="col-sm-9 text-right pt-2 mt-3">
 							{Object.keys(me.roles).map(function(idx){
-							  return <a className={'btn btn-large rounded p-2 ' + 
+							  return <a className={'btn btn-large rounded p-3 ' + 
 								((me.props.parent.state.role === idx) ? 
 									  'role-checked' : 'role-unchecked')}
 								onClick={me.clickMenu.bind(me, idx)}>
