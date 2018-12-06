@@ -16,7 +16,7 @@ React.createClass({
 		}
 		
 		if (!v) {
-			me.setState({ role : null, menuOption : null})
+			me.setState({ menuOption : ''})
 		} else {
 			me.setState({ menuOption : v})   
 		}
