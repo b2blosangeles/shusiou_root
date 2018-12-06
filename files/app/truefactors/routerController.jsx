@@ -2,7 +2,7 @@ React.createClass({
 	test : function(t) {
 		return React.createClass({
 			render: function() {
-				return (<span>aaa</span>)
+				return (<span>{t}</span>)
 			}
 		});
 	},
