@@ -129,6 +129,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
+			<_routerControl/>
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			{me.showPageFrame(me.showBody())}
