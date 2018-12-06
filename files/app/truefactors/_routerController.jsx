@@ -24,7 +24,7 @@ var _routerControl = React.createClass({
 			console.log('route changes');
 			me.props.parent.setState({route:me.route});
 		   });
-
+		me.props.parent.setState({route:me.route});
 	    },
 	    componentWillUnmount() {
 		this.unlisten();
