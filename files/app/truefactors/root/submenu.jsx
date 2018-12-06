@@ -20,7 +20,7 @@ var _subMenu = React.createClass({
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : (!Root.global.menuTree[me.props.parent.state.role]) 
 	  	? [] : Root.global.menuTree[me.props.parent.state.role];
-	  var cptions = Root.global.menuItems
+	  var captions = Root.global.menuItems
 	  
 	  var publicMenu = Root.global.menuTree.publicMenu;
           return  (
