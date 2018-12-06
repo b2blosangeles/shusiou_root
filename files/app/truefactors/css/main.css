@@ -62,6 +62,7 @@ body {
 }
 
 .btn-large { width: 118px !important;   height: 64px  !important; color: #3b5998; border : 2px solid #3b5998; }
+.btn-large a { color: #3b5998; }
 
 .site-logo { min-height: 108px  !important;}
 .bg-top-bar  { background: rgba(139,157,195, 0.3); }
