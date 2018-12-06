@@ -2,7 +2,7 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
-          	return {role: '', menuOption:'', spinner: true}
+          	return {role: '', menuOption:'', spinner: true, route:''}
         },
 	
 	componentDidMount : function() {
@@ -104,7 +104,7 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-12 text-right">
 						<span className="pull-right">
-						&#169; {new Date().getFullYear()} Plato Plan
+						&#169; {new Date().getFullYear()} Plato Plan == {me.state.route}
 						&nbsp;&nbsp;|&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -129,7 +129,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			<_routerControl/>
+			<_routerControl parent={me}/>
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			{me.showPageFrame(me.showBody())}
