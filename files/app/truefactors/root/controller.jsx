@@ -52,41 +52,45 @@ React.createClass({
 	},
         showBody : function() {
                 var me = this;
-		return me.loadContentPage(me.state.menuOption);	
-		return true;
-		if (me.state.role === 'inventor') {
-			return Root.lib.asyncModule({
-				setting:{	extend: {
-							includes : [
-								'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
-								'https://dev.shusiou.win/app/truefactors/inventors/view.jsx'	
-							],
-							main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
-						}, 
-						master: '//master1_dev.shusiou.win/api/JSXhub.api'
-					},
-				data : '',
-				parent : me
-			})
-		}		
+		if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
+		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1) {
+			if (me.state.role === 'inventor'{
+			    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1) {
+				return Root.lib.asyncModule({
+					setting:{	extend: {
+								includes : [
+									'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
+									'https://dev.shusiou.win/app/truefactors/inventors/view.jsx'	
+								],
+								main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
+							}, 
+							master: '//master1_dev.shusiou.win/api/JSXhub.api'
+						},
+					data : '',
+					parent : me
+				})
+			}		
 		
-		if (me.state.role === 'investor') {
-			return Root.lib.asyncModule({
-				setting:{	extend: {
-							contents : {
-							},					
-							includes : [
-								'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
-								'https://dev.shusiou.win/app/truefactors/investors/view.jsx'	
-							],
-							controller : 'https://dev.shusiou.win/app/truefactors/investors/controller.jsx'
-						}, 
-						master: '//master1_dev.shusiou.win/api/DVCHub.api'
-					},
-				data : '',
-				parent : me
-			})
-		} 
+			if (me.state.role === 'investor') {
+				return Root.lib.asyncModule({
+					setting:{	extend: {
+								contents : {
+								},					
+								includes : [
+									'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
+									'https://dev.shusiou.win/app/truefactors/investors/view.jsx'	
+								],
+								controller : 'https://dev.shusiou.win/app/truefactors/investors/controller.jsx'
+							}, 
+							master: '//master1_dev.shusiou.win/api/DVCHub.api'
+						},
+					data : '',
+					parent : me
+				})
+			} 
+		} else {
+			return me.loadContentPage(me.state.menuOption);	
+		}
 		
         }, 
 	showPageFrame : function(data) {
