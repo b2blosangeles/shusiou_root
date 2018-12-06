@@ -52,7 +52,8 @@ React.createClass({
 	},
         showBody : function() {
                 var me = this;
-		
+		return me.loadContentPage(me.state.menuOption);	
+		return true;
 		if (me.state.role === 'inventor') {
 			return Root.lib.asyncModule({
 				setting:{	extend: {
@@ -86,7 +87,7 @@ React.createClass({
 				parent : me
 			})
 		} 
-		return me.loadContentPage(me.state.menuOption);	
+		
         }, 
 	showPageFrame : function(data) {
 		var me = this;
