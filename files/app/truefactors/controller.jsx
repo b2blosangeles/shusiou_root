@@ -4,7 +4,7 @@ React.createClass({
 		var me = this;
 		localStorage.clear();
 		sessionStorage.clear();
-		alert(111);
+		alert(222);
           	return {}
         },
         render: function() {
