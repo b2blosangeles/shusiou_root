@@ -28,9 +28,9 @@ React.createClass({
 	render: function() {
 		var me = this;
 		
-		return (<ReactRouter.Router history={hashHistory}>
+		return (<span><ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me} component={me.test('niu')}/>
 				{me.routeMatrix()}
-			</ReactRouter.Router>)
+			</ReactRouter.Router></span>)
 	}
 })
