@@ -116,7 +116,9 @@ React.createClass({
 					<div className="col-sm-12 text-right">
 						<span className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
-						&nbsp;&nbsp;|&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#" onClick={me.animationTransfer}>Home</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;							
 						<a href="#/privacy" onClick={me.animationTransfer}>Privacy</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;
 						<a href="#/terms" onClick={me.animationTransfer}>Terms</a>
