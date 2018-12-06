@@ -1,36 +1,21 @@
 var _routerControl = React.createClass({
 	getInitialState: function() {
-		var me = this;
-		me.route = '';
-		return {}
+	var me = this;
+	me.route = '';
+	return {}
 	},
-	/*
-	componentDidMount : function() {
-		var me = this;
-		
-	},
-	    componentDidUpdate(prevProps, prevState) {
-		    var me = this;
-		if (me.state.route !== prevState.route) {
-			console.log('route changes to =>' + me.state.route);
-		//	me.props.parent.setState({route:me.state.route});
-		}
-
-	    },*/
-	
-	    componentDidMount() {
+	componentDidMount() {
 		var me = this;
 		this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes==>' + location.hash);
 			console.log(location);
-			me.props.parent.setState({route:location.hash});
+			me.props.parent.setState({route:location.hash.replace('#', '')});
 		});
-		me.props.parent.setState({route:location.hash});
-	    },
-	    componentWillUnmount() {
+		me.props.parent.setState({route:location.hash.replace('#', '')});
+	},
+	componentWillUnmount() {
 		this.unlisten();
-
-	    },
+	},
 	/*
 	test : function(t) {
 		var me = this;
@@ -60,10 +45,5 @@ var _routerControl = React.createClass({
 	render: function() {
 		var me = this;
 		return (<span>niu</span>)
-		
-		return (<span><ReactRouter.Router history={hashHistory}>
-				{/*<IndexRoute env={me} component={me.test('niu')}/>*/}
-				{/*me.routeMatrix()*/}
-			</ReactRouter.Router></span>)
 	}
 })
