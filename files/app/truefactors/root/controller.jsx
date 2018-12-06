@@ -55,7 +55,6 @@ React.createClass({
 		if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
 		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1) {
 			if (me.state.role === 'inventor') {
-			    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1) {
 				return Root.lib.asyncModule({
 					setting:{	extend: {
 								includes : [
