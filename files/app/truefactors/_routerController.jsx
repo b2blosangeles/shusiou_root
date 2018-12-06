@@ -8,6 +8,7 @@ var _routerControl = React.createClass({
 		
 	},*/
 	    componentDidUpdate(prevProps, prevState) {
+		    var me = this;
 		if (me.state.route !== prevState.route) {
 			console.log('route changes to =>' + me.state.route);
 			me.props.parent.setState({route:me.state.route});
