@@ -122,8 +122,8 @@ React.createClass({
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
 							  &nbsp;&nbsp;|&nbsp;&nbsp;
-							  <a href={'#' + m.code}  onClick={me.animationTransfer}>
-								  {m.caption}</a>
+							  <a href={'#' + m}  onClick={me.animationTransfer}>
+								  {captions[m]}</a>
 							</span>)
 							})}
 						</span>
