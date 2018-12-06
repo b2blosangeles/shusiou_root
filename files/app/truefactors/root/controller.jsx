@@ -21,6 +21,12 @@ React.createClass({
 			me.setState({ menuOption : v})   
 		}
 	},
+	animationTransfer : function(e) {
+		var me = this; 
+		if ((e) && e.target) {
+			Root.commUI.animation.transfer($(e.target));
+		}
+	},
 	loadContentPage : function(menuItem) {
 		var me = this;
 		return Root.lib.asyncModule({
@@ -116,7 +122,7 @@ React.createClass({
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
 							  &nbsp;&nbsp;|&nbsp;&nbsp;
-							  <a href={'#' + m.code}>
+							  <a href={'#' + m.code}  onClick={me.animationTransfer}>
 								  {m.caption}</a>
 							</span>)
 							})}
