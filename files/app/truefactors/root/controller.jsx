@@ -104,7 +104,7 @@ React.createClass({
 				<div className="row">
 					<div className="col-sm-12 text-right">
 						<span className="pull-right">
-						&#169; {new Date().getFullYear()} Plato Plan == {me.state.route}
+						&#169; {new Date().getFullYear()} Plato Plan
 						&nbsp;&nbsp;|&nbsp;&nbsp;
 						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;
