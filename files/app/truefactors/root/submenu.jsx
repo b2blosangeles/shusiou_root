@@ -65,12 +65,12 @@ var _subMenu = React.createClass({
 							})}
 					
 					{publicMenu.map(function(m){ 	
-						return (me.props.parent.state.menuOption !== m.code) ?
+						return (me.props.parent.state.menuOption !== m) ?
 								(<span>
 									<li className="nav-item">
 										<a className="nav-link active" 
-											onClick={me.clickOption.bind(me, m.code)}
-											href="JavaScript: void(0)">{m.caption}</a>
+										onClick={me.clickOption.bind(me, m)}
+										href="JavaScript: void(0)">{captions[m]}</a>
 									</li></span>)
 								:
 								(<span>
@@ -78,7 +78,7 @@ var _subMenu = React.createClass({
 										<a className="nav-link disabled" 
 										href="JavaScript: void(0)">
 										<span style={{color:'yellow'}}>
-											{m.caption}</span></a>
+											{captions[m]}</span></a>
 									</li></span>)
 							})}
 					</ul>					
