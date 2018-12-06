@@ -13,7 +13,7 @@ React.createClass({
 		
 		return  (
 		<span>				
-				{/*<_asyncModule plugin={{
+			<_asyncModule plugin={{
 			extend: {
 					contents : {},
 					includes : [],
@@ -28,6 +28,7 @@ React.createClass({
 			extend: {
 					contents : {},   
 					includes : [
+						'https://dev.shusiou.win/app/truefactors/_routerController.jsx'
 						'https://dev.shusiou.win/app/truefactors/root/rolesMenu.jsx',
 						'https://dev.shusiou.win/app/truefactors/root/submenu.jsx'
 					 ],
@@ -36,9 +37,9 @@ React.createClass({
 					cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
-				parent={me} objId={'B' + _oId} />*/}
+				parent={me} objId={'B' + _oId} />
 					
-			<_asyncModule plugin={{
+			{/*<_asyncModule plugin={{
 			extend: {
 					contents : {},
 					includes : [],
@@ -47,7 +48,7 @@ React.createClass({
 					cacheTime : 10
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api?tm=' + new Date().getTime()}} 
-			parent={me} objId={'C' + _oId} />				
+			parent={me} objId={'C' + _oId} />*/}				
 		</span>
 		)
         }
