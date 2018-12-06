@@ -9,9 +9,17 @@ var _routerControl = React.createClass({
 		this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes==>' + location.hash);
 			console.log(location);
-			me.props.parent.setState({route:location.hash.replace('#', '')});
+			
+			var v = location.hash.replace('#', '');
+			if (me.routeMatrix[v]) me.routeMatrix[v]();
+			else me.routeMatrix['_defult']();
+			me.props.parent.setState({route : v});
+			
 		});
-		me.props.parent.setState({route:location.hash.replace('#', '')});
+		var v = location.hash.replace('#', '');
+		if (me.routeMatrix[v]) me.routeMatrix[v]();
+		else me.routeMatrix['_defult']();
+		me.props.parent.setState({route : v});
 	},
 	componentWillUnmount() {
 		this.unlisten();
