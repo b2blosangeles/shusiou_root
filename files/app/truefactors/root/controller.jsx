@@ -137,8 +137,8 @@ React.createClass({
 		return {
 			'_default' : function(path) {
 				me.setState({ menuOption : path});
-				console.log(path);
-				}			
+				//console.log(path);
+			}			
 		}
 	},
         render: function() {
