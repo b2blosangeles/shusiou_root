@@ -61,7 +61,8 @@ body {
     background: #fff url("/app/truefactors/imgs/invention_bg.jpg") repeat; overflow-y: scroll;
 }
 
-.btn-large { margin: 0.3em !important;  width: 118px !important;   height: 66px  !important;}
+.btn-large { width: 118px !important;   height: 64px  !important; color: #3b5998; border : 2px solid #3b5998; }
+
 .site-logo { min-height: 108px  !important;}
 .bg-top-bar  { background: rgba(139,157,195, 0.3); }
 .secondMenu { background: rgba(59,89,152, 0.6); }
