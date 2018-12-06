@@ -3,7 +3,7 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		localStorage.clear();
-
+		alert(111);
           	return {}
         },
         render: function() {
