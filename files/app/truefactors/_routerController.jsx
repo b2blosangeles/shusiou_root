@@ -7,6 +7,7 @@ var _routerControl = React.createClass({
 		
 	},
 	test : function(t) {
+		var me = this;
 		return React.createClass({
 			me.props.parent.setState({route:t});
 			render: function() {
