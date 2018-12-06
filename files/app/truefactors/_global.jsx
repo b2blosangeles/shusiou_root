@@ -5,22 +5,20 @@ var _global = {
 		factorie :	{caption: 'Factory'}, 
 		investor :	{caption: 'Investor'}
 	},
+	menuItems : {
+		about 		: 'About Plato Plan',
+		contact 	: 'Contact Us',
+		howToStart 	: 'How to start',
+		faq 		: 'FAQ',
+		myVideos 	: 'My Videos', 
+		myInvention 	: 'My Inventions',
+		inventions	: 'Inventions',
+		myRequest	'My Requests'
+	},
 	menuTree : {
-		common	 : [
-			{code: 'about', caption : 'About Plato Plan'},
-			{code:  'contact', caption : 'Contact Us'} 		
-		],
-		publicMenu: [
-			{code: 'howToStart', caption : 'How to start'},
-			{code:  'faq', caption : 'FAQ'} 		
-		],
-		inventor : [
-			{code: 'myVideos', caption : 'My Videos'},
-			{code:  'myInvention', caption : 'My Inventions'} 
-		],
-		investor : [
-			{code: 'invention', caption : 'Inventions'},
-			{code:  'myRequest', caption : 'My Requests'}			
-		]
+		common	 : ['about', 'contact'],
+		publicMenu: ['howToStart', 'faq'],
+		inventor : ['myVideos', 'myInvention'], 
+		investor : ['invention', 'myRequest']
 	}
 };
