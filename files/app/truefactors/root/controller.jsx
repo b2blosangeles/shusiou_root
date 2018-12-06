@@ -126,12 +126,13 @@ React.createClass({
 		)
 	},
 	routeRule : function() {
+		var me = this;
 		return {
-			'/test' : function(path) {
-					alert('A->' + path);
+			'faq' : function(path) {
+				me.setState({ menuOption : 'faq'}) ;
 				},
 			'_default' : function(path) {
-					alert('B->' + path);
+					console.log('B->' + path);
 				}			
 		}
 	},
