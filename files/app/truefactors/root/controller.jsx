@@ -113,9 +113,9 @@ React.createClass({
 						<span className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
 						&nbsp;&nbsp;|&nbsp;&nbsp;
-						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'privacy')}>Privacy</a>
+						<a href="#privacy" onClick={me.animationTransfer}>Privacy</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;
-						<a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me, 'terms')}>Terms</a>
+						<a href="#terms" onClick={me.animationTransfer}>Terms</a>
 						</span>
 						
 						<span className="pull-left">
