@@ -8,7 +8,7 @@ var _routerControl = React.createClass({
 		this.unlisten = browserHistory.listen( location =>  {
 			me.routeRule(location.hash.replace('#', ''))
 		});
-		me.routeRule(location.hash)
+		me.routeRule(location.hash.replace('#', ''))
 	},
 	
 	componentWillUnmount : function() {
