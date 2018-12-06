@@ -113,7 +113,7 @@ React.createClass({
 						<span className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href={'#' + me.state.role + '/home'} onClick={me.animationTransfer}>Home</a>
+						<a href={'#' + me.state.role + '/'} onClick={me.animationTransfer}>Home</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;							
 						<a href={'#' + me.state.role + '/privacy'} onClick={me.animationTransfer}>Privacy</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;
