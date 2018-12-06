@@ -113,16 +113,16 @@ React.createClass({
 						<span className="pull-right">
 						&#169; {new Date().getFullYear()} Plato Plan
 						&nbsp;&nbsp;|&nbsp;&nbsp;
-						<a href="#privacy" onClick={me.animationTransfer}>Privacy</a>
+						<a href="#/privacy" onClick={me.animationTransfer}>Privacy</a>
 						&nbsp;&nbsp;|&nbsp;&nbsp;
-						<a href="#terms" onClick={me.animationTransfer}>Terms</a>
+						<a href="#/terms" onClick={me.animationTransfer}>Terms</a>
 						</span>
 						
 						<span className="pull-left">
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
 							  &nbsp;&nbsp;|&nbsp;&nbsp;
-							  <a href={'#' + m}  onClick={me.animationTransfer}>
+							  <a href={'#/' + m}  onClick={me.animationTransfer}>
 								  {Root.global.menuItems[m]}</a>
 							</span>)
 							})}
