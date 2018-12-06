@@ -98,6 +98,7 @@ React.createClass({
 	},
 	copyRightSection : function() {
 		var me = this;
+		// onClick={/*me.changeContentPage.bind(me,  m.code)*/}
 		return (
 			<div className="copyright_section">
 				<div className="container-fluid">
@@ -115,7 +116,7 @@ React.createClass({
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
 							  &nbsp;&nbsp;|&nbsp;&nbsp;
-							  <a href="#{m.code}" onClick={/*me.changeContentPage.bind(me,  m.code)*/}>
+							  <a href={'#' + m.code}>
 								  {m.caption}</a>
 							</span>)
 							})}
