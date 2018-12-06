@@ -20,6 +20,8 @@ var _subMenu = React.createClass({
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : (!Root.global.menuTree[me.props.parent.state.role]) 
 	  	? [] : Root.global.menuTree[me.props.parent.state.role];
+	  var cptions = Root.global.menuItems
+	  
 	  var publicMenu = Root.global.menuTree.publicMenu;
           return  (
             <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
@@ -45,12 +47,12 @@ var _subMenu = React.createClass({
 							</li></span>)}
 						
 					{menu.map(function(m){ 	
-						return (me.props.parent.state.menuOption !== m.code) ?
+						return (me.props.parent.state.menuOption !== m) ?
 								(<span>
 									<li className="nav-item">
 										<a className="nav-link active" 
-											onClick={me.clickOption.bind(me, m.code)}
-											href="JavaScript: void(0)">{m.caption}</a>
+										onClick={me.clickOption.bind(me, m)}
+										href="JavaScript: void(0)">{caption[m]}</a>
 									</li></span>)
 								:
 								(<span>
@@ -58,7 +60,7 @@ var _subMenu = React.createClass({
 										<a className="nav-link disabled" 
 										href="JavaScript: void(0)">
 										<span style={{color:'yellow'}}>
-											{m.caption}</span></a>
+											{caption[m]}</span></a>
 									</li></span>)
 							})}
 					
