@@ -1,8 +1,8 @@
 var _routerControl = React.createClass({
 	getInitialState: function() {
-	var me = this;
-	me.route = '';
-	return {}
+		var me = this;
+		me.route = '';
+		return {}
 	},
 	componentDidMount : function () {
 		var me = this;
@@ -19,11 +19,11 @@ var _routerControl = React.createClass({
 	},
 	routeRule : function(route) {
 		var me = this;
-		if (!me.prop.parent || !me.prop.parent.routeRule) return true;
-		if (typeof me.prop.parent.routeRule[route] === 'function') {
-			me.prop.parent.routeRule[route]()
-		} else if (typeof me.prop.parent.routeRule._default === 'function') {
-			me.prop.parent.routeRule._default();
+		if (!me.props.parent || !me.props.parent.routeRule) return true;
+		if (typeof me.props.parent.routeRule[route] === 'function') {
+			me.props.parent.routeRule[route]()
+		} else if (typeof me.props.parent.routeRule._default === 'function') {
+			me.props.parent.routeRule._default();
 		}
 	},	
 	render: function() {
