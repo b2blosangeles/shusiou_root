@@ -129,6 +129,13 @@ React.createClass({
 							</span>)
 							})}
 						</span>
+						
+						
+						<span className="pull-left">
+						<a href={'#' + me.state.role + '/'} onClick={me.animationTransfer}>English</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;							
+						<a href={'#' + me.state.role + '/privacy'} onClick={me.animationTransfer}>Chinese</a>
+						</span>						
 					</div>
 				</div></div>
 			</div>
