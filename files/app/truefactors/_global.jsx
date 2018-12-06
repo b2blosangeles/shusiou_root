@@ -19,6 +19,6 @@ var _global = {
 		common	 	: ['about', 'contact'],
 		publicMenu	: ['howToStart', 'faq'],
 		inventor 	: ['myVideos', 'myInvention'], 
-		investor 	: ['invention', 'myRequest']
+		investor 	: ['inventions', 'myRequest']
 	}
 };
