@@ -14,6 +14,7 @@ React.createClass({
 
 		me.matrix = [
 			{route:'/test', component:me.test('test')},
+			{route:'/niu', component:me.test('niu')},
 			{route:'/', role:['*'], auth:false, component:me.test('/')},
 			{route:'*', role:['*'], auth:false, component:me.test('*')}
 		];			
