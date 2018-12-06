@@ -2,10 +2,22 @@ var _routerControl = React.createClass({
 	getInitialState: function() {
 		return {}
 	},
+	/*
 	componentDidMount : function() {
 		var me = this;
 		
-	},
+	},*/
+	    componentDidMount() {
+		  this.unlisten = browserHistory.listen( location =>  {
+			console.log('route changes');
+
+		   });
+
+	    },
+	    componentWillUnmount() {
+		this.unlisten();
+
+	    },
 	test : function(t) {
 		var me = this;
 		//me.props.parent.setState({route:t});
