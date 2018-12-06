@@ -52,7 +52,7 @@ var _subMenu = React.createClass({
 									<li className="nav-item">
 										<a className="nav-link active" 
 										onClick={me.clickOption.bind(me, m)}
-										href="JavaScript: void(0)">{caption[m]}</a>
+										href="JavaScript: void(0)">{captions[m]}</a>
 									</li></span>)
 								:
 								(<span>
@@ -60,7 +60,7 @@ var _subMenu = React.createClass({
 										<a className="nav-link disabled" 
 										href="JavaScript: void(0)">
 										<span style={{color:'yellow'}}>
-											{caption[m]}</span></a>
+											{captions[m]}</span></a>
 									</li></span>)
 							})}
 					
