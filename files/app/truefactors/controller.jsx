@@ -46,7 +46,7 @@ React.createClass({
 					controller : 'https://dev.shusiou.win/app/truefactors/routerController.jsx',
 					cacheTime : 1000
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api?tm=' + new Date().getTime()}} 
 			parent={me} objId={'C' + _oId} />				
 		</span>
 		)
