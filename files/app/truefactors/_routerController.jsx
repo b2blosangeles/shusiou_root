@@ -25,23 +25,22 @@ var _routerControl = React.createClass({
 				return (<span>uuu---{t}</span>)
 			}
 		});
-	},
-	routeMatrix:function() {
+	},*/
+	routeMatrix:function(route) {
 		var me = this;
-
-		me.matrix = [
-			{route:'/test', component:me.test('test')},
-			{route:'/niu', component:me.test('niu')},
-			{route:'*', role:['*'], auth:false, component:me.test('*')}
-		];			
-		return (
-			<span>
-			{me.matrix.map(function(m){  						
-				return(<Route path={m.route} env={me} component={m.component} />)	
-			})};
-			</span>	
-		);
-	},*/	
+		me.matrix =  {
+			'/test' : function() {
+				alert('A');
+			},
+			'/niu' : function() {
+				alert('B');
+			},
+			'_defult' : function() {
+				alert('C');
+			}
+		}			
+		return me.matrix(route);
+	},	
 	render: function() {
 		var me = this;
 		return (<span>niu</span>)
