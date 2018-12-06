@@ -1,14 +1,18 @@
 React.createClass({
 	test : function() {
-		return (<span>aaa</span>)
-		},
+		return React.createClass({
+			render: function() {
+				return (<span>aaa</span>)
+			}
+		});
+	},
 	routeMatrix:function() {
 		var me = this;
 
 		me.matrix = [
-		/*	{route:'/test', component:me.test()},
+			{route:'/test', component:me.test()},
 			{route:'/', role:['*'], auth:false, component:me.test()},
-			{route:'*', role:['*'], auth:false, component:me.test()}*/
+			{route:'*', role:['*'], auth:false, component:me.test()}
 		];			
 		return (
 			<span>
