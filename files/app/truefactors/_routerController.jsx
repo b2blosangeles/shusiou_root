@@ -28,6 +28,6 @@ var _routerControl = React.createClass({
 	},	
 	render: function() {
 		var me = this;
-		return (<span>niu</span>)
+		return (<span></span>)
 	}
 })
