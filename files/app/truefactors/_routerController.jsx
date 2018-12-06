@@ -6,8 +6,6 @@ var _routerControl = React.createClass({
 	componentDidMount : function () {
 		var me = this;
 		this.unlisten = browserHistory.listen( location =>  {
-			console.log('route changes==>' + location.hash);
-			console.log(location);
 			me.routeRule(location.hash.replace('#', ''))
 		});
 		me.routeRule(location.hash)
