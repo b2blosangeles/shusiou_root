@@ -139,7 +139,7 @@ React.createClass({
 				me.setState({ menuOption : 'faq'}) ;
 				},
 			'_default' : function(path) {
-					console.log('B->' + path);
+				me.setState({ menuOption : path});
 				}			
 		}
 	},
