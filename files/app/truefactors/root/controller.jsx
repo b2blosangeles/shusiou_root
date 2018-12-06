@@ -128,10 +128,10 @@ React.createClass({
 	routeRule : function() {
 		return {
 			'/test' : function(path) {
-					alert('A');
+					alert('A->' + path);
 				},
 			'_default' : function(path) {
-					alert('B');
+					alert('B->' + path);
 				}			
 		}
 	},
@@ -139,7 +139,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
-			<_routerControl parent={me}  routeRule={me.routeRule()} />
+			<_routerControl routeRule={me.routeRule()} />
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			{me.showPageFrame(me.showBody())}
