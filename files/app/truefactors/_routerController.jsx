@@ -9,45 +9,19 @@ var _routerControl = React.createClass({
 		this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes==>' + location.hash);
 			console.log(location);
-			
-			var v = location.hash.replace('#', '');
-			if (me.routeMatrix(v)) me.routeMatrix(v)();
-			else me.routeMatrix('_defult')();
-			me.props.parent.setState({route : v});
-			
+			me.routeRule(v)
 		});
-		var v = location.hash.replace('#', '');
-		if (me.routeMatrix(v)) me.routeMatrix(v)();
-		else me.routeMatrix('_defult')();
-		me.props.parent.setState({route : v})
+		me.routeRule(v)
 	},
+	
 	componentWillUnmount() {
 		this.unlisten();
 	},
-	/*
-	test : function(t) {
+	routeRule:function(route) {
 		var me = this;
-		me.route = t;
-		return React.createClass({
-			render: function() {
-				return (<span>uuu---{t}</span>)
-			}
-		});
-	},*/
-	routeMatrix:function(route) {
-		var me = this;
-		me.matrix =  {
-			'/test' : function() {
-				alert('A');
-			},
-			'/niu' : function() {
-				alert('B');
-			},
-			'_defult' : function() {
-				alert('C');
-			}
-		}			
-		return me.matrix[route];
+		if ((me.prop.routeRule) && (typeof me.prop.routeRule[route] === 'function')) {
+			me.prop.routeRule[route]()
+		}
 	},	
 	render: function() {
 		var me = this;
