@@ -1,5 +1,6 @@
 var _routerControl = React.createClass({
 	getInitialState: function() {
+		return {}
 	},
 	componentDidMount : function() {
 		var me = this;
