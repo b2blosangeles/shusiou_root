@@ -3,6 +3,7 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		localStorage.clear();
+		sessionStorage.clear();
 		alert(111);
           	return {}
         },
