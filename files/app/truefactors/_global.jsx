@@ -13,7 +13,7 @@ var _global = {
 		myVideos 	: 'My Videos', 
 		myInvention 	: 'My Inventions',
 		inventions	: 'Inventions',
-		myRequest	'My Requests'
+		myRequest	: 'My Requests'
 	},
 	menuTree : {
 		common	 : ['about', 'contact'],
