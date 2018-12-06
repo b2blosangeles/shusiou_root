@@ -10,16 +10,10 @@ React.createClass({
 	},
 	changeContentPage : function(v, e) {
 		var me = this; 
-		
 		if ((e) && e.target) {
 			Root.commUI.animation.transfer($(e.target));
 		}
-		
-		if (!v) {
-			me.setState({ menuOption : ''})
-		} else {
-			me.setState({ menuOption : v})   
-		}
+		me.setState({ menuOption : (!v) ? '' : v})
 	},
 	animationTransfer : function(e) {
 		var me = this; 
