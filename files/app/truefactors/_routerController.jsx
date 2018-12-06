@@ -9,9 +9,9 @@ var _routerControl = React.createClass({
 		this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes==>' + location.hash);
 			console.log(location);
-			me.routeRule(v)
+			me.routeRule(location.hash)
 		});
-		me.routeRule(v)
+		me.routeRule(location.hash)
 	},
 	
 	componentWillUnmount() {
