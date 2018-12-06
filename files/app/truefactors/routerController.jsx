@@ -1,4 +1,7 @@
 React.createClass({
+	componentDidMount : function() {
+		var me = this;
+	},
 	test : function(t) {
 		return React.createClass({
 			render: function() {
@@ -25,10 +28,10 @@ React.createClass({
 	render: function() {
 		var me = this;
 		
-		return (<span>oooo===NBNBNB===<ReactRouter.Router history={hashHistory}>
+		return (<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me}/>
 				{me.routeMatrix()}
-			</ReactRouter.Router></span>)  
+			</ReactRouter.Router>)  
 		/* return (<ReactRouter.Router history={hashHistory}>
 				<IndexRoute env={me} component={Ad}/>
 				{me.routeMatrix()}
