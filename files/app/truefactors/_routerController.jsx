@@ -1,9 +1,13 @@
 var _routerControl = React.createClass({
+	getInitialState: function() {
+	},
 	componentDidMount : function() {
 		var me = this;
+		
 	},
 	test : function(t) {
 		return React.createClass({
+			me.props.parent.setState({route:t});
 			render: function() {
 				return (<span>uuu---{t}</span>)
 			}
