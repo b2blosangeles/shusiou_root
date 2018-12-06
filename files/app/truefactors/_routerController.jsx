@@ -26,7 +26,7 @@ var _routerControl = React.createClass({
 			me.props.parent.setState({route:location.hash});
 		});
 		setTimeout(function() {
-			me.props.parent.setState({route:location.hash});
+			//me.props.parent.setState({route:location.hash});
 		});
 	    },
 	    componentWillUnmount() {
