@@ -11,8 +11,8 @@ var _routerControl = React.createClass({
 			console.log(location);
 			
 			var v = location.hash.replace('#', '');
-			if (me.routeMatrix[v]) me.routeMatrix[v]();
-			else me.routeMatrix['_defult']();
+			if (me.routeMatrix(v)) me.routeMatrix(v)();
+			else me.routeMatrix('_defult')();
 			me.props.parent.setState({route : v});
 			
 		});
