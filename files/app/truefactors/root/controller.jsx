@@ -115,7 +115,7 @@ React.createClass({
 							{Root.global.menuTree.common.map(function(m) {
 							return(<span>
 							  &nbsp;&nbsp;|&nbsp;&nbsp;
-							  <a href="JavaScript:void(0)" onClick={me.changeContentPage.bind(me,  m.code)}>
+							  <a href="#{m.code}" onClick={/*me.changeContentPage.bind(me,  m.code)*/}>
 								  {m.caption}</a>
 							</span>)
 							})}
