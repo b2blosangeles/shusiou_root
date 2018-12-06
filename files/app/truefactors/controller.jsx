@@ -2,6 +2,8 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
+		localStorage.clear();
+
           	return {}
         },
         render: function() {
