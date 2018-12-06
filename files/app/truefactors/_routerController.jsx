@@ -19,11 +19,11 @@ var _routerControl = React.createClass({
 	},
 	routeRule : function(route) {
 		var me = this;
-		if (!me.prop.routeRule) return true;
-		if (typeof me.prop.routeRule[route] === 'function') {
-			me.prop.routeRule[route]()
-		} else if (typeof me.prop.routeRule._default === 'function') {
-			me.prop.routeRule._default();
+		if (!me.prop.parent || !me.prop.parent.routeRule) return true;
+		if (typeof me.prop.parent.routeRule[route] === 'function') {
+			me.prop.parent.routeRule[route]()
+		} else if (typeof me.prop.parent.routeRule._default === 'function') {
+			me.prop.parent.routeRule._default();
 		}
 	},	
 	render: function() {
