@@ -7,6 +7,13 @@ var _routerControl = React.createClass({
 		var me = this;
 		
 	},*/
+	    componentDidUpdate(prevProps, prevState) {
+		if (me.state.route !== prevState.route) {
+			console.log('route changes to =>' + me.state.route);
+		}
+
+	    },
+	/*
 	    componentDidMount() {
 		  this.unlisten = browserHistory.listen( location =>  {
 			console.log('route changes');
@@ -17,10 +24,10 @@ var _routerControl = React.createClass({
 	    componentWillUnmount() {
 		this.unlisten();
 
-	    },
+	    },*/
 	test : function(t) {
 		var me = this;
-		//me.props.parent.setState({route:t});
+		me.setState({route:t});
 		return React.createClass({
 			render: function() {
 				return (<span>uuu---{t}</span>)
