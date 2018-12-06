@@ -135,11 +135,9 @@ React.createClass({
 	routeRule : function() {
 		var me = this;
 		return {
-			'faq' : function(path) {
-				me.setState({ menuOption : 'faq'}) ;
-				},
 			'_default' : function(path) {
 				me.setState({ menuOption : path});
+				console.log(path);
 				}			
 		}
 	},
