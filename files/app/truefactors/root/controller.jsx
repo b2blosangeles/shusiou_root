@@ -123,7 +123,7 @@ React.createClass({
 							return(<span>
 							  &nbsp;&nbsp;|&nbsp;&nbsp;
 							  <a href={'#' + m}  onClick={me.animationTransfer}>
-								  {captions[m]}</a>
+								  {Root.global.menuItems[m]}</a>
 							</span>)
 							})}
 						</span>
