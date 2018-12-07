@@ -2,6 +2,7 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.roles = Root.global.roles;
+		me.compModule = new _compModule(me, Root);
           	return {role: '', menuOption:'', spinner: true, route:''}
         },
 	
