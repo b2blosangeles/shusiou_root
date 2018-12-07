@@ -13,7 +13,7 @@ var _copyrightSection = React.createClass({
 		<div className="copyright_section">
 			<div className="container-fluid">
 			<div className="row">
-				<div className="col-sm-3 text-left">
+				<div className="col-sm-5 text-left">
 					<span className="pull-left">
 						{Object.keys(langs).map(function(k) {
 						return(<span>
@@ -26,7 +26,7 @@ var _copyrightSection = React.createClass({
 						Change ...</a>
 					</span> 									
 				</div>
-				<div className="col-sm-9 text-right">
+				<div className="col-sm-7 text-right">
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
