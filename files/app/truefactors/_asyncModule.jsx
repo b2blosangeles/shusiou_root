@@ -15,7 +15,7 @@ try {
 			}	
 		},
 		asyncCacheExist : function(k) {
-			return false;
+			// return false;
 			//if (!sessionStorage) {
 				return (!__asyncCache[k]) ? false : true;
 			//} else {
@@ -68,6 +68,9 @@ try {
 				  }); 
 			} else {
 				me._asyncModule = me.getAsyncCache(me.props.plugin.extend.controller);
+				console.log('===me._asyncModule===>');
+				console.log(me._asyncModule);
+				
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
