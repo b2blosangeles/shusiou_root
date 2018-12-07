@@ -1,5 +1,5 @@
 var _global = {
-	langhs : {
+	langs : {
 		en : 'English',
 		cn : '中文',
 		sp : 'española'	
