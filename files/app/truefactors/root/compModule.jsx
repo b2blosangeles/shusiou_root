@@ -1,7 +1,7 @@
 var _compModule = function(me, Root) {
 	
     this.loadInventor = function() {
-	return Root.lib.asyncModuleA({
+	return Root.lib.asyncModule({
 		setting:{	extend: {
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
@@ -9,15 +9,16 @@ var _compModule = function(me, Root) {
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api',
+			 	key : 'inventor'
 			},
 		data : '',
 		parent : me
-	})()
+	}
     }
     
     this.loadInvestor = function() {
-	return Root.lib.asyncModuleA({
+	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {
 					},					
@@ -27,15 +28,16 @@ var _compModule = function(me, Root) {
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/investors/controller.jsx'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api',
+			 	key : 'investor'
 			},
 		data : '',
 		parent : me
-	})()
+	}
     }
     this.loadLanguage = function() {
 	    console.log('load==>AAAA' + 'https://dev.shusiou.win/app/truefactors/language/controller.jsx');
-	return Root.lib.asyncModuleA({
+	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {
 					},					
@@ -48,7 +50,7 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	})()
+	}
     }   
     
 };
