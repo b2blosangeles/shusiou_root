@@ -9,6 +9,13 @@ var _commLib = function () {
 		var _oId = __asyncOId + '.' + new Date().getTime();
 		return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
 	}
+	this.asyncModuleA = function(cfg) { return function() {
+			var me = this;
+			__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+			var _oId = __asyncOId + '.' + new Date().getTime();
+			return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
+		}
+	}		
 	this.getNumberList = function(n) {
 	var r = [];
 	for (var i = 0;  i < n; i++) r[i] = i;
