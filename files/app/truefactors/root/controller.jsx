@@ -104,10 +104,9 @@ React.createClass({
 	},
 	removeRole : function() {
 		var me = this;
-		me.setState({ role : ''}, function() {	
-			window.location = '/#/';
-			console.log('niu 2');
-		});
+		me.setState({ role : ''});
+		window.location.href = '/#/';
+		console.log(33);
 	},
 	routeRule : function() {
 		var me = this;
@@ -116,7 +115,7 @@ React.createClass({
 				var path_a = path.split('/');
 				
 				if (path_a[0])  me.setState({ role : path_a[0]});
-				else me.setState({ role : ''})
+				//else me.setState({ role : ''})
 				
 				if (path_a[1]) me.setState({ menuOption : path_a[1]});
 				else {
