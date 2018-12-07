@@ -123,7 +123,7 @@ React.createClass({
 					if (!path_a[0]) {
 						var def_path = '';
 					} else {
-						var def_path = ((!path_a[0]) || !Root.global.menuTree[path_a[0]] ||
+						var def_path = (!Root.global.menuTree[path_a[0]] ||
 						    !Root.global.menuTree[path_a[0]].length) ? 
 							Root.global.menuTree._publicMenu[0] :
 							Root.global.menuTree[path_a[0]][0];
