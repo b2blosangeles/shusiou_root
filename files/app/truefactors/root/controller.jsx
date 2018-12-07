@@ -114,7 +114,7 @@ React.createClass({
 				if (path_a[0])  me.setState({ role : path_a[0]});
 				if (path_a[1]) me.setState({ menuOption : path_a[1]});
 				else {
-					me.setState({ menuOption : null});
+					me.setState({ menuOption : ''});
 				}
 			}			
 		}
