@@ -19,11 +19,11 @@ var _copyrightSection = React.createClass({
 						return(<span>
 						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
 						{Root.global.langs[k]}</a>
-						&nbsp;&nbsp;
+						&nbsp;&nbsp;|&nbsp;&nbsp;
 						</span>)
 						})}
 						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
-						more ...</a>
+						more ..</a>
 					</span> 									
 				</div>
 				<div className="col-sm-7 text-right">
