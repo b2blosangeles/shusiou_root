@@ -33,4 +33,20 @@ var _compModule = function(me, Root) {
 		parent : me
 	})
     }
+    this.loadLanguage = function() {
+	return Root.lib.asyncModule({
+		setting:{	extend: {
+					contents : {
+					},					
+					includes : [
+					],
+					controller : 'https://dev.shusiou.win/app/truefactors/language/controller.jsx'
+				}, 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+			},
+		data : '',
+		parent : me
+	})
+    }   
+    
 };
