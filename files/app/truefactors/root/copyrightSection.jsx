@@ -34,18 +34,12 @@ var _copyrightSection = React.createClass({
 						})}
 					</span>	
 					<span className="pull-left">
-						{langs.map(function(k) {
-						return(<span>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-								{/*<a href="JavaScript: void(0)"  onClick={animationTransfer} 
-							className="text-success">
-						{Root.global.langs[k]}</a>
-						</span>)
-						})}
-						*/}
-						<a href="JavaScript: void(0)"  onClick={animationTransfer}
-							className="text-success">
-						Change Language</a></span>)})}
+						<span>
+							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a href="JavaScript: void(0)"  onClick={animationTransfer}
+								className="">
+							Change Language</a>
+						</span>
 					</span> 					
 				</div>
 			</div></div>
