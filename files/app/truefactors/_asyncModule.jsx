@@ -54,6 +54,7 @@ try {
 					  if (me.props.plugin.extend.controller) {   
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
+					     console.log('_asyncCache===>');
 					     console.log(__asyncCache);
 					  me._asyncModule = resultData;
 					     console.log('----me._asyncModule---->');
