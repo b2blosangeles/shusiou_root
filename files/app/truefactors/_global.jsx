@@ -2,7 +2,7 @@ var _global = {
 	langs : {
 		en : 'English',
 		cn : '中文',
-		sp : 'española'	
+		sp : 'Española'	
 	},
 	roles : {
 		inventor :	{caption: 'Inventor'},
