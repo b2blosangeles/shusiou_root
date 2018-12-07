@@ -64,7 +64,7 @@ body {
 .btn-large { min-width: 100px !important;  max-width: 128px !important;
           height: 64px  !important; color: #3b5998 !important; border : 2px solid #3b5998; }
 
-.site-logo { min-height: 128px  !important;}
+.site-logo { min-height: 118px  !important;}
 .bg-top-bar  { background: rgba(139,157,195, 0.3); }
 .secondMenu { background: rgba(59,89,152, 0.6); }
 .secondMenu a { color : #fff }
