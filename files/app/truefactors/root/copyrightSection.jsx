@@ -22,11 +22,7 @@ var _copyrightSection = React.createClass({
 						&nbsp;&nbsp;|&nbsp;&nbsp;
 						</span>)
 						})}
-					</span> 					
-					
-					<a href={'#' + role + '/'} onClick={animationTransfer}>English</a>
-					&nbsp;&nbsp;|&nbsp;&nbsp;							
-					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Chinese</a>					
+					</span> 									
 				</div>
 				<div className="col-sm-9 text-right">
 					<span className="pull-right">
