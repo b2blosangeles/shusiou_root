@@ -112,7 +112,10 @@ React.createClass({
 		return {
 			'_default' : function(path) {
 				var path_a = path.split('/');
+				
 				if (path_a[0])  me.setState({ role : path_a[0]});
+				else me.setState({ role : ''})
+				
 				if (path_a[1]) me.setState({ menuOption : path_a[1]});
 				else {
 					me.setState({ menuOption : ''});
