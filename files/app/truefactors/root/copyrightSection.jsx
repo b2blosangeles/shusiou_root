@@ -38,7 +38,7 @@ var _copyrightSection = React.createClass({
 						return(<span>
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="JavaScript: void(0)"  onClick={animationTransfer} 
-							className="text-danger">
+							className="text-danger role-checked">
 						{Root.global.langs[k]}</a>
 						</span>)
 						})}
