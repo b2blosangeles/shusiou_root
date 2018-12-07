@@ -7,13 +7,23 @@ var _copyrightSection = React.createClass({
           var me = this;
 	  var role = me.props.parent.state.role;
 	  var animationTransfer = me.props.parent.animationTransfer;
-	  var langs = Root.global.langs;  
-	    
+	  var langs = Root.global.langs;
+	  
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid">
 			<div className="row">
 				<div className="col-sm-3 text-left">
+					<span className="pull-left">
+						{Object.keys(langs).map(function(k) {
+						return(<span>
+						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
+						{langs[k]}</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;
+						</span>)
+						})}
+					</span> 					
+					
 					<a href={'#' + role + '/'} onClick={animationTransfer}>English</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
 					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Chinese</a>					
@@ -29,12 +39,12 @@ var _copyrightSection = React.createClass({
 					<a href={'#' + role + '/terms'} onClick={animationTransfer}>Terms</a>
 					</span>
 
-					<span className="pull-left">
-						{Object.keys(langs).map(function(k) {
+					<span className="pull-right">
+						{Root.global.menuTree.common.map(function(m) {
 						return(<span>
-						  <a href="JavaScript: void(0)"  onClick={animationTransfer}>
-							  {langs[m]}</a>
 						  &nbsp;&nbsp;|&nbsp;&nbsp;
+						  <a href={'#' + role + '/' + m}  onClick={animationTransfer}>
+							  {Root.global.menuItems[m]}</a>
 						</span>)
 						})}
 					</span>					
