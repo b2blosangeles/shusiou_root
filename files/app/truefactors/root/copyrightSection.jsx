@@ -7,7 +7,7 @@ var _copyrightSection = React.createClass({
           var me = this;
 	  var role = me.props.parent.state.role;
 	  var animationTransfer = me.props.parent.animationTransfer;
-	  var langs = Root.global.langs;
+	  var langs = ['en', 'cn'];
 	  
           return  (
 		<div className="copyright_section">
@@ -15,15 +15,15 @@ var _copyrightSection = React.createClass({
 			<div className="row">
 				<div className="col-sm-5 text-left">
 					<span className="pull-left">
-						{Object.keys(langs).map(function(k) {
+						{langs.map(function(k) {
 						return(<span>
 						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
-						{langs[k]}</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;
+						{Root.global.langs[k]}</a>
+						&nbsp;&nbsp;
 						</span>)
 						})}
 						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
-						Change ...</a>
+						more ...</a>
 					</span> 									
 				</div>
 				<div className="col-sm-7 text-right">
