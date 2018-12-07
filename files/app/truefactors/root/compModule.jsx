@@ -7,7 +7,7 @@ var _compModule = function(me, Root) {
 						'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
 						'https://dev.shusiou.win/app/truefactors/inventors/view.jsx'	
 					],
-					main : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
+					controller : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 			},
