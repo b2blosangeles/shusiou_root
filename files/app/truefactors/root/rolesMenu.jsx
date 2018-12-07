@@ -25,12 +25,18 @@ var _rolesMenu = React.createClass({
 						</div>
 						<div className="col-sm-9 text-right pt-2 mt-3">
 							{Object.keys(me.roles).map(function(idx){
-							  return <a href={'#' + idx} 
-								className={'btn btn-large rounded p-3 m-2 ' + 
-								((me.props.parent.state.role === idx) ? 
-									  'role-checked' : 'role-unchecked')}
+							  return (me.props.parent.state.role === idx) ? 
+								  (<a href={'#/' + me.props.parent.state.menuOption} 
+								className="btn btn-large rounded p-3 m-2 role-checked"
 								onClick={me.props.parent.animationTransfer}>
-								<b>{me.roles[idx].caption}</b></a>})}
+								<b>{me.roles[idx].caption}</b></a>)
+								:
+							  	(<a href={'#' + idx} 
+								className="btn btn-large rounded p-3 m-2 role-unchecked"
+								onClick={me.props.parent.animationTransfer}>
+								<b>{me.roles[idx].caption}</b></a>)
+							
+							})}
 						</div>
 					</div>
 					</div>
