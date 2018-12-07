@@ -52,8 +52,7 @@ React.createClass({
 		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1 && 
 		    Root.global.menuTree._publicMenu.indexOf(me.state.menuOption) === -1 
 		   ) {
-			if (me.state.role === 'inventor')  return me.compModule.loadInventor();	
-		
+			if (me.state.role === 'inventor')  return me.compModule.loadInventor();
 			if (me.state.role === 'investor')  return me.compModule.loadInvestor()	
 		} else {
 			return me.loadContentPage(me.state.menuOption);	
