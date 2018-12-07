@@ -21,7 +21,7 @@ var _global = {
 		myRequest	: 'My Requests'
 	},
 	menuTree : {
-		common	 	: ['about', 'contact'],
+		common	 	: ['contact'],
 		_publicMenu	: ['howToStart', 'faq'],
 		inventor 	: ['myVideos', 'howToStart', 'myInvention', 'faq'], 
 		investor 	: ['faq', 'inventions', 'myRequest']
