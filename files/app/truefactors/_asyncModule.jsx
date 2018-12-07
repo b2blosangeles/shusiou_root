@@ -55,7 +55,7 @@ try {
 					  if (me.props.plugin.extend.controller) {   
 						  console.log('==me.setAsyncCache(me.props.plugin.extend.controller , resultData);==');
 						console.log(me.props.plugin.extend.controller);
-						console.log(me.props.plugin.extend.controller);
+						console.log(resultData);
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
 					     console.log('_asyncCache===>');
