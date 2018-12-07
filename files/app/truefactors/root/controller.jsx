@@ -102,11 +102,6 @@ React.createClass({
 				}
 			})
 	},
-	copyRightSection : function() {
-		var me = this;
-		// onClick={/*me.changeContentPage.bind(me,  m.code)*/}
-		return (<_copyrightSection parent={me}/>)
-	},
 	routeRule : function() {
 		var me = this;
 		return {
@@ -128,7 +123,7 @@ React.createClass({
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
 			{me.showPageFrame(me.showBody())}
-			{me.copyRightSection()}
+			<_copyrightSection parent={me}/>
 		</span>
           )
         }
