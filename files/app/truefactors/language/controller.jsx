@@ -5,7 +5,7 @@ React.createClass({
         },
 	showBody : function() {
 		var me = this;
-		return (<span>Language</span>)	
+		return (<span>--Language---</span>)	
 	},
         render: function() {
 		var me = this;
