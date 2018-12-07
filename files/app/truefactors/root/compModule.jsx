@@ -14,7 +14,7 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	}
+	})
     }
     
     this.loadInvestor = function() {
@@ -33,10 +33,9 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	}
+	})
     }
     this.loadLanguage = function() {
-	    console.log('load==>AAAA' + 'https://dev.shusiou.win/app/truefactors/language/controller.jsx');
 	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {
@@ -50,7 +49,7 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	}
+	})
     }   
     
 };
