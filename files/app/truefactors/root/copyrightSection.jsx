@@ -14,7 +14,7 @@ var _copyrightSection = React.createClass({
 				<div className="col-sm-3 text-left">
 					
 					<div className="btn-group">
-					  <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					  <button type="button" className="dropdown-toggle" data-toggle="dropdown">
 					    Right-aligned menu
 					  </button>
 					  <div className="dropdown-menu dropdown-menu-right">
