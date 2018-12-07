@@ -105,8 +105,8 @@ React.createClass({
 	removeRole : function() {
 		var me = this;
 		me.setState({ role : ''});
-		window.location.href = '/#/';
-		console.log(33);
+		window.location.href = '/';
+		console.log(66);
 	},
 	routeRule : function() {
 		var me = this;
