@@ -55,6 +55,8 @@ try {
 					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
 					  }
 					  me._asyncModule = resultData;
+					     console.log('----me._asyncModule---->');
+					     console.log(me._asyncModule);
 					  me.setState({success: true, update : new Date().getTime()});
 				     },
 				     error : function(xhr, textStatus, error) { 
