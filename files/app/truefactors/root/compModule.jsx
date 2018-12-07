@@ -1,7 +1,7 @@
 var _compModule = function(me, Root) {
 	
     this.loadInventor = function() {
-	return Root.lib.asyncModule({
+	return Root.lib.asyncModuleA({
 		setting:{	extend: {
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
@@ -13,11 +13,11 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	})
+	})()
     }
     
     this.loadInvestor = function() {
-	return Root.lib.asyncModule({
+	return Root.lib.asyncModuleA({
 		setting:{	extend: {
 					contents : {
 					},					
@@ -31,7 +31,7 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	})
+	})()
     }
     this.loadLanguage = function() {
 	    console.log('load==>AAAA' + 'https://dev.shusiou.win/app/truefactors/language/controller.jsx');
