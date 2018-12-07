@@ -105,39 +105,7 @@ React.createClass({
 	copyRightSection : function() {
 		var me = this;
 		// onClick={/*me.changeContentPage.bind(me,  m.code)*/}
-		return (<_copyrightSection parent={me}/>
-			{/*<div className="copyright_section">
-				<div className="container-fluid">
-				<div className="row">
-					<div className="col-sm-3 text-left">
-						<a href={'#' + me.state.role + '/'} onClick={me.animationTransfer}>English</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;							
-						<a href={'#' + me.state.role + '/privacy'} onClick={me.animationTransfer}>Chinese</a>					
-					</div>
-					<div className="col-sm-9 text-right">
-						<span className="pull-right">
-						&#169; {new Date().getFullYear()} Plato Plan
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href={'#' + me.state.role + '/'} onClick={me.animationTransfer}>Home</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;							
-						<a href={'#' + me.state.role + '/privacy'} onClick={me.animationTransfer}>Privacy</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;
-						<a href={'#' + me.state.role + '/terms'} onClick={me.animationTransfer}>Terms</a>
-						</span>
-						
-						<span className="pull-left">
-							{Root.global.menuTree.common.map(function(m) {
-							return(<span>
-							  &nbsp;&nbsp;|&nbsp;&nbsp;
-							  <a href={'#' + me.state.role + '/' + m}  onClick={me.animationTransfer}>
-								  {Root.global.menuItems[m]}</a>
-							</span>)
-							})}
-						</span>					
-					</div>
-				</div></div>
-			</div>*/}
-		)
+		return (<_copyrightSection parent={me}/>)
 	},
 	routeRule : function() {
 		var me = this;
