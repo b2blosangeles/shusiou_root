@@ -52,25 +52,9 @@ React.createClass({
 		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1 && 
 		    Root.global.menuTree._publicMenu.indexOf(me.state.menuOption) === -1 
 		   ) {
-			if (me.state.role === 'inventor')  return me.compModule.loadInventors()	
+			if (me.state.role === 'inventor')  return me.compModule.loadInventor();	
 		
-			if (me.state.role === 'investor') {
-				return Root.lib.asyncModule({
-					setting:{	extend: {
-								contents : {
-								},					
-								includes : [
-									'https://dev.shusiou.win/app/truefactors/investors/data.jsx',
-									'https://dev.shusiou.win/app/truefactors/investors/view.jsx'	
-								],
-								controller : 'https://dev.shusiou.win/app/truefactors/investors/controller.jsx'
-							}, 
-							master: '//master1_dev.shusiou.win/api/DVCHub.api'
-						},
-					data : '',
-					parent : me
-				})
-			} 
+			if (me.state.role === 'investor')  return me.compModule.loadInvestor()	
 		} else {
 			return me.loadContentPage(me.state.menuOption);	
 		}
