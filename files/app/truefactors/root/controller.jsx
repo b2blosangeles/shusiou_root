@@ -44,6 +44,7 @@ React.createClass({
 	},
         showBody : function() {
                 var me = this;
+		return me.state.menuOption;
 		if (me.state.menuOption === 'language')  return me.compModule.loadLanguage();	
 		
 		if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
