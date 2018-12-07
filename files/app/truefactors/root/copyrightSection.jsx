@@ -7,25 +7,13 @@ var _copyrightSection = React.createClass({
           var me = this;
 	  var role = me.props.parent.state.role;
 	  var animationTransfer = me.props.parent.animationTransfer;
+	  var langs = Root.global.langs;  
+	    
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid">
 			<div className="row">
 				<div className="col-sm-3 text-left">
-					
-					<div className="btn-group">
-					  <button type="button" className="dropdown-toggle" data-toggle="dropdown">
-					    Right-aligned menu
-					  </button>
-					  <div className="dropdown-menu dropdown-menu-right">
-					    <button className="dropdown-item" type="button">Action</button>
-					    <button className="dropdown-item" type="button">Another action</button>
-					    <button className="dropdown-item" type="button">Something else here</button>
-					  </div>
-					</div>					
-					
-					
-					
 					<a href={'#' + role + '/'} onClick={animationTransfer}>English</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
 					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Chinese</a>					
@@ -42,11 +30,11 @@ var _copyrightSection = React.createClass({
 					</span>
 
 					<span className="pull-left">
-						{Root.global.menuTree.common.map(function(m) {
+						{Object.key(langs).map(function(k) {
 						return(<span>
+						  <a href="JavaScript: void(0)"  onClick={animationTransfer}>
+							  {lanhs[m]}</a>
 						  &nbsp;&nbsp;|&nbsp;&nbsp;
-						  <a href={'#' + role + '/' + m}  onClick={animationTransfer}>
-							  {Root.global.menuItems[m]}</a>
 						</span>)
 						})}
 					</span>					
