@@ -11,7 +11,7 @@ var _rolesMenu = React.createClass({
 		parent.setState({role: code, menuOption: null});
 	},
 	render: function() {
-	  var me = this;  // onClick={me.props.parent.removeRole}>
+	  var me = this;  
 	  var menuOption = (me.props.parent.state.menuOption) ? me.props.parent.state.menuOption : '';
 	  return  (
 		    <div className="container-fluid">
@@ -29,8 +29,7 @@ var _rolesMenu = React.createClass({
 							  return (me.props.parent.state.role === idx) ? 
 							(<a href={'#/' + menuOption} 
 								className="btn btn-large rounded p-3 m-2 role-checked">
-								
-								<b>{me.roles[idx].caption}==</b></a>)
+								<b>{me.roles[idx].caption}</b></a>)
 								:
 							  	(<a href={'#' + idx + '/' + menuOption } 
 								className="btn btn-large rounded p-3 m-2 role-unchecked"
