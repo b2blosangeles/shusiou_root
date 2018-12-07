@@ -5,10 +5,7 @@ React.createClass({
 		me.compModule = new _compModule(me, Root);
           	return {role: '', menuOption:'', spinner: true, route:''}
         },
-	
-	componentDidMount : function() {
-		var me = this;
-	},
+
 	changeContentPage : function(v, e) {
 		var me = this; 
 		if ((e) && e.target) {
