@@ -12,6 +12,20 @@ var _copyrightSection = React.createClass({
 			<div className="container-fluid">
 			<div className="row">
 				<div className="col-sm-3 text-left">
+					
+					<div className="btn-group">
+					  <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					    Right-aligned menu
+					  </button>
+					  <div className="dropdown-menu dropdown-menu-right">
+					    <button className="dropdown-item" type="button">Action</button>
+					    <button className="dropdown-item" type="button">Another action</button>
+					    <button className="dropdown-item" type="button">Something else here</button>
+					  </div>
+					</div>					
+					
+					
+					
 					<a href={'#' + role + '/'} onClick={animationTransfer}>English</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
 					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Chinese</a>					
