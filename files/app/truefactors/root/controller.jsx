@@ -36,7 +36,8 @@ React.createClass({
 						],
 						controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx'
 					}, 
-					master: '//master1_dev.shusiou.win/api/DVCHub.api'
+					master: '//master1_dev.shusiou.win/api/DVCHub.api',
+				 	key : 'content'
 				},
 			data : menuItem,
 			parent : me
