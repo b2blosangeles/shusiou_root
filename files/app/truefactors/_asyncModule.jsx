@@ -15,6 +15,7 @@ try {
 			}	
 		},
 		asyncCacheExist : function(k) {
+			return false;
 			//if (!sessionStorage) {
 				return (!__asyncCache[k]) ? false : true;
 			//} else {
