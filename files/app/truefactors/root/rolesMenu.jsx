@@ -28,7 +28,7 @@ var _rolesMenu = React.createClass({
 							{Object.keys(me.roles).map(function(idx){
 							  return (me.props.parent.state.role === idx) ? 
 							(<a href={'#/' + menuOption} 
-								className="btn btn-large rounded p-3 m-2 role-checked"
+								className="btn btn-large rounded p-3 m-2 role-checked">
 								
 								<b>{me.roles[idx].caption}==</b></a>)
 								:
