@@ -105,7 +105,7 @@ React.createClass({
 	removeRole : function() {
 		var me = this;
 		me.setState({ role : ''}, function() {	
-			window.location.href = '#/'
+			window.location.href = '/#/'
 			console.log('niu');
 		});
 	},
