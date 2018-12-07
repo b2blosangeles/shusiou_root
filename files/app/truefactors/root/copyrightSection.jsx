@@ -6,31 +6,32 @@ var _copyrightSection = React.createClass({
     render: function() {
           var me = this;
 	  var role = me.props.parent.state.role;
+	  var animationTransfer = me.props.parent.animationTransfer;
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid">
 			<div className="row">
 				<div className="col-sm-3 text-left">
-					<a href={'#' + role + '/'} onClick={me.props.parent.animationTransfer}>English</a>
+					<a href={'#' + role + '/'} onClick={animationTransfer}>English</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
-					<a href={'#' + role + '/privacy'} onClick={me.props.parent.animationTransfer}>Chinese</a>					
+					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Chinese</a>					
 				</div>
 				<div className="col-sm-9 text-right">
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href={'#' + role + '/'} onClick={me.props.parent.animationTransfer}>Home</a>
+					<a href={'#' + role + '/'} onClick={animationTransfer}>Home</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
-					<a href={'#' + role + '/privacy'} onClick={me.props.parent.animationTransfer}>Privacy</a>
+					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Privacy</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;
-					<a href={'#' + role + '/terms'} onClick={me.props.parent.animationTransfer}>Terms</a>
+					<a href={'#' + role + '/terms'} onClick={animationTransfer}>Terms</a>
 					</span>
 
 					<span className="pull-left">
 						{Root.global.menuTree.common.map(function(m) {
 						return(<span>
 						  &nbsp;&nbsp;|&nbsp;&nbsp;
-						  <a href={'#' + role + '/' + m}  onClick={me.props.parent.animationTransfer}>
+						  <a href={'#' + role + '/' + m}  onClick={animationTransfer}>
 							  {Root.global.menuItems[m]}</a>
 						</span>)
 						})}
