@@ -42,7 +42,7 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			var k = (cfg.key) ? cfg.k : me.props.plugin.extend.controller;
+			var k = (cfg.key) ? cfg.key : me.props.plugin.extend.controller;
 			if (!k || !me.asyncCacheExist(k)) {
 				$.ajax({
 				     type: 'POST',
