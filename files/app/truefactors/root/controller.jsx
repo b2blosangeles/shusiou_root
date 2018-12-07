@@ -52,7 +52,6 @@ React.createClass({
 		   ) {
 			if (me.state.role === 'inventor')  return me.compModule.loadInventor();
 			if (me.state.role === 'investor')  return me.compModule.loadInvestor();
-			if (me.state.role === 'language')  return me.compModule.loadLanguage();	
 		} else {
 			return me.loadContentPage(me.state.menuOption);	
 		}
