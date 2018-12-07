@@ -42,8 +42,8 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-
-			if (!me.props.plugin.extend.controller || !me.asyncCacheExist(me.props.plugin.extend.controller)) {
+			var k = (cfg.key) ? cfg.k : me.props.plugin.extend.controller;
+			if (!k || !me.asyncCacheExist(k)) {
 				$.ajax({
 				     type: 'POST',
 				     url: me.props.plugin.master,
@@ -56,7 +56,7 @@ try {
 						  console.log('==me.setAsyncCache(me.props.plugin.extend.controller , resultData);==');
 						console.log(me.props.plugin.extend.controller);
 						console.log(resultData);
-					   	me.setAsyncCache(me.props.plugin.extend.controller , resultData);
+					   	me.setAsyncCache(k , resultData);
 					  }
 					     console.log('_asyncCache===>');
 					     console.log(__asyncCache);
@@ -71,7 +71,7 @@ try {
 				     }
 				  }); 
 			} else {
-				me._asyncModule = me.getAsyncCache(me.props.plugin.extend.controller);
+				me._asyncModule = me.getAsyncCache(k);
 				console.log('===me._asyncModule===>' + me.props.plugin.extend.controller);
 				console.log('---->');
 				console.log(__asyncCache);
