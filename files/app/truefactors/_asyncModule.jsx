@@ -72,7 +72,7 @@ try {
 				return  (<span>Script Error: {me._asyncModuleErr}</span>)
 			} else if (me._asyncModule) {
 				if ((me._asyncModule.err) && (me._asyncModule.err.length)) {
-					console.log('me._asyncModule.err--->')
+					console.log(me._asyncModule.err)
 				}
 				try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
