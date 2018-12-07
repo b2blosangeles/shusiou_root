@@ -13,19 +13,6 @@ var _copyrightSection = React.createClass({
 		<div className="copyright_section">
 			<div className="container-fluid">
 			<div className="row">
-				<div className="col-sm-5 text-left">
-					<span className="pull-left">
-						{langs.map(function(k) {
-						return(<span>
-						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
-						{Root.global.langs[k]}</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;
-						</span>)
-						})}
-						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
-						more ..</a>
-					</span> 									
-				</div>
 				<div className="col-sm-12 text-right">
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
