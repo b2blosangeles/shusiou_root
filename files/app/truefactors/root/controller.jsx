@@ -104,7 +104,7 @@ React.createClass({
 	},
 	removeRole : function() {
 		var me = this;
-		me.setState({ role : undefined});
+		me.setState({ role : ''});
 	},
 	routeRule : function() {
 		var me = this;
