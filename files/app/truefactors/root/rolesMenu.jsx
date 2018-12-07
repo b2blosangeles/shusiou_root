@@ -20,11 +20,11 @@ var _rolesMenu = React.createClass({
 					{/*me.props.parent.copyRightSection()*/}
 					<div className="container">
 					<div className="row">
-						<div className="col-sm-3 text-left site-logo pt-3">
+						<div className="col-sm-3 text-left site-logo pt-5">
 							<img id="t99" src="/app/truefactors/imgs/platoplan_logo.png" height="72"/>
 							{/*--- https://flamingtext.com/net-fu/dynamic.cgi?script=colored2-logo&text=Inventions&fontname=porky%27s ---*/}
 						</div>
-						<div className="col-sm-9 text-right pt-2 mt-3">
+						<div className="col-sm-9 text-right pt-4 mt-3">
 							{Object.keys(me.roles).map(function(idx){
 							  return (me.props.parent.state.role === idx) ? 
 							(<a href="JavaScript : void(0)" onClick={me.props.parent.removeRole.bind(me)}
