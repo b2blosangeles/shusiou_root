@@ -35,7 +35,7 @@ var _compModule = function(me, Root) {
     }
     this.loadLanguage = function() {
 	    console.log('load==>' + 'https://dev.shusiou.win/app/truefactors/language/controller.jsx');
-	return Root.lib.asyncModule({
+	return Root.lib.asyncModuleA({
 		setting:{	extend: {
 					contents : {
 					},					
@@ -47,7 +47,7 @@ var _compModule = function(me, Root) {
 			},
 		data : '',
 		parent : me
-	})
+	})()
     }   
     
 };
