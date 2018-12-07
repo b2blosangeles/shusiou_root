@@ -45,7 +45,7 @@ var _copyrightSection = React.createClass({
 						*/}
 						<a href="JavaScript: void(0)"  onClick={animationTransfer}
 							className="text-success">
-						Change Language</a></span>)
+						Change Language</a></span>)})}
 					</span> 					
 				</div>
 			</div></div>
