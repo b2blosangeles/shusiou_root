@@ -1,4 +1,9 @@
 var _global = {
+	langhs : {
+		en : 'English',
+		cn : '中文',
+		sp : 'española'	
+	},
 	roles : {
 		inventor :	{caption: 'Inventor'},
 		attorney :	{caption: 'Attorney'},
