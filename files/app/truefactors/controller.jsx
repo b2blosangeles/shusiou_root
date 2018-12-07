@@ -19,13 +19,16 @@ React.createClass({
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
 					controller : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
-					cacheTime : 1000
+					cacheTime : 1000,
+					key : '/classOverLay'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				
+			}} 
 			parent={me} objId={'A' + _oId} />
 				
 			<_asyncModule plugin={{
-			extend: {
+				extend: {
 					contents : {},   
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/root/compModule.jsx',
