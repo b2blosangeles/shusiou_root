@@ -30,10 +30,10 @@ var _copyrightSection = React.createClass({
 					</span>
 
 					<span className="pull-left">
-						{Object.key(langs).map(function(k) {
+						{Object.keys(langs).map(function(k) {
 						return(<span>
 						  <a href="JavaScript: void(0)"  onClick={animationTransfer}>
-							  {lanhs[m]}</a>
+							  {langs[m]}</a>
 						  &nbsp;&nbsp;|&nbsp;&nbsp;
 						</span>)
 						})}
