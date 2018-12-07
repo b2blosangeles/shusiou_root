@@ -21,9 +21,9 @@ connection.query(str, function (error, results, fields) {
 	
 	// if(req.headers.host.match(/^(www\.|dev\.|qa\.|)(platoplan)\.(com|win)$/)) { 
 	if(req.headers.host.match(/^(dev\.|qa\.)(platoplan)\.(com|win)$/)) { 
-		indextpl = 'platoplan.html'
+		indextpl = '/files/platoplan.html'
 	} else {
-		indextpl = 'index.tpl';
+		indextpl = '/tpl/index.tpl';
 	}
 	
 	if (error) {
@@ -40,7 +40,7 @@ connection.query(str, function (error, results, fields) {
 				servers[o].push('//' + o + (j + 1) + '_' + config.root );
 			}
 		}		
-		pkg.fs.readFile(env.site_path + '/tpl/' + indextpl, 'utf-8', function(err, content) {	
+		pkg.fs.readFile(env.site_path + indextpl, 'utf-8', function(err, content) {	
 			
 			var tpl = new Smarty(content);
 			res.send(tpl.fetch({
