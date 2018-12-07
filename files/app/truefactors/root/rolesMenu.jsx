@@ -12,7 +12,7 @@ var _rolesMenu = React.createClass({
 	},
 	render: function() {
 	  var me = this;
-	  var menuOptio = (me.props.parent.state.menuOption) ? me.props.parent.state.menuOption : '';
+	  var menuOption = (me.props.parent.state.menuOption) ? me.props.parent.state.menuOption : '';
 	  return  (
 		    <div className="container-fluid">
 			<div className="row bg-top-bar">
