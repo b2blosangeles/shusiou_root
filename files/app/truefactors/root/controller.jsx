@@ -106,6 +106,7 @@ React.createClass({
 		var me = this;
 		me.setState({ role : ''}, function() {	
 			window.location.href = '#/'
+			console.log('niu');
 		});
 	},
 	routeRule : function() {
