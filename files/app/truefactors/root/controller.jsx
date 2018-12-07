@@ -30,7 +30,6 @@ React.createClass({
 							howToStart : 'https://dev.shusiou.win/app/truefactors/contents/howToStart.txt'
 						},
 						includes : [
-							'https://dev.shusiou.win/app/truefactors/documentPage/language.jsx',
 							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
 							'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 							'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
