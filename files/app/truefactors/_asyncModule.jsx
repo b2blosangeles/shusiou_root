@@ -68,7 +68,7 @@ try {
 				  }); 
 			} else {
 				me._asyncModule = me.getAsyncCache(me.props.plugin.extend.controller);
-				console.log('===me._asyncModule===>');
+				console.log('===me._asyncModule===>' + me.props.plugin.extend.controller);
 				console.log(me._asyncModule);
 				
 				me.setState({success: true, update : new Date().getTime()});
