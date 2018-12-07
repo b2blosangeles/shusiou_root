@@ -31,7 +31,7 @@ var _rolesMenu = React.createClass({
 								onClick={me.props.parent.animationTransfer}>
 								<b>{me.roles[idx].caption}</b></a>)
 								:
-							  	(<a href={'#' + idx} 
+							  	(<a href={'#' + idx + '/' + (me.props.parent.state.menuOption) ? me.props.parent.state.menuOption : '' } 
 								className="btn btn-large rounded p-3 m-2 role-unchecked"
 								onClick={me.props.parent.animationTransfer}>
 								<b>{me.roles[idx].caption}</b></a>)
