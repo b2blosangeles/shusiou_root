@@ -36,7 +36,8 @@ React.createClass({
 					 ],
 					loadingInfo : '', // 'Loading ...',
 					controller : 'https://dev.shusiou.win/app/truefactors/root/controller.jsx',
-					cacheTime : 1000
+					cacheTime : 1000,
+					key : 'root'
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'}} 
 				parent={me} objId={'B' + _oId} />
