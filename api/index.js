@@ -21,7 +21,7 @@ connection.query(str, function (error, results, fields) {
 	
 	// if(req.headers.host.match(/^(www\.|dev\.|qa\.|)(platoplan)\.(com|win)$/)) { 
 	if(req.headers.host.match(/^(dev\.|qa\.)(platoplan)\.(com|win)$/)) { 
-		indextpl = '/files/platoplan.html'
+		indextpl = '/files/PlatoPlan.html'
 	} else {
 		indextpl = '/tpl/index.tpl';
 	}
