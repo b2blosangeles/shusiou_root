@@ -34,10 +34,11 @@ React.createClass({
 							'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
 							'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
 						],
-						controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx'
+						controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx',
+						key : 'content'
 					}, 
-					master: '//master1_dev.shusiou.win/api/DVCHub.api',
-				 	key : 'content'
+					master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				 	
 				},
 			data : menuItem,
 			parent : me
