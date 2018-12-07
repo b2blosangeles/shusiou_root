@@ -23,7 +23,7 @@ var _copyrightSection = React.createClass({
 						</span>)
 						})}
 						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
-						More ...</a>
+						Change ...</a>
 					</span> 									
 				</div>
 				<div className="col-sm-9 text-right">
