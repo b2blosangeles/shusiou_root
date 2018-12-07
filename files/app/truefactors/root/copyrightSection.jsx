@@ -26,7 +26,7 @@ var _copyrightSection = React.createClass({
 						more ..</a>
 					</span> 									
 				</div>
-				<div className="col-sm-7 text-right">
+				<div className="col-sm-12 text-right">
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
@@ -45,7 +45,19 @@ var _copyrightSection = React.createClass({
 							  {Root.global.menuItems[m]}</a>
 						</span>)
 						})}
-					</span>					
+					</span>	
+					<span className="pull-left">
+						{langs.map(function(k) {
+						return(<span>
+						&nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
+						{Root.global.langs[k]}</a>
+						</span>)
+						})}
+						&nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="JavaScript: void(0)"  onClick={animationTransfer}>
+						more ..</a>
+					</span> 					
 				</div>
 			</div></div>
 		</div>
