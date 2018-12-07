@@ -43,7 +43,8 @@ var _compModule = function(me, Root) {
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/language/controller.jsx'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api',
+			 	key : 'language'
 			},
 		data : '',
 		parent : me
