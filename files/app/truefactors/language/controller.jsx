@@ -6,7 +6,7 @@ React.createClass({
 	switchLang : function(lang) {
 		var me = this;
 		me.setState({lang : lang});
-	//	me.props.parent.setState({lang : lang})
+		me.props.parent.setState({_updated : new Date().getTime()})
 	},
 	showBody : function() {
 		var me = this;
