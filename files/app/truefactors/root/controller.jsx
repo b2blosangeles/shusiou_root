@@ -41,7 +41,7 @@ React.createClass({
 		return Root.commUI.show({
 				code: 'pageFrame', 
 				parent : me, 
-				data : data, 
+				data : (<span>-- {new Date().getTime()}--{data}</span>), 
 				setting : {
 					type : 'light',
 					noshadow : true,
