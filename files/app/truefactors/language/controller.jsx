@@ -7,7 +7,7 @@ React.createClass({
 	switchLang : function(lang) {
 		var me = this;
 		me.setState({lang : lang}, function() {
-			if (localStorage) localStorage.setItem('lang', 'lang');
+			if (localStorage) localStorage.setItem('lang', lang);
 			me.props.parent.setState({lang: me.state.lang});
 		});
 	},
