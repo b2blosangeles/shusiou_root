@@ -41,7 +41,9 @@ try {
 			me._asyncObjId = me.props.objId;
 
 			var cfg = me.props.plugin;
-			var k = (cfg.key) ? cfg.key : me.props.plugin.extend.controller;
+			// var k = (cfg.key) ? cfg.key : me.props.plugin.extend.controller;
+			var k = encodeURIComponent(me.props.plugin.extend.controller);
+			
 			if (!k || !me.asyncCacheExist(k)) {
 				$.ajax({
 				     type: 'POST',
@@ -64,11 +66,6 @@ try {
 				  }); 
 			} else {
 				me._asyncModule = me.getAsyncCache(k);
-				/*
-				console.log('===me._asyncModule===>' + me.props.plugin.extend.controller);
-				console.log('---->');
-				console.log(__asyncCache);
-				*/
 				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
