@@ -3,7 +3,7 @@ React.createClass({
 		var me = this;
 		me.roles = Root.global.roles;
 		me.compModule = new _compModule(me, Root);
-		var lang = sessionStorage.getItem('lang');
+		var lang = localStorage.getItem('lang');
           	return {lang : ((lang) ? lang : 'en'), role: '', menuOption:null}
         },
 
