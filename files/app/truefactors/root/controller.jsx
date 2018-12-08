@@ -78,18 +78,22 @@ React.createClass({
 				}
 			})
 	},
-	removeRole : function(e) {
-		var me = this;
-		e.preventDefault();
-		me.setState({ role : ''}, function() { window.location.href = '#/';});
-	},
+
 	changeRole : function(v, e) {
 		var me = this;
 		e.preventDefault();
 		me.setState({ role : v}, function() {
 			window.location.href = '#'+ v;
 		});
-	},	
+	},
+
+	changeCore : function(v, e) {
+		var me = this;
+		e.preventDefault();
+		me.setState({ core : v}, function() {
+			window.location.href = '#/'+ v;
+		});
+	},
 	routeRule : function() {
 		var me = this;
 		return {
