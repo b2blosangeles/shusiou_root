@@ -14,7 +14,7 @@ React.createClass({
 			me.compData.loadVideos();
 			// me.loadData();
 		}  else if (me.props.parent.state.menuOption === 'myVideos') {
-			me.compData.loadVideos();
+			me.compData.loadMyinventions ();
 		}
 	},
 	componentWillUnmount : function() {
