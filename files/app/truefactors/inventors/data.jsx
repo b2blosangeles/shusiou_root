@@ -1,6 +1,7 @@
 var _compData = function(me, Root) {
 	this.loadVideos = function() {
 		//var spin_id = Root.overLay.spinOn();
+		console.log('===call load loadVideos');
 		Root.lib.setSpinAnchor(me, 'AA', true);
 		//me.list = [];
 		me.setState({updated : new Date().getTime()});
@@ -15,7 +16,7 @@ var _compData = function(me, Root) {
 	},
 	this.loadMyinventions = function() {
 		//var spin_id = Root.overLay.spinOn();
-		console.log('===call load');
+		console.log('===call load loadMyinventions');
 		Root.lib.setSpinAnchor(me, 'AB', true);
 		//me.list = [];
 		me.setState({updated : new Date().getTime()});
