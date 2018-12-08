@@ -19,16 +19,16 @@ var _copyrightSection = React.createClass({
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href={'#/'} onClick={animationTransfer}>Home</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
-					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Privacy</a>
+					<a href={'#/privacy'} onClick={animationTransfer}>Privacy</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;
-					<a href={'#' + role + '/terms'} onClick={animationTransfer}>Terms</a>
+					<a href={'#/terms'} onClick={animationTransfer}>Terms</a>
 					</span>
 
 					<span className="pull-right">
 						{Root.global.menuTree.common.map(function(m) {
 						return(<span>
 						  &nbsp;&nbsp;|&nbsp;&nbsp;
-						  <a href={'#' + role + '/' + m}  onClick={animationTransfer}>
+						  <a href={'#/' + m}  onClick={animationTransfer}>
 							  {Root.global.menuItems[m]}</a>
 						</span>)
 						})}
@@ -36,7 +36,7 @@ var _copyrightSection = React.createClass({
 					<span className="pull-left">
 						<span>
 							&nbsp;&nbsp;|&nbsp;&nbsp;
-							<a href={'#' + role + '/language'}  onClick={animationTransfer}>
+							<a href={'#/language'}  onClick={animationTransfer}>
 							Change Language</a>
 						</span>
 					</span> 					
