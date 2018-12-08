@@ -55,10 +55,12 @@ try {
 					   	me.setAsyncCache(k , resultData);
 					  }
 					  me._asyncModule = resultData;
+					     alert(2);
 					  me.setState({success: true, update : new Date().getTime()});
 				     },
 				     error : function(xhr, textStatus, error) { 
 				       me._asyncModuleErr = error;
+					     alert(3);
 				       me.setState({success: false, update : new Date().getTime()})
 				     }
 				  }); 
@@ -69,7 +71,8 @@ try {
 				console.log('---->');
 				console.log(__asyncCache);
 				*/
-				me.setState({success: true, update : new Date().getTime()});
+				alert(1);
+				// me.setState({success: true, update : new Date().getTime()});
 			}
 		},
 		render: function() {
