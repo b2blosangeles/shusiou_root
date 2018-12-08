@@ -26,9 +26,9 @@ React.createClass({
 				{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : 'error', 
+					data : 'No document', 
 					setting : {
-						type: 'No document',
+						type: 'danger',
 						style: {'min-height' : '2em'}
 					}
 				})}
