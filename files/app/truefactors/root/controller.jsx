@@ -3,7 +3,8 @@ React.createClass({
 		var me = this;
 		me.roles = Root.global.roles;
 		me.compModule = new _compModule(me, Root);
-          	return {role: '', menuOption:null, spinner: true, route:''}
+		var lang = sessionStorage.getItem('lang');
+          	return {lang : ((lang) ? lang : 'en'), role: '', menuOption:null}
         },
 
 	changeContentPage : function(v, e) {
