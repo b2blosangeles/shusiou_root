@@ -18,13 +18,13 @@ React.createClass({
 			</div>
 			<div className="row p-2 pt-3 m-2">	
 				{list.map(function(m) {
-					return (<div 
+					return (<a 
 						className={'col-sm-2 m-2 mt-3 p-3 border border-info roundered text-center ' + 
 							((m == me.state.lang) ? 'role-checked' : 'role-unchecked') }
 						onClick={me.switchLang.bind(me, m)}	
 						>
 							{Root.global.langs[m]}
-						</div>)
+						</a>)
 				})}
 			</div>
 		</div>)	
