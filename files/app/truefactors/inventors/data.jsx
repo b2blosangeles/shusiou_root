@@ -13,6 +13,20 @@ var _compData = function(me, Root) {
 			},1000
 		)
 	},
+	this.loadMyinventions = function() {
+		//var spin_id = Root.overLay.spinOn();
+		Root.lib.setSpinAnchor(me, 'AB', true);
+		//me.list = [];
+		me.setState({updated : new Date().getTime()});
+		setTimeout(
+			function() {
+				me.list = Root.lib.getNumberList(20);
+				Root.lib.setSpinAnchor(me, 'AB', false)
+			//	Root.overLay.spinOff(spin_id);
+				me.setState({updated : new Date().getTime()});
+			},1000
+		)
+	},		
 	this.showImage = function(i) {
 		var list = [
 			'/app/truefactors/resource/webp/mqdefault_6s.webp',
