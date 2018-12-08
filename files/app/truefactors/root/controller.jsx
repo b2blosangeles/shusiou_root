@@ -48,21 +48,21 @@ React.createClass({
         showBody : function() {
                 var me = this;
 		
-		// if (me.state.menuOption === 'language')  {
-		//	console.log('====load lang====||' + me.state.menuOption);
-		//	return me.compModule.loadLanguage();	
-		// }
-		if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
-		    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1 && 
-		    Root.global.menuTree._publicMenu.indexOf(me.state.menuOption) === -1 
-		   ) {
-			if (me.state.role === 'inventor')  return me.compModule.loadInventor();
-			if (me.state.role === 'investor')  return me.compModule.loadInvestor();
+		if (me.state.menuOption === 'language')  {
+			console.log('====load lang====||' + me.state.menuOption);
+			return me.compModule.loadLanguage();	
 		} else {
-			console.log('====load contemnt====||' + me.state.menuOption);
-			return me.loadContentPage(me.state.menuOption);	
+			if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
+			    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1 && 
+			    Root.global.menuTree._publicMenu.indexOf(me.state.menuOption) === -1 
+			   ) {
+				if (me.state.role === 'inventor')  return me.compModule.loadInventor();
+				if (me.state.role === 'investor')  return me.compModule.loadInvestor();
+			} else {
+				console.log('====load contemnt====||' + me.state.menuOption);
+				return me.loadContentPage(me.state.menuOption);	
+			}
 		}
-		
         }, 
 	showPageFrame : function(data) {
 		var me = this;
