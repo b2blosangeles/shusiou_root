@@ -1,21 +1,21 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {}
+          	return {lanhg: 'en'}
         },
 	showBody : function() {
 		var me = this;
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
-			<div className="row p-1 pt-5 mt-5">	
+			<div className="row p-1 pt-5">	
 				<div className="col-sm-12">
-					Select language:	
+					Change language:	
 				</div>
 			</div>
 			<div className="row p-1 pt-5">	
 				{list.map(function(m) {
 					return (<div className="col-sm-2 p-1 m-3 
-						border border-info roundered text-center role-checked">
+						border border-info roundered text-center role-unchecked">
 							{Root.global.langs[m]}
 						</div>)
 				})}
