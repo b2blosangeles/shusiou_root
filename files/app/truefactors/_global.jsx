@@ -2,7 +2,11 @@ var _global = {
 	langs : {
 		en : 'English',
 		cn : '中文',
-		sp : 'Española'	
+		sp : 'Española',
+		fr : 'française',
+		jp : '日本語の',
+		kr : '한국어',
+		ge : 'Deutsche'
 	},
 	roles : {
 		inventor :	{caption: 'Inventor'},
