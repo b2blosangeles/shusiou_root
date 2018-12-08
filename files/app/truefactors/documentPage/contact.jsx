@@ -4,7 +4,7 @@ var _contact = React.createClass({
 	return {};
     },
     render: function() {
-	return  (<div className="container-fluid">
+	return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-1 text-center"><h3>Contact Us</h3></div>
 			</div>	
