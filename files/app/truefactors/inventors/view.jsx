@@ -53,5 +53,41 @@ var _compView = function(me, Root) {
 				</div>
 			</div>)	
 	}
-	
+	this.showMyinventions = function () {
+		return  (
+			<div className="container">
+				{Root.lib.spinAnchor(me, 'AA')}
+				<div className="row ">
+					<div className="col-sm-12 p-1">	
+					{Root.commUI.show({
+							code: 'infoBox', 
+							parent : me, 
+							data : me.compView.showVideoMenu(), 
+							setting : {
+								class : ' alert-secondary text-right ',
+								noshadow :  true,
+								rounded : true,
+								style : {'min-height' : '2em'}
+							}
+						})}
+					</div>
+				</div>
+				<div className="row mt-2">				
+					{me.list.map(function(m) {
+					return (<div className="col-sm-3 p-1">
+						{Root.commUI.show({
+							code: 'infoBox', 
+							parent : me, 
+							data : me.compData.showImage(m), 
+							setting : {
+								noshadow :false,
+								type: 'light',
+								style : {'min-height' : '9em'}
+							}
+						})}
+						</div>)
+					})}							
+				</div>
+			</div>)	
+	}
 };
