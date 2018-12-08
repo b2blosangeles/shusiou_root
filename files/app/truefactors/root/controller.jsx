@@ -59,8 +59,9 @@ React.createClass({
 				if (me.state.role === 'inventor')  return me.compModule.loadInventor();
 				if (me.state.role === 'investor')  return me.compModule.loadInvestor();
 			} else if (me.state.menuOption !==  null) {
-				console.log('====load contemnt====||' + me.state.menuOption);
-				return me.loadContentPage(me.state.menuOption);	
+				console.log('====load contemnt 4====||' + me.state.menuOption);
+				//return me.loadContentPage(me.state.menuOption);	
+				return me.compModule.loadContentPage(me.state.menuOption);
 			}
 		}
         }, 
