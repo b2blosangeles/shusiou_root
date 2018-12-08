@@ -119,11 +119,8 @@ React.createClass({
 					v.menuOption = def_path;
 				}
 				*/
-				setTimeout(
-					function() {
-						me.setState(v)
-					}, 100
-				)
+				me.setState(v);
+				console.log(me.state);
 				
 			}			
 		}
