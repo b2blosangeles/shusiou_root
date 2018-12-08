@@ -12,7 +12,9 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			me.compData.loadVideos();
 			// me.loadData();
-		} 
+		}  else if (me.props.parent.state.menuOption === 'myInventions') {
+			me.compData.loadVideos();
+		}
 	},
 	componentWillUnmount : function() {
 		var me = this;
