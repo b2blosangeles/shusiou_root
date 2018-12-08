@@ -51,5 +51,29 @@ var _compModule = function(me, Root) {
 		parent : me
 	})
     }   
-    
+    this.loadContentPage = function(menuItem) {
+	return Root.lib.asyncModule({
+		setting:{	extend: {
+					contents : {
+						terms : 'https://dev.shusiou.win/app/truefactors/contents/terms.text',
+						faq: 'https://dev.shusiou.win/app/truefactors/contents/faq.text',
+						privacy : 'https://dev.shusiou.win/app/truefactors/contents/privacy.text',
+						howToStart : 'https://dev.shusiou.win/app/truefactors/contents/howToStart.txt'
+					},
+					includes : [
+						'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
+						'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
+						'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
+					],
+					controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx'
+
+				}, 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api',
+				key : 'content'
+
+			},
+		data : menuItem,
+		parent : me
+	})
+    }      
 };
