@@ -120,9 +120,12 @@ React.createClass({
 				}
 				*/
 				console.log(v);
-				me.setState(v, function(){
-					console.log(me.state);
-				});
+				setTimeout( function() {
+					me.setState(v, function(){
+						console.log(me.state);
+					});
+				})
+
 				
 				
 			}			
