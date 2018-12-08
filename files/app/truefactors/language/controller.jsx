@@ -9,7 +9,9 @@ React.createClass({
 		return (<div className="container">
 			<div className="row p-1 pt-5 m-3">	
 				{list.map(function(m) {
-					return (<div className="col-sm-2 p-1 border border-info">{Root.global.langs[m]}==</div>)
+					return (<div className="col-sm-2 p-1 border border-info">
+							{Root.global.langs[m]}
+						</div>)
 				})}
 			</div>
 		</div>)	
