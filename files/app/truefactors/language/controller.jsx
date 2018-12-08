@@ -5,9 +5,14 @@ React.createClass({
         },
 	showBody : function() {
 		var me = this;
+		var list = Root.global.langs;
 		return (<div className="container">
 			<div className="row">
-				test
+				<div className="col-sm-12 p-1">	
+					{list.map(function(m) {
+						<div className="col-sm-1 p-1">{m}==</div>
+					}
+				</div>
 			</row>
 		</div>)	
 	},
