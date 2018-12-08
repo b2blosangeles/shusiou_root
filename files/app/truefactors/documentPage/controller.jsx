@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState : function() {
 		var me = this;
-		// me.compContents = _compContents;
+		me.compContents = _compContents;
           	return {}
         },
 	componentDidMount : function() {
