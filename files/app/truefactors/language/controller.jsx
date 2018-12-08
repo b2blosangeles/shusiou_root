@@ -9,7 +9,7 @@ React.createClass({
 		me.setState({lang : lang});
 		
 		setTimeout(function() {
-			me.props.parent.setState({updated : new Date().getTime()});
+		//	me.props.parent.setState({updated : new Date().getTime()});
 		});
 	},
 	showBody : function() {
