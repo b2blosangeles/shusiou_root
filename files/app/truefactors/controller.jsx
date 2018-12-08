@@ -19,10 +19,10 @@ React.createClass({
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
 					controller : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
-					cacheTime : 1000,
-					key : '/classOverLay'
+					cacheTime : 1000
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api',
+				key : '/classOverLay'
 				
 			}} 
 			parent={me} objId={'A' + _oId} />
