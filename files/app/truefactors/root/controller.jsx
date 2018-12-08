@@ -104,7 +104,7 @@ React.createClass({
 				if (path_a[0])  v.role  = path_a[0];
 				
 				if (path_a[1]) v.menuOption = path_a[1];
-				else v.menuOption = '';
+				// else v.menuOption = '';
 				
 				else {
 					if (!path_a[0]) {
