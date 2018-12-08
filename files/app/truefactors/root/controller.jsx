@@ -94,34 +94,10 @@ React.createClass({
 			}			
 		}
 	},	
-	routeRuleA : function() {
-		var me = this;
-		return {
-			'_default' : function(path) {
-				var path_a = path.split('/');
-				var v = {};
-				if (path_a[0])  me.setState({ role : path_a[0]});
-				
-				if (path_a[1]) me.setState({ menuOption : path_a[1]});
-				else {
-					if (!path_a[0]) {
-						var def_path = '';
-					} else {
-						var def_path = (!Root.global.menuTree[path_a[0]] ||
-						    !Root.global.menuTree[path_a[0]].length) ? 
-							Root.global.menuTree._publicMenu[0] :
-							Root.global.menuTree[path_a[0]][0];
-					}
-					me.setState({ menuOption : def_path});
-				}
-				 me.setState(v)
-			}			
-		}
-	},
         render: function() {
           var me = this;
           return  (
-		<span>
+		<span> -- {new Date().getTime()}--
 			<_routerControl routeRule={me.routeRule()} />
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
