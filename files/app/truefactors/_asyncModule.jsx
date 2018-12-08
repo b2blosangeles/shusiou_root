@@ -64,11 +64,12 @@ try {
 				  }); 
 			} else {
 				me._asyncModule = me.getAsyncCache(k);
+				/*
 				console.log('===me._asyncModule===>' + me.props.plugin.extend.controller);
 				console.log('---->');
 				console.log(__asyncCache);
-				
-				me.setState({success: true, update : new Date().getTime()});
+				*/
+				// me.setState({success: true, update : new Date().getTime()});
 			}
 		},
 		render: function() {
