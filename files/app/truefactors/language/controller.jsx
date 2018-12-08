@@ -1,15 +1,15 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {lang : me.props.parent.state.lang}
+          	return {lang : (me.state.lang) ? me.state.lang : 'en'}
+		//return {lang : (me.props.parent.state.lang) ? me.props.parent.state.lang : 'en'}
         },
+	
 	switchLang : function(lang) {
 		var me = this;
-		
 		me.setState({lang : lang});
-		
 		setTimeout(function() {
-			me.props.parent.setState({lang: lang, updated : new Date().getTime()});
+			me.props.parent.setState({_updated : new Date().getTime()});
 		});
 	},
 	showBody : function() {
