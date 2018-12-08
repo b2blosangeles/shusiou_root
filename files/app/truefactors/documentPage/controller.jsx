@@ -39,7 +39,7 @@ React.createClass({
 		  {Root.commUI.show({
 			code: 'infoBox', 
 			parent : me, 
-			data : me.showContent(), 
+			data : 'me.showContent()', 
 			setting : {
 				type : 'light',
 				noshadow : true,
