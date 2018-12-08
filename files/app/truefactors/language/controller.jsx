@@ -12,14 +12,14 @@ React.createClass({
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
 			<div className="row p-1 pt-4 m-2">	
-				<div className="col-sm-12 p-3">
+				<div className="col-sm-12 p-3 text-info">
 					Change language:	
 				</div>
 			</div>
 			<div className="row p-2 pt-3 m-2">	
 				{list.map(function(m) {
 					return (<a 
-						className={'col-sm-2 m-2 mt-3 p-3 btn btn-warning rounded text-center text-warning ' + 
+						className={'col-sm-2 m-2 mt-3 p-3 border border-inforounded text-center text-info ' + 
 							((m == me.state.lang) ? 'role-checked' : 'role-unchecked') }
 						onClick={me.switchLang.bind(me, m)}	
 						>
