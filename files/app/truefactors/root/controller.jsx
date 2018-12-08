@@ -116,7 +116,7 @@ React.createClass({
 				setTimeout(
 					function() {
 						me.setState(v)
-					}, 1000
+					}, 100
 				)
 				
 			}			
