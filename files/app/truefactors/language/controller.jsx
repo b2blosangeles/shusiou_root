@@ -3,6 +3,10 @@ React.createClass({
 		var me = this;
           	return {lang: 'en'}
         },
+	switchLang : function(lang) {
+		var me = this;
+		me.setState({lang : lang})
+	},
 	showBody : function() {
 		var me = this;
 		var list = Object.keys(Root.global.langs);
@@ -16,7 +20,9 @@ React.createClass({
 				{list.map(function(m) {
 					return (<div 
 						className={'col-sm-2 m-2 mt-3 p-3 border border-info roundered text-center ' + 
-							((m == me.state.lang) ? 'role-checked' : 'role-unchecked') }>
+							((m == me.state.lang) ? 'role-checked' : 'role-unchecked') }
+						onClick={me.switchLang.bind(me, m)}	
+						>
 							{Root.global.langs[m]}
 						</div>)
 				})}
