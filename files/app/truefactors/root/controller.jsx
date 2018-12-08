@@ -21,6 +21,7 @@ React.createClass({
 	},
 	loadContentPage : function(menuItem) {
 		var me = this;
+		return true;
 		return Root.lib.asyncModule({
 			setting:{	extend: {
 						contents : {
