@@ -22,13 +22,13 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.compView.showVideos();
 		} else {
-			return (<span>No document
+			return (<span>
 				{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
 					data : 'error', 
 					setting : {
-						type: 'danger',
+						type: 'No document',
 						style: {'min-height' : '2em'}
 					}
 				})}
