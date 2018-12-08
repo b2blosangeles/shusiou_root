@@ -10,7 +10,7 @@ React.createClass({
 			// e.preventDefault();
 			if (localStorage) localStorage.setItem('lang', lang);
 			window.location.href = '#/';
-			alert(11);
+			alert(12);
 			me.props.parent.setState({lang: me.state.lang}, function() {
 				
 				
