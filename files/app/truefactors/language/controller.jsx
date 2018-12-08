@@ -7,9 +7,9 @@ React.createClass({
 		var me = this;
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
-			<div className="row p-1 pt-5 m-3">	
+			<div className="row p-1 pt-5">	
 				{list.map(function(m) {
-					return (<div className="col-sm-2 p-1 border border-info">
+					return (<div className="col-sm-2 p-1 m-3 border border-info roundered">
 							{Root.global.langs[m]}
 						</div>)
 				})}
