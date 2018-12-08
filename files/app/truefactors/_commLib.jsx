@@ -10,22 +10,22 @@ var _commLib = function () {
 		return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
 	}		
 	this.getNumberList = function(n) {
-	var r = [];
-	for (var i = 0;  i < n; i++) r[i] = i;
-	return r;
+		var r = [];
+		for (var i = 0;  i < n; i++) r[i] = i;
+		return r;
 	}
 
 	this.setSpinAnchor = function(o, code, status) {
-	var v = (o.state.spinAnchor) ? o.state.spinAnchor : {};
-	if (status)  v[code]  = new Date().getTime();
-	else delete  v[code];
-	o.setState({spinAnchor: v, _update : new Date().getTime()});
+		var v = (o.state.spinAnchor) ? o.state.spinAnchor : {};
+		if (status)  v[code]  = new Date().getTime();
+		else delete  v[code];
+		o.setState({spinAnchor: v, _update : new Date().getTime()});
 	}    
 
 	this.spinAnchor = function(o, code) {
-	return(!o.state.spinAnchor || !o.state.spinAnchor[code]) ? (<span></span>) :
-		(<span><span className="section_spin_cover"></span><span className="section_spin_page">
-		 <span className="section-spinner"></span></span></span>)   
+		return(!o.state.spinAnchor || !o.state.spinAnchor[code]) ? (<span></span>) :
+			(<span><span className="section_spin_cover"></span><span className="section_spin_page">
+			 <span className="section-spinner"></span></span></span>)   
 	}
 	
    /*========== Need review ====*/
