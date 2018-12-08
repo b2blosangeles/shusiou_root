@@ -12,7 +12,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			me.compData.loadVideos();
 			// me.loadData();
-		}
+		} 
 	},
 	componentWillUnmount : function() {
 		var me = this;
@@ -21,6 +21,8 @@ React.createClass({
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.compView.showVideos();
+		} else if (me.props.parent.state.menuOption === 'myInventions') {
+			me.compView.showMyinventions()
 		} else {
 			return (<span>
 				{Root.commUI.show({
