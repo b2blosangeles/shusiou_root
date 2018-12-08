@@ -14,7 +14,7 @@ React.createClass({
 		return (<div className="container">
 			<div className="row p-1 pt-4 m-2">	
 				<div className="col-sm-12 p-3 text-info">
-					Change language: {new Date().getTime()}	
+					Change language:	
 				</div>
 			</div>
 			<div className="row p-2 pt-3 m-2">	
