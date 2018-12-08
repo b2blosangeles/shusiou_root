@@ -21,14 +21,14 @@ var _global = {
 		howToStartInvention 	: 'How to start',
 		faq 			: 'FAQ',
 		myVideos 		: 'My Videos', 
-		myInvention 		: 'My Inventions',
+		myInventions 		: 'My Inventions',
 		inventions		: 'Inventions',
 		myRequest		: 'My Requests'
 	},
 	menuTree : {
 		common	 	: ['contact'],
 		_publicMenu	: ['howToStart', 'faq'],
-		inventor 	: ['myInvention', 'myVideos', 'howToStartInvention', 'faq'], 
-		investor 	: ['faq', 'inventions', 'myRequest']
+		inventor 	: ['myInventions', 'myVideos', 'howToStartInvention', 'faq'], 
+		investor 	: ['myRequest', 'inventions', 'faq']
 	}
 };
