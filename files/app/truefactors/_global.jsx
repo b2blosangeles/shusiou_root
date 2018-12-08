@@ -15,19 +15,20 @@ var _global = {
 		investor :	{caption: 'Investor'}
 	},
 	menuItems : {
-		about 		: 'About Plato Plan',
-		contact 	: 'Contact Us',
-		howToStart 	: 'How to start',
-		faq 		: 'FAQ',
-		myVideos 	: 'My Videos', 
-		myInvention 	: 'My Inventions',
-		inventions	: 'Inventions',
-		myRequest	: 'My Requests'
+		about 			: 'About Plato Plan',
+		contact 		: 'Contact Us',
+		howToStart 		: 'How to start',
+		howToStartInvention 	: 'How to start',
+		faq 			: 'FAQ',
+		myVideos 		: 'My Videos', 
+		myInvention 		: 'My Inventions',
+		inventions		: 'Inventions',
+		myRequest		: 'My Requests'
 	},
 	menuTree : {
 		common	 	: ['contact'],
 		_publicMenu	: ['howToStart', 'faq'],
-		inventor 	: ['myVideos', 'howToStart', 'myInvention', 'faq'], 
+		inventor 	: ['myInvention', 'myVideos', 'howToStartInvention', 'faq'], 
 		investor 	: ['faq', 'inventions', 'myRequest']
 	}
 };
