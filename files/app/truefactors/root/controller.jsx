@@ -3,7 +3,7 @@ React.createClass({
 		var me = this;
 		me.roles = Root.global.roles;
 		me.compModule = new _compModule(me, Root);
-          	return {role: '', menuOption:'', spinner: true, route:''}
+          	return {role: '', menuOption:null, spinner: true, route:''}
         },
 
 	changeContentPage : function(v, e) {
@@ -61,10 +61,7 @@ React.createClass({
 				if (me.state.role === 'investor')  return me.compModule.loadInvestor();
 			} else {
 				console.log('====load contemnt====||' + me.state.menuOption);
-				return me.compModule.loadInvestor();
-				// return me.compModule.loadContentPage();
-				//return me.compModule.loadLanguage();
-				// return me.loadContentPage(me.state.menuOption);	
+				return me.loadContentPage(me.state.menuOption);	
 			}
 		}
         }, 
