@@ -60,13 +60,6 @@ React.createClass({
 		});
 	},
 
-	changeCore : function(v, e) {
-		var me = this;
-		e.preventDefault();
-		me.setState({ core : v}, function() {
-			window.location.href = '#/'+ v;
-		});
-	},
 	routeRule : function() {
 		var me = this;
 		return {
