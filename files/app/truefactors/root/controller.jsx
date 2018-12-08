@@ -120,8 +120,10 @@ React.createClass({
 				}
 				*/
 				console.log(v);
-				me.setState(v);
-				console.log(me.state);
+				me.setState(v, function(){
+					console.log(me.state);
+				});
+				
 				
 			}			
 		}
