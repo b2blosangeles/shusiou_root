@@ -106,8 +106,8 @@ React.createClass({
 				//	v.core = path_a[1];
 				//} else 
 				if (path_a[1]) v.menuOption = path_a[1];
-				else v.menuOption = '';
-				/*
+				//else v.menuOption = '';
+				
 				else {
 					if (!path_a[0]) {
 						var def_path = '';
@@ -119,13 +119,13 @@ React.createClass({
 					}
 					v.menuOption = def_path;
 				}
-				*/
-				console.log(v);
-				setTimeout( function() {
+				
+				//console.log(v);
+				//setTimeout( function() {
 					me.setState(v, function(){
 						console.log(me.state);
 					});
-				})
+				//})
 
 				
 				
