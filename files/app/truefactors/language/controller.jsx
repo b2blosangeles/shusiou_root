@@ -1,12 +1,12 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {}
+          	return {lang : 'en'}
         },
 	switchLang : function(lang) {
 		var me = this;
-	//	me.setState({lang : lang});
-		me.props.parent.setState({lang : lang})
+		me.setState({lang : lang});
+	//	me.props.parent.setState({lang : lang})
 	},
 	showBody : function() {
 		var me = this;
@@ -21,7 +21,7 @@ React.createClass({
 				{list.map(function(m) {
 					return (<a href={'#/language'}
 						className={'col-sm-2 m-2 mt-3 p-3 border border-info rounded text-center text-info ' + 
-							((m == me.props.parent.state.lang) ? 'role-checked' : 'role-unchecked') }
+							((m == me.state.lang) ? 'role-checked' : 'role-unchecked') }
 						onClick={me.switchLang.bind(me, m)}	
 						>
 							{Root.global.langs[m]}
