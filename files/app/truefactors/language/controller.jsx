@@ -9,6 +9,7 @@ React.createClass({
 		me.setState({lang : lang}, function() {
 			if (localStorage) localStorage.setItem('lang', lang);
 			me.props.parent.setState({lang: me.state.lang});
+			window.location.href = '#/';
 		});
 	},
 	showBody : function() {
