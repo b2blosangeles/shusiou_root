@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {lang : 'en'}
+          	return {lang : me.props.parent.state.lang}
         },
 	switchLang : function(lang) {
 		var me = this;
@@ -9,7 +9,7 @@ React.createClass({
 		me.setState({lang : lang});
 		
 		setTimeout(function() {
-		//	me.props.parent.setState({updated : new Date().getTime()});
+			me.props.parent.setState({lang: lang, updated : new Date().getTime()});
 		});
 	},
 	showBody : function() {
