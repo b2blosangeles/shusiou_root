@@ -26,7 +26,7 @@ React.createClass({
 				{Root.commUI.show({
 					code: 'infoBox', 
 					parent : me, 
-					data : 'No document', 
+					data : 'Error :' + me.props.parent.state.menuOption +' document does not exist!', 
 					setting : {
 						type: 'danger',
 						style: {'min-height' : '2em'}
