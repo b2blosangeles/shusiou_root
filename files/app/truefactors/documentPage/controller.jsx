@@ -10,7 +10,7 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
-	/*
+	
 	showContent : function() {
 		var me = this;
 		
@@ -34,14 +34,14 @@ React.createClass({
 				}
 		}
 	},
-	*/
+	
         render : function() {
           var me = this;	
           return  (<span>
 		  {Root.commUI.show({
 			code: 'infoBox', 
 			parent : me, 
-			data : 'me.showContent()', 
+			data : me.showContent(), 
 			setting : {
 				type : 'light',
 				noshadow : true,
