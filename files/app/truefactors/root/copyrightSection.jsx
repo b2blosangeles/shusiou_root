@@ -17,7 +17,7 @@ var _copyrightSection = React.createClass({
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href={'#' + role + '/'} onClick={animationTransfer}>Home</a>
+					<a href={'#' + role + '/homePage'} onClick={animationTransfer}>Home</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
 					<a href={'#' + role + '/privacy'} onClick={animationTransfer}>Privacy</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;
