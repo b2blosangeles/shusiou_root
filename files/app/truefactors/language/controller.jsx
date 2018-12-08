@@ -8,6 +8,11 @@ React.createClass({
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
 			<div className="row p-1 pt-5">	
+				<div className="col-sm-12>
+					Select language:	
+				</div>
+			</div>
+			<div className="row p-1 pt-5">	
 				{list.map(function(m) {
 					return (<div className="col-sm-2 p-1 m-3 
 						border border-info roundered text-center role-checked">
