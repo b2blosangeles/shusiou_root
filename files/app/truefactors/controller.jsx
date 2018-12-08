@@ -19,7 +19,7 @@ React.createClass({
 					cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api',
-				key : '/classOverLay'
+				key : 'classOverLay'
 				
 			}} 
 			parent={me} objId={'A' + _oId} />
