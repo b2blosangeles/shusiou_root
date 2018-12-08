@@ -11,7 +11,7 @@ React.createClass({
 				{list.map(function(m) {
 					<div className="col-sm-1 p-1">{Root.global.langs[m]}==</div>
 				}
-			<div>
+			</div>
 		</div>)	
 	},
         render: function() {
