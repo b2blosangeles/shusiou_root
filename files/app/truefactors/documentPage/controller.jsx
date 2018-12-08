@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState : function() {
 		var me = this;
-		me.compContents = _compContents;
+		// me.compContents = _compContents;
           	return {}
         },
 	componentDidMount : function() {
@@ -10,6 +10,7 @@ React.createClass({
 	componentWillUnmount : function() {
 		var me = this;
 	},
+	/*
 	showContent : function() {
 		var me = this;
 		
@@ -33,6 +34,7 @@ React.createClass({
 				}
 		}
 	},
+	*/
         render : function() {
           var me = this;	
           return  (<span>
