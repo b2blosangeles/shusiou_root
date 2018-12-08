@@ -9,8 +9,8 @@ React.createClass({
 		return (<div className="container">
 			<div className="row p-1 pt-5 m-3">	
 				{list.map(function(m) {
-					<div className="col-sm-1 p-1">{Root.global.langs[m]}==</div>
-				}
+					return (<div className="col-sm-1 p-1">{Root.global.langs[m]}==</div>)
+				})}
 			</div>
 		</div>)	
 	},
