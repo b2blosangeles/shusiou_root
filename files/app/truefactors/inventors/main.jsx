@@ -11,10 +11,11 @@ React.createClass({
 		console.log('===me.props.parent.state.menuOption===>');
 		console.log(me.props.parent.state.menuOption);
 		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
-			me.compData.loadVideos();
+			me.compData.loadMyinventions ();
+			
 			// me.loadData();
 		}  else if (me.props.parent.state.menuOption === 'myVideos') {
-			me.compData.loadMyinventions ();
+			me.compData.loadVideos();
 		}
 	},
 	componentWillUnmount : function() {
@@ -23,9 +24,9 @@ React.createClass({
 	showBody : function() {
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
-			return me.compView.showVideos();
+			return me.compView.showMyinventions();
 		} else if (me.props.parent.state.menuOption === 'myVideos') {
-			me.compView.showMyinventions()
+			return me.compView.showVideos(); 
 		} else {
 			return (<span>
 				{Root.commUI.show({
