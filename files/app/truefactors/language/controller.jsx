@@ -7,9 +7,10 @@ React.createClass({
 	switchLang : function(lang, e) {
 		var me = this;
 		me.setState({lang : lang}, function() {
+			e.preventDefault();
 			if (localStorage) localStorage.setItem('lang', lang);
 			me.props.parent.setState({lang: me.state.lang}, function() {
-				e.preventDefault();
+				
 				window.location.href = '#/';
 			});
 		});
