@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {lang : (me.state.lang) ? me.state.lang : 'en'}
+          	return {}
 		//return {lang : (me.props.parent.state.lang) ? me.props.parent.state.lang : 'en'}
         },
 	
