@@ -12,7 +12,7 @@ var _contact = React.createClass({
 				<div className="col-sm-4 p-1">	
 					Customer Support	
 				</div>
-				<div className="col-sm-12 p-1">	
+				<div className="col-sm-4 p-1">	
 					<p>(800) xxx-xxxx</p>
 				</div>
 			</div>	
