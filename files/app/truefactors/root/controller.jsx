@@ -97,7 +97,7 @@ React.createClass({
         render: function() {
           var me = this;
           return  (
-		<span> -- {new Date().getTime()}--
+		<span>
 			<_routerControl routeRule={me.routeRule()} />
 			<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>
