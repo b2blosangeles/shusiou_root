@@ -7,12 +7,10 @@ React.createClass({
 		var me = this;
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
-			<div className="row">
-				<div className="col-sm-12 p-1 pt-5 m-3">	
-					{list.map(function(m) {
-						<div className="col-sm-1 p-1">{Root.global.langs[m]}==</div>
-					}
-				</div>
+			<div className="row p-1 pt-5 m-3">	
+				{list.map(function(m) {
+					<div className="col-sm-1 p-1">{Root.global.langs[m]}==</div>
+				}
 			</row>
 		</div>)	
 	},
