@@ -61,8 +61,8 @@ React.createClass({
 				if (me.state.role === 'investor')  return me.compModule.loadInvestor();
 			} else {
 				console.log('====load contemnt====||' + me.state.menuOption);
-				// return me.compModule.loadContentPage();
-				return me.compModule.loadLanguage();
+				return me.compModule.loadContentPage();
+				//return me.compModule.loadLanguage();
 				// return me.loadContentPage(me.state.menuOption);	
 			}
 		}
