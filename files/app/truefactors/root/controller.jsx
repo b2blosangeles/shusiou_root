@@ -87,7 +87,7 @@ React.createClass({
 		var me = this;
 		e.preventDefault();
 		me.setState({ role : v}, function() {
-			// window.location.href = '#/';
+			window.location.href = '#'+ v;
 		});
 	},	
 	routeRule : function() {
