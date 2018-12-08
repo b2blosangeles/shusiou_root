@@ -15,26 +15,25 @@ try {
 			}	
 		},
 		asyncCacheExist : function(k) {
-			// return false;
-			//if (!sessionStorage) {
+			if (!sessionStorage) {
 				return (!__asyncCache[k]) ? false : true;
-			//} else {
-			//	return (!sessionStorage.getItem(k)) ? false : true;
-			//}
+			} else {
+				return (!sessionStorage.getItem(k)) ? false : true;
+			}
 		},
 		setAsyncCache : function(k, v) {
-			//if (!sessionStorage) {
+			if (!sessionStorage) {
 				__asyncCache[k] = v;
-			//} else {
-			//	sessionStorage.setItem(k, JSON.stringify(v));
-			//}
+			} else {
+				sessionStorage.setItem(k, JSON.stringify(v));
+			}
 		},
 		getAsyncCache : function(k) {
-			//if (!sessionStorage) {
+			if (!sessionStorage) {
 				return __asyncCache[k];
-			//} else {
-			//	return JSON.parse(sessionStorage.getItem(k));
-			//}
+			} else {
+				return JSON.parse(sessionStorage.getItem(k));
+			}
 		},
 		loadPlugin : function() {
 			var me = this;
@@ -53,16 +52,9 @@ try {
 				     success: function(resultData){
 					     
 					  if (me.props.plugin.extend.controller) {   
-						  console.log('==me.setAsyncCache(me.props.plugin.extend.controller , resultData);==');
-						console.log(me.props.plugin.extend.controller);
-						console.log(resultData);
 					   	me.setAsyncCache(k , resultData);
 					  }
-					     console.log('_asyncCache===>');
-					     console.log(__asyncCache);
 					  me._asyncModule = resultData;
-					     console.log('----me._asyncModule---->');
-					     console.log(me._asyncModule);
 					  me.setState({success: true, update : new Date().getTime()});
 				     },
 				     error : function(xhr, textStatus, error) { 
