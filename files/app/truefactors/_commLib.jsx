@@ -8,14 +8,6 @@ var _commLib = function () {
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '.' + new Date().getTime();
 		return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
-	}
-	this.asyncModuleA = function(config) { return function() {
-			var me = this;
-			var cfg = config;
-			__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
-			var _oId = __asyncOId + '.' + new Date().getTime();
-			return <_asyncModule plugin={cfg.setting} data={cfg.data} parent={cfg.parent} objId={_oId}/>
-		}
 	}		
 	this.getNumberList = function(n) {
 	var r = [];
