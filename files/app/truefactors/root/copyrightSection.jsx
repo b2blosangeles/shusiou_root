@@ -35,8 +35,8 @@ var _copyrightSection = React.createClass({
 					</span>	
 					<span className="pull-left">
 						<span>
-							&nbsp;&nbsp;|&nbsp;&nbsp;
-							<a href={'#/language'}  onClick={me.props.parent.changeCore.bind(me, 'language')}>
+							&nbsp;&nbsp;|&nbsp;&nbsp;{/*me.props.parent.changeCore.bind(me, 'language')*/}
+							<a href={'#/language'}  onClick={animationTransfer}>
 							Change Language</a>
 						</span>
 					</span> 					
