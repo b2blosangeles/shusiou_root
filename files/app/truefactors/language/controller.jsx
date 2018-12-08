@@ -9,7 +9,8 @@ React.createClass({
 		return (<div className="container">
 			<div className="row p-1 pt-5">	
 				{list.map(function(m) {
-					return (<div className="col-sm-2 p-1 m-3 border border-info roundered text-center">
+					return (<div className="col-sm-2 p-1 m-3 
+						border border-info roundered text-center role-checked">
 							{Root.global.langs[m]}
 						</div>)
 				})}
