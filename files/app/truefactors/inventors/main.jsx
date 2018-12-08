@@ -22,7 +22,18 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.compView.showVideos();
 		} else {
-			return (<span>No document</span>)
+			return (<span>No document
+				{Root.commUI.show({
+					code: 'infoBox', 
+					parent : me, 
+					data : 'error', 
+					setting : {
+						type: 'danger',
+						style: {'min-height' : '2em'}
+					}
+				})}
+				
+				</span>)
 		}	
 	},
         render: function() {
