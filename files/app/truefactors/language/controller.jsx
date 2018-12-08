@@ -7,12 +7,12 @@ React.createClass({
 		var me = this;
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
-			<div className="row p-1 pt-5">	
-				<div className="col-sm-12">
+			<div className="row p-1 pt-3">	
+				<div className="col-sm-12 -1">
 					Change language:	
 				</div>
 			</div>
-			<div className="row p-1 pt-5">	
+			<div className="row p-1 pt-3">	
 				{list.map(function(m) {
 					return (<div className="col-sm-2 p-1 m-3 
 						border border-info roundered text-center role-unchecked">
