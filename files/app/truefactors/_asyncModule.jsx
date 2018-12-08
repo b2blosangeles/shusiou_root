@@ -69,7 +69,7 @@ try {
 				console.log('---->');
 				console.log(__asyncCache);
 				*/
-				// me.setState({success: true, update : new Date().getTime()});
+				me.setState({success: true, update : new Date().getTime()});
 			}
 		},
 		render: function() {
