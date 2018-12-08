@@ -1,7 +1,7 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {lanhg: 'en'}
+          	return {lang: 'en'}
         },
 	showBody : function() {
 		var me = this;
@@ -14,8 +14,8 @@ React.createClass({
 			</div>
 			<div className="row p-1 pt-3">	
 				{list.map(function(m) {
-					return (<div className="col-sm-2 m-3 
-						border border-info roundered text-center role-unchecked">
+					return (<div className="col-sm-2 m-3 border border-info roundered text-center 
+						{(m ==me.state.lang) ? 'role-checked' : 'role-unchecked' } ">
 							{Root.global.langs[m]}
 						</div>)
 				})}
