@@ -5,7 +5,11 @@ React.createClass({
         },
 	showBody : function() {
 		var me = this;
-		return (<span>--Language---</span>)	
+		return (<div className="container">
+			<div className="row">
+				test
+			</row>
+		</div>)	
 	},
         render: function() {
 		var me = this;
