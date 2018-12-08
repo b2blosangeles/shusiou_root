@@ -9,8 +9,7 @@ var _compModule = function(me, Root) {
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api',
-			 	key : 'inventor'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 			},
 		data : '',
 		parent : me
@@ -28,8 +27,7 @@ var _compModule = function(me, Root) {
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/investors/controller.jsx'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api',
-			 	key : 'investor'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 			},
 		data : '',
 		parent : me
@@ -44,8 +42,7 @@ var _compModule = function(me, Root) {
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/language/controller.jsx'
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api',
-			 	key : 'language'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 			},
 		data : '',
 		parent : me
@@ -68,8 +65,7 @@ var _compModule = function(me, Root) {
 					controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx'
 
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api',
-				key : 'content'
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 
 			},
 		data : menuItem,
