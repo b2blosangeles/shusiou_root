@@ -119,6 +119,7 @@ React.createClass({
 					v.menuOption = def_path;
 				}
 				*/
+				console.log(v);
 				me.setState(v);
 				console.log(me.state);
 				
