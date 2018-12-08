@@ -15,6 +15,7 @@ var _compData = function(me, Root) {
 	},
 	this.loadMyinventions = function() {
 		//var spin_id = Root.overLay.spinOn();
+		console.log('===call load');
 		Root.lib.setSpinAnchor(me, 'AB', true);
 		//me.list = [];
 		me.setState({updated : new Date().getTime()});
