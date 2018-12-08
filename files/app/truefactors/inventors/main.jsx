@@ -21,9 +21,9 @@ React.createClass({
 	},
 	showBody : function() {
 		var me = this;
-		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
+		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
 			return me.compView.showVideos();
-		} else if (me.props.parent.state.menuOption === 'myInventions') {
+		} else if (me.props.parent.state.menuOption === 'myVideos') {
 			me.compView.showMyinventions()
 		} else {
 			return (<span>
