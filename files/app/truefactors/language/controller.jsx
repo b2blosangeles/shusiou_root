@@ -9,9 +9,11 @@ React.createClass({
 		me.setState({lang : lang}, function() {
 			e.preventDefault();
 			if (localStorage) localStorage.setItem('lang', lang);
+			window.location.href = '#/';
+			alert(11);
 			me.props.parent.setState({lang: me.state.lang}, function() {
 				
-				window.location.href = '#/';
+				
 			});
 		});
 	},
