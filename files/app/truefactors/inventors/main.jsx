@@ -8,7 +8,8 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		
+		console.log('===me.props.parent.state.menuOption===>');
+		me.props.parent.state.menuOption(me.props.parent.state.menuOption);
 		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
 			me.compData.loadVideos();
 			// me.loadData();
