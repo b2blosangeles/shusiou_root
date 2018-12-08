@@ -7,8 +7,8 @@ React.createClass({
 		var me = this;
 		var list = Object.keys(Root.global.langs);
 		return (<div className="container">
-			<div className="row p-1 pt-5">	
-				<div className="col-sm-12 p-2">
+			<div className="row p-1 pt-4">	
+				<div className="col-sm-12 p-3">
 					Change language:	
 				</div>
 			</div>
