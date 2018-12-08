@@ -1,12 +1,12 @@
 var _global = {
 	langs : {
 		en : 'English',
-		cn : '中文',
-		sp : 'Española',
+		cn : '中文' //,
+/*		sp : 'Española',
 		fr : 'française',
 		jp : '日本語の',
 		kr : '한국어',
-		ge : 'Deutsche'
+		ge : 'Deutsche'*/
 	},
 	roles : {
 		inventor :	{caption: 'Inventor'},
