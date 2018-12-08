@@ -19,37 +19,10 @@ React.createClass({
 			Root.commUI.animation.transfer($(e.target));
 		}
 	},
-	loadContentPage : function(menuItem) {
-		var me = this;
-		return Root.lib.asyncModule({
-			setting:{	extend: {
-						contents : {
-							terms : 'https://dev.shusiou.win/app/truefactors/contents/terms.text',
-							faq: 'https://dev.shusiou.win/app/truefactors/contents/faq.text',
-							privacy : 'https://dev.shusiou.win/app/truefactors/contents/privacy.text',
-							howToStart : 'https://dev.shusiou.win/app/truefactors/contents/howToStart.txt'
-						},
-						includes : [
-							'https://dev.shusiou.win/app/truefactors/documentPage/homePage.jsx',
-							'https://dev.shusiou.win/app/truefactors/documentPage/about.jsx',
-							'https://dev.shusiou.win/app/truefactors/documentPage/contact.jsx'
-						],
-						controller : 'https://dev.shusiou.win/app/truefactors/documentPage/controller.jsx'
-						
-					}, 
-					master: '//master1_dev.shusiou.win/api/DVCHub.api',
-				 	key : 'content'
-				 	
-				},
-			data : menuItem,
-			parent : me
-		})	
-	},
         showBody : function() {
                 var me = this;
 		
 		if (me.state.menuOption === 'language')  {
-			console.log('====load lang====||' + me.state.core);
 			return me.compModule.loadLanguage();	
 		} else {
 			if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
@@ -58,9 +31,7 @@ React.createClass({
 			   ) {
 				if (me.state.role === 'inventor')  return me.compModule.loadInventor();
 				if (me.state.role === 'investor')  return me.compModule.loadInvestor();
-			} else if (me.state.menuOption !==  null) {
-				console.log('====load contemnt 4====||' + me.state.menuOption);
-				//return me.loadContentPage(me.state.menuOption);	
+			} else if (me.state.menuOption !==  null) {	
 				return me.compModule.loadContentPage(me.state.menuOption);
 			}
 		}
