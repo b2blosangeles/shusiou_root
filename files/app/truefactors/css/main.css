@@ -46,7 +46,7 @@ video#gumVideo {
 }
 
 /* @media screen and (max-width: 720px) { */
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1200px) {
   video {
     height: calc((50vw - 48px) * 3 / 4);
     margin: 0 10px 10px 0;
@@ -55,12 +55,6 @@ video#gumVideo {
 
   video#gumVideo {
     margin: 0 10px 10px 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1111px !important;
   }
 }
 
