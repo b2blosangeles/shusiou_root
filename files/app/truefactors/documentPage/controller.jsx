@@ -33,7 +33,7 @@ React.createClass({
 					return 	Root.commUI.show({
 						code: 'infoBox', 
 						parent : me, 
-						data : 'Error :' +menuItem +' document does not exist!', 
+						data : 'Error : document ' +menuItem +' does not exist!', 
 						setting : {
 							type: 'danger',
 							style: {'min-height' : '8em'}
