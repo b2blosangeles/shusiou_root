@@ -14,11 +14,11 @@ var _rolesMenu = React.createClass({
 	  var me = this;  
 	  var menuOption = (me.props.parent.state.menuOption) ? me.props.parent.state.menuOption : '';
 	  return  (
-		    <div className="container-fluid">
+		    <div className="container-fluid px-5">
 			<div className="row bg-top-bar">
 				<div className="col-sm-12 text-left">
 					{/*me.props.parent.copyRightSection()*/}
-					<div className="container-fluid mx-5">
+					<div className="container-fluid">
 					<div className="row">
 						<div className="col-sm-3 text-left site-logo pt-3">
 							<img  className="mt-2" src="/app/truefactors/imgs/platoplan_logo.png" height="72"/>
