@@ -18,7 +18,7 @@ var _compView = function(me, Root) {
 	};
 	this.showVideos = function () {
 		return  (
-			<div className="container">BBBB
+			<div className="container">
 				{Root.lib.spinAnchor(me, 'AA')}
 				<div className="row ">
 					<div className="col-sm-12 p-1">	
