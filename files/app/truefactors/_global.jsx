@@ -19,6 +19,7 @@ var _global = {
 		contact 		: 'Contact Us',
 		howToStart 		: 'How to start',
 		howToStartInvention 	: 'How to start',
+		howToStartInvestment	: 'How to start',
 		faq 			: 'FAQ',
 		myVideos 		: 'My Videos', 
 		myInventions 		: 'My Inventions',
