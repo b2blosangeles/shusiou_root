@@ -25,7 +25,7 @@ var _subMenu = React.createClass({
 	  var publicMenu = (!menu.length) ? Root.global.menuTree._publicMenu : [];
           return  (
             <div className="secondMenu container-fluid" style={{'height' : '2.5em', color:'#fff'}}>
-		<div className="container">
+		<div className="container-fluid mx-5">
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
 					<ul className="nav">						
