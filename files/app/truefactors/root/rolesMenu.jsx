@@ -14,7 +14,7 @@ var _rolesMenu = React.createClass({
 	  var me = this;  
 	  var menuOption = (me.props.parent.state.menuOption) ? me.props.parent.state.menuOption : '';
 	  return  (
-		    <div className="container">
+		    <div className="container-fluid">
 			<div className="row bg-top-bar">
 				<div className="col-sm-12 text-left">
 					{/*me.props.parent.copyRightSection()*/}
