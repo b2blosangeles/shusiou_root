@@ -4,6 +4,7 @@ React.createClass({
 		me.list = [];
 		me.compData = new _compData(me, Root);
 		me.compView = new _compView(me, Root);
+		me.compContents = _compContents;
           	return {}
         },
 	componentDidMount : function() {
@@ -30,7 +31,7 @@ React.createClass({
 		} else if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.compView.showVideos(); 
 		} else if (me.props.parent.state.menuOption === 'howToStartInvention') {
-			return 'howToStartInvention'
+			return me.compContents['howToStartInvention'];
 		} else {
 			return (<span>
 				{Root.commUI.show({
