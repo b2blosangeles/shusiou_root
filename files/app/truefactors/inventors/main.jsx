@@ -40,7 +40,7 @@ React.createClass({
 					data : 'Error :' + me.props.parent.state.menuOption +' document does not exist!', 
 					setting : {
 						type: 'danger',
-						nodhadow : true,
+						noshadow : true,
 						style: {'min-height' : '2em'}
 					}
 				})}
