@@ -45,8 +45,7 @@ video#gumVideo {
   }
 }
 
-/* @media screen and (max-width: 720px) { */
-@media screen and (min-width: 1200px !important) {
+@media screen and (max-width: 720px) { */
   video {
     height: calc((50vw - 48px) * 3 / 4);
     margin: 0 10px 10px 0;
