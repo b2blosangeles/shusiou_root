@@ -30,7 +30,15 @@ React.createClass({
 				if (me.compContents[menuItem]) {
 					return me.compContents[menuItem];
 				} else {
-					return (<span>Document {me.props.data} does not exist!!</span>)		
+					return 	{Root.commUI.show({
+						code: 'infoBox', 
+						parent : me, 
+						data : 'Error :' +menuItem +' document does not exist!', 
+						setting : {
+							type: 'danger',
+							style: {'min-height' : '8em'}
+						}
+					})}		
 				}
 		}
 	},
