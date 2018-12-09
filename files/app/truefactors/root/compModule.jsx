@@ -4,7 +4,7 @@ var _compModule = function(me, Root) {
 	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {
-						howToStartInvestment : 'https://dev.shusiou.win/app/truefactors/contents/howToStartInvestment.txt'
+						howToStartInvention : 'https://dev.shusiou.win/app/truefactors/contents/howToStartInvention.txt'
 					},
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
