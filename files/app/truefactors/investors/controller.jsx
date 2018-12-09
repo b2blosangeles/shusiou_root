@@ -22,8 +22,22 @@ React.createClass({
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			return me.compView.showVideos();
-		} else {
-			return (<span>No document</span>)
+		}  else if (me.props.parent.state.menuOption === 'howToStartInvestmen') {
+			return me.compContents['howToStartInvestment'];
+		} else {	
+			return (<span>
+				{Root.commUI.show({
+					code: 'infoBox', 
+					parent : me, 
+					data : 'Error :' + me.props.parent.state.menuOption +' document does not exist!', 
+					setting : {
+						type: 'danger',
+						noshadow : true,
+						style: {'min-height' : '2em'}
+					}
+				})}
+				
+				</span>)
 		}	
 	},
         render: function() {
