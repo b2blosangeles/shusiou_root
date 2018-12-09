@@ -36,6 +36,7 @@ React.createClass({
 						data : 'Error : document ' +menuItem +' does not exist!', 
 						setting : {
 							type: 'danger',
+							nodhadow : true,
 							style: {'min-height' : '8em'}
 						}
 					})		
