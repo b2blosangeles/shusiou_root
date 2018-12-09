@@ -24,7 +24,7 @@ React.createClass({
 			<div className="row p-2 pt-3 m-2">	
 				{list.map(function(m) {
 					return (<a href={'#/language'}
-						className={'col-sm-2 m-2 mt-3 p-3 border border-secondary rounded text-center text-secondary ' + 
+						className={'col-sm-2 m-2 mt-3 p-2 border border-secondary rounded text-center text-secondary ' + 
 							((m == me.state.lang) ? 'role-checked' : 'role-unchecked') }
 						onClick={me.switchLang.bind(me, m)}	
 						>
