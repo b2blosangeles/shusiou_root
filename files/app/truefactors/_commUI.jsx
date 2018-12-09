@@ -25,7 +25,7 @@ var _commUI = {
 	pageFrame :  React.createClass({
 		render : function () {
 			var me = this;
-			return (<div className="container-fluid px-5"">
+			return (<div className="container-fluid px-5">
 				<div className="row documentPageFrame mt-3 mb-5 p-1">
 					<div className="col-sm-12 p-1 animation-flag">
 					    {(typeof me.props.data === 'string') ? (<span dangerouslySetInnerHTML={{__html: me.props.data}}/>)
