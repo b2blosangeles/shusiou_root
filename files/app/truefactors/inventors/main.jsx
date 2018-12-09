@@ -16,6 +16,8 @@ React.createClass({
 			// me.loadData();
 		}  else if (me.props.parent.state.menuOption === 'myVideos') {
 			me.compData.loadVideos();
+		} else {
+		
 		}
 	},
 	componentWillUnmount : function() {
@@ -27,6 +29,8 @@ React.createClass({
 			return me.compView.showMyinventions();
 		} else if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.compView.showVideos(); 
+		} else if (me.props.parent.state.menuOption === 'howToStartInvention') {
+			return 'howToStartInvention'
 		} else {
 			return (<span>
 				{Root.commUI.show({
@@ -40,7 +44,7 @@ React.createClass({
 				})}
 				
 				</span>)
-		}	
+		} 	
 	},
         render: function() {
 		var me = this;
