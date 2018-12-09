@@ -20,7 +20,6 @@ React.createClass({
 	},
 	showBody : function() {
 		var me = this;
-		return me.props.parent.state.menuOption;
 		if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.compView.showVideos();
 		}  else if (me.props.parent.state.menuOption === 'howToStartInvestment'  || !me.props.parent.state.menuOption) {
