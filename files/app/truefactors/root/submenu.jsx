@@ -65,7 +65,7 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}	
 						(<li className="nav-item pull-right">
-						{(Root.auth.showStatus) ? Root.auth.showStatus() : '--'}
+						{(!Root.auth || !Root.auth.showStatus) ? '-A-A-' : Root.auth.showStatus()}
 						</li>)
 					</ul>					
 				</div>
