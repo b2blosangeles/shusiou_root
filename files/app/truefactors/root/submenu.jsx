@@ -18,6 +18,7 @@ var _subMenu = React.createClass({
     },
     callAuth : function() {
 	  var me = this;
+	  Root.auth.doAuth();
     },
     render: function() {
           var me = this;
