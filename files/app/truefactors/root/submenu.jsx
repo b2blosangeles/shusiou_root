@@ -72,14 +72,7 @@ var _subMenu = React.createClass({
 										<span style={{color:'yellow'}}>
 											{captions[m]}</span></a>
 									</li></span>)
-							})}	
-						(<li className="nav-item pull-right">
-							<a className="nav-link disabled"
-								onClick={me.callAuth.bind(me)}
-								href="JavaScript: void(0)">
-								<span>Do-Auth</span></a>
-						== {me.props.auth} ==
-						</li>)
+							})}
 					</ul>					
 				</div>
 			</div>
