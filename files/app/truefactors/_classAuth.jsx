@@ -13,7 +13,7 @@ React.createClass({
 	},
 	showStatus : function() {
 		var me = this;
-		return new Date().getTime();
+		// return new Date().getTime();
 		return ((me.state._auth) ? 'On' : 'Off') + '--SS-->' + new Date().getTime()
 	},
 	showSwitch : function() {
