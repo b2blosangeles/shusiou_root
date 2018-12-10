@@ -63,7 +63,10 @@ var _subMenu = React.createClass({
 										<span style={{color:'yellow'}}>
 											{captions[m]}</span></a>
 									</li></span>)
-							})}						
+							})}	
+						(<li className="nav-item pull-right">
+						{Root.auth.showStatus()}
+						</li>)
 					</ul>					
 				</div>
 			</div>
