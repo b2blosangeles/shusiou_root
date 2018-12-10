@@ -95,7 +95,7 @@ React.createClass({
 			  <hr/>{JSON.stringify(Root._auth)}<hr/>
 			<_routerControl routeRule={me.routeRule()} />
 			  {/*<_rolesMenu parent={me}/>*/}
-			<_subMenu parent={me}/>
+			<_subMenu parent={me} auth={Root._auth} />
 			{/*me.showPageFrame(me.showBody())*/}
 			  {/*<_copyrightSection parent={me}/>*/}
 		</span>
