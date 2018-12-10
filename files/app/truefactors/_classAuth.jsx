@@ -13,12 +13,16 @@ React.createClass({
 	},
 	showStatus : function() {
 		var me = this;
-		return 'On'
+		return (me.state._auth) ? 'On' : 'Off'
+	},
+	signIn : function() {
+		var me = this;
+		setState({_auth : true});
 	},	
 	render: function() {
 		var me = this;
 		return (<span>
-				=={me.showStatus()}==
+				=={me.showStatus()}==<a href="JavaScript: void(0)" onClick={me.signIn()}>Login</a>
 			</span>)                   
 	}
 })
