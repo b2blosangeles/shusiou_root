@@ -81,6 +81,7 @@ try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
 
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
+					window.__rootAuth = (!window.__rootAuth) ? {} : window.__rootAuth;
 					
 					if (me._asyncObjId === me.props.objId) {
 						var code = ((me._asyncModule.contents) ? me._asyncModule.contents : '') + 
