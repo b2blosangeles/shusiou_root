@@ -19,9 +19,9 @@ React.createClass({
 		var me = this;
 		return (me.state._auth) ? 'logoff' : 'logon'
 	},
-	signIn : function() {
+	doAuth : function() {
 		var me = this;
-		me.setState({_auth : true});
+		me.setState({_auth : (me.state._auth) ? false : true});
 	},	
 	render: function() {
 		var me = this;
