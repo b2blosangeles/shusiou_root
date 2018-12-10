@@ -18,7 +18,7 @@ React.createClass({
 	},
 	showSwitch : function() {
 		var me = this;
-		return (me.state._auth) ? 'logoff' : 'logon'
+		return ((me.state._auth) ? 'logoff' : 'logon') + '--SS--'
 	},
 	doAuth : function() {
 		var me = this;
