@@ -81,7 +81,7 @@ try {
 					var _asyncOBJ = React.createClass({render: function() { return (<span/>)}});
 
 					window.__rootOverLay = (!window.__rootOverLay) ? {} : window.__rootOverLay;
-					//window.__rootAuth = (!window.__rootAuth) ? {} : window.__rootAuth;
+					window.__rootAuth = (!window.__rootAuth) ? {} : window.__rootAuth;
 					
 					if (me._asyncObjId === me.props.objId) {
 						var code = ((me._asyncModule.contents) ? me._asyncModule.contents : '') + 
@@ -100,16 +100,13 @@ try {
 								}
 							};
 						}
-
-						console.log('---window.__rootAuth--->');
-						console.log(window.__rootAuth);
 						
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root);
-					} else {
-						Root.auth = window.__rootAuth;
-					}	
+					} 
+						console.log('---window.__rootAuth--->');
+						console.log(window.__rootAuth);					
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
