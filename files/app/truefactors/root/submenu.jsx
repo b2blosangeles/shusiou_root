@@ -76,7 +76,8 @@ var _subMenu = React.createClass({
 							<a className="nav-link disabled"
 								onClick={me.callAuth.bind(me)}
 								href="JavaScript: void(0)">
-								<span>do-Auth</span></a>{Root.auth.showSwitch.bind(me)}
+								<span>do-Auth</span></a>
+							{(!Root.auth.showSwitch) ? 'ppp' : Root.auth.showSwitch.bind(Root.auth)}
 						</li>)
 					</ul>					
 				</div>
