@@ -14,11 +14,11 @@ React.createClass({
 	showStatus : function() {
 		var me = this;
 		return new Date().getTime();
-		return (me.state._auth) ? 'On' : 'Off'
+		return ((me.state._auth) ? 'On' : 'Off') + '--SS-->' + new Date().getTime()
 	},
 	showSwitch : function() {
 		var me = this;
-		return ((me.state._auth) ? 'logoff' : 'logon') + '--SS--'
+		return ((me.state._auth) ? 'logoff' : 'logon') 
 	},
 	doAuth : function() {
 		var me = this;
