@@ -89,7 +89,7 @@ try {
 
 						if (typeof Root === 'undefined' || (!Root.lib && !Root.commUI && !Root.global)) {
 							var Root = {
-								auth :  (window.__rootAuth) ? window.__rootAuth : {},
+								auth :  window.__rootAuth,
 								overLay :  window.__rootOverLay,
 								lib	: (!_commLib) ? {} : new _commLib(),
 								commUI	:  (!_commUI) ? {} : _commUI,
