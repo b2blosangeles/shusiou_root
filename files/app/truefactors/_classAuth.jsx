@@ -10,11 +10,15 @@ React.createClass({
 	},
 	componentDidUpdate : function() {
 		var me = this;
+	},
+	showStatus : function() {
+		var me = this;
+		return 'On'
 	},	
 	render: function() {
 		var me = this;
 		return (<span>
-				_classAuth.jsx
+				=={me.showStatus()}==
 			</span>)                   
 	}
 })
