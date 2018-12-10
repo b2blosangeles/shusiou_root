@@ -78,6 +78,7 @@ var _subMenu = React.createClass({
 								onClick={me.callAuth.bind(me)}
 								href="JavaScript: void(0)">
 								<span>Do-Auth</span></a>
+						== {me.props.auth} ==
 						</li>)
 					</ul>					
 				</div>
