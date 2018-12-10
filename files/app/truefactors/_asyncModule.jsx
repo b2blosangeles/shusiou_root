@@ -101,6 +101,9 @@ try {
 							};
 						}
 
+						console.log('---window.__rootAuth--->');
+						console.log(window.__rootAuth);
+						
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root);
