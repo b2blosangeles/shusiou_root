@@ -9,7 +9,20 @@ React.createClass({
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
-		<span>				
+		<span>
+			<_asyncModule plugin={{
+			extend: {
+					contents : {},
+					includes : [],
+					loadingInfo : '', // 'Loading ...',
+					controller : 'https://dev.shusiou.win/app/truefactors/classAuth.jsx',
+					cacheTime : 1000
+				}, 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				
+			}} 
+			parent={me} objId={'Auth' + _oId} />				
+				
 			<_asyncModule plugin={{
 			extend: {
 					contents : {},
