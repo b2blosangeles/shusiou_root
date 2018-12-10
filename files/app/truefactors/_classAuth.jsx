@@ -17,7 +17,7 @@ React.createClass({
 	},
 	signIn : function() {
 		var me = this;
-		setState({_auth : true});
+		me.setState({_auth : true});
 	},	
 	render: function() {
 		var me = this;
