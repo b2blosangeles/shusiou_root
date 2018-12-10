@@ -92,6 +92,7 @@ React.createClass({
           var me = this;
           return  (
 		<span>
+			  <hr/>{JSON.stringify(Root.auth)}<hr/>
 			<_routerControl routeRule={me.routeRule()} />
 			  {/*<_rolesMenu parent={me}/>*/}
 			<_subMenu parent={me}/>
