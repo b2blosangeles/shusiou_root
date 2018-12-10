@@ -28,7 +28,7 @@ React.createClass({
 					contents : {},
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
-					controller : 'https://dev.shusiou.win/app/truefactors/classOverLay.jsx',
+					controller : 'https://dev.shusiou.win/app/truefactors/_classOverLay.jsx',
 					cacheTime : 1000
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
