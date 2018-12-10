@@ -96,7 +96,7 @@ React.createClass({
 			  {/*<_rolesMenu parent={me}/>
 			<_subMenu parent={me}/>*/}
 			{/*me.showPageFrame(me.showBody())*/}
-			  {/*<_copyrightSection parent={me}/>
+			  {/*<_copyrightSection parent={me}/>*/}
 		</span>
           )
         }
