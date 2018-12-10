@@ -16,6 +16,9 @@ var _subMenu = React.createClass({
 		me.props.parent.setState({ menuOption : v})   
 	}
     },
+    callAuth : function() {
+	  var me = this;
+    },
     render: function() {
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : (!Root.global.menuTree[me.props.parent.state.role]) 
@@ -69,7 +72,11 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}	
 						(<li className="nav-item pull-right">
-						{(!Root.auth || !Root.auth.showStatus) ? '-A-A-' : Root.auth.showStatus()}
+							<a className="nav-link disabled"
+								onClick={me.callAuth.bind(me)}
+								href="JavaScript: void(0)">
+										<span style={{color:'yellow'}}>
+								{captions[m]}</span></a>
 						</li>)
 					</ul>					
 				</div>
