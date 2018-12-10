@@ -15,6 +15,10 @@ React.createClass({
 		var me = this;
 		return (me.state._auth) ? 'On' : 'Off'
 	},
+	showSwitch : function() {
+		var me = this;
+		return (me.state._auth) ? 'logoff' : 'logon'
+	},
 	signIn : function() {
 		var me = this;
 		me.setState({_auth : true});
@@ -22,7 +26,8 @@ React.createClass({
 	render: function() {
 		var me = this;
 		return (<span>
-				=={me.showStatus()}==<a href="JavaScript: void(0)" onClick={me.signIn.bind(me)}>Login</a>
+				=={me.showStatus()}==
+				<a href="JavaScript: void(0)" onClick={me.signIn.bind(me)}>{me.showSwitch()}</a>
 			</span>)                   
 	}
 })
