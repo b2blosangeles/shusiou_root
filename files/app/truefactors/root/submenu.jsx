@@ -72,8 +72,7 @@ var _subMenu = React.createClass({
 									:
 									(<span>
 									<a>({Root.auth.state.info})</a>
-									<a className="nav-link" 
-										onClick={Root.auth.doAuth.bind(me)}
+									<a onClick={Root.auth.doAuth.bind(me)}
 									href="JavaScript: void(0)">Logoff</a>
 									</span>)
 								}
