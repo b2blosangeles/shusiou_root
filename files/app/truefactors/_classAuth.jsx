@@ -2,7 +2,7 @@ React.createClass({
 	/* --- this version do setInterval only need, no ever last setInterval */
 	getInitialState: function() {
 		var me = this;
-		return {_auth : false, info:'how are you'};
+		return {_auth :  localStorage.getItem('_auth'), info:'how are you'};
 	},
 	componentDidMount : function() {
 		var me = this;
