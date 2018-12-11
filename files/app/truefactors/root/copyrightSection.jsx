@@ -14,6 +14,7 @@ var _copyrightSection = React.createClass({
 			<div className="container-fluid px-5">
 			<div className="row">
 				<div className="col-sm-12 text-right">
+					<span className="pull-left">test</span>
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
