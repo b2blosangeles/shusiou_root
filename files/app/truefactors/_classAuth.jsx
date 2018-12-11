@@ -10,7 +10,9 @@ React.createClass({
 	},
 	componentDidUpdate : function(prevProps, prevState) {
 		var me = this;
-		alert('refresh');
+		if (prevState.auth !== me.state.auth) {
+			alert('refresh');
+		}
 	},
 	showStatus : function() {
 		var me = this;
