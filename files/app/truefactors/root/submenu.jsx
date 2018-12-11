@@ -71,7 +71,7 @@ var _subMenu = React.createClass({
 							})}
 						
 						
-						=== {me.state._auth } ===
+						=== {me.state._auth }---
 						
 					</ul>					
 				</div>
