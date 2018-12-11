@@ -72,7 +72,7 @@ var _subMenu = React.createClass({
 							})}
 						
 						
-						=== {( Root.auth) ? Root.auth.state.info : 'NNN'} ===
+						=== {( !Root.auth || !Root.auth.state) ? 'NNN' : Root.auth.state.info} ===
 						
 					</ul>					
 				</div>
