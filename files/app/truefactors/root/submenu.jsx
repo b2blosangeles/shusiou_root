@@ -74,7 +74,7 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}
 						
-						-{me.props.AP}-
+						-{me.props}-
 					</ul>					
 				</div>
 			</div>
