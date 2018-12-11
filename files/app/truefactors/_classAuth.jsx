@@ -2,7 +2,7 @@ React.createClass({
 	/* --- this version do setInterval only need, no ever last setInterval */
 	getInitialState: function() {
 		var me = this;
-		return {_auth : false};
+		return {_auth : false, info:'how are you'};
 	},
 	componentDidMount : function() {
 		var me = this;
@@ -14,7 +14,7 @@ React.createClass({
 	showStatus : function() {
 		var me = this;
 		// return new Date().getTime();
-		return ((me.state._auth) ? 'On' : 'Off') + '--SS-->' + new Date().getTime()
+		return ((me.state._auth) ? 'On' : 'Off') + '--SS-->' + new Date().getTime() + ' ' + me.state.info
 	},
 	showSwitch : function() {
 		var me = this;
