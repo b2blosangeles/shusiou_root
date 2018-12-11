@@ -65,6 +65,7 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}			
 					</ul>	
+					<span>==
 					{(!me.state._auth) ? (<div className="form-inline">
 						<a className="nav-link" 
 							onClick={Root.auth.doAuth.bind(me)}
@@ -79,7 +80,7 @@ var _subMenu = React.createClass({
 						</div>)
 
 						}
-					
+					</span>
 				</div>
 			</div>
 		</div>
