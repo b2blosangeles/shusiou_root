@@ -28,8 +28,8 @@ React.createClass({
 	render: function() {
 		var me = this;
 		return (<span>
-				{me.showStatus()}==
-				<a href="JavaScript: void(0)" onClick={me.doAuth.bind(me)}>{me.showSwitch()}==</a>
+				{me.showStatus()}==>
+				<a onClick={me.doAuth.bind(me)}>{me.showSwitch()}==</a>
 			
 			</span>)                   
 	}
