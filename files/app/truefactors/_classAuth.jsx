@@ -28,7 +28,7 @@ React.createClass({
 		var me = this;
 		var v = (me.state._auth) ? false : new Date().getTime();
 		localStorage.setItem('_auth', v);
-		me.setState({_auth : (me.state._auth) ? false : new Date().getTime()});
+		me.setState({_auth : v});
 	},	
 	render: function() {
 		var me = this;
