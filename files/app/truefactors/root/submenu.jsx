@@ -64,7 +64,7 @@ var _subMenu = React.createClass({
 											{captions[m]}</span></a>
 									</li></span>)
 							})}
-						<div><a>=bbb=</a><a>=ccc=</a></div>
+						<div className="pull-right"><a>=bbb=</a><a>=ccc=</a></div>
 						
 					</ul>	
 					<span>==
