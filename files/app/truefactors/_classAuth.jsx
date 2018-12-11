@@ -2,14 +2,14 @@ React.createClass({
 	/* --- this version do setInterval only need, no ever last setInterval */
 	getInitialState: function() {
 		var me = this;
-		
+		/*
 		 setInterval(
 			function() {
 				me.setState({info: new Date().getTime() + '_info'});
 			}, 2000
 
 		 );  		
-		
+		*/
 		return {_auth : false, info:'how are you'};
 	},
 	componentDidMount : function() {
