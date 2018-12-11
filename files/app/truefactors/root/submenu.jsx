@@ -6,7 +6,7 @@ var _subMenu = React.createClass({
 	 setTimeout(
 	 	function() {
 			me.setState({updated: new Date().getTime()});
-			console.log('window.__rootAuth--');
+			console.log(window.__rootAuth);
 		}, 3000
 	 
 	 );   
