@@ -11,13 +11,14 @@ React.createClass({
 	componentDidUpdate : function(prevProps, prevState) {
 		var me = this;
 		if (prevState._auth !== me.state._auth) {
-			//alert('refresh');
 			location.reload();
 		}
 	},
 	showStatus : function() {
 		var me = this;
-		return ((me.state._auth) ? 'On' : 'Off')
+		var v = (me.state._auth) ? 'On' : 'Off';
+		
+		return v;
 	},
 	showSwitch : function() {
 		var me = this;
@@ -25,6 +26,8 @@ React.createClass({
 	},
 	doAuth : function() {
 		var me = this;
+		var v = (me.state._auth) ? false : new Date().getTime();
+		localStorage.setItem('_auth', v);
 		me.setState({_auth : (me.state._auth) ? false : new Date().getTime()});
 	},	
 	render: function() {
