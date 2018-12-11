@@ -7,7 +7,7 @@ var _subMenu = React.createClass({
 	 	function() {
 			me.setState({updated: new Date().getTime()});
 			console.log(window.__rootAuth);
-		}, 6000
+		}, 3000
 	 
 	 );   
 	    
