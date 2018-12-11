@@ -22,6 +22,7 @@ React.createClass({
 	},
 	doAuth : function() {
 		var me = this;
+		console.log('===doAuth===');
 		me.setState({_auth : (me.state._auth) ? false : true});
 	},	
 	render: function() {
