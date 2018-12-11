@@ -2,7 +2,7 @@ var _subMenu = React.createClass({
     getInitialState: function() {
 	var me = this;
 	me.roles = Root.global.roles;
-	
+	/*
 	 setTimeout(
 	 	function() {
 			me.setState({updated: new Date().getTime()});
@@ -10,7 +10,7 @@ var _subMenu = React.createClass({
 		}, 3000
 	 
 	 );   
-	    
+	  */  
 	return {}
     },
     clickOption : function(v, e) {
@@ -80,7 +80,7 @@ var _subMenu = React.createClass({
 							})}
 						
 						
-						=== {( !Root.auth || !Root.auth.state) ? 'NNN' : Root.auth.state.info} ===
+						=== {/*( !Root.auth || !Root.auth.state) ? 'NNN' : Root.auth.state.info*/} ===
 						
 					</ul>					
 				</div>
