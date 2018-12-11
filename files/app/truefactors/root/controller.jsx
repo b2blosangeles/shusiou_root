@@ -90,6 +90,8 @@ React.createClass({
 	},	
         render: function() {
           var me = this;
+		console.log('===Root._auth===>');
+		console.log(Root.auth.state._auth);
           return  (
 		<span>
 			<_routerControl routeRule={me.routeRule()} />
