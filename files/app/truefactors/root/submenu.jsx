@@ -64,40 +64,23 @@ var _subMenu = React.createClass({
 											{captions[m]}</span></a>
 									</li></span>)
 							})}
-						<div className="text-right nav-right p-2">
-							{(!me.state._auth) ? (
-								<a className="nav-link" 
-									onClick={Root.auth.doAuth.bind(me)}
-								href="JavaScript: void(0)">Login</a>)
-								:
-								(<div className="form-inline pull-right">
-								<span>({Root.auth.state.info})
-								<a className="nav-link" 
-									onClick={Root.auth.doAuth.bind(me)}
-								href="JavaScript: void(0)">Logoff</a></span>
-								</div>)
-
-						}
-							
-						</div>
+						
+							<div className="text-right nav-right p-2">
+								{(!me.state._auth) ? (
+									<a className="nav-link" 
+										onClick={Root.auth.doAuth.bind(me)}
+									href="JavaScript: void(0)">Login</a>)
+									:
+									(<div className="form-inline pull-right">
+									<span>({Root.auth.state.info})
+									<a className="nav-link" 
+										onClick={Root.auth.doAuth.bind(me)}
+									href="JavaScript: void(0)">Logoff</a></span>
+									</div>)
+								}
+							</div>
 						
 					</ul>
-					
-					<span>==
-					{(!me.state._auth) ? (
-						<a className="nav-link" 
-							onClick={Root.auth.doAuth.bind(me)}
-						href="JavaScript: void(0)">Login</a>)
-						:
-						(<div className="form-inline pull-right">
-						<span>({Root.auth.state.info})
-						<a className="nav-link" 
-							onClick={Root.auth.doAuth.bind(me)}
-						href="JavaScript: void(0)">Logoff</a></span>
-						</div>)
-
-						}
-					</span>
 				</div>
 			</div>
 		</div>
