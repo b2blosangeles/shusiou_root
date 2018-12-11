@@ -90,13 +90,11 @@ React.createClass({
 	},	
         render: function() {
           var me = this;
-		console.log('===Root._auth===>');
-		console.log(Root.auth.state._auth);
           return  (
 		<span>
 			<_routerControl routeRule={me.routeRule()} />
 			<_rolesMenu parent={me}/>
-			<_subMenu parent={me} AP={Root._auth} />
+			<_subMenu parent={me} AP={Root.auth.state._auth} />
 			{me.showPageFrame(me.showBody())}
 			<_copyrightSection parent={me}/>
 		</span>
