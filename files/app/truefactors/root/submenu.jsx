@@ -3,7 +3,7 @@ var _subMenu = React.createClass({
 	var me = this;
 	me.roles = Root.global.roles;
 	
-	 setTimneout(
+	 setTimeout(
 	 	function() {
 			me.setState({updated: new Date().getTime()});
 		}, 2000
