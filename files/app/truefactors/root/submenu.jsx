@@ -63,11 +63,7 @@ var _subMenu = React.createClass({
 										<span style={{color:'yellow'}}>
 											{captions[m]}</span></a>
 									</li></span>)
-							})}
-						
-						
-
-						
+							})}			
 					</ul>	
 					{(!me.state._auth) ? (<li className="nav-item">
 						<a className="nav-link" 
