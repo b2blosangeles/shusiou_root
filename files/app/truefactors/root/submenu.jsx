@@ -65,22 +65,29 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}
 						<div className="text-right nav-right p-2">
-							<a>=bbb=</a><a>=ccc=</a>
-							
+							{(!me.state._auth) ? (
+								<a className="nav-link" 
+									onClick={Root.auth.doAuth.bind(me)}
+								href="JavaScript: void(0)">Login</a>)
+								:
+								(<div className="form-inline pull-right">
+								<span>({Root.auth.state.info})
+								<a className="nav-link" 
+									onClick={Root.auth.doAuth.bind(me)}
+								href="JavaScript: void(0)">Logoff</a></span>
+								</div>)
+
+						}
 							
 						</div>
 						
 					</ul>
 					
-    <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>					<span>==
-					{(!me.state._auth) ? (<div className="form-inline">
+					<span>==
+					{(!me.state._auth) ? (
 						<a className="nav-link" 
 							onClick={Root.auth.doAuth.bind(me)}
-						href="JavaScript: void(0)">Login</a>
-						</div>)
+						href="JavaScript: void(0)">Login</a>)
 						:
 						(<div className="form-inline pull-right">
 						<span>({Root.auth.state.info})
