@@ -72,6 +72,8 @@ var _subMenu = React.createClass({
 							})}
 						
 						
+						=== {Root.auth.state.info} ===
+						
 					</ul>					
 				</div>
 			</div>
