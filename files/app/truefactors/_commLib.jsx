@@ -27,7 +27,7 @@ var _commLib = function () {
 			(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 			 <span className="section-spinner"></span></span></span>)   
 	}
-	
+		
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
