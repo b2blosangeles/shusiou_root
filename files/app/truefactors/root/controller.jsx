@@ -94,7 +94,7 @@ React.createClass({
 		<span>
 			<_routerControl routeRule={me.routeRule()} />
 			<_rolesMenu parent={me}/>
-			<_subMenu parent={me} auth={Root._auth} />
+			<_subMenu parent={me} AP={Root._auth} />
 			{me.showPageFrame(me.showBody())}
 			<_copyrightSection parent={me}/>
 		</span>
