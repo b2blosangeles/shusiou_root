@@ -12,9 +12,6 @@ React.createClass({
 		var me = this;
 		alert('refresh');
 	},
-	componentDidUpdate : function() {
-		var me = this;
-	},
 	showStatus : function() {
 		var me = this;
 		return ((me.state._auth) ? 'On' : 'Off')
