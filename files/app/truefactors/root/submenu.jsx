@@ -1,17 +1,8 @@
 var _subMenu = React.createClass({
     getInitialState: function() {
 	var me = this;
-	me.roles = Root.global.roles;
-	/*
-	 setTimeout(
-	 	function() {
-			me.setState({updated: new Date().getTime()});
-			console.log(window.__rootAuth);
-		}, 3000
-	 
-	 );   
-	  */  
-	return {}
+	me.roles = Root.global.roles; 
+	return {_auth : localStorage.getItem('_auth')}
     },
     clickOption : function(v, e) {
 	var me = this; 
@@ -80,7 +71,7 @@ var _subMenu = React.createClass({
 							})}
 						
 						
-						=== {( !Root.auth || !Root.auth.showStatus) ? 'NNN' : Root.auth.showStatus() } ===
+						=== {me.state._auth } ===
 						
 					</ul>					
 				</div>
