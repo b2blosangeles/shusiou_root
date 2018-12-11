@@ -3,7 +3,7 @@ React.createClass({
 	getInitialState: function() {
 		var me = this;
 		
-		 setTimeout(
+		 setInterval(
 			function() {
 				me.setState({info: new Date().getTime() + '_info'});
 			}, 2000
