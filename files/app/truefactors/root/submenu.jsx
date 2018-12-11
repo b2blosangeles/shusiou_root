@@ -28,7 +28,7 @@ var _subMenu = React.createClass({
 		<div className="container">
 			<div className="row">
 				<div className="col-sm-12 text-left site-logo pt-0">
-					<ul className="nav">						
+					<ul className="nav navbar-expand-lg">						
 					{menu.map(function(m){ 	
 						return (me.props.parent.state.menuOption !== m) ?
 								(<span>
