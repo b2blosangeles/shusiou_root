@@ -15,11 +15,6 @@ var _subMenu = React.createClass({
 		me.props.parent.setState({ menuOption : v})   
 	}
     },
-    callAuth : function() {
-	  var me = this;
-	  Root.auth.doAuth();
-	    alert(Root.auth.state._auth);
-    },
     render: function() {
           var me = this;
 	  var menu = (!me.props.parent.state.role) ? [] : (!Root.global.menuTree[me.props.parent.state.role]) 
