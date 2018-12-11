@@ -66,11 +66,16 @@ var _subMenu = React.createClass({
 							})}
 						<div className="text-right nav-right p-2">
 							<a>=bbb=</a><a>=ccc=</a>
+							
+							
 						</div>
 						
 					</ul>
 					
-					<span>==
+    <form className="form-inline my-2 my-lg-0">
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>					<span>==
 					{(!me.state._auth) ? (<div className="form-inline">
 						<a className="nav-link" 
 							onClick={Root.auth.doAuth.bind(me)}
