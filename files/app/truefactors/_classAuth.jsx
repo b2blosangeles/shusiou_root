@@ -6,7 +6,7 @@ React.createClass({
 	},
 	componentDidMount : function() {
 		var me = this;
-		window.__rootAuth = me;
+	//	window.__rootAuth = me;
 	},
 	componentDidUpdate : function() {
 		var me = this;
