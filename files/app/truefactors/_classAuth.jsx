@@ -14,16 +14,6 @@ React.createClass({
 			location.reload();
 		}
 	},
-	showStatus : function() {
-		var me = this;
-		var v = (me.state._auth) ? 'On' : 'Off';
-		
-		return v;
-	},
-	showSwitch : function() {
-		var me = this;
-		return ((me.state._auth) ? 'logoff' : 'logon') 
-	},
 	doAuth : function() {
 		var me = this;
 		var v = (me.state._auth) ? '' : new Date().getTime();
@@ -32,11 +22,6 @@ React.createClass({
 	},	
 	render: function() {
 		var me = this;
-		return (<span>
-				<br/><br/>{me.showStatus()}
-				&nbsp;&nbsp;&nbsp;
-				<a onClick={me.doAuth.bind(me)}>{me.showSwitch()}</a>
-			
-			</span>)                   
+		return (<span></span>)                   
 	}
 })
