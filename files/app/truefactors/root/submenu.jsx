@@ -74,7 +74,7 @@ var _subMenu = React.createClass({
 									</li></span>)
 							})}
 						
-						-{me.props.AP.state._auth}-
+						-{me.props.AP}-
 					</ul>					
 				</div>
 			</div>
