@@ -26,7 +26,7 @@ React.createClass({
 	},
 	doAuth : function() {
 		var me = this;
-		var v = (me.state._auth) ? false : new Date().getTime();
+		var v = (me.state._auth) ? '' : new Date().getTime();
 		localStorage.setItem('_auth', v);
 		me.setState({_auth : v});
 	},	
