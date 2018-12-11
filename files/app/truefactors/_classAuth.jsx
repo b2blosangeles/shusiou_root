@@ -36,8 +36,9 @@ React.createClass({
 	render: function() {
 		var me = this;
 		return (<span>
+				<br/><br/>
 				<a href="JavaScrtipt: void(0)" onClick={me.doAuth.bind(me)}>{me.showSwitch()}==</a>
-			<br/><br/>
+			
 			</span>)                   
 	}
 })
