@@ -64,12 +64,9 @@ var _subMenu = React.createClass({
 											{captions[m]}</span></a>
 									</li></span>)
 							})}
-						<div className="pull-right nav-right p-2"><a>=bbb=</a><a>=ccc=</a></div>
+						<div className="text-right nav-right p-2"><a>=bbb=</a><a>=ccc=</a></div>
 						
 					</ul>
-					    <span className="navbar-text">
-      Navbar text with an inline element
-    </span>
 					
 					<span>==
 					{(!me.state._auth) ? (<div className="form-inline">
