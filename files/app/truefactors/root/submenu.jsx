@@ -80,7 +80,7 @@ var _subMenu = React.createClass({
 							})}
 						
 						
-						=== {( !Root.auth || !Root.auth.showStatu) ? 'NNN' : Root.auth.showStatus() } ===
+						=== {( !Root.auth || !Root.auth.showStatus) ? 'NNN' : Root.auth.showStatus() } ===
 						
 					</ul>					
 				</div>
