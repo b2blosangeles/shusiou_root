@@ -3,6 +3,13 @@ var _subMenu = React.createClass({
 	var me = this;
 	me.roles = Root.global.roles;
 	
+	 setTimneout(
+	 	function() {
+			me.setState({updated: new Date().getTime()});
+		}, 2000
+	 
+	 );   
+	    
 	return {}
     },
     clickOption : function(v, e) {
