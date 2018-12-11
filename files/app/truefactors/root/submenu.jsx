@@ -64,7 +64,7 @@ var _subMenu = React.createClass({
 											{captions[m]}</span></a>
 									</li></span>)
 							})}
-						<span>=aaa=</span>
+						<div>=aaa=</divn>
 						
 					</ul>	
 					<span>==
