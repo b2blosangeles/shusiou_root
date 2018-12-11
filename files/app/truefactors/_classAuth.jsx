@@ -8,7 +8,7 @@ React.createClass({
 		var me = this;
 		window.__rootAuth = me;
 	},
-	componentDidUpdate : function() {
+	componentDidUpdate : function(prevProps, prevState) {
 		var me = this;
 		alert('refresh');
 	},
