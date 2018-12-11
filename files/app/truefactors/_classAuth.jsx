@@ -11,7 +11,8 @@ React.createClass({
 	componentDidUpdate : function(prevProps, prevState) {
 		var me = this;
 		if (prevState._auth !== me.state._auth) {
-			alert('refresh');
+			//alert('refresh');
+			location.reload();
 		}
 	},
 	showStatus : function() {
