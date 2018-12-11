@@ -10,7 +10,7 @@ React.createClass({
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
 		<span>
-				{/*<_asyncModule plugin={{
+			<_asyncModule plugin={{
 			extend: {
 					contents : {},
 					includes : [],
@@ -21,7 +21,7 @@ React.createClass({
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 				
 			}} 
-			parent={me} objId={'Auth' + _oId} />*/}			
+			parent={me} objId={'Auth' + _oId} />		
 				
 			<_asyncModule plugin={{
 			extend: {
