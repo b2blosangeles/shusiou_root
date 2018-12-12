@@ -59,7 +59,7 @@ video#gumVideo {
 
 $container-max-widths: (
   md: 720px,
-  lg: 960px,
+  lg: 1100px,
   xl: 1140px
 ) !default;
 
