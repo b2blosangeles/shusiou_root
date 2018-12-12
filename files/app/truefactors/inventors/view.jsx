@@ -108,10 +108,7 @@ var _compView = function(me, Root) {
 			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
 			closeIcon : true,
 			data : (<span>
-				<img className="w-100" src={url}/>
-					
-				<button type="button" className="btn btn-warning"  
-					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
+				<img className="w-100 m-5" src={url}/>
 				</span>
 				)
 		};
