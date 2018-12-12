@@ -33,9 +33,7 @@ var _copyrightSection = React.createClass({
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href={'#/'} onClick={animationTransfer}>Home</a>
 					&nbsp;&nbsp;|&nbsp;&nbsp;							
-					<a href={'#/privacy'} onClick={animationTransfer}>Privacy</a>
-					&nbsp;&nbsp;|&nbsp;&nbsp;
-					<a href={'#/terms'} onClick={animationTransfer}>Terms</a>
+					<a href={'#/NDA'} onClick={animationTransfer}>NDA</a>
 					</span>
 
 					<span className="pull-right">
