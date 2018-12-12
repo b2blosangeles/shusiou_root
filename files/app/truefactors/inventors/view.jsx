@@ -1,20 +1,7 @@
 var _compView = function(me, Root) {
 	this.showVideoMenu = function() {
-		var popupSetting = {
-			type : 'light', 
-			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
-			closeIcon : true,
-			data : (<span>
-				<button type="button" className="btn btn-warning"  
-					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
-				</span>
-				)
-		};
 		return (<span>	
 		<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
-		&nbsp;
-		<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, popupSetting)}>Popup Window</button>
-		</span>)
 	};
 	this.showVideos = function () {
 		return  (
@@ -112,6 +99,16 @@ var _compView = function(me, Root) {
 			'/app/truefactors/resource/webp/116.webp',
 			'/app/truefactors/resource/webp/117.webp'
 		]
+		var popupSetting = {
+			type : 'light', 
+			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
+			closeIcon : true,
+			data : (<span>
+				<button type="button" className="btn btn-warning"  
+					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
+				</span>
+				)
+		};		
 		var item = list[Math.floor(Math.random()*list.length)];
 		return (<img className="w-100" 
 				onClick={Root.overLay.popup.bind(me, popupSetting)}
