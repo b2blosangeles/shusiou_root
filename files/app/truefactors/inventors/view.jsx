@@ -6,7 +6,7 @@ var _compView = function(me, Root) {
 	};
 	this.showMyinventionsMenu = function() {
 		return (<span>	
-		<button type="button" className="btn btn-info" onClick={me.compData.Myinventions.bind(me)}>Load Data</button>
+		<button type="button" className="btn btn-info" onClick={me.compData.loadMyinventions.bind(me)}>Load Data</button>
 		</span>)
 	};	
 	this.showVideos = function () {
