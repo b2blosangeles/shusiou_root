@@ -19,8 +19,9 @@ React.createClass({
 		Root.overLay.closePopup(Root);
 		setTimeout(me.doAuth, 1000);
 	},
-	registration : function() {
+	registration : function(Root) {
 		Root.overLay.closePopup(Root);
+		window.location.href = '#/registration'
 	},
 	signIn : function(Root) {
 		var me = this;
