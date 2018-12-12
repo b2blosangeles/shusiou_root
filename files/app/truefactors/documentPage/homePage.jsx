@@ -25,7 +25,13 @@ var _homePage = React.createClass({
 			IP rights of the investors..	
 		</p>
 		<p><u>Interfaces for inventors</u></p>	
-		<p><i>Login/Register</i></p>	
+		<p><i>Login/Register</i></p>
+		
+		<p>
+		Legal team will be involved from the initial stage to make sure Balabala can collect the information of
+		the inventors in an appropriate and legal way. This will include the NDA， agreement between inventors
+		and Balabala, so on and so forth.
+		</p>
 		</span>)
     }
 });
