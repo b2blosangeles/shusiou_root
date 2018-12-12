@@ -14,6 +14,11 @@ React.createClass({
 			location.reload();
 		}
 	},
+	signInAuth : function(Root) {
+		var me = this;
+		me.doAuth();
+		Root.overLay.closePopup(Root);
+	},
 	signIn : function(Root) {
 		var me = this;
 		var popupSetting = {
@@ -22,7 +27,7 @@ React.createClass({
 			closeIcon : true,
 			data : (<span>
 				<button type="button" className="btn btn-warning"  
-					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
+					onClick={me.signInAuth.bind(me, Root)}>Sign In</button>
 				</span>)
 		};
 		Root.overLay.popup(popupSetting);		
