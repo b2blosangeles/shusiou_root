@@ -3,7 +3,7 @@ var _compData = function(me, Root) {
 		//var spin_id = Root.overLay.spinOn();
 		console.log('===call load loadVideos');
 		Root.lib.setSpinAnchor(me, 'AA', true);
-		//me.list = [];
+		me.list = [];
 		me.setState({updated : new Date().getTime()});
 		setTimeout(
 			function() {
@@ -24,6 +24,7 @@ var _compData = function(me, Root) {
 			function() {
 				me.list = Root.lib.getNumberList(20);
 				Root.lib.setSpinAnchor(me, 'AB', false)
+				console.log('===call load loadVideos done');
 			//	Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
 			},3000
