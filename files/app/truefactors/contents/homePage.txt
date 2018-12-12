@@ -20,14 +20,14 @@
 <p><u>Interfaces for inventors</u></p>	
 
 <p>
-  <i>Login/Register</i><br/>
+  <p><i>Login/Register</i></p>
   Legal team will be involved from the initial stage to make sure PlatoPlan can collect the information of
   the inventors in an appropriate and legal way. This will include the NDA， agreement between inventors
   and PlatoPlan, so on and so forth.
 </p>
 
 <p>
-  <i>Record/Upload</i><br/>
+  <p><i>Record/Upload</i></p>
   PlatoPlan will provide an app or web function to help the inventor to record their works, concepts, etc.
   via video or any latest technologies. Besides the inventor can upload their existing files in any possible
   media forms which PlatoPlan can recognize and accept into the system.
@@ -35,7 +35,7 @@
 
 
 <p>
-  <i>Edit/File</i><br/>
+  <p><i>Edit/File</i></p>
   The Inventor will be enabled to edit their own IP files before or after loading. PlatoPlan will adopt the
   latest and advanced technology to make an easy access for inventor to edit and upload their IP files. The
   Inventor will then create their person file archives and they can save, edit, publish, apply for other
@@ -44,7 +44,7 @@
 
 
 <p>
-  <i>Publish/Conceal</i><br/>
+  <p><i>Publish/Conceal</i></p>
   The inventors can choose if they want to publish or conceal or withdraw their works to the public first
   before they think it is mature enough and well protected. Or they can just publish an edited or selected
   briefing of their IP work to the public to make the first record of their evidence of ORIGINATION. This
@@ -55,4 +55,13 @@
   And the major function of PlatoPlan is to help the Inventor to acquire the IP record of Original publisher
   and meanwhile to conceal the major invention in a confidential status before the necessary legal actions
   taken, like application of copyright or patent, etc.
+</p>
+
+<p>
+  <p><i>Copyright/Patent</i></p>
+  The inventors can choose to apply for a copyright review before they publish their IP work. (This <b>will be
+  starting point for PlatoPlan to get the income from.</b>) Or the inventors might have their own copyright
+  applied, they can just publish their work. The handling of the such requests of copyright could be a
+  tremendous work as any simple idea will need work to research and thus AI or latest technologies will
+  be needed to take over such workload.
 </p>
