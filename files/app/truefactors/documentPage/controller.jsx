@@ -19,10 +19,7 @@ React.createClass({
 		switch (menuItem) {
 			case 'about' : 
 				return (<_about/>)
-				break;
-			case 'nda' : 
-				return (<_NDA/>)
-				break;				
+				break;			
 			case 'contact' :
 				return (<_contact/>)
 				break;
