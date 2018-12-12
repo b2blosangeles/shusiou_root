@@ -108,7 +108,7 @@ var _compView = function(me, Root) {
 			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
 			closeIcon : true,
 			data : (<div className="p-5">
-				<img className="w-100" src={url}/>
+				<img className="" src={url}/>
 				</div>
 				)
 		};
