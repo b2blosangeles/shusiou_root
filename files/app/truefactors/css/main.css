@@ -45,7 +45,7 @@ video#gumVideo {
   }
 }
 
-@media screen and (max-width: 720px) { */
+@media screen and (max-width: 720px) { 
   video {
     height: calc((50vw - 48px) * 3 / 4);
     margin: 0 10px 10px 0;
@@ -56,6 +56,16 @@ video#gumVideo {
     margin: 0 10px 10px 0;
   }
 }
+
+@media screen and (max-width: 120px) { 
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 
 body { 
     background: #fff url("/app/truefactors/imgs/invention_bg.jpg") repeat; overflow-y: scroll;
