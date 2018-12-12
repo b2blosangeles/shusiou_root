@@ -24,7 +24,8 @@ var _homePage = React.createClass({
 			will be honestly record the time while the file is revealed to the public and thus to protect the 
 			IP rights of the investors..	
 		</p>
-
+		<p><u>Interfaces for inventors</u></p>	
+		<p><i>Login/Register</i></p>	
 		</span>)
     }
 });
