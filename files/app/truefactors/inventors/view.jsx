@@ -113,6 +113,8 @@ var _compView = function(me, Root) {
 			'/app/truefactors/resource/webp/117.webp'
 		]
 		var item = list[Math.floor(Math.random()*list.length)];
-		return '<img class="w-100" src="' + ((list[i]) ? list[i] : item) + '"/>';
+		return (<img className="w-100" 
+				onClick={Root.overLay.popup.bind(me, popupSetting)}
+				src="' + ((list[i]) ? list[i] : item) + '"/>);
 	}	
 };
