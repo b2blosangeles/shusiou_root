@@ -57,7 +57,7 @@ video#gumVideo {
   }
 }
 
-@media screen and (max-width: 120px) { 
+@media screen and (max-width: 1200px) { 
   .container {
     padding-right: 15px;
     padding-left: 15px;
