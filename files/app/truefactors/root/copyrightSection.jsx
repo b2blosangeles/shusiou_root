@@ -15,14 +15,14 @@ var _copyrightSection = React.createClass({
 		closeIcon : true,
 		data : (<span></span>)
 	};	    
-	    
+	    // Root.overLay.popup.bind(me, popupSetting)
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
 			<div className="row">
 				<div className="col-sm-2 text-left">
 					{(!me.state._auth) ? (
-						<a onClick={Root.overLay.popup.bind(me, popupSetting)}
+						<a onClick={Root.auth.signIn.bind(me)}
 						href="JavaScript: void(0)">Login</a>)
 						:
 						(<span>
