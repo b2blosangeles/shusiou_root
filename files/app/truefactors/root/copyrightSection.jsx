@@ -9,13 +9,26 @@ var _copyrightSection = React.createClass({
 	  var animationTransfer = me.props.parent.animationTransfer;
 	  var langs = ['en', 'cn'];
 	  
+	    
+	    
+		var popupSetting = {
+			type : 'light', 
+			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
+			closeIcon : true,
+			data : (<span>
+				<button type="button" className="btn btn-warning"  
+					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
+				</span>
+				)
+		};	    
+	    
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
 			<div className="row">
 				<div className="col-sm-2 text-left">
 					{(!me.state._auth) ? (
-						<a onClick={Root.auth.doAuth.bind(me)}
+						<a onClick={Root.overLay.popup.bind(me, popupSetting)}
 						href="JavaScript: void(0)">Login</a>)
 						:
 						(<span>
