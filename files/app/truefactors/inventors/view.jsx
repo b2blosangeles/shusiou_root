@@ -41,7 +41,7 @@ var _compView = function(me, Root) {
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.showImage(m), 
+							data : this.showImage(m), 
 							setting : {
 								noshadow :false,
 								type: 'light',
@@ -78,7 +78,7 @@ var _compView = function(me, Root) {
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.showImage(m), 
+							data : this.showImage(m), 
 							setting : {
 								noshadow :false,
 								type: 'light',
