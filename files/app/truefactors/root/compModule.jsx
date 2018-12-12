@@ -57,6 +57,7 @@ var _compModule = function(me, Root) {
 	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {
+						homePage : 'https://dev.shusiou.win/app/truefactors/contents/homePage.txt',
 						NDA : 'https://dev.shusiou.win/app/truefactors/contents/NDA.txt',
 						terms : 'https://dev.shusiou.win/app/truefactors/contents/terms.txt',
 						faq: 'https://dev.shusiou.win/app/truefactors/contents/faq.text',
