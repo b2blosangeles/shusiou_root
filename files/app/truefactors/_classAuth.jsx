@@ -48,6 +48,7 @@ React.createClass({
 						<label className="custom-control-label" for="customCheck1">Remember password</label>
 					      </div>
 					      <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+						      onClick={me.signInAuth.bind(me, Root)}
 						      type="button">Sign in</button>
 					    </form>
 					  </div>
