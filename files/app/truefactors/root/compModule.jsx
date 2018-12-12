@@ -76,5 +76,10 @@ var _compModule = function(me, Root) {
 		data : menuItem,
 		parent : me
 	})
-    }      
+    } 
+    
+    this.loadLogin= function() {
+	alert(123);
+    }    
+    
 };
