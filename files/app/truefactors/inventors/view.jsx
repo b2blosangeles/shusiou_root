@@ -2,6 +2,7 @@ var _compView = function(me, Root) {
 	this.showVideoMenu = function() {
 		return (<span>	
 		<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
+		</span>)
 	};
 	this.showVideos = function () {
 		return  (
