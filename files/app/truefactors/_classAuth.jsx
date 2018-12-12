@@ -17,7 +17,7 @@ React.createClass({
 	signInAuth : function(Root) {
 		var me = this;
 		Root.overLay.closePopup(Root);
-		me.doAuth();
+		setTimeout(me.doAuth, 1000);
 	},
 	signIn : function(Root) {
 		var me = this;
