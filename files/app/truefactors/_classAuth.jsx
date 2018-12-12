@@ -39,7 +39,7 @@ React.createClass({
 					      </div>
 
 					      <div className="form-label-group">
-						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required>
+						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required.>
 						<label for="inputPassword">Password</label>
 					      </div>
 
