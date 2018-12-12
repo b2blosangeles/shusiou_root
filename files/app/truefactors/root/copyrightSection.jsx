@@ -11,7 +11,7 @@ var _copyrightSection = React.createClass({
 	  
           return  (
 		<div className="copyright_section">
-			<div className="container-fluid px-5">
+			<div className="container-fluid px-3">
 			<div className="row">
 				<div className="col-sm-2 text-left">
 					{(!me.state._auth) ? (
