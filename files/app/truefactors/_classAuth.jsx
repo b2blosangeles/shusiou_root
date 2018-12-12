@@ -16,8 +16,8 @@ React.createClass({
 	},
 	signInAuth : function(Root) {
 		var me = this;
-		me.doAuth();
 		Root.overLay.closePopup(Root);
+		me.doAuth();
 	},
 	signIn : function(Root) {
 		var me = this;
@@ -26,7 +26,7 @@ React.createClass({
 			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
 			closeIcon : true,
 			data : (<span>
-				<button type="button" className="btn btn-warning"  
+				<button type="button" className="btn btn-success"  
 					onClick={me.signInAuth.bind(me, Root)}>Sign In</button>
 				</span>)
 		};
