@@ -55,7 +55,7 @@ var _compView = function(me, Root) {
 	}
 	this.showMyinventions = function () {
 		return  (
-			<div className="container">AAAA
+			<div className="container">
 				{Root.lib.spinAnchor(me, 'AB')}
 				<div className="row ">
 					<div className="col-sm-12 p-1">	
