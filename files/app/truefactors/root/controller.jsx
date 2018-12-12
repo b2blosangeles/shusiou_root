@@ -25,7 +25,7 @@ React.createClass({
 		
 		if (me.state.menuOption === 'language')  {
 			return me.compModule.loadLanguage();
-		else if (me.state.menuOption === 'registration')  {
+		} else if (me.state.menuOption === 'registration')  {
 			return me.compModule.registrationPage();	
 		} else {
 			if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
