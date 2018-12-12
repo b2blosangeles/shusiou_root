@@ -3,7 +3,7 @@ var _compData = function(me, Root) {
 		//var spin_id = Root.overLay.spinOn();
 		console.log('===call load loadVideos');
 		Root.lib.setSpinAnchor(me, 'AA', true);
-		me.list = [];
+		// me.list = [];
 		me.setState({updated : new Date().getTime()});
 		setTimeout(
 			function() {
@@ -11,7 +11,7 @@ var _compData = function(me, Root) {
 				Root.lib.setSpinAnchor(me, 'AA', false)
 			//	Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
-			},3000
+			},1000
 		)
 	},
 	this.loadMyinventions = function() {
@@ -27,7 +27,7 @@ var _compData = function(me, Root) {
 				console.log('===call load loadVideos done');
 			//	Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
-			},3000
+			},1000
 		)
 	}		
 
