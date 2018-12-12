@@ -38,11 +38,31 @@ var _homePage = React.createClass({
 			</p>
 			
 			<p>
-			Confidential Information includes, without limitation, all of the following:	
-				<ul>
-					<li>test</li>
-				</ul>
+			Confidential Information includes, without limitation, all of the following:
 			</p>
+			<ul>
+				<li>product specifications; data; know-how; formulas; compositions; processes; designs;
+				sketches; photographs; samples; prototypes; inventions; concepts; ideas; past, current and
+				planned research and development; past, current and planned manufacturing or
+				distribution methods and processes;
+				</li>
+				<li>the identity of or other information about actual or potential customers, customer contacts
+				and customer sales strategies;
+				</li>
+				<li>market studies, penetration data and other market information; sales and marketing plans,
+				programs and strategies;
+				</li>
+				<li>sales, costs, and other financial data;
+				</li>
+				<li>the identity of or other information about actual or potential product suppliers and
+				sources of supply for products, raw materials, and components; supplier contact
+				information; plant descriptions and descriptions of production equipment;
+				</li>
+				<li>price lists; business plans; financial reports and statements;
+				</li>				
+				
+			</ul>
+			
 		</span>)
     }
 });
