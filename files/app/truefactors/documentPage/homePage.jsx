@@ -70,6 +70,16 @@ var _homePage = React.createClass({
 			<p>Confidential Information also includes any material or information that contains or is based on
 			any other Confidential Information, whether prepared by either party or their Employees, or any
 			other person.</p>
+			
+			<p>
+			2. Information and materials will be conclusively deemed to be Confidential Information if
+			marked as confidential or proprietary at the time disclosed. Any information disclosed orally
+			will be conclusively deemed Confidential Information if the disclosing party notifies the
+			receiving party that it is confidential or proprietary at any time following disclosure. A party’s
+			failure, however, to mark information or materials as confidential or proprietary or to notify the
+			other party that oral information is confidential or proprietary will not affect the information’s or
+			material’s confidential or proprietary nature.			
+			</p>
 		</span>)
     }
 });
