@@ -78,5 +78,20 @@ var _compModule = function(me, Root) {
 		data : menuItem,
 		parent : me
 	})
+    },
+    this.registrationPage = function(menuItem) {
+	return Root.lib.asyncModule({
+		setting:{	extend: {
+					contents : {},
+					includes : [],
+					controller : 'https://dev.shusiou.win/app/truefactors/registration/controller.jsx'
+
+				}, 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+
+			},
+		data : menuItem,
+		parent : me
+	})
     } 
 };
