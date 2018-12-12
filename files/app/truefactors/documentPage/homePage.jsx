@@ -5,7 +5,7 @@ var _homePage = React.createClass({
     },
     render: function() {
 	return  (<span>
-		<h4>About Plato Plan</h4>
+		<h5>About Plato Plan</h5>
 		<p>
 			<b>Abstract</b> : PlatoPlan Platform is to inspire every dream maker on the earth. She will provide easy access to
   			file and publish innovative concept, ideas, products, works. More importantly, PlatoPlan will help those
