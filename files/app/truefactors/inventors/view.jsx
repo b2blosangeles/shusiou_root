@@ -4,6 +4,11 @@ var _compView = function(me, Root) {
 		<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 		</span>)
 	};
+	this.showMyinventionsMenu = function() {
+		return (<span>	
+		<button type="button" className="btn btn-info" onClick={me.compData.Myinventions.bind(me)}>Load Data</button>
+		</span>)
+	};	
 	this.showVideos = function () {
 		return  (
 			<div className="container">
@@ -50,7 +55,7 @@ var _compView = function(me, Root) {
 					{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.compView.showVideoMenu(), 
+							data : me.compView.showMyinventionsMenu(), 
 							setting : {
 								class : ' alert-secondary text-right ',
 								noshadow :  true,
