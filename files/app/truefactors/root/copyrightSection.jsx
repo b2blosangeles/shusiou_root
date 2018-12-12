@@ -8,19 +8,13 @@ var _copyrightSection = React.createClass({
 	  var role = me.props.parent.state.role;
 	  var animationTransfer = me.props.parent.animationTransfer;
 	  var langs = ['en', 'cn'];
-	  
-	    
-	    
-		var popupSetting = {
-			type : 'light', 
-			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
-			closeIcon : true,
-			data : (<span>
-				<button type="button" className="btn btn-warning"  
-					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
-				</span>
-				)
-		};	    
+
+	var popupSetting = {
+		type : 'light', 
+		// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
+		closeIcon : true,
+		data : (<span></span>)
+	};	    
 	    
           return  (
 		<div className="copyright_section">
