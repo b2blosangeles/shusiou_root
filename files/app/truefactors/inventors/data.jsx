@@ -11,7 +11,7 @@ var _compData = function(me, Root) {
 				Root.lib.setSpinAnchor(me, 'AA', false)
 			//	Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
-			},1000
+			},3000
 		)
 	},
 	this.loadMyinventions = function() {
@@ -26,7 +26,7 @@ var _compData = function(me, Root) {
 				Root.lib.setSpinAnchor(me, 'AB', false)
 			//	Root.overLay.spinOff(spin_id);
 				me.setState({updated : new Date().getTime()});
-			},1000
+			},3000
 		)
 	}		
 
