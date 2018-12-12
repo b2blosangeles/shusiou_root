@@ -59,7 +59,7 @@ React.createClass({
 				  </div>				
 				
 				
-				(/*<span>
+				{/*<span>
 				<button type="button" className="btn btn-success"  
 					onClick={me.signInAuth.bind(me, Root)}>Sign In</button>
 				</span>*/})
