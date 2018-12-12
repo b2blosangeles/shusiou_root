@@ -19,9 +19,24 @@
 </p>
 <p><u>Interfaces for inventors</u></p>	
 <p><i>Login/Register</i></p>
-
 <p>
-  Legal team will be involved from the initial stage to make sure Balabala can collect the information of
+  Legal team will be involved from the initial stage to make sure PlatoPlan can collect the information of
   the inventors in an appropriate and legal way. This will include the NDA， agreement between inventors
-  and Balabala, so on and so forth.
+  and PlatoPlan, so on and so forth.
+</p>
+
+<p><i>Record/Upload</i></p>
+<p>
+  PlatoPlan will provide an app or web function to help the inventor to record their works, concepts, etc.
+  via video or any latest technologies. Besides the inventor can upload their existing files in any possible
+  media forms which PlatoPlan can recognize and accept into the system.
+</p>
+
+
+<p><i>Edit/File</i></p>
+<p>
+  The Inventor will be enabled to edit their own IP files before or after loading. PlatoPlan will adopt the
+  latest and advanced technology to make an easy access for inventor to edit and upload their IP files. The
+  Inventor will then create their person file archives and they can save, edit, publish, apply for other
+  requests later.
 </p>
