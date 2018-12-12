@@ -14,6 +14,16 @@ React.createClass({
 			location.reload();
 		}
 	},
+	signIn : function() {
+		var me = this;
+		var popupSetting = {
+			type : 'light', 
+			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
+			closeIcon : true,
+			data : (<span>niu</span>)
+		};
+		Root.overLay.popup(popupSetting);		
+	},	
 	doAuth : function() {
 		var me = this;
 		var v = (me.state._auth) ? '' : new Date().getTime();
