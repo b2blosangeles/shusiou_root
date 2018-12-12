@@ -5,7 +5,7 @@ var _homePage = React.createClass({
     },
     render: function() {
 	return  (<span>
-		<h2>CONFIDENTIALITY AGREEMENT</h2>
+		<h2>Plato Plan</h2>
 		<p>
 		PlatoPlan Platform is to inspire every dream maker on the earth. She will provide easy access to
 		file and publish innovative concept, ideas, products, works. More importantly, Balabala will help those
