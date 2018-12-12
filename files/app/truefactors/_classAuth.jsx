@@ -19,6 +19,9 @@ React.createClass({
 		Root.overLay.closePopup(Root);
 		setTimeout(me.doAuth, 1000);
 	},
+	registration : function() {
+		alert('registration');
+	},
 	signIn : function(Root) {
 		var me = this;
 		var popupSetting = {
@@ -35,12 +38,10 @@ React.createClass({
 					    <form className="form-signin">
 					      <div className="form-label-group">
 						<input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autofocus/>
-						<label for="inputEmail">Email address</label>
 					      </div>
 
 					      <div className="form-label-group">
 						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
-						<label for="inputPassword">Password</label>
 					      </div>
 
 					      <div className="custom-control custom-checkbox mb-3">
@@ -50,6 +51,10 @@ React.createClass({
 					      <button className="btn btn-lg btn-primary btn-block text-uppercase" 
 						      onClick={me.signInAuth.bind(me, Root)}
 						      type="button">Sign in</button>
+						    
+					      <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+						      onClick={me.registration.bind(me, Root)}
+						      type="button">Registration</button>
 					    </form>
 					  </div>
 					</div>
