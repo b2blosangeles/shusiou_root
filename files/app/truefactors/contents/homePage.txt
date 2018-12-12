@@ -18,23 +18,24 @@
   IP rights of the investors..	
 </p>
 <p><u>Interfaces for inventors</u></p>	
-<p><i>Login/Register</i></p>
+
 <p>
+  <i>Login/Register</i><br/>
   Legal team will be involved from the initial stage to make sure PlatoPlan can collect the information of
   the inventors in an appropriate and legal way. This will include the NDA， agreement between inventors
   and PlatoPlan, so on and so forth.
 </p>
 
-<p><i>Record/Upload</i></p>
 <p>
+  <i>Record/Upload</i><br/>
   PlatoPlan will provide an app or web function to help the inventor to record their works, concepts, etc.
   via video or any latest technologies. Besides the inventor can upload their existing files in any possible
   media forms which PlatoPlan can recognize and accept into the system.
 </p>
 
 
-<p><i>Edit/File</i></p>
 <p>
+  <i>Edit/File</i><br/>
   The Inventor will be enabled to edit their own IP files before or after loading. PlatoPlan will adopt the
   latest and advanced technology to make an easy access for inventor to edit and upload their IP files. The
   Inventor will then create their person file archives and they can save, edit, publish, apply for other
@@ -42,8 +43,8 @@
 </p>
 
 
-<p><i>Publish/Conceal</i></p>
 <p>
+  <i>Publish/Conceal</i><br/>
   The inventors can choose if they want to publish or conceal or withdraw their works to the public first
   before they think it is mature enough and well protected. Or they can just publish an edited or selected
   briefing of their IP work to the public to make the first record of their evidence of ORIGINATION. This
