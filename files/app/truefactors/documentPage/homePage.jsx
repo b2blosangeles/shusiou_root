@@ -80,6 +80,26 @@ var _homePage = React.createClass({
 			other party that oral information is confidential or proprietary will not affect the information’s or
 			material’s confidential or proprietary nature.			
 			</p>
+			
+			<p>
+			3. The parties agree to (a) keep each other’s Confidential Information strictly confidential
+			and disclose it only to those Employees (i) who need to know such Confidential Information in
+			order for the party to explore and facilitate a business relationship with the other party and (ii)
+			who are subject to the same or comparable obligations of confidentiality, (b) use the Confidential
+			Information solely for the purpose of, and only to the extent required for, exploring and
+			facilitating a business relationship with the other party and (c) obtain the other party’s written
+			consent before disclosing any information that could, under any circumstances, constitute
+			Confidential Information.			
+			</p>	
+
+			<p>
+			4. The parties agree that, with respect to the purchase or sale of any products purchased or
+			sold by the disclosing party on or after the date of this agreement, the receiving party may not
+			and shall not solicit any contract, agreement, arrangement, or understanding, directly or
+			indirectly, with any customer of or supplier to the disclosing party whose identity is disclosed to
+			receiving party by disclosing party.			
+			</p>
+			
 		</span>)
     }
 });
