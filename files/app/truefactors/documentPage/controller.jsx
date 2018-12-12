@@ -20,6 +20,9 @@ React.createClass({
 			case 'about' : 
 				return (<_about/>)
 				break;
+			case 'nda' : 
+				return (<_NDA/>)
+				break;				
 			case 'contact' :
 				return (<_contact/>)
 				break;
