@@ -1,7 +1,7 @@
 var _copyrightSection = React.createClass({
     getInitialState: function() {
 	var me = this;
-	return {}
+	return {_auth : localStorage.getItem('_auth')}
     },
     render: function() {
           var me = this;
@@ -13,8 +13,19 @@ var _copyrightSection = React.createClass({
 		<div className="copyright_section">
 			<div className="container-fluid px-5">
 			<div className="row">
-				<div className="col-sm-12 text-left">
-					<span className="pull-left">test</span>
+				<div className="col-sm-2 text-left">
+					{(!me.state._auth) ? (
+						<a onClick={Root.auth.doAuth.bind(me)}
+						href="JavaScript: void(0)">Login</a>)
+						:
+						(<span>
+						<a>
+						({(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info})</a>
+						&nbsp;
+						<a onClick={Root.auth.doAuth.bind(me)}
+						href="JavaScript: void(0)">Logoff</a>
+						</span>)
+					}
 				</div>
 				<div className="col-sm-10 text-right">
 					<span className="pull-right">
