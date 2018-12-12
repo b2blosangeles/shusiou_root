@@ -23,9 +23,6 @@ React.createClass({
 			case 'contact' :
 				return (<_contact/>)
 				break;
-			case 'homePage' :
-				return (<_homePage/>)
-				break;
 			default :
 				if (me.compContents[menuItem]) {
 					return me.compContents[menuItem];
