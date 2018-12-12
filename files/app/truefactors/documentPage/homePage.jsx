@@ -60,7 +60,12 @@ var _homePage = React.createClass({
 				</li>
 				<li>price lists; business plans; financial reports and statements;
 				</li>				
-				
+				<li>computer software and programs (including object code and source code); databases;
+				</li>
+				<li>internal reports, memoranda, notes, analyses, compilations and studies; and other data,
+				information, materials or intangibles that relate to Sunway’s and/or its customers’
+				business and/or products.
+				</li>	
 			</ul>
 			
 		</span>)
