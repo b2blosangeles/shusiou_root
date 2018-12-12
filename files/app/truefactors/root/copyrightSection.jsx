@@ -8,14 +8,7 @@ var _copyrightSection = React.createClass({
 	  var role = me.props.parent.state.role;
 	  var animationTransfer = me.props.parent.animationTransfer;
 	  var langs = ['en', 'cn'];
-
-	var popupSetting = {
-		type : 'light', 
-		// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
-		closeIcon : true,
-		data : (<span></span>)
-	};	    
-	    // Root.overLay.popup.bind(me, popupSetting)
+	    
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
