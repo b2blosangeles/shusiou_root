@@ -77,9 +77,4 @@ var _compModule = function(me, Root) {
 		parent : me
 	})
     } 
-    
-    this.loadLogin= function() {
-	alert(123);
-    }    
-    
 };
