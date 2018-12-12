@@ -14,7 +14,7 @@ React.createClass({
 			location.reload();
 		}
 	},
-	signIn : function() {
+	signIn : function(Root) {
 		var me = this;
 		var popupSetting = {
 			type : 'light', 
