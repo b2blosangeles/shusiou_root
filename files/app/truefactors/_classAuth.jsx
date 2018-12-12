@@ -36,18 +36,14 @@ React.createClass({
 					  <div className="card-body">
 					    <h5 className="card-title text-center">Sign In</h5>
 					    <form className="form-signin">
-					      <div className="form-label-group">
+					      <div className="form-label-group mb-3">
 						<input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autofocus/>
 					      </div>
 
-					      <div className="form-label-group">
+					      <div className="form-label-group mb-3">
 						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
 					      </div>
 
-					      <div className="custom-control custom-checkbox mb-3">
-						<input type="checkbox" className="custom-control-input" id="customCheck1"/>
-						<label className="custom-control-label" for="customCheck1">Remember password</label>
-					      </div>
 					      <button className="btn btn-lg btn-primary btn-block text-uppercase" 
 						      onClick={me.signInAuth.bind(me, Root)}
 						      type="button">Sign in</button>
