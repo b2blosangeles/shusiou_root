@@ -40,3 +40,18 @@
   Inventor will then create their person file archives and they can save, edit, publish, apply for other
   requests later.
 </p>
+
+
+<p><i>Publish/Conceal</i></p>
+<p>
+  The inventors can choose if they want to publish or conceal or withdraw their works to the public first
+  before they think it is mature enough and well protected. Or they can just publish an edited or selected
+  briefing of their IP work to the public to make the first record of their evidence of ORIGINATION. This
+  will be mostly important for the inventor to prove they are the very first one to think and find the
+  solution or create the work for such area.
+</p>
+<p>
+  And the major function of PlatoPlan is to help the Inventor to acquire the IP record of Original publisher
+  and meanwhile to conceal the major invention in a confidential status before the necessary legal actions
+  taken, like application of copyright or patent, etc.
+</p>
