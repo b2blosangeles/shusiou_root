@@ -38,7 +38,10 @@ var _homePage = React.createClass({
 			</p>
 			
 			<p>
-			Confidential Information includes, without limitation, all of the following:		
+			Confidential Information includes, without limitation, all of the following:	
+				<ul>
+					<li>test</li>
+				</il>
 			</p>
 		</span>)
     }
