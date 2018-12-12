@@ -47,7 +47,8 @@ React.createClass({
 						<input type="checkbox" className="custom-control-input" id="customCheck1"/>
 						<label className="custom-control-label" for="customCheck1">Remember password</label>
 					      </div>
-					      <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+					      <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+						      type="button">Sign in</button>
 					    </form>
 					  </div>
 					</div>
