@@ -100,19 +100,23 @@ var _compView = function(me, Root) {
 			'/app/truefactors/resource/webp/116.webp',
 			'/app/truefactors/resource/webp/117.webp'
 		]
+		
+		var item = list[Math.floor(Math.random()*list.length)];
+		var url = (list[i]) ? list[i] : item;
 		var popupSetting = {
 			type : 'light', 
 			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
 			closeIcon : true,
 			data : (<span>
+				<img className="w-100" src={url}/>
+					
 				<button type="button" className="btn btn-warning"  
 					onClick={Root.overLay.closePopup.bind(me)}>close Popup Window</button>
 				</span>
 				)
-		};		
-		var item = list[Math.floor(Math.random()*list.length)];
+		};
 		return (<img className="w-100" 
 				onClick={Root.overLay.popup.bind(me, popupSetting)}
-				src={((list[i]) ? list[i] : item)}/>);
+				src={url}/>);
 	}	
 };
