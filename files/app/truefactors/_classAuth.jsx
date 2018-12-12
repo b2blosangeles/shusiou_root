@@ -20,7 +20,7 @@ React.createClass({
 		setTimeout(me.doAuth, 1000);
 	},
 	registration : function() {
-		alert('registration');
+		Root.overLay.closePopup(Root);
 	},
 	signIn : function(Root) {
 		var me = this;
