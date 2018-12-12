@@ -56,17 +56,17 @@ React.createClass({
 					</div>
 				      </div>
 				    </div>
-				  </div>				
-				
-				
-				{/*<span>
-				<button type="button" className="btn btn-success"  
-					onClick={me.signInAuth.bind(me, Root)}>Sign In</button>
-				</span>*/})
+				  </div>)
 		};
 		Root.overLay.popup(popupSetting);		
 	},	
 	doAuth : function() {
+		/*<span>
+				<button type="button" className="btn btn-success"  
+					onClick={me.signInAuth.bind(me, Root)}>Sign In</button>
+				</span>*/
+		
+		
 		var me = this;
 		var v = (me.state._auth) ? '' : new Date().getTime();
 		localStorage.setItem('_auth', v);
