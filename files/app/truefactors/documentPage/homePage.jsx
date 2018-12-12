@@ -67,7 +67,9 @@ var _homePage = React.createClass({
 				business and/or products.
 				</li>	
 			</ul>
-			
+			<p>Confidential Information also includes any material or information that contains or is based on
+			any other Confidential Information, whether prepared by either party or their Employees, or any
+			other person.</p>
 		</span>)
     }
 });
