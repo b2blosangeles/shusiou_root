@@ -1,4 +1,4 @@
-var _homePage = React.createClass({
+var _NDA = React.createClass({
     getInitialState: function() {
 	var me = this;
 	return {}
