@@ -2,7 +2,7 @@ var _subMenu = React.createClass({
     getInitialState: function() {
 	var me = this;
 	me.roles = Root.global.roles; 
-	return {_auth : localStorage.getItem('_auth')}
+	return {}
     },
     clickOption : function(v, e) {
 	var me = this; 
@@ -64,22 +64,6 @@ var _subMenu = React.createClass({
 											{captions[m]}</span></a>
 									</li></span>)
 							})}
-						
-							<div className="text-right nav-right p-2">
-								{(!me.state._auth) ? (
-									<a onClick={Root.auth.doAuth.bind(me)}
-									href="JavaScript: void(0)">Login</a>)
-									:
-									(<span>
-									<a>
-									({(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info})</a>
-									&nbsp;
-									<a onClick={Root.auth.doAuth.bind(me)}
-									href="JavaScript: void(0)">Logoff</a>
-									</span>)
-								}
-							</div>
-						
 					</ul>
 				</div>
 			</div>
