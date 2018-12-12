@@ -99,7 +99,69 @@ var _homePage = React.createClass({
 			indirectly, with any customer of or supplier to the disclosing party whose identity is disclosed to
 			receiving party by disclosing party.			
 			</p>
+
+			<p>
+			5. The obligations and limitations set forth herein regarding Confidential Information shall
+			not apply to information that is:			
+			</p>
 			
+			<ul>
+				<li>at any time in the public domain other than by a breach of this Agreement by the
+				party who received such Confidential Information;
+				</li>
+				<li>at any time received from a third party that has the right to furnish it to the party
+				without restrictions on disclosure or use;
+				</li>
+				<li>known to the party without any restriction on disclosure or use prior to its receipt
+				from the other party or independently developed by the party; or
+				</li>	
+				<li>authorized in writing by the disclosing party to be disclosed by the other party.
+				</li>	
+			</ul>
+			
+			<p>
+			6. Confidential Information supplied shall not be reproduced in any form by the receiving
+			party or its Employees except as required to accomplish the purpose of this Agreement.			
+			</p>
+			
+			<p>
+			7. Upon the request of the disclosing party, the receiving party agrees to return all
+			documents and materials containing any Confidential Information, as well as all copies thereof.		
+			</p>
+			
+			<p>
+			8. The parties will cause all of their Employees to comply with the terms of this Agreement.
+			Each party will be liable and responsible for any violation of the terms of this Agreement by any
+			of its Employees. A party will immediately inform the other party of any breach of this
+			Agreement by any of its Employees, and the party will take all steps needed to halt any current
+			violation and prevent future violations of this Agreement.			
+			</p>
+
+			<p>
+			9. Neither party shall have any commitment or obligation to enter into any further
+			agreement with the other party or to refrain from dealing with any third party in any manner
+			whatsoever, except as expressly agreed by the parties in writing.			
+			</p>
+			
+			<p>
+			10. This Agreement is limited to terms and conditions governing the disclosure and use of
+			Confidential Information, and no supply or other commercial relationship or obligation between
+			the parties is created by this Agreement.			
+			</p>
+			
+			<p>
+			11. This Agreement contains the entire agreement of the parties concerning the subject matter
+			hereof. No modification or waiver of the terms of this Agreement will be binding unless in
+			writing and signed by Sunway and Company.			
+			</p>
+			
+			<p>
+			12. This Agreement will be governed by the laws of the State of Minnesota applicable to
+			contracts executed in and to be performed in the State of Minnesota. The parties hereby submit
+			to the jurisdiction of any state or federal courts located in the State of Minnesota. The parties
+			agree that monetary damages are an inadequate remedy for a breach of this Agreement and that
+			injunctive relief is an appropriate additional remedy.			
+			</p>
 		</span>)
     }
 });
