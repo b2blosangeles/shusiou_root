@@ -59,18 +59,18 @@ try {
 					  }
 					  me._asyncModule = resultData;
 					  me.setState({success: true, update : new Date().getTime()});
-					  if (cfg.callback) { setTimeout(cfg.callback, 50);  }
+					  if (cfg.callback) { setTimeout(cfg.callback, 10);  }
 				     },
 				     error : function(xhr, textStatus, error) { 
 				       	me._asyncModuleErr = error;
 				       me.setState({success: false, update : new Date().getTime()})
-					  if (cfg.callback) { setTimeout(cfg.callback, 50);  }					     
+					  if (cfg.callback) { setTimeout(cfg.callback, 10);  }					     
 				     }
 				  }); 
 			} else {
 				me._asyncModule = me.getAsyncCache(k);
 				me.setState({success: true, update : new Date().getTime()});
-				if (cfg.callback) { setTimeout(cfg.callback, 50);  }	
+				if (cfg.callback) { setTimeout(cfg.callback, 10);  }	
 			}
 		},
 		render: function() {
