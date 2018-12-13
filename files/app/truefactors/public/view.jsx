@@ -16,7 +16,7 @@ var _compView = function(me, Root) {
 		<button type="button" className="btn btn-info" onClick={Root.overLay.popup.bind(me, popupSetting)}>Popup Window</button>
 		</span>)
 	};
-	this.showVideos = function () {
+	this.publicSearch = function () {
 		return  (
 			<div className="container">
 				{Root.lib.spinAnchor(me, 'AA')}
