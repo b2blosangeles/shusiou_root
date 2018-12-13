@@ -2,7 +2,6 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
           	return {authReady : false, overLayReady : false}
         },
 	getAuth : function() {
