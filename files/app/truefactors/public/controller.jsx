@@ -4,7 +4,6 @@ React.createClass({
 		me.compData = new _compData(me, Root);
 		me.compView = new _compView(me, Root);
 		me.compContents = _compContents;
-		me.compData.loadVideos();
 		me.list = [];
           	return {}
         },
