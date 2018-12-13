@@ -2,6 +2,7 @@ try {
 	var _asyncModule = React.createClass({
 		getInitialState: function() {
 			var me = this;
+			__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 			return {};
 		},
 		componentDidMount:function(prevState, prevProps) {
