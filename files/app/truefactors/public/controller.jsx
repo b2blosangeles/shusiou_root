@@ -12,12 +12,8 @@ React.createClass({
 	},
 	showBody : function() {
 		var me = this;
-		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
-			return me.compView.showMyinventions();
-		} else if (me.props.parent.state.menuOption === 'myVideos') {
-			return me.compView.showVideos(); 
-		} else if (me.props.parent.state.menuOption === 'howToStartInvention') {
-			return me.compContents['howToStartInvention'];
+		if (me.props.parent.state.menuOption === 'publicSearch' || !me.props.parent.state.menuOption) {
+			return me.compView.publicSearch();
 		} else {
 			return (<span>
 				{Root.commUI.show({
@@ -39,7 +35,7 @@ React.createClass({
 		return Root.commUI.show({
 				code: 'infoBox', 
 				parent : me, 
-				data : 'public --me.showBody()', 
+				data : me.showBody(), 
 				setting : {
 					type : 'light',
 					noshadow : true,
