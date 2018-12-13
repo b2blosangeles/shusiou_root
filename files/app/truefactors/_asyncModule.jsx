@@ -61,10 +61,16 @@ try {
 					  }
 					  me._asyncModule = resultData;
 					  me.setState({success: true, update : new Date().getTime()});
+					  if (cfg.callback) {
+					  	cfg.callback()
+					  }
 				     },
 				     error : function(xhr, textStatus, error) { 
-				       me._asyncModuleErr = error;
+				       	me._asyncModuleErr = error;
 				       me.setState({success: false, update : new Date().getTime()})
+					  if (cfg.callback) {
+					  	cfg.callback()
+					  }					     
 				     }
 				  }); 
 			} else {
