@@ -6,6 +6,8 @@ React.createClass({
         },
 	getAuth : function() {
 		var me = this;
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		var _oId = __asyncOId + '-' + new Date().getTime();
 		return (
 			<_asyncModule plugin={{
 			extend: {
