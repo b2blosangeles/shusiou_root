@@ -2,14 +2,10 @@ try {
 	var _asyncModule = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
-			console.log('me.props.objId==>' + me.props.objId)
 			return {};
 		},
 		componentDidMount:function(prevState, prevProps) {
 			var me = this;
-			console.log('__asyncOId')
-			console.log(__asyncOId);
 			me.loadPlugin();
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
