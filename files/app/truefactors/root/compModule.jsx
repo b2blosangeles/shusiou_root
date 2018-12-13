@@ -38,6 +38,24 @@ var _compModule = function(me, Root) {
 		parent : me
 	})
     }
+    this.public = function() {
+	return Root.lib.asyncModule({
+		setting:{	extend: {
+					contents : {
+					},
+					includes : [
+						'https://dev.shusiou.win/app/truefactors/public/data.jsx',
+						'https://dev.shusiou.win/app/truefactors/public/view.jsx'	
+					],
+					controller : 'https://dev.shusiou.win/app/truefactors/public/controller.jsx'
+				}, 
+				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+			},
+		data : '',
+		parent : me
+	})
+    }	
+	
     this.loadLanguage = function() {
 	return Root.lib.asyncModule({
 		setting:{	extend: {
