@@ -1,5 +1,5 @@
 React.createClass({
-        render: function() {
+        sendFrom : function () {
           var me = this;
           return  (
             <span>
@@ -30,6 +30,20 @@ React.createClass({
                   </div>
                 </form>
             </span>
-          )
+          )        
+        },
+        render: function() {
+                var me = this;
+                return Root.commUI.show({
+                                code: 'infoBox', 
+                                parent : me, 
+                                data : me.sendFrom(), 
+                                setting : {
+                                        type : 'light',
+                                        noshadow : true,
+                                        style : {'min-height' : '40em'},
+                                        class : 'documentPageBody p-3'
+                                  }
+                        })
         }
 })
