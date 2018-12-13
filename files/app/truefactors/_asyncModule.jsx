@@ -105,7 +105,7 @@ try {
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root);
-						if (cfg.callback) { setTimeout(cfg.callback);  } 
+						if (cfg.callback) { setTimeout(cfg.callback, 100);  } 
 					} 
 							
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
