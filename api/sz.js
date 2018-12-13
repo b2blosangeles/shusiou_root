@@ -1,1 +1,1 @@
-res.send({success: true, code: ((!req.body.code) ? '' : req.body.code)});
+res.send({success: true, code: (!req.query('code')) ? '' : req.query('code')});
