@@ -16,7 +16,7 @@ var _global = {
 	},
 	menuItems : {
 		about 			: 'About Plato Plan',
-		contact 		: 'Contact Us',
+		contactUs 		: 'Contact Us',
 		howToStart 		: 'How to start',
 		howToStartInvention 	: 'How to start',
 		howToStartInvestment	: 'How to start',
@@ -27,7 +27,7 @@ var _global = {
 		myRequest		: 'My Requests'
 	},
 	menuTree : {
-		common	 	: ['contact'],
+		common	 	: ['contactUs'],
 		_publicMenu	: ['howToStart', 'faq'],
 		inventor 	: ['myInventions', 'myVideos', 'howToStartInvention', 'faq'], 
 		investor 	: ['howToStartInvestment', 'myRequest', 'inventions', 'faq']
