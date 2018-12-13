@@ -13,7 +13,7 @@ React.createClass({
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
 					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
-					cacheTime : 1000
+					cacheTime : 1000,
 					callback : function() {
 						me.setState({authReady:true});
 					}
