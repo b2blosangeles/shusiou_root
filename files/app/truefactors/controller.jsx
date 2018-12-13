@@ -2,7 +2,7 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {loadAuth : false}
+          	return {authReady : false}
         },
 	getAuth : function() {
 		var me = this;
@@ -15,7 +15,7 @@ React.createClass({
 					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
 					cacheTime : 1000
 					callback : function() {
-						me.setState({loadAuth:true});
+						me.setState({authReady:true});
 					}
 				}, 
 				master: '/api/DVCHub.api'
