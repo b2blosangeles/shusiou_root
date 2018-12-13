@@ -33,7 +33,7 @@ React.createClass({
 		return  (
 		<span>
 			{me.getAuth()}
-			{(!me.state.loadAuth) ?	'Loading ...' :
+			{(!me.state.authReady) ?	'Loading ...' :
 			(<span><_asyncModule plugin={{
 			extend: {
 					contents : {},
