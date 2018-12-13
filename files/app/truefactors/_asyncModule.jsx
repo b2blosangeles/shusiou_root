@@ -59,18 +59,15 @@ try {
 					  }
 					  me._asyncModule = resultData;
 					  me.setState({success: true, update : new Date().getTime()});
-					  if (cfg.callback) { setTimeout(cfg.callback, 100);  }
 				     },
 				     error : function(xhr, textStatus, error) { 
 				       	me._asyncModuleErr = error;
-				       	me.setState({success: false, update : new Date().getTime()})
-					if (cfg.callback) { setTimeout(cfg.callback, 100);  } 				     
+				       	me.setState({success: false, update : new Date().getTime()})				     
 				     }
 				  }); 
 			} else {
 				me._asyncModule = me.getAsyncCache(k);
-				me.setState({success: true, update : new Date().getTime()});
-				if (cfg.callback) { setTimeout(cfg.callback, 100);  }	
+				me.setState({success: true, update : new Date().getTime()});	
 			}
 		},
 		render: function() {
@@ -108,9 +105,9 @@ try {
 						_asyncOBJ = new Function('_asyncModule', 'Root', 
 						code)((_asyncModule) ? _asyncModule : {}, 
 						Root);
+						if (cfg.callback) { setTimeout(cfg.callback, 100);  } 
 					} 
-						//console.log('---window.__rootAuth--->');
-						//console.log(window.__rootAuth);					
+							
 					return  (<_asyncOBJ parent={(me.props.parent) ? me.props.parent : me}
 							 data={(me.props.data !== null) ? me.props.data : null}
 							 update = {(me.props.update) ? me.props.update : ''}
