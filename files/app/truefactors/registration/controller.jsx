@@ -33,7 +33,7 @@ React.createClass({
                   </div>
 
                   <div className="container signin">
-                    <p>Already have an account? <a href="JavaScript : void(0)" onClick={Root.auth.signIn.bind(me, Root)}>Sign in</a>.</p>
+                    <p>Already have an account? <a href="#/" onClick={Root.auth.signIn.bind(me, Root)}>Sign in</a>.</p>
                   </div>
                 </form>
             </span>
