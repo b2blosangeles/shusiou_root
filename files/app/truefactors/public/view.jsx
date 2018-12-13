@@ -15,6 +15,7 @@ var _compView = function(me, Root) {
 		</span>)
 	};
 	this.publicSearch = function () {
+		alert(111);
 		return  (
 			<div className="container">
 				{Root.lib.spinAnchor(me, 'AA')}
