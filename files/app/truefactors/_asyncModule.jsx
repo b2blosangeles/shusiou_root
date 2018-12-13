@@ -1,7 +1,9 @@
 try {
+	_asyncModuleQ = {};
 	var _asyncModule = React.createClass({
 		getInitialState: function() {
 			var me = this;
+			console.log('init--->' + me.props.objId);
 			return {};
 		},
 		componentDidMount:function(prevState, prevProps) {
