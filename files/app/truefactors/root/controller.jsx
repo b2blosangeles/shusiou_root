@@ -28,7 +28,7 @@ React.createClass({
 		} else if (me.state.menuOption === 'registration')  {
 			return me.compModule.registrationPage();	
 		} else if (me.state.menuOption === 'publicSearch')  {
-			return me.compModule.loadPublic();	
+			return me.compModule.public();	
 		} else {
 			if ((me.state.role) && (Root.global.menuTree[me.state.role]) && 
 			    Root.global.menuTree[me.state.role].indexOf(me.state.menuOption) !== -1 && 
