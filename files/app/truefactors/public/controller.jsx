@@ -2,24 +2,10 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		me.list = [];
-		me.compData = new _compData(me, Root);
-		me.compView = new _compView(me, Root);
-		me.compContents = _compContents;
           	return {}
         },
 	componentDidMount : function() {
 		var me = this;
-		console.log('===me.props.parent.state.menuOption===>');
-		console.log(me.props.parent.state.menuOption);
-		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
-			me.compData.loadMyinventions ();
-			
-			// me.loadData();
-		}  else if (me.props.parent.state.menuOption === 'myVideos') {
-			me.compData.loadVideos();
-		} else {
-		
-		}
 	},
 	componentWillUnmount : function() {
 		var me = this;
@@ -53,7 +39,7 @@ React.createClass({
 		return Root.commUI.show({
 				code: 'infoBox', 
 				parent : me, 
-				data : me.showBody(), 
+				data : 'public --me.showBody()', 
 				setting : {
 					type : 'light',
 					noshadow : true,
