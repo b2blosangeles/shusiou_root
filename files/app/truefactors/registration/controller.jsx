@@ -1,4 +1,11 @@
 React.createClass({
+        getInitialState: function() {
+		var me = this;
+                if  (localStorage.getItem('_auth')) {
+                        window.location.href='#/';
+                }
+		return {}
+        },        
         sendFrom : function () {
           var me = this;
           return  (
