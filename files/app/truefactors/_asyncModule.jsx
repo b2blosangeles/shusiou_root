@@ -3,7 +3,7 @@ try {
 		getInitialState: function() {
 			var me = this;
 			__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
-			console.log('prevProps.objId==>' + prevProps.objId)
+			console.log('me.props.objId==>' + me.props.objId)
 			return {};
 		},
 		componentDidMount:function(prevState, prevProps) {
