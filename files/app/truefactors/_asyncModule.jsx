@@ -7,6 +7,8 @@ try {
 		},
 		componentDidMount:function(prevState, prevProps) {
 			var me = this;
+			console.log('__asyncOId')
+			console.log(__asyncOId);
 			me.loadPlugin();
 		},		
 		componentDidUpdate:function(prevProps, prevState) {
