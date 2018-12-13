@@ -25,19 +25,29 @@
 </ul>
 
 <p>
-  <u>Design, engineering and product deployment</u>: Whether you have a well-developed design, or just an idea you have
+  <u>Design, engineering and product deployment</u> : Whether you have a well-developed design, or just an idea you have
   sketched on a napkin, we can assist to create your first or final computer design. This process will provide preliminary
   cost, feasibility analysis , I/P conflict search and planning for samples-first prototypes.
 </p>
 
 <p>
-  <u>Quality control and business systems</u>: We utilize well established world class QC processes and standard operating
+  <u>Quality control and business systems</u> : We utilize well established world class QC processes and standard operating
   procedures used across many product types and industries. Sunway will ensure you have the proper documentation,
   business, and product plan to have success and minimize risk.
 </p>
 
 <p>
-  <u>Tooling, create or utilize</u>: If you have molds for any items already made we can use to save in costs or \
+  <u>Tooling, create or utilize</u> : If you have molds for any items already made we can use to save in costs or \
   we can build you your own tool in our Shenzhen factory. 
   All tooling will be in a safe -locked room with access only by key employees..
+</p>
+
+<p>
+  <u>Parts procurement, financing, and staging</u> : Incredible cost and time savings by allowing Sunway to take manage and
+  fund this critical work in preplanning, scheduling, and mass production.
+</p>
+
+<p>
+  <u>Manufacturing:</u> : All manufacturing, production scheduling, and container loading will be managed by Sunway,
+  remember , our factory is your factory. Our best customers have full time team members at the factory to stay close.
 </p>
