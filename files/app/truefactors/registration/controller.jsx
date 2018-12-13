@@ -20,6 +20,8 @@ React.createClass({
                     <hr/>
 
                     <p>By creating an account you agree to our <a href="#/NDA">CONFIDENTIALITY AGREEMENT</a>.</p>
+                    <div>CONFIDENTIALITY AGREEMENT</div>      
+                         
                     <button type="submit" className="registerbtn">Register</button>
                   </div>
 
