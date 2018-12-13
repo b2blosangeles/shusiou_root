@@ -2,11 +2,11 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
           	return {authReady : false}
         },
 	getAuth : function() {
 		var me = this;
-		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return (
 			<_asyncModule plugin={{
@@ -17,7 +17,7 @@ React.createClass({
 					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
 					cacheTime : 1000,
 					callback : function() {
-						me.setState({authReady:true});
+						if (!me.state.authReady) me.setState({authReady:true});
 					}
 				}, 
 				master: '/api/DVCHub.api'
@@ -28,7 +28,7 @@ React.createClass({
 	},
         render: function() {
         	var me = this;
-		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return  (
 		<span>
