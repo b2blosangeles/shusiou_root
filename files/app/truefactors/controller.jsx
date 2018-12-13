@@ -2,14 +2,11 @@
 React.createClass({
         getInitialState: function() {
 		var me = this;
-          	return {}
+          	return {loadAuth : false}
         },
-        render: function() {
-        	var me = this;
-		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
-		var _oId = __asyncOId + '-' + new Date().getTime();
-		return  (
-		<span>
+	getAuth : function() {
+		var me = this;
+		return (
 			<_asyncModule plugin={{
 			extend: {
 					contents : {},
@@ -17,22 +14,30 @@ React.createClass({
 					loadingInfo : '', // 'Loading ...',
 					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
 					cacheTime : 1000
+					callback : function() {
+						me.setState({loadAuth:true});
+					}
 				}, 
 				master: '/api/DVCHub.api'
 				
 			}} 
 			parent={me} objId={'Auth' + _oId} />		
-				
-			<_asyncModule plugin={{
+		)
+	},
+        render: function() {
+        	var me = this;
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		var _oId = __asyncOId + '-' + new Date().getTime();
+		return  (
+		<span>
+			{me.getAuth()}
+			{(!me.state.loadAuth) ?	'Loading ...' :
+			(<_asyncModule plugin={{
 			extend: {
 					contents : {},
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
-					controller : 'https://dev.shusiou.win/app/truefactors/_classOverLay.jsx',
-					cacheTime : 1000,
-					callback : function() {
-						alert('niu');
-					}
+					controller : 'https://dev.shusiou.win/app/truefactors/_classOverLay.jsx'
 				}, 
 				master: '/api/DVCHub.api'
 				
@@ -55,7 +60,7 @@ React.createClass({
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 				}} 
-				parent={me} objId={'B' + _oId} />
+				parent={me} objId={'B' + _oId} />)}
 							
 		</span>
 		)
