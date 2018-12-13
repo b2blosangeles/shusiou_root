@@ -3,10 +3,11 @@ React.createClass({
         getInitialState: function() {
 		var me = this;
 		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
-          	return {authReady : false}
+          	return {authReady : false, overLayReady : false}
         },
 	getAuth : function() {
 		var me = this;
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
 		return (
 			<_asyncModule plugin={{
@@ -26,27 +27,38 @@ React.createClass({
 			parent={me} objId={'Auth' + _oId} />		
 		)
 	},
-        render: function() {
-        	var me = this;
-		
+	getOverLay : function() {
+		var me = this;
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
 		var _oId = __asyncOId + '-' + new Date().getTime();
-		return  (
-		<span>
-			{me.getAuth()}
-			{(!me.state.authReady) ?	'Loading ...' :
-			(<span><_asyncModule plugin={{
+		return (
+			<_asyncModule plugin={{
 			extend: {
 					contents : {},
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
-					controller : 'https://dev.shusiou.win/app/truefactors/_classOverLay.jsx'
+					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
+					cacheTime : 1000,
+					callback : function() {
+						if (!me.state.overLayReady) me.setState({overLayReady:true});
+					}
 				}, 
 				master: '/api/DVCHub.api'
 				
 			}} 
-			parent={me} objId={'A' + _oId} />
-				
-			<_asyncModule plugin={{
+			parent={me} objId={'Auth' + _oId} />		
+		)
+	},	
+        render: function() {
+        	var me = this;
+		__asyncOId = (!__asyncOId || __asyncOId > 1000000) ? 1 : (__asyncOId + 1);
+		var _oId = __asyncOId + '-' + new Date().getTime();
+		return  (
+		<span>
+			{me.getAuth()}
+			{me.getOverLay()}
+			{(!me.state.authReady) ? 'Loading ...' :
+			(<_asyncModule plugin={{
 				extend: {
 					contents : {},   
 					includes : [
@@ -62,7 +74,7 @@ React.createClass({
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 				}} 
-				parent={me} objId={'B' + _oId} /></span>)}
+				parent={me} objId={'B' + _oId} />)}
 							
 		</span>
 		)
