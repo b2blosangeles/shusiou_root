@@ -18,7 +18,7 @@ React.createClass({
 					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
 					cacheTime : 1000
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				master: '/api/DVCHub.api'
 				
 			}} 
 			parent={me} objId={'Auth' + _oId} />		
@@ -31,7 +31,7 @@ React.createClass({
 					controller : 'https://dev.shusiou.win/app/truefactors/_classOverLay.jsx',
 					cacheTime : 1000
 				}, 
-				master: '//master1_dev.shusiou.win/api/DVCHub.api'
+				master: '/api/DVCHub.api'
 				
 			}} 
 			parent={me} objId={'A' + _oId} />
