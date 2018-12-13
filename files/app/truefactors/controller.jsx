@@ -56,7 +56,7 @@ React.createClass({
 		<span>
 			{me.getAuth()}
 			{me.getOverLay()}
-			{(!me.state.authReady) ? 'Loading ...' :
+			{(!me.state.authReady || !me.state.overLayReady) ? 'Loading ...' :
 			(<_asyncModule plugin={{
 				extend: {
 					contents : {},   
