@@ -37,8 +37,7 @@ React.createClass({
 					contents : {},
 					includes : [],
 					loadingInfo : '', // 'Loading ...',
-					controller : 'https://dev.shusiou.win/app/truefactors/_classAuth.jsx',
-					cacheTime : 1000,
+					controller : 'https://dev.shusiou.win/app/truefactors/_classOverLay.jsx',
 					callback : function() {
 						if (!me.state.overLayReady) me.setState({overLayReady:true});
 					}
@@ -46,7 +45,7 @@ React.createClass({
 				master: '/api/DVCHub.api'
 				
 			}} 
-			parent={me} objId={'Auth' + _oId} />		
+			parent={me} objId={'A' + _oId} />		
 		)
 	},	
         render: function() {
