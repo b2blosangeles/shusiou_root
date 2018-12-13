@@ -64,7 +64,7 @@ try {
 				     error : function(xhr, textStatus, error) { 
 				       	me._asyncModuleErr = error;
 				       	me.setState({success: false, update : new Date().getTime()})
-					     if (cfg.callback) { setTimeout(cfg.callback, 50);  } 
+					   //  if (cfg.callback) { setTimeout(cfg.callback, 50);  } 
 				     }
 				  }); 
 			} else {
