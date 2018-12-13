@@ -7,7 +7,7 @@ React.createClass({
                   <div className="container">
                     <h1>Register</h1>
                     <p>Please fill in this form to create an account.</p>
-                    <hr>
+                    <hr/>
 
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required/>
