@@ -1,6 +1,6 @@
 var __asyncOId = 0, __asyncCache = {};
 
-// localStorage.clear();
+localStorage.clear();
 sessionStorage.clear();
 
 var { Router,
