@@ -32,7 +32,7 @@ React.createClass({
 		<span>
 			{me.getAuth()}
 			{(!me.state.loadAuth) ?	'Loading ...' :
-			(<_asyncModule plugin={{
+			(<span><_asyncModule plugin={{
 			extend: {
 					contents : {},
 					includes : [],
@@ -60,7 +60,7 @@ React.createClass({
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
 				}} 
-				parent={me} objId={'B' + _oId} />)}
+				parent={me} objId={'B' + _oId} /></span>)}
 							
 		</span>
 		)
