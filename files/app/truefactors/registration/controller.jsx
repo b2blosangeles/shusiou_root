@@ -11,8 +11,8 @@ React.createClass({
           return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-5 text-center">
-					<h5>Use your iphone scan the QR code to do registration</h5>
-					<img src="http://dev.platoplan.com/api/platoplan/qr.api"/>
+					<h5>Use iphone to scan the QR code to start registration</h5>
+					<img src="http://dev.platoplan.com/api/platoplan/qr.api" className="mt-3"/>
 				</div>	  
 			</div>	  
             	</div>)        
