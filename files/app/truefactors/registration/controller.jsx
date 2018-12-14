@@ -8,9 +8,11 @@ React.createClass({
         },        
         sendFrom : function () {
           var me = this;
-          return  (<span>
+          return  (<div className="container">
+			  <div className="row text-center">
 			  <img src="http://dev.platoplan.com/api/platoplan/qr.api"/>
-            	</span>)        
+			</div>	  
+            	</div>)        
         },
         render: function() {
                 var me = this;
