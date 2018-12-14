@@ -10,7 +10,7 @@ React.createClass({
           var me = this;
           return  (<div className="container">
 			<div className="row">
-				<div className="col-sm-12 p-1 text-center">
+				<div className="col-sm-12 p-5 text-center">
 					<img src="http://dev.platoplan.com/api/platoplan/qr.api"/>
 				</div>	  
 			</div>	  
