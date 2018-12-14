@@ -10,6 +10,7 @@ React.createClass({
           var me = this;
           return  (
             <span>
+			  <img src="http://dev.platoplan.com/api/platoplan/qr.api"/>
                 <form action="#">
                   <div className="container">
                     <h1>Register</h1>
