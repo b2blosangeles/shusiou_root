@@ -9,8 +9,10 @@ React.createClass({
         sendFrom : function () {
           var me = this;
           return  (<div className="container">
-			  <div className="row text-center">
-			  <img src="http://dev.platoplan.com/api/platoplan/qr.api"/>
+			<div className="row">
+				<div className="col-sm-12 p-1 text-center">
+					<img src="http://dev.platoplan.com/api/platoplan/qr.api"/>
+				</div>	  
 			</div>	  
             	</div>)        
         },
