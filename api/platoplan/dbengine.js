@@ -5,7 +5,7 @@ var CP = new pkg.crowdProcess();
 var db_setting = config.db;
 db_setting.database = 'platoplan';
 var connection = mysql.createConnection(db_setting);
-var str = 'INSERT show DATABASES; ';
+var str = 'SHOW DATABASES; ';
 
 connection.connect();
 connection.query(str, function (error, results, fields) {
