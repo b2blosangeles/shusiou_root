@@ -7,14 +7,28 @@ db_setting.database = 'platoplan';
 var connection = mysql.createConnection(db_setting);
 var str = 'SHOW DATABASES; ';
 
-connection.connect();
-connection.query(str, function (error, results, fields) {
-connection.end();	
-  if (!error) {
-    res.send(results);
-    return true;
-  } else {
-    res.send(error.message);
-  }
-}); 
+var _f = {};
+
+_f['DBS'] = function(cbk) {
+
+      connection.connect();
+      connection.query(str, function (error, results, fields) {
+      connection.end();	
+            if (!error) {
+                cbk(results);
+                return true;
+            } else {
+                cbk(error.message);
+            }
+      }); 
+}
+CP.serial(
+  _f,
+  function(data) {
+    connection.end();
+    res.send({_spent_time:data._spent_time, status:data.status, data:data});
+  },
+  30000
+);
+
 
