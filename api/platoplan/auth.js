@@ -25,6 +25,6 @@ pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {
 	}	
 	var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
 	var key = crypto.createHash('md5').update(s).digest('hex');
-	res.send(tpl.fetch({token : token, key : key}));
+	res.send(tpl.fetch({token : token, key : key, copywriteyear :  new Date().getYesr()}));
 	return true;
 });
