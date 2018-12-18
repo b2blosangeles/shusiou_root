@@ -11,7 +11,9 @@
     <script>
         var auth  = localStorage.getItem("auth");
         if (!auth || auth.length !== 32) {
+            alert(123);
             document.getElementById('main_section').innerHTML = 'This phone has not been registrated yet!';
+            
         }
         /*
         localStorage.setItem("key", '{$key}');
