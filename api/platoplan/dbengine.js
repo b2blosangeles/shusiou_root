@@ -4,16 +4,15 @@ var config = require(env.config_path + '/config.json');
 var CP = new pkg.crowdProcess();
 var db_setting = config.db;
 db_setting.database = 'platoplan';
-var connection = mysql.createConnection(db_setting);
-var str = 'SHOW DATABASES; ';
 
+var str = 'SHOW DATABASES; ';
 var _f = {};
 
 _f['DBS'] = function(cbk) {
-
+      var connection = mysql.createConnection(db_setting);
       connection.connect();
       connection.query(str, function (error, results, fields) {
-      connection.end();	
+            connection.end();	
             if (!error) {
                 cbk({succes: true, data: results});
                 return true;
@@ -25,8 +24,7 @@ _f['DBS'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
-    connection.end();
-    res.send({_spent_time:data._spent_time, status:data.status, data:data});
+      res.send({_spent_time:data._spent_time, status:data.status, data:data});
   },
   30000
 );
