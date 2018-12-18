@@ -18,8 +18,10 @@
   </head>
   <body>
     <div class="container-fluid">
+        <form action="">
         <div class="row text-center">
-            <div class="col-sm-12"><h5 class="m-5 font-weight-normal">PlatoPlan Registration</h5></div> 
+            <div class="col-sm-12"><h5 class="m-5 font-weight-normal">PlatoPlan Registration</h5></div>
+            <input name="token" value="{$token}">
         </div>
         <div class="row text-center">
             <div class="col-sm-12">
@@ -33,12 +35,13 @@
          </div>
           <div class="row text-center">
             <div class="col-sm-12 p-5">
-                 <button class="btn btn-lg btn-primary btn-block" type="botton">Submit</button>
+                 <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
             </div>
         </div>
         <div class="row text-center mt-2 mb-2">
           <div class="col-sm-12  p-3">&copy; Copyright {$copywriteyear}</div> 
         </div>
+        </form>
     </div>
   </body>
 </html>
