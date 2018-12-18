@@ -1,5 +1,6 @@
 var Smarty = require(env.site_path + '/api/inc/jsmart/smart.min.js'); 
-// res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
+var crypto = require('crypto');
+
 var token = (!req.query.code) ? '' : req.query.code;
 var indextpl = env.site_path + '/api/platoplan/tpl/login.html';
 
