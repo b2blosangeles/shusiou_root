@@ -12,6 +12,7 @@
         var auth = localStorage.getItem("auth");
         if (!auth || auth.length !== 32) {
           window.location.href = '/api/platoplan/auth.api?type=error';
+          alert('/api/platoplan/auth.api?type=error');
         }
     </script>  
   </head>
