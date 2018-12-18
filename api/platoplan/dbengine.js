@@ -5,7 +5,7 @@ var CP = new pkg.crowdProcess();
 var db_setting = config.db;
 db_setting.database = 'platoplan';
 
-var str = 'SHOW DATABASES; ';
+var str = 'SHOW TABLES; ';
 var _f = {};
 
 _f['DBS'] = function(cbk) {
