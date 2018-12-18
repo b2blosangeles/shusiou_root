@@ -15,10 +15,10 @@ _f['DBS'] = function(cbk) {
       connection.query(str, function (error, results, fields) {
       connection.end();	
             if (!error) {
-                cbk(results);
+                cbk({succes: true, data: results});
                 return true;
             } else {
-                cbk(error.message);
+                cbk({succes: false, error: error.message});
             }
       }); 
 }
