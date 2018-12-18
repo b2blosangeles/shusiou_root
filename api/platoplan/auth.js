@@ -9,6 +9,11 @@ if (!type) {
   return true;
 }
 
+if (req.body.token) {
+	res.send(req.body);
+	return true;
+}
+
 var indextpl = env.site_path + '/api/platoplan/tpl/' + 
     ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
     '.html';
@@ -23,8 +28,6 @@ pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {
 		res.send(tpl.fetch({message : 'This equipment have registrated already. you are able to login with this phone.'}));
 		return true
 	}	
-	var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
-	var key = crypto.createHash('md5').update(s).digest('hex');
-	res.send(tpl.fetch({token : token, key : key, copywriteyear :  new Date().getFullYear()}));
+	res.send(tpl.fetch({token : token, copywriteyear :  new Date().getFullYear()}));
 	return true;
 });
