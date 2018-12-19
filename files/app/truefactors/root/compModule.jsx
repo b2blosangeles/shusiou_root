@@ -96,6 +96,7 @@ var _compModule = function(me, Root) {
 	})
     },
     this.auth = function(menuItem) {
+	    console.log(menuItem);
 	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {},
