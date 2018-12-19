@@ -3,6 +3,17 @@ var _copyrightSection = React.createClass({
 	var me = this;
 	return {_auth : localStorage.getItem('_auth')}
     },
+    clickOption : function(v, e) {
+	var me = this; 
+	if ((e) && e.target) {
+		Root.commUI.animation.transfer($(e.target));
+	}
+	if (!v) {
+		me.props.parent.setState({menuOption : null})
+	} else {
+		me.props.parent.setState({ menuOption : v})   
+	}
+    },	
     render: function() {
           var me = this;
 	  var role = me.props.parent.state.role;
@@ -15,7 +26,8 @@ var _copyrightSection = React.createClass({
 			<div className="row">
 				<div className="col-sm-2 text-left">
 					{(!me.state._auth) ? (
-						<a href="#/login">Login</a>)
+						<a onClick={me.clickOption.bind(me, 'login')}
+						href="JavaScript: void(0)">Login</a>)
 						:
 						(<span>
 						<a>
