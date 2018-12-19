@@ -16,7 +16,22 @@ if (!type) {
 var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
 var hash = crypto.createHash('md5').update(s).digest('hex');
 
-var code = qr.image('http://dev.platoplan.com/api/platoplan/auth.api?type=' + type + '&code=' + hash, 
-                    { type: 'png', ec_level: 'H', size: 6, margin: 1 });
-res.type('png');
-code.pipe(res);
+var connection = mysql.createConnection(db_setting);
+connection.connect();
+
+var str = 'SHOW TABLES; ';
+
+connection.query(str, function (error, results, fields) {
+      connection.end();	
+      if (!error) {
+          var code = qr.image('http://dev.platoplan.com/api/platoplan/auth.api?type=' + type + '&code=' + hash, 
+                              { type: 'png', ec_level: 'H', size: 6, margin: 1 });
+          res.type('png');
+          code.pipe(res);
+
+          return true;
+      } else {
+          res.send({succes: false, error: error.message});
+      }
+}); 
+
