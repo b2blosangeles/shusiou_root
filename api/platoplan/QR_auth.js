@@ -21,7 +21,7 @@ var connection = mysql.createConnection(db_setting);
 connection.connect();
 
 var str = "INSERT INTO `session` (`uuid`, `token`, `created`) VALUES ('" + uuid + "', '" + hash + "', NOW()) " +
-    " DUPLICATE KEY UPDATE `token` = '" + hash + "', `created` = NOW()";
+    " ON DUPLICATE KEY UPDATE `token` = '" + hash + "', `created` = NOW();";
 
 connection.query(str, function (error, results, fields) {
       connection.end();	
