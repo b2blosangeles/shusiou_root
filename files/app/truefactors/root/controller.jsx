@@ -25,7 +25,7 @@ React.createClass({
 		
 		if (me.state.menuOption === 'language')  {
 			return me.compModule.loadLanguage();
-		} else if (me.state.menuOption === 'registration')  {
+		} else if (me.state.menuOption === 'registration' || me.state.menuOption === 'login')  {
 			return me.compModule.registrationPage();	
 		} else if (me.state.menuOption === 'publicSearch')  {
 			return me.compModule.public();	
