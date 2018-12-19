@@ -19,7 +19,7 @@ var _copyrightSection = React.createClass({
 	  var role = me.props.parent.state.role;
 	  var animationTransfer = me.props.parent.animationTransfer;
 	  var langs = ['en', 'cn'];
-	    
+	  var uuid = localStorage.getItem('UUID');
           return  (
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
@@ -37,6 +37,7 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
 					}
+					=={uuid}
 					{/*(!me.state._auth) ? (
 						<a onClick={Root.auth.signIn.bind(me, Root)}
 						href="JavaScript: void(0)">Login</a>)
