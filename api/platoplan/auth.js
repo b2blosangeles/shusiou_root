@@ -8,7 +8,7 @@ db_setting.database = 'platoplan';
 
 var token = (!req.query.code) ? '' : req.query.code;
 
-
+var CP = new pkg.crowdProcess();
 
 var _f = {};
 
