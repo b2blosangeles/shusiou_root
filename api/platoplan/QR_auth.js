@@ -33,7 +33,7 @@ connection.query(str, function (error, results, fields) {
 
           return true;
       } else {
-          res.send({succes: false, error: str});
+          res.send({succes: false, error: error.message});
       }
 }); 
 
