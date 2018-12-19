@@ -7,6 +7,11 @@ var db_setting = config.db;
 db_setting.database = 'platoplan';
 
 var token = (!req.query.code) ? '' : req.query.code;
+var type = (['signin', 'registration', 'errorSignin', 'errorRegistration'].indexOf(req.query.type) === -1) ? null : req.query.type;
+if (!type) {
+  res.send('Wrong type!!');
+  return true;
+}
 
 var CP = new pkg.crowdProcess();
 
@@ -36,11 +41,7 @@ CP.serial(
 return true;
 
 
-var type = (['signin', 'registration', 'errorSignin', 'errorRegistration'].indexOf(req.query.type) === -1) ? null : req.query.type;
-if (!type) {
-  res.send('Wrong type!!');
-  return true;
-}
+
 
 if (req.body.token) {
 	res.send(req.body);
