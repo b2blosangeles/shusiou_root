@@ -11,7 +11,6 @@ var token = (!req.query.code) ? '' : req.query.code;
 var CP = new pkg.crowdProcess();
 
 var _f = {};
-
 _f['DBS'] = function(cbk) {
 	var connection = mysql.createConnection(db_setting);
 	connection.connect();
@@ -20,7 +19,7 @@ _f['DBS'] = function(cbk) {
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error && (results.length)) {
-		  cbk(succes: true});
+		  cbk({succes: true});
 	      } else {
 		  cbk({succes: false, error: error.message});
 	      }
