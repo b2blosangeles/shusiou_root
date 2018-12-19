@@ -25,9 +25,13 @@ var _copyrightSection = React.createClass({
 			<div className="container-fluid px-1">
 			<div className="row">
 				<div className="col-sm-2 text-left">
-					{(!me.state._auth) ? (
+					{(!me.state._auth) ? (<span>
 						<a onClick={me.clickOption.bind(me, 'login')}
-						href="JavaScript: void(0)">Login</a>)
+						href="JavaScript: void(0)">Login</a>
+						&nbsp;
+						<a onClick={me.clickOption.bind(me, 'registration')}
+						href="JavaScript: void(0)">Registration</a>
+						</span>)
 						:
 						(<span>
 						<a>
@@ -37,7 +41,7 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
 					}
-					=={uuid}
+					[{uuid}]
 					{/*(!me.state._auth) ? (
 						<a onClick={Root.auth.signIn.bind(me, Root)}
 						href="JavaScript: void(0)">Login</a>)
