@@ -1,7 +1,7 @@
 var mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql');
+var config = require(env.config_path + '/config.json');
 var db_setting = config.db;
 db_setting.database = 'platoplan';
-
 
 var CP  = require(env.root_path + "/package/crowdProcess/crowdProcess.js");
 var qr = require(env.root_path + "/vendor/qr-image/node_modules/qr-image/");
