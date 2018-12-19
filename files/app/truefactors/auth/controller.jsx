@@ -8,6 +8,7 @@ React.createClass({
         },        
         sendFrom : function () {
           var me = this;
+	  var menuItem = (!me.props.data) ? 'homePage' : me.props.data;
           return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-5 text-center">
