@@ -8,7 +8,12 @@ db_setting.database = 'platoplan';
 
 var token = (!req.query.code) ? '' : req.query.code;
 
+
+var connection = mysql.createConnection(db_setting);
+connection.connect();
+
 var str = "SELECT * FROM  `session` WHERE `token` = '" + token + "'";
+
 
 connection.query(str, function (error, results, fields) {
       connection.end();	
