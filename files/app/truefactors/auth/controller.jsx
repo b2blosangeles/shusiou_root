@@ -8,22 +8,24 @@ React.createClass({
         },        
         sendLoginFrom : function () {
           var me = this;
+	  var url = '/api/platoplan/QR_auth.api?type=signin';
           return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-5 text-center">
 					<h5>Use iphone to scan the QR code to login</h5>
-					<img src="http://dev.platoplan.com/api/platoplan/qr.api" className="mt-3"/>
+					<img src={url} className="mt-3"/>
 				</div>	  
 			</div>	  
             	</div>)        
         },
         sendRegistrationFrom : function () {
           var me = this;
+	   var url = '/api/platoplan/QR_auth.api?type=registration';
           return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-5 text-center">
 					<h5>Use iphone to scan the QR code to start registration</h5>
-					<img src="http://dev.platoplan.com/api/platoplan/qr.api" className="mt-3"/>
+					<img src={url} className="mt-3"/>
 				</div>	  
 			</div>	  
             	</div>)        
