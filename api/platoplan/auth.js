@@ -3,6 +3,10 @@ var crypto = require('crypto');
 
 var token = (!req.query.code) ? '' : req.query.code;
 
+res.send(req.query);
+return true;
+
+
 var type = (['signin', 'registration', 'errorSignin', 'errorRegistration'].indexOf(req.query.type) === -1) ? null : req.query.type;
 if (!type) {
   res.send('Wrong type!!');
