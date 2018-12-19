@@ -20,7 +20,7 @@ var hash = crypto.createHash('md5').update(s).digest('hex');
 var connection = mysql.createConnection(db_setting);
 connection.connect();
 
-var str = 'INSERT INTO `session` (`uuid`, `token`) VALUES ("' + uuid + '", "' + hash + "); ';
+var str = 'INSERT INTO `session` (`uuid`, `token`) VALUES ("' + uuid + '", "' + hash + '"); ';
 
 connection.query(str, function (error, results, fields) {
       connection.end();	
