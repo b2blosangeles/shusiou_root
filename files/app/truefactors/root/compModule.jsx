@@ -95,12 +95,12 @@ var _compModule = function(me, Root) {
 		parent : me
 	})
     },
-    this.registrationPage = function(menuItem) {
+    this.auth = function(menuItem) {
 	return Root.lib.asyncModule({
 		setting:{	extend: {
 					contents : {},
 					includes : [],
-					controller : 'https://dev.shusiou.win/app/truefactors/registration/controller.jsx'
+					controller : 'https://dev.shusiou.win/app/truefactors/auth/controller.jsx'
 
 				}, 
 				master: '//master1_dev.shusiou.win/api/DVCHub.api'
