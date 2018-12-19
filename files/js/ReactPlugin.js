@@ -1,7 +1,11 @@
 var __asyncOId = 0, __asyncCache = {};
 
-localStorage.clear();
+// localStorage.clear();
 sessionStorage.clear();
+
+if (!localStorage.getItem('UUID')) {
+  localStorage.setItem('UUID', Date.now() + Math.random().toString(16).substr(2));
+}
 
 var { Router,
   Route,
