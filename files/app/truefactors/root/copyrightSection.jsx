@@ -15,6 +15,17 @@ var _copyrightSection = React.createClass({
 			<div className="row">
 				<div className="col-sm-2 text-left">
 					{(!me.state._auth) ? (
+						<a href="#/login">Login</a>)
+						:
+						(<span>
+						<a>
+						[{(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info}]</a>
+						&nbsp;
+						<a onClick={Root.auth.doAuth.bind(me)}
+						href="JavaScript: void(0)">Logoff</a>
+						</span>)
+					}
+					{/*(!me.state._auth) ? (
 						<a onClick={Root.auth.signIn.bind(me, Root)}
 						href="JavaScript: void(0)">Login</a>)
 						:
@@ -25,7 +36,7 @@ var _copyrightSection = React.createClass({
 						<a onClick={Root.auth.doAuth.bind(me)}
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
-					}
+					*/}
 				</div>
 				<div className="col-sm-10 text-right">
 					<span className="pull-right">
