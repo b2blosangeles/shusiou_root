@@ -1,9 +1,27 @@
 var Smarty = require(env.site_path + '/api/inc/jsmart/smart.min.js'); 
 var crypto = require('crypto');
 
+var mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql');
+var config = require(env.config_path + '/config.json');
+var db_setting = config.db;
+db_setting.database = 'platoplan';
+
 var token = (!req.query.code) ? '' : req.query.code;
 
-res.send(req.query);
+var str = "SELECT * FROM  `session` WHERE `token` = '" + token + "'";
+
+connection.query(str, function (error, results, fields) {
+      connection.end();	
+      if (!error) {
+          res.send(results);
+          return true;
+      } else {
+          res.send({succes: false, error: error.message});
+      }
+}); 
+
+
+// res.send(req.query);
 return true;
 
 
