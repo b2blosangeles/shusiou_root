@@ -42,7 +42,23 @@ CP.serial(
 			return true;
 		});
 	 } else {
-      		res.send({_spent_time:data._spent_time, status:data.status, data:data});
+		var indextpl = env.site_path + '/api/platoplan/tpl/' + 
+		    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
+		    '.html';
+
+		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
+			var tpl = new Smarty(content);
+			if (type === 'errorSignin') {
+				res.send(tpl.fetch({message : 'This equipment has not been registrated yet! Please go ahead registration with this mobile equipment.'}));
+				return true
+			}
+			if (type === 'errorRegistration') {
+				res.send(tpl.fetch({message : 'This equipment have registrated already. you are able to login with this phone.'}));
+				return true
+			}	
+			res.send(tpl.fetch({token : token, copywriteyear :  new Date().getFullYear()}));
+			return true;
+		});
 	 }
   },
   30000
