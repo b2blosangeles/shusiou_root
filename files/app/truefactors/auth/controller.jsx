@@ -11,7 +11,7 @@ React.createClass({
 	  var url = '/api/platoplan/QR_auth.api?uuid=' + localStorage.getItem('UUID') + '&type=signin';
           return  (<div className="container">
 			<div className="row">
-				{url}
+				{url}=={new Date().getTime()}
 				<div className="col-sm-12 p-5 text-center">
 					<h5>Use iphone to scan the QR code to login</h5>
 					<img src={url} className="mt-3"/>
@@ -25,7 +25,7 @@ React.createClass({
           return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-5 text-center">
-					{url}
+					{url}=={new Date().getTime()}
 					<h5>Use iphone to scan the QR code to do registration</h5>
 					<img src={url} className="mt-3"/>
 				</div>	  
