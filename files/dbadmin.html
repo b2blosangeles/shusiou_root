@@ -10,13 +10,8 @@
         clearInterval(_loadingITV);
         $.ReactPlugin({
             extend:{
-                     includes : [
-                       'https://dev.shusiou.win/app/truefactors/_global.jsx',
-                       'https://dev.shusiou.win/app/truefactors/_commLib.jsx',
-                       'https://dev.shusiou.win/app/truefactors/_asyncModule.jsx',
-                       'https://dev.shusiou.win/app/truefactors/_commUI.jsx'
-                     ],
-                     controller : 'https://dev.shusiou.win/app/truefactors/controller.jsx',
+                     includes : [],
+                     controller : 'https://dev.shusiou.win/app/dbadmin/controller.jsx',
                      cacheTime : 1000
              },
              master: '//master1_dev.shusiou.win/api/DVCHub.api?tm=' + new Date().getTime(), 
