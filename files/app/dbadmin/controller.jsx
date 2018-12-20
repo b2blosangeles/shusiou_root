@@ -3,10 +3,10 @@ React.createClass({
         	var me = this;
                 return  (<div className="container px-1">
                           <div className="row">
-                              <div className="col-sm-2">
+                              <div className="col-sm-1">
                                 Tables<hr/>
                               </div>
-                              <div className="col-sm-10">
+                              <div className="col-sm-11">
                                    <textarea className="form-control" rows="5"></textarea>
                                    <br/>
                                    <button className="btn btn-default" type="submit">submit</button>
