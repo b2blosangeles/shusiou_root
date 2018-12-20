@@ -7,8 +7,7 @@ React.createClass({
                                 Tables<hr/>
                               </div>
                               <div className="col-sm-11">
-                                   <textarea className="form-control" rows="5"></textarea>
-                                   <br/>
+                                   <textarea className="form-control" rows="4"></textarea>
                                    <button className="btn btn-default" type="submit">submit</button>
                               </div>
                           </div>
