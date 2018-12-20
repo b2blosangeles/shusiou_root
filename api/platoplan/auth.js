@@ -1,5 +1,5 @@
-res.send(req.body);
-return true;
+//res.send(req.body);
+// return true;
 
 var Smarty = require(env.site_path + '/api/inc/jsmart/smart.min.js'); 
 var crypto = require('crypto');
