@@ -16,8 +16,9 @@
         }
         function validateForm() {
             var x = document.forms["registrationFrom"]["VEmail"].value;
-            if (x == "") {
-              alert("Verify Email address must be filled out");
+            var y = document.forms["registrationFrom"]["Email"].value;
+            if (x !== y) {
+              alert(" Email Verification Failure!!");
               return false;
             }        
         }       
