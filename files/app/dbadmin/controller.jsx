@@ -76,7 +76,7 @@ React.createClass({
                               </div>
                           </div>				
                           <div className="row">
-                              <div className="col-sm-11">
+                              <div className="col-sm-11 alert-secondary p-1">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
                                    <hr/>
                                    [{JSON.stringify(me.result)}]
