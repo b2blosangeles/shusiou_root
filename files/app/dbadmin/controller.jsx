@@ -1,4 +1,7 @@
 React.createClass({
+        sendQuery : function() {
+                console.log($('#SQL').val());
+        },
         render: function() {
         	var me = this;
                 return  (<div className="container px-1">
@@ -7,8 +10,8 @@ React.createClass({
                                 Tables<hr/>
                               </div>
                               <div className="col-sm-11">
-                                   <textarea className="form-control" rows="4"></textarea>
-                                   <button className="btn btn-default" type="submit">submit</button>
+                                   <textarea id="SQL" className="form-control" rows="4"></textarea>
+                                   <button className="btn btn-default" onClick={me.sendQuery.bind(me)} type="submit">submit</button>
                               </div>
                           </div>
                            <div className="row">
