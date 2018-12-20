@@ -13,6 +13,10 @@ if (!type) {
   return true;
 }
 
+res.send(req.query);
+return true;
+
+
 var CP = new pkg.crowdProcess();
 
 var _f = {};
