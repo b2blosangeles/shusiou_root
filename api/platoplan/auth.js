@@ -34,7 +34,15 @@ _f['DBS'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
-      res.send({_spent_time:data._spent_time, status:data.status, data:data});
+	 if (!CP.data.DBS.success) {
+		var indextpl = env.site_path + '/api/platoplan/tpl/qrError.html';
+		 pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
+			var tpl = new Smarty(content);
+			res.send(tpl.fetch({copywriteyear :  new Date().getFullYear()}));
+			return true;
+		});
+	 }
+      	res.send({_spent_time:data._spent_time, status:data.status, data:data});
   },
   30000
 );
