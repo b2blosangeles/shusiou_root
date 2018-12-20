@@ -25,9 +25,9 @@ _f['DBS'] = function(cbk) {
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error && (results.length)) {
-		  cbk({succes: true});
+		  cbk({success: true});
 	      } else {
-		  cbk({succes: false});
+		  cbk({success: false});
 	      }
 	}); 
 }
