@@ -32,7 +32,7 @@ React.createClass({
                               <div className="col-sm-10">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
                                    <hr/>
-                                   =={console.log(JSON.stringify(me.result))}==
+                                   [{JSON.stringify(me.result)}]
                                       
                               </div>
                               <div className="col-sm-1">
