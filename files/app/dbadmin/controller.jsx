@@ -4,7 +4,7 @@ React.createClass({
                 return  (<div className="container px-1">
                           <div className="row">
                               <div className="col-sm-3">
-                                Table
+                                Tables<hr/>
                               </div>
                               <div className="col-sm-9">
                                         <textarea className="form-control" rows="5"></textarea>
