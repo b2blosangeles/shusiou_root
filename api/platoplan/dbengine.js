@@ -11,7 +11,7 @@ res.send(MD5('12345') + '====' + hash);
 
 
 
-var str = 'SHOW TABLES; ';
+var str = req.body.sql;
 var _f = {};
 
 _f['DBS'] = function(cbk) {
