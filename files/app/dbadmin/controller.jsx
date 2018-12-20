@@ -11,7 +11,7 @@ React.createClass({
                               </div>
                               <div className="col-sm-11">
                                    <textarea id="SQL" className="form-control" rows="4"></textarea>
-                                   <button className="btn btn-default border-default" onClick={me.sendQuery.bind(me)} type="submit">submit</button>
+                                   <button className="btn btn-default border border-default" onClick={me.sendQuery.bind(me)} type="submit">submit</button>
                               </div>
                           </div>
                            <div className="row">
