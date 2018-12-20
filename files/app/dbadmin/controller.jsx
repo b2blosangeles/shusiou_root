@@ -6,7 +6,7 @@ React.createClass({
                 dataType: 'json',
                 type: 'post',
                 contentType: 'application/x-www-form-urlencoded',
-                data: {SQL : $('#SQL').val()},
+                data: {query : $('#SQL').val()},
                 success: function( data, textStatus, jQxhr ){
                     console.log(data);
                 },
