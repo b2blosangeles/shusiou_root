@@ -61,15 +61,17 @@ React.createClass({
         	var me = this;
                 return  (<div className="container px-1">
                           <div className="row">
-                              <div className="col-sm-1">
-                                Tables<hr/>
+                              <div className="col-sm-12">
+                                Tables :
 				{me.tables.map(
 				function(item) {
 					return (<div>{item}</div>)
 				}
 			      )}      
                               </div>
-                              <div className="col-sm-10">
+                          </div>				
+                          <div className="row">
+                              <div className="col-sm-11">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
                                    <hr/>
                                    [{JSON.stringify(me.result)}]
