@@ -10,7 +10,7 @@ React.createClass({
                 url: '/api/platoplan/dbengine.api',
                 dataType: 'json',
                 type: 'post',
-                contentType: 'application/x-www-form-urlencoded',
+               // contentType: 'application/x-www-form-urlencoded',
                 data: {query : $('#SQL').val()},
                 success: function( data, textStatus, jQxhr ){
                     me.result = data.data;
