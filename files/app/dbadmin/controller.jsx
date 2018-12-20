@@ -72,13 +72,7 @@ React.createClass({
 					}
 					)}  
 				  </ul>
-				</nav>      
-                                Tables :
-				{me.tables.map(
-				function(item) {
-					return (<div>{item}</div>)
-				}
-			      )}      
+				</nav>     
                               </div>
                           </div>				
                           <div className="row">
