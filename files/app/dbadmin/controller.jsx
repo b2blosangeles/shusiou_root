@@ -60,8 +60,8 @@ React.createClass({
         render: function() {
         	var me = this;
                 return  (<div className="container px-1">
-                          <div className="row">
-                              <div className="col-sm-12 mb-1 alert-success border">
+                          <div className="row mb-1 alert-success border">
+                              <div className="col-sm-12">
 				<nav className="navbar navbar-expand-sm">
 				  <ul className="navbar-nav">
 					{me.tables.map(
@@ -75,8 +75,8 @@ React.createClass({
 				</nav>     
                               </div>
                           </div>				
-                          <div className="row">
-                              <div className="col-sm-11 alert-secondary p-1">
+                          <div className="row alert-secondary">
+                              <div className="col-sm-11 p-3">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
                                    <hr/>
                                    [{JSON.stringify(me.result)}]
