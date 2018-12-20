@@ -7,7 +7,7 @@ React.createClass({
                                 Table
                               </div>
                               <div className="col-sm-9">
-                                Result
+                                        <textarea className="form-control" rows="5"></textarea>
                               </div>
                           </div>
                            <div className="row">
