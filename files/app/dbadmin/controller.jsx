@@ -4,6 +4,7 @@ React.createClass({
                 me.result = {};
 	        return {}    
         },
+	
         sendQuery : function(query, cbk) {
 	    var me = this;
             $.ajax({
@@ -11,7 +12,7 @@ React.createClass({
                 dataType: 'json',
                 type: 'post',
                 contentType: 'application/x-www-form-urlencoded',
-                data: {query : (query) ? query : $('#SQL').val()},
+                data: {query : ((query) ? query : $('#SQL').val())},
                 success: function( data, textStatus, jQxhr ){
 		    if (typeof cbk === 'function') {
 			   cbk(data.data); 
