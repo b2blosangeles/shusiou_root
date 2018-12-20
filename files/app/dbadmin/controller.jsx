@@ -9,7 +9,7 @@ React.createClass({
                               <div className="col-sm-10">
                                    <textarea className="form-control" rows="5"></textarea>
                                    <br/>
-                                   <botton className="btn btn-default" type="submit">submit</button>
+                                   <button className="btn btn-default" type="submit">submit</button>
                               </div>
                           </div>
                            <div className="row">
