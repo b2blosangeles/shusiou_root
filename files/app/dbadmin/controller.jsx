@@ -4,14 +4,14 @@ React.createClass({
                 me.result = {};
 	        return {}    
         },
-        sendQuery : function() {
+        sendQuery : function(query) {
 	    var me = this;
             $.ajax({
                 url: '/api/platoplan/dbengine.api',
                 dataType: 'json',
                 type: 'post',
                // contentType: 'application/x-www-form-urlencoded',
-                data: {query : $('#SQL').val()},
+                data: {query : (query) ? query : $('#SQL').val()},
                 success: function( data, textStatus, jQxhr ){
                     me.result = data.data;
                     me.setState({updated: new Date().getTime()});
