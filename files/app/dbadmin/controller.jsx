@@ -1,7 +1,7 @@
 React.createClass({
         render: function() {
         	var me = this;
-                return  (<div className="containe px-1">
+                return  (<div className="container px-1">
                           <div className="row">
                               <div className="col-sm-3">
                                 Table
