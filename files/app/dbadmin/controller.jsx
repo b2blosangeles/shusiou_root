@@ -8,9 +8,9 @@ React.createClass({
         },
        showTables : function(data) {
 	    var me = this; 
-	    mr.tables = [];
+	    me.tables = [];
 	    console.log(data);
-	       
+	    me.setState({updated: new Date().getTime()});   
         },
         callQuery : function(query, cbk) {
 	    var me = this;
