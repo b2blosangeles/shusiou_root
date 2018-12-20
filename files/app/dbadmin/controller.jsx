@@ -2,13 +2,13 @@ React.createClass({
         sendQuery : function() {
                 console.log($('#SQL').val());
             $.ajax({
-                url: '/api/platoplan/dbengine.js',
+                url: '/api/platoplan/dbengine.api',
                 dataType: 'json',
                 type: 'post',
                 contentType: 'application/x-www-form-urlencoded',
                 data: {SQL : $('#SQL').val()},
                 success: function( data, textStatus, jQxhr ){
-                    c
+                    console.log(data);
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
                     console.log( errorThrown );
