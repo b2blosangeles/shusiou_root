@@ -5,9 +5,9 @@ React.createClass({
 	        return {}    
         },
 	
-        sendQuery : function(cbk) {
+        sendQuery : function() {
 	    var me = this;
-		var query = false
+		var query = false, cbk = false;
             $.ajax({
                 url: '/api/platoplan/dbengine.api',
                 dataType: 'json',
