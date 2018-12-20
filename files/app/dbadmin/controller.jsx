@@ -61,8 +61,8 @@ React.createClass({
         	var me = this;
                 return  (<div className="container px-1">
                           <div className="row">
-                              <div className="col-sm-12 mb-1 alert-success">
-				<nav className="navbar navbar-expand-sm bg-light">
+                              <div className="col-sm-12 mb-1 bg-success">
+				<nav className="navbar navbar-expand-sm">
 				  <ul className="navbar-nav">
 					{me.tables.map(
 					function(item) {
