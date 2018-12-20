@@ -28,7 +28,7 @@ React.createClass({
                 contentType: 'application/x-www-form-urlencoded',
                 data: {query : query},
                 success: function( data, textStatus, jQxhr ){
-			cbk(data.data); 
+			cbk(data.data.data); 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
                     console.log( errorThrown );
