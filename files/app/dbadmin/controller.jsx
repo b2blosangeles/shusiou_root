@@ -1,8 +1,7 @@
 React.createClass({
         render: function() {
         	var me = this;
-                return  (<span>
-                      <div className="container">
+                return  (<div className="container">
                           <div className="row">
                               <div className="col-sm-3">
                                 Table
@@ -17,7 +16,6 @@ React.createClass({
                               <div className="col-sm-9">
                               </div>
                           </div>
-                      </div>
-                  </span>)
+                      </div>)
               }
 })
