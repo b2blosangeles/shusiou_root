@@ -13,9 +13,6 @@ if (!type) {
   return true;
 }
 
-res.send(req.query);
-return true;
-
 
 var CP = new pkg.crowdProcess();
 
@@ -27,6 +24,8 @@ _f['DBS'] = function(cbk) {
 	var str = "SELECT * FROM  `session` WHERE `token` = '" + token + "'";	
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
+		cbk({succes: true, results:results});
+		return true;
 	      if (!error && (results.length)) {
 		  cbk({succes: true});
 	      } else {
