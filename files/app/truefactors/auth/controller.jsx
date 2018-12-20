@@ -8,7 +8,8 @@ React.createClass({
         },        
         sendLoginFrom : function () {
           var me = this;
-	  var url = '/api/platoplan/QR_auth.api?uuid=' + localStorage.getItem('UUID') + '&type=signin';
+	  var url = '/api/platoplan/QR_auth.api?uuid=' + localStorage.getItem('UUID') + '&type=signin' +
+	       '&tm=' + new Date().getTime();
           return  (<div className="container">
 			<div className="row">
 				{url}=={new Date().getTime()}
@@ -21,7 +22,8 @@ React.createClass({
         },
         sendRegistrationFrom : function () {
           var me = this;
-	   var url = '/api/platoplan/QR_auth.api?uuid=' + localStorage.getItem('UUID') + '&type=registration';
+	   var url = '/api/platoplan/QR_auth.api?uuid=' + localStorage.getItem('UUID') + '&type=registration' +
+	       '&tm=' + new Date().getTime();
           return  (<div className="container">
 			<div className="row">
 				<div className="col-sm-12 p-5 text-center">
