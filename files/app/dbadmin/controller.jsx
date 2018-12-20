@@ -82,7 +82,7 @@ React.createClass({
                                    [{JSON.stringify(me.result)}]
                                       
                               </div>
-                              <div className="col-sm-1 p-3">
+                              <div className="col-sm-1 p-3 test-left">
                                    <button className="btn btn-default border border-default" onClick={me.submitQuery.bind(me)} type="submit">submit</button>
                               </div> 
                           </div>
