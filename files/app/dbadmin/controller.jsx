@@ -4,7 +4,7 @@ React.createClass({
                 me.result = {};
 	        return {}    
         },
-        sendQuery : function(query) {
+        sendQuery : function(query, cbk) {
 	    var me = this;
             $.ajax({
                 url: '/api/platoplan/dbengine.api',
@@ -13,9 +13,12 @@ React.createClass({
                // contentType: 'application/x-www-form-urlencoded',
                 data: {query : (query) ? query : $('#SQL').val()},
                 success: function( data, textStatus, jQxhr ){
-                    me.result = data.data;
-                    me.setState({updated: new Date().getTime()});
-                    console.log(data);
+		    if (typeof cbk === 'function') {
+			   cbk(data.data); 
+		    } else {
+                    	me.result = data.data;
+                    	me.setState({updated: new Date().getTime()});
+		    }
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
                     console.log( errorThrown );
