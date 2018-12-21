@@ -84,7 +84,7 @@ React.createClass({
             });                
         },
 	showData : function(data) {
-		var fields = (!data || !data.length) ? [] : Object.keys(data);
+		var fields = (!data || !data.length) ? [] : Object.keys(data[0]);
 		return (!data || !data.length) ?  (<span></span>) :
 		(<table className="table alert-warning">
 			  <thead><tr>
