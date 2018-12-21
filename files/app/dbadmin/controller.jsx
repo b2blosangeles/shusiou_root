@@ -83,7 +83,27 @@ React.createClass({
                 }
             });                
         },
-        render: function() {
+	showData : function() {
+		return (<table className="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">First</th>
+			      <th scope="col">Last</th>
+			      <th scope="col">Handle</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td>Larry</td>
+			      <td>the Bird</td>
+			      <td>@twitter</td>
+			    </tr>
+			  </tbody>
+			</table>)
+	},	
+        render : function() {
         	var me = this;
                 return  (<div className="container">
                           <div className="row">
