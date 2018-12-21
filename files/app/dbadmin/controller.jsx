@@ -9,11 +9,8 @@ React.createClass({
         },
        selectTable : function(tbl) {
 	    	var me = this; 
-		me.callQuery("SELECT * FROM `" + tbl + "`", function(data) {
-			me.result = data;
-			 me.setState({updated: new Date().getTime()}); 
-		})
-	     
+		$('#SQL').val("SELECT * FROM `" + tbl + "`");
+	     	me.submitQuery();
         },	
        showTables : function(data) {
 	    var me = this; 
