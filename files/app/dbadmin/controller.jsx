@@ -101,13 +101,18 @@ React.createClass({
 				  </div>
 				</div>
                               </div>
-                              <div className="col-sm-9 p-2 d-block">
-				{me.tables.map(
-					function(item) {
-						return (<a className="" href="JavaScript:void(0)"
-							onClick={me.selectTable.bind(me, item)}>{item}</a>)
-					}
-				)}  			      
+                              <div className="col-sm-9">
+				      <div className="container">
+					      <div className="row">
+					{me.tables.map(
+						function(item) {
+							return (<div className="col-sm-3"><a className="" href="JavaScript:void(0)"
+								onClick={me.selectTable.bind(me, item)}>{item}</a>
+								</div>)
+						}
+					)} 
+						</div> 
+					</div> 
 				{/*<nav className="navbar navbar-expand-sm">
 					<ul className="navbar-nav">
 					{me.tables.map(
