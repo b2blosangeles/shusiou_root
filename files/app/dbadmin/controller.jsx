@@ -88,18 +88,7 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-3"> 
-				<div className="btn-group d-flex w-100 mt-2">
-				  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
-				  </button>
-				  <div className="dropdown-menu">
-					{me.dbs.map(
-					function(db) {
-						return (<a className="dropdown-item" href="JavaScript:void(0)"
-								onClick={me.selectDB.bind(me, db)}>{db}</a>)
-					})}
-				  </div>
-				</div>
+
                               </div>
 
 				{me.tables.map(
@@ -112,7 +101,21 @@ React.createClass({
                           
                           </div>				
                           <div className="row alert-secondary">
-                              <div className="col-sm-11 p-2">
+				<div className="col-sm-3 p-2"> 
+					<div className="btn-group d-flex w-100 mt-2">
+					  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
+					  </button>
+					  <div className="dropdown-menu">
+						{me.dbs.map(
+						function(db) {
+							return (<a className="dropdown-item" href="JavaScript:void(0)"
+									onClick={me.selectDB.bind(me, db)}>{db}</a>)
+						})}
+					  </div>
+					</div>					
+				</div>	 
+                              <div className="col-sm-8 p-2">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
                               </div>
                               <div className="col-sm-1 pt-4">
