@@ -90,7 +90,7 @@ React.createClass({
 							++{me.dbs[1]}++
 					{me.dbs.map(
 					function(db) {
-						returnb (<span>{db}--</span>)
+						return (<span>{db}--</span>)
 					})}++			      
 				      
 				<div className="btn-group d-flex w-100 mt-2">
