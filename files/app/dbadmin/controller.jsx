@@ -62,7 +62,7 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-1"> 
-				<div className="btn-group">
+				<div className="btn-group m-2">
 				  <button type="button" className="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Action
 				  </button>
