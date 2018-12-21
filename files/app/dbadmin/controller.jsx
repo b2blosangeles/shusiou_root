@@ -61,8 +61,8 @@ React.createClass({
         	var me = this;
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
-                              <div className="col-sm-1"> 
-				<div className="btn-group m-2">
+                              <div className="col-sm-2"> 
+				<div className="btn-group mt-2">
 				  <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Action
 				  </button>
@@ -72,7 +72,7 @@ React.createClass({
 				  </div>
 				</div>
                               </div>
-                              <div className="col-sm-11">
+                              <div className="col-sm-10">
 				<nav className="navbar navbar-expand-sm">
 				  <ul className="navbar-nav">
 					{me.tables.map(
