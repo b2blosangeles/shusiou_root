@@ -126,7 +126,7 @@ React.createClass({
 						   <div className="row">
 							   <div className="col-sm-10"></div>
 							   <div className="col-sm-2 text-right">
-					   			<button className="btn btn-info d-flex border border-default" 
+					   			<button className="btn btn-info d-flex border border-default pull-right" 
 						   		onClick={me.submitQuery.bind(me)} type="submit">submit</button>
 							   </div>
 						   </div>	   
