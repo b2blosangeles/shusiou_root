@@ -156,9 +156,9 @@ React.createClass({
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <div className="container mt-1 mb-1">
 						   <div className="row" style={{'margin':'0px', 'padding':'0px'}}>
-							   <div className="col-sm-11">&nbsp;</div>
-							   <div className="col-sm-1">
-					   			<button className="btn btn-warning d-flex border border-dark" 
+							   <div className="col-sm-10">&nbsp;</div>
+							   <div className="col-sm-2">
+					   			<button className="btn btn-warning d-flex w-100 border border-dark" 
 						   		onClick={me.submitQuery.bind(me)} type="submit">Submit</button>
 							   </div>
 						   </div>	   
