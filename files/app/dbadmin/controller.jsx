@@ -27,7 +27,7 @@ React.createClass({
 	    me.setState({updated: new Date().getTime()});   
 	    setTimeout(
 	    	function() {
-			$('.bs-select').selectpicker('refresh');
+			$('.dropdown-menu').selectpicker('refresh');
 		}
 	    ); 
         },	
