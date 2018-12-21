@@ -90,8 +90,7 @@ React.createClass({
 							++{me.dbs[1]}++
 					{me.dbs.map(
 					function(db) {
-						return
-						 (<span>{db}--</span>)
+						returnb (<span>{db}--</span>)
 					})}++			      
 				      
 				<div className="btn-group d-flex w-100 mt-2">
@@ -104,8 +103,7 @@ React.createClass({
 				  <div className="dropdown-menu">
 					{me.dbs.map(
 					function(db) {
-						return
-						 (<a className="dropdown-item" href="#">{db}</a>)
+						return (<a className="dropdown-item" href="#">{db}</a>)
 					})}
 				  </div>
 				</div>
