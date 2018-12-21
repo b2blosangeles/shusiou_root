@@ -86,9 +86,11 @@ React.createClass({
         render: function() {
         	var me = this;
                 return  (<div className="container">
-                          <div className="row mb-1 alert-success border">
+                          <div className="row mb-1 border">
                               <div className="col-sm-12 p-2"> 
+				<div className="card p-2 w-100 alert-success">
 				MYSQL Viewer
+				</div>	
                               </div>
                           </div>				
                           <div className="row">
