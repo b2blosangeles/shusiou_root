@@ -22,12 +22,10 @@ React.createClass({
 			 break;
 		 }
 	    }
-	       console.log('---data- A-->');
-	       console.log(me.dbs);
 	    me.setState({updated: new Date().getTime()});   
 	    setTimeout(
 	    	function() {
-			$('.dropdown-menu').selectpicker('refresh');
+		//	$('.dropdown-menu').selectpicker('refresh');
 		}
 	    ); 
         },	
