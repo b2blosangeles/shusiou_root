@@ -111,16 +111,16 @@ React.createClass({
         render : function() {
         	var me = this;
                 return  (<div className="container-fluid mt-2">
-                          <div className="row shadow mb-1" style={{'margin-left':'3em', 'margin-right':'3em'}}>
+                          <div className="row mb-1" style={{'margin-left':'3em', 'margin-right':'3em'}}>
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'6px'}}> 
-				<div className="card p-3 w-100 alert-success">
+				<div className="card p-3 w-100 alert-success shadow">
 				<h3>Mysql Observer <h5 className="d-inline-block">(v1.0)</h5></h3>
 				</div>	
                               </div>
                           </div>				
-                          <div className="row shadow"  style={{'margin-left':'3em', 'margin-right':'3em'}}>
+                          <div className="row"  style={{'margin-left':'3em', 'margin-right':'3em'}}>
 				<div className="col-sm-2" style={{'margin':'0px', 'padding':'6px'}}>
-					<div className="card p-2 w-100 alert-info" style={{"min-height":"40em"}}>
+					<div className="card p-2 w-100 alert-info shadow" style={{"min-height":"40em"}}>
 						<div className="btn-group d-flex w-100 mt-2">
 						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
@@ -145,7 +145,7 @@ React.createClass({
 					</div>
 				</div>	 
                               <div className="col-sm-10"  style={{'margin':'0px', 'padding':'6px'}}>
-				   <div className="card p-2 w-100 alert-secondary" style={{"min-height":"40em"}}>
+				   <div className="card p-2 w-100 alert-secondary shadow" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <div className="container mt-1 mb-1">
 						   <div className="row" style={{'margin':'0px', 'padding':'0px'}}>
