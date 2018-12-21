@@ -122,7 +122,7 @@ React.createClass({
                               <div className="col-sm-9"  style={{'margin':'0px', 'padding':'2px'}}>
 				   <div className="card p-2 w-100 alert-secondary" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
-					   <button className="btn btn-default border border-default pull-right" 
+					   <button className="btn btn-default d-flex border border-default" 
 						   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
 					   <p>
 					   [{JSON.stringify(me.result.data)}] 
