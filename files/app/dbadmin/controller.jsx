@@ -3,6 +3,7 @@ React.createClass({
 	        var me = this;
                 me.result = {};
 		me.tables = [];
+		me.dbs = [];
 		me.callQuery('SHOW TABLES', me.showTables);
 	        return {}    
         },
