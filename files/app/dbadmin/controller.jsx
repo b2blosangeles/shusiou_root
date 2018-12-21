@@ -39,11 +39,13 @@ React.createClass({
        showTables : function(data) {
 	    var me = this; 
 	    me.tables = [];
-	    for (var i = 0; i< data.length; i++) {
-		 for (var key in data[i]) {   
-		 	me.tables.push( data[i][key])
-			 break;
-		 }
+	    if (data) {
+		    for (var i = 0; i< data.length; i++) {
+			 for (var key in data[i]) {   
+				me.tables.push( data[i][key])
+				 break;
+			 }
+		    }
 	    }
 	    me.setState({updated: new Date().getTime()});   
         },
