@@ -142,7 +142,7 @@ React.createClass({
                               <div className="col-sm-10"  style={{'margin':'0px', 'padding':'2px'}}>
 				   <div className="card p-2 w-100 alert-secondary" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
-					   <div className="container mt-1">
+					   <div className="container m-1">
 						   <div className="row" style={{'margin':'0px', 'padding':'0px'}}>
 							   <div className="col-sm-10"></div>
 							   <div className="col-sm-2">
