@@ -84,18 +84,16 @@ React.createClass({
             });                
         },
 	showData : function(data) {
-		var fields = Object.keys(data);
+		var fields = (!data || !data.length) ? [] : Object.keys(data);
 		return (!data || !data.length) ?  (<span></span>) :
 		(<table className="table alert-warning">
-			  <thead>
-			    <tr>
+			  <thead><tr>
 				{me.fields.map(
 					function(field) {
 						return (<th scope="col">field</th>)
 					}
 				}
-			    </tr>
-			  </thead>
+			    </tr></thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">3</th>
