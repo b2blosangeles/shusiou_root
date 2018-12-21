@@ -87,22 +87,26 @@ React.createClass({
 		var fields = (!data || !data.length) ? [] : Object.keys(data[0]);
 		return (!data || !data.length) ?  (<span></span>) :
 		(<table className="table alert-warning">
-			  <thead><tr>
-				{fields.map(
-					function(field) {
-						return (<th scope="col">{field}</th>)
-					}
-				)}
-			    </tr></thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>Larry</td>
-			      <td>the Bird</td>
-			      <td>@twitter</td>
-			    </tr>
-			  </tbody>
-			</table>)
+		  <thead><tr>
+			{fields.map(
+				function(field) {
+					return (<th scope="col">{field}</th>)
+				}
+			)}
+		    </tr></thead>
+		  <tbody>
+		    <tr>
+			{data.map(
+				function(rec) {
+					fields.map(
+						function(field) {
+							return (<th scope="col">{rec[field]}</th>)
+					})
+				}
+			)}
+		    </tr>
+		  </tbody>
+		</table>)
 	},	
         render : function() {
         	var me = this;
