@@ -91,13 +91,7 @@ React.createClass({
 
                               </div>
 
-				{me.tables.map(
-					function(item) {
-						return (<div className="col-sm-3 m-2 p-2"><a className="" href="JavaScript:void(0)"
-							onClick={me.selectTable.bind(me, item)}>{item}</a>
-							</div>)
-					}
-				)}     
+    
                           
                           </div>				
                           <div className="row alert-secondary">
@@ -113,7 +107,14 @@ React.createClass({
 									onClick={me.selectDB.bind(me, db)}>{db}</a>)
 						})}
 					  </div>
-					</div>					
+					</div>
+					{me.tables.map(
+						function(item) {
+							return (<a className="" href="JavaScript:void(0)"
+								onClick={me.selectTable.bind(me, item)}>{item}</a>
+								)
+						}
+					)} 					
 				</div>	 
                               <div className="col-sm-8 p-2">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
