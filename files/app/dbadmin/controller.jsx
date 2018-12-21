@@ -85,7 +85,7 @@ React.createClass({
         },
 	showData : function(data) {
 		
-		return (!data.length) ? : (<span></span>)
+		return (!data.length) ?  (<span></span>) :
 		(<table className="table alert-warning">
 			  <thead>
 			    <tr>
