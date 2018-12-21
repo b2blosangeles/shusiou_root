@@ -15,6 +15,9 @@ React.createClass({
         },
        showDBs : function(data) {
 	    var me = this; 
+	    me.dbs = [];
+	       console.log('---data--->');
+	       console.log(data);
 	    for (var i = 0; i< data.length; i++) {
 		 for (var key in data[i]) {   
 		 	me.dbs.push( data[i][key])
