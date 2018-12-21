@@ -109,7 +109,7 @@ React.createClass({
 	},	
         render : function() {
         	var me = this;
-                return  (<div className="container-fluid m-3">
+                return  (<div className="container-fluid">
                           <div className="row">
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
 				<div className="card p-3 w-100 alert-success">
