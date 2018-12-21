@@ -104,7 +104,7 @@ React.createClass({
                               <div className="col-sm-9">
 				{me.tables.map(
 					function(item) {
-						return (<a className="m-2 inline-block" href="JavaScript:void(0)"
+						return (<a className="m-2 d-inline" href="JavaScript:void(0)"
 							onClick={me.selectTable.bind(me, item)}>{item}</a>)
 					}
 				)}  			      
