@@ -88,11 +88,8 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-3"> 
-
+				MYSQL
                               </div>
-
-    
-                          
                           </div>				
                           <div className="row alert-secondary">
 				<div className="col-sm-3"> 
