@@ -95,7 +95,7 @@ React.createClass({
                           </div>				
                           <div className="row">
 				<div className="col-sm-3" style={{'margin':'0px', 'padding':'3px'}}>
-					<div className="card p-2 w-100 alert-info">
+					<div className="card p-2 w-100 alert-info" style={{"min-height":"40em"}}>
 						<div className="btn-group d-flex w-100 mt-2">
 						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
@@ -108,7 +108,7 @@ React.createClass({
 							})}
 						  </div>
 						</div>
-						<div className="pre-scrollable mt-2 mb-5 p-2 alert-warning" 
+						<div className="pre-scrollable mt-2 mb-5 p-2 alert-warning"
 							style={{"min-height":"32em"}}>
 						{me.tables.map(
 						function(item) {
@@ -120,7 +120,7 @@ React.createClass({
 					</div>
 				</div>	 
                               <div className="col-sm-9"  style={{'margin':'0px', 'padding':'3px'}}>
-				   <div className="card p-2 w-100 alert-secondary">
+				   <div className="card p-2 w-100 alert-secondary" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <button className="btn btn-default border border-default pull-right" 
 						   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
