@@ -11,7 +11,6 @@ React.createClass({
 	    	var me = this; 
 		me.callQuery("SELECT * FROM `" + tbl + "`", function(data) {
 			me.result = data;
-			console.log(data);
 			 me.setState({updated: new Date().getTime()}); 
 		})
 	     
@@ -26,7 +25,6 @@ React.createClass({
 			 break;
 		 }
 	    }
-	    console.log(me.tables);
 	    me.setState({updated: new Date().getTime()});   
         },
         callQuery : function(query, cbk) {
@@ -38,7 +36,6 @@ React.createClass({
                 contentType: 'application/x-www-form-urlencoded',
                 data: {query : query},
                 success: function( data, textStatus, jQxhr ){
-			console.log(data.data);
 			cbk(data.data.data); 
                 },
                 error: function( jqXhr, textStatus, errorThrown ){
