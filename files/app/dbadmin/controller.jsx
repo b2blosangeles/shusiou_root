@@ -84,7 +84,7 @@ React.createClass({
             });                
         },
 	showData : function(data) {
-		if ((data) && !data.success) {
+		if ((data) && data.success === false) {
 			return (<div className="alert-danger p-3 mt-1 rounded border border-danger">{data.error}</div>)
 		}
 		var fields = (!data || !data.data || !data.data.length) ? [] : Object.keys(data.data[0]);
