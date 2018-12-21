@@ -123,9 +123,9 @@ React.createClass({
 				   <div className="card p-2 w-100 alert-secondary" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <div className="container mt-1">
-						   <div className="row">
+						   <div className="row" style={{'margin':'0px', 'padding':'0px'}}>
 							   <div className="col-sm-10"></div>
-							   <div className="col-sm-2 text-right">
+							   <div className="col-sm-2">
 					   			<button className="btn btn-info d-flex border border-default float-right" 
 						   		onClick={me.submitQuery.bind(me)} type="submit">submit</button>
 							   </div>
