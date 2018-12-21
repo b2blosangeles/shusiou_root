@@ -105,7 +105,7 @@ React.createClass({
 						})}
 					  </div>
 					</div>
-					<div className="pre-scrollable mt-2 p-1" style={{"min-height":"20em"}}>
+					<div className="pre-scrollable m-2 p-1 alert-warning" style={{"min-height":"32em"}}>
 					{me.tables.map(
 					function(item) {
 						return (<div className="pt-1" ><a className="" href="JavaScript:void(0)"
