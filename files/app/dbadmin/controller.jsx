@@ -110,8 +110,8 @@ React.createClass({
 					</div>
 					{me.tables.map(
 					function(item) {
-						return (<p className="p-1 pt-2" ><a className="" href="JavaScript:void(0)"
-							onClick={me.selectTable.bind(me, item)}>{item}</a></p>)
+						return (<div className="p-1 pt-2" ><a className="" href="JavaScript:void(0)"
+							onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 					}
 					)} 					
 				</div>	 
