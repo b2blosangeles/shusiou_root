@@ -95,17 +95,15 @@ React.createClass({
 			)}
 		    </tr></thead>
 		  <tbody>
-		    <tr>
-			{data.map(
-				function(rec) {
-					return (<tr>
-					{fields.map(
-						function(field) {
-							return (<th scope="col">{rec[field]}</th>)
-					})}</tr>)
-				}
-			)}
-		    </tr>
+		{data.map(
+			function(rec) {
+			return (<tr>
+			{fields.map(
+				function(field) {
+					return (<th scope="col">{rec[field]}</th>)
+			})}</tr>)
+			}
+		)}
 		  </tbody>
 		</table>)
 	},	
