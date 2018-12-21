@@ -83,7 +83,7 @@ React.createClass({
                 }
             });                
         },
-	showData : function() {
+	showData : function(data) {
 		return (<table className="table">
 			  <thead>
 			    <tr>
