@@ -5,17 +5,31 @@ React.createClass({
 		me.tables = [];
 		me.dbs = [];
 		me.callQuery('SHOW TABLES', me.showTables);
+		me.callQuery('SHOW DATABASES', me.showDBs);
 	        return {}    
         },
        selectTable : function(tbl) {
 	    	var me = this; 
 		$('#SQL').val("SELECT * FROM `" + tbl + "`");
 	     	me.submitQuery();
+        },
+       showDBs : function(data) {
+	    var me = this; 
+	       console.log(data);
+	       return true;
+	    me.tables = [];
+	        console.log(data);
+	    for (var i = 0; i< data.length; i++) {
+		 for (var key in data[i]) {   
+		 	me.tables.push( data[i][key])
+			 break;
+		 }
+	    }
+	    me.setState({updated: new Date().getTime()});   
         },	
        showTables : function(data) {
 	    var me = this; 
 	    me.tables = [];
-	        console.log(data);
 	    for (var i = 0; i< data.length; i++) {
 		 for (var key in data[i]) {   
 		 	me.tables.push( data[i][key])
