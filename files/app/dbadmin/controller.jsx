@@ -92,7 +92,7 @@ React.createClass({
 					function(field) {
 						return (<th scope="col">field</th>)
 					}
-				}
+				)}
 			    </tr></thead>
 			  <tbody>
 			    <tr>
