@@ -88,7 +88,7 @@ React.createClass({
 		return (!data || !data.length) ?  (<span></span>) :
 		(<table className="table alert-warning">
 			  <thead><tr>
-				{me.fields.map(
+				{fields.map(
 					function(field) {
 						return (<th scope="col">field</th>)
 					}
