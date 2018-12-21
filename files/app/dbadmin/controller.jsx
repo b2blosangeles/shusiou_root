@@ -109,8 +109,8 @@ React.createClass({
 	},	
         render : function() {
         	var me = this;
-                return  (<div className="container-fluid" style={{'margin-left':'6em', 'margin-right':'6em'}}>
-                          <div className="row">
+                return  (<div className="container-fluid">
+                          <div className="row"  style={{'margin-left':'6em', 'margin-right':'6em'}}>
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
 				<div className="card p-3 w-100 alert-success">
 				Mysql Observer
