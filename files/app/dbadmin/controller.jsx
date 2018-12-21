@@ -79,7 +79,7 @@ React.createClass({
                               <div className="col-sm-2"> 
 				<div className="btn-group d-flex w-100 mt-2">
 				  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Action 2
+				    Select Database
 				  </button>
 				  <div className="dropdown-menu">
 					{me.dbs.map(
