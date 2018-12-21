@@ -9,7 +9,7 @@ React.createClass({
         },
        selectTable : function(tbl) {
 	    	var me = this; 
-		me.callQuery("SELECT * FROM '" + tbl + "'", function(data) {
+		me.callQuery("SELECT * FROM `" + tbl + "`", function(data) {
 			me.result = data;
 			console.log(data);
 			 me.setState({updated: new Date().getTime()}); 
