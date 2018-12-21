@@ -87,7 +87,7 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-2"> 
-							++{JSON.stringify(me.dbs)}++
+							++{me.dbs[1]}++
 					{me.dbs.map(
 					function(db) {
 						return
