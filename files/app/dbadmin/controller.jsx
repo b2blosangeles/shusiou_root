@@ -88,14 +88,14 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 border">
                               <div className="col-sm-12 p-2"> 
-				<div className="card p-2 w-100 alert-success">
+				<div className="card p-2 w-100 alert-success" style={{'margin':'0px'}}>
 				MYSQL Viewer
 				</div>	
                               </div>
                           </div>				
                           <div className="row">
 				<div className="col-sm-3">
-					<div className="card p-2 w-100 alert-info" style={{'margin':'0px'}}>
+					<div className="card p-2 w-100 alert-info">
 						<div className="btn-group d-flex w-100 mt-2">
 						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
