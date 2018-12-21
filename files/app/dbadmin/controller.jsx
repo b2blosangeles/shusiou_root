@@ -89,9 +89,7 @@ React.createClass({
 				  <div className="dropdown-menu">
 					{me.dbs.map(
 					function(db) {
-						return (<a className="dropdown-item" 
-								onClick={me.selectDB.bind(me, db)}
-								href="JavaScript : void(0)">{db}</a>)
+						return (<a className="dropdown-item" onClick={me.selectDB.bind(me, db)}>{db}</a>)
 					})}
 				  </div>
 				</div>
@@ -102,7 +100,8 @@ React.createClass({
 					{me.tables.map(
 					function(item) {
 						return (<li className="nav-item">
-						<a className="nav-link" onClick={me.selectTable.bind(me, item)}>{item}</a>
+						<a className="nav-link" href="JavaScript:void(0)"
+							onClick={me.selectTable.bind(me, item)}>{item}</a>
 						</li>)
 					}
 					)}  
