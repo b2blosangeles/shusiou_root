@@ -151,9 +151,9 @@ React.createClass({
 							   </div>
 						   </div>	   
 					   </div>   
-
+					   {me.showData(me.result.data)}
 					   <p>
-					   [{JSON.stringify(me.result.data)}] 
+					   {JSON.stringify(me.result.data)}
 					   </p>	   
 				   </div>
                               </div>
