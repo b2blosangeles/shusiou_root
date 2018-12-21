@@ -84,7 +84,7 @@ React.createClass({
             });                
         },
 	showData : function(data) {
-		return (<table className="table">
+		return (<table className="table alert-warning">
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
@@ -105,7 +105,7 @@ React.createClass({
 	},	
         render : function() {
         	var me = this;
-                return  (<div className="container">
+                return  (<div className="container mt-5">
                           <div className="row">
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
 				<div className="card p-3 w-100 alert-success">
