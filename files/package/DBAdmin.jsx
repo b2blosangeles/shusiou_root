@@ -8,7 +8,7 @@
 		"/js/react/react-cookie.0.4.9.min.js",
 		"/js/react/ReactRouter/3.0.2/ReactRouter.min.js",
 		"/js/ReactPlugin.js",
-		"/css/Bootstrap/v4.1.3/bootstrap.min.js",
-		"/css/Bootstrap/v4.1.3/popper.min.js"
+		"/css/Bootstrap/v4.1.3/popper.min.js",
+		"/css/Bootstrap/v4.1.3/bootstrap.min.js"
 	]
 }
