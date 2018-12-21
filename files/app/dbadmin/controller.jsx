@@ -9,7 +9,6 @@ React.createClass({
 	        return {currentDB : ''}    
         },
        selectDB : function(db) {
-	       alert(db);
 	    var me = this;
 	    me.setState({currentDB : db});  
         },	
