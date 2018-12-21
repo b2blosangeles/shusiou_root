@@ -110,14 +110,14 @@ React.createClass({
         render : function() {
         	var me = this;
                 return  (<div className="container-fluid">
-                          <div className="row"  style={{'margin-left':'6em', 'margin-right':'6em'}}>
+                          <div className="row">
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
 				<div className="card p-3 w-100 alert-success">
 				Mysql Observer
 				</div>	
                               </div>
                           </div>				
-                          <div className="row">
+                          <div className="row"  style={{'margin-left':'3em', 'margin-right':'3em'}}>
 				<div className="col-sm-2" style={{'margin':'0px', 'padding':'2px'}}>
 					<div className="card p-2 w-100 alert-info" style={{"min-height":"40em"}}>
 						<div className="btn-group d-flex w-100 mt-2">
