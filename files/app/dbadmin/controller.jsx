@@ -104,8 +104,8 @@ React.createClass({
                               <div className="col-sm-9">
 				{me.tables.map(
 					function(item) {
-						return (<a className="m-2 pull-left" href="JavaScript:void(0)"
-							onClick={me.selectTable.bind(me, item)}>{item}</a>)
+						return (<div className="m-2 pull-left"><a href="JavaScript:void(0)"
+							onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 					}
 				)}  			      
 				{/*<nav className="navbar navbar-expand-sm">
