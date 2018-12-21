@@ -13,7 +13,8 @@ React.createClass({
 	},
        selectDB : function(db) {
 	    var me = this;
-	    me.setState({currentDB : db});  
+	    me.setState({currentDB : db});
+	    me.callQuery('SHOW TABLES', me.showTables);
         },	
        selectTable : function(tbl) {
 	    	var me = this; 
