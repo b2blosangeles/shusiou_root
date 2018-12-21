@@ -78,18 +78,14 @@ React.createClass({
                           <div className="row alert-secondary">
                               <div className="col-sm-11 p-3">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
-                                   <hr/>
-                                   [{JSON.stringify(me.result)}]
-                                      
                               </div>
                               <div className="col-sm-1 pt-4">
                                    <button className="btn btn-default border border-default" onClick={me.submitQuery.bind(me)} type="submit">submit</button>
                               </div> 
                           </div>
-                           <div className="row">
-                              <div className="col-sm-3">
-                              </div>
-                              <div className="col-sm-9">
+                           <div className="row alert-secondary">
+                              <div className="col-sm-12  p-3">
+				      [{JSON.stringify(me.result)}]
                               </div>
                           </div>
                                 
