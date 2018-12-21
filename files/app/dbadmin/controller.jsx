@@ -87,11 +87,11 @@ React.createClass({
         	var me = this;
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
-                              <div className="col-sm-3 p-5"> 
+                              <div className="col-sm-12 p-2"> 
 				MYSQL Viewer
                               </div>
                           </div>				
-                          <div className="row alert-secondary">
+                          <div className="row">
 				<div className="col-sm-3"> 
 					<div className="btn-group d-flex w-100 mt-2">
 					  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -115,7 +115,7 @@ React.createClass({
 					)} 
 					</div>
 				</div>	 
-                              <div className="col-sm-8 p-2">
+                              <div className="col-sm-9 p-2 alert-secondary">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
 				   <button className="btn btn-default border border-default pull-right" 
 					   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
@@ -125,9 +125,6 @@ React.createClass({
 				   </p>	   
 				      
                               </div>
-                              <div className="col-sm-1 pt-4">
-                                   <button className="btn btn-default border border-default" onClick={me.submitQuery.bind(me)} type="submit">submit</button>
-                              </div> 
                           </div>                                
                       </div>)
               }
