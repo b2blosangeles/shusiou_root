@@ -59,7 +59,7 @@ React.createClass({
         },
         render: function() {
         	var me = this;
-                return  (<div className="container px-1">
+                return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-12">
 				<nav className="navbar navbar-expand-sm">
