@@ -4,7 +4,7 @@ React.createClass({
                 me.result = {};
 		me.tables = [];
 		me.dbs = [];
-	        return {currentDB : 'platoplan'}    
+	        return {currentDB : ''}    
         },
 	componentDidMount : function() {
 		var me = this;
