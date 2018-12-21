@@ -86,7 +86,8 @@ React.createClass({
 	showData : function(data) {
 		var fields = (!data || !data.length) ? [] : Object.keys(data[0]);
 		return (!data || !data.length) ?  (<span></span>) :
-		(<table className="table alert-warning pre-scrollable">
+		(<div className="pre-scrollable alert-warning" style={{"min-height":"32em"}}>
+		<table className="table alert-warning pre-scrollable">
 		  <thead><tr>
 			{fields.map(
 				function(field) {
@@ -105,7 +106,7 @@ React.createClass({
 			}
 		)}
 		  </tbody>
-		</table>)
+		</table></div>)
 	},	
         render : function() {
         	var me = this;
