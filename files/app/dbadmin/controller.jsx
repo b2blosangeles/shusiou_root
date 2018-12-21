@@ -92,29 +92,27 @@ React.createClass({
                               </div>
                           </div>				
                           <div className="row">
-				<div className="col-sm-3">
-					<div className="alert-info w-100 mr-1">
-						<div className="btn-group d-flex w-100 mt-2">
-						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
-						  </button>
-						  <div className="dropdown-menu">
-							{me.dbs.map(
-							function(db) {
-								return (<a className="dropdown-item" href="JavaScript:void(0)"
-										onClick={me.selectDB.bind(me, db)}>{db}</a>)
-							})}
-						  </div>
-						</div>
-						<div className="pre-scrollable mt-2 mb-5 p-2 alert-warning" 
-							style={{"min-height":"32em"}}>
-						{me.tables.map(
-						function(item) {
-							return (<div className="pt-1" ><a className="" href="JavaScript:void(0)"
-								onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
-						}
-						)} 
-						</div>
+				<div className="col-sm-3 alert-info">
+					<div className="btn-group d-flex w-100 mt-2">
+					  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
+					  </button>
+					  <div className="dropdown-menu">
+						{me.dbs.map(
+						function(db) {
+							return (<a className="dropdown-item" href="JavaScript:void(0)"
+									onClick={me.selectDB.bind(me, db)}>{db}</a>)
+						})}
+					  </div>
+					</div>
+					<div className="pre-scrollable mt-2 mb-5 p-2 alert-warning" 
+						style={{"min-height":"32em"}}>
+					{me.tables.map(
+					function(item) {
+						return (<div className="pt-1" ><a className="" href="JavaScript:void(0)"
+							onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
+					}
+					)} 
 					</div>
 				</div>	 
                               <div className="col-sm-9 p-2 alert-secondary">
