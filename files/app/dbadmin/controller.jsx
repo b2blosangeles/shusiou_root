@@ -4,10 +4,13 @@ React.createClass({
                 me.result = {};
 		me.tables = [];
 		me.dbs = [];
-		me.callQuery('SHOW TABLES', me.showTables);
-		me.callQuery('SHOW DATABASES', me.showDBs);
 	        return {currentDB : ''}    
         },
+	componentDidMount : function() {
+		var me = this;
+		me.callQuery('SHOW TABLES', me.showTables);
+		me.callQuery('SHOW DATABASES', me.showDBs);		
+	},
        selectDB : function(db) {
 	    var me = this;
 	    me.setState({currentDB : db});  
