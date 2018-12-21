@@ -88,8 +88,8 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row">
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
-				<div className="card p-2 w-100 alert-success">
-				Mysql Bbserver
+				<div className="card p-3 w-100 alert-success">
+				Mysql Observer
 				</div>	
                               </div>
                           </div>				
