@@ -24,6 +24,7 @@ React.createClass({
 			 break;
 		 }
 	    }
+	       console.log(me.dbs);
 	    me.setState({updated: new Date().getTime()});   
         },	
        showTables : function(data) {
