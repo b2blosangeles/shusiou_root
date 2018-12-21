@@ -88,7 +88,6 @@ React.createClass({
 				    Select Database
 				  </button>
 				  <div className="dropdown-menu">
-					  <a class="dropdown-item" href="#">Action</a>
 					{me.dbs.map(
 					function(db) {
 						return
