@@ -87,9 +87,9 @@ React.createClass({
 				  </button>
 				  <div className="dropdown-menu">
 					{me.dbs.map(
-						function(item) {
+						function(db) {
 							return
-							 (<a className="dropdown-item" href="#">{item}</a>)
+							 (<a className="dropdown-item" href="#">{db}</a>)
 						}
 							
 					)}
