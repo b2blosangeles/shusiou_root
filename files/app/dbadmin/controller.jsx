@@ -124,7 +124,6 @@ React.createClass({
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <button className="btn btn-default border border-default pull-right" 
 						   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
-
 					   <p>
 					   [{JSON.stringify(me.result.data)}] 
 					   </p>	   
