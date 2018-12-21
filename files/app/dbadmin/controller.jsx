@@ -16,8 +16,6 @@ React.createClass({
        showDBs : function(data) {
 	    var me = this; 
 	    me.dbs = [];
-	       console.log('---data--->');
-	       console.log(data);
 	    for (var i = 0; i< data.length; i++) {
 		 for (var key in data[i]) {   
 		 	me.dbs.push( data[i][key])
@@ -27,6 +25,11 @@ React.createClass({
 	       console.log('---data- A-->');
 	       console.log(me.dbs);
 	    me.setState({updated: new Date().getTime()});   
+	    setTimeout(
+	    	function() {
+			$('.bs-select').selectpicker('refresh');
+		}
+	    ); 
         },	
        showTables : function(data) {
 	    var me = this; 
