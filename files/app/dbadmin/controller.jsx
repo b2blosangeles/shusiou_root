@@ -119,8 +119,8 @@ React.createClass({
 					}
 					)}  
 				  </ul>
-				</nav>     
-                              </div>*/}
+				</nav>*/}     
+                              </div>
                           </div>				
                           <div className="row alert-secondary">
                               <div className="col-sm-11 p-2">
