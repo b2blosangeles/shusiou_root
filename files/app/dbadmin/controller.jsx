@@ -117,8 +117,8 @@ React.createClass({
 						</div>
 					</div>
 				</div>	 
-                              <div className="col-sm-9 p-2 alert-secondary">
-				   <div className="card">
+                              <div className="col-sm-9">
+				   <div className="card p-2 w-100 alert-secondary">
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <button className="btn btn-default border border-default pull-right" 
 						   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
