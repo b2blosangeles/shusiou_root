@@ -87,14 +87,14 @@ React.createClass({
         	var me = this;
                 return  (<div className="container">
                           <div className="row">
-                              <div className="col-sm-12" style={{'margin':'0px', 'padding':'3px'}}> 
+                              <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
 				<div className="card p-2 w-100 alert-success">
 				Mysql Bbserver
 				</div>	
                               </div>
                           </div>				
                           <div className="row">
-				<div className="col-sm-3" style={{'margin':'0px', 'padding':'3px'}}>
+				<div className="col-sm-3" style={{'margin':'0px', 'padding':'2px'}}>
 					<div className="card p-2 w-100 alert-info" style={{"min-height":"40em"}}>
 						<div className="btn-group d-flex w-100 mt-2">
 						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,7 +119,7 @@ React.createClass({
 						</div>
 					</div>
 				</div>	 
-                              <div className="col-sm-9"  style={{'margin':'0px', 'padding':'3px'}}>
+                              <div className="col-sm-9"  style={{'margin':'0px', 'padding':'2px'}}>
 				   <div className="card p-2 w-100 alert-secondary" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <button className="btn btn-default border border-default pull-right" 
