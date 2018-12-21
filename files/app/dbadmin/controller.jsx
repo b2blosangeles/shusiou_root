@@ -105,10 +105,10 @@ React.createClass({
 						})}
 					  </div>
 					</div>
-					<div className="pre-scrollable">
+					<div className="pre-scrollable mt-1 p-1">
 					{me.tables.map(
 					function(item) {
-						return (<div className="p-0 pt-2" ><a className="" href="JavaScript:void(0)"
+						return (<div className="pt-1" ><a className="" href="JavaScript:void(0)"
 							onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 					}
 					)} 
