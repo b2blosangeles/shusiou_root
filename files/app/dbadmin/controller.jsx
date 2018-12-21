@@ -7,6 +7,15 @@ React.createClass({
 		me.callQuery('SHOW TABLES', me.showTables);
 	        return {}    
         },
+       selectTable : function(tbl) {
+	    	var me = this; 
+		me.callQuery("SELECT * FROM '" + tbl + "'", function(data) {
+			me.result = data;
+			console.log(data);
+			 me.setState({updated: new Date().getTime()}); 
+		})
+	     
+        },	
        showTables : function(data) {
 	    var me = this; 
 	    me.tables = [];
@@ -79,7 +88,9 @@ React.createClass({
 					{me.tables.map(
 					function(item) {
 						return (<li className="nav-item">
-						<a className="nav-link" href="#">{item}</a>
+						<a className="nav-link" href="JavaScript:void(0)"
+							onClick={me.selectTable.bind(me, item)}
+							>{item}</a>
 						</li>)
 					}
 					)}  
