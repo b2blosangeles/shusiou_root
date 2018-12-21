@@ -84,8 +84,8 @@ React.createClass({
             });                
         },
 	showData : function(data) {
-		var fields = (!data || !data.length) ? [] : Object.keys(data[0]);
-		return (!data || !data.length) ?  (<span></span>) :
+		var fields = (!data || !data.data || !data.data.length) ? [] : Object.keys(data.data[0]);
+		return (!data || !data.data || !data.data.length) ?  (<span></span>) :
 		(<div className="pre-scrollable bg-light" style={{"min-height":"28em"}}>
 		<table className="table alert-warning pre-scrollable">
 		  <thead><tr>
@@ -96,7 +96,7 @@ React.createClass({
 			)}
 		    </tr></thead>
 		  <tbody>
-		{data.map(
+		{data.data.map(
 			function(rec) {
 			return (<tr>
 			{fields.map(
@@ -156,7 +156,7 @@ React.createClass({
 							   </div>
 						   </div>	   
 					   </div>   
-					   {me.showData(me.result.data)}  
+					   {me.showData(me.result)}  
 				   </div>
                               </div>
                           </div>                                
