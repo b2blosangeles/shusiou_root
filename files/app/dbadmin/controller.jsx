@@ -105,7 +105,7 @@ React.createClass({
 						})}
 					  </div>
 					</div>
-					<div className="pre-scrollable mt-1 p-1">
+					<div className="pre-scrollable mt-1 p-1" style={"min-height":'20em'}>
 					{me.tables.map(
 					function(item) {
 						return (<div className="pt-1" ><a className="" href="JavaScript:void(0)"
@@ -116,7 +116,9 @@ React.createClass({
 				</div>	 
                               <div className="col-sm-8 p-2">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
-				   [{JSON.stringify(me.result)}]   
+				   <p>
+				   [{JSON.stringify(me.result.data)}] 
+				   </p>	   
 				      
                               </div>
                               <div className="col-sm-1 pt-4">
