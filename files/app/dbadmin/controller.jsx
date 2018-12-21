@@ -90,7 +90,7 @@ React.createClass({
 			  <thead><tr>
 				{fields.map(
 					function(field) {
-						return (<th scope="col">field</th>)
+						return (<th scope="col">{field}</th>)
 					}
 				)}
 			    </tr></thead>
