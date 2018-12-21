@@ -61,7 +61,16 @@ React.createClass({
         	var me = this;
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
-                              <div className="col-sm-1">   
+                              <div className="col-sm-1"> 
+				<div className="btn-group">
+				  <button type="button" className="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Action
+				  </button>
+				  <div className="dropdown-menu">
+				    <a className="dropdown-item" href="#">Action</a>
+				    <a className="dropdown-item" href="#">Another action</a>
+				  </div>
+				</div>
                               </div>
                               <div className="col-sm-11">
 				<nav className="navbar navbar-expand-sm">
