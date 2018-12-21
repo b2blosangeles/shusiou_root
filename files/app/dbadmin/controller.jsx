@@ -105,12 +105,14 @@ React.createClass({
 						})}
 					  </div>
 					</div>
+					<div className="pre-scrollable">
 					{me.tables.map(
 					function(item) {
 						return (<div className="p-0 pt-2" ><a className="" href="JavaScript:void(0)"
 							onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 					}
-					)} 					
+					)} 
+					</div>
 				</div>	 
                               <div className="col-sm-8 p-2">
                                    <textarea id="SQL" className="form-control" rows="3"></textarea>
