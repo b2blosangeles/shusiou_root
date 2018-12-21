@@ -15,13 +15,9 @@ React.createClass({
         },
        showDBs : function(data) {
 	    var me = this; 
-	       console.log(data);
-	       return true;
-	    me.tables = [];
-	        console.log(data);
 	    for (var i = 0; i< data.length; i++) {
 		 for (var key in data[i]) {   
-		 	me.tables.push( data[i][key])
+		 	me.dbs.push( data[i][key])
 			 break;
 		 }
 	    }
@@ -86,8 +82,13 @@ React.createClass({
 				    Action 2
 				  </button>
 				  <div className="dropdown-menu">
-				    <a className="dropdown-item" href="#">Action</a>
-				    <a className="dropdown-item" href="#">Another action</a>
+					{me.tables.map(
+						function(item) {
+							return
+							 (<a className="dropdown-item" href="#">{item}</a>)
+						}
+							
+					)}
 				  </div>
 				</div>
                               </div>
