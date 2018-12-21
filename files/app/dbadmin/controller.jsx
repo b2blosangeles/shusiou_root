@@ -64,7 +64,7 @@ React.createClass({
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-2"> 
 				<div className="btn-group mt-2">
-				  <button type="button" className="btn btn-info  btn-block full-width dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <button type="button" className="btn btn-info btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Action
 				  </button>
 				  <div className="dropdown-menu">
