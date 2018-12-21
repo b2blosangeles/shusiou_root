@@ -28,7 +28,7 @@ React.createClass({
 	    me.dbs = [];
 	    for (var i = 0; i< data.length; i++) {
 		 for (var key in data[i]) {  
-			if (['mysql'].indexOf(key) !== -1) continue;
+			if (['mysql', 'information_schema'].indexOf(key) !== -1) continue;
 		 	me.dbs.push( data[i][key])
 			 break;
 		 }
