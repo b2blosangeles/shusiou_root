@@ -101,7 +101,7 @@ React.createClass({
 			return (<tr>
 			{fields.map(
 				function(field) {
-					return (<th scope="col">{rec[field]}</th>)
+					return (<th scope="col" className="bg-light">{rec[field]}</th>)
 			})}</tr>)
 			}
 		)}
@@ -156,10 +156,7 @@ React.createClass({
 							   </div>
 						   </div>	   
 					   </div>   
-					   {me.showData(me.result.data)}
-					   <p>
-					   {JSON.stringify(me.result.data)}
-					   </p>	   
+					   {me.showData(me.result.data)}  
 				   </div>
                               </div>
                           </div>                                
