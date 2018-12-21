@@ -6,8 +6,12 @@ React.createClass({
 		me.dbs = [];
 		me.callQuery('SHOW TABLES', me.showTables);
 		me.callQuery('SHOW DATABASES', me.showDBs);
-	        return {}    
+	        return {currentDb : ''}    
         },
+       selectDB : function(db) {
+	    var me = this;
+	    me.setState({currentDb : db});  
+        },	
        selectTable : function(tbl) {
 	    	var me = this; 
 		$('#SQL').val("SELECT * FROM `" + tbl + "`");
@@ -80,12 +84,14 @@ React.createClass({
                               <div className="col-sm-2"> 
 				<div className="btn-group d-flex w-100 mt-2">
 				  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Select Database
+					  {(me.state.currentDB) ? me.state.currentD : 'Select Database'}
 				  </button>
 				  <div className="dropdown-menu">
 					{me.dbs.map(
 					function(db) {
-						return (<a className="dropdown-item" href="#">{db}</a>)
+						return (<a className="dropdown-item" 
+								onClick={me.selectDB.bind(me, db)}
+								href="JavaScript : void(0)">{db}</a>)
 					})}
 				  </div>
 				</div>
