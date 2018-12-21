@@ -46,7 +46,7 @@ React.createClass({
                 dataType: 'json',
                 type: 'post',
                 contentType: 'application/x-www-form-urlencoded',
-                data: {query : query},
+                data: {query : query, db : me.state.currentDB},
                 success: function( data, textStatus, jQxhr ){
 			cbk(data.data.data); 
                 },
@@ -63,7 +63,7 @@ React.createClass({
                 dataType: 'json',
                 type: 'post',
                 contentType: 'application/x-www-form-urlencoded',
-                data: {query : ((query) ? query : $('#SQL').val())},
+                data: {query : ((query) ? query : $('#SQL').val()), db : me.state.currentDB},
                 success: function( data, textStatus, jQxhr ){
 		    if (typeof cbk === 'function') {
 			   cbk(data.data); 
