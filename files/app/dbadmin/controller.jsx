@@ -6,11 +6,12 @@ React.createClass({
 		me.dbs = [];
 		me.callQuery('SHOW TABLES', me.showTables);
 		me.callQuery('SHOW DATABASES', me.showDBs);
-	        return {currentDb : ''}    
+	        return {currentDB : ''}    
         },
        selectDB : function(db) {
+	       alert(db);
 	    var me = this;
-	    me.setState({currentDb : db});  
+	    me.setState({currentDB : db});  
         },	
        selectTable : function(tbl) {
 	    	var me = this; 
