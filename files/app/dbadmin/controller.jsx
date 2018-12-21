@@ -93,7 +93,7 @@ React.createClass({
                           </div>				
                           <div className="row">
 				<div className="col-sm-3">
-					<div className="card alert-info">
+					<div className="card w-100 alert-info">
 						<div className="btn-group d-flex w-100 mt-2">
 						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
