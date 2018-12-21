@@ -84,6 +84,13 @@ React.createClass({
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-2"> 
 				<div className="btn-group d-flex w-100 mt-2">
+					
+					{me.dbs.map(
+					function(db) {
+						return
+						 (<span>{db}--</span>)
+					})}	
+					
 				  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Select Database
 				  </button>
