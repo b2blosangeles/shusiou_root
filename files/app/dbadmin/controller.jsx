@@ -98,10 +98,11 @@ React.createClass({
 		    <tr>
 			{data.map(
 				function(rec) {
-					fields.map(
+					return (<tr>
+					{fields.map(
 						function(field) {
 							return (<th scope="col">{rec[field]}</th>)
-					})
+					})}</tr>)
 				}
 			)}
 		    </tr>
