@@ -22,16 +22,7 @@ React.createClass({
 			 break;
 		 }
 	    }
-	       console.log('---2---me.dbs-->');
-	        console.log(me.dbs);
-	    me.setState({updated: new Date().getTime()});   
-	       console.log('---1---me.dbs-->');
-	       console.log(me.dbs);
-	    setTimeout(
-	    	function() {
-			$('.dropdown-menu').trigger('change');
-		}
-	    ); 
+	    me.setState({updated: new Date().getTime()});
         },	
        showTables : function(data) {
 	    var me = this; 
@@ -87,16 +78,7 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-2"> 
-							++{me.dbs[1]}++
-					{me.dbs.map(
-					function(db) {
-						return (<span>{db}--</span>)
-					})}++			      
-				      
 				<div className="btn-group d-flex w-100 mt-2">
-					
-
-					
 				  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Select Database
 				  </button>
