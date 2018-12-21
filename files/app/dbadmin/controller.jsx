@@ -118,14 +118,15 @@ React.createClass({
 					</div>
 				</div>	 
                               <div className="col-sm-9 p-2 alert-secondary">
-                                   <textarea id="SQL" className="form-control" rows="3"></textarea>
-				   <button className="btn btn-default border border-default pull-right" 
-					   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
-				   
-				   <p>
-				   [{JSON.stringify(me.result.data)}] 
-				   </p>	   
-				      
+				   <div className="card">
+					   <textarea id="SQL" className="form-control" rows="3"></textarea>
+					   <button className="btn btn-default border border-default pull-right" 
+						   onClick={me.submitQuery.bind(me)} type="submit">submit</button>
+
+					   <p>
+					   [{JSON.stringify(me.result.data)}] 
+					   </p>	   
+				   </div>
                               </div>
                           </div>                                
                       </div>)
