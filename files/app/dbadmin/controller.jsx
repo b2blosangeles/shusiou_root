@@ -26,9 +26,10 @@ React.createClass({
        showDBs : function(data) {
 	    var me = this; 
 	    me.dbs = [];
+	    let blocked = ['mysql', 'information_schema'];
 	    for (var i = 0; i< data.length; i++) {
 		 for (var key in data[i]) {  
-			if (['mysql', 'information_schema'].indexOf(key) !== -1) continue;
+			if (blocked.indexOf(data[i][key]) !== -1) continue;
 		 	me.dbs.push( data[i][key])
 			 break;
 		 }
