@@ -22,7 +22,11 @@ React.createClass({
 			 break;
 		 }
 	    }
+	       console.log('---2---me.dbs-->');
+	        console.log(me.dbs);
 	    me.setState({updated: new Date().getTime()});   
+	       console.log('---1---me.dbs-->');
+	       console.log(me.dbs);
 	    setTimeout(
 	    	function() {
 			$('.dropdown-menu').trigger('change');
