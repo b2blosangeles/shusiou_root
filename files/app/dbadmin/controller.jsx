@@ -87,7 +87,7 @@ React.createClass({
         	var me = this;
                 return  (<div className="container">
                           <div className="row mb-1 border" style={{'padding':'0px'}}>
-                              <div className="col-sm-12" style={{'margin':'0px'}}> 
+                              <div className="col-sm-12" style={{'margin':'0px', 'padding':'0px'}}> 
 				<div className="card p-2 w-100 alert-success" style={{'margin':'0px'}}>
 				MYSQL Viewer
 				</div>	
