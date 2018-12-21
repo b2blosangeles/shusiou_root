@@ -114,7 +114,7 @@ React.createClass({
                           <div className="row shadow" style={{'margin-left':'3em', 'margin-right':'3em'}}>
                               <div className="col-sm-12" style={{'margin':'0px', 'padding':'2px'}}> 
 				<div className="card p-3 w-100 alert-success">
-				<h3>Mysql Observer<h5>(v1.0)</h5></h3>
+				<h3 className="d-inline-block">Mysql Observer<h5 className="d-inline-block">(v1.1)</h5></h3>
 				</div>	
                               </div>
                           </div>				
