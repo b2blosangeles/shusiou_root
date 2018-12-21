@@ -63,8 +63,8 @@ React.createClass({
                 return  (<div className="container">
                           <div className="row mb-1 alert-success border">
                               <div className="col-sm-2"> 
-				<div className="btn-group btn-block  btn-group-justified mt-2">
-				  <button type="button" className="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<div className="btn-group btn-group-block  btn-group-justified mt-2">
+				  <button type="button" className="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Action
 				  </button>
 				  <div className="dropdown-menu">
