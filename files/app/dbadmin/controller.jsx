@@ -158,7 +158,7 @@ React.createClass({
 						   <div className="row" style={{'margin':'0px', 'padding':'0px'}}>
 							   <div className="col-sm-10">&nbsp;</div>
 							   <div className="col-sm-2">
-					   			<button className="btn btn-warning d-flex w-100 border border-dark text-center" 
+					   			<button className="btn btn-warning w-100 border border-dark" 
 						   		onClick={me.submitQuery.bind(me)} type="submit">Submit</button>
 							   </div>
 						   </div>	   
