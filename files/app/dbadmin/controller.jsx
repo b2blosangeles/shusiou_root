@@ -140,8 +140,10 @@ React.createClass({
 						  <div className="dropdown-menu">
 							{me.dbs.map(
 							function(db) {
-								return (<a className="dropdown-item" href="JavaScript:void(0)"
-										onClick={me.selectDB.bind(me, db)}>{db}</a>)
+								return (<span><i className="fa fa-database" aria-hidden="true"></i>
+								&nbsp;
+								<a className="dropdown-item" href="JavaScript:void(0)"
+										onClick={me.selectDB.bind(me, db)}>{db}</a></span>)
 							})}
 						  </div>
 						</div>
