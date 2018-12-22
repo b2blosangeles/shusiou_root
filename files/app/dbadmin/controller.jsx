@@ -20,7 +20,7 @@ React.createClass({
         },	
        selectTable : function(tbl) {
 	    	var me = this; 
-		$('#SQL').val("SELECT * FROM `" + tbl + "`");
+		$('#SQL').val("SELECT * FROM `" + tbl + "` LIMIT 100");
 	     	me.submitQuery();
         },
        showDBs : function(data) {
