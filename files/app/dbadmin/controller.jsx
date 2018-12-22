@@ -153,8 +153,8 @@ React.createClass({
 						{me.tables.map(
 						function(item) {
 							return (<div className="pt-1" >
-								<i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;
-								<a href="JavaScript:void(0)" onClick={me.descTable.bind(me, item)}><i className="fa fa-list-ol"></i></a>&nbsp;>&nbsp;
+								<i className="fa fa-wrench" aria-hidden="true"></i>&nbsp;
+								<a href="JavaScript:void(0)" onClick={me.descTable.bind(me, item)}><i className="fa fa-list-ol"></i></a>&nbsp;&nbsp;
 								<a className="" href="JavaScript:void(0)" onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 						}
 						)} 
