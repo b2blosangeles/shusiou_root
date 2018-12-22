@@ -131,7 +131,7 @@ React.createClass({
                               </div>
                           </div>				
                           <div className="row"  style={{'margin-left':'3em', 'margin-right':'3em'}}>
-				<div className="col-sm-2" style={{'margin':'0px', 'padding':'6px'}}>
+				<div className="col-sm-3" style={{'margin':'0px', 'padding':'6px'}}>
 					<div className="card p-2 w-100 rounded border border-info alert-info shadow" style={{"min-height":"40em"}}>
 						<div className="btn-group w-100 mt-2">
 						  <a className="btn btn-warning  w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -160,7 +160,7 @@ React.createClass({
 						</div>
 					</div>
 				</div>	 
-                              <div className="col-sm-10"  style={{'margin':'0px', 'padding':'6px'}}>
+                              <div className="col-sm-9"  style={{'margin':'0px', 'padding':'6px'}}>
 				   <div className="card p-2 w-100 alert-secondary rounded border border-secondary shadow" style={{"min-height":"40em"}}>
 					   <textarea id="SQL" className="form-control" rows="3"></textarea>
 					   <div className="container mt-1 mb-1">
