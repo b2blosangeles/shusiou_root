@@ -134,9 +134,9 @@ React.createClass({
 				<div className="col-sm-2" style={{'margin':'0px', 'padding':'6px'}}>
 					<div className="card p-2 w-100 rounded border border-info alert-info shadow" style={{"min-height":"40em"}}>
 						<div className="btn-group d-flex w-100 mt-2">
-						  <button type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <a type="button" className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
-						  </button>
+						  </a>
 						  <div className="dropdown-menu">
 							{me.dbs.map(
 							function(db) {
