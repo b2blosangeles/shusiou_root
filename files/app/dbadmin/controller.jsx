@@ -143,7 +143,7 @@ React.createClass({
 								return (<span><a className="dropdown-item" href="JavaScript:void(0)"
 										onClick={me.selectDB.bind(me, db)}>
 								<i className="fa fa-database" aria-hidden="true"></i>
-								{db}</a></span>)
+								&nbsp;{db}</a></span>)
 							})}
 						  </div>
 						</div>
