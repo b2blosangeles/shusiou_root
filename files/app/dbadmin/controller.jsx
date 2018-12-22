@@ -144,7 +144,7 @@ React.createClass({
 							style={{"min-height":"32em"}}>
 						{me.tables.map(
 						function(item) {
-							return (<div className="pt-1" ><i className="fas fa-igloo"></i>&nbsp;<a className="" href="JavaScript:void(0)"
+							return (<div className="pt-1" ><i className="fa fa-list-ol"></i>&nbsp;<a className="" href="JavaScript:void(0)"
 								onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 						}
 						)} 
