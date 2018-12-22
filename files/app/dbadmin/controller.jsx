@@ -23,6 +23,11 @@ React.createClass({
 		$('#SQL').val("SELECT * FROM `" + tbl + "` LIMIT 100");
 	     	me.submitQuery();
         },
+       descTable : function(tbl) {
+	    	var me = this; 
+		$('#SQL').val("DESC `" + tbl + "` LIMIT 100");
+	     	me.submitQuery();
+        },	
        showDBs : function(data) {
 	    var me = this; 
 	    me.dbs = [];
@@ -144,8 +149,9 @@ React.createClass({
 							style={{"min-height":"32em"}}>
 						{me.tables.map(
 						function(item) {
-							return (<div className="pt-1" ><i className="fa fa-list-ol"></i>&nbsp;<a className="" href="JavaScript:void(0)"
-								onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
+							return (<div className="pt-1" >
+								<a href="JavaScript:void(0)" onClick={me.descTable.bind(me)}><i className="fa fa-list-ol"></i></a>&nbsp;
+								<a className="" href="JavaScript:void(0)" onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 						}
 						)} 
 						</div>
