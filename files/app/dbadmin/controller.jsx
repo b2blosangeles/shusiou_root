@@ -27,6 +27,11 @@ React.createClass({
 	    	var me = this; 
 		$('#SQL').val("DESC `" + tbl + "`");
 	     	me.submitQuery();
+        },
+       createTable : function(tbl) {
+	    	var me = this; 
+		$('#SQL').val("SHOW CREATE TABLE `" + tbl + "`");
+	     	me.submitQuery();
         },	
        showDBs : function(data) {
 	    var me = this; 
@@ -152,8 +157,8 @@ React.createClass({
 							style={{"min-height":"32em"}}>
 						{me.tables.map(
 						function(item) {
-							return (<div className="pt-1" >
-								<i className="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;
+							return (<div className="pt-1" > 
+								<a href="JavaScript:void(0)" onClick={me.createTable.bind(me, item)}><i className="fa fa-wrench" aria-hidden="true"></i></a>&nbsp;&nbsp;
 								<a href="JavaScript:void(0)" onClick={me.descTable.bind(me, item)}><i className="fa fa-list-ol"></i></a>&nbsp;&nbsp;
 								<a className="" href="JavaScript:void(0)" onClick={me.selectTable.bind(me, item)}>{item}</a></div>)
 						}
