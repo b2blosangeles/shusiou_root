@@ -134,7 +134,7 @@ React.createClass({
 				<div className="col-sm-2" style={{'margin':'0px', 'padding':'6px'}}>
 					<div className="card p-2 w-100 rounded border border-info alert-info shadow" style={{"min-height":"40em"}}>
 						<div className="btn-group d-flex w-100 mt-2">
-						  <a className="btn btn-info  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <a className="btn btn-warning  w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  <i className="fa fa-database" aria-hidden="true"></i>&nbsp;
 							  {(me.state.currentDB) ? me.state.currentDB : 'Select Database'}
 						  </a>
