@@ -1,5 +1,9 @@
 var token = (!req.body.token) ? '' : req.body.token;
 var CP = new pkg.crowdProcess();
+var mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql');
+var config = require(env.config_path + '/config.json');
+var db_setting = config.db;
+db_setting.database = 'platoplan';
 
 var _f = {};
 _f['DBS'] = function(cbk) {
