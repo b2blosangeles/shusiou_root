@@ -1,1 +1,1 @@
-res.send('---req.body.post-->');
+res.send(req.body.post);
