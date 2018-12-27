@@ -27,11 +27,11 @@
   </head>
   <body>
     <div class="container-fluid">
-      ==/api/platoplan/auth_registration_post.api?type=registration&code={$token}==
-        <form name="registrationFrom" action="/api/platoplan/auth_registration_post.api?type=registration&code={$token}" onsubmit="return validateForm()" method="POST" >
+        <form name="registrationFrom" action="/api/platoplan/auth_registration_post.api}" 
+              onsubmit="return validateForm()" method="POST" >
         <div class="row text-center">
             <div class="col-sm-12"><h5 class="m-5 font-weight-normal">PlatoPlan Registration</h5></div>
-            <!--input name="token" value="{$token}"-->
+            <input name="token" value="{$token}">
         </div>
          <div class="row text-center">
             <div class="col-sm-12">
