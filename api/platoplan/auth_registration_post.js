@@ -41,7 +41,7 @@ _f['AddUser'] = function(cbk) {
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error) {
-		  cbk({success: true});
+		  cbk({success: true, password : Password });
 	      } else {
 		  cbk({success: false});
 	      }
@@ -51,9 +51,9 @@ CP.serial(
   _f,
   function(data) {
 	if (CP.data.AddUser.success) {
-		 res.send({body:req.body, data: data});
+		res.send({token:req.body, password: CP.data.AddUser.password});
 	} else {
-		 res.send({status : false});
+		res.send({status : false});
 	}
      
   });  
