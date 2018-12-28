@@ -23,6 +23,10 @@ _f['DBS'] = function(cbk) {
 	}); 
 }
 _f['AddUser'] = function(cbk) {
+	if (!CP.data.DBS) {
+		cbk({success: false});
+		return true;
+	}
 	var connection = mysql.createConnection(db_setting);
 	connection.connect();
 	var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
@@ -39,7 +43,7 @@ _f['AddUser'] = function(cbk) {
 	      if (!error) {
 		  cbk({success: true});
 	      } else {
-		  cbk({success: false, msg : str});
+		  cbk({success: false});
 	      }
 	}); 
 }
