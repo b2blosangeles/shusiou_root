@@ -32,7 +32,7 @@ _f['AddUser'] = function(cbk) {
 	    Password = crypto.createHash('md5').update(s).digest('hex');
 	
 	var str = "INSERT INTO  `user` (`username`, `email`, `password`) " + 
-	    " VALUES ('" + UserName + "','" + Email + "','" + Password + ")";	
+	    " VALUES ('" + UserName + "','" + Email + "','" + Password + "')";	
 	
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
