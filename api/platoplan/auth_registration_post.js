@@ -50,5 +50,10 @@ _f['AddUser'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
-      res.send({body:req.body, data: data});
+	if (CP.data.AddUser.success) {
+		 res.send({body:req.body, data: data});
+	} else {
+		 res.send({status : false});
+	}
+     
   });  
