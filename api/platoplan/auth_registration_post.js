@@ -39,7 +39,7 @@ _f['AddUser'] = function(cbk) {
 	      if (!error && (results.length)) {
 		  cbk({success: true});
 	      } else {
-		  cbk({success: false});
+		  cbk({success: false, msg : str});
 	      }
 	}); 
 }
