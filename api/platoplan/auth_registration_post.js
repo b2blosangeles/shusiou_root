@@ -49,6 +49,24 @@ _f['AddUser'] = function(cbk) {
 	      }
 	}); 
 }
+_f['CLEANQR'] = function(cbk) {
+	if (!CP.data.AddUser) {
+		cbk({success: false});
+		return true;
+	}	
+	var connection = mysql.createConnection(db_setting);
+	connection.connect();
+
+	var str = "DELETE FROM  `QR` WHERE `token` = '" + token + "'";	
+	connection.query(str, function (error, results, fields) {
+	      connection.end();	
+	      if (!error && (results.length)) {
+		  cbk({success: true});
+	      } else {
+		  cbk({success: false});
+	      }
+	}); 
+}
 CP.serial(
   _f,
   function(data) {
