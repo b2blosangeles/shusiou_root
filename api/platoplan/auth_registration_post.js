@@ -51,7 +51,7 @@ CP.serial(
   _f,
   function(data) {
 	if (CP.data.AddUser.success) {
-		var tpl = new Smarty(content);var indextpl = env.site_path + '/api/platoplan/tpl/afterRegistration.html';
+		var indextpl = env.site_path + '/api/platoplan/tpl/afterRegistration.html';
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
 			var tpl = new Smarty(content);
 			res.send(tpl.fetch({token : CP.data.AddUser.password}));
