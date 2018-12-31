@@ -19,7 +19,7 @@ _f['DBS'] = function(cbk) {
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error && (results.length)) {
-		  cbk({success: true});
+		  cbk({success: true, uuid : results[0].uuid});
 	      } else {
 		  cbk({success: false});
 	      }
@@ -39,6 +39,26 @@ _f['LoginUser'] = function(cbk) {
 	      connection.end();	
 	      if (!error) {
 		  cbk({success: true, data : results});
+	      } else {
+		  cbk({success: false});
+	      }
+	}); 
+}
+_f['ADDSESSION'] = function(cbk) {
+	if (!CP.data.LoginUser) {
+		cbk({success: false});
+		return true;
+	}	
+	var connection = mysql.createConnection(db_setting);
+	connection.connect();
+	
+	var uuid = CP.data.DBS.uuid;
+	    
+	var str = "INSERT INTO `session` (`uuid`,`auth`) VALUES  ('" + uuid + "', '" + auth + "')";	
+	connection.query(str, function (error, results, fields) {
+	      connection.end();	
+	      if (!error && (results.length)) {
+		  cbk({success: true});
 	      } else {
 		  cbk({success: false});
 	      }
