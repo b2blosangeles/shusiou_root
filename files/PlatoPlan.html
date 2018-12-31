@@ -44,7 +44,9 @@
               });     
               socket.on('incomeMessage', function(income){
                  console.log('===incomeMessage===')
-                 console.log(income);
+                 if (income.data.opt === 'loginSuccess') {
+                      alert(income.data.opt);
+                 }
               });  
               socket.on('disconnect', function(){
                 // alert(12);
