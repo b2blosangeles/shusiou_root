@@ -54,7 +54,8 @@ _f['ADDSESSION'] = function(cbk) {
 	
 	var uuid = CP.data.DBS.uuid;
 	    
-	var str = "INSERT INTO `session` (`uuid`,`auth`) VALUES  ('" + uuid + "', '" + auth + "')";	
+	var str = "INSERT INTO `session` (`uuid`,`auth`, `created`) VALUES  ('" + uuid + "', '" + auth + "', NOW()) " +
+	    " ON DUPLICATE KEY UPDATE `created` = NOW(), `auth` = '" + auth + "'";	
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error && (results.length)) {
