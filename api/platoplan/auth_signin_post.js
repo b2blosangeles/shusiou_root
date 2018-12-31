@@ -69,6 +69,8 @@ CP.serial(
   function(data) {
 	  if ((CP.data.LoginUser.success) && (CP.data.LoginUser.data) && (CP.data.LoginUser.data[0])) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/afterLogin.html';
+		  res.send(indextpl);
+		  return true;
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
 			var tpl = new Smarty(content);
 			res.send(tpl.fetch(CP.data.LoginUser.data[0]));
