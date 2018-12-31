@@ -23,7 +23,7 @@ socketClient.sendToRoom(
     'CNND',
     {x:new Date(), Y:90},
     function(data) {
-	//res.send('data-->');
+	res.send('data-->');
     }
 );
 /* -------------*/
