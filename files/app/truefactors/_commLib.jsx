@@ -27,7 +27,55 @@ var _commLib = function () {
 			(<span><span className="section_spin_cover"></span><span className="section_spin_page">
 			 <span className="section-spinner"></span></span></span>)   
 	}
+	this.loadSocketIO = function(o, cfg) {
+		let _id = (cfg.publicId) ? cfg.publicId :
+		    (!o || !o.props || !o.props.route || !o.props.route.path) ? cfg.room : (o.props.route.path + '_' + cfg.room);
+
+		Root.socket = (Root.socket) ? Root.socket : {};
+		Root.socket[_id] = (Root.socket[_id]) ? Root.socket[_id] : {};
+
+		let obj = Root.socket[_id];
 		
+		if (!cfg.publicId) {
+			o.componentWillUnmount = (function(o, componentWillUnmount) {
+				return function() {
+					if (typeof componentWillUnmount === 'function') {
+						componentWillUnmount();
+					}
+					if (typeof cfg.beforeDisconnection === 'function') {
+						cfg.beforeDisconnection(obj.socket);
+					}					
+					obj.socket.close();
+					delete obj.socket;
+				}
+			})(o, o.componentWillUnmount);
+		}
+		if (!cfg.publicId && (obj.socket)) {
+			if (typeof cfg.beforeDisconnection === 'function') {
+				cfg.beforeDisconnection(obj.socket);
+			}
+			obj.socket.close();
+			delete obj.socket;
+		}
+		if (!obj.socket) {
+			obj.socket = io.connect(cfg.resource);
+			obj.socket.on('connect', function() {
+				// console.log('MAGA=build== success');
+				if (cfg.room) obj.socket.emit('createRoom', cfg.room);
+				if (typeof cfg.onServerData === 'function') {
+					obj.socket.on('serverData', function(incomeData) {
+						cfg.onServerData(incomeData, obj.socket);
+					});					
+				}
+				if (typeof cfg.onConnection === 'function') {
+					cfg.onConnection(obj.socket);					
+				}				
+			});
+			if (typeof cfg.onServerMessage === 'function') {
+				obj.socket.on('serverMessage', cfg.onServerMessage);
+			}
+		}
+	}		
    /*========== Need review ====*/
     this.getAuth = function() {
 		return (reactCookie.load('auth'))?reactCookie.load('auth'):{}
