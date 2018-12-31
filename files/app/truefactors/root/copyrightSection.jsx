@@ -1,8 +1,6 @@
 var _copyrightSection = React.createClass({
     getInitialState: function() {
 	var me = this;
-	    console.log("===localStorage.getItem('_auth')==>")
-	     console.log(JSON.stringify(localStorage.getItem('_auth')))
 	return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : {}}
     },
     clickOption : function(v, e) {
@@ -26,7 +24,7 @@ var _copyrightSection = React.createClass({
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
 			<div className="row">
-				<div className="col-sm-2 text-left">
+				<div className="col-sm-3 text-left">
 					{(!me.state._auth) ? (<span>
 						<a onClick={me.clickOption.bind(me, 'login')}
 						href="JavaScript: void(0)">Login</a>
@@ -41,20 +39,8 @@ var _copyrightSection = React.createClass({
 						</span>)
 					}
 					&nbsp;&nbsp;&nbsp;[{uuid}]
-					{/*(!me.state._auth) ? (
-						<a onClick={Root.auth.signIn.bind(me, Root)}
-						href="JavaScript: void(0)">Login</a>)
-						:
-						(<span>
-						<a>
-						[{(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info}]</a>
-						&nbsp;
-						<a onClick={Root.auth.doAuth.bind(me)}
-						href="JavaScript: void(0)">Logoff</a>
-						</span>)
-					*/}
 				</div>
-				<div className="col-sm-10 text-right">
+				<div className="col-sm-9 text-right">
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
