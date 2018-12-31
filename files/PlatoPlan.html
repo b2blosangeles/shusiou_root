@@ -35,9 +35,7 @@
           socket.on('connect', function(dd){
               console.log('===connected=dd=');
               console.log(dd);
-              socket.emit('createRoom', 'niubi', function() {
-                console.log('--after createRoom---');
-                });
+              socket.emit('createRoom', 'niubi');
             
                socket.emit('evernt', 'yyy');
  
