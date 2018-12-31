@@ -65,6 +65,25 @@ _f['ADDSESSION'] = function(cbk) {
 	      }
 	}); 
 }
+
+_f['SENDIO'] = function(cbk) {
+	/* ------------- */
+	delete require.cache[env.root_path + '/package/socketNodeClient/socketNodeClient.js'];
+	var socketNodeClient = require(env.root_path + '/package/socketNodeClient/socketNodeClient.js');
+	var socketClient = new socketNodeClient(
+		{link:'http://dev.platoplan.com/'}, 
+		env);
+	socketClient.sendToRoom(
+	    'CNND',
+	    {opt : 'loginSuccess'},
+	    function(data) {
+		console.log('data--===>');
+	    }
+	);
+	cbk(true);
+	/* -------------*/
+}
+
 /*
 _f['CLEANQR'] = function(cbk) {
 	if (!CP.data.LoginUser) {
