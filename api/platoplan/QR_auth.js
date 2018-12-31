@@ -16,7 +16,7 @@ var io = require(env.root_path + '/package/socket.io-client/node_modules/socket.
 var socket = io.connect('http://dev.platoplan.com/');
 socket.on('connect', function(){
 	console.log('data-->');
-	res.send('data-->');
+	res.send('data-->A');
 	return true;
 	/*
 				me.socket.emit('createRoom', room);
