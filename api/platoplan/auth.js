@@ -12,7 +12,7 @@ if (!type) {
   res.send('Wrong type!!');
   return true;
 }
-  res.send(token);
+  res.send(req.query);
   return true;
 
 var CP = new pkg.crowdProcess();
