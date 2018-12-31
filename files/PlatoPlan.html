@@ -35,6 +35,10 @@
           socket.on('connect', function(){
               console.log('===connected=1=');
               socket.emit('createRoom', 'niubi');
+            
+            
+              io.to('niubi').emit('evernt', 'yyy');
+ 
               socket.on('event', function(data){
                   console.log('===event coming===')
               
