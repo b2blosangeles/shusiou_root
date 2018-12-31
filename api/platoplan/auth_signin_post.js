@@ -71,7 +71,8 @@ CP.serial(
 		var indextpl = env.site_path + '/api/platoplan/tpl/afterLogin.html';
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
 			var tpl = new Smarty(content);
-			res.send(tpl.fetch(CP.data.LoginUser.data[0]));
+			
+			res.send(tpl.fetch({userInfo: CP.data.LoginUser.data[0]), copywriteyear :  new Date().getFullYear()});
 			return true;
 		});
 	  } else {
