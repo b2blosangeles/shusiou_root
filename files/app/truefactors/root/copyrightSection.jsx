@@ -1,7 +1,7 @@
 var _copyrightSection = React.createClass({
     getInitialState: function() {
 	var me = this;
-	return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : null}
+	return {}
     },
     clickOption : function(v, e) {
 	var me = this; 
@@ -33,9 +33,9 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Registration</a>
 						</span>)
 						:
-						(<span>{me.state._auth.username}&nbsp;
+						(<span>{Root.auth.state._auth.username}&nbsp;
 						<a onClick={Root.auth.logoff.bind(me)}
-						href="JavaScript: void(0)">Logoff</a>
+						href="JavaScript: void(0)">Logoff</a> >>
 						</span>)
 					}
 					&nbsp;&nbsp;&nbsp;[{uuid}]
