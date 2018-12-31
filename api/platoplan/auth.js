@@ -33,8 +33,7 @@ _f['DBS'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
-	  res.send(CP.data);
-	  return true;
+
 	 if (!CP.data.DBS.success) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/qrError.html';
 		 pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
@@ -43,6 +42,8 @@ CP.serial(
 			return true;
 		});
 	 } else {
+		  res.send(CP.data);
+		  return true;		 
 		var indextpl = env.site_path + '/api/platoplan/tpl/' + 
 		    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
 		    '.html';
@@ -65,30 +66,3 @@ CP.serial(
   30000
 );
 // res.send(req.query);
-return true;
-
-
-
-
-if (req.body.token) {
-	res.send(req.body);
-	return true;
-}
-
-var indextpl = env.site_path + '/api/platoplan/tpl/' + 
-    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
-    '.html';
-
-pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
-	var tpl = new Smarty(content);
-	if (type === 'errorSignin') {
-		res.send(tpl.fetch({message : 'This equipment has not been registrated yet! Please go ahead registration with this mobile equipment.'}));
-		return true
-	}
-	if (type === 'errorRegistration') {
-		res.send(tpl.fetch({message : 'This equipment have registrated already. you are able to login with this phone.'}));
-		return true
-	}	
-	res.send(tpl.fetch({token : token, copywriteyear :  new Date().getFullYear()}));
-	return true;
-});
