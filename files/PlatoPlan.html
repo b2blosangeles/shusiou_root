@@ -39,10 +39,7 @@
                 console.log('--after createRoom---');
                 });
             
-            
-             
-          });
-              socket.emit('evernt', 'yyy');
+               socket.emit('evernt', 'yyy');
  
               socket.on('event', function(data){
                   console.log('===event coming===')
@@ -58,7 +55,10 @@
               });  
               socket.on('disconnect', function(){
                 console.log('===disconnect===')
-              });      
+              });            
+             
+          });
+     
 
     </script>
   </head>
