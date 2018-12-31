@@ -70,8 +70,10 @@ CP.serial(
 	  if ((CP.data.LoginUser.success) && (CP.data.LoginUser.data) && (CP.data.LoginUser.data[0])) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/afterLogin.html';
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
-			var tpl = new Smarty(content);
-			res.send(tpl.fetch({userInfo: CP.data.LoginUser.data[0], copywriteyear :  new Date().getFullYear()}));
+			var tpl = new Smarty(content);\
+			var rec =  CP.data.LoginUser.data[0];
+			rec.copywriteyear = new Date().getFullYear();
+			res.send(tpl.fetch(rec));
 			return true;
 		});
 	  } else {
