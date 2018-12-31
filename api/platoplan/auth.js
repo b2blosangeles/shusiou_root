@@ -42,12 +42,12 @@ CP.serial(
 			return true;
 		});
 	 } else {
-		  res.send(type);
-		  return true;		 
+	 
 		var indextpl = env.site_path + '/api/platoplan/tpl/' + 
 		    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
 		    '.html';
-
+		  res.send(indextpl);
+		  return true;	
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
 			var tpl = new Smarty(content);
 			if (type === 'errorSignin') {
