@@ -56,8 +56,9 @@
                 console.log(data)
               
               });     
-              socket.on('serverData', function(data){
-                  console.log('===on serverData===')
+              socket.on('clientMessage', function(data){
+                  console.log('===clientMessage===')
+                 console.log(data)
               
               });  
               socket.on('disconnect', function(){
