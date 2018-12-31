@@ -3,7 +3,7 @@ var _copyrightSection = React.createClass({
 	var me = this;
 	    console.log("===localStorage.getItem('_auth')==>")
 	     console.log(JSON.stringify(localStorage.getItem('_auth')))
-	return {_auth : localStorage.getItem('_auth')}
+	return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : {}}
     },
     clickOption : function(v, e) {
 	var me = this; 
@@ -35,7 +35,7 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Registration</a>
 						</span>)
 						:
-						(<span>-{me.state._auth.userName}-&nbsp;
+						(<span>-{me.state._auth.username}-&nbsp;
 						<a onClick={Root.auth.logoff.bind(me)}
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
