@@ -5,6 +5,7 @@ React.createClass({
 		me.compModule = new _compModule(me, Root);
 		var lang = localStorage.getItem('lang');
 		console.log('Call pluginIO()');
+		console.log(localStorage.getItem('uuid'));
 		me.pluginIO();
           	return {lang : ((lang) ? lang : 'en'), role: '', menuOption:null}
         },
