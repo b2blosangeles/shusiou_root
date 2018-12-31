@@ -35,10 +35,10 @@ var _copyrightSection = React.createClass({
 						:
 						(<span>{Root.auth.state._auth.username}&nbsp;
 						<a onClick={Root.auth.logoff.bind(me)}
-						href="JavaScript: void(0)">Logoff</a> >>
+						href="JavaScript: void(0)">Logoff</a>
 						</span>)
 					}
-					&nbsp;&nbsp;&nbsp;[{uuid}]
+					{/*&nbsp;&nbsp;&nbsp;[{uuid}]*/}
 				</div>
 				<div className="col-sm-9 text-right">
 					<span className="pull-right">
