@@ -4,6 +4,8 @@ React.createClass({
 		me.roles = Root.global.roles;
 		me.compModule = new _compModule(me, Root);
 		var lang = localStorage.getItem('lang');
+		console.log('Call pluginIO()');
+		me.pluginIO();
           	return {lang : ((lang) ? lang : 'en'), role: '', menuOption:null}
         },
 
@@ -91,7 +93,27 @@ React.createClass({
 				});
 			}			
 		}
-	},	
+	},
+	pluginIO : function() {
+		  var socket = io('/');
+		  socket.on('connect', function(){
+		      socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND'});
+
+		      socket.on('clientRequestCBK', function(data){
+			 // console.log('===on clientRequestCBK===')
+			//  console.log(data)
+
+		      });     
+		      socket.on('incomeMessage', function(income){
+			 if (income.data.opt === 'loginSuccess') {
+			      localStorage.setItem('_auth', JSON.stringify(income.data.userInfo))
+			      location.reload();
+			 }
+		      });  
+		      socket.on('disconnect', function(){
+		      });
+		  });	
+	},
         render: function() {
           var me = this;
           return  (
