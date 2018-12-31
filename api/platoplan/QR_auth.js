@@ -15,6 +15,7 @@ if (!type) {
 var io = require(env.root_path + '/package/socket.io-client/node_modules/socket.io-client');
 var socket = io.connect('http://dev.platoplan.com/');
 socket.on('connect', function(){
+	console.log('data-->');
 	res.send('data-->');
 	return true;
 	/*
