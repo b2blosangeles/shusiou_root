@@ -13,6 +13,22 @@ if (!type) {
   return true;
 }
 
+/* -------------*/
+delete require.cache[env.root_path + '/package/socketNodeClient/socketNodeClient.js'];
+var socketNodeClient = require(env.root_path + '/package/socketNodeClient/socketNodeClient.js');
+var socketClient = new socketNodeClient(
+	{link:'http://dev.platoplan.com/'}, 
+	env);
+socketClient.sendToRoom(
+    'niubi',
+    {x:new Date(), Y:90},
+    function(data) {
+	// res.send(data);
+    }
+);
+/* -------------*/
+
+
 var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
 var uuid = req.query.uuid;
 var hash = crypto.createHash('md5').update(s).digest('hex');
