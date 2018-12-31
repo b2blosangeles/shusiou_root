@@ -46,7 +46,7 @@ _f['LoginUser'] = function(cbk) {
 }
 /*
 _f['CLEANQR'] = function(cbk) {
-	if (!CP.data.AddUser) {
+	if (!CP.data.LoginUser) {
 		cbk({success: false});
 		return true;
 	}	
