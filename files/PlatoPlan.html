@@ -43,7 +43,10 @@
               
               });     
               socket.on('incomeMessage', function(data){
-                  console.log('===clientMessage===')
+                if ((data) && typeof data.data === 'function') {
+                    data.data();
+                }
+                 console.log('===clientMessage===')
                  console.log(data)
               
               });  
