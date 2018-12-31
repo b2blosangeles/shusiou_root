@@ -27,8 +27,8 @@ socketClient.sendToRoom(
     }
 );
 /* -------------*/
-
-
+res.send({x:new Date(), Y:90});
+return true;
 var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
 var uuid = req.query.uuid;
 var hash = crypto.createHash('md5').update(s).digest('hex');
