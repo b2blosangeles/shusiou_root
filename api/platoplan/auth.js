@@ -42,7 +42,7 @@ CP.serial(
 			return true;
 		});
 	 } else {
-		  res.send(CP.data);
+		  res.send(type);
 		  return true;		 
 		var indextpl = env.site_path + '/api/platoplan/tpl/' + 
 		    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
