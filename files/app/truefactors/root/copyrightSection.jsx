@@ -36,7 +36,7 @@ var _copyrightSection = React.createClass({
 						(<span>
 						<a>
 						[{(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info}]</a>
-						&nbsp;
+						&nbsp; {me.state._auth.username}--&nbsp;
 						<a onClick={Root.auth.doAuth.bind(me)}
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
