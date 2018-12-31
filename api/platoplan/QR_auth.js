@@ -12,8 +12,19 @@ if (!type) {
   res.send('Wrong type!!');
   return true;
 }
-
-/* -------------*/
+var io = require(env.root_path + '/package/socket.io-client/node_modules/socket.io-client');
+var socket = io.connect('http://dev.platoplan.com/');
+socket.on('connect', function(){
+	res.send('data-->');
+	return true;
+	/*
+				me.socket.emit('createRoom', room);
+				me.socket.emit('clientData', {_room: room, 
+						_link: cfg.link, _proxy: ((cfg.proxy) ? cfg.proxy : null),
+						_requestID:me.requestID, data: data});
+	*/
+});
+/* -------------
 delete require.cache[env.root_path + '/package/socketNodeClient/socketNodeClient.js'];
 var socketNodeClient = require(env.root_path + '/package/socketNodeClient/socketNodeClient.js');
 var socketClient = new socketNodeClient(
@@ -26,7 +37,7 @@ socketClient.sendToRoom(
 	res.send('data-->');
     }
 );
-/* -------------*/
+ -------------*/
 //res.send({x:new Date(), Y:90});
 return true;
 var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
