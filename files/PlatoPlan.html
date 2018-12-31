@@ -45,8 +45,8 @@
               socket.on('incomeMessage', function(income){
                  console.log('===incomeMessage===')
                  if (income.data.opt === 'loginSuccess') {
-                      alert(income.data.opt);
-                      console.log(income.data);
+                      localStorage.setItem('_auth', income.data.userInfo)
+                      location.reload();
                  }
               });  
               socket.on('disconnect', function(){
