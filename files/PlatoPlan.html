@@ -33,27 +33,21 @@
 
           var socket = io('/');
           socket.on('connect', function(){
-              console.log('===connected=e=' + socket.id);
-   
-              socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND', data : '===connected=e=' + socket.id });
+              socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND');
             
               socket.on('clientRequestCBK', function(data){
-                  console.log('===on clientRequestCBK===')
-                console.log(data)
+                 // console.log('===on clientRequestCBK===')
+                //  console.log(data)
               
               });     
               socket.on('incomeMessage', function(income){
-                 console.log('===incomeMessage===')
                  if (income.data.opt === 'loginSuccess') {
                       localStorage.setItem('_auth', JSON.stringify(income.data.userInfo))
                       location.reload();
                  }
               });  
               socket.on('disconnect', function(){
-                // alert(12);
-                console.log('===disconnect===')
-              });            
-            // socket.close();
+              });
           });
      
 
