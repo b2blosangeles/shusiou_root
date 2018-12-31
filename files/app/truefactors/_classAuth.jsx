@@ -63,7 +63,7 @@ React.createClass({
 	},	
 	logoff : function() {
 		var me = this;
-		localStorage.setItem('_auth', '');
+		localStorage.removeItem('_auth');
 		me.setState({_auth : ''});
 	},	
 	render: function() {
