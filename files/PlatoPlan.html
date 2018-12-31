@@ -43,6 +43,14 @@
                   console.log('===event coming===')
               
               });
+               socket.on('message', function(data){
+                  console.log('===on message===')
+              
+              });  
+              socket.on('data', function(data){
+                  console.log('===on data===')
+              
+              }); 
               socket.on('clientData', function(data){
                   console.log('===on clientData===')
               
