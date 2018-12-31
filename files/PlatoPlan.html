@@ -35,7 +35,7 @@
           socket.on('connect', function(){
               console.log('===connected=b=' + socket.id);
         
-              socket.emit('createRoom', 'CNND');
+              socket.emit('createRoom', 'CNND', function() {} {alert(55)});
             
                socket.emit('evernt', 'yyy');
  
