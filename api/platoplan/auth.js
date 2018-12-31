@@ -64,4 +64,3 @@ CP.serial(
   },
   30000
 );
-// res.send(req.query);
