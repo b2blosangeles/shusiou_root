@@ -35,7 +35,7 @@
           socket.on('connect', function(){
               console.log('===connected=a=');
               
-              socket.join('niubi');
+              io.join('niubi');
 
               socket.emit('createRoom', 'niubi');
             
