@@ -24,7 +24,7 @@ var _copyrightSection = React.createClass({
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
 			<div className="row">
-				<div className="col-sm-3 text-left">
+				<div className="col-sm-4 text-left">
 					{(!Root.auth.state._auth) ? (<span>
 						<a onClick={me.clickOption.bind(me, 'login')}
 						href="JavaScript: void(0)">Login</a>
@@ -33,14 +33,14 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Registration</a>
 						</span>)
 						:
-						(<span>{Root.auth.state._auth.username}&nbsp;
+						(<span>[User Name : {Root.auth.state._auth.username}]&nbsp;
 						<a onClick={Root.auth.logoff.bind(me)}
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
 					}
 					{/*&nbsp;&nbsp;&nbsp;[{uuid}]*/}
 				</div>
-				<div className="col-sm-9 text-right">
+				<div className="col-sm-8 text-right">
 					<span className="pull-right">
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
