@@ -42,7 +42,11 @@
               socket.on('clientData', function(data){
                   console.log('===on clientData===')
               
-              });            
+              });     
+              socket.on('serverData', function(data){
+                  console.log('===on serverData===')
+              
+              });  
               socket.on('disconnect', function(){
                 console.log('===disconnect===')
               });
