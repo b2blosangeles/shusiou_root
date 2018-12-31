@@ -20,7 +20,7 @@ var socketClient = new socketNodeClient(
 	{link:'http://dev.platoplan.com/'}, 
 	env);
 socketClient.sendToRoom(
-    'niubi',
+    'CNND',
     {x:new Date(), Y:90},
     function(data) {
 	// res.send(data);
