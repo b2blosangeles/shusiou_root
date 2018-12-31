@@ -2,6 +2,7 @@ res.send(req.body);
 return true;
 
 var token = (!req.body.token) ? '' : req.body.token;
+var auth = (!req.body.auth) ? '' : req.body.auth;
 var CP = new pkg.crowdProcess();
 
 var Smarty = require(env.site_path + '/api/inc/jsmart/smart.min.js'); 
@@ -27,31 +28,26 @@ _f['DBS'] = function(cbk) {
 	      }
 	}); 
 }
-_f['AddUser'] = function(cbk) {
+_f['LoginUser'] = function(cbk) {
 	if (!CP.data.DBS) {
 		cbk({success: false});
 		return true;
 	}
 	var connection = mysql.createConnection(db_setting);
 	connection.connect();
-	var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
 	
-	var Email = req.body.Email,  
-	    UserName = req.body.UserName,
-	    Password = crypto.createHash('md5').update(s).digest('hex');
-	
-	var str = "INSERT INTO  `user` (`username`, `email`, `password`) " + 
-	    " VALUES ('" + UserName + "','" + Email + "','" + Password + "')";	
+	var str = "SELECT * FROM  `user` WHERE `password` = '" + auth + "'";	
 	
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error) {
-		  cbk({success: true, password : Password });
+		  cbk({success: true, data : results});
 	      } else {
 		  cbk({success: false});
 	      }
 	}); 
 }
+/*
 _f['CLEANQR'] = function(cbk) {
 	if (!CP.data.AddUser) {
 		cbk({success: false});
@@ -70,9 +66,12 @@ _f['CLEANQR'] = function(cbk) {
 	      }
 	}); 
 }
+*/
 CP.serial(
   _f,
   function(data) {
+	  res.send(data);
+	  return true;
 	if (CP.data.AddUser.success) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/afterRegistration.html';
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
