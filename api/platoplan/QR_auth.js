@@ -23,11 +23,11 @@ socketClient.sendToRoom(
     'CNND',
     {x:new Date(), Y:90},
     function(data) {
-	//res.send(data);
+	//res.send('data-->');
     }
 );
 /* -------------*/
-res.send({x:new Date(), Y:90});
+//res.send({x:new Date(), Y:90});
 return true;
 var s = Math.random().toString(36).substr(2, 16) + new Date().getTime();
 var uuid = req.query.uuid;
