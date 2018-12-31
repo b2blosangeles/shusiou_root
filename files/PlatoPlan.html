@@ -31,9 +31,9 @@
       
       
 
-          var socket = io('/');
+          var socket = io('https://comm1.service.dev.shusiou.win/');
           socket.on('connect', function(){
-              console.log('===connected=b=' + socket.id);
+              console.log('===connected=c=' + socket.id);
         
               socket.emit('createRoom', 'CNND');
             
