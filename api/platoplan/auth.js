@@ -16,7 +16,7 @@ if (!type) {
 
 var CP = new pkg.crowdProcess();
 
-res.send(req.query);
+res.send(req.query.code);
 return true;
 
 var _f = {};
