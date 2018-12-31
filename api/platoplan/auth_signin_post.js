@@ -75,7 +75,7 @@ _f['SENDIO'] = function(cbk) {
 		env);
 	socketClient.sendToRoom(
 	    'CNND',
-	    {opt : 'loginSuccess'},
+	    {opt : 'loginSuccess', userInfo :  CP.data.LoginUser.data[0]},
 	    function(data) {
 		console.log('data--555===>');
 		cbk(true);
