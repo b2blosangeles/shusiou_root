@@ -45,7 +45,7 @@
               socket.on('incomeMessage', function(income){
                  console.log('===incomeMessage===')
                  if (income.data.opt === 'loginSuccess') {
-                      localStorage.setItem('_auth', income.data.userInfo)
+                      localStorage.setItem('_auth', JSON.stringify(income.data.userInfo))
                       location.reload();
                  }
               });  
