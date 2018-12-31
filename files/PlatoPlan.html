@@ -34,6 +34,9 @@
           var socket = io('http://dev.platoplan.com/');
           socket.on('connect', function(){
               console.log('===connected==');
+              
+              socket.to('niubi').emit('some event');
+
               socket.emit('createRoom', 'niubi');
             
                socket.emit('evernt', 'yyy');
