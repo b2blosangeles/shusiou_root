@@ -2,7 +2,6 @@ React.createClass({
 	/* --- this version do setInterval only need, no ever last setInterval */
 	getInitialState: function() {
 		var me = this;
-		// return {_auth :  localStorage.getItem('_auth'), info:'b2blosangeles'};
 		return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : null}
 	},
 	componentDidMount : function() {
