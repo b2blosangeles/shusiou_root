@@ -1,6 +1,3 @@
-res.send(req.body);
-return true;
-
 var token = (!req.body.token) ? '' : req.body.token;
 var auth = (!req.body.auth) ? '' : req.body.auth;
 var CP = new pkg.crowdProcess();
