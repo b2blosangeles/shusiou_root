@@ -33,7 +33,7 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Registration</a>
 						</span>)
 						:
-						(<span>-{me.state._auth.username}-&nbsp;
+						(<span>{me.state._auth.username}&nbsp;
 						<a onClick={Root.auth.logoff.bind(me)}
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
