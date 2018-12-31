@@ -32,9 +32,8 @@
       
 
           var socket = io('http://dev.platoplan.com/');
-          socket.on('connect', function(dd){
-              console.log('===connected=dd=');
-              console.log(dd);
+          socket.on('connect', function(){
+              console.log('===connected==');
               socket.emit('createRoom', 'niubi');
             
                socket.emit('evernt', 'yyy');
