@@ -67,7 +67,7 @@ _f['CLEANQR'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
-	  res.send(CP.data.LoginUser);
+	  res.send(CP.data.LoginUser.data);
 	  return true;
 	if (CP.data.AddUser.success) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/afterRegistration.html';
