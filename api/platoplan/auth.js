@@ -16,9 +16,6 @@ if (!type) {
 
 var CP = new pkg.crowdProcess();
 
-res.send(req.query.code);
-return true;
-
 var _f = {};
 _f['DBS'] = function(cbk) {
 	var connection = mysql.createConnection(db_setting);
