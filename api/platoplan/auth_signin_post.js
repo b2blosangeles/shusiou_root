@@ -67,7 +67,6 @@ _f['CLEANQR'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
-	  res.send(CP.data.LoginUser.data);
 	  if ((CP.data.LoginUser.success) && (CP.data.LoginUser.data) && (CP.data.LoginUser.data[0])) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/afterLogin.html';
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
