@@ -37,32 +37,18 @@
    
               socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND', data : socket.id + '-->coming'});
             
-               socket.emit('evernt', 'yyy');
- 
-              socket.on('event', function(data){
-                  console.log('===event coming===')
-              
-              });
-               socket.on('message', function(data){
-                  console.log('===on message===')
-              
-              });  
-              socket.on('data', function(data){
-                  console.log('===on data===')
-              
-              }); 
               socket.on('clientRequestCBK', function(data){
                   console.log('===on clientRequestCBK===')
                 console.log(data)
               
               });     
-              socket.on('clientMessage', function(data){
+              socket.on('incomeMessage', function(data){
                   console.log('===clientMessage===')
                  console.log(data)
               
               });  
               socket.on('disconnect', function(){
-                alert(12);
+                // alert(12);
                 console.log('===disconnect===')
               });            
             // socket.close();
