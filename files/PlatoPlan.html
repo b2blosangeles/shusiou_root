@@ -33,7 +33,7 @@
 
           var socket = io('/');
           socket.on('connect', function(){
-              console.log('===connected=b=');
+              console.log('===connected=b=' + socket.id);
         
               socket.emit('createRoom', 'CNND');
             
