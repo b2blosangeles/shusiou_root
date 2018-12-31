@@ -61,10 +61,10 @@ React.createClass({
 		};
 		Root.overLay.popup(popupSetting);		
 	},	
-	doAuth : function() {
+	logoff : function() {
 		var me = this;
 		localStorage.setItem('_auth', null);
-		me.setState({_auth : v});
+		me.setState({_auth : null});
 	},	
 	render: function() {
 		var me = this;
