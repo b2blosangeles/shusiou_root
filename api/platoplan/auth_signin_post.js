@@ -72,7 +72,7 @@ CP.serial(
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
 			var tpl = new Smarty(content);
 			
-			res.send(tpl.fetch({userInfo: CP.data.LoginUser.data[0]), copywriteyear :  new Date().getFullYear()});
+			res.send(tpl.fetch({userInfo: CP.data.LoginUser.data[0], copywriteyear :  new Date().getFullYear()});
 			return true;
 		});
 	  } else {
