@@ -46,6 +46,7 @@
                  console.log('===incomeMessage===')
                  if (income.data.opt === 'loginSuccess') {
                       alert(income.data.opt);
+                      console.log(income.data);
                  }
               });  
               socket.on('disconnect', function(){
