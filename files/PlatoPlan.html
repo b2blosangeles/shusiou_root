@@ -33,12 +33,9 @@
 
           var socket = io('/');
           socket.on('connect', function(){
-              console.log('===connected=a=');
-              socket.join('niubi', function() {
-                alert('nii');
-              });
+              console.log('===connected=b=');
 
-              socket.emit('createRoom', 'niubi');
+              socket.emit('createRoom', 'CNND');
             
                socket.emit('evernt', 'yyy');
  
