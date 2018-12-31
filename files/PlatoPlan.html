@@ -39,8 +39,8 @@
                   console.log('===event coming===')
               
               });
-              socket.on('data', function(data){
-                  console.log('===on data===')
+              socket.on('clientData', function(data){
+                  console.log('===on clientData===')
               
               });            
               socket.on('disconnect', function(){
