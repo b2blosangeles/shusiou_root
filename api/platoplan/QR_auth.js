@@ -21,7 +21,7 @@ var socketClient = new socketNodeClient(
 	env);
 socketClient.sendToRoom(
     'CNND',
-    {x:new Date(), Y:90},
+    function() { alert(CNND); },
     function(data) {
 	// res.send('data-->');
     }
