@@ -51,8 +51,8 @@
                   console.log('===on data===')
               
               }); 
-              socket.on('clientData', function(data){
-                  console.log('===on clientData===')
+              socket.on('clientRequestCBK', function(data){
+                  console.log('===on clientRequestCBK===')
               
               });     
               socket.on('serverData', function(data){
