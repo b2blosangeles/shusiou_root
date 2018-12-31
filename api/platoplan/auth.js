@@ -12,8 +12,6 @@ if (!type) {
   res.send('Wrong type!!');
   return true;
 }
-  res.send(token);
-  return true;
 
 var CP = new pkg.crowdProcess();
 
@@ -26,7 +24,7 @@ _f['DBS'] = function(cbk) {
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error && (results.length)) {
-		  cbk({success: true});
+		  cbk({success: true, sql: str, token: token});
 	      } else {
 		  cbk({success: false, sql: str, token: token});
 	      }
