@@ -27,7 +27,7 @@ _f['DBS'] = function(cbk) {
 	      if (!error && (results.length)) {
 		  cbk({success: true});
 	      } else {
-		  cbk({success: false, sql: str});
+		  cbk({success: false, sql: str, token: token});
 	      }
 	}); 
 }
