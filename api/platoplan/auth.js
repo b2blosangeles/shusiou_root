@@ -34,6 +34,8 @@ _f['DBS'] = function(cbk) {
 CP.serial(
   _f,
   function(data) {
+	  res.send(CP.data);
+	  return true;
 	 if (!CP.data.DBS.success) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/qrError.html';
 		 pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
