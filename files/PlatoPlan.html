@@ -33,7 +33,7 @@
 
           var socket = io('/');
           socket.on('connect', function(){
-              socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND');
+              socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND'});
             
               socket.on('clientRequestCBK', function(data){
                  // console.log('===on clientRequestCBK===')
