@@ -25,7 +25,7 @@ var _copyrightSection = React.createClass({
 			<div className="container-fluid px-1">
 			<div className="row">
 				<div className="col-sm-3 text-left">
-					{(!me.state._auth) ? (<span>
+					{(!Root.auth.state._auth) ? (<span>
 						<a onClick={me.clickOption.bind(me, 'login')}
 						href="JavaScript: void(0)">Login</a>
 						&nbsp;&nbsp;&nbsp;
