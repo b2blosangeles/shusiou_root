@@ -37,7 +37,7 @@
               socket.emit('createRoom', 'niubi');
             
             
-              socket.to('niubi').emit('evernt', 'yyy');
+              io.to('niubi').emit('evernt', 'yyy');
  
               socket.on('event', function(data){
                   console.log('===event coming===')
