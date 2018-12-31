@@ -77,10 +77,11 @@ _f['SENDIO'] = function(cbk) {
 	    'CNND',
 	    {opt : 'loginSuccess'},
 	    function(data) {
-		console.log('data--===>');
+		console.log('data--555===>');
+		cbk(true);
 	    }
 	);
-	cbk(true);
+	
 	/* -------------*/
 }
 
