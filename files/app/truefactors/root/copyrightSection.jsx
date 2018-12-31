@@ -1,7 +1,7 @@
 var _copyrightSection = React.createClass({
     getInitialState: function() {
 	var me = this;
-	return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : {}}
+	return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : null}
     },
     clickOption : function(v, e) {
 	var me = this; 
