@@ -58,7 +58,7 @@ var _copyrightSection = React.createClass({
 						</span>)
 						})}
 					</span>	
-					<span className="pull-left">
+					<span className="pull-right">
 						<span>
 							&nbsp;&nbsp;|&nbsp;&nbsp;
 							{Root.global.langs[me.props.parent.state.lang]} (<a href={'#/language'}  onClick={animationTransfer}>
