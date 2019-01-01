@@ -97,10 +97,12 @@ React.createClass({
 		
 		console.log('Call pluginIO()');
 		console.log(localStorage.getItem('UUID'));
+		var room = 'ROOM_' + ocalStorage.getItem('UUID');
+		console.log(room);
 		
 		  var socket = io('/');
 		  socket.on('connect', function(){
-		      socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND'});
+		      socket.emit('clientRequest', { cmd : 'sendToRoom', room : room});
 
 		      socket.on('clientRequestCBK', function(data){
 			 // console.log('===on clientRequestCBK===')
