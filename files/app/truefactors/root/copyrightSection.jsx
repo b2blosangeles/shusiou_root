@@ -49,22 +49,18 @@ var _copyrightSection = React.createClass({
 					<a href={'#/NDA'} onClick={animationTransfer}>NDA</a>
 					</span>
 
+					{Root.global.menuTree.common.map(function(m) {
+					return(<span>
+					  &nbsp;&nbsp;|&nbsp;&nbsp;
+					  <a href={'#/' + m}  onClick={animationTransfer}>
+						  {Root.global.menuItems[m]}</a>
+					</span>)
+					})}
 					<span>
-						{Root.global.menuTree.common.map(function(m) {
-						return(<span>
-						  &nbsp;&nbsp;|&nbsp;&nbsp;
-						  <a href={'#/' + m}  onClick={animationTransfer}>
-							  {Root.global.menuItems[m]}</a>
-						</span>)
-						})}
-					</span>	
-					<span>
-						<span>
-							&nbsp;&nbsp;|&nbsp;&nbsp;
-							{Root.global.langs[me.props.parent.state.lang]} (<a href={'#/language'}  onClick={animationTransfer}>
-							Change Language</a>)
-						</span>
-					</span> 					
+						&nbsp;&nbsp;|&nbsp;&nbsp;
+						{Root.global.langs[me.props.parent.state.lang]} (<a href={'#/language'}  onClick={animationTransfer}>
+						Change Language</a>)
+					</span>					
 				</div>
 			</div></div>
 		</div>
