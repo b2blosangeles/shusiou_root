@@ -33,7 +33,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.compView.showVideos(); 
 		} 
-
+		/* === TO DO === */
 		if (me.props.parent.state.menuOption === 'myVideo') {
 			return 'me.compView.showVideos()'; 
 		} 		
