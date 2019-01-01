@@ -68,16 +68,17 @@ _f['ADDSESSION'] = function(cbk) {
 
 _f['SENDIO'] = function(cbk) {
 	/* ------------- */
+	var uuid = CP.data.DBS.uuid;
+	
 	delete require.cache[env.root_path + '/package/socketNodeClient/socketNodeClient.js'];
 	var socketNodeClient = require(env.root_path + '/package/socketNodeClient/socketNodeClient.js');
 	var socketClient = new socketNodeClient(
 		{link:'http://dev.platoplan.com/'}, 
 		env);
 	socketClient.sendToRoom(
-	    'CNND',
+	    'ROOM_' + uuid,
 	    {opt : 'loginSuccess', userInfo :  CP.data.LoginUser.data[0]},
 	    function(data) {
-		console.log('data--555===>');
 		cbk(true);
 	    }
 	);
