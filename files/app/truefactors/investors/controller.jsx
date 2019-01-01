@@ -22,7 +22,11 @@ React.createClass({
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.compView.showVideos();
-		}  else if (me.props.parent.state.menuOption === 'howToStartInvestment'  || !me.props.parent.state.menuOption) {
+		}
+		if (me.props.parent.state.menuOption === 'myVideo') {
+			return 'me.compView.showVideos()';
+		}
+		if (me.props.parent.state.menuOption === 'howToStartInvestment'  || !me.props.parent.state.menuOption) {
 			return me.compContents['howToStartInvestment'];
 		} else {	
 			return (<span>
