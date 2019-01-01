@@ -155,7 +155,7 @@ var _compView = function(me, Root) {
 				)
 		};
 		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
-				<i class="fa fa-pencil" aria-hidden="true"></i>
+				<i className="fa fa-pencil" aria-hidden="true"></i>
 				<br/>
 				<img className="w-100" src={url}/></a>);
 	}
