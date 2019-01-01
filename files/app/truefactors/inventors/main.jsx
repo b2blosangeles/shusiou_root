@@ -28,7 +28,9 @@ React.createClass({
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
 			return me.compView.showMyinventions();
-		} else if (me.props.parent.state.menuOption === 'myVideos') {
+		}
+		
+		if (me.props.parent.state.menuOption === 'myVideos') {
 			return me.compView.showVideos(); 
 		} else if (me.props.parent.state.menuOption === 'howToStartInvention') {
 			return me.compContents['howToStartInvention'];
