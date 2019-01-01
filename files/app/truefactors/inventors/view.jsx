@@ -154,7 +154,7 @@ var _compView = function(me, Root) {
 				</div>
 				)
 		};
-		return (<a href="/#inventor/myVideos/">
+		return (<a href="/#inventor/myVideo/{encodeURIComponent(url)}">
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
 				<img className="w-100" src={url}/></a>);
