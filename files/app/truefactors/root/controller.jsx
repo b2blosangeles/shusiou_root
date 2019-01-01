@@ -110,7 +110,9 @@ React.createClass({
 		      socket.on('incomeMessage', function(income){
 			 if (income.data.opt === 'loginSuccess') {
 			      localStorage.setItem('_auth', JSON.stringify(income.data.userInfo))
-			      location.reload();
+				 console.log('===income===');
+				 console.log(income);
+			      // location.reload();
 			 }
 		      });  
 		      socket.on('disconnect', function(){
