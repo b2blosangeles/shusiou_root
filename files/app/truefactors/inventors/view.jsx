@@ -30,7 +30,7 @@ var _compView = function(me, Root) {
 				</div>
 				<div className="row mt-2">				
 					{me.list.map(function(m) {
-					return (<div className="col-sm-3 p-1">
+					return (<div className="col-sm-3 p-1">==
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
