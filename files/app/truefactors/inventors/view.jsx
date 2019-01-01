@@ -145,6 +145,7 @@ var _compView = function(me, Root) {
 		
 		var item = list[Math.floor(Math.random()*list.length)];
 		var url = (list[i]) ? list[i] : item;
+		var link = '/#inventor/myVideo/' + encodeURIComponent(url);
 		var popupSetting = {
 			type : 'light', 
 			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
@@ -154,7 +155,7 @@ var _compView = function(me, Root) {
 				</div>
 				)
 		};
-		return (<a href="/#inventor/myVideo/{encodeURIComponent(url)}">
+		return (<a href={link}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
 				<img className="w-100" src={url}/></a>);
