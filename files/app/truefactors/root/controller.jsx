@@ -95,11 +95,8 @@ React.createClass({
 	},
 	pluginIO : function() {
 		
-		console.log('Call pluginIO()');
-		console.log(localStorage.getItem('UUID'));
 		var room = 'ROOM_' + localStorage.getItem('UUID');
-		console.log(room);
-		
+
 		  var socket = io('/');
 		  socket.on('connect', function(){
 		      socket.emit('clientRequest', { cmd : 'sendToRoom', room : room});
