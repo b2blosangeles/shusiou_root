@@ -30,7 +30,7 @@ var _compView = function(me, Root) {
 				</div>
 				<div className="row mt-2">				
 					{me.list.map(function(m) {
-					return (<div className="col-sm-3 p-1">==
+					return (<div className="col-sm-3 p-1">
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
@@ -118,6 +118,6 @@ var _compView = function(me, Root) {
 				)
 		};
 		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
-				<img className="w-100" src={url}/></a>);
+				==<img className="w-100" src={url}/></a>);
 	}	
 };
