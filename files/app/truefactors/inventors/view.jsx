@@ -117,8 +117,7 @@ var _compView = function(me, Root) {
 				</div>
 				)
 		};
-		return (<img className="w-100" 
-				onClick={Root.overLay.popup.bind(me, popupSetting)}
-				src={url}/>);
+		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
+				<img className="w-100" src={url}/></a>);
 	}	
 };
