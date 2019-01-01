@@ -41,7 +41,7 @@ var _copyrightSection = React.createClass({
 					{/*&nbsp;&nbsp;&nbsp;[{uuid}]*/}
 				</div>
 				<div className="col-sm-9 text-right">
-					<span className="pull-right">
+					<span>
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href={'#/'} onClick={animationTransfer}>Home</a>
@@ -49,7 +49,7 @@ var _copyrightSection = React.createClass({
 					<a href={'#/NDA'} onClick={animationTransfer}>NDA</a>
 					</span>
 
-					<span className="pull-right">
+					<span>
 						{Root.global.menuTree.common.map(function(m) {
 						return(<span>
 						  &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -58,7 +58,7 @@ var _copyrightSection = React.createClass({
 						</span>)
 						})}
 					</span>	
-					<span className="pull-right">
+					<span">
 						<span>
 							&nbsp;&nbsp;|&nbsp;&nbsp;
 							{Root.global.langs[me.props.parent.state.lang]} (<a href={'#/language'}  onClick={animationTransfer}>
