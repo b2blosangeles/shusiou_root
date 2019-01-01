@@ -155,7 +155,7 @@ var _compView = function(me, Root) {
 				</div>
 				)
 		};
-		return (<a href={link}>
+		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
 				<img className="w-100" src={url}/></a>);
