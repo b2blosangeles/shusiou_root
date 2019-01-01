@@ -97,7 +97,7 @@ React.createClass({
 		
 		console.log('Call pluginIO()');
 		console.log(localStorage.getItem('UUID'));
-		var room = 'ROOM_' + ocalStorage.getItem('UUID');
+		var room = 'ROOM_' + localStorage.getItem('UUID');
 		console.log(room);
 		
 		  var socket = io('/');
