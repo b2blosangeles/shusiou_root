@@ -4,8 +4,6 @@ React.createClass({
 		me.roles = Root.global.roles;
 		me.compModule = new _compModule(me, Root);
 		var lang = localStorage.getItem('lang');
-		console.log('Call pluginIO()');
-		console.log(localStorage.getItem('uuid'));
 		me.pluginIO();
           	return {lang : ((lang) ? lang : 'en'), role: '', menuOption:null}
         },
@@ -96,6 +94,10 @@ React.createClass({
 		}
 	},
 	pluginIO : function() {
+		
+		console.log('Call pluginIO()');
+		console.log(localStorage.getItem('UUID'));
+		
 		  var socket = io('/');
 		  socket.on('connect', function(){
 		      socket.emit('clientRequest', { cmd : 'sendToRoom', room : 'CNND'});
