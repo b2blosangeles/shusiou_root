@@ -3,7 +3,9 @@ let list = [],
 
 pkg.fs.readdir(dirn, (err, files) => {
     files.forEach(file => {
-        list.push(file);
+        if (/\.mp4$/.test(file)) {
+            list.push(file);
+        }
     });
     res.send(list);
 });
