@@ -138,6 +138,6 @@ var _compView = function(me, Root) {
 		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
-				<img className="w-50" src={url}/></a>);
+				<img style={{height:'160px'}} src={url}/></a>);
 	}
 };
