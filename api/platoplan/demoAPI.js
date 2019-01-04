@@ -45,32 +45,6 @@ switch(req.query.code) {
 			}, 3000);			
 		
 		break;
-	case 'videoSection':
-		var CP = new pkg.crowdProcess();
-		var _f = {};		
-		_f['S2'] = function(cbk) {
-			cbk(true);
-			return true;
-			pkg.fs.stat(fn, function(err, stat) {
-				if(!err) { cbk(fn);
-				} else {
-					if (w != 'FULL') s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + fn + ' -y ';
-					else s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  fn + ' -y ';
-					var childProcess = require('child_process');
-					var ls = childProcess.exec(s, 		   
-					function (error, stdout, stderr) {
-						cbk(true);
-					});
-				}
-			});
-		};
-		CP.serial(
-			_f,
-			function(data) {
-				res.send('videoSection');
-			}, 3000);			
-		
-		break;	
 	case 'playSection':
 		var l = (req.query.l) ? req.query.l : 10, 
 		    s = (req.query.s) ? req.query.s : 10,
