@@ -48,7 +48,7 @@ switch(req.query.code) {
 	case 'playSection':
 		var l = (req.query.l) ? req.query.l : 10, 
 		    s = (req.query.s) ? req.query.s : 10,
-		    tmpfn = '/tmp/sec_' + s + '_' + l + '_' + fn + '.png';
+		    tmpfn = '/tmp/sec_' + s + '_' + l + '_' + fn;
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};
