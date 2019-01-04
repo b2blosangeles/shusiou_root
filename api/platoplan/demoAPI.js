@@ -13,6 +13,9 @@ var CP = new pkg.crowdProcess();
 
 
 switch(req.query.code) {
+	case 'videoByScript':
+		res.send('videoByScript');
+		return true;
 	case 'cutImage':
 		var fn = 'HEATING_JACKET.mp4';
 		var file_video = dirn  + '/' +  fn;		
