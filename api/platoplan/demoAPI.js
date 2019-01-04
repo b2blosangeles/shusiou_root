@@ -14,7 +14,8 @@ pkg.fs.readdir(dirn, (err, files) => {
     });
     res.send(list);
 });*/
-
+switch(req.qurey.code) {
+	case 'playVideo':
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
@@ -36,4 +37,4 @@ pkg.fs.readdir(dirn, (err, files) => {
 				}
 			}
 		});
-
+}
