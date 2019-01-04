@@ -19,19 +19,18 @@ switch(req.query.code) {
 	case 'cutImage':
 		var fn = 'HEATING_JACKET.mp4';
 		var file_video = dirn  + '/' +  fn;		
-		
+		var s=10, w='FULL';
+		var tmpfn = '/tmp/cut.png'
 		
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
 		_f['S2'] = function(cbk) {
-			cbk(true);
-			return true;
-			pkg.fs.stat(fn, function(err, stat) {
-				if(!err) { cbk(fn);
+			pkg.fs.stat(tmpfn, function(err, stat) {
+				if(!err) { cbk(tmpfn);
 				} else {
-					if (w != 'FULL') s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + fn + ' -y ';
-					else s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  fn + ' -y ';
+					if (w != 'FULL') s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
+					else s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(s, 		   
 					function (error, stdout, stderr) {
@@ -43,7 +42,7 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.send('cutImage A');
+				res.send(data);
 			}, 3000);			
 		
 		break;
