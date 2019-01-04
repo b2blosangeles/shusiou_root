@@ -72,7 +72,7 @@ switch(req.query.code) {
 		
 		break;	
 	case 'playSection':
-		ers.send('==playSection==');
+		res.send('==playSection==');
 		return true;
 		var l = req.query['l'], s = req.query['s'];
 		if (!s || !l) { write404('wrong s or l'); return true; }
