@@ -7,7 +7,35 @@ var CP = new pkg.crowdProcess();
 
 switch(req.query.code) {
 	case 'cutImage':
-		res.send('cutImage');
+		var fn = 'HEATING_JACKET.mp4';
+		var file_video = dirn  + '/' +  fn;		
+		
+		
+		
+		var CP = new pkg.crowdProcess();
+		var _f = {};		
+		_f['S2'] = function(cbk) {
+			cbk(true);
+			return true;
+			pkg.fs.stat(fn, function(err, stat) {
+				if(!err) { cbk(fn);
+				} else {
+					if (w != 'FULL') s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + fn + ' -y ';
+					else s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  fn + ' -y ';
+					var childProcess = require('child_process');
+					var ls = childProcess.exec(s, 		   
+					function (error, stdout, stderr) {
+						cbk(true);
+					});
+				}
+			});
+		};
+		CP.serial(
+			_f,
+			function(data) {
+				res.send('cutImage A');
+			}, 3000);			
+		
 		break;
 	case 'videoList' :
 		pkg.fs.readdir(dirn, (err, files) => {
