@@ -1,4 +1,3 @@
-
 function write404(msg) {
 	res.writeHead(404);
 	res.write(msg);
@@ -6,7 +5,9 @@ function write404(msg) {
 }
 
 var list = [],
-    dirn = env.root_path + '/demo_videos';
+    dirn = env.root_path + '/demo_videos',
+    fn = (req.query.fn) ? req.query.fn : 'HEATING_JACKET.mp4',
+    file_video = dirn  + '/' +  fn;
 
 var CP = new pkg.crowdProcess();
 
@@ -16,13 +17,10 @@ switch(req.query.code) {
 	case 'videoByScript':
 		res.send('videoByScript');
 		return true;
-	case 'cutImage':
-		var fn = 'HEATING_JACKET.mp4';
-		var file_video = dirn  + '/' +  fn;		
+	case 'cutImage':		
 		var s=10, w='FULL';
 		var tmpfn = '/tmp/cut.png'
-		
-		
+
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
 		_f['S2'] = function(cbk) {
@@ -47,11 +45,6 @@ switch(req.query.code) {
 		
 		break;
 	case 'videoSection':
-		var fn = 'HEATING_JACKET.mp4';
-		var file_video = dirn  + '/' +  fn;		
-		
-		
-		
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
 		_f['S2'] = function(cbk) {
@@ -87,9 +80,7 @@ switch(req.query.code) {
 		    res.send(list);
 		});		
 		break;
-	case 'playVideo' :
-		var fn = 'HEATING_JACKET.mp4';
-		var file_video = dirn  + '/' +  fn;		
+	case 'playVideo' :		
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
