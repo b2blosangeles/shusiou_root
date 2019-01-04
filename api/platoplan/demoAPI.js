@@ -1,3 +1,10 @@
+
+function write404(msg) {
+	res.writeHead(404);
+	res.write(msg);
+	res.end();	
+}
+
 var list = [],
     dirn = env.root_path + '/demo_videos';
 
@@ -103,4 +110,6 @@ switch(req.query.code) {
 			}
 		});
 		break;
+	default:
+		 write404('type error'); 		
 }
