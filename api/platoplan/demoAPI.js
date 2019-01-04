@@ -43,6 +43,7 @@ switch(req.query.code) {
 			_f,
 			function(data) {
 				res.send(data);
+				res.sendFile(tmpfn);
 			}, 3000);			
 		
 		break;
