@@ -18,8 +18,9 @@ switch(req.query.code) {
 		res.send('videoByScript');
 		return true;
 	case 'cutImage':		
-		var s=10, w='FULL';
-		var tmpfn = '/tmp/'+ fn + '.png';
+		var s = (req.query.s) ? req.query.s : 10, 
+		    w='FULL';
+		var tmpfn = '/tmp/cut_' + s + '_' + fn + '.png';
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
