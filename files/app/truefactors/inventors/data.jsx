@@ -5,6 +5,9 @@ var _compData = function(me, Root) {
 		Root.lib.setSpinAnchor(me, 'AA', true);
 		// me.list = [];
 		me.setState({updated : new Date().getTime()});
+		$.get('/api/platoplan/demoAPI.api?code=videoList', function(data, status){
+			console.log(data);
+		});
 		setTimeout(
 			function() {
 				me.list = Root.lib.getNumberList(20);
