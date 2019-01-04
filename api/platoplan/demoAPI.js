@@ -72,40 +72,19 @@ switch(req.query.code) {
 		
 		break;	
 	case 'playSection':
-		res.send('==playSection==');
-		return true;
-		var l = req.query['l'], s = req.query['s'];
-		if (!s || !l) { write404('wrong s or l'); return true; }
-		var fn = folder_section + s + '_' + l + '.mp4';
+		var l = (req.query.l) ? req.query.l : 10, 
+		    s = (req.query.s) ? req.query.s : 10,
+		    tmpfn = '/tmp/sec_' + s + '_' + l + '_' + fn + '.png';
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};
-		
-		_f['S0'] = function(cbk) { 
-			pkg.fs.stat(mnt_folder, function (err, stats){
-				if (err) { cbk({status:'failure', message:err.message});  CP.exit = 1; }
-				else if (!stats.isDirectory()){ cbk({status:'failure', message:err.message});  CP.exit = 1; }
-				else {
-				      pkg.fs.stat(file_video, function(err, stat) {
-					 if(err) { cbk({status:'failure', message:err.message});  CP.exit = 1; }
-					 else cbk(true);
-				      });
-				}
-			});
-		};		
-		
-		_f['S1'] = function(cbk) { 
-			var fp = new folderP();
-			fp.build(folder_section, function() { cbk(true);});
-		};
-
 		_f['S2'] = function(cbk) {
 
-			pkg.fs.stat(fn, function(err, stat) {
+			pkg.fs.stat(tmpfn, function(err, stat) {
 				if(!err) { cbk(fn);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ s + ' -t ' + l + ' -c copy ' + fn +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ s + ' -t ' + l + ' -c copy ' + tmpfn +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
@@ -115,12 +94,13 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
+				res.send(CP.data.S2);
+				return true;
 				if (CP.data.S0 !== true) {
-					res.send(CP.data.S0);
-					return true;
+					
 				}				
 				pkg.fs.stat(fn, function(err, data1) {
-					if (err) {  write404(fn + ' does not exist'); }
+					if (err) {  write404(tmpfn + ' does not exist'); }
 					else {
 						if (cache_only)	{
 							var file = pkg.fs.createReadStream(fn);
