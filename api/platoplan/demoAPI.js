@@ -1,4 +1,4 @@
-let list = [],
+var list = [],
     dirn = env.root_path + '/demo_videos';
 
 var CP = new pkg.crowdProcess();
