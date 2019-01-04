@@ -6,6 +6,9 @@ var CP = new pkg.crowdProcess();
 
 
 switch(req.query.code) {
+	case 'cutImage':
+		res.send('cutImage');
+		break;
 	case 'videoList' :
 		pkg.fs.readdir(dirn, (err, files) => {
 		    files.forEach(file => {
