@@ -124,7 +124,7 @@ var _compView = function(me, Root) {
 		var list = me.list;
 		
 		var item = list[Math.floor(Math.random()*list.length)];
-		var url = (list[i]) ? list[i] : item;
+		var url = '/api/platoplan/demoAPI.api?code=cutImage&fn=' + ((list[i]) ? list[i] : item);
 		var link = '/#inventor/myVideo/' + encodeURIComponent(url);
 		var popupSetting = {
 			type : 'light', 
