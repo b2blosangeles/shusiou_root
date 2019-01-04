@@ -42,7 +42,6 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.send(data);
 				res.sendFile(tmpfn);
 			}, 3000);			
 		
