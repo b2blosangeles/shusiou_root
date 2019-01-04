@@ -4,7 +4,7 @@ var list = [],
 var CP = new pkg.crowdProcess();
 
 var fn = 'HEATING_JACKET.mp4';
-var file_video = dirn  + fn;
+var file_video = dirn  + '/' +  fn;
 /*
 pkg.fs.readdir(dirn, (err, files) => {
     files.forEach(file => {
@@ -14,9 +14,7 @@ pkg.fs.readdir(dirn, (err, files) => {
     });
     res.send(list);
 });*/
-res.send(file_video);
-return true;
-/*
+
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
@@ -38,4 +36,4 @@ return true;
 				}
 			}
 		});
-*/
+
