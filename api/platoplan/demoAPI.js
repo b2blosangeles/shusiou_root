@@ -3,8 +3,7 @@ var list = [],
 
 var CP = new pkg.crowdProcess();
 
-var fn = 'HEATING_JACKET.mp4';
-var file_video = dirn  + '/' +  fn;
+
 
 switch(req.query.code) {
 	case 'videoList' :
@@ -18,6 +17,8 @@ switch(req.query.code) {
 		});		
 		break;
 	case 'playVideo' :
+		var fn = 'HEATING_JACKET.mp4';
+		var file_video = dirn  + '/' +  fn;		
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
