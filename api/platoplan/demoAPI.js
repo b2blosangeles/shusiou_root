@@ -19,7 +19,7 @@ switch(req.query.code) {
 		return true;
 	case 'cutImage':		
 		var s=10, w='FULL';
-		var tmpfn = '/tmp/ '+ fn + '.png';
+		var tmpfn = '/tmp/'+ fn + '.png';
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
