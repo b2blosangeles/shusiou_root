@@ -3,6 +3,8 @@ let list = [],
 
 var CP = new pkg.crowdProcess();
 
+var fn = 'HEATING_JACKET.mp4';
+
 pkg.fs.readdir(dirn, (err, files) => {
     files.forEach(file => {
         if (/\.mp4$/.test(file)) {
