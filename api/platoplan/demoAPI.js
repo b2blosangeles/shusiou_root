@@ -94,53 +94,25 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.send(CP.data.S2);
-				return true;
-				if (CP.data.S0 !== true) {
-					
-				}				
-				pkg.fs.stat(fn, function(err, data1) {
+				pkg.fs.stat(tmpfn, function(err, data1) {
 					if (err) {  write404(tmpfn + ' does not exist'); }
 					else {
-						if (cache_only)	{
-							var file = pkg.fs.createReadStream(fn);
-							file.pipe(res);
-							var t = new Date().getTime();
-							var mysql = require(env.site_path + '/api/inc/mysql/node_modules/mysql'),
-							cfg0 =  config.db;
-							var had_error = '';
-							file.on('error', function(err){
-								had_error = '1';
-							});
-
-							file.on('close', function(){
-								var connection = mysql.createConnection(cfg0);
-								connection.connect();
-								var running_time = new Date().getTime() - t;
-								var str = "INSERT INTO `master_node_log` (`type`, `url`, `is_error`, `running_time`, `finished`) VALUES "+    
-								 " ('" + 'section' + "', '" + req.url + "', '" + had_error + "', '" + running_time + "', NOW()) ";
-								connection.query(str, function (error, results, fields) {
-									connection.end();	
-								}); 									
-							});							
+						var total = data1.size;
+						var range = req.headers.range;
+						if (range) {
+						    var parts = range.replace(/bytes=/, "").split("-");
+						    var partialstart = parts[0]; var partialend;
+						      partialend =  parts[1];
+						    var start = parseInt(partialstart, 10);
+						    var end = partialend ? parseInt(partialend, 10) : total-1;
+						    var chunksize = (end-start)+1;
+						    var file = pkg.fs.createReadStream(tmpfn, {start:start, end:end});
+						    res.writeHead(206, {'Content-Range': 'bytes ' + start + '-' + end + '/' + total, 
+							'Accept-Ranges': 'bytes', 'Content-Length': chunksize, 'Content-Type': 'video/mp4' });
+						       file.pipe(res);
 						} else {
-							var total = data1.size;
-							var range = req.headers.range;
-							if (range) {
-								var parts = range.replace(/bytes=/, "").split("-");
-								var partialstart = parts[0]; var partialend;
-								  partialend =  parts[1];
-								var start = parseInt(partialstart, 10);
-								var end = partialend ? parseInt(partialend, 10) : total-1;
-								var chunksize = (end-start)+1;
-								var file = pkg.fs.createReadStream(fn, {start:start, end:end});
-								res.writeHead(206, {'Content-Range': 'bytes ' + start + '-' + end + '/' + total, 
-									'Accept-Ranges': 'bytes', 'Content-Length': chunksize, 'Content-Type': 'video/mp4' });
-							       file.pipe(res);
-							} else {
-								res.send('Need streaming player');
-							}
-						}	
+						    res.send('Need streaming player');
+						}
 					}
 				});
 			},
