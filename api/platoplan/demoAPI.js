@@ -5,17 +5,19 @@ var CP = new pkg.crowdProcess();
 
 var fn = 'HEATING_JACKET.mp4';
 var file_video = dirn  + '/' +  fn;
-/*
-pkg.fs.readdir(dirn, (err, files) => {
-    files.forEach(file => {
-        if (/\.mp4$/.test(file)) {
-            list.push(file);
-        }
-    });
-    res.send(list);
-});*/
+
 switch(req.query.code) {
-	case 'playVideo':
+	case 'videoList' :
+		pkg.fs.readdir(dirn, (err, files) => {
+		    files.forEach(file => {
+			if (/\.mp4$/.test(file)) {
+			    list.push(file);
+			}
+		    });
+		    res.send(list);
+		});		
+		break;
+	case 'playVideo' :
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
