@@ -21,7 +21,7 @@ React.createClass({
 		
 		}
 	},
-	showShow : function(url) {
+	setCurrentVideo : function(url) {
 		var me = this;
 		me.setState({cVideo : url});
 	},
@@ -37,7 +37,7 @@ React.createClass({
 		}
 		
 		if (me.props.parent.state.menuOption === 'myVideos') {
-			if (me.state.cVideo) return me.state.cVideo; 
+			if (me.state.cVideo) return me.compView.showVideoPage(me.state.cVideo); 
 			else return me.compView.showVideos(); 
 		} 
 		/* === TO DO === */
