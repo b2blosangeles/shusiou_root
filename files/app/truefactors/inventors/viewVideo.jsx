@@ -18,7 +18,8 @@ var _compViewVideo = function(me, Root) {
 								code: 'infoBox', 
 								parent : me, 
 								data : (<img style={{height:'100px'}} 
-						src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + me.state.cVideo}/>), 
+						src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + me.state.cVideo + 
+											'&s=' + (m * 5)}/>), 
 								setting : {
 									noshadow :false,
 									type: 'light',
