@@ -22,7 +22,8 @@ React.createClass({
 		}
 	},
 	showShow : function(url) {
-		alert(url)
+		var me = this;
+		me.setState({cVideo : url});
 	},
 	
 	componentWillUnmount : function() {
