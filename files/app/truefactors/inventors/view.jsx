@@ -28,6 +28,10 @@ var _compView = function(me, Root) {
 						})}
 					</div>
 					<div className="col-sm-12 p-1">	
+						<video width="160" height="320" controls autoplay>
+							<source src={'/api/platoplan/demoAPI.api?code=playVideo&fn=' + fn}/>
+							Your browser does not support the video tag.
+						</video>						
 						<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + fn}/>
 					</div>
 				</div>
