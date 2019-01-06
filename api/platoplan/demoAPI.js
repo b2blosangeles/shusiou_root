@@ -28,7 +28,7 @@ switch(req.query.code) {
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
-						cbk( stdout);
+						cbk(parseInt(stdout));
 					});
 				}
 			});
