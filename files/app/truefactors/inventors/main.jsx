@@ -4,6 +4,7 @@ React.createClass({
 		me.list = [];
 		me.compData = new _compData(me, Root);
 		me.compView = new _compView(me, Root);
+		me.compVideo = new _compViewVideo(me, Root);
 		me.compContents = _compContents;
           	return {}
         },
@@ -35,7 +36,7 @@ React.createClass({
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			if (me.state.cVideo) return me.compView.showVideoPage(me.state.cVideo); 
-			else return me.compView.showVideos(); 
+			else return me.compViewVideo.showVideos(); 
 		}		
 		
 		if (me.props.parent.state.menuOption === 'howToStartInvention') {
