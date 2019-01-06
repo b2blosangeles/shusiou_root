@@ -8,7 +8,16 @@ var _compView = function(me, Root) {
 		return (<span>	
 		<button type="button" className="btn btn-info" onClick={me.compData.loadMyinventions.bind(me)}>Load Data</button>
 		</span>)
-	};	
+	};
+	this.showVideo = function (url) {
+		return (
+			<div className="container">
+				<div className="row ">
+					=={url}==
+				</div>
+			</div>	
+		)
+	};
 	this.showVideos = function () {
 		return  (
 			<div className="container">
