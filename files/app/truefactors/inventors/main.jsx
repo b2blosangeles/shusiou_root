@@ -24,10 +24,9 @@ React.createClass({
 		var me = this;
 		me.setState({cVideo : url});
 	},
-	
 	componentWillUnmount : function() {
 		var me = this;
-		me.setState({cVideo : null});
+		me.setState({cVideo : null, subModule : null});
 	},
 	showBody : function() {
 		var me = this;
