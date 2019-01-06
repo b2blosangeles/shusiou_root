@@ -7,6 +7,30 @@ var _compViewVideo = function(me, Root) {
 	this.setSubModule = function(v) {
 		me.setState({subModule : v});
 	};
+	this.showDigitizeStream() {
+		var list = me.DigitizeStreamList;
+		return (
+			<div className="container">
+				<div className="row">
+					{list.map(function(m) {
+						return (<div className="col-sm-3 p-1">
+							{Root.commUI.show({
+								code: 'infoBox', 
+								parent : me, 
+								data : <img style={{height:'100px'}} 
+									       src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + me.state.cVideo}/, 
+								setting : {
+									noshadow :false,
+									type: 'light',
+									style : {'min-height' : '9em'}
+								}
+							})}
+							</div>)
+						})}
+					}
+				</div>
+			</div>)
+	};
 	this.showSubModule = function () {
 		switch(me.state.subModule) {
 			case 'DigitizeStream' :
