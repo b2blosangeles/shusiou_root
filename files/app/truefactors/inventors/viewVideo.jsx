@@ -4,6 +4,9 @@ var _compViewVideo = function(me, Root) {
 		<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 		</span>)
 	};
+	this.showSubModule = function () {
+		return 'showSubModule'
+	}
 	this.showVideoPage = function (fn) {
 		setTimeout(function() {
 			$('#_video_play')[0].play();
@@ -31,11 +34,14 @@ var _compViewVideo = function(me, Root) {
 							}
 						})}
 					</div>
-					<div className="col-sm-12 p-1">	
+					<div className="col-sm-4 p-1">	
 						<video id="_video_play" width="320"  controls autoplay>
 							<source src={'/api/platoplan/demoAPI.api?code=playVideo&fn=' + fn}/>
 							Your browser does not support the video tag.
 						</video>						
+					</div>
+					<div className="col-sm-8 p-1">	
+						{this.showSubModule()}						
 					</div>
 				</div>
 			</div>	
