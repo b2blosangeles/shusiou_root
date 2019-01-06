@@ -7,7 +7,7 @@ var _compViewVideo = function(me, Root) {
 	this.setSubModule = function(v) {
 		me.setState({subModule : v});
 	};
-	this.showDigitizeStream() {
+	this.showDigitizeStream = functioin() {
 		var list = me.DigitizeStreamList;
 		return (
 			<div className="container">
