@@ -16,7 +16,12 @@ var _compViewVideo = function(me, Root) {
 					{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : (<button type="button" className="btn btn-info" onClick={me.setCurrentVideo.bind(me, null)}>back</button>), 
+							data : (
+							<span>
+							<button type="button" className="btn btn-info m-1" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
+							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
+							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
+							</span>), 
 							setting : {
 								class : ' alert-secondary text-left ',
 								noshadow :  true,
