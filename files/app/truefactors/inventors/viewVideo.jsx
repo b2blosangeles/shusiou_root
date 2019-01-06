@@ -31,13 +31,28 @@ var _compViewVideo = function(me, Root) {
 				</div>
 			</div>)
 	};
+	this.showSection = function(s, l) {
+		setTimeout(function() {
+			$('#_video_section')[0].play();
+		});		
+		return (
+			<div className="container">
+				<div className="row">
+					<video id="_video_section" width="320"  controls autoplay>
+						<source src={'/api/platoplan/demoAPI.api?code=playSection&fn=' + me.state.cVideo
+						 + '&s=' + s + '&l=' + l}/>
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>)
+	};	
 	this.showSubModule = function () {
 		switch(me.state.subModule) {
 			case 'DigitizeStream' :
 				return this.showDigitizeStream();
 				break;
 			case 'PlaySection' :
-				return 'Section Play (5-15 secs)';
+				return this.showSection(5, 10);
 				break;				
 			case 'ProgrammingPlay' :
 				return 'Programming Play';
