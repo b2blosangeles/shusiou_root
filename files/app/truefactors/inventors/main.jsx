@@ -6,7 +6,7 @@ React.createClass({
 		me.compViewInvention = new _compViewInvention(me, Root);
 		me.compViewVideo = new _compViewVideo(me, Root);
 		me.compContents = _compContents;
-		me.DigitizeStreamList = Root.lib.getNumberList(12);
+		me.DigitizeStreamList = Root.lib.getNumberList(16);
           	return {}
         },
 	componentDidMount : function() {
