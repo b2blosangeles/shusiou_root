@@ -1,82 +1,9 @@
 var _compViewInvention = function(me, Root) {
-	this.showVideoMenu = function() {
-		return (<span>	
-		<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
-		</span>)
-	};
 	this.showMyinventionsMenu = function() {
 		return (<span>	
 		<button type="button" className="btn btn-info" onClick={me.compData.loadMyinventions.bind(me)}>Load Data</button>
 		</span>)
 	};
-	this.showVideoPage = function (fn) {
-		setTimeout(function() {
-			$('#_niu')[0].play();
-		});
-		return (
-			<div className="container">
-				<div className="row ">
-				{Root.lib.spinAnchor(me, 'AB')}
-					<div className="col-sm-12 p-1">	
-					{Root.commUI.show({
-							code: 'infoBox', 
-							parent : me, 
-							data : (<button type="button" className="btn btn-info" onClick={me.setCurrentVideo.bind(me, null)}>back</button>), 
-							setting : {
-								class : ' alert-secondary text-left ',
-								noshadow :  true,
-								rounded : true,
-								style : {'min-height' : '2em'}
-							}
-						})}
-					</div>
-					<div className="col-sm-12 p-1">	
-						<video id="_niu" width="320"  controls autoplay>
-							<source src={'/api/platoplan/demoAPI.api?code=playVideo&fn=' + fn}/>
-							Your browser does not support the video tag.
-						</video>						
-					</div>
-				</div>
-			</div>	
-		)
-	};
-	this.showVideos = function () {
-		return  (
-			<div className="container">
-				{Root.lib.spinAnchor(me, 'AA')}
-				<div className="row ">
-					<div className="col-sm-12 p-1">	
-					{Root.commUI.show({
-							code: 'infoBox', 
-							parent : me, 
-							data : me.compView.showVideoMenu(), 
-							setting : {
-								class : ' alert-secondary text-right ',
-								noshadow :  true,
-								rounded : true,
-								style : {'min-height' : '2em'}
-							}
-						})}
-					</div>
-				</div>
-				<div className="row mt-2">				
-					{me.list.map(function(m) {
-					return (<div className="col-sm-3 p-1">
-						{Root.commUI.show({
-							code: 'infoBox', 
-							parent : me, 
-							data : me.compView.showImagePage(m), 
-							setting : {
-								noshadow :false,
-								type: 'light',
-								style : {'min-height' : '9em'}
-							}
-						})}
-						</div>)
-					})}							
-				</div>
-			</div>)	
-	}
 	this.showMyinventions = function () {
 		return  (
 			<div className="container">
@@ -86,7 +13,7 @@ var _compViewInvention = function(me, Root) {
 					{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.compView.showMyinventionsMenu(), 
+							data : me.compViewInvention.showMyinventionsMenu(), 
 							setting : {
 								class : ' alert-secondary text-right ',
 								noshadow :  true,
@@ -102,7 +29,7 @@ var _compViewInvention = function(me, Root) {
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.compView.showImage(m), 
+							data : me.compViewInvention.showImage(m), 
 							setting : {
 								noshadow :false,
 								type: 'light',
@@ -150,12 +77,5 @@ var _compViewInvention = function(me, Root) {
 		};
 		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
 				<img className="w-100" src={url}/></a>);
-	}
-	this.showImagePage = function(m) {
-		return (<span><a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, m)}>
-				<i className="fa fa-scissors" aria-hidden="true"></i></a>
-				<br/>
-				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + m}/>
-			</span>);
 	}
 };
