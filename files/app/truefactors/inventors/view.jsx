@@ -149,11 +149,10 @@ var _compView = function(me, Root) {
 		var list = me.list;
 		
 		var item = list[Math.floor(Math.random()*list.length)];
-		var url = '/api/platoplan/demoAPI.api?code=cutImage&fn=' + ((list[i]) ? list[i] : item);
-		var link = '/#inventor/myVideo/' + encodeURIComponent(url);
-		return (<a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, url)}>
+		var fn =  ((list[i]) ? list[i] : item);
+		return (<a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, fn)}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
-				<img style={{height:'160px'}} src={url}/></a>);
+				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + fn}/></a>);
 	}
 };
