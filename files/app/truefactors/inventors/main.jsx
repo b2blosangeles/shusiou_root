@@ -21,6 +21,10 @@ React.createClass({
 		
 		}
 	},
+	showShow : function() {
+		alert('showShow ')
+	},
+	
 	componentWillUnmount : function() {
 		var me = this;
 	},
