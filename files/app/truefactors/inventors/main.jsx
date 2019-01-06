@@ -4,7 +4,7 @@ React.createClass({
 		me.list = [];
 		me.compData = new _compData(me, Root);
 		me.compViewInvention = new _compViewInvention(me, Root);
-		me.compVideo = new _compViewVideo(me, Root);
+		me.compViewVideo = new _compViewVideo(me, Root);
 		me.compContents = _compContents;
           	return {}
         },
