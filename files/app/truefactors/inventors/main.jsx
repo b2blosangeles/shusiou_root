@@ -9,14 +9,11 @@ React.createClass({
         },
 	componentDidMount : function() {
 		var me = this;
-		console.log('===me.props.parent.state.menuOption===>');
-		console.log(me.props.parent.state.menuOption);
-		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
+		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
+			me.compData.loadVideos();
+		}  else if (me.props.parent.state.menuOption === 'myInventions') {
 			me.compData.loadMyinventions ();
 			
-			// me.loadData();
-		}  else if (me.props.parent.state.menuOption === 'myVideos') {
-			me.compData.loadVideos();
 		} else {
 		
 		}
