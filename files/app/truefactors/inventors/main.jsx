@@ -36,11 +36,7 @@ React.createClass({
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
 			if (me.state.cVideo) return me.compView.showVideoPage(me.state.cVideo); 
 			else return me.compView.showVideos(); 
-		} 
-		/* === TO DO === */
-		if (me.props.parent.state.menuOption === 'myVideo') {
-			return 'me.compView.showVideos()'; 
-		} 		
+		}		
 		
 		if (me.props.parent.state.menuOption === 'howToStartInvention') {
 			return me.compContents['howToStartInvention'];
