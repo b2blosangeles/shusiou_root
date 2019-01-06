@@ -10,7 +10,7 @@ var _compViewVideo = function(me, Root) {
 	this.showSubModule = function () {
 		switch(me.state.subModule) {
 			case 'DigitizeStream' :
-				return 'Digitize Stream';
+				return Root.lib.getNumberList(10);
 				break;
 			case 'PlaySection' :
 				return 'Section Play (5-15 secs)';
