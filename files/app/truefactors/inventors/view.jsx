@@ -151,14 +151,10 @@ var _compView = function(me, Root) {
 		return (<a href="JavaScript: void(0)" onClick={Root.overLay.popup.bind(me, popupSetting)}>
 				<img className="w-100" src={url}/></a>);
 	}
-	this.showImagePage = function(i) {
-		var list = me.list;
-		
-		var item = list[Math.floor(Math.random()*list.length)];
-		var fn =  ((list[i]) ? list[i] : item);
+	this.showImagePage = function(m) {
 		return (<a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, fn)}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
-				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + fn}/></a>);
+				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + m}/></a>);
 	}
 };
