@@ -126,16 +126,7 @@ var _compView = function(me, Root) {
 		var item = list[Math.floor(Math.random()*list.length)];
 		var url = '/api/platoplan/demoAPI.api?code=cutImage&fn=' + ((list[i]) ? list[i] : item);
 		var link = '/#inventor/myVideo/' + encodeURIComponent(url);
-		var popupSetting = {
-			type : 'light', 
-			// style : {'min-height' : '12em', 'border' : '3px solid #666 !important'},
-			closeIcon : true,
-			data : (<div className="p-5">
-				<img style={{height:'160px'}} src={url}/>
-				</div>
-				)
-		};
-		return (<a href="JavaScript: void(0)" onClick={me.showShow(me)}>
+		return (<a href="JavaScript: void(0)" onClick={me.showShow.bind(me, url)}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
 				<img style={{height:'160px'}} src={url}/></a>);
