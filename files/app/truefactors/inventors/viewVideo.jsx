@@ -4,8 +4,11 @@ var _compViewVideo = function(me, Root) {
 		<button type="button" className="btn btn-info" onClick={me.compData.loadVideos.bind(me)}>Load Data</button>
 		</span>)
 	};
+	this.setSubModule = function(v) {
+		me.setState({subModule : v});
+	};
 	this.showSubModule = function () {
-		return 'showSubModule'
+		return me.state.subModule;
 	}
 	this.showVideoPage = function (fn) {
 		setTimeout(function() {
@@ -22,9 +25,9 @@ var _compViewVideo = function(me, Root) {
 							data : (
 							<span>
 							<button type="button" className="btn btn-secondary m-1" onClick={me.setCurrentVideo.bind(me, null)}>Go Back</button>
-							<button type="button" className="btn btn-warning  m-1 border border-default pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Digitize Stream</button>
-							<button type="button" className="btn btn-success  m-1 border border-default pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Section Play (5-15 secs)</button>
-							<button type="button" className="btn btn-info  m-1 border border-default pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Programming Play</button>
+							<button type="button" className="btn btn-warning  m-1 border border-default pull-right" onClick={this.setSubModule.bind(me, 'DigitizeStream')}>Digitize Stream</button>
+							<button type="button" className="btn btn-success  m-1 border border-default pull-right" onClick={this.setSubModule.bind(me, 'PlaySection')}>Section Play (5-15 secs)</button>
+							<button type="button" className="btn btn-info  m-1 border border-default pull-right" onClick={this.setSubModule.bind(me, 'ProgrammingPlay')}>Programming Play</button>
 							</span>), 
 							setting : {
 								class : ' alert-secondary text-left ',
