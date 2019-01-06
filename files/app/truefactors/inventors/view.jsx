@@ -12,7 +12,7 @@ var _compView = function(me, Root) {
 	this.showVideoPage = function (fn) {
 		setTimeout(function() {
 			$('#_niu')[0].play();
-		}, 1000)
+		});
 		return (
 			<div className="container">
 				<div className="row ">
@@ -152,9 +152,10 @@ var _compView = function(me, Root) {
 				<img className="w-100" src={url}/></a>);
 	}
 	this.showImagePage = function(m) {
-		return (<a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, m)}>
-				<i className="fa fa-scissors" aria-hidden="true"></i>
+		return (<span><a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, m)}>
+				<i className="fa fa-scissors" aria-hidden="true"></i></a>
 				<br/>
-				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + m}/></a>);
+				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + m}/>
+			</span>);
 	}
 };
