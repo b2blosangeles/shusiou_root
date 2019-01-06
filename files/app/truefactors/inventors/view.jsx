@@ -9,7 +9,7 @@ var _compView = function(me, Root) {
 		<button type="button" className="btn btn-info" onClick={me.compData.loadMyinventions.bind(me)}>Load Data</button>
 		</span>)
 	};
-	this.showVideoPage = function (url) {
+	this.showVideoPage = function (fn) {
 		return (
 			<div className="container">
 				<div className="row ">
@@ -28,7 +28,7 @@ var _compView = function(me, Root) {
 						})}
 					</div>
 					<div className="col-sm-12 p-1">	
-						<img style={{height:'160px'}} src={url}/>
+						<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + fn}/>
 					</div>
 				</div>
 			</div>	
