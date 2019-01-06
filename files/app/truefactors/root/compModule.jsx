@@ -46,7 +46,9 @@ var _compModule = function(me, Root) {
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/public/data.jsx',
 						'https://dev.shusiou.win/app/truefactors/public/view.jsx',
-						'https://dev.shusiou.win/app/truefactors/public/viewVideo.jsx'
+						'https://dev.shusiou.win/app/truefactors/public/viewVideo.jsx',
+						'https://dev.shusiou.win/app/truefactors/public/viewInvention.jsx',
+						
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/public/controller.jsx'
 				}, 
