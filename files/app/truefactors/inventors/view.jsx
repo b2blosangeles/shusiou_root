@@ -13,24 +13,22 @@ var _compView = function(me, Root) {
 		return (
 			<div className="container">
 				<div className="row ">
-					{Root.lib.spinAnchor(me, 'AB')}
-					<div className="row ">
-						<div className="col-sm-12 p-1">	
-						{Root.commUI.show({
-								code: 'infoBox', 
-								parent : me, 
-								data : me.compView.showMyinventionsMenu(), 
-								setting : {
-									class : ' alert-secondary text-right ',
-									noshadow :  true,
-									rounded : true,
-									style : {'min-height' : '2em'}
-								}
-							})}
-						</div>
-						<div className="col-sm-12 p-1">	
-							=={url}==
-						</div>
+				{Root.lib.spinAnchor(me, 'AB')}
+					<div className="col-sm-12 p-1">	
+					{Root.commUI.show({
+							code: 'infoBox', 
+							parent : me, 
+							data : me.compView.showMyinventionsMenu(), 
+							setting : {
+								class : ' alert-secondary text-right ',
+								noshadow :  true,
+								rounded : true,
+								style : {'min-height' : '2em'}
+							}
+						})}
+					</div>
+					<div className="col-sm-12 p-1">	
+						<img style={{height:'160px'}} src={url}/>
 					</div>
 				</div>
 			</div>	
