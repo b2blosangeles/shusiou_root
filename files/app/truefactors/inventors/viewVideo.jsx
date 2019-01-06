@@ -19,9 +19,9 @@ var _compViewVideo = function(me, Root) {
 							data : (
 							<span>
 							<button type="button" className="btn btn-info m-1" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
-							<button type="button" className="btn btn-warning  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Cuts</button>
-							<button type="button" className="btn btn-warning  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Play Section 5 - 15 secs</button>
-							<button type="button" className="btn btn-warning  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Play with program</button>
+							<button type="button" className="btn btn-warning  m-1  border-default pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Cuts</button>
+							<button type="button" className="btn btn-warning  m-1  border-default pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Play Section 5 - 15 secs</button>
+							<button type="button" className="btn btn-warning  m-1  border-default pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Play with program</button>
 							</span>), 
 							setting : {
 								class : ' alert-secondary text-left ',
