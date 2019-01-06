@@ -152,7 +152,7 @@ var _compView = function(me, Root) {
 				<img className="w-100" src={url}/></a>);
 	}
 	this.showImagePage = function(m) {
-		return (<a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, fn)}>
+		return (<a href="JavaScript: void(0)" onClick={me.setCurrentVideo.bind(me, m)}>
 				<i className="fa fa-scissors" aria-hidden="true"></i>
 				<br/>
 				<img style={{height:'160px'}} src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + m}/></a>);
