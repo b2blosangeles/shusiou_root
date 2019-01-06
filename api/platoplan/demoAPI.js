@@ -15,7 +15,7 @@ var CP = new pkg.crowdProcess();
 
 switch(req.query.code) {
 	case 'videoByScript':
-		var tmpfn = '/tmp/cut_' + s + '_' + fn + '.png';
+		var tmpfn = '/tmp/cut_' + s + '_' + fn;
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
