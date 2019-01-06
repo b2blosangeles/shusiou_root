@@ -36,7 +36,7 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.sendFile(data);
+				res.send(data);
 			}, 3000);			
 		
 		break;
