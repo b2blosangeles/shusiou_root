@@ -28,7 +28,6 @@ var _compViewVideo = function(me, Root) {
 							})}
 							</div>)
 						})}
-					}
 				</div>
 			</div>)
 	};
