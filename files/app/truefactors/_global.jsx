@@ -30,7 +30,7 @@ var _global = {
 	menuTree : {
 		common	 	: ['contactUs'],
 		_publicMenu	: ['publicSearch', 'howToStart', 'faq'],
-		inventor 	: ['myInventions', 'myVideos', 'howToStartInvention', 'faq'], 
+		inventor 	: ['myVideos', 'myInventions', 'howToStartInvention', 'faq'], 
 		investor 	: ['howToStartInvestment', 'myRequest', 'inventions', 'faq']
 	}
 };
