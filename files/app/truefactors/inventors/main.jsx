@@ -21,8 +21,8 @@ React.createClass({
 		
 		}
 	},
-	showShow : function() {
-		alert('showShow ')
+	showShow : function(url) {
+		alert(url)
 	},
 	
 	componentWillUnmount : function() {
