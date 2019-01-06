@@ -44,7 +44,7 @@ var _compViewVideo = function(me, Root) {
 					{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.compView.showVideoMenu(), 
+							data : me.compViewVideo.showVideoMenu(), 
 							setting : {
 								class : ' alert-secondary text-right ',
 								noshadow :  true,
@@ -60,7 +60,7 @@ var _compViewVideo = function(me, Root) {
 						{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.compView.showImagePage(m), 
+							data : me.compViewVideo.showImagePage(m), 
 							setting : {
 								noshadow :false,
 								type: 'light',
