@@ -24,7 +24,7 @@ switch(req.query.code) {
 				if(!err) { cbk(tmpfn);
 				} else {
 					str = 'ffprobe -v error -show_entries format=duration \ ' + 
-  						'-of default=noprint_wrappers=1:nokey=1 ' + tmpfn + ' -y ';
+  						'-of default=noprint_wrappers=1:nokey=1 ' + file_video + ' -y ';
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
