@@ -8,7 +8,17 @@ var _compViewVideo = function(me, Root) {
 		me.setState({subModule : v});
 	};
 	this.showSubModule = function () {
-		return me.state.subModule;
+		switch(me.state.subModule) {
+			case 'DigitizeStream' :
+				return 'Digitize Stream';
+				break;
+			case 'PlaySection' :
+				return 'Section Play (5-15 secs)';
+				break;				
+			case 'ProgrammingPlay' :
+				return 'Programming Play';
+				break;				
+		}
 	}
 	this.showVideoPage = function (fn) {
 		setTimeout(function() {
