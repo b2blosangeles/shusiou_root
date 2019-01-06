@@ -18,7 +18,7 @@ var _compView = function(me, Root) {
 					{Root.commUI.show({
 							code: 'infoBox', 
 							parent : me, 
-							data : me.compView.showMyinventionsMenu(), 
+							data : (<button type="button" className="btn btn-info" onClick={me.setCurrentVideo.bind(me, null)}>back</button>), 
 							setting : {
 								class : ' alert-secondary text-right ',
 								noshadow :  true,
