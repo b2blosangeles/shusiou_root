@@ -6,7 +6,7 @@ var _compViewVideo = function(me, Root) {
 	};
 	this.showVideoPage = function (fn) {
 		setTimeout(function() {
-			$('#_niu')[0].play();
+			$('#_video_play')[0].play();
 		});
 		return (
 			<div className="container">
@@ -19,8 +19,9 @@ var _compViewVideo = function(me, Root) {
 							data : (
 							<span>
 							<button type="button" className="btn btn-info m-1" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
-							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
-							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>back</button>
+							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Cuts</button>
+							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Play Section 5 - 15 secs</button>
+							<button type="button" className="btn btn-info  m-1 pull-right" onClick={me.setCurrentVideo.bind(me, null)}>Play with program</button>
 							</span>), 
 							setting : {
 								class : ' alert-secondary text-left ',
@@ -31,7 +32,7 @@ var _compViewVideo = function(me, Root) {
 						})}
 					</div>
 					<div className="col-sm-12 p-1">	
-						<video id="_niu" width="320"  controls autoplay>
+						<video id="_video_play" width="320"  controls autoplay>
 							<source src={'/api/platoplan/demoAPI.api?code=playVideo&fn=' + fn}/>
 							Your browser does not support the video tag.
 						</video>						
