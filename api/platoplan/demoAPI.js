@@ -15,8 +15,31 @@ var CP = new pkg.crowdProcess();
 
 switch(req.query.code) {
 	case 'videoByScript':
-		res.send('videoByScript');
-		return true;
+		var tmpfn = '/tmp/cut_' + s + '_' + fn + '.png';
+
+		var CP = new pkg.crowdProcess();
+		var _f = {};		
+		_f['S2'] = function(cbk) {
+			pkg.fs.stat(tmpfn, function(err, stat) {
+				if(!err) { cbk(tmpfn);
+				} else {
+					str = 'ffprobe -v error -show_entries format=duration \ ' + 
+  						'-of default=noprint_wrappers=1:nokey=1 ' + tmpfn + ' -y ';
+					var childProcess = require('child_process');
+					var ls = childProcess.exec(str, 		   
+					function (error, stdout, stderr) {
+						cbk('===videoByScript====');
+					});
+				}
+			});
+		};
+		CP.serial(
+			_f,
+			function(data) {
+				res.sendFile(data);
+			}, 3000);			
+		
+		break;
 	case 'cutImage':		
 		var s = (req.query.s) ? req.query.s : 10, 
 		    w='FULL';
