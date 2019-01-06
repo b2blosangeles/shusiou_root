@@ -17,8 +17,8 @@ var _compViewVideo = function(me, Root) {
 							{Root.commUI.show({
 								code: 'infoBox', 
 								parent : me, 
-								data : <img style={{height:'100px'}} 
-									       src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + me.state.cVideo'}, 
+								data : (<img style={{height:'100px'}} 
+									      src={'/api/platoplan/demoAPI.api?code=cutImage&fn=' + me.state.cVideo'}/>), 
 								setting : {
 									noshadow :false,
 									type: 'light',
