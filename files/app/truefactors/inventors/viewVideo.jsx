@@ -38,8 +38,8 @@ var _compViewVideo = function(me, Root) {
 		return (
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-12 p-1 text-center">	
-					<video id="_video_section" width="320"  controls autoplay>
+					<div className="col-sm-12 p-1 text-center alert-secondary">	
+					<video id="_video_section" width="320"  controls>
 						<source src={'/api/platoplan/demoAPI.api?code=playSection&fn=' + me.state.cVideo
 						 + '&s=' + s + '&l=' + l}/>
 						Your browser does not support the video tag.
