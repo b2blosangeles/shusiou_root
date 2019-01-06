@@ -23,7 +23,7 @@ var _compView = function(me, Root) {
 							parent : me, 
 							data : (<button type="button" className="btn btn-info" onClick={me.setCurrentVideo.bind(me, null)}>back</button>), 
 							setting : {
-								class : ' alert-secondary text-right ',
+								class : ' alert-secondary text-left ',
 								noshadow :  true,
 								rounded : true,
 								style : {'min-height' : '2em'}
