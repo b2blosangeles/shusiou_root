@@ -3,7 +3,7 @@ React.createClass({
 		var me = this;
 		me.list = [];
 		me.compData = new _compData(me, Root);
-		me.compView = new _compView(me, Root);
+		me.compViewInvention = new _compViewInvention(me, Root);
 		me.compVideo = new _compViewVideo(me, Root);
 		me.compContents = _compContents;
           	return {}
@@ -31,11 +31,11 @@ React.createClass({
 	showBody : function() {
 		var me = this;
 		if (me.props.parent.state.menuOption === 'myInventions') {
-			return me.compView.showMyinventions();
+			return me.compViewInvention.showMyinventions();
 		}
 		
 		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
-			if (me.state.cVideo) return me.compView.showVideoPage(me.state.cVideo); 
+			if (me.state.cVideo) return me.compViewVideo.showVideoPage(me.state.cVideo); 
 			else return me.compViewVideo.showVideos(); 
 		}		
 		
