@@ -28,6 +28,7 @@ React.createClass({
 	
 	componentWillUnmount : function() {
 		var me = this;
+		me.setState({cVideo : null});
 	},
 	showBody : function() {
 		var me = this;
@@ -36,7 +37,8 @@ React.createClass({
 		}
 		
 		if (me.props.parent.state.menuOption === 'myVideos') {
-			return me.compView.showVideos(); 
+			if (me.state.cVideo) return me.state.cVideo; 
+			else return me.compView.showVideos(); 
 		} 
 		/* === TO DO === */
 		if (me.props.parent.state.menuOption === 'myVideo') {
