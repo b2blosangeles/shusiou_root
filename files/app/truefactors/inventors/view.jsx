@@ -9,7 +9,7 @@ var _compView = function(me, Root) {
 		<button type="button" className="btn btn-info" onClick={me.compData.loadMyinventions.bind(me)}>Load Data</button>
 		</span>)
 	};
-	this.showVideo = function (url) {
+	this.showVideoPage = function (url) {
 		return (
 			<div className="container">
 				<div className="row ">
