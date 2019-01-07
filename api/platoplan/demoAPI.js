@@ -19,7 +19,7 @@ switch(req.query.code) {
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
-		_f['S2'] = function(cbk) {
+		_f['videoLength'] = function(cbk) {
 			pkg.fs.stat(tmpfn, function(err, stat) {
 				if(!err) { cbk(tmpfn);
 				} else {
@@ -28,7 +28,9 @@ switch(req.query.code) {
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
-						cbk(parseInt(stdout));
+						var videoLength = 0;
+						try { videoLength = parseInt(stdout); } catch (e) {}
+						cbk(parseInt(videoLength));
 					});
 				}
 			});
