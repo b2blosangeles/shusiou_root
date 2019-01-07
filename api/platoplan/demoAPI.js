@@ -51,7 +51,7 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugOrg2);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 1 + ' -t ' + CP.data.videoLength + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
@@ -63,7 +63,7 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugin);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmp_plugin +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 10 + ' -t ' + 10 + ' -c copy ' + tmp_plugin +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
