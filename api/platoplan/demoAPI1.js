@@ -13,7 +13,7 @@ var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-		var fnPlugin =  'heating_fishing_trousers.mp4',
+		var fnPlugin =  'HEATING_JACKET.mp4',
 		    // 'shopping_bag.mp4',
 		    // 'HEATING_JACKET.mp4',
 		    //'heating_fishing_trousers.mp4',
