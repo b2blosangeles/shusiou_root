@@ -34,6 +34,30 @@ switch(req.query.code) {
 					cbk(parseInt(videoLength));
 				});
 		};
+		_f['oraginA'] = function(cbk) {
+			pkg.fs.stat(tmp_plugOrg1, function(err, stat) {
+				if(!err) { cbk(tmp_plugOrg1);
+				} else {
+					var childProcess = require('child_process');
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmp_plugOrg1 +' -y ', 		   
+						function (error, stdout, stderr) {
+							cbk(true);
+						});
+				}
+			});
+		};
+		_f['oraginB'] = function(cbk) {
+			pkg.fs.stat(tmp_plugOrg2, function(err, stat) {
+				if(!err) { cbk(tmp_plugOrg2);
+				} else {
+					var childProcess = require('child_process');
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
+						function (error, stdout, stderr) {
+							cbk(true);
+						});
+				}
+			});
+		};		
 		_f['plugIn'] = function(cbk) {
 			pkg.fs.stat(tmp_plugin, function(err, stat) {
 				if(!err) { cbk(tmp_plugin);
@@ -46,6 +70,7 @@ switch(req.query.code) {
 				}
 			});
 		};
+		
 		_f['batchFile'] = function(cbk) {
 			var str = 'echo file ' + tmp_plugOrg1 + "\n";
 			str += 'echo file ' + tmp_plugin + "\n";
