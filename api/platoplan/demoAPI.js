@@ -23,7 +23,17 @@ switch(req.query.code) {
 	
 		
 		var CP = new pkg.crowdProcess();
-		var _f = {};		
+		var _f = {};
+		_f['S0'] = function(cbk) {
+			pkg.fs.stat(tmp_output, function(err, stat) {
+				if(!err) { 
+					CP.exit = 1;
+					cbk(tmp_output);
+				} else {
+					cbk(true);
+				}
+			});
+		};		
 		_f['videoLength'] = function(cbk) {
 			str = 'ffprobe -v error -show_entries format=duration \ ' + 
 				'-of default=noprint_wrappers=1:nokey=1 ' + file_video + '';
