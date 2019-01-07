@@ -81,7 +81,7 @@ var _compViewVideo = function(me, Root) {
 	}
 	this.showVideoPage = function (fn) {
 		setTimeout(function() {
-			$('#_video_play')[0].play();
+		//	$('#_video_play')[0].play();
 		});
 		return (
 			<div className="container">
