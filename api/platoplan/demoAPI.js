@@ -45,7 +45,7 @@ switch(req.query.code) {
 					cbk(parseInt(videoLength));
 				});
 		};
-		_f['oraginA'] = function(cbk) {
+		_f['oraginA_1'] = function(cbk) {
 			pkg.fs.stat(tmp_plugOrg1, function(err, stat) {
 				if(!err) { cbk(tmp_plugOrg1);
 				} else {
@@ -57,6 +57,19 @@ switch(req.query.code) {
 				}
 			});
 		};
+		_f['oraginA_2'] = function(cbk) {
+			pkg.fs.stat(tmp_plugOrg1, function(err, stat) {
+				if(!err) { cbk(tmp_plugOrg1);
+				} else {
+					var childProcess = require('child_process');
+					
+					var ls = childProcess.exec('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ', 		   
+						function (error, stdout, stderr) {
+							cbk(true);
+						});
+				}
+			});
+		};		
 		_f['oraginB'] = function(cbk) {
 			pkg.fs.stat(tmp_plugOrg2, function(err, stat) {
 				if(!err) { cbk(tmp_plugOrg2);
@@ -177,6 +190,8 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
+				res.send(data);
+				return true;
 				pkg.fs.stat(tmpfn, function(err, data1) {
 					if (err) {  write404(tmpfn + ' does not exist'); }
 					else {
