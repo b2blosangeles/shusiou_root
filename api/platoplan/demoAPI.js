@@ -124,10 +124,9 @@ switch(req.query.code) {
 		_f['batchFile'] = function(cbk) {
 			var str = '';
 			
-			
 			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
 			str += "file '" + tmp_plugin.replace('/tmp/', '') + "'\n";
-			str += "file '" + tmp_plugOrg2.replace('/tmp/', '') +"'\n";
+			str += "file '" + tmp_plugOrg2.replace('/tmp/', '') + "'\n";
 			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
 			
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
