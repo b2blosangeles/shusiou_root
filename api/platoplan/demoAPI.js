@@ -86,7 +86,7 @@ switch(req.query.code) {
 			var str = '';
 			// "file '" + tmp_plugOrg1 + "'\n";
 			str += "file '" + tmp_plugin + "'\n";
-			//str += "file '" + tmp_plugOrg2 +"'";
+			str += "file '" + tmp_plugOrg2 +"'";
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
 			}); 
