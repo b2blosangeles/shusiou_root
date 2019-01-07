@@ -95,7 +95,7 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugin);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 0 + ' -t ' + 5 + ' -c copy ' + tmp_plugin +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 6 + ' -c copy ' + tmp_plugin +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
@@ -124,7 +124,7 @@ switch(req.query.code) {
 		_f['batchFile'] = function(cbk) {
 			var str = '';
 			str +=  "file '" + tmp_plugOrg1 + "'\n";
-			// str += "file '" + tmp_plugin + "'\n";
+			str += "file '" + tmp_plugin + "'\n";
 			str += "file '" + tmp_plugOrg2 +"'";
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
