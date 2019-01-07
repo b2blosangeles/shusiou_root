@@ -125,8 +125,8 @@ switch(req.query.code) {
 			var str = '';
 			
 			//str += "file '" + tmp_plugin.replace('/tmp/', '') + "'\n";
-			str += "file '" + tmp_plugOrg2.replace('/tmp/', '') +"'";
-			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
+			str += "file '" + tmp_plugOrg2 +"'";
+			str +=  "file '" + tmp_plugOrg1 + "'\n";
 			
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
@@ -135,7 +135,7 @@ switch(req.query.code) {
 		_f['output'] = function(cbk) {
 			var childProcess = require('child_process');
 			// var ls = childProcess.exec('ffmpeg -f concat -safe 0 -i ' + tmp_combine + ' -c copy ' + tmp_output + ' -y', 
-			var ls = childProcess.exec('cd /tmp && ffmpeg -f concat  -i ' + tmp_combine + ' -c copy ' + tmp_output + ' -y',
+			var ls = childProcess.exec('ffmpeg -f concat -safe 0 -i ' + tmp_combine + ' -c copy ' + tmp_output + ' -y',
 				function (error, stdout, stderr) {
 					cbk(true);
 				});
