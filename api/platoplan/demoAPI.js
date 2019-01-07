@@ -110,7 +110,7 @@ switch(req.query.code) {
 			var childProcess = require('child_process');
 			var ls = childProcess.exec('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
 				function (error, stdout, stderr) {
-					cbk('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y');
+					cbk(true);
 				});
 		};			
 		/*
@@ -134,8 +134,8 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-			//				res.send(data);
-			//	return true;	
+							res.send(data);
+				return true;	
 				pkg.fs.stat(tmp_output, function(err, data1) {
 					if (err) {  write404(tmp_output + ' does not exist'); }
 					else {
