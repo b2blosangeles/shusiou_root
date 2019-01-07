@@ -13,7 +13,10 @@ var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-
+		var fnPlugin = 'shopping_bag.mp4',
+    		var plugin_video = dirn  + '/' +  nPlugin;
+	
+		
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
 		_f['videoLength'] = function(cbk) {
@@ -27,23 +30,18 @@ switch(req.query.code) {
 					cbk(parseInt(videoLength));
 				});
 		};
-		/*
-		_f['videoLength'] = function(cbk) {
-			pkg.fs.stat(tmpfn, function(err, stat) {
-				if(!err) { cbk(tmpfn);
+		_f['plugIn'] = function(cbk) {
+			pkg.fs.stat(plugin_video, function(err, stat) {
+				if(!err) { cbk(fn);
 				} else {
-					str = 'ffprobe -v error -show_entries format=duration \ ' + 
-  						'-of default=noprint_wrappers=1:nokey=1 ' + file_video + '';
 					var childProcess = require('child_process');
-					var ls = childProcess.exec(str, 		   
-					function (error, stdout, stderr) {
-						var videoLength = 0;
-						try { videoLength = parseInt(stdout); } catch (e) {}
-						cbk(parseInt(videoLength));
-					});
+					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmpfn +' -y ', 		   
+						function (error, stdout, stderr) {
+							cbk(true);
+						});
 				}
 			});
-		};*/		
+		};		
 		CP.serial(
 			_f,
 			function(data) {
