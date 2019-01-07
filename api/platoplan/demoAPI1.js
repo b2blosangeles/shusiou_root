@@ -144,7 +144,10 @@ switch(req.query.code) {
 		
 		CP.serial(
 			_f,
-			function(data) {	
+			function(data) {
+				res.send(data);
+				return true;
+				
 				pkg.fs.stat(tmp_output, function(err, data1) {
 					if (err) {  write404(tmp_output + ' does not exist'); }
 					else {
