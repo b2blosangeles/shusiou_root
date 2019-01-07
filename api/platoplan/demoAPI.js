@@ -78,7 +78,15 @@ switch(req.query.code) {
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
 			}); 
+		};	
+		_f['output'] = function(cbk) {
+			var childProcess = require('child_process');
+			var ls = childProcess.exec('ffmpeg -f concat -i ' + tmp_combine + ' -c copy /tmp/output.mp4 -y', 		   
+				function (error, stdout, stderr) {
+					cbk(true);
+				});
 		};		
+		
 		CP.serial(
 			_f,
 			function(data) {
