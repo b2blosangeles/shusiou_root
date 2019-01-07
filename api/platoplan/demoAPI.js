@@ -13,7 +13,8 @@ var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-		var fnPlugin = 'heating_fishing_trousers.mp4',
+		var fnPlugin = 'HEATING_JACKET.mp4',
+		    //'heating_fishing_trousers.mp4',
 		    // 'shopping_bag.mp4',
 		    plugin_video = dirn  + '/' +  fnPlugin,
 		    tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
@@ -121,7 +122,7 @@ switch(req.query.code) {
 		*/
 		_f['batchFile'] = function(cbk) {
 			var str = '';
-			// "file '" + tmp_plugOrg1 + "'\n";
+			"file '" + tmp_plugOrg1 + "'\n";
 			str += "file '" + tmp_plugin + "'\n";
 			str += "file '" + tmp_plugOrg2 +"'";
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
