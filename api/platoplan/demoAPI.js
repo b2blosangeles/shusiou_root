@@ -76,6 +76,14 @@ switch(req.query.code) {
 						});
 				}
 			});
+		};
+		_f['oraginB_2'] = function(cbk) {
+			var childProcess = require('child_process');
+
+			var ls = childProcess.exec('ffmpeg -i ' + tmp_plugOrg2 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg2 + '.ts -y ', 		   
+				function (error, stdout, stderr) {
+					cbk('ffmpeg -i ' + tmp_plugOrg2 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg2 + '.ts -y ');
+				});
 		};		
 		_f['plugIn'] = function(cbk) {
 			pkg.fs.stat(tmp_plugin, function(err, stat) {
