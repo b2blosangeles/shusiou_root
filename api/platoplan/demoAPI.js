@@ -18,7 +18,8 @@ switch(req.query.code) {
 		    tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
 		    tmp_plugOrg2 = '/tmp/script_plugin2_' + fn,
 		    tmp_plugin = '/tmp/script_pluginA_' + fnPlugin,
-		    tmp_combine = '/tmp/script_combine_' + fn + '.txt';
+		    tmp_combine = '/tmp/script_combine_' + fn + '.txt',
+		    tmp_output = '/tmp/script_combine_' + fn;
 	
 		
 		var CP = new pkg.crowdProcess();
@@ -81,9 +82,9 @@ switch(req.query.code) {
 		};	
 		_f['output'] = function(cbk) {
 			var childProcess = require('child_process');
-			var ls = childProcess.exec('ffmpeg -f concat -i ' + tmp_combine + ' -c copy /tmp/output.mp4 -y', 		   
+			var ls = childProcess.exec('ffmpeg -f concat -safe 0 -i ' + tmp_combine + ' -c copy ' + tmp_output + ' -y', 		   
 				function (error, stdout, stderr) {
-					cbk('ffmpeg -f concat -i ' + tmp_combine + ' -c copy /tmp/output.mp4 -y');
+					cbk(true);
 				});
 		};		
 		
