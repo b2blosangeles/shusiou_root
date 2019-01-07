@@ -210,7 +210,7 @@ switch(req.query.code) {
 				if(!err) { cbk(fn);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ s + ' -t ' + l + ' -c copy ' + tmpfn +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -vf scale=720:480 -ss '+ s + ' -t ' + l + ' -c copy ' + tmpfn +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
