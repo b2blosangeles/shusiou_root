@@ -125,8 +125,8 @@ switch(req.query.code) {
 			var str = '';
 			
 			//str += "file '" + tmp_plugin.replace('/tmp/', '') + "'\n";
-			str += "file '" + tmp_plugOrg2 +"'\n";
-			str +=  "file '" + tmp_plugOrg1 + "'\n";
+			str += "file '" + tmp_plugOrg2.replace('/tmp/', '') +"'\n";
+			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
 			
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
