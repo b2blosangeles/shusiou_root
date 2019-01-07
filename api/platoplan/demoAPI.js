@@ -72,9 +72,9 @@ switch(req.query.code) {
 		};
 		
 		_f['batchFile'] = function(cbk) {
-			var str = 'echo file ' + tmp_plugOrg1 + "\n";
-			str += 'echo file ' + tmp_plugin + "\n";
-			str += 'echo file ' + tmp_plugOrg2;
+			var str = '' + tmp_plugOrg1 + "\n";
+			str += '' + tmp_plugin + "\n";
+			str += '' + tmp_plugOrg2;
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
 			}); 
