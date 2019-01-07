@@ -17,6 +17,18 @@ switch(req.query.code) {
 		var CP = new pkg.crowdProcess();
 		var _f = {};		
 		_f['videoLength'] = function(cbk) {
+			str = 'ffprobe -v error -show_entries format=duration \ ' + 
+				'-of default=noprint_wrappers=1:nokey=1 ' + file_video + '';
+			var childProcess = require('child_process');
+			var ls = childProcess.exec(str, 		   
+				function (error, stdout, stderr) {
+					var videoLength = 0;
+					try { videoLength = parseInt(stdout); } catch (e) {}
+					cbk(parseInt(videoLength));
+				});
+		};
+		/*
+		_f['videoLength'] = function(cbk) {
 			pkg.fs.stat(tmpfn, function(err, stat) {
 				if(!err) { cbk(tmpfn);
 				} else {
@@ -31,7 +43,7 @@ switch(req.query.code) {
 					});
 				}
 			});
-		};
+		};*/		
 		CP.serial(
 			_f,
 			function(data) {
