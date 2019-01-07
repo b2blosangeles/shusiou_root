@@ -14,7 +14,8 @@ switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
 		var fnPlugin = 'shopping_bag.mp4',
-		    plugin_video = dirn  + '/' +  fnPlugin;
+		    plugin_video = dirn  + '/' +  fnPlugin,
+		    tmp_plugin = '/tmp/script_plugin' + fn;
 	
 		
 		var CP = new pkg.crowdProcess();
@@ -31,11 +32,11 @@ switch(req.query.code) {
 				});
 		};
 		_f['plugIn'] = function(cbk) {
-			pkg.fs.stat(plugin_video, function(err, stat) {
-				if(!err) { cbk(fn);
+			pkg.fs.stat(tmp_plugin, function(err, stat) {
+				if(!err) { cbk(tmp_plugin);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmpfn +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmp_plugin +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
