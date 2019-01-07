@@ -15,7 +15,7 @@ switch(req.query.code) {
 		var tmpfn = '/tmp/script_' + fn;
 		var fnPlugin = 'shopping_bag.mp4',
 		    plugin_video = dirn  + '/' +  fnPlugin,
-		    tmp_plugin = '/tmp/script_plugin' + fn;
+		    tmp_plugin = '/tmp/script_plugin_' + fnPlugin;
 	
 		
 		var CP = new pkg.crowdProcess();
