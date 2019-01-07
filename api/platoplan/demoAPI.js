@@ -13,7 +13,8 @@ var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-		var fnPlugin = 'shopping_bag.mp4',
+		var fnPlugin = 'heating_fishing_clothes.mp4',
+		    // 'shopping_bag.mp4',
 		    plugin_video = dirn  + '/' +  fnPlugin,
 		    tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
 		    tmp_plugOrg2 = '/tmp/script_plugin2_' + fn,
@@ -109,7 +110,7 @@ switch(req.query.code) {
 		_f['output'] = function(cbk) {
 			var childProcess = require('child_process');
 			//var ls = childProcess.exec('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
-			var ls = childProcess.exec('ffmpeg -i "concat:' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy  ' + tmp_output + ' -y', 		   
+			var ls = childProcess.exec('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
 				function (error, stdout, stderr) {
 					cbk(true);
 				});
