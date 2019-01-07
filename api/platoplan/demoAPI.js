@@ -17,7 +17,7 @@ switch(req.query.code) {
 		    plugin_video = dirn  + '/' +  fnPlugin,
 		    tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
 		    tmp_plugOrg2 = '/tmp/script_plugin2_' + fn,
-		    tmp_plugin = '/tmp/script_pluginA_' + fnPlugin,
+		    tmp_plugin = '/tmp/script_plugin_' + fnPlugin,
 		    tmp_combine = '/tmp/script_combine_' + fn + '.txt',
 		    tmp_output = '/tmp/script_combine_' + fn;
 	
@@ -97,7 +97,14 @@ switch(req.query.code) {
 				}
 			});
 		};
-		
+		_f['plugIn_2'] = function(cbk) {
+			var childProcess = require('child_process');
+
+			var ls = childProcess.exec('ffmpeg -i ' + tmp_plugin + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugin + '.ts -y ', 		   
+				function (error, stdout, stderr) {
+					cbk('ffmpeg -i ' + tmp_plugin + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugin + '.ts -y ');
+				});
+		};			
 		_f['batchFile'] = function(cbk) {
 			var str = '';
 			// "file '" + tmp_plugOrg1 + "'\n";
