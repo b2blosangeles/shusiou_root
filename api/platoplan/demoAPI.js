@@ -110,7 +110,7 @@ switch(req.query.code) {
 			var childProcess = require('child_process');
 			var ls = childProcess.exec('ffmpeg -i "'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
 				function (error, stdout, stderr) {
-					cbk(true);
+					cbk('ffmpeg -i "'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y');
 				});
 		};			
 		/*
