@@ -96,7 +96,7 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugin);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 6 + ' -c copy ' + tmp_plugin +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + plugin_video + ' -ss '+ 1 + ' -t ' + 5 + ' -c copy ' + tmp_plugin +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
@@ -117,7 +117,7 @@ switch(req.query.code) {
 		_f['output'] = function(cbk) {
 			var childProcess = require('child_process');
 			// var ls = childProcess.exec('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy ' + ' ' + tmp_output + ' -y', 		   
-			var ls = childProcess.exec('ffmpeg -i "concat:'+ tmp_plugin + '.ts|' + tmp_plugin + '.ts" -c copy ' + ' ' + tmp_output + ' -y', 		   
+			var ls = childProcess.exec('ffmpeg -i "concat:'+ tmp_plugin + '.ts|' + tmp_plugin + '.ts" -c copy ' + ' -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
 				function (error, stdout, stderr) {
 					cbk(true);
 				});
