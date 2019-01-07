@@ -83,7 +83,7 @@ switch(req.query.code) {
 			var childProcess = require('child_process');
 			var ls = childProcess.exec('ffmpeg -f concat -i ' + tmp_combine + ' -c copy /tmp/output.mp4 -y', 		   
 				function (error, stdout, stderr) {
-					cbk(true);
+					cbk('ffmpeg -f concat -i ' + tmp_combine + ' -c copy /tmp/output.mp4 -y');
 				});
 		};		
 		
