@@ -29,7 +29,7 @@ switch(req.query.code) {
 		_f['S0'] = function(cbk) {
 			pkg.fs.stat(tmp_output, function(err, stat) {
 				if(!err) { 
-				//	CP.exit = 1;
+					CP.exit = 1;
 					cbk(tmp_output);
 				} else {
 					cbk(true);
