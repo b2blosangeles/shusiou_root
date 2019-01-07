@@ -14,7 +14,7 @@ switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
 		var fnPlugin = 'shopping_bag.mp4',
-    		var plugin_video = dirn  + '/' +  nPlugin;
+		    plugin_video = dirn  + '/' +  fnPlugin;
 	
 		
 		var CP = new pkg.crowdProcess();
