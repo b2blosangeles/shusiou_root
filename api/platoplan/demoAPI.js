@@ -15,7 +15,8 @@ switch(req.query.code) {
 		var tmpfn = '/tmp/script_' + fn;
 		var fnPlugin = 'shopping_bag.mp4',
 		    plugin_video = dirn  + '/' +  fnPlugin,
-		    tmp_plugin = '/tmp/script_plugin_' + fnPlugin;
+		    tmp_plugin = '/tmp/script_plugin_' + fnPlugin,
+		    tmp_combine = '/tmp/script_combine_' + fnPlugin + '.txt';
 	
 		
 		var CP = new pkg.crowdProcess();
@@ -42,6 +43,14 @@ switch(req.query.code) {
 						});
 				}
 			});
+		};
+		_f['batchFile'] = function(cbk) {
+			var str = 'echo file ' + tmp_plugin + "\n";
+			str += 'echo file ' + tmp_plugin + "\n";
+			str += 'echo file ' + tmp_plugin;
+			pkg.fs.writeFile(tmp_combine, str, function(err) {
+				cbk(tmp_combine);
+			}); 
 		};		
 		CP.serial(
 			_f,
