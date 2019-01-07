@@ -40,7 +40,7 @@ var _compViewVideo = function(me, Root) {
 				<div className="row">
 					<div className="col-sm-12 p-5 text-center alert-success">	
 					<video id="_video_section" width="260"  controls>
-						<source src={'/api/platoplan/demoAPI.api?code=playSection&fn=' + 
+						<source src={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
 								me.state.cVideo}/>
 						Your browser does not support the video tag.
 					</video>
@@ -58,7 +58,7 @@ var _compViewVideo = function(me, Root) {
 				<div className="row">
 					<div className="col-sm-12 p-5 text-center alert-success">	
 					<video id="_video_section" width="260"  controls>
-						<source src={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.state.cVideo
+						<source src={'/api/platoplan/demoAPI.api?code=playSectiont&fn=' + me.state.cVideo
 						 + '&s=' + s + '&l=' + l}/>
 						Your browser does not support the video tag.
 					</video>
