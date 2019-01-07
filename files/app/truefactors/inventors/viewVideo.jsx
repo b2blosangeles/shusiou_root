@@ -31,7 +31,7 @@ var _compViewVideo = function(me, Root) {
 				</div>
 			</div>)
 	};
-	this.showSection = function(s, l) {
+	this.showProgrammingPlay = function() {
 		setTimeout(function() {
 			$('#_video_section')[0].play();
 		});		
@@ -48,7 +48,8 @@ var _compViewVideo = function(me, Root) {
 				</div>
 			</div>)
 	};
-	this.showProgrammingPlay = function() {
+
+	this.showSection = function(s, l) {
 		setTimeout(function() {
 			$('#_video_section')[0].play();
 		});		
