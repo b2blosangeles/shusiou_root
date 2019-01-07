@@ -10,9 +10,6 @@ var list = [],
     file_video = dirn  + '/' +  fn;
 
 var CP = new pkg.crowdProcess();
-
-
-
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
