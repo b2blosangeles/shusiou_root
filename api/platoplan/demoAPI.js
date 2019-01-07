@@ -58,17 +58,12 @@ switch(req.query.code) {
 			});
 		};
 		_f['oraginA_2'] = function(cbk) {
-			pkg.fs.stat(tmp_plugOrg1, function(err, stat) {
-				if(!err) { cbk(tmp_plugOrg1);
-				} else {
-					var childProcess = require('child_process');
-					
-					var ls = childProcess.exec('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ', 		   
-						function (error, stdout, stderr) {
-							cbk('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ');
-						});
-				}
-			});
+			var childProcess = require('child_process');
+
+			var ls = childProcess.exec('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ', 		   
+				function (error, stdout, stderr) {
+					cbk('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ');
+				});
 		};		
 		_f['oraginB'] = function(cbk) {
 			pkg.fs.stat(tmp_plugOrg2, function(err, stat) {
