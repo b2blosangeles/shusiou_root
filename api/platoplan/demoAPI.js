@@ -104,7 +104,16 @@ switch(req.query.code) {
 				function (error, stdout, stderr) {
 					cbk('ffmpeg -i ' + tmp_plugin + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugin + '.ts -y ');
 				});
+		};
+		
+		_f['output'] = function(cbk) {
+			var childProcess = require('child_process');
+			var ls = childProcess.exec('ffmpeg -i "'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
+				function (error, stdout, stderr) {
+					cbk(true);
+				});
 		};			
+		/*
 		_f['batchFile'] = function(cbk) {
 			var str = '';
 			// "file '" + tmp_plugOrg1 + "'\n";
@@ -121,7 +130,7 @@ switch(req.query.code) {
 					cbk(true);
 				});
 		};		
-		
+		*/
 		CP.serial(
 			_f,
 			function(data) {
