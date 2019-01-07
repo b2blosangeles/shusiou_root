@@ -58,6 +58,7 @@ switch(req.query.code) {
 				}
 			});
 		};
+		/*
 		_f['oraginA_2'] = function(cbk) {
 			var childProcess = require('child_process');
 
@@ -65,7 +66,7 @@ switch(req.query.code) {
 				function (error, stdout, stderr) {
 					cbk('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ');
 				});
-		};		
+		};*/		
 		_f['oraginB'] = function(cbk) {
 			pkg.fs.stat(tmp_plugOrg2, function(err, stat) {
 				if(!err) { cbk(tmp_plugOrg2);
@@ -78,6 +79,7 @@ switch(req.query.code) {
 				}
 			});
 		};
+		/*
 		_f['oraginB_2'] = function(cbk) {
 			var childProcess = require('child_process');
 
@@ -85,7 +87,7 @@ switch(req.query.code) {
 				function (error, stdout, stderr) {
 					cbk('ffmpeg -i ' + tmp_plugOrg2 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg2 + '.ts -y ');
 				});
-		};		
+		};	*/	
 		_f['plugIn'] = function(cbk) {
 			pkg.fs.stat(tmp_plugin, function(err, stat) {
 				if(!err) { cbk(tmp_plugin);
@@ -98,6 +100,7 @@ switch(req.query.code) {
 				}
 			});
 		};
+		/*
 		_f['plugIn_2'] = function(cbk) {
 			var childProcess = require('child_process');
 
@@ -105,8 +108,8 @@ switch(req.query.code) {
 				function (error, stdout, stderr) {
 					cbk('ffmpeg -i ' + tmp_plugin + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugin + '.ts -y ');
 				});
-		};
-		
+		};*/
+		/*
 		_f['output'] = function(cbk) {
 			var childProcess = require('child_process');
 			//var ls = childProcess.exec('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
@@ -115,7 +118,7 @@ switch(req.query.code) {
 					cbk(true);
 				});
 		};			
-		/*
+		*/
 		_f['batchFile'] = function(cbk) {
 			var str = '';
 			// "file '" + tmp_plugOrg1 + "'\n";
@@ -132,7 +135,7 @@ switch(req.query.code) {
 					cbk(true);
 				});
 		};		
-		*/
+		
 		CP.serial(
 			_f,
 			function(data) {	
