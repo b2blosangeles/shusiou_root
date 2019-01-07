@@ -15,9 +15,9 @@ switch(req.query.code) {
 		var tmpfn = '/tmp/script_' + fn;
 		var fnPlugin = 'shopping_bag.mp4',
 		    plugin_video = dirn  + '/' +  fnPlugin,
-		    tmp_plugOrg1 = '/tmp/script_plugin_' + fn,
-		    tmp_plugOrg2 = '/tmp/script_plugin_' + fn,
-		    tmp_plugin = '/tmp/script_plugin_' + fnPlugin,
+		    tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
+		    tmp_plugOrg2 = '/tmp/script_plugin2_' + fn,
+		    tmp_plugin = '/tmp/script_pluginA_' + fnPlugin,
 		    tmp_combine = '/tmp/script_combine_' + fn + '.txt';
 	
 		
