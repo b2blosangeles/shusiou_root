@@ -113,7 +113,7 @@ switch(req.query.code) {
 				});
 		};
 		
-// -bsf:a aac_adtstoasc
+		/*
 		_f['output'] = function(cbk) {
 			var childProcess = require('child_process');
 			// var ls = childProcess.exec('ffmpeg -i "concat:'+tmp_plugOrg1+'.ts|' + tmp_plugin + '.ts|' + tmp_plugOrg2 + '.ts" -c copy ' + ' -bsf:a aac_adtstoasc ' + tmp_output + ' -y', 		   
@@ -121,14 +121,14 @@ switch(req.query.code) {
 				function (error, stdout, stderr) {
 					cbk(true);
 				});
-		};			
-		/*
+		};*/			
+		
 		_f['batchFile'] = function(cbk) {
 			var str = '';
 			
 			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
-			str += "file '" + tmp_plugin.replace('/tmp/', '') + "'\n";
-			str += "file '" + tmp_plugOrg2.replace('/tmp/', '') + "'\n";
+		//	str += "file '" + tmp_plugin.replace('/tmp/', '') + "'\n";
+		//	str += "file '" + tmp_plugOrg2.replace('/tmp/', '') + "'\n";
 			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
 			
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
@@ -142,7 +142,7 @@ switch(req.query.code) {
 				function (error, stdout, stderr) {
 					cbk(true);
 				});
-		};*/		
+		};		
 		
 		CP.serial(
 			_f,
