@@ -65,7 +65,7 @@ switch(req.query.code) {
 					
 					var ls = childProcess.exec('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ', 		   
 						function (error, stdout, stderr) {
-							cbk(true);
+							cbk('ffmpeg -i ' + tmp_plugOrg1 + ' -c copy -bsf:v h264_mp4toannexb -f mpegts ' + tmp_plugOrg1 + '.ts -y ');
 						});
 				}
 			});
