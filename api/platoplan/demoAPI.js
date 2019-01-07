@@ -27,7 +27,7 @@ switch(req.query.code) {
 		_f['S0'] = function(cbk) {
 			pkg.fs.stat(tmp_output, function(err, stat) {
 				if(!err) { 
-					CP.exit = 1;
+				//	CP.exit = 1;
 					cbk(tmp_output);
 				} else {
 					cbk(true);
@@ -134,7 +134,26 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-							res.send(data);
+				pkg.fs.stat(tmp_output, function(err, data1) {
+					if (err) {  write404(tmp_output + ' does not exist'); }
+					else {
+						var total = data1.size;
+						var range = req.headers.range;
+						if (range) {
+						    var parts = range.replace(/bytes=/, "").split("-");
+						    var partialstart = parts[0]; var partialend;
+						      partialend =  parts[1];
+						    var start = parseInt(partialstart, 10);
+						    var end = partialend ? parseInt(partialend, 10) : total-1;
+						    var chunksize = (end-start)+1;
+						    var file = pkg.fs.createReadStream(tmp_output);
+						     file.pipe(res);
+						} else {
+						    res.send('Need streaming player');
+						}
+					}
+				});				
+					//		res.send(data);
 				return true;	
 				pkg.fs.stat(tmp_output, function(err, data1) {
 					if (err) {  write404(tmp_output + ' does not exist'); }
