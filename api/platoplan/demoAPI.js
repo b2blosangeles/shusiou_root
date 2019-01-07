@@ -13,7 +13,7 @@ var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-		var fnPlugin = 'heating_fishing_clothes.mp4',
+		var fnPlugin = 'heating_fishing_trousers.mp4',
 		    // 'shopping_bag.mp4',
 		    plugin_video = dirn  + '/' +  fnPlugin,
 		    tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
@@ -135,28 +135,7 @@ switch(req.query.code) {
 		*/
 		CP.serial(
 			_f,
-			function(data) {
-				pkg.fs.stat(tmp_output, function(err, data1) {
-					if (err) {  write404(tmp_output + ' does not exist'); }
-					else {
-						var total = data1.size;
-						var range = req.headers.range;
-						if (range) {
-						    var parts = range.replace(/bytes=/, "").split("-");
-						    var partialstart = parts[0]; var partialend;
-						      partialend =  parts[1];
-						    var start = parseInt(partialstart, 10);
-						    var end = partialend ? parseInt(partialend, 10) : total-1;
-						    var chunksize = (end-start)+1;
-						    var file = pkg.fs.createReadStream(tmp_output);
-						     file.pipe(res);
-						} else {
-						    res.send('Need streaming player');
-						}
-					}
-				});				
-					//		res.send(data);
-				return true;	
+			function(data) {	
 				pkg.fs.stat(tmp_output, function(err, data1) {
 					if (err) {  write404(tmp_output + ' does not exist'); }
 					else {
