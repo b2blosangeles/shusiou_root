@@ -47,7 +47,9 @@ var _compViewVideo = function(me, Root) {
 						var currentTime = this.currentTime;
 						if (Math.ceil(currentTime) === breakP) {
 							this.pause();
+							this.currentTime +=1;
 							sobj.hide();
+							tobj[0].play();
 						}
 						console.log('===currentTime===' + currentTime);
 					});
@@ -56,13 +58,14 @@ var _compViewVideo = function(me, Root) {
 				var url = '/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.props.fn + 
 				    '&breakP=' + me.props.breakP + 
 				    '&breakL=' + me.props.breakL;
+				var urlad = '/api/platoplan/demoAPI.api?code=playSection&fn=shopping_bag.mp4&s=1&l=' + me.props.breakL;
 				return (<span>
 					<video id="_video_section" width="260"  controls>
 						<source src={url}/>
 						Your browser does not support the video tag.
 					</video>
 					<video id="_video_ad" width="260"  controls>
-						<source src={url}/>
+						<source src={urlad}/>
 						Your browser does not support the video tag.
 					</video>
 				</span>)
