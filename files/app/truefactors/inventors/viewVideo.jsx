@@ -41,15 +41,15 @@ var _compViewVideo = function(me, Root) {
 				var me = this;
 				setTimeout(function() {  $('#_video_section')[0].play();});				
 				return (<video id="_video_section" width="260"  controls>
-						<source src={me.props.url}/>
+						<source src={me.props.url + '&breakp=' + me.props.breakp}/>
 						Your browser does not support the video tag.
 					</video>)
 				}
 		});
-		return (<div className="container"><div className="row">
-				<div className="col-sm-12 p-5 text-center alert-success">
-					break point in  the 10th second break length 8 seconds. 
-					<ProgrammingVideo 
+		return (<div className="container  alert-success"><div className="row">
+				<div className="col-sm-12 p-3 text-center">
+					Break point in  the 10th second break length 8 seconds.<br/><br/>
+					<ProgrammingVideo breakp={10}
 					 url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.state.cVideo} />
 				</div>	
 			</div></div>)
