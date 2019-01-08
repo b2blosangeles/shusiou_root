@@ -39,11 +39,13 @@ var _compViewVideo = function(me, Root) {
 			},
 			render: function() {
 				var me = this;
-				setTimeout(function() {  
-					$('#_video_section')[0].play().bind("timeupdate", function(){
+				setTimeout(function() { 
+					var obj = $('#_video_section');
+					obj.bind("timeupdate", function(){
 						var currentTime = this.currentTime;
 						console.log('===currentTime===' + currentTime);
 					});
+					obj[0].play()
 				});
 				var url = '/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.props.fn + 
 				    '&breakP=' + me.props.breakP + 
