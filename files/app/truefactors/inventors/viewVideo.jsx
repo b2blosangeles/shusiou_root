@@ -32,9 +32,16 @@ var _compViewVideo = function(me, Root) {
 			</div>)
 	};
 	this.showProgrammingPlay = function() {
-		var ProgrammingPlay = React.createClass({
+		var ProgrammingVideo = React.createClass({
+			getInitialState: function() {
+				var me = this;
+				return {};
+			},
 			render: function() {
-				return (<span>===niu===</span>)
+				var me = this;
+				return (<span>===niu===
+					{me.props.url}	
+					</span>)
 			}
 		});
 		setTimeout(function() {
@@ -42,7 +49,8 @@ var _compViewVideo = function(me, Root) {
 		});		
 		return (
 			<div className="container">
-				<ProgrammingPlay/>
+				<ProgrammingVideo url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
+								me.state.cVideo} />
 				<div className="row">
 					<div className="col-sm-12 p-5 text-center alert-success">	
 					<video id="_video_section" width="260"  controls>
