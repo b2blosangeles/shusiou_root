@@ -9,7 +9,7 @@ var list = [],
     fn = (req.query.fn) ? req.query.fn : 'HEATING_JACKET.mp4',
     file_video = dirn  + '/' +  fn,
     breakP = (req.query.breakP) ? req.query.breakP : 10,
-    breakL = (req.query.breakL:) ? req.query.breakL : 10;
+    breakL = (req.query.breakL) ? req.query.breakL : 10;
     
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
