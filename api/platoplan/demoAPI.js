@@ -7,16 +7,17 @@ function write404(msg) {
 var list = [],
     dirn = env.root_path + '/demo_videos',
     fn = (req.query.fn) ? req.query.fn : 'HEATING_JACKET.mp4',
-    file_video = dirn  + '/' +  fn;
+    file_video = dirn  + '/' +  fn,
+    breakP = (req.query.breakP) ? req.query.breakP : 10,
 
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-		var tmp_plugOrg1 = '/tmp/script_plugin1_' + fn,
-		    tmp_plugOrg2 = '/tmp/script_plugin2_' + fn,
-		    tmp_combine = '/tmp/script_combine_' + fn + '.txt',
-		    tmp_output = '/tmp/script_combine_' + fn;
+		var tmp_plugOrg1 = '/tmp/script_plugin1_' + breakP + '_' + fn,
+		    tmp_plugOrg2 = '/tmp/script_plugin2_' + breakP + '_' + fn,
+		    tmp_combine = '/tmp/script_combine_' + breakP + '_' + fn + '.txt',
+		    tmp_output = '/tmp/script_combine_' + breakP + '_' + fn;
 	
 		
 		var CP = new pkg.crowdProcess();
@@ -47,7 +48,7 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugOrg1);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 1 + ' -t ' + 10 + ' -c copy ' + tmp_plugOrg1 +' -y ', 		   
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 0 + ' -t ' + breakP + ' -c copy ' + tmp_plugOrg1 +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
@@ -59,9 +60,9 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugOrg2);
 				} else {
 					var childProcess = require('child_process');
-					var t = CP.data.videoLength - 81;
+					var t = CP.data.videoLength - parseInt(breakP);
 					var ls = childProcess.exec('ffmpeg  -i ' + file_video + 
-						' -ss ' + 81 + ' -t ' + t + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
+						' -ss ' + breakP + ' -t ' + t + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
