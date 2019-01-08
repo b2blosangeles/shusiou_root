@@ -59,7 +59,8 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugOrg2);
 				} else {
 					var childProcess = require('child_process');
-					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss '+ 81 + ' -t ' + (CP.data.videoLength - 81) + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
+					// (CP.data.videoLength - 81)
+					var ls = childProcess.exec('ffmpeg  -i ' + file_video + ' -ss ' + 81 + ' -t ' + 20 + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
