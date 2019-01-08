@@ -39,10 +39,15 @@ var _compViewVideo = function(me, Root) {
 			},
 			render: function() {
 				var me = this;
+				var breakP = parseInt(me.props.breakP);
 				setTimeout(function() { 
-					var obj = $('#_video_section');
-					obj.bind("timeupdate", function(){
+					var sobj = $('#_video_section');
+					sobj.bind("timeupdate", function(){
 						var currentTime = this.currentTime;
+						if (Math.ceil(currentTime) === breakP) {
+							this.pause();
+							sobj.hide();
+						}
 						console.log('===currentTime===' + currentTime);
 					});
 					obj[0].play()
