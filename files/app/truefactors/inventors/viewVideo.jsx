@@ -77,7 +77,7 @@ var _compViewVideo = function(me, Root) {
 				</span>)
 				}
 		});
-		var fn = me.state.cVideo, breakL = 8, breakP = 20;
+		var fn = me.state.cVideo, breakL = 12, breakP = 20;
 		return (<div className="container  alert-success" style={{'min-height' : '48em'}}><div className="row">
 				<div className="col-sm-12 p-3 text-center">
 					Break at the {breakP}th second replaced with {breakL} seconds advertising or promotion.<br/><br/>
