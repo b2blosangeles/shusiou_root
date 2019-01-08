@@ -48,6 +48,7 @@ var _compViewVideo = function(me, Root) {
 		});
 		return (<div className="container"><div className="row">
 				<div className="col-sm-12 p-5 text-center alert-success">
+					break point in  the 10th second break length 8 seconds. 
 					<ProgrammingVideo 
 					 url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.state.cVideo} />
 				</div>	
