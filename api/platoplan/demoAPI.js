@@ -10,7 +10,8 @@ var list = [],
     file_video = dirn  + '/' +  fn,
     breakP = (req.query.breakP) ? req.query.breakP : 10,
     breakL = (req.query.breakL) ? req.query.breakL : 10;
-
+res.send(env.root_path + '/package/folderP/folderP');
+return true;
 var folderP = require(env.root_path + '/package/folderP/folderP');
     
 var CP = new pkg.crowdProcess();
