@@ -43,7 +43,13 @@ var _compViewVideo = function(me, Root) {
 				setTimeout(function() { 
 					var sobj = $('#_video_section'), tobj = $('#_video_ad');
 					tobj.hide();
-					sobj.bind("timeupdate", function(){
+					tobj.bind('ended', function() {
+						this.currentTime = 0;
+						tobj.hide();
+						sobj.show();
+						sobj[0].play();
+					});
+					sobj.bind('timeupdate', function(){
 						var currentTime = this.currentTime;
 						if (Math.ceil(currentTime) === breakP) {
 							this.pause();
