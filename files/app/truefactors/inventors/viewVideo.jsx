@@ -40,7 +40,11 @@ var _compViewVideo = function(me, Root) {
 			render: function() {
 				var me = this;
 				return (<span>===niu===
-					{me.props.url}	
+				<video id="_video_section" width="260"  controls>
+						<source src={me.props.url}/>
+						Your browser does not support the video tag.
+					</video>
+						
 					</span>)
 			}
 		});
@@ -49,10 +53,12 @@ var _compViewVideo = function(me, Root) {
 		});		
 		return (
 			<div className="container">
-				<ProgrammingVideo url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
-								me.state.cVideo} />
+				
 				<div className="row">
-					<div className="col-sm-12 p-5 text-center alert-success">	
+					<div className="col-sm-12 p-5 text-center alert-success">
+						<ProgrammingVideo url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
+								me.state.cVideo} />
+						<hr/>
 					<video id="_video_section" width="260"  controls>
 						<source src={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
 								me.state.cVideo}/>
