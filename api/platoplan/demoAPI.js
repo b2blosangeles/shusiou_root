@@ -44,7 +44,7 @@ switch(req.query.code) {
 					cbk(parseInt(videoLength));
 				});
 		};
-		_f['oraginA_1'] = function(cbk) {
+		_f['oraginA'] = function(cbk) {
 			pkg.fs.stat(tmp_plugOrg1, function(err, stat) {
 				if(!err) { cbk(tmp_plugOrg1);
 				} else {
