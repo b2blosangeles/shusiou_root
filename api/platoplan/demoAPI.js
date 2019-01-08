@@ -15,10 +15,10 @@ var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
-		var tmp_plugOrg1 = '/tmp/script_plugin1_' + breakP + '_' + fn,
-		    tmp_plugOrg2 = '/tmp/script_plugin2_' + breakP + '_' + fn,
-		    tmp_combine = '/tmp/script_combine_' + breakP + '_' + fn + '.txt',
-		    tmp_output = '/tmp/script_combine_' + breakP + '_' + fn;
+		var tmp_plugOrg1 = '/tmp/script_plugin1_' + breakP + 'L' + breakL + '_' + fn,
+		    tmp_plugOrg2 = '/tmp/script_plugin2_' + breakP + 'L' + breakL + '_' + fn,
+		    tmp_combine = '/tmp/script_combine_' + breakP + 'L' + breakL + '_' + fn + '.txt',
+		    tmp_output = '/tmp/script_combine_' + breakP + 'L' + breakL + '_' + fn;
 	
 		
 		var CP = new pkg.crowdProcess();
