@@ -50,7 +50,7 @@ var _compViewVideo = function(me, Root) {
 						}
 						console.log('===currentTime===' + currentTime);
 					});
-					obj[0].play()
+					sobj[0].play()
 				});
 				var url = '/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.props.fn + 
 				    '&breakP=' + me.props.breakP + 
