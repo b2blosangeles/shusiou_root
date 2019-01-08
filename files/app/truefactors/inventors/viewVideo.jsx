@@ -39,34 +39,19 @@ var _compViewVideo = function(me, Root) {
 			},
 			render: function() {
 				var me = this;
-				return (<span>===niu===
-				<video id="_video_section" width="260"  controls>
+				setTimeout(function() {  $('#_video_section')[0].play();});				
+				return (<video id="_video_section" width="260"  controls>
 						<source src={me.props.url}/>
 						Your browser does not support the video tag.
-					</video>
-						
-					</span>)
-			}
+					</video>)
+				}
 		});
-		setTimeout(function() {
-			$('#_video_section')[0].play();
-		});		
-		return (
-			<div className="container">
-				
-				<div className="row">
-					<div className="col-sm-12 p-5 text-center alert-success">
-						<ProgrammingVideo url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
-								me.state.cVideo} />
-						<hr/>
-					<video id="_video_section" width="260"  controls>
-						<source src={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + 
-								me.state.cVideo}/>
-						Your browser does not support the video tag.
-					</video>
-					</div>	
-				</div>
-			</div>)
+		return (<div className="container"><div className="row">
+				<div className="col-sm-12 p-5 text-center alert-success">
+					<ProgrammingVideo 
+					 url={'/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.state.cVideo} />
+				</div>	
+			</div></div>)
 	};
 
 	this.showSection = function(s, l) {
