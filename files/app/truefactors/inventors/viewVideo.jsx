@@ -80,7 +80,7 @@ var _compViewVideo = function(me, Root) {
 		var fn = me.state.cVideo, breakL = 8, breakP = 20;
 		return (<div className="container  alert-success"><div className="row">
 				<div className="col-sm-12 p-3 text-center">
-					Break at the {breakP}th second replaced with {breakL} seconds advertising.<br/><br/>
+					Break at the {breakP}th second replaced with {breakL} seconds advertising or promotion.<br/><br/>
 					<ProgrammingVideo breakP={breakP} breakL={breakL} fn={fn} />
 				</div>	
 			</div></div>)
