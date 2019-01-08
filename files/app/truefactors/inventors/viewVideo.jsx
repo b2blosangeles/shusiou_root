@@ -32,11 +32,17 @@ var _compViewVideo = function(me, Root) {
 			</div>)
 	};
 	this.showProgrammingPlay = function() {
+		var ProgrammingPlay = React.createClass({
+			render: function() {
+				return (<span>===niu===</span>)
+			}
+		});
 		setTimeout(function() {
 			$('#_video_section')[0].play();
 		});		
 		return (
 			<div className="container">
+				<ProgrammingPlay/>
 				<div className="row">
 					<div className="col-sm-12 p-5 text-center alert-success">	
 					<video id="_video_section" width="260"  controls>
