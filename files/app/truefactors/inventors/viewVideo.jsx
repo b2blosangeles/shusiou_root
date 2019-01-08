@@ -49,10 +49,11 @@ var _compViewVideo = function(me, Root) {
 					</video>)
 				}
 		});
+		var fn = me.state.cVideo, breakL = 6, breakP = 10;
 		return (<div className="container  alert-success"><div className="row">
 				<div className="col-sm-12 p-3 text-center">
-					Break point at the 10th second with length 8 seconds.<br/><br/>
-					<ProgrammingVideo breakP={10} breakL={6} fn={me.state.cVideo} />
+					Break point at the {breakP}th second with length {breakL} seconds.<br/><br/>
+					<ProgrammingVideo breakP={breakP} breakL={breakL} fn={fn} />
 				</div>	
 			</div></div>)
 	};
