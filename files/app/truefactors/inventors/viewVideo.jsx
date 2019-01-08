@@ -49,6 +49,7 @@ var _compViewVideo = function(me, Root) {
 							this.pause();
 							this.currentTime +=1;
 							sobj.hide();
+							tobj.show();
 							tobj[0].play();
 						}
 						console.log('===currentTime===' + currentTime);
