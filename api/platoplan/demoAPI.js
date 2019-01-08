@@ -10,19 +10,25 @@ var list = [],
     file_video = dirn  + '/' +  fn,
     breakP = (req.query.breakP) ? req.query.breakP : 10,
     breakL = (req.query.breakL) ? req.query.breakL : 10;
+
+var folderP = require(env.root_path + './package/folderP/folderP');
     
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
-		var tmpfn = '/tmp/script_' + fn;
-		var tmp_plugOrg1 = '/tmp/script_plugin1_' + breakP + 'L' + breakL + '_' + fn,
-		    tmp_plugOrg2 = '/tmp/script_plugin2_' + breakP + 'L' + breakL + '_' + fn,
-		    tmp_combine = '/tmp/script_combine_' + breakP + 'L' + breakL + '_' + fn + '.txt',
-		    tmp_output = '/tmp/script_combine_' + breakP + 'L' + breakL + '_' + fn;
+		var tmpfn = '/var/tmpp/script_' + fn;
+		var tmp_plugOrg1 = '/var/tmpp/script_plugin1_' + breakP + 'L' + breakL + '_' + fn,
+		    tmp_plugOrg2 = '/var/tmpp/script_plugin2_' + breakP + 'L' + breakL + '_' + fn,
+		    tmp_combine = '/var/tmpp/script_combine_' + breakP + 'L' + breakL + '_' + fn + '.txt',
+		    tmp_output = '/var/tmpp/script_combine_' + breakP + 'L' + breakL + '_' + fn;
 	
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {};
+		_f['fp'] = function(cbk) { 
+			var fp = new folderP();
+			fp.build('/var/tmpp/', function() { cbk(true);});
+		};		
 		_f['S0'] = function(cbk) {
 			pkg.fs.stat(tmp_output, function(err, stat) {
 				if(!err) { 
@@ -73,8 +79,8 @@ switch(req.query.code) {
 		};
 		_f['batchFile'] = function(cbk) {
 			var str = '';
-			str +=  "file '" + tmp_plugOrg1.replace('/tmp/', '') + "'\n";
-			str +=  "file '" + tmp_plugOrg2.replace('/tmp/', '') + "'\n";
+			str +=  "file '" + tmp_plugOrg1.replace('/var/tmpp/', '') + "'\n";
+			str +=  "file '" + tmp_plugOrg2.replace('/var/tmpp/', '') + "'\n";
 			
 			pkg.fs.writeFile(tmp_combine, str, function(err) {
 				cbk(tmp_combine);
@@ -119,10 +125,14 @@ switch(req.query.code) {
 	case 'cutImage':		
 		var s = (req.query.s) ? req.query.s : 10, 
 		    w='FULL';
-		var tmpfn = '/tmp/cut_' + s + '_' + fn + '.png';
+		var tmpfn = '/var/tmpp/cut_' + s + '_' + fn + '.png';
 
 		var CP = new pkg.crowdProcess();
-		var _f = {};		
+		var _f = {};
+		_f['fp'] = function(cbk) { 
+			var fp = new folderP();
+			fp.build('/var/tmpp/', function() { cbk(true);});
+		};		
 		_f['S2'] = function(cbk) {
 			pkg.fs.stat(tmpfn, function(err, stat) {
 				if(!err) { cbk(tmpfn);
@@ -147,10 +157,14 @@ switch(req.query.code) {
 	case 'playSection':
 		var l = (req.query.l) ? req.query.l : 10, 
 		    s = (req.query.s) ? req.query.s : 10,
-		    tmpfn = '/tmp/sec_' + s + '_' + l + '_' + fn;
+		    tmpfn = '/var/tmpp/sec_' + s + '_' + l + '_' + fn;
 
 		var CP = new pkg.crowdProcess();
 		var _f = {};
+		_f['fp'] = function(cbk) { 
+			var fp = new folderP();
+			fp.build('/var/tmpp/', function() { cbk(true);});
+		};		
 		_f['S2'] = function(cbk) {
 
 			pkg.fs.stat(tmpfn, function(err, stat) {
