@@ -60,7 +60,10 @@ var _compViewVideo = function(me, Root) {
 
 	this.showSection = function(s, l) {
 		setTimeout(function() {
-			$('#_video_section')[0].play();
+			$('#_video_section')[0].play().bind("timeupdate", function(){
+				var currentTime = this.currentTime;
+				console.log('===currentTime===' + currentTime);
+			});
 		});		
 		return (
 			<div className="container">
