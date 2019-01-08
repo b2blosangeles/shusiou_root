@@ -41,7 +41,8 @@ var _compViewVideo = function(me, Root) {
 				var me = this;
 				var breakP = parseInt(me.props.breakP);
 				setTimeout(function() { 
-					var sobj = $('#_video_section');
+					var sobj = $('#_video_section'), tobj = $('#_video_ad');
+					tobj.hide();
 					sobj.bind("timeupdate", function(){
 						var currentTime = this.currentTime;
 						if (Math.ceil(currentTime) === breakP) {
@@ -55,10 +56,16 @@ var _compViewVideo = function(me, Root) {
 				var url = '/api/platoplan/demoAPI.api?code=videoByScript&fn=' + me.props.fn + 
 				    '&breakP=' + me.props.breakP + 
 				    '&breakL=' + me.props.breakL;
-				return (<video id="_video_section" width="260"  controls>
+				return (<span>
+					<video id="_video_section" width="260"  controls>
 						<source src={url}/>
 						Your browser does not support the video tag.
-					</video>)
+					</video>
+					<video id="_video_ad" width="260"  controls>
+						<source src={url}/>
+						Your browser does not support the video tag.
+					</video>
+				</span>)
 				}
 		});
 		var fn = me.state.cVideo, breakL = 6, breakP = 10;
@@ -75,17 +82,15 @@ var _compViewVideo = function(me, Root) {
 			$('#_video_section')[0].play();		
 		});		
 		return (
-			<div className="container">
-				<div className="row">
-					<div className="col-sm-12 p-5 text-center alert-success">	
-					<video id="_video_section" width="260"  controls>
-						<source src={'/api/platoplan/demoAPI.api?code=playSection&fn=' + me.state.cVideo
-						 + '&s=' + s + '&l=' + l}/>
-						Your browser does not support the video tag.
-					</video>
-					</div>	
-				</div>
-			</div>)
+		<div className="container"><div className="row">
+			<div className="col-sm-12 p-5 text-center alert-success">	
+			<video id="_video_section" width="260"  controls>
+				<source src={'/api/platoplan/demoAPI.api?code=playSection&fn=' + me.state.cVideo
+				 + '&s=' + s + '&l=' + l}/>
+				Your browser does not support the video tag.
+			</video>
+			</div>	
+		</div></div>)
 	};	
 	this.showSubModule = function () {
 		switch(me.state.subModule) {
