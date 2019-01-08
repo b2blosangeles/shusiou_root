@@ -58,7 +58,6 @@ var _compViewVideo = function(me, Root) {
 							tobj.show();
 							tobj[0].play();
 						}
-						console.log('===currentTime===' + currentTime);
 					});
 					sobj[0].play()
 				});
