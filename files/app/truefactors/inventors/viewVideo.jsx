@@ -77,7 +77,7 @@ var _compViewVideo = function(me, Root) {
 				</span>)
 				}
 		});
-		var fn = me.state.cVideo, breakL = 6, breakP = 10;
+		var fn = me.state.cVideo, breakL = 8, breakP = 20;
 		return (<div className="container  alert-success"><div className="row">
 				<div className="col-sm-12 p-3 text-center">
 					Break point at the {breakP}th second with length {breakL} seconds.<br/><br/>
