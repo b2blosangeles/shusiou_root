@@ -70,7 +70,7 @@ var _compViewVideo = function(me, Root) {
 						<source src={url}/>
 						Your browser does not support the video tag.
 					</video>
-					<video id="_video_ad" width="260"  controls>
+					<video id="_video_ad" width="260">
 						<source src={urlad}/>
 						Your browser does not support the video tag.
 					</video>
