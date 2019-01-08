@@ -9,7 +9,8 @@ var list = [],
     fn = (req.query.fn) ? req.query.fn : 'HEATING_JACKET.mp4',
     file_video = dirn  + '/' +  fn,
     breakP = (req.query.breakP) ? req.query.breakP : 10,
-
+    breakL = (req.query.breakL:) ? req.query.breakL : 10,
+    
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoByScript':
@@ -60,9 +61,10 @@ switch(req.query.code) {
 				if(!err) { cbk(tmp_plugOrg2);
 				} else {
 					var childProcess = require('child_process');
-					var t = CP.data.videoLength - parseInt(breakP);
+					var ss = parseInt(breakP) + parseInt(breakL)
+					var t = parseInt(CP.data.videoLength) - ss;
 					var ls = childProcess.exec('ffmpeg  -i ' + file_video + 
-						' -ss ' + breakP + ' -t ' + t + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
+						' -ss ' + ss + ' -t ' + t + ' -c copy ' + tmp_plugOrg2 +' -y ', 		   
 						function (error, stdout, stderr) {
 							cbk(true);
 						});
