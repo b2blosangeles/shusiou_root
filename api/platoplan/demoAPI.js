@@ -11,7 +11,7 @@ var list = [],
     breakP = (req.query.breakP) ? req.query.breakP : 10,
     breakL = (req.query.breakL) ? req.query.breakL : 10;
 
-var folderP = require(env.root_path + './package/folderP/folderP');
+var folderP = require(env.root_path + '/package/folderP/folderP');
     
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
