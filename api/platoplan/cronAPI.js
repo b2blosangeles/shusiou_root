@@ -30,11 +30,11 @@ _f['ORG'] = function(cbk) {
 	});	
 }
 _f['TAG'] = function(cbk) {
-	var list = [];
+	var list = {};
 	pkg.fs.readdir(dirn_formal, (err, files) => {
 		files.forEach(file => {
 			if (/\.mp4$/.test(file)) {
-				list.push(file);
+				list[file] = 1;
 			}
 		});
 		cbk(list);
@@ -45,7 +45,7 @@ _f['REORG'] = function(cbk) {
 	    listTAG = CP.data.TAG;
 	
 	for (var i=0; i < listORG.length; i++) {
-		if (listTAG.indexOf(listORG[i]) == -1) {
+		if (!listTAG[listORG[i]) {
 			cbk(listORG[i]);
 			break;
 		}
