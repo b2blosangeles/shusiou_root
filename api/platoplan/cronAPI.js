@@ -6,8 +6,8 @@ function write404(msg) {
 
 var CP = new pkg.crowdProcess();
 var folderP = require(env.root_path + '/package/folderP/folderP');
-var dirn = env.root_path + '/demo_videos', 
-    dirn_formal = env.root_path + '/formal_demo_videos';
+var dirn = env.root_path + '/demo_videos/', 
+    dirn_formal = env.root_path + '/formal_demo_videos/';
 
 var _f = {};
 
@@ -52,7 +52,22 @@ _f['REORG'] = function(cbk) {
 	}
 	cbk(false);
 }
-
+_f['TRANSFER'] = function(cbk) {
+	var fn = CP.data.REORG;
+	if (!fn) {
+		cbk(false);
+		return true;
+	}
+	var str = 'ffmpeg -i ' + dirn + fn + ' -vf ' +
+	    	'"scale=750:1334:force_original_aspect_ratio=decrease,pad=750:1334:(ow-iw)/2:(oh-ih)/2" ' +
+		' ' + dirn_formal + fn + ';
+	
+	var childProcess = require('child_process');
+	var ls = childProcess.exec(str, 		   
+		function (error, stdout, stderr) {
+			cbk(true);
+		});
+}
 CP.serial(
 	_f,
 	function(data) {	
