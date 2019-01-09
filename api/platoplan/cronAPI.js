@@ -37,9 +37,7 @@ _f['TAG'] = function(cbk) {
 CP.serial(
 	_f,
 	function(data) {	
-		pkg.fs.stat(tmp_output, function(err, data) {
-			res.send(data);
-		});
+		res.send(data);
 	}, 60000);	
 
 function write404(msg) {
