@@ -1,3 +1,9 @@
+function write404(msg) {
+	res.writeHead(404);
+	res.write(msg);
+	res.end();	
+}
+
 var CP = new pkg.crowdProcess();
 var folderP = require(env.root_path + '/package/folderP/folderP');
 var dirn = env.root_path + '/demo_videos', 
@@ -34,14 +40,22 @@ _f['TAG'] = function(cbk) {
 		cbk(list);
 	});	
 }
+_f['REORG'] = function(cbk) {
+	var listORG = CP.data.ORG,
+	    listTAG = CP.data.TAG;
+	for (var i=0; i < listORG.length; i++) {
+		if (listTAG.indexOf(listORG[i]) === -1) {
+			cbk(listORG[i]);
+			break;
+		}
+	}
+	cbk(false);
+}
+
 CP.serial(
 	_f,
 	function(data) {	
 		res.send(data);
 	}, 60000);	
 
-function write404(msg) {
-	res.writeHead(404);
-	res.write(msg);
-	res.end();	
-}
+
