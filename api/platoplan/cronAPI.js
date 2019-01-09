@@ -60,7 +60,7 @@ _f['TRANSFER'] = function(cbk) {
 	}
 	var str = 'ffmpeg -i ' + dirn + fn + ' -vf ' +
 	    	'"scale=750:1334:force_original_aspect_ratio=decrease,pad=750:1334:(ow-iw)/2:(oh-ih)/2" ' +
-		' ' + dirn_formal + fn + ';
+		' ' + dirn_formal + fn + ' -y';
 	
 	var childProcess = require('child_process');
 	var ls = childProcess.exec(str, 		   
