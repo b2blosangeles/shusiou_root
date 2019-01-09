@@ -73,6 +73,6 @@ CP.serial(
 	_f,
 	function(data) {	
 		res.send(data);
-	}, 60000);	
+	}, 600000);	
 
 
