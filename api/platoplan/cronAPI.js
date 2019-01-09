@@ -43,8 +43,9 @@ _f['TAG'] = function(cbk) {
 _f['REORG'] = function(cbk) {
 	var listORG = CP.data.ORG,
 	    listTAG = CP.data.TAG;
+	
 	for (var i=0; i < listORG.length; i++) {
-		if (listTAG.indexOf(listORG[i]) === -1) {
+		if (listTAG.indexOf(listORG[i]) == -1) {
 			cbk(listORG[i]);
 			break;
 		}
