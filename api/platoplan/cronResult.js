@@ -40,18 +40,6 @@ _f['TAG'] = function(cbk) {
 		cbk(list);
 	});	
 }
-_f['REORG'] = function(cbk) {
-	var listORG = CP.data.ORG,
-	    listTAG = CP.data.TAG;
-	
-	for (var i=0; i < listORG.length; i++) {
-		if (!listTAG[listORG[i]]) {
-			cbk(listORG[i]);
-			return true;
-		}
-	}
-	cbk(false);
-}
 CP.serial(
 	_f,
 	function(data) {	
