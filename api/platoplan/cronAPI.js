@@ -11,7 +11,7 @@ _f['fp'] = function(cbk) {
 		cbk(true);
 	});
 };	
-f['ORG'] = function(cbk) {
+_f['ORG'] = function(cbk) {
 	var list = [];
 	pkg.fs.readdir(dirn, (err, files) => {
 		files.forEach(file => {
@@ -23,7 +23,7 @@ f['ORG'] = function(cbk) {
 		cbk(list);
 	});	
 }
-f['TAG'] = function(cbk) {
+_f['TAG'] = function(cbk) {
 	var list = [];
 	pkg.fs.readdir(dirn_formal, (err, files) => {
 		files.forEach(file => {
