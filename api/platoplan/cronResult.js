@@ -3,6 +3,11 @@ function write404(msg) {
 	res.write(msg);
 	res.end();	
 }
+var CP = new pkg.crowdProcess();
+var folderP = require(env.root_path + '/package/folderP/folderP');
+var dirn = env.root_path + '/demo_videos/', 
+    dirn_formal = env.root_path + '/formal_demo_videos/';
+
 switch(req.query.code) {
 	case 'clean':	
 		var str = 'cd ' + dirn_formal + ' && rm *.* -y';
@@ -12,12 +17,7 @@ switch(req.query.code) {
 				res.send(dirn_formal + ' Cleaned');
 			});
 		break;
-	default :	
-		var CP = new pkg.crowdProcess();
-		var folderP = require(env.root_path + '/package/folderP/folderP');
-		var dirn = env.root_path + '/demo_videos/', 
-		    dirn_formal = env.root_path + '/formal_demo_videos/';
-
+	default :
 		var _f = {};
 
 		_f['fp'] = function(cbk) { 
