@@ -12,7 +12,13 @@ var list = [],
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'videoInfo':
-		res.send('videoInfo');
+		var str = 'ffmpeg -i ' + file_video;
+		var childProcess = require('child_process');
+		var ls = childProcess.exec(str, 		   
+			function (error, stdout, stderr) {
+				res.send('videoInfoA');
+			});		
+		
 		break;
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
