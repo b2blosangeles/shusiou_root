@@ -11,6 +11,9 @@ var list = [],
 
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
+	case 'videoInfo':
+		res.send('videoInfo');
+		break;
 	case 'videoByScript':
 		var tmpfn = '/tmp/script_' + fn;
 		var fnPlugin =  'shopping_bag.mp4',
