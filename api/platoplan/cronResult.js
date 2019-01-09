@@ -18,7 +18,7 @@ switch(req.query.code) {
 			});
 		break;
 	case 'playVideo' :
-		var file_video = (req.query.fn) ? req.query.fn : 'HEATING_JACKET.mp4',
+		var file_video = dirn_formal + ((req.query.fn) ? req.query.fn : 'HEATING_JACKET.mp4'),
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
