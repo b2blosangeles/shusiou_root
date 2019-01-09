@@ -47,7 +47,7 @@ _f['REORG'] = function(cbk) {
 	for (var i=0; i < listORG.length; i++) {
 		if (!listTAG[listORG[i]) {
 			cbk(listORG[i]);
-			break;
+			return true;
 		}
 	}
 	cbk(false);
