@@ -20,7 +20,7 @@ switch(req.query.code) {
 				if  (stdout.match(/stereo/)) {
 					res.send('==matched==');
 				} else {
-					res.send('==not matched==');
+					res.send('==not matched==' + typeof stdout);
 				}
 				
 			});		
