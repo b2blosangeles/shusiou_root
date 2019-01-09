@@ -60,7 +60,7 @@ _f['TRANSFER'] = function(cbk) {
 	}
 	
 	var str = 'ffmpeg -i ' + dirn + fn + 
-	    	' -c:v libx264 -r 60 -c:a aac -ar 48000 -b:a 160k -af "pan=stereo|c0=c0|c1=c0" -strict experimental  ' +
+	    	' -c:v libx264 -r 60 -c:a aac -ar 48000 -b:a 160k -af "pan=stereo|c0=c0|c1=c0" ' +
 		' ' + dirn_formal + fn + ' -y';
 	
 	var childProcess = require('child_process');
