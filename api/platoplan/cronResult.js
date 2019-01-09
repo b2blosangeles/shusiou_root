@@ -10,7 +10,7 @@ var dirn = env.root_path + '/demo_videos/',
 
 switch(req.query.code) {
 	case 'clean':	
-		var str = 'cd ' + dirn_formal + ' && rm *.* -y';
+		var str = 'cd ' + dirn_formal + ' && rm *.*';
 		var childProcess = require('child_process');
 		var ls = childProcess.exec(str, 		   
 			function (error, stdout, stderr) {
