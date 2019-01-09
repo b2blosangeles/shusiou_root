@@ -1,6 +1,7 @@
 var CP = new pkg.crowdProcess();
 var folderP = require(env.root_path + '/package/folderP/folderP');
-var dirn = env.root_path + '/demo_videos', dirn_formal = env.root_path + '/formal_demo_videos',
+var dirn = env.root_path + '/demo_videos', 
+    dirn_formal = env.root_path + '/formal_demo_videos';
 
 var _f = {};
 
