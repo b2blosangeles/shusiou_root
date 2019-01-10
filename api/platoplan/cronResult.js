@@ -40,7 +40,7 @@ switch(req.query.code) {
 				}
 			}
 		});		
-		
+		break;
 	default :
 		var _f = {};
 
