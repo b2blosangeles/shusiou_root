@@ -124,7 +124,8 @@ switch(req.query.code) {
 		break;
 	case 'cutImage':		
 		var s = (req.query.s) ? req.query.s : 10, 
-		    w='FULL';
+		    w='FULL',
+		    str = '';
 		var tmpfn = '/var/tmpp/cut_' + s + '_' + fn + '.png';
 
 		var CP = new pkg.crowdProcess();
@@ -137,14 +138,14 @@ switch(req.query.code) {
 			pkg.fs.stat(tmpfn, function(err, stat) {
 				if(!err) { cbk(tmpfn);
 				} else {
-					if (w != 'FULL') s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
-					else s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
-					s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:100, pad=in_h*16/9:ih:(ow-iw)/2"  -preset ultrafast ' + tmpfn + ' -y ';
+					if (w != 'FULL') str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
+					else str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
+					str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:100, pad=in_h*16/9:ih:(ow-iw)/2"  -preset ultrafast ' + tmpfn + ' -y ';
 					//ffmpeg -ss 10 -i d.mp4 -vf scale="-1:100,pad=in_h*4/3:ih:(ow-iw)/2"   -preset ultrafast d.png -y
 					var childProcess = require('child_process');
-					var ls = childProcess.exec(s, 		   
+					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
-						cbk(s);
+						cbk(str);
 						// cbk(true);
 					});
 				}
