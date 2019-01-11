@@ -144,7 +144,8 @@ switch(req.query.code) {
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(s, 		   
 					function (error, stdout, stderr) {
-						cbk(true);
+						cbk(s);
+						// cbk(true);
 					});
 				}
 			});
