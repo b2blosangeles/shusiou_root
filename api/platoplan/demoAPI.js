@@ -145,8 +145,7 @@ switch(req.query.code) {
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
-						cbk(str);
-						// cbk(true);
+						cbk(true);
 					});
 				}
 			});
@@ -154,8 +153,7 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.send(data);
-				// res.sendFile(tmpfn);
+				res.sendFile(tmpfn);
 			}, 3000);			
 		
 		break;
