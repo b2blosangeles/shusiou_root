@@ -140,6 +140,7 @@ switch(req.query.code) {
 					if (w != 'FULL') s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
 					else s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
 					s = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:100, pad=in_h*16/9:ih:(ow-iw)/2"  -preset ultrafast ' + tmpfn + ' -y ';
+					ffmpeg -ss 10 -i d.mp4 -vf scale="-1:100,pad=in_h*4/3:ih:(ow-iw)/2"   -preset ultrafast d.png -y
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(s, 		   
 					function (error, stdout, stderr) {
@@ -151,7 +152,8 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.sendFile(tmpfn);
+				res.send(data);
+				// res.sendFile(tmpfn);
 			}, 3000);			
 		
 		break;
