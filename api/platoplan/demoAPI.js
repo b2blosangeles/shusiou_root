@@ -140,7 +140,7 @@ switch(req.query.code) {
 				} else {
 					if (w != 'FULL') str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
 					else str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
-					str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:100, pad=in_h*4/3:ih:(ow-iw)/2:color=transparent"  -preset ultrafast ' + tmpfn + ' -y ';
+					str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:100, pad=in_h*4/3:ih:(ow-iw)/2:color=#000000"  -preset ultrafast ' + tmpfn + ' -y ';
 					//ffmpeg -ss 10 -i d.mp4 -vf scale="-1:100,pad=in_h*4/3:ih:(ow-iw)/2"   -preset ultrafast d.png -y
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
