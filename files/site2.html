@@ -1,36 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="robots" content="nofollow" />
-    <title>Plato Plan</title>
-    <head>
-    <!--link href="https://master1_dev.shusiou.win/css/bootstrap.3.3.7/Bootstrap.3.3.7.css" rel="stylesheet"-->
-    <link rel="stylesheet"  href="/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
-    <link rel="stylesheet"  href="/package/PlatoPlan.min.css" rel="stylesheet"> 
-    <script src="/package/PlatoPlan.min.jsx"></script>
-    <script src="/js/socket.io/1.7.3/socket.io.min.js"></script>
-    <script>
-      
-      var _loadingITV = setInterval(function() {
-            if (!$ || !$.ReactPlugin) return true;
-            clearInterval(_loadingITV);
-            $.ReactPlugin({
-                extend:{
-                         includes : [
-                           'https://dev.shusiou.win/app/truefactors/_global.jsx',
-                           'https://dev.shusiou.win/app/truefactors/_commLib.jsx',
-                           'https://dev.shusiou.win/app/truefactors/_asyncModule.jsx',
-                           'https://dev.shusiou.win/app/truefactors/_commUI.jsx'
-                         ],
-                         controller : 'https://dev.shusiou.win/app/truefactors/controller.jsx',
-                         cacheTime : 1000
-                 },
-                 master: '//master1_dev.shusiou.win/api/DVCHub.api?tm=' + new Date().getTime(), 
-                 viewPoint : document.body});
-      });
-    </script>
-  </head>
-  <body>
-  </body>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
+	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
+	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+</head>
+
+<body>
+	...content goes here...
+</body>
 </html>
