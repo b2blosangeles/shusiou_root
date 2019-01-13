@@ -27,5 +27,5 @@ CP.serial(
      _f,
      function(data) {	
          res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
-     }, 60000);
+     }, 300000);
 
