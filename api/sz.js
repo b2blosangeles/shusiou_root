@@ -1,6 +1,3 @@
-console.log('bu niuyy');
-console.log('---req.files.filename--->');
-
 var writeStream = pkg.fs.createWriteStream('/var/qalet/formal_demo_videos/outputp.mov');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var busboy = new Busboy({ headers: req.headers });
