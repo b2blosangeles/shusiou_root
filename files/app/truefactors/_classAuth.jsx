@@ -2,7 +2,7 @@ React.createClass({
 	/* --- this version do setInterval only need, no ever last setInterval */
 	getInitialState: function() {
 		var me = this;
-		return {_auth :  localStorage.getItem('_auth'), info:'b2blosangeles'};
+		return {_auth : (localStorage.getItem('_auth')) ? JSON.parse(localStorage.getItem('_auth')) : null}
 	},
 	componentDidMount : function() {
 		var me = this;
@@ -61,17 +61,10 @@ React.createClass({
 		};
 		Root.overLay.popup(popupSetting);		
 	},	
-	doAuth : function() {
-		/*<span>
-				<button type="button" className="btn btn-success"  
-					onClick={me.signInAuth.bind(me, Root)}>Sign In</button>
-				</span>*/
-		
-		
+	logoff : function() {
 		var me = this;
-		var v = (me.state._auth) ? '' : new Date().getTime();
-		localStorage.setItem('_auth', v);
-		me.setState({_auth : v});
+		localStorage.removeItem('_auth');
+		me.setState({_auth : null});
 	},	
 	render: function() {
 		var me = this;

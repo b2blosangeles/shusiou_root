@@ -3,34 +3,44 @@ React.createClass({
 		var me = this;
 		me.list = [];
 		me.compData = new _compData(me, Root);
-		me.compView = new _compView(me, Root);
+		me.compViewInvention = new _compViewInvention(me, Root);
+		me.compViewVideo = new _compViewVideo(me, Root);
 		me.compContents = _compContents;
+		me.DigitizeStreamList = Root.lib.getNumberList(20);
           	return {}
         },
 	componentDidMount : function() {
 		var me = this;
-		console.log('===me.props.parent.state.menuOption===>');
-		console.log(me.props.parent.state.menuOption);
-		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
+		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
+			me.compData.loadVideos();
+		}  else if (me.props.parent.state.menuOption === 'myInventions') {
 			me.compData.loadMyinventions ();
 			
-			// me.loadData();
-		}  else if (me.props.parent.state.menuOption === 'myVideos') {
-			me.compData.loadVideos();
 		} else {
 		
 		}
 	},
+	setCurrentVideo : function(url) {
+		var me = this;
+		if (!url) me.setState({cVideo : null, subModule : null});
+		else me.setState({cVideo : url});
+	},
 	componentWillUnmount : function() {
 		var me = this;
+		me.setState({cVideo : null, subModule : null});
 	},
 	showBody : function() {
 		var me = this;
-		if (me.props.parent.state.menuOption === 'myInventions' || !me.props.parent.state.menuOption) {
-			return me.compView.showMyinventions();
-		} else if (me.props.parent.state.menuOption === 'myVideos') {
-			return me.compView.showVideos(); 
-		} else if (me.props.parent.state.menuOption === 'howToStartInvention') {
+		if (me.props.parent.state.menuOption === 'myInventions') {
+			return me.compViewInvention.showMyinventions();
+		}
+		
+		if (me.props.parent.state.menuOption === 'myVideos' || !me.props.parent.state.menuOption) {
+			if (me.state.cVideo) return me.compViewVideo.showVideoPage(me.state.cVideo); 
+			else return me.compViewVideo.showVideos(); 
+		}		
+		
+		if (me.props.parent.state.menuOption === 'howToStartInvention') {
 			return me.compContents['howToStartInvention'];
 		} else {
 			return (<span>

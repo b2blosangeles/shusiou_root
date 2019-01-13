@@ -5,14 +5,11 @@ var _compData = function(me, Root) {
 		Root.lib.setSpinAnchor(me, 'AA', true);
 		// me.list = [];
 		me.setState({updated : new Date().getTime()});
-		setTimeout(
-			function() {
-				me.list = Root.lib.getNumberList(20);
-				Root.lib.setSpinAnchor(me, 'AA', false)
-			//	Root.overLay.spinOff(spin_id);
-				me.setState({updated : new Date().getTime()});
-			},1000
-		)
+		$.get('/api/platoplan/demoAPI.api?code=videoList', function(data, status){
+			me.list = data;
+			Root.lib.setSpinAnchor(me, 'AA', false);
+			me.setState({updated : new Date().getTime()});
+		});
 	},
 	this.loadMyinventions = function() {
 		//var spin_id = Root.overLay.spinOn();

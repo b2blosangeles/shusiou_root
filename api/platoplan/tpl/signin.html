@@ -9,12 +9,12 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/Bootstrap/v4.1.3/Bootstrap.min.css" rel="stylesheet"/>
     <script>
-        var auth = localStorage.getItem("auth");
+        var auth = localStorage.getItem("key");
         if (!auth || auth.length !== 32) {
           window.location.href = '/api/platoplan/auth.api?type=errorSignin';
         } else {
           setTimeout(function() {
-            window.getElementById('authid').value = auth;
+            document.getElementById('authid').value = auth;
             }, 50);
         }
     </script>  
@@ -26,15 +26,20 @@
     </div>
      <div class="row text-center mt-5 mb-5">
       <div class="col-sm-12 p-5">
+        <form name="signinFrom" action="/api/platoplan/auth_signin_post.api" 
+              method="POST" >
+          <input type="hidden" name="token" value="{$token}"/>
+          <br/>
+          <input type="hidden" id="authid" name="auth" value=""/>  
+          <br/>
           <button class="btn btn-lg btn-primary btn-block" type="botton">Submit</button>
+          </form>
       </div> 
     </div>       
     <div class="row text-center mt-2 mb-2">
       <div class="col-sm-12  p-3">&copy; {$copywriteyear}</div> 
     </div> 
   </div>
-    <input name="token" value="{$token}"/>
-    <hr/>
-     <input id="authid" name="auth" value=""/>
+
   </body>
 </html>

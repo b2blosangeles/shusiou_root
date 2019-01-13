@@ -1,7 +1,7 @@
 var _copyrightSection = React.createClass({
     getInitialState: function() {
 	var me = this;
-	return {_auth : localStorage.getItem('_auth')}
+	return {}
     },
     clickOption : function(v, e) {
 	var me = this; 
@@ -24,8 +24,8 @@ var _copyrightSection = React.createClass({
 		<div className="copyright_section">
 			<div className="container-fluid px-1">
 			<div className="row">
-				<div className="col-sm-2 text-left">
-					{(!me.state._auth) ? (<span>
+				<div className="col-sm-3 text-left">
+					{(!Root.auth.state._auth) ? (<span>
 						<a onClick={me.clickOption.bind(me, 'login')}
 						href="JavaScript: void(0)">Login</a>
 						&nbsp;&nbsp;&nbsp;
@@ -33,30 +33,15 @@ var _copyrightSection = React.createClass({
 						href="JavaScript: void(0)">Registration</a>
 						</span>)
 						:
-						(<span>
-						<a>
-						[{(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info}]</a>
-						&nbsp;
-						<a onClick={Root.auth.doAuth.bind(me)}
+						(<span>[User : {Root.auth.state._auth.username}]&nbsp;
+						<a onClick={Root.auth.logoff.bind(me)}
 						href="JavaScript: void(0)">Logoff</a>
 						</span>)
 					}
-					&nbsp;&nbsp;&nbsp;[{uuid}]
-					{/*(!me.state._auth) ? (
-						<a onClick={Root.auth.signIn.bind(me, Root)}
-						href="JavaScript: void(0)">Login</a>)
-						:
-						(<span>
-						<a>
-						[{(!Root.auth || !Root.auth.state) ? '' : Root.auth.state.info}]</a>
-						&nbsp;
-						<a onClick={Root.auth.doAuth.bind(me)}
-						href="JavaScript: void(0)">Logoff</a>
-						</span>)
-					*/}
+					{/*&nbsp;&nbsp;&nbsp;[{uuid}]*/}
 				</div>
-				<div className="col-sm-10 text-right">
-					<span className="pull-right">
+				<div className="col-sm-9 text-right">
+					<span>
 					&#169; {new Date().getFullYear()} Plato Plan
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href={'#/'} onClick={animationTransfer}>Home</a>
@@ -64,22 +49,18 @@ var _copyrightSection = React.createClass({
 					<a href={'#/NDA'} onClick={animationTransfer}>NDA</a>
 					</span>
 
-					<span className="pull-right">
-						{Root.global.menuTree.common.map(function(m) {
-						return(<span>
-						  &nbsp;&nbsp;|&nbsp;&nbsp;
-						  <a href={'#/' + m}  onClick={animationTransfer}>
-							  {Root.global.menuItems[m]}</a>
-						</span>)
-						})}
-					</span>	
-					<span className="pull-left">
-						<span>
-							&nbsp;&nbsp;|&nbsp;&nbsp;
-							{Root.global.langs[me.props.parent.state.lang]} (<a href={'#/language'}  onClick={animationTransfer}>
-							Change Language</a>)
-						</span>
-					</span> 					
+					{Root.global.menuTree.common.map(function(m) {
+					return(<span>
+					  &nbsp;&nbsp;|&nbsp;&nbsp;
+					  <a href={'#/' + m}  onClick={animationTransfer}>
+						  {Root.global.menuItems[m]}</a>
+					</span>)
+					})}
+					<span>
+						&nbsp;&nbsp;|&nbsp;&nbsp;
+						{Root.global.langs[me.props.parent.state.lang]} (<a href={'#/language'}  onClick={animationTransfer}>
+						Change Language</a>)
+					</span>					
 				</div>
 			</div></div>
 		</div>

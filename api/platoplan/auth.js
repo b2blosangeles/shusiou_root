@@ -13,7 +13,6 @@ if (!type) {
   return true;
 }
 
-
 var CP = new pkg.crowdProcess();
 
 var _f = {};
@@ -21,19 +20,20 @@ _f['DBS'] = function(cbk) {
 	var connection = mysql.createConnection(db_setting);
 	connection.connect();
 
-	var str = "SELECT * FROM  `session` WHERE `token` = '" + token + "'";	
+	var str = "SELECT * FROM  `QR` WHERE `token` = '" + token + "'";	
 	connection.query(str, function (error, results, fields) {
 	      connection.end();	
 	      if (!error && (results.length)) {
-		  cbk({success: true});
+		  cbk({success: true, sql: str, token: token});
 	      } else {
-		  cbk({success: false});
+		  cbk({success: false, sql: str, token: token});
 	      }
 	}); 
 }
 CP.serial(
   _f,
   function(data) {
+
 	 if (!CP.data.DBS.success) {
 		var indextpl = env.site_path + '/api/platoplan/tpl/qrError.html';
 		 pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
@@ -42,10 +42,11 @@ CP.serial(
 			return true;
 		});
 	 } else {
+	 
 		var indextpl = env.site_path + '/api/platoplan/tpl/' + 
 		    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
 		    '.html';
-
+		
 		pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
 			var tpl = new Smarty(content);
 			if (type === 'errorSignin') {
@@ -63,31 +64,3 @@ CP.serial(
   },
   30000
 );
-// res.send(req.query);
-return true;
-
-
-
-
-if (req.body.token) {
-	res.send(req.body);
-	return true;
-}
-
-var indextpl = env.site_path + '/api/platoplan/tpl/' + 
-    ((type === 'errorSignin' || type === 'errorRegistration') ? 'error'  : type) + 
-    '.html';
-
-pkg.fs.readFile(indextpl, 'utf-8', function(err, content) {	
-	var tpl = new Smarty(content);
-	if (type === 'errorSignin') {
-		res.send(tpl.fetch({message : 'This equipment has not been registrated yet! Please go ahead registration with this mobile equipment.'}));
-		return true
-	}
-	if (type === 'errorRegistration') {
-		res.send(tpl.fetch({message : 'This equipment have registrated already. you are able to login with this phone.'}));
-		return true
-	}	
-	res.send(tpl.fetch({token : token, copywriteyear :  new Date().getFullYear()}));
-	return true;
-});

@@ -8,7 +8,8 @@ var _compModule = function(me, Root) {
 					},
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/inventors/data.jsx',
-						'https://dev.shusiou.win/app/truefactors/inventors/view.jsx'	
+						'https://dev.shusiou.win/app/truefactors/inventors/viewVideo.jsx',
+						'https://dev.shusiou.win/app/truefactors/inventors/viewInvention.jsx',	
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/inventors/main.jsx'
 				}, 
@@ -45,7 +46,7 @@ var _compModule = function(me, Root) {
 					},
 					includes : [
 						'https://dev.shusiou.win/app/truefactors/public/data.jsx',
-						'https://dev.shusiou.win/app/truefactors/public/view.jsx'	
+						'https://dev.shusiou.win/app/truefactors/public/view.jsx'
 					],
 					controller : 'https://dev.shusiou.win/app/truefactors/public/controller.jsx'
 				}, 

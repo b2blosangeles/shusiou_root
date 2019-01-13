@@ -12,9 +12,10 @@
     <script>
         var auth = localStorage.getItem("auth");
         if ((auth) && auth.length === 32) {
-          window.location.href = '/api/platoplan/auth_post.api?type=errorRegistration';
+          window.location.href = '/api/platoplan/auth.api?type=errorRegistration';
         }
         function validateForm() {
+            return true;
             var x = document.forms["registrationFrom"]["VEmail"].value;
             var y = document.forms["registrationFrom"]["Email"].value;
             if (x !== y) {
@@ -26,21 +27,23 @@
   </head>
   <body>
     <div class="container-fluid">
-        <form name="registrationFrom" action="/api/platoplan/auth.api?type=registration&code={$token}" onsubmit="return validateForm()" method="POST" >
+        <form name="registrationFrom" action="/api/platoplan/auth_registration_post.api" 
+              onsubmit="return validateForm()" method="POST" >
         <div class="row text-center">
             <div class="col-sm-12"><h5 class="m-5 font-weight-normal">PlatoPlan Registration</h5></div>
-            <input name="token" value="{$token}">
+            <input type="hidden" name="token" value="{$token}">
         </div>
+         <div class="row text-center">
+            <div class="col-sm-12">
+                 <input type="text" name="UserName" class="form-control mt-3" placeholder="User Name" required >
+            </div>
+         </div>          
         <div class="row text-center">
             <div class="col-sm-12">
                  <input type="email" name="Email" class="form-control mt-3" placeholder="Email address" required autofocus>
             </div> 
         </div>
-         <div class="row text-center">
-            <div class="col-sm-12">
-                 <input type="email" name="VEmail" class="form-control mt-3" placeholder="Verify Email address" required >
-            </div>
-         </div>
+
           <div class="row text-center">
             <div class="col-sm-12 p-5">
                  <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
