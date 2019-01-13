@@ -1,6 +1,6 @@
 console.log('bu niuyy');
 console.log('---req.files.filename--->');
-console.log(req.files.filename);
+console.log(req.files);
 var writeStream = pkg.fs.createWriteStream('/var/qalet/formal_demo_videos/outputp.mov');
 req.pipe(writeStream);
 /*
