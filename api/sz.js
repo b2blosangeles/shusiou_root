@@ -9,6 +9,9 @@ var busboy = new Busboy({ headers: req.headers });
 req.pipe(busboy);
 
 busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+     file.on('data', function(data) {
+        console.log('coming.....');
+      });
     file.on('end', function() {
       console.log('BBBkDD');
       res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
