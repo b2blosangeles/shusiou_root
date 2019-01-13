@@ -17,7 +17,7 @@ _f['S1'] = function(cbk) {
 
 _f['S2'] = function(cbk) {
      var childProcess = require('child_process');
-     var ls = childProcess.exec('cd /var/qalet/formal_demo_videos && ffmpeg -i outputp.mov -vcodec copy -acodec copy ooutputp.mp4 -y',
+     var ls = childProcess.exec('ffmpeg -i /var/qalet/formal_demo_videos/outputp.mov -vcodec copy -acodec copy /var/qalet/formal_demo_videos/ooutputp.mp4 -y',
           function (error, stdout, stderr) {
                cbk(true);
           });
@@ -27,7 +27,7 @@ CP.serial(
      _f,
      function(data) {	
          res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
-     }, 6000);
+     }, 60000);
 
 
 
