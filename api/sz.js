@@ -8,7 +8,9 @@ var _f = {};
 _f['S1'] = function(cbk) {
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           file.pipe(writeStream);
-          file.on('data', function(data) {});
+          file.on('data', function(data) {
+               console.log('data coming...');
+          });
          file.on('end', function() {
                cbk(true);
          });
