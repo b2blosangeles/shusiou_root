@@ -29,18 +29,3 @@ CP.serial(
          res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
      }, 60000);
 
-
-
-/*
-req.on('end', function() {
-  console.log('BBB');
-});
-*/
-/*
-req.on('data', function(data) {
-console.log('AAA');
-});*/
-// req.on('end', function() {
-
-//});
-
