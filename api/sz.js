@@ -1,14 +1,13 @@
 console.log('bu niuyy');
 console.log('---req.files.filename--->');
-console.log(req.files);
-var writeStream = pkg.fs.createWriteStream('/var/qalet/formal_demo_videos/outputp.mov');
-req.pipe(writeStream);
 
+var writeStream = pkg.fs.createWriteStream('/var/qalet/formal_demo_videos/outputp.mov');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var busboy = new Busboy({ headers: req.headers });
 req.pipe(busboy);
 
 busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+     file.pipe(writeStream);
      file.on('data', function(data) {
         console.log('coming.....');
       });
