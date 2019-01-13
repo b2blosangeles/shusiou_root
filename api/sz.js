@@ -4,8 +4,8 @@ var busboy = new Busboy({ headers: req.headers });
 req.pipe(busboy);
 
 var CP = new pkg.crowdProcess();
-
-va['S1'] = function(cbk) {
+var _f = {};
+_f['S1'] = function(cbk) {
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           file.pipe(writeStream);
           file.on('data', function(data) {});
@@ -15,7 +15,7 @@ va['S1'] = function(cbk) {
      });
 };
 /*
-va['S2'] = function(cbk) {
+_f['S2'] = function(cbk) {
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           file.pipe(writeStream);
           file.on('data', function(data) {});
