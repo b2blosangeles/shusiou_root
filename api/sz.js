@@ -1,3 +1,3 @@
 console.log('bu niu');
-console.log(req.body);
+console.log(req);
 res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
