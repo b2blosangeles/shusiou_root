@@ -14,11 +14,15 @@
                   url: '/api/platoplan/videoUpDemoAPI.api?code=videoList',
                   data: {},
                   success: function(data ) {
-                        console.log(data);
+                      var str = '';
+                      for (var i = 0; i < data.length; i++) {
+                        str += data[i] + '<br/>'
+                      }
+                      $('.leftSide').html(str);
                   },
                   dataType: 'json'
                 });
-                $('.leftSide').html('left side');
+                
             }
         );
     </script>    
