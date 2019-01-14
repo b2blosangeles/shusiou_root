@@ -52,6 +52,8 @@ switch(req.query.code) {
 		
 		break;		
 	case 'videoList' :
+		 res.send(list);
+		return true;
 		pkg.fs.readdir(dirn, (err, files) => {
 		    files.forEach(file => {
 			if (/\.mp4$/.test(file)) {
