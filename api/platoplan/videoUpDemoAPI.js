@@ -6,7 +6,7 @@ function write404(msg) {
 
 var list = [],
     dirn = '/var/qalet/formal_demo_videos/downloaded/',
-    fn = req.query.fn,
+    fn = (req.query.fn) ? req.query.fn : '1.mp4',
     file_video = dirn  + '/' +  fn,
     breakP = (req.query.breakP) ? req.query.breakP : 10,
     breakL = (req.query.breakL) ? req.query.breakL : 10;
