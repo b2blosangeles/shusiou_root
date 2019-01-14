@@ -3,6 +3,8 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var busboy = new Busboy({ headers: req.headers });
 req.pipe(busboy);
 
+var dirv = '/var/qalet/formal_demo_videos/';
+
 var CP = new pkg.crowdProcess();
 var _f = {};
 _f['S1'] = function(cbk) {
@@ -17,7 +19,7 @@ _f['S1'] = function(cbk) {
 
 _f['S2'] = function(cbk) {
      var childProcess = require('child_process');
-     var ls = childProcess.exec('ffmpeg -i /var/qalet/formal_demo_videos/outputp.mov -vcodec copy -acodec copy /var/qalet/formal_demo_videos/ooutputp.mp4 -y',
+     var ls = childProcess.exec('ffmpeg -i ' + dirv + 'outputp.mov -vcodec copy -acodec copy ' + dirv + ' ooutputp.mp4 -y',
           function (error, stdout, stderr) {
                cbk(true);
           });
