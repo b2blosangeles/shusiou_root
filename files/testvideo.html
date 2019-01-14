@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function playVideo(fn) {
+            alert(fn);
             var str = '<video width="100%" controls>' +
               '<source src="/api/platoplan/cronResult.api?code=playVideo&fn=ooutputp.mp4" type="video/mp4">' +
             'Your browser does not support the video tag.' +
@@ -23,7 +24,8 @@
                   success: function(data ) {
                       var str = '';
                       for (var i = 0; i < data.length; i++) {
-                        str += '<img src="/api/platoplan/videoUpDemoAPI.api?code=cutImage&fn=' + data[i] + '" ' +
+                        str += '<a href="JavaScript: void(0)" onClick="playVide(\'' +  data[i] + '\')">' + 
+                          '<img src="/api/platoplan/videoUpDemoAPI.api?code=cutImage&fn=' + data[i] + '" ' +
                           ' width="120" class="m-1 shadow border border-danger rounded"/>'
                       }
                       $('.leftSide').html(str);
