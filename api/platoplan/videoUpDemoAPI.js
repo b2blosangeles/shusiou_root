@@ -17,7 +17,7 @@ var folderP = require(env.root_path + '/package/folderP/folderP');
 var CP = new pkg.crowdProcess();
 switch(req.query.code) {
 	case 'cutImage':		
-		var s = (req.query.s) ? req.query.s : 10, 
+		var s = (req.query.s) ? req.query.s : 3, 
 		    w='FULL',
 		    str = '';
 		var tmpfn = '/var/tmpp/cut_' + s + '_' + fn + '.png';
