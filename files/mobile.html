@@ -6,10 +6,14 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 
   <script>
-    document.addEventListener('touchend', function (event) {
-        event.preventDefault();
-        $(event.target).trigger('click');
-    }, false);
+$(window).bind('gesturestart touchmove', function(event) {
+    event = event.originalEvent || event;
+    if (event.scale !== 1) {
+         event.preventDefault();
+         document.body.style.transform = 'scale(1)'
+    }
+});
+
     </script>
 <body>
 
