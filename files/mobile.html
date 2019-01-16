@@ -6,9 +6,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 
   <script>
-    document.documentElement.addEventListener('touchmove', function (event) {
-    event.preventDefault();
-}, false);
+    document.addEventListener('touchend', function (event) {
+        event.preventDefault();
+        $(event.target).trigger('click');
+    }, false);
     </script>
 <body>
 
