@@ -20,6 +20,11 @@ body{
         touch-action: manipulation;
     }*/
     </style>
+  <script>
+    document.documentElement.addEventListener('touchmove', function (event) {
+    event.preventDefault();
+}, false);
+    </script>
 <body>
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
