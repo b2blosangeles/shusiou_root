@@ -1,12 +1,21 @@
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script>
-var app = new Vue({
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            {{ message }}
+        </div>
+        
+        <script>
+  var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!'
   }
-})
-</script>
-<div id="app">
-  {{ message }}
-</div>
+})    
+        </script>
+    </body>
+</html>
