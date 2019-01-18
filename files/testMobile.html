@@ -16,9 +16,14 @@
             $('.rightSide').html(str);
         }
        function cleanVideo() {
-            $('.leftSide').html('====');
+           setTimeout(
+            function() {
+                 $('.leftSide').html('====');
+            }, 3000
+           )
+           
            alert(777);
-           return 444
+           return 888
         }
         $(document).ready(
             function() {
