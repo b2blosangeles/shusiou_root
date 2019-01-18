@@ -15,8 +15,14 @@
             '</video>';
             $('.rightSide').html(str);
         }
+           function cleanVideo(fn) {
+            var str = '<video controls autoplay style="height:600px; border border-danger rounded">' +
+              '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
+            'Your browser does not support the video tag.' +
+            '</video>';
+            $('.rightSide').html('kkkkkk');
+        }
         $(document).ready(
-            alert(1);
             function() {
                 $.ajax({
                   url: '/api/platoplan/videoUpDemoAPI.api?code=videoList',
@@ -37,7 +43,6 @@
     </script>    
 </head>
 <body>
-======testMobile.html====
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 leftSide pt-3"></div>
