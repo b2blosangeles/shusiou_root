@@ -24,9 +24,11 @@
             function() {
                
               //  window.webkit.messageHandlers.test.postMessage("Hello, world!");
-                 $('.leftSide').html('=VVV=');
-                 printHelloWorld();
-                $('.leftSide').html('=000000=');
+                if (!webkit) $('.leftSide').html('===!webkit===');
+                else if (!webkit.messageHandlers) $('.leftSide').html('=!webkit.messageHandlers=');
+                else $('.leftSide').html('=VVV=');
+              //   printHelloWorld();
+               // $('.leftSide').html('=000000=');
             }, 3000
            )
            
