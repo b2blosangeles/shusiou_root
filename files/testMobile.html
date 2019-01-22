@@ -15,6 +15,10 @@
             '</video>';
             $('.rightSide').html(str);
         }
+          function printHelloWorld() {
+              window.webkit.messageHandlers.test.postMessage("Hello, world!");
+          }      
+        
        function cleanVideo() {
            setTimeout(
             function() {
@@ -23,7 +27,7 @@
                  $('.leftSide').html('=VVV=');
             }, 3000
            )
-           
+           printHelloWorld();
            alert(777);
            return 888
         }
