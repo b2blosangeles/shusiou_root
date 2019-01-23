@@ -1,14 +1,5 @@
 LOG IN// <![CDATA[
-    var button = document.getElementById("login-button");
 
-    button.addEventListener("click", function() {
-      var message = {
-        username: "Michael Phelps",
-        secretToken: "secret"
-      };
-
-      window.webkit.messageHandlers.userLogin.postMessage(message);
-    }, false);
   
 // ]]&gt;
 <!DOCTYPE html>
@@ -35,6 +26,17 @@ LOG IN// <![CDATA[
        function cleanVideo() {
            setTimeout(
             function() {
+                var button = document.getElementById("login-button");
+
+                button.addEventListener("click", function() {
+                  var message = {
+                    username: "Michael Phelps",
+                    secretToken: "secret"
+                  };
+
+                  window.webkit.messageHandlers.userLogin.postMessage(message);
+                }, false);
+
                retur true;
               //  window.webkit.messageHandlers.test.postMessage("Hello, world!");
                 if (!window) $('.leftSide').html('===!window===');
