@@ -1,7 +1,3 @@
-LOG IN// <![CDATA[
-
-  
-// ]]&gt;
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,21 +6,32 @@ LOG IN// <![CDATA[
     <link rel="stylesheet"  href="/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
     <link rel="stylesheet"  href="/css/Bootstrap/v4.1.3/Bootstrap.min.css" rel="stylesheet"> 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.notification/1.0.2/jquery.notification.min.js"></script>
     <script>
-          function sendLoginAction() {
-             try {
-                 webkit.messageHandlers.loginAction.postMessage(
-                     document.getElementById("email").value + " " + document.getElementById("password").value
-                 );
-             } catch(err) {
-                 console.log('The native context does not exist yet');
-             }
-          }
-
-          function mobileHeader() {
-             document.querySelector('h1').innerHTML = "WKWebView Mobile";
-          }
+        function playVideo(fn) {
+            var str = '<video controls autoplay style="height:600px; border border-danger rounded">' +
+              '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
+            'Your browser does not support the video tag.' +
+            '</video>';
+            $('.rightSide').html(str);
+        }
+        $(document).ready(
+            function() {
+                $.ajax({
+                  url: '/api/platoplan/videoUpDemoAPI.api?code=videoList',
+                  data: {},
+                  success: function(data ) {
+                      var str = '';
+                      for (var i = 0; i < data.length; i++) {
+                        str += '<a href="JavaScript: void(0)" onClick="playVideo(\'' +  data[i] + '\')">' + 
+                          '<img src="/api/platoplan/videoUpDemoAPI.api?code=cutImage&fn=' + data[i] + '" ' +
+                          ' width="130" class="m-2 shadow border border-danger rounded"/></a>'
+                      }
+                      $('.leftSide').html(str);
+                  },
+                  dataType: 'json'
+                });
+            }
+        );
     </script>    
 </head>
 <body>
