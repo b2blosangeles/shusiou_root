@@ -9,7 +9,7 @@
     <script>
         function sendToNative() {
         window.webkit.messageHandlers.jsHandler.postMessage("trigger from JS");
-            alert('Sent');
+            alert('JS Trigger Sent');
         }
         function alertOnly() {
             alert('alertOnly');
