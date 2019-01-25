@@ -31,7 +31,7 @@
                 });
         }        
         function playVideo(fn) {
-                var str = '<video controls autoplay style="height:600px; border border-danger rounded">' +
+                var str = '<video controls autoplay style="height:600px; border border-default rounded">' +
                     '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
                     'Your browser does not support the video tag.' +
                     '</video>';
@@ -48,7 +48,7 @@
     <div class="container-fluid">
          <div class="row">
              <div class="col-sm-3 p-3">
-                <img src="http://dev.platoplan.com/icons/icon-message.png"  width="100%" onclick="sendToNative()" class="border border-info border-3 rounded"/>
+                <img src="http://dev.platoplan.com/icons/icon-message.png"  width="100%" onclick="sendToNative()" class="border border-info border-3 rounded  bg-secondary"/>
              </div>
              <div class="col-sm-3 p-3">
                 <img src="http://dev.platoplan.com/icons/icon-alert.png"  width="100%" onclick="alertOnly()" class="border border-info rounded"/>
@@ -57,7 +57,7 @@
                 <img src="http://dev.platoplan.com/icons/icon-home.png"  width="100%" onclick="loadVideos()" class="border border-info rounded"/>
              </div>
         </div>
-        <div id="body-section" class="row pt-3">
+        <div id="body-section" class="row pt-5">
         </div>
     </div>
 </body>
