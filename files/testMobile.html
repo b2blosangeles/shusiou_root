@@ -13,16 +13,9 @@
         }
         function alertOnly() {
             alert('alertOnly');
-        }        
-        function playVideo(fn) {
-            var str = '<video controls autoplay style="height:600px; border border-danger rounded">' +
-              '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
-            'Your browser does not support the video tag.' +
-            '</video>';
-            $('.row').html(str);
-        }
-        $(document).ready(
-            function() {
+        }  
+        
+        function loadVideos() {
                 $.ajax({
                   url: '/api/platoplan/videoUpDemoAPI.api?code=videoList',
                   data: {},
@@ -37,6 +30,17 @@
                   },
                   dataType: 'json'
                 });
+        }        
+        function playVideo(fn) {
+                var str = '<video controls autoplay style="height:600px; border border-danger rounded">' +
+                    '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+                $('.row').html(str);
+        }
+        $(document).ready(
+            function() {
+               loadVideos()
             }
         );
     </script>    
