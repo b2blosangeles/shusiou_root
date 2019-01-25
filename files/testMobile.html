@@ -23,7 +23,7 @@
                       for (var i = 0; i < data.length; i++) {
                         str += '<div class="col-sm-3 p-3"><a href="JavaScript: void(0)" onClick="playVideo(\'' +  data[i] + '\')">' + 
                           '<img src="/api/platoplan/videoUpDemoAPI.api?code=cutImage&fn=' + data[i] + '" ' +
-                          ' width="100%" class="shadow border border-default rounded"/></a></div>'
+                          ' width="100%" class="shadow border border-secondary rounded"/></a></div>'
                       }
                       $('#body-section').html(str);
                   },
@@ -31,7 +31,7 @@
                 });
         }        
         function playVideo(fn) {
-                var str = '<video controls autoplay style="height:600px; border border-default rounded">' +
+                var str = '<video controls autoplay style="height:600px; border border-secondary rounded">' +
                     '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
                     'Your browser does not support the video tag.' +
                     '</video>';
