@@ -19,7 +19,7 @@
               '<source src="/api/platoplan/videoUpDemoAPI.api?code=playVideo&fn='+fn+'" type="video/mp4">' +
             'Your browser does not support the video tag.' +
             '</video>';
-            $('.rightSide').html(str);
+            $('.row').html(str);
         }
         $(document).ready(
             function() {
@@ -31,7 +31,7 @@
                       for (var i = 0; i < data.length; i++) {
                         str += '<div class="col-sm-3 pt-3"><a href="JavaScript: void(0)" onClick="playVideo(\'' +  data[i] + '\')">' + 
                           '<img src="/api/platoplan/videoUpDemoAPI.api?code=cutImage&fn=' + data[i] + '" ' +
-                          ' width="100%" class="m-2 shadow border border-danger rounded"/></a></div>'
+                          ' width="100%" class="shadow border border-danger rounded"/></a></div>'
                       }
                       $('.row').html(str);
                   },
@@ -42,12 +42,12 @@
     </script>    
 </head>
 <body>
-    <input type="button" onclick="sendToNative()" value="sendToNative">&nbsp;
-    <input type="button" onclick="alertOnly()" value="alertOnly">
+    <input class="btn btn-lg btn-success" type="button" onclick="sendToNative()" value="sendToNative">&nbsp;
+    <input class="btn btn-lg btn-success"  type="button" onclick="alertOnly()" value="alertOnly">&nbsp;
+    <input class="btn btn-lg btn-warning"  type="button" onclick="alertOnly()" value="goback">
+    <hr/>
     <div class="container-fluid">
         <div class="row">
-           
-            <div class="col-sm-9 rightSide p-3"> </div>
         </div>
     </div>
 </body>
