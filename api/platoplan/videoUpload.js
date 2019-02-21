@@ -47,4 +47,4 @@ CP.serial(
         } else {
                res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
         }
-     }, 180000);
+     }, 6000);
