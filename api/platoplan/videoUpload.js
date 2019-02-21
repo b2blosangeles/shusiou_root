@@ -1,1 +1,1 @@
-res.send({status : 'success'})
+res.send({status : 'success', qq : req.body})
