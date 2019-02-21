@@ -30,11 +30,12 @@ _f['S1'] = function(cbk) {
                cbk("niu");
          });
      });
+     /*
      setTimeout(
           function() {
                cbk("ff")
           }, 10000
-     )
+     )*/
 };
 /*
 _f['S2'] = function(cbk) {
