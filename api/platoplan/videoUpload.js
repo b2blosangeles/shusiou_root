@@ -18,13 +18,11 @@ _f['fp'] = function(cbk) {
 };
 
 _f['S1'] = function(cbk) {
-    // cbk("ff")
-    // return true;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
          file.pipe(writeStream);
          file.on('data', function(data) {});
          file.on('end', function() {
-               cbk("niu");
+               cbk("niuee");
          });
      });
 };
