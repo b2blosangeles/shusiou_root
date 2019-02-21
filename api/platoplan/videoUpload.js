@@ -16,7 +16,7 @@ _f['fp'] = function(cbk) {
      var fp = new folderP();
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
 };
-/*
+
 _f['S1'] = function(cbk) {
      cbk("ff")
      return true;
@@ -33,7 +33,7 @@ _f['S1'] = function(cbk) {
      setTimeout(
           function() {
                cbk("ff")
-          }, 1000
+          },6000)
      
 };
 
@@ -44,7 +44,7 @@ _f['S2'] = function(cbk) {
                cbk(true);
           });
 };
-*/
+
 
 CP.serial(
      _f,
