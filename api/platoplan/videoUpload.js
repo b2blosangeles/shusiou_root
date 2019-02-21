@@ -18,8 +18,8 @@ _f['fp'] = function(cbk) {
 };
 
 _f['S1'] = function(cbk) {
-     cbk("ff")
-     return true;
+    // cbk("ff")
+    // return true;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           cbk("BB");
           return true
@@ -49,6 +49,6 @@ _f['S2'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {	
-          res.send("CCC");
-     //    res.send({success: true, results: "data", code: (!req.query.code) ? '' : req.query.code});
+        //  res.send("CCC");
+         res.send({success: true, results: "data", code: (!req.query.code) ? '' : req.query.code});
      }, 6000);
