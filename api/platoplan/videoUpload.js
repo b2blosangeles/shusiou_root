@@ -8,8 +8,8 @@ req.pipe(busboy);
 var dirv = '/var/qalet/bmw_demo_videos/';
 
 
-res.send('req.headersK');
-return true;
+//res.send('req.headersK');
+//return true;
 
 var videoName = new Date().getTime();
 
