@@ -10,7 +10,7 @@ var dirv = '/var/qalet/bmw_demo_videos/';
 
 res.send(req.headers);
 return true;
-
+/*
 var videoName = new Date().getTime();
 
 var CP = new pkg.crowdProcess();
@@ -39,7 +39,7 @@ _f['S1'] = function(cbk) {
           }, 1000
      
 };
-/*
+
 _f['S2'] = function(cbk) {
      var childProcess = require('child_process');
      var ls = childProcess.exec('ffmpeg -i ' + dirv + 'outputp.mov -vcodec copy -acodec copy ' + dirv + 'uploaded/' + videoName + '.mp4 -y',
@@ -47,11 +47,11 @@ _f['S2'] = function(cbk) {
                cbk(true);
           });
 };
-*/
+
 CP.serial(
      _f,
      function(data) {	
           res.send({k: "CCC"});
      //    res.send({success: true, results: "data", code: (!req.query.code) ? '' : req.query.code});
      }, 60000);
-
+*/
