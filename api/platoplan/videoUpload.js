@@ -5,14 +5,11 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var busboy = new Busboy({ headers: req.headers });
 
 req.pipe(busboy);
-//res.send(req.headers);
-
-//return true;
-
-
-req.pipe(busboy);
-
 var dirv = '/var/qalet/bmw_demo_videos/';
+
+
+res.send('req.headers');
+return true;
 
 var videoName = new Date().getTime();
 
