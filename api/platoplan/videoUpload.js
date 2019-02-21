@@ -10,7 +10,7 @@ var dirv = '/var/qalet/bmw_demo_videos/';
 
 res.send(req.headers);
 return true;
-/*
+
 var videoName = new Date().getTime();
 
 var CP = new pkg.crowdProcess();
@@ -20,6 +20,7 @@ _f['fp'] = function(cbk) {
      var fp = new folderP();
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
 };
+/*
 _f['S1'] = function(cbk) {
      cbk("ff")
      return true;
@@ -47,11 +48,11 @@ _f['S2'] = function(cbk) {
                cbk(true);
           });
 };
+*/
 
 CP.serial(
      _f,
      function(data) {	
           res.send({k: "CCC"});
      //    res.send({success: true, results: "data", code: (!req.query.code) ? '' : req.query.code});
-     }, 60000);
-*/
+     }, 6000);
