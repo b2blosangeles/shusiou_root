@@ -1,20 +1,40 @@
-// res.send({status : 'success1', tt: req.query.filename})
-// var fn = (req.query.fn) ? '/tmp/' + req.query.fn : '';
-var fn='/tmp/66.mp4';
-if (!fn) res.send('Missing fn');
-else {
-  pkg.fs.stat(fn, function(err, data) {
-    if (err) {  res.send(fn + ' does not exist'); }
-    else {
-        res.writeHead(200); 
-        var file = pkg.fs.createReadStream(fn);
-        file.pipe(res);
-        setTimeout(
-          function() {
-            file.destroy();
-            write404('timeout')
-          }, 30000
-        );
-      }
-  });
-}
+var folderP = require(env.root_path + '/package/folderP/folderP');
+var writeStream = pkg.fs.createWriteStream('/var/qalet/formal_demo_videos/outputp.mov');
+var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
+var busboy = new Busboy({ headers: req.headers });
+req.pipe(busboy);
+
+var dirv = '/var/qalet/bmw_demo_videos/';
+
+var videoName = new Date().getTime();
+
+var CP = new pkg.crowdProcess();
+var _f = {};
+_f['fp'] = function(cbk) { 
+     var fp = new folderP();
+     fp.build(dirv + 'uploaded/', function() { cbk(true);});
+};
+_f['S1'] = function(cbk) {
+     busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+          file.pipe(writeStream);
+          file.on('data', function(data) {});
+         file.on('end', function() {
+               cbk(true);
+         });
+     });
+};
+/*
+_f['S2'] = function(cbk) {
+     var childProcess = require('child_process');
+     var ls = childProcess.exec('ffmpeg -i ' + dirv + 'outputp.mov -vcodec copy -acodec copy ' + dirv + 'uploaded/' + videoName + '.mp4 -y',
+          function (error, stdout, stderr) {
+               cbk(true);
+          });
+};
+*/
+CP.serial(
+     _f,
+     function(data) {	
+         res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
+     }, 600000);
+
