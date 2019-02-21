@@ -21,6 +21,8 @@ _f['fp'] = function(cbk) {
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
 };
 _f['S1'] = function(cbk) {
+     cbk("ff")
+     return true;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           cbk("BB");
           return true
