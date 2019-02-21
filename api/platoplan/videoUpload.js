@@ -1,0 +1,1 @@
+res.send({status : 'success'})
