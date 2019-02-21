@@ -21,20 +21,12 @@ _f['S1'] = function(cbk) {
     // cbk("ff")
     // return true;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
-       //   cbk("BB");
-        //  return true
          file.pipe(writeStream);
          file.on('data', function(data) {});
          file.on('end', function() {
                cbk("niu");
          });
      });
-   /*
-     setTimeout(
-          function() {
-               cbk("ff")
-          },6000)
-     */
 };
 /*
 _f['S2'] = function(cbk) {
@@ -50,5 +42,5 @@ CP.serial(
      _f,
      function(data) {	
         //  res.send("CCC");
-         res.send({success: true, results: "data", code: (!req.query.code) ? '' : req.query.code});
+         res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
      }, 60000);
