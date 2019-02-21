@@ -1,5 +1,6 @@
 // res.send({status : 'success1', tt: req.query.filename})
-var fn = (req.query.fn) ? '/tmp/' + req.query.fn : '';
+// var fn = (req.query.fn) ? '/tmp/' + req.query.fn : '';
+var fn='/tmp/66.mp4';
 if (!fn) res.send('Missing fn');
 else {
   pkg.fs.stat(fn, function(err, data) {
