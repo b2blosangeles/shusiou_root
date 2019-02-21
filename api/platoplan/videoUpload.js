@@ -1,1 +1,1 @@
-res.send({status : 'success1', bb: req.query})
+res.send({status : 'success1', tt: req.body})
