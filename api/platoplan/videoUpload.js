@@ -21,8 +21,6 @@ _f['fp'] = function(cbk) {
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
 };
 _f['S1'] = function(cbk) {
-     cbk(true);
-     return true
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           file.pipe(writeStream);
           file.on('data', function(data) {});
@@ -43,6 +41,6 @@ _f['S2'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {	
-         res.send({successy: true, code: (!req.query.code) ? '' : req.query.code});
+         res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
      }, 600000);
 
