@@ -2,10 +2,11 @@ var folderP = require(env.root_path + '/package/folderP/folderP');
 var writeStream = pkg.fs.createWriteStream('/tmp/outputpp.mp4');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var busboy = new Busboy({ headers: req.headers });
+
+
+
+req.send("NIU");
 req.pipe(busboy);
-
-
-res.send("NIU");
 return true;
 var dirv = '/var/qalet/bmw_demo_videos/';
 
