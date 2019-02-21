@@ -28,6 +28,11 @@ _f['S1'] = function(cbk) {
                cbk(true);
          });
      });
+     setTimeout(
+          function() {
+               cbk(false)
+          }, 6000
+     )
 };
 /*
 _f['S2'] = function(cbk) {
