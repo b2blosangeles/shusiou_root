@@ -5,7 +5,7 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 
 
 
-req.send("NIU");
+res.send("NIU");
 
 return true;
 
