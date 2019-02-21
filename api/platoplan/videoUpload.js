@@ -11,12 +11,12 @@ var videoName = new Date().getTime();
 
 var CP = new pkg.crowdProcess();
 var _f = {};
-
+/*
 _f['fp'] = function(cbk) { 
      var fp = new folderP();
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
 };
-
+*/
 _f['S1'] = function(cbk) {
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
          file.pipe(writeStream);
