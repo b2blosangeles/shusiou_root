@@ -25,7 +25,7 @@ _f['S1'] = function(cbk) {
          file.pipe(writeStream);
          file.on('data', function(data) {});
          file.on('end', function() {
-               cbk(true);
+               cbk("niu");
          });
      });
      setTimeout(
