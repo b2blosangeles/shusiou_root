@@ -4,7 +4,7 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 
 var busboy = new Busboy({ headers: req.headers });
 
-
+req.pipe(busboy);
 res.send(req.headers);
 
 return true;
