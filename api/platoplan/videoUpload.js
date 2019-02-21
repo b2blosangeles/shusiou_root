@@ -51,4 +51,4 @@ CP.serial(
      function(data) {	
         //  res.send("CCC");
          res.send({success: true, results: "data", code: (!req.query.code) ? '' : req.query.code});
-     }, 6000);
+     }, 60000);
