@@ -15,11 +15,11 @@ var videoName = new Date().getTime();
 
 var CP = new pkg.crowdProcess();
 var _f = {};
-/*
+
 _f['fp'] = function(cbk) { 
      var fp = new folderP();
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
-};*/
+};
 _f['S1'] = function(cbk) {
      cbk(true);
      return true
@@ -43,6 +43,6 @@ _f['S2'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {	
-         res.send({success: true, code: (!req.query.code) ? '' : req.query.code});
+         res.send({successy: true, code: (!req.query.code) ? '' : req.query.code});
      }, 600000);
 
