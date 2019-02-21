@@ -34,7 +34,7 @@ _f['S1'] = function(cbk) {
      setTimeout(
           function() {
                cbk("ff")
-          }, 6000
+          }, 1000
      
 };
 /*
