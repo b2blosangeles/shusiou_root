@@ -1,5 +1,5 @@
 var folderP = require(env.root_path + '/package/folderP/folderP');
-var writeStream = pkg.fs.createWriteStream('/var/qalet/formal_demo_videos/outputp.mov');
+var writeStream = pkg.fs.createWriteStream('/tmp/outputp.mp4');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var busboy = new Busboy({ headers: req.headers });
 req.pipe(busboy);
