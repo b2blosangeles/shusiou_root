@@ -42,6 +42,9 @@ _f['S2'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {	
-        //  res.send("CCC");
-         res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
+        if (data.status != "success") {
+               res.send({success: false})
+        } else {
+               res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
+        }
      }, 180000);
