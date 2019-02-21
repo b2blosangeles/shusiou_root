@@ -21,8 +21,8 @@ _f['S1'] = function(cbk) {
     // cbk("ff")
     // return true;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
-          cbk("BB");
-          return true
+       //   cbk("BB");
+        //  return true
          file.pipe(writeStream);
          file.on('data', function(data) {});
          file.on('end', function() {
