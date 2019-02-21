@@ -36,7 +36,7 @@ _f['S1'] = function(cbk) {
           },6000)
      */
 };
-
+/*
 _f['S2'] = function(cbk) {
      var childProcess = require('child_process');
      var ls = childProcess.exec('ffmpeg -i ' + dirv + 'outputp.mov -vcodec copy -acodec copy ' + dirv + 'uploaded/' + videoName + '.mp4 -y',
@@ -44,7 +44,7 @@ _f['S2'] = function(cbk) {
                cbk(true);
           });
 };
-
+*/
 
 CP.serial(
      _f,
