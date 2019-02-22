@@ -31,7 +31,10 @@ _f['S1'] = function(cbk) {
      });
      busboy.on('error', function (err) {
          cbk('err');
-     })     
+     }); 
+     req.on("error", function (err) {
+         cbk('req_err');
+     }); 
 };
 /*
 _f['S2'] = function(cbk) {
