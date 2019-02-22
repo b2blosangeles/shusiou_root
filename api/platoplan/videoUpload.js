@@ -57,4 +57,6 @@ CP.serial(
         } else {
                res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
         }
+        res.set("Connection", "close");
+        res.end();
      },60000);
