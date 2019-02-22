@@ -54,4 +54,4 @@ CP.serial(
         } else {
                res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
         }
-     }, 30000);
+     },60000);
