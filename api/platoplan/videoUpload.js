@@ -43,7 +43,7 @@ CP.serial(
      _f,
      function(data) {	
         if (data.status != "success") {
-               res.send({success: false})
+               res.send({success: false, message : data})
         } else {
                res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
         }
