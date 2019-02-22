@@ -54,9 +54,9 @@ CP.serial(
      function(data) {
         res.set("Connection", "close");
         if (data.status != "success") {
-               res.send({success: false, message : data})
+               res.end({success: false, message : data})
         } else {
-               res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
+               res.end({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
         }
         
        // res.end();
