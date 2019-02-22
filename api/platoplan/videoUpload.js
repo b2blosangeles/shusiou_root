@@ -19,15 +19,16 @@ _f['fp'] = function(cbk) {
 */
 _f['S1'] = function(cbk) {
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
-          
          var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
-          
          file.pipe(writeStream);
          file.on('data', function(data) {});
          file.on('end', function() {
                cbk(filename);
          });
      });
+     busboy.on('error', function (err) {
+         cbk(false);
+     })     
 };
 /*
 _f['S2'] = function(cbk) {
