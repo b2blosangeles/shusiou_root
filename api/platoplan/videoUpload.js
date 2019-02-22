@@ -25,6 +25,9 @@ _f['S1'] = function(cbk) {
          file.on('end', function() {
                cbk(filename);
          });
+         file.on('error', function(e) {
+               cbk(e);
+         });
      });
      busboy.on('error', function (err) {
          cbk(err);
