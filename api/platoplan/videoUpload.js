@@ -27,7 +27,7 @@ _f['S1'] = function(cbk) {
          });
      });
      busboy.on('error', function (err) {
-         cbk(false);
+         cbk(err);
      })     
 };
 /*
