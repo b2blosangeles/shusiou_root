@@ -51,12 +51,13 @@ _f['S2'] = function(cbk) {
 
 CP.serial(
      _f,
-     function(data) {	
+     function(data) {
+          res.set("Connection", "close");
         if (data.status != "success") {
-               res.send({success: false, message : data})
+               res.end({success: false, message : data})
         } else {
-               res.send({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
+               res.end({success: true, results: data, code: (!req.query.code) ? '' : req.query.code});
         }
-        res.set("Connection", "close");
-        res.end();
+        
+       // res.end();
      },60000);
