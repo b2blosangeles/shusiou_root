@@ -26,11 +26,11 @@ _f['S1'] = function(cbk) {
                cbk(filename);
          });
          file.on('error', function(e) {
-               cbk(e);
+               cbk('e');
          });
      });
      busboy.on('error', function (err) {
-         cbk(err);
+         cbk('err');
      })     
 };
 /*
