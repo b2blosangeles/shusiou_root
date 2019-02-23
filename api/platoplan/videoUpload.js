@@ -20,8 +20,6 @@ _f['S1'] = function(cbk) {
      req.pipe(busboy);     
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
          var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
-          cbk("ppp")
-          return true
          file.pipe(writeStream);
          file.on('data', function(data) {});
          file.on('end', function() {
