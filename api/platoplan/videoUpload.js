@@ -13,6 +13,8 @@ _f['fp'] = function(cbk) {
 };
 
 _f['S1'] = function(cbk) {
+    cbk('F-false');
+   return true;
      var busboy = new Busboy({ headers: req.headers });
      req.pipe(busboy);  
      var existFile = false;
