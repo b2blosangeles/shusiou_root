@@ -17,8 +17,10 @@ _f['fp'] = function(cbk) {
 
 _f['S1'] = function(cbk) {
      var busboy = new Busboy({ headers: req.headers });
-     req.pipe(busboy);     
+     req.pipe(busboy);  
+     var existFile = false;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+          existFile = true;
          var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
          file.pipe(writeStream);
          file.on('data', function(data) {});
@@ -26,16 +28,16 @@ _f['S1'] = function(cbk) {
                cbk(filename);
          });      
          file.on('error', function(e) {
-               cbk('e');
+                cbk(false);
          });
      });
     busboy.on('finish', function() {
-                 setTimeout(function() {
-                         cbk('---fff');
-                    }, 1000);
+       setTimeout(function() {
+               if (!existFile) cbk(false);
+          }, 2000);
     });
      req.on("error", function (err) {
-         cbk('req_err');
+         cbk(false);
      }); 
 };
 /*
