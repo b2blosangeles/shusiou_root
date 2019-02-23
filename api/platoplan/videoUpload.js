@@ -2,9 +2,7 @@ var folderP = require(env.root_path + '/package/folderP/folderP');
 
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 
-var busboy = new Busboy({ headers: req.headers });
 
-req.pipe(busboy);
 var dirv = '/var/qalet/bmw_demo_videos/';
 
 var videoName = new Date().getTime();
@@ -18,6 +16,8 @@ _f['fp'] = function(cbk) {
 };
 */
 _f['S1'] = function(cbk) {
+     var busboy = new Busboy({ headers: req.headers });
+     req.pipe(busboy);     
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
          var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
           cbk("ppp")
