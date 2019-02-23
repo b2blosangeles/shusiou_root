@@ -11,7 +11,7 @@ _f['fp'] = function(cbk) {
    //  fp.build(dirv + 'uploaded/', function() { cbk(true);});
      cbk('req.body');
 };
-/*
+
 _f['S1'] = function(cbk) {
      var busboy = new Busboy({ headers: req.headers });
      req.pipe(busboy);  
@@ -34,11 +34,11 @@ _f['S1'] = function(cbk) {
                if (!existFile) cbk('B-false');
           }, 1000);
     });
-     req.on("error", function (err) {
+    req.on("error", function (err) {
          cbk('C-false');
      }); 
 };
-*/
+
 /*
 _f['S2'] = function(cbk) {
      var childProcess = require('child_process');
