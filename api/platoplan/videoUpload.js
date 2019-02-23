@@ -47,7 +47,7 @@ _f['S1'] = function(cbk) {
           }, 1000);
     });
      req.on("error", function (err) {
-         cbk('C-false';
+         cbk('C-false');
      }); 
 };
 /*
