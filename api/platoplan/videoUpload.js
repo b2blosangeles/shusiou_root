@@ -22,7 +22,7 @@ _f['S1'] = function(cbk) {
           file.pipe(writeStream);
           file.on('data', function(data) {});
           file.on('end', function() {
-               cbk(fieldname);
+               cbk(filename);
           });      
           file.on('error', function(e) {
                cbk('A-false');
