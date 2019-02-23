@@ -32,7 +32,7 @@ _f['S1'] = function(cbk) {
                     cbk(filename + '***->' + fieldname);
               });      
               file.on('error', function(e) {
-                     cbk(false);
+                     cbk('A-false');
               });              
           //     cbk(true);
           
@@ -43,11 +43,11 @@ _f['S1'] = function(cbk) {
      });
     busboy.on('finish', function() {
        setTimeout(function() {
-               if (!existFile) cbk(false);
+               if (!existFile) cbk('B-false');
           }, 1000);
     });
      req.on("error", function (err) {
-         cbk(false);
+         cbk('C-false';
      }); 
 };
 /*
