@@ -34,7 +34,7 @@ _f['S1'] = function(cbk) {
     busboy.on('finish', function() {
        setTimeout(function() {
                if (!existFile) cbk(false);
-          }, 2000);
+          }, 1000);
     });
      req.on("error", function (err) {
          cbk(false);
