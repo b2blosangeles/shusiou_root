@@ -13,7 +13,7 @@ _f['fp'] = function(cbk) {
 };
 
 _f['S1'] = function(cbk) {
-      if (req.method === 'POST')
+      if (req.method === 'POST') {
          var busboy = new Busboy({ headers: req.headers });
          req.pipe(busboy);  
       }
