@@ -24,16 +24,15 @@ _f['S1'] = function(cbk) {
          file.on('data', function(data) {});
          file.on('end', function() {
                cbk(filename);
-         });
-         file.on('finish', function() {
-               cbk(filename + '---fff');
-         });          
+         });      
          file.on('error', function(e) {
                cbk('e');
          });
      });
     busboy.on('finish', function() {
-          cbk('err-finis');
+                 setTimeout(function() {
+                         cbk('---fff');
+                    }, 1000);
     });
      req.on("error", function (err) {
          cbk('req_err');
