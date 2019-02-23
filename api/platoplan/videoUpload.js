@@ -9,12 +9,12 @@ var videoName = new Date().getTime();
 
 var CP = new pkg.crowdProcess();
 var _f = {};
-/*
+
 _f['fp'] = function(cbk) { 
      var fp = new folderP();
      fp.build(dirv + 'uploaded/', function() { cbk(true);});
 };
-*/
+
 _f['S1'] = function(cbk) {
      var busboy = new Busboy({ headers: req.headers });
      req.pipe(busboy);     
@@ -32,13 +32,9 @@ _f['S1'] = function(cbk) {
                cbk('e');
          });
      });
-  //   busboy.on('finish', function() {
-  //        cbk('err-finis');
-  //  });
-     /*
-     busboy.on('finish', function (err) {
-         cbk('finish');
-     }); */
+    busboy.on('finish', function() {
+          cbk('err-finis');
+    });
      req.on("error", function (err) {
          cbk('req_err');
      }); 
