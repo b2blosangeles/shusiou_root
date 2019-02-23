@@ -28,11 +28,12 @@ _f['S1'] = function(cbk) {
                cbk('A-false');
           });   
     });
+   /*
     busboy.on('finish', function() {
        setTimeout(function() {
                if (!existFile) cbk('B-false');
           }, 1000);
-    });
+    });*/
      req.on("error", function (err) {
          cbk('C-false');
      }); 
