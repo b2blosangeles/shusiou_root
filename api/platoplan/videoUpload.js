@@ -18,8 +18,6 @@ _f['fp'] = function(cbk) {
 };
 */
 _f['S1'] = function(cbk) {
-      cbk('K');
-     return true;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
          var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
          file.pipe(writeStream);
@@ -27,6 +25,9 @@ _f['S1'] = function(cbk) {
          file.on('end', function() {
                cbk(filename);
          });
+         file.on('finish', function() {
+               cbk(filename + '---fff');
+         });          
          file.on('error', function(e) {
                cbk('e');
          });
