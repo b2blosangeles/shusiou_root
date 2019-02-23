@@ -13,14 +13,12 @@ _f['fp'] = function(cbk) {
 };
 
 _f['S1'] = function(cbk) {
-      if (req.method === 'POST') {
-         var busboy = new Busboy({ headers: req.headers });
-         req.pipe(busboy);  
+      if (req.method !== 'POST') {
+           cbk(false);
+         return true
       }
-   
-       cbk('G-false');
-   return true;
-   
+     var busboy = new Busboy({ headers: req.headers });
+     req.pipe(busboy); 
      var existFile = false;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           existFile = true;
