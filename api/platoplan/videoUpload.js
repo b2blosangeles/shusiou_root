@@ -14,7 +14,7 @@ _f['fp'] = function(cbk) {
 
 _f['S1'] = function(cbk) {
       if (req.method !== 'POST') {
-           cbk(false);
+         cbk(false);
          return true
       }
      var busboy = new Busboy({ headers: req.headers });
