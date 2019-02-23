@@ -7,8 +7,9 @@ var CP = new pkg.crowdProcess();
 var _f = {};
 
 _f['fp'] = function(cbk) { 
-     var fp = new folderP();
-     fp.build(dirv + 'uploaded/', function() { cbk(true);});
+   //  var fp = new folderP();
+   //  fp.build(dirv + 'uploaded/', function() { cbk(true);});
+     cbk(req.body);
 };
 
 _f['S1'] = function(cbk) {
@@ -16,27 +17,17 @@ _f['S1'] = function(cbk) {
      req.pipe(busboy);  
      var existFile = false;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
-     
           existFile = true;
-          
-          var fp = new folderP();
-          fp.build('/tmp/' + filename, function() { 
-               var writeStream = pkg.fs.createWriteStream('/tmp/' + filename + '/video.mp4');
-              file.pipe(writeStream);
-              file.on('data', function(data) {});
-              file.on('end', function() {
-                    cbk(filename + '***->' + fieldname);
-              });      
-              file.on('error', function(e) {
-                     cbk('A-false');
-              });              
-          //     cbk(true);
-          
-          });
-          
-     //    var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
-
-     });
+          var writeStream = pkg.fs.createWriteStream('/tmp/video.mp4');
+          file.pipe(writeStream);
+          file.on('data', function(data) {});
+          file.on('end', function() {
+               cbk(fieldname);
+          });      
+          file.on('error', function(e) {
+               cbk('A-false');
+          });   
+    });
     busboy.on('finish', function() {
        setTimeout(function() {
                if (!existFile) cbk('B-false');
