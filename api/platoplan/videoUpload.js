@@ -20,6 +20,7 @@ _f['S1'] = function(cbk) {
      req.pipe(busboy);  
      var existFile = false;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+     
           existFile = true;
           
           var fp = new folderP();
@@ -28,7 +29,7 @@ _f['S1'] = function(cbk) {
               file.pipe(writeStream);
               file.on('data', function(data) {});
               file.on('end', function() {
-                    cbk(filename);
+                    cbk(filename + '***->' + fieldname);
               });      
               file.on('error', function(e) {
                      cbk(false);
