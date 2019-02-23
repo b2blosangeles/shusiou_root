@@ -21,15 +21,24 @@ _f['S1'] = function(cbk) {
      var existFile = false;
      busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           existFile = true;
-         var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
-         file.pipe(writeStream);
-         file.on('data', function(data) {});
-         file.on('end', function() {
-               cbk(filename);
-         });      
-         file.on('error', function(e) {
-                cbk(false);
-         });
+          
+          var fp = new folderP();
+          fp.build('/tmp/' + filename, function() { 
+               var writeStream = pkg.fs.createWriteStream('/tmp/' + filename + '/video.mp4');
+              file.pipe(writeStream);
+              file.on('data', function(data) {});
+              file.on('end', function() {
+                    cbk(filename);
+              });      
+              file.on('error', function(e) {
+                     cbk(false);
+              });              
+          //     cbk(true);
+          
+          });
+          
+     //    var writeStream = pkg.fs.createWriteStream('/tmp/' + filename);
+
      });
     busboy.on('finish', function() {
        setTimeout(function() {
