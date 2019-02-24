@@ -17,7 +17,7 @@ switch(req.query.opt) {
             });
             // var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + tmpPath + 'tt.mp4'
             var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4';
-             res.send(cmd);
+             res.send([cmd]);
         //    pkg.exec(cmd, function(error, stdout, stderr) {
         //       res.send('done');
         //    });              
