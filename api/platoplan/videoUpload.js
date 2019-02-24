@@ -14,7 +14,9 @@ switch(req.query.opt) {
                items.sort(function(a, b) {
                   return parseInt(a) - parseInt(b);
                  });
-               res.send(items);
+               res.send(items.join(' '));
+             //  cat 1.txt 2.txt 3.txt > 0.txt
+               
             });   
          break;
    case 'postData':
