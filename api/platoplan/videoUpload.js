@@ -9,7 +9,7 @@ var _f = {};
 _f['fp'] = function(cbk) { 
    //  var fp = new folderP();
    //  fp.build(dirv + 'uploaded/', function() { cbk(true);});
-     cbk('req.body');
+     cbk(req.body);
 };
 
 _f['S1'] = function(cbk) {
