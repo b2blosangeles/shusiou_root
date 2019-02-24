@@ -4,7 +4,11 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 
 switch(req.query.opt) {
    case 'postDataEnd':
-      break;
+ 
+         var videoPath = '/tmp/' + req.query.uuid + '/videos/';
+         var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/';
+         res.send(env)
+         break;
    case 'postData':
 
          var videoPath = '/tmp/' + req.query.uuid + '/videos/';
