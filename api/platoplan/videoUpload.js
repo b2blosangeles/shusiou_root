@@ -6,15 +6,22 @@ switch(req.query.opt) {
    case 'postDataEnd':
       break;
    case 'postData':
-         var CP = new pkg.crowdProcess();
-         var _f = {};
 
-         _f['fp'] = function(cbk) { 
-            //  var fp = new folderP();
-            //  fp.build(dirv + 'uploaded/', function() { cbk(true);});
-              cbk(req.query);
+         var videoPath = '/tmp/' + req.query.uuid + '/videos/';
+         var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/';
+      
+          var CP = new pkg.crowdProcess();
+         var _f = {};     
+         _f['videoPath'] = function(cbk) { 
+              var fp = new folderP();
+              fp.build( videoPath, function() { cbk(true);});
+    
          };
-
+         _f['tmpPath'] = function(cbk) { 
+              var fp = new folderP();
+              fp.build( tmpPath, function() { cbk(true);});
+    
+         };      
          _f['S1'] = function(cbk) {
                if (req.method !== 'POST') {
                   cbk(false);
@@ -25,11 +32,11 @@ switch(req.query.opt) {
               var existFile = false;
               busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
                    existFile = true;
-                   var writeStream = pkg.fs.createWriteStream('/tmp/video.mp4');
+                   var writeStream = pkg.fs.createWriteStream(tmpPath + req.query.idx);
                    file.pipe(writeStream);
                    file.on('data', function(data) {});
                    file.on('end', function() {
-                       cbk(filename);
+                       cbk(filename + '---' + req.query.idx);
                    });      
                    file.on('error', function(e) {
                         cbk('A-false');
