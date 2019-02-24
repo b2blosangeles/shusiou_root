@@ -7,7 +7,8 @@ switch(req.query.opt) {
  
          var videoPath = '/var/mobileCloud/' + req.query.uuid + '/videos/' + req.query.vid + '/';
          var tmpTrunkPath = '/var/mobileCloud/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
-         var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
+         var tmpSection = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec ;
+         var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' ;
       
           var CP = new pkg.crowdProcess();
          var _f = {};
@@ -15,7 +16,8 @@ switch(req.query.opt) {
             items.sort(function(a, b) {
                return parseInt(a) - parseInt(b);
             });
-            var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4 && cd /tmp && rm -fr ' + tmpTrunkPath;
+            var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > ' + tmpSection + ' && cd ' +  tmpPath + 
+                ' && rm -fr ' + tmpTrunkPath;
              
              pkg.exec(cmd, function(error, stdout, stderr) {
                res.send({success:true, cmd : cmd});
@@ -26,7 +28,7 @@ switch(req.query.opt) {
 
          var videoPath = '/var/mobileCloud/' + req.query.uuid + '/videos/' + req.query.vid + '/';
          var tmpTrunkPath = '/var/mobileCloud/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
-         var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
+         var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' ;
       
           var CP = new pkg.crowdProcess();
          var _f = {};     
