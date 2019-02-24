@@ -15,8 +15,7 @@ switch(req.query.opt) {
             items.sort(function(a, b) {
                return parseInt(a) - parseInt(b);
             });
-            // var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + tmpPath + 'tt.mp4'
-            var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4';
+            var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4 && cd /tmp && rm -fr ' + tmpTrunkPath;
              
              pkg.exec(cmd, function(error, stdout, stderr) {
                res.send({success:true, cmd : cmd});
