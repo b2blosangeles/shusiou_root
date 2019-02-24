@@ -15,7 +15,7 @@ switch(req.query.opt) {
                items.sort(function(a, b) {
                   return parseInt(a) - parseInt(b);
                  });
-               res.send('cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + videoPath + 'tt.mp4')
+               res.send('cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + tmpPath + 'tt.mp4')
                
             });   
          break;
