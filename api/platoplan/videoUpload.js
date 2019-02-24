@@ -11,7 +11,7 @@ switch(req.query.opt) {
       
           var CP = new pkg.crowdProcess();
          var _f = {};
-         pkg.fs.readdir(tmpPath, function(err, items) {
+         pkg.fs.readdir(tmpTrunkPath, function(err, items) {
             items.sort(function(a, b) {
                return parseInt(a) - parseInt(b);
             });
