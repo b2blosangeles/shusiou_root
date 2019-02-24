@@ -72,5 +72,5 @@ switch(req.query.opt) {
 
       break;     
    default:
-      reas.send('Wrong parameter')
+      res.send('Wrong parameter')
 }
