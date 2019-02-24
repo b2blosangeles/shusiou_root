@@ -19,7 +19,7 @@ switch(req.query.opt) {
             var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4';
              
              pkg.exec(cmd, function(error, stdout, stderr) {
-               res.send({cmd : cmd});
+               res.send({success:true, cmd : cmd});
             });              
          });   
          break;
