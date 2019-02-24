@@ -1,5 +1,3 @@
-res.send(req.query);
-return true;
 var folderP = require(env.root_path + '/package/folderP/folderP');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var dirv = '/var/qalet/bmw_demo_videos/';
@@ -28,8 +26,7 @@ _f['S1'] = function(cbk) {
           file.pipe(writeStream);
           file.on('data', function(data) {});
           file.on('end', function() {
-              // cbk(filename);
-             cbk(req.body)
+              cbk(filename);
           });      
           file.on('error', function(e) {
                cbk('A-false');
