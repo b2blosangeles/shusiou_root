@@ -14,7 +14,7 @@ switch(req.query.opt) {
                items.sort(function(a, b) {
                   return parseInt(a) - parseInt(b);
                  });
-               res.send(items.join(' '));
+               res.send('cd ' + tmpPath + && 'cat ' + items.join(' ') + ' > /tmp/tt.mp4');
              //  cat 1.txt 2.txt 3.txt > 0.txt
                
             });   
