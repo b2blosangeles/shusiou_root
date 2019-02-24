@@ -10,14 +10,16 @@ switch(req.query.opt) {
          var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
       
           var CP = new pkg.crowdProcess();
-         var _f = {};    
-            pkg.fs.readdir(tmpPath, function(err, items) {
-               items.sort(function(a, b) {
-                  return parseInt(a) - parseInt(b);
-                 });
-               res.send('cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + tmpPath + 'tt.mp4')
-               
-            });   
+         var _f = {};
+         pkg.fs.readdir(tmpPath, function(err, items) {
+            items.sort(function(a, b) {
+               return parseInt(a) - parseInt(b);
+             });
+            var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + tmpPath + 'tt.mp4'
+               pkg.exec(cmd, function(error, stdout, stderr) {
+                  res.send('Server will be reboot in 1 minute!');
+               });              
+         });   
          break;
    case 'postData':
 
