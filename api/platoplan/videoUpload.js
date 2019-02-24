@@ -12,7 +12,7 @@ switch(req.query.opt) {
    case 'postData':
 
          var videoPath = '/tmp/' + req.query.uuid + '/videos/';
-         var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/';
+         var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
       
           var CP = new pkg.crowdProcess();
          var _f = {};     
