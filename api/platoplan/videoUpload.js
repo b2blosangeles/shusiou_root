@@ -5,9 +5,9 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 switch(req.query.opt) {
    case 'postDataEnd':
  
-         var videoPath = '/tmp/' + req.query.uuid + '/videos/' + req.query.vid + '/';
-         var tmpTrunkPath = '/tmp/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
-         var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
+         var videoPath = '/var/mobileCloud/' + req.query.uuid + '/videos/' + req.query.vid + '/';
+         var tmpTrunkPath = '/var/mobileCloud/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
+         var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
       
           var CP = new pkg.crowdProcess();
          var _f = {};    
@@ -21,9 +21,9 @@ switch(req.query.opt) {
          break;
    case 'postData':
 
-         var videoPath = '/tmp/' + req.query.uuid + '/videos/' + req.query.vid + '/';
-         var tmpTrunkPath = '/tmp/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
-         var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
+         var videoPath = '/var/mobileCloud/' + req.query.uuid + '/videos/' + req.query.vid + '/';
+         var tmpTrunkPath = '/var/mobileCloud/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
+         var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
       
           var CP = new pkg.crowdProcess();
          var _f = {};     
