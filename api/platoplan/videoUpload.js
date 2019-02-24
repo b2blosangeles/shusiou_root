@@ -10,8 +10,9 @@ switch(req.query.opt) {
       
           var CP = new pkg.crowdProcess();
          var _f = {};    
-      
-         res.send(tmpPath)
+            pkg.fs.readdir(tmpPath, function(err, items) {
+                res.send(items);
+            });   
          break;
    case 'postData':
 
