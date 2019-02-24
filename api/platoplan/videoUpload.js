@@ -1,3 +1,5 @@
+res.send(env);
+return true;
 var folderP = require(env.root_path + '/package/folderP/folderP');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 var dirv = '/var/qalet/bmw_demo_videos/';
