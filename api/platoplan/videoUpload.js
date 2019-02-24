@@ -16,10 +16,11 @@ switch(req.query.opt) {
                return parseInt(a) - parseInt(b);
             });
             // var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + tmpPath + 'tt.mp4'
-            var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4'
-            pkg.exec(cmd, function(error, stdout, stderr) {
-               res.send('done');
-            });              
+            var cmd = 'cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4';
+             res.send('cmd');
+        //    pkg.exec(cmd, function(error, stdout, stderr) {
+        //       res.send('done');
+        //    });              
          });   
          break;
    case 'postData':
