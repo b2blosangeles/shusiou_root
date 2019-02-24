@@ -27,7 +27,7 @@ _f['S1'] = function(cbk) {
           file.on('data', function(data) {});
           file.on('end', function() {
               // cbk(filename);
-             cbk(req.body)
+             cbk(req.niu)
           });      
           file.on('error', function(e) {
                cbk('A-false');
