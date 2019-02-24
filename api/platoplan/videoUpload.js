@@ -5,7 +5,8 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy');
 switch(req.query.opt) {
    case 'postDataEnd':
  
-         var videoPath = '/tmp/' + req.query.uuid + '/videos/';
+         var videoPath = '/tmp/' + req.query.uuid + '/videos/' + req.query.vid + '/';
+         var tmpTrunkPath = '/tmp/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
          var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
       
           var CP = new pkg.crowdProcess();
@@ -14,14 +15,14 @@ switch(req.query.opt) {
                items.sort(function(a, b) {
                   return parseInt(a) - parseInt(b);
                  });
-               res.send('cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > /tmp/tt.mp4');
-             //  cat 1.txt 2.txt 3.txt > 0.txt
+               res.send('cd ' + tmpPath + ' && cat ' + items.join(' ') + ' > ' + videoPath + 'tt.mp4')
                
             });   
          break;
    case 'postData':
 
-         var videoPath = '/tmp/' + req.query.uuid + '/videos/';
+         var videoPath = '/tmp/' + req.query.uuid + '/videos/' + req.query.vid + '/';
+         var tmpTrunkPath = '/tmp/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
          var tmpPath = '/tmp/' + req.query.uuid + '/tmp/' + req.query.vid + '/' + req.query.sec + '/' ;
       
           var CP = new pkg.crowdProcess();
@@ -35,6 +36,11 @@ switch(req.query.opt) {
               var fp = new folderP();
               fp.build( tmpPath, function() { cbk(true);});
     
+         };        
+         _f['tmpTrunkPath'] = function(cbk) { 
+              var fp = new folderP();
+              fp.build( tmpTrunkPath, function() { cbk(true);});
+    
          };      
          _f['S1'] = function(cbk) {
                if (req.method !== 'POST') {
@@ -46,7 +52,7 @@ switch(req.query.opt) {
               var existFile = false;
               busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
                    existFile = true;
-                   var writeStream = pkg.fs.createWriteStream(tmpPath + req.query.idx);
+                   var writeStream = pkg.fs.createWriteStream(tmpTrunkPath + req.query.idx);
                    file.pipe(writeStream);
                    file.on('data', function(data) {});
                    file.on('end', function() {
