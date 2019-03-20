@@ -106,7 +106,7 @@ _f['mp4'] = function(cbk) {
         var videos = CP.data.videos;
         for (var i = 0; i < videos.length; i++) {
             if (videos[i].video == 'video_1553034704') {
-                var str = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 + ' ' + 
+                var str = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 ' + 
                     videoPath + videos[i].video + '/ -y'
                 str += '&& cd /tmp && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
 
