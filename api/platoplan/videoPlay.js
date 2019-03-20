@@ -44,9 +44,9 @@ _f['sec'] = function(cbk) {
     for (var i = 0; i < videos.length; i++) {
         _f1['SEC_'  + i] = (function(i) {
             return function(cbk1) {
-                var ddr = cloudPath + videos.phone + '/tmp/' + videos[i].video + '/';
+                var ddr = cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/';
                 pkg.fs.readdir(ddr, function(err, items) {
-                    for (var i = 0; i < items1.length; i++) {
+                    for (var i = 0; i < items.length; i++) {
                         str += "file '" +  ddr + items[i] + "'\n"
                     }
                    /* 
