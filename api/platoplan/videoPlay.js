@@ -46,7 +46,7 @@ _f['sec'] = function(cbk) {
                 var ddr = items[i]+'/';
                 pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
-                        str += "file '" +  ddr + items1[i] + "'"
+                        str += "file '" +  ddr + items1[i] + "'\n"
                         // secList[secList.length] = ddr + items1[i]
                     }
                    cbk1(true)
