@@ -2,6 +2,7 @@ var folderP = require(env.root_path + '/package/folderP/folderP');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy')
 
 var cloudPath = '/var/mobileCloud/';
+var videoPath = '/tmp/videos/';
 var CP = new pkg.crowdProcess();
 var _f = {}; 
 
@@ -35,7 +36,35 @@ _f['videos'] = function(cbk) {
         },10000)
     
 };
+ _f['tmpPath'] = function(cbk) { 
+      var fp = new folderP();
+      fp.build('/tmp/video/', function() { cbk(true);});
 
+ };
+_f['videoPath'] = function(cbk) { 
+    var videos = CP.data.videos;
+    
+    var CP1 = new pkg.crowdProcess();
+    var _f1 = {};
+    for (var i = 0; i < videos.length; i++) {
+        _f1['sec_'  + i] = (function(i) {
+            return function(cbk1) {
+                var fp = new folderP();
+                var ddr = cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/';
+                
+                fp.build(videoPath + videos[i].video, function() { 
+                    cbk1(true);                                             
+                });
+                
+            }
+        })(i)
+    }
+    CP1.serial(
+     _f1,
+     function(data) {
+        cbk(true);
+        },10000)
+};
 _f['sec'] = function(cbk) { 
     var videos = CP.data.videos;
     
@@ -56,7 +85,7 @@ _f['sec'] = function(cbk) {
                     for (var j = 0; j < items.length; j++) {
                         str += "file '" +  ddr + items[j] + "'\n";
                     }
-                    pkg.fs.writeFile('/tmp/' + videos[i].video + '.txt', str, function(err) {
+                    pkg.fs.writeFile(videoPath + videos[i].video + '/video.txt', str, function(err) {
                         if(err) {
                             return console.log(err);
                         }
@@ -74,12 +103,20 @@ _f['sec'] = function(cbk) {
 };
 
 _f['mp4'] = function(cbk) { 
-            var str = 'cd /tmp && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
-            var childProcess = require('child_process');
-            var ls = childProcess.exec(str, 		   
-            function (error, stdout, stderr) {
-                cbk(str);
-            });
+        var videos = CP.data.videos;
+        for (var i = 0; i < videos.length; i++) {
+            if (videos[i].video == 'video_1553034704') {
+                var sdr = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 + videoPath + videos[i].video + '/ -y'
+                str += '&& cd /tmp && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
+
+                var childProcess = require('child_process');
+                var ls = childProcess.exec(str, 		   
+                function (error, stdout, stderr) {
+                    cbk(str);
+                });  
+            }
+            
+        }
 };
 CP.serial(
      _f,
