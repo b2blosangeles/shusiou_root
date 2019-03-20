@@ -108,7 +108,7 @@ _f['mp4'] = function(cbk) {
             if (videos[i].video == 'video_1553034704') {
                 var str = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 ' + 
                     videoPath + videos[i].video + '/ -y'
-                str += '&& cd /tmp && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
+                str += ' && cd ' + videoPath + videos[i].video + ' && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
 
                 var childProcess = require('child_process');
                 var ls = childProcess.exec(str, 		   
