@@ -36,11 +36,6 @@ _f['videos'] = function(cbk) {
         },10000)
     
 };
- _f['tmpPath'] = function(cbk) { 
-      var fp = new folderP();
-      fp.build('/tmp/video/', function() { cbk(true);});
-
- };
 _f['videoPath'] = function(cbk) { 
     var videos = CP.data.videos;
     
@@ -106,9 +101,9 @@ _f['mp4'] = function(cbk) {
         var videos = CP.data.videos;
         for (var i = 0; i < videos.length; i++) {
             if (videos[i].video == 'video_1553034704') {
-                var str = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 ' + 
-                    videoPath + videos[i].video + '/ -y'
-                str += ' && cd ' + videoPath + videos[i].video + ' && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
+                var str = 'cd ' + videoPath + videos[i].video + 
+                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 . -y && ' + 
+                    videoPath + videos[i].video + ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
 
                 var childProcess = require('child_process');
                 var ls = childProcess.exec(str, 		   
