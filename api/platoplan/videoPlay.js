@@ -18,8 +18,8 @@ _f['tmp'] = function(cbk) {
     for (var i = 0; i < items.length; i++) {
         _f1['TMP_'  + i] = (function(i) {
             return function(cbk1) {
-                var ddr = cloudPath + items[i] + '/tmp';
-                pkg.fs.readdir(cloudPath + items[i] + '/tmp', function(err, items1) {
+                var ddr = cloudPath + items[i] + '/tmp/';
+                pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
                          videoList[videoList.length] = ddr + items1[i]
                     }
