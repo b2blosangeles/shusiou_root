@@ -3,6 +3,8 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy')
 
 var cloudPath = '/var/mobileCloud/';
 var videoPath = '/tmp/videos/';
+var vid = 'video_1553034704';
+
 var CP = new pkg.crowdProcess();
 var _f = {}; 
 
@@ -100,9 +102,9 @@ _f['sec'] = function(cbk) {
 _f['mp4'] = function(cbk) { 
         var videos = CP.data.videos;
         for (var i = 0; i < videos.length; i++) {
-            if (videos[i].video == 'video_1553034704') {
+            if (videos[i].video == vid) {
                 var str = 'cd ' + videoPath + videos[i].video + 
-                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 . ' + 
+                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/video.mp4 . ' + 
                     ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
 
                 var childProcess = require('child_process');
@@ -118,7 +120,7 @@ _f['mp4'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {
-        res.sendFile(videoPath + 'video_1553034704' + '/0.mp4');
+        res.sendFile(videoPath + vid + '/video.mp4');
          return true;
         if (data.status != "success") {
                res.send({success: false, message : data})
