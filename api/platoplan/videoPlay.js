@@ -83,7 +83,7 @@ _f['sec'] = function(cbk) {
                     })
                     
                     for (var j = 0; j < items.length; j++) {
-                        str += "file '" +  ddr + items[j] + "'\n";
+                        str += "file '" +  items[j] + "'\n";
                     }
                     pkg.fs.writeFile(videoPath + videos[i].video + '/video.txt', str, function(err) {
                         if(err) {
@@ -106,7 +106,8 @@ _f['mp4'] = function(cbk) {
         var videos = CP.data.videos;
         for (var i = 0; i < videos.length; i++) {
             if (videos[i].video == 'video_1553034704') {
-                var sdr = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 + videoPath + videos[i].video + '/ -y'
+                var str = 'cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 + ' ' + 
+                    videoPath + videos[i].video + '/ -y'
                 str += '&& cd /tmp && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
 
                 var childProcess = require('child_process');
