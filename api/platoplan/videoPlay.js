@@ -36,7 +36,7 @@ _f['tmp'] = function(cbk) {
     
 };
 _f['sec'] = function(cbk) { 
-    cbk(0)
+    cbk(CP.data.tmp)
 };
 CP.serial(
      _f,
