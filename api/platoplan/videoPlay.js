@@ -16,12 +16,12 @@ _f['videos'] = function(cbk) {
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < items.length; i++) {
-        _f1['TMP_'  + i] = (function(i) {
+        _f1['videos_'  + i] = (function(i) {
             return function(cbk1) {
                 var ddr = cloudPath + items[i] + '/tmp/';
                 pkg.fs.readdir(ddr, function(err, items1) {
-                    for (var i = 0; i < items1.length; i++) {
-                         videoList[videoList.length] = {phone: items[i], video: items1[i]}
+                    for (var j = 0; j < items1.length; j++) {
+                         videoList[videoList.length] = {phone: items[i], video: items1[j]}
                     }
                    cbk1(true)
                 });
@@ -38,18 +38,16 @@ _f['videos'] = function(cbk) {
 
 _f['sec'] = function(cbk) { 
     var videos = CP.data.videos;
-    cbk(videos)
-    return true;
     var str = '';
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < videos.length; i++) {
-        _f1['SEC_'  + i] = (function(i) {
+        _f1['sec_'  + i] = (function(i) {
             return function(cbk1) {
                 var ddr = cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/';
                 pkg.fs.readdir(ddr, function(err, items) {
-                    for (var i = 0; i < items.length; i++) {
-                        str += "file '" +  ddr + items[i] + "'\n"
+                    for (var j = 0; j < items.length; j++) {
+                        str += "file '" +  ddr + items[j] + "'\n";
                     }
                    /* 
                     fs.writeFile("/tmp/", "Hey there!", function(err) {
