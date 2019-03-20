@@ -102,8 +102,8 @@ _f['mp4'] = function(cbk) {
         for (var i = 0; i < videos.length; i++) {
             if (videos[i].video == 'video_1553034704') {
                 var str = 'cd ' + videoPath + videos[i].video + 
-                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 . -y && ' + 
-                    videoPath + videos[i].video + ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
+                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/*.mp4 . ' + 
+                    ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
 
                 var childProcess = require('child_process');
                 var ls = childProcess.exec(str, 		   
@@ -118,6 +118,8 @@ _f['mp4'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {
+        res.sendFile(videoPath + 'video_1553034704' + '/video.mp4');
+         return true;
         if (data.status != "success") {
                res.send({success: false, message : data})
         } else {
