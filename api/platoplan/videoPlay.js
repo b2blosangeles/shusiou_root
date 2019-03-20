@@ -73,6 +73,9 @@ _f['sec'] = function(cbk) {
         },10000)
 };
 
+_f['img'] = function(cbk) { 
+    cbk('img');
+};
 CP.serial(
      _f,
      function(data) {
