@@ -10,7 +10,10 @@ _f['cloudPath'] = function(cbk) {
        cbk(items)
     });
 };
-
+_f['tmp'] = function(cbk) { 
+    var items = CP.data.cloudPath;
+    cbk(items )
+};
 CP.serial(
      _f,
      function(data) {
