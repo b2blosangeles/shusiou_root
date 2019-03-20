@@ -21,7 +21,6 @@ _f['tmp'] = function(cbk) {
                    cbk1(items)
                 });
             }
-            cbk1(items[i])
         })(i)
     }
     CP1.serial(
