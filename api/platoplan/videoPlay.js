@@ -37,14 +37,13 @@ _f['tmp'] = function(cbk) {
 };
 _f['sec'] = function(cbk) { 
     var items = CP.data.tmp;
-    var secList = [];
+    var str = '';
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < items.length; i++) {
         _f1['SEC_'  + i] = (function(i) {
             return function(cbk1) {
                 var ddr = items[i]+'/';
-                var str = '';
                 pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
                         str += "file '" +  ddr + items1[i] + "'"
