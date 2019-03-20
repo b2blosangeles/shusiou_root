@@ -74,7 +74,7 @@ _f['sec'] = function(cbk) {
 };
 
 _f['mp4'] = function(cbk) { 
-            var str = 'ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
+            var str = 'cd /tmp && ffmpeg -f concat -i video_1553034704.txt -c copy video_1553034704.mp4 -y';
             var childProcess = require('child_process');
             var ls = childProcess.exec(str, 		   
             function (error, stdout, stderr) {
