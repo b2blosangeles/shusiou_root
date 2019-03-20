@@ -118,7 +118,7 @@ _f['mp4'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {
-        res.sendFile(videoPath + 'video_1553034704' + '/video.mp4');
+        res.sendFile(videoPath + 'video_1553034704' + '/0.mp4');
          return true;
         if (data.status != "success") {
                res.send({success: false, message : data})
