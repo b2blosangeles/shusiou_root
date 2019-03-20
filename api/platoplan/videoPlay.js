@@ -10,7 +10,7 @@ _f['cloudPath'] = function(cbk) {
        cbk(items)
     });
 };
-_f['tmp'] = function(cbk) { 
+_f['videos'] = function(cbk) { 
     var items = CP.data.cloudPath;
     var videoList = [];
     var CP1 = new pkg.crowdProcess();
@@ -21,7 +21,7 @@ _f['tmp'] = function(cbk) {
                 var ddr = cloudPath + items[i] + '/tmp/';
                 pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
-                         videoList[videoList.length] = {path: cloudPath + items[i] + '/tmp/', video: items1[i]}
+                         videoList[videoList.length] = {phone: items[i], video: items1[i]}
                     }
                    cbk1(true)
                 });
