@@ -36,7 +36,28 @@ _f['tmp'] = function(cbk) {
     
 };
 _f['sec'] = function(cbk) { 
-    cbk(CP.data.tmp)
+    var items = CP.data.tmp;
+    var secList = [];
+    var CP1 = new pkg.crowdProcess();
+    var _f1 = {};
+    for (var i = 0; i < items.length; i++) {
+        _f1['SEC_'  + i] = (function(i) {
+            return function(cbk1) {
+                var ddr = items[i];
+                pkg.fs.readdir(ddr, function(err, items1) {
+                    for (var i = 0; i < items1.length; i++) {
+                         secList[secList.length] = ddr + items1[i]
+                    }
+                   cbk1(true)
+                });
+            }
+        })(i)
+    }
+    CP1.serial(
+     _f1,
+     function(data) {
+        cbk(secList);
+        },10000)
 };
 CP.serial(
      _f,
