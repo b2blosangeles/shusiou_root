@@ -78,7 +78,7 @@ _f['mp4'] = function(cbk) {
             var childProcess = require('child_process');
             var ls = childProcess.exec(str, 		   
             function (error, stdout, stderr) {
-                cbk(true);
+                cbk(str);
             });
 };
 CP.serial(
