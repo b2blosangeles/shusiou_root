@@ -12,7 +12,7 @@ _f['cloudPath'] = function(cbk) {
 };
 _f['tmp'] = function(cbk) { 
     var items = CP.data.cloudPath;
-    var CP = new pkg.crowdProcess();
+    var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < items.length; i++) {
         _f1['TMP_'  + i] = function(cbk1) {
