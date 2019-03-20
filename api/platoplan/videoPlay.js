@@ -20,7 +20,7 @@ _f['tmp'] = function(cbk) {
         }
     }
     CP1.serial(
-     _f,
+     _f1,
      function(data) {
         if (data.status != "success") {
                cbk({success: false, message : data})
