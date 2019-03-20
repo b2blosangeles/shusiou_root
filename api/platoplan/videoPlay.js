@@ -114,10 +114,11 @@ _f['mp4'] = function(cbk) {
                 var ls = childProcess.exec(str, 		   
                 function (error, stdout, stderr) {
                     cbk(str);
-                });  
+                }); 
+                return true
             }
-            
         }
+        cbk(false)
 };
 CP.serial(
      _f,
