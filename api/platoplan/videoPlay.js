@@ -20,10 +20,10 @@ _f['tmp'] = function(cbk) {
             return function(cbk1) {
                 var ddr = cloudPath + items[i] + '/tmp';
                 pkg.fs.readdir(cloudPath + items[i] + '/tmp', function(err, items1) {
-                    for (var i = 0; i < items1.length; ++) {
+                    for (var i = 0; i < items1.length; i++) {
                          videoList[videoList.length] = ddr + items1[i]
                     }
-                   cbk1(items)
+                   cbk1(true)
                 });
             }
         })(i)
