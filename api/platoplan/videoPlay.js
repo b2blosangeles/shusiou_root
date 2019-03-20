@@ -38,6 +38,8 @@ _f['videos'] = function(cbk) {
 
 _f['sec'] = function(cbk) { 
     var videos = CP.data.videos;
+    cbk(videos)
+    return true;
     var str = '';
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
