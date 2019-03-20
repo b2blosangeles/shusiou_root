@@ -12,7 +12,23 @@ _f['cloudPath'] = function(cbk) {
 };
 _f['tmp'] = function(cbk) { 
     var items = CP.data.cloudPath;
-    cbk(items )
+    var CP = new pkg.crowdProcess();
+    var _f1 = {};
+    for (var i = 0; i < items.length; i++) {
+        _f1['TMP_'  + i] = function(cbk1) {
+            cbk1(items[i])
+        }
+    }
+    CP1.serial(
+     _f,
+     function(data) {
+        if (data.status != "success") {
+               cbk({success: false, message : data})
+        } else {
+               cbk(data);
+        }
+        },10000)
+    
 };
 CP.serial(
      _f,
