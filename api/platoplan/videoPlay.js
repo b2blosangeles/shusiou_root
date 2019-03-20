@@ -21,7 +21,7 @@ _f['tmp'] = function(cbk) {
                 var ddr = cloudPath + items[i] + '/tmp/';
                 pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
-                         videoList[videoList.length] = items1[i]
+                         videoList[videoList.length] = {path: cloudPath + items[i] + '/tmp/', video: items1[i]}
                     }
                    cbk1(true)
                 });
@@ -40,7 +40,6 @@ _f['sec'] = function(cbk) {
     cbk(true)
     return true
     var items = CP.data.tmp;
-    
     var str = '';
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
