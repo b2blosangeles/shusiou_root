@@ -21,7 +21,7 @@ _f['tmp'] = function(cbk) {
                 var ddr = cloudPath + items[i] + '/tmp/';
                 pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
-                         videoList[videoList.length] = ddr + items1[i]
+                         videoList[videoList.length] = items1[i]
                     }
                    cbk1(true)
                 });
@@ -49,6 +49,13 @@ _f['sec'] = function(cbk) {
                         str += "file '" +  ddr + items1[i] + "'\n"
                         // secList[secList.length] = ddr + items1[i]
                     }
+                    fs.writeFile("/tmp/test", "Hey there!", function(err) {
+                        if(err) {
+                            return console.log(err);
+                        }
+
+                        console.log("The file was saved!");
+                    }); 
                    cbk1(true)
                 });
             }
@@ -58,6 +65,9 @@ _f['sec'] = function(cbk) {
      _f1,
      function(data) {
         cbk(str);
+         
+         
+         
         },10000)
 };
 CP.serial(
