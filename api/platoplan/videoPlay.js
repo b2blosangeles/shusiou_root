@@ -18,7 +18,11 @@ _f['tmp'] = function(cbk) {
     for (var i = 0; i < items.length; i++) {
         _f1['TMP_'  + i] = (function(i) {
             return function(cbk1) {
-                pkg.fs.readdir(cloudPath + items[i] + '/tmp', function(err, items) {
+                var ddr = cloudPath + items[i] + '/tmp';
+                pkg.fs.readdir(cloudPath + items[i] + '/tmp', function(err, items1) {
+                    for (var i = 0; i < items1.length; ++) {
+                         videoList[videoList.length] = ddr + items1[i]
+                    }
                    cbk1(items)
                 });
             }
@@ -27,11 +31,7 @@ _f['tmp'] = function(cbk) {
     CP1.serial(
      _f1,
      function(data) {
-        if (data.status != "success") {
-               cbk({success: false, message : data})
-        } else {
-               cbk(data);
-        }
+        cbk(videoList);
         },10000)
     
 };
