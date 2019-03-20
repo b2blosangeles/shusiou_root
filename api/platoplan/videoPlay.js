@@ -15,9 +15,14 @@ _f['tmp'] = function(cbk) {
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < items.length; i++) {
-        _f1['TMP_'  + i] = function(cbk1) {
+        _f1['TMP_'  + i] = (function(i) {
+            return function(cbk1) {
+                pkg.fs.readdir(cloudPath + '/' + items + '/tmp' + , function(err, items) {
+                   cbk1(items)
+                });
+            }
             cbk1(items[i])
-        }
+        })(i)
     }
     CP1.serial(
      _f1,
