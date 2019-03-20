@@ -38,7 +38,7 @@ _f['videos'] = function(cbk) {
 
 _f['sec'] = function(cbk) { 
     var videos = CP.data.videos;
-    var str = '';
+    
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < videos.length; i++) {
@@ -46,19 +46,16 @@ _f['sec'] = function(cbk) {
             return function(cbk1) {
                 var ddr = cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/';
                 pkg.fs.readdir(ddr, function(err, items) {
+                    var str = '';
                     for (var j = 0; j < items.length; j++) {
                         str += "file '" +  ddr + items[j] + "'\n";
                     }
-                   /* 
-                    fs.writeFile("/tmp/", "Hey there!", function(err) {
+                    pkg.fs.writeFile('/tmp/' + videos[i].video + '.txt', str, function(err) {
                         if(err) {
                             return console.log(err);
                         }
-
-                        console.log("The file was saved!");
-                    }); 
-                    */
-                   cbk1(true)
+                        cbk1(true)
+                    });
                 });
             }
         })(i)
@@ -66,7 +63,7 @@ _f['sec'] = function(cbk) {
     CP1.serial(
      _f1,
      function(data) {
-        cbk(str);
+        cbk(true);
         },10000)
 };
 
