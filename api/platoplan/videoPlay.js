@@ -35,10 +35,12 @@ _f['tmp'] = function(cbk) {
         },10000)
     
 };
-/*
+
 _f['sec'] = function(cbk) { 
-    var items0 = CP.data.cloudPath;
+    cbk(true)
+    return true
     var items = CP.data.tmp;
+    
     var str = '';
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
@@ -74,7 +76,7 @@ _f['sec'] = function(cbk) {
          
         },10000)
 };
-*/
+
 CP.serial(
      _f,
      function(data) {
