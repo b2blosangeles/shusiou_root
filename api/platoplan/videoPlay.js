@@ -12,6 +12,7 @@ _f['cloudPath'] = function(cbk) {
 };
 _f['tmp'] = function(cbk) { 
     var items = CP.data.cloudPath;
+    var videoList = [];
     var CP1 = new pkg.crowdProcess();
     var _f1 = {};
     for (var i = 0; i < items.length; i++) {
@@ -33,6 +34,9 @@ _f['tmp'] = function(cbk) {
         }
         },10000)
     
+};
+_f['sec'] = function(cbk) { 
+    cbk(0)
 };
 CP.serial(
      _f,
