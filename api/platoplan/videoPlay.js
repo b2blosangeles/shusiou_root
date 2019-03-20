@@ -43,7 +43,7 @@ _f['sec'] = function(cbk) {
     for (var i = 0; i < items.length; i++) {
         _f1['SEC_'  + i] = (function(i) {
             return function(cbk1) {
-                var ddr = items[i];
+                var ddr = items[i]+'/';
                 pkg.fs.readdir(ddr, function(err, items1) {
                     for (var i = 0; i < items1.length; i++) {
                          secList[secList.length] = ddr + items1[i]
