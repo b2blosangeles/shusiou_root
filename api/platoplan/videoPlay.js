@@ -3,7 +3,10 @@ var folderP = require(env.root_path + '/package/folderP/folderP');
 var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy')
 
  var cloudPath = '/var/mobileCloud/';
- res.send(cloudPath)
+pkg.fs.readdir(cloudPath, function(err, items) {
+    res.send(items);
+});
+
  return
          var tmpTrunkPath = '/var/mobileCloud/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
          var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' ;
