@@ -17,7 +17,7 @@ _f['tmp'] = function(cbk) {
     for (var i = 0; i < items.length; i++) {
         _f1['TMP_'  + i] = (function(i) {
             return function(cbk1) {
-                pkg.fs.readdir(cloudPath + '/' + items + '/tmp' + , function(err, items) {
+                pkg.fs.readdir(cloudPath + '/' + items[i] + '/tmp' + , function(err, items) {
                    cbk1(items)
                 });
             }
