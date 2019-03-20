@@ -35,6 +35,7 @@ _f['tmp'] = function(cbk) {
         },10000)
     
 };
+/*
 _f['sec'] = function(cbk) { 
     var items0 = CP.data.cloudPath;
     var items = CP.data.tmp;
@@ -50,7 +51,7 @@ _f['sec'] = function(cbk) {
                         str += "file '" +  ddr + items1[i] + "'\n"
                         // secList[secList.length] = ddr + items1[i]
                     }
-                    /*
+                    
                     fs.writeFile("/tmp/", "Hey there!", function(err) {
                         if(err) {
                             return console.log(err);
@@ -58,7 +59,7 @@ _f['sec'] = function(cbk) {
 
                         console.log("The file was saved!");
                     }); 
-*/
+
                    cbk1(true)
                 });
             }
@@ -73,6 +74,7 @@ _f['sec'] = function(cbk) {
          
         },10000)
 };
+*/
 CP.serial(
      _f,
      function(data) {
