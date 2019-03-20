@@ -47,6 +47,12 @@ _f['sec'] = function(cbk) {
                 var ddr = cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/';
                 pkg.fs.readdir(ddr, function(err, items) {
                     var str = '';
+                    items.sort(function(a, b){
+                        var x = parseInt(a.replace('.mp4', '')),
+                            y = parseInt(b.replace('.mp4', ''))
+                        return x - y
+                    })
+                    
                     for (var j = 0; j < items.length; j++) {
                         str += "file '" +  ddr + items[j] + "'\n";
                     }
