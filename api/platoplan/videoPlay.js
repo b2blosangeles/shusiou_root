@@ -104,8 +104,8 @@ _f['mp4'] = function(cbk) {
         var videos = CP.data.videos;
         for (var i = 0; i < videos.length; i++) {
             if (videos[i].video == vid) {
-                var str = 'cd ' + videoPath + videos[i].video + 
-                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + videos[i].video + '/video.mp4 . ' + 
+                var str = 'cd ' + videoPath + vid + 
+                    ' &&  cp ' + cloudPath + videos[i].phone + '/tmp/' + vid + '/*.mp4 . ' + 
                     ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
 
                 var childProcess = require('child_process');
