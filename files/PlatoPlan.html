@@ -16,7 +16,7 @@
                           Your browser does not support the video tag.
                         </video>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6" id="img_matrix">
                   </div>
             </div> 
       </div>      
@@ -31,6 +31,12 @@
                    dataType: 'JSON',
                    timeout: 6000,
                    success: function(resultData){
+                         var str =
+                         for (var i = 0 ; i < resultData.length; i++) {
+                              str = '<img src="/api/platoplan/videoPlay.api?code=getImage?phoneId=' +
+                                    resultData[i].phone +'&vid='+ resultData[i].vid + '">'
+                         }
+                         $('#img_matrix').html(str)
                         console.log(resultData)
                    },
                    error : function(xhr, textStatus, error) { 
