@@ -10,9 +10,6 @@ var Busboy = require(env.site_path + '/api/inc/busboy/node_modules/busboy')
 var cloudPath = '/var/mobileCloud/';
 var videoPath = '/tmp/videos/';
 
-    // 'video_1553034579';
-    // 'video_1553034704';
-
 switch(req.query.code) {
 	case 'playVideo':
 		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
