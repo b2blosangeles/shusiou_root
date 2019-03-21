@@ -153,6 +153,9 @@ switch(req.query.code) {
 			});
 		     },60000)
 		break;
+	case 'getVideos':
+		res.send('getVideos');
+		break;
 	default:
 		 write404('type error'); 	
 }		
