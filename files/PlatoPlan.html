@@ -12,11 +12,7 @@
                   <div class="col-sm-6" id="img_matrix">
                   </div> 
                   <div class="col-sm-1"></div> 
-                  <div class="col-sm-5">
-                        <video width="360" height="640" autoplay  controls>
-                          <source src="/api/platoplan/videoPlay.api?code=playVideo&vid=video_1553128281"  autoplay type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
+                  <div class="col-sm-5"  id="video_section">
                   </div>
 
             </div> 
@@ -24,6 +20,12 @@
 </body>
 </html>
 <script>
+      function playVideo(phoneId, vid) {
+            var str = '<video width="360" height="640" autoplay  controls>' +
+                      '<source src="/api/platoplan/videoPlay.api?code=playVideo&vid=video_1553128281"  autoplay type="video/mp4">'+
+                      '</video>'
+                 $('#video_section').html(str);
+      }
       $(document).ready(function(){
             $.ajax({
                    type: 'POST',
@@ -35,7 +37,8 @@
                          var str = ''
                          for (var i = 0 ; i < resultData.length; i++) {
                               str += '<img src="/api/platoplan/videoPlay.api?code=getImage&phoneId=' +
-                                    resultData[i].phone +'&vid='+ resultData[i].video + '" class="m-2"/>'
+                                    resultData[i].phone +'&vid='+ resultData[i].video + '" class="m-2" ' +
+                                    ' onClick="playVideo()"/>'
                          }
                          $('#img_matrix').html(str)
                         console.log(resultData)
