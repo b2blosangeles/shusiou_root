@@ -38,7 +38,7 @@
                          for (var i = 0 ; i < resultData.length; i++) {
                               str += '<img src="/api/platoplan/videoPlay.api?code=getImage&phoneId=' +
                                     resultData[i].phone +'&vid='+ resultData[i].video + '" class="m-2" ' +
-                                    ' onClick="playVideo(\"' + resultData[i].phone + '\",\"' + resultData[i].video + '\")"/>'
+                                    ' onClick="playVideo(\'' + resultData[i].phone + '\',\'' + resultData[i].video + '\')"/>'
                          }
                          $('#img_matrix').html(str)
                         console.log(resultData)
