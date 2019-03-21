@@ -211,8 +211,8 @@ switch(req.query.code) {
 			
 			var file_video =  cloudPath + phoneId + '/tmp/' + vid + '/3.mp4';
 			pkg.fs.stat(tmpfn, function(err, stat) {
-				if(!err) { cbk(tmpfn);
-				} else {
+				//if(!err) { cbk(tmpfn);
+				//} else {
 					if (w != 'FULL') str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
 					else str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
 					str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:180, pad=in_h*4/3:ih:(ow-iw)/2:color=#CCCCCC"  -preset ultrafast ' + tmpfn + ' -y ';
@@ -222,7 +222,7 @@ switch(req.query.code) {
 					function (error, stdout, stderr) {
 						cbk(true);
 					});
-				}
+				//}
 			});
 		};
 		CP.serial(
