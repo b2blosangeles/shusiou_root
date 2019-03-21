@@ -88,7 +88,7 @@ switch(req.query.code) {
 					return x - y
 				    })
 
-				    for (var j = 1; j < items.length; j++) {
+				    for (var j = 0; j < items.length; j++) {
 					str += "file '" +  items[j] + "'\n";
 				    }
 				    pkg.fs.writeFile(videoPath + videos[i].video + '/video.txt', str, function(err) {
