@@ -33,7 +33,7 @@
                    success: function(resultData){
                          var str = ''
                          for (var i = 0 ; i < resultData.length; i++) {
-                              str += '<img src="/api/platoplan/videoPlay.api?code=getImage?phoneId=' +
+                              str += '<img src="/api/platoplan/videoPlay.api?code=getImage&phoneId=' +
                                     resultData[i].phone +'&vid='+ resultData[i].video + '" class="m-2"/>'
                          }
                          $('#img_matrix').html(str)
