@@ -11,6 +11,47 @@ var cloudPath = '/var/mobileCloud/';
 var videoPath = '/tmp/videos/';
 
 switch(req.query.code) {
+	case 'getVideos':
+		var CP = new pkg.crowdProcess();
+		var _f = {}; 
+
+		_f['cloudPath'] = function(cbk) { 
+		    pkg.fs.readdir(cloudPath, function(err, items) {
+		       cbk(items)
+		    });
+		};
+		_f['videos'] = function(cbk) { 
+		    var items = CP.data.cloudPath;
+		    var videoList = [];
+		    var CP1 = new pkg.crowdProcess();
+		    var _f1 = {};
+		    for (var i = 0; i < items.length; i++) {
+			_f1['videos_'  + i] = (function(i) {
+			    return function(cbk1) {
+				var ddr = cloudPath + items[i] + '/tmp/';
+				pkg.fs.readdir(ddr, function(err, items1) {
+				    for (var j = 0; j < items1.length; j++) {
+					 videoList[videoList.length] = {phone: items[i], video: items1[j]}
+				    }
+				   cbk1(true)
+				});
+			    }
+			})(i)
+		    }
+		    CP1.serial(
+		     _f1,
+		     function(data) {
+			cbk(videoList);
+			},10000)
+
+		};
+		CP.serial(
+		     _f,
+		     function(data) {
+			res.send(CP.data.videos);
+		     },60000)
+		break;		
+		
 	case 'playVideo':
 		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
 		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
@@ -96,46 +137,7 @@ switch(req.query.code) {
 			     
 		     },60000)
 		break;
-	case 'getVideos':
-		var CP = new pkg.crowdProcess();
-		var _f = {}; 
 
-		_f['cloudPath'] = function(cbk) { 
-		    pkg.fs.readdir(cloudPath, function(err, items) {
-		       cbk(items)
-		    });
-		};
-		_f['videos'] = function(cbk) { 
-		    var items = CP.data.cloudPath;
-		    var videoList = [];
-		    var CP1 = new pkg.crowdProcess();
-		    var _f1 = {};
-		    for (var i = 0; i < items.length; i++) {
-			_f1['videos_'  + i] = (function(i) {
-			    return function(cbk1) {
-				var ddr = cloudPath + items[i] + '/tmp/';
-				pkg.fs.readdir(ddr, function(err, items1) {
-				    for (var j = 0; j < items1.length; j++) {
-					 videoList[videoList.length] = {phone: items[i], video: items1[j]}
-				    }
-				   cbk1(true)
-				});
-			    }
-			})(i)
-		    }
-		    CP1.serial(
-		     _f1,
-		     function(data) {
-			cbk(videoList);
-			},10000)
-
-		};
-		CP.serial(
-		     _f,
-		     function(data) {
-			res.send(CP.data.videos);
-		     },60000)
-		break;
 	case 'getImage':
 		var s = (req.query.s) ? req.query.s : 1, 
 		    w='FULL',
