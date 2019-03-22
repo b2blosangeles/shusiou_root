@@ -16,7 +16,7 @@ switch(req.query.code) {
 		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
 		
 		var video_src_dir = cloudPath + phoneId + '/tmp/';
-		var video_dir = videoPath + phoneId + '/tmp/';
+		var video_dir = videoPath + phoneId + '/' + vid;
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {};
