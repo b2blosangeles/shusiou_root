@@ -145,6 +145,9 @@ switch(req.query.code) {
 		     },60000)
 		break;
 	case 'getImage':
+		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
+		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';		
+		
 		var s = (req.query.s) ? req.query.s : 1, 
 		    w='FULL',
 		    str = '';
