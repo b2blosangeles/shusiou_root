@@ -54,8 +54,8 @@ switch(req.query.code) {
 		break;		
 		
 	case 'playVideo':
-		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
-		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
+		var vid = req.query.vid;
+		var phoneId = req.query.phoneId;	
 		
 		var video_src_dir = cloudPath + phoneId + '/tmp/' + vid + '/';
 		var video_dir = videoPath + phoneId + '/' + vid + '/';
@@ -145,8 +145,8 @@ switch(req.query.code) {
 		     },60000)
 		break;
 	case 'getImage':
-		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
-		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';		
+		var vid = req.query.vid;
+		var phoneId = req.query.phoneId;		
 		
 		var s = (req.query.s) ? req.query.s : 1, 
 		    w='FULL',
