@@ -185,13 +185,14 @@ switch(req.query.code) {
 			fp.build(img_dir , function() { cbk(true);});
 		};		
 		_f['S2'] = function(cbk) {
-			var file_video =  video_src_dir + '3.mp4';
+			var section = s - (s % 3);
+			var file_video =  video_src_dir + section + '.mp4';
 			pkg.fs.stat(tmpfn, function(err, stat) {
 				//if(!err) { cbk(tmpfn);
 				//} else {
-					if (w != 'FULL') str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
-					else str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
-					str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:180, pad=in_h*4/3:ih:(ow-iw)/2:color=#333333"  -preset ultrafast ' + tmpfn + ' -y ';
+					if (w != 'FULL') str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
+					else str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
+					str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vf scale="-1:180, pad=in_h*4/3:ih:(ow-iw)/2:color=#333333"  -preset ultrafast ' + tmpfn + ' -y ';
 					//ffmpeg -ss 10 -i d.mp4 -vf scale="-1:100,pad=in_h*4/3:ih:(ow-iw)/2"   -preset ultrafast d.png -y
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
