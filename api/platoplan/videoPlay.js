@@ -13,6 +13,7 @@ var videoPath = '/tmp/videos/';
 switch(req.query.code) {
 	case 'playVideo':
 		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
+		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {}; 
