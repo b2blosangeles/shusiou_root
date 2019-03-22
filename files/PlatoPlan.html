@@ -22,21 +22,21 @@
 <script>
       function playVideo(phoneId, vid) {
             var str = '<video width="360" height="640" autoplay  controls>' +
-                      '<source src="/api/platoplan/videoPlay.api?code=playVideo&phoneId=' + phoneId + '&vid=' + vid + '"  autoplay type="video/mp4">'+
+                      '<source src="/api/platoplan/iphoneVideo.api?code=playVideo&phoneId=' + phoneId + '&vid=' + vid + '"  autoplay type="video/mp4">'+
                       '</video>'
                  $('#video_section').html(str);
       }
       $(document).ready(function(){
             $.ajax({
                    type: 'POST',
-                   url: '/api/platoplan/videoPlay.api?code=getVideos',
+                   url: '/api/platoplan/iphoneVideo.api?code=getVideos',
                    data:{},
                    dataType: 'JSON',
                    timeout: 6000,
                    success: function(resultData){
                          var str = ''
                          for (var i = 0 ; i < resultData.length; i++) {
-                              str += '<img src="/api/platoplan/videoPlay.api?code=getImage&phoneId=' +
+                              str += '<img src="/api/platoplan/iphoneVideo.api?code=getImage&phoneId=' +
                                     resultData[i].phone +'&vid='+ resultData[i].video + '" class="m-2" ' +
                                     ' onClick="playVideo(\'' + resultData[i].phone + '\',\'' + resultData[i].video + '\')"/>'
                          }
