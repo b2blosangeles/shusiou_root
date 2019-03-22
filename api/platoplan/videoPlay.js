@@ -22,7 +22,7 @@ switch(req.query.code) {
 			var ddr = cloudPath + phoneId + '/tmp/';
 			var videoList = [];
 			pkg.fs.readdir(ddr, function(err, videoList) {
-				if (!err && videoList.indexOf(vid) !== -1)
+				if (!err && videoList.indexOf(vid) !== -1) {
 					cbk(videoList)
 				} else {
 				       cbk(false);
