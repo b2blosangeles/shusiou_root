@@ -15,13 +15,13 @@ switch(req.query.code) {
 		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
 		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
 		
-		var CP = new pkg.crowdProcess();
-		var _f = {}; 
+		var video_src_dir = cloudPath + phoneId + '/tmp/';
+		var video_dir = videoPath + phoneId + '/tmp/';
 		
+		var CP = new pkg.crowdProcess();
+		var _f = {};
 		_f['videoSrc'] = function(cbk) { 
-			var ddr = cloudPath + phoneId + '/tmp/';
-			var videoList = [];
-			pkg.fs.readdir(ddr, function(err, videoList) {
+			pkg.fs.readdir(video_src_dir, function(err, videoList) {
 				if (!err && videoList.indexOf(vid) !== -1) {
 					cbk(videoList)
 				} else {
@@ -30,10 +30,11 @@ switch(req.query.code) {
 				}
 			});			
 		};
-		_f['cloudPath'] = function(cbk) { 
-		    pkg.fs.readdir(cloudPath, function(err, items) {
-		       cbk(items)
-		    });
+		_f['buildPath'] = function(cbk) { 
+			var fp = new folderP();
+			fp.build(video_dir, function() { 
+			    cbk(true);                                             
+			});			
 		};
 		CP.serial(
 		     _f,
