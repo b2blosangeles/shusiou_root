@@ -164,9 +164,6 @@ switch(req.query.code) {
 			fp.build(img_dir , function() { cbk(true);});
 		};		
 		_f['S2'] = function(cbk) {
-			var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
-			var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
-			
 			var file_video =  video_src_dir + '3.mp4';
 			pkg.fs.stat(tmpfn, function(err, stat) {
 				//if(!err) { cbk(tmpfn);
@@ -189,51 +186,7 @@ switch(req.query.code) {
 				res.sendFile(tmpfn);
 			}, 3000);			
 		
-		break;			
-		
-	case 'getImage0':
-		var s = (req.query.s) ? req.query.s : 1, 
-		    w='FULL',
-		    str = '';
-		
-		var video_src_dir = cloudPath + phoneId + '/tmp/' + vid + '/';
-		var img_dir = imagePath + phoneId + '/' + vid + '/';	
-		
-		var tmpfn = img_dir + 'cut_' + s + '_' + vid + '.png';
-
-		var CP = new pkg.crowdProcess();
-		var _f = {};
-		_f['fp'] = function(cbk) { 
-			var fp = new folderP();
-			fp.build('/var/tmpp/', function() { cbk(true);});
-		};		
-		_f['S2'] = function(cbk) {
-			var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
-			var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
-			
-			var file_video =  cloudPath + phoneId + '/tmp/' + vid + '/3.mp4';
-			pkg.fs.stat(tmpfn, function(err, stat) {
-				//if(!err) { cbk(tmpfn);
-				//} else {
-					if (w != 'FULL') str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
-					else str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
-					str = 'ffmpeg -ss ' + s + ' -i ' + file_video +' -vf scale="-1:180, pad=in_h*4/3:ih:(ow-iw)/2:color=#333333"  -preset ultrafast ' + tmpfn + ' -y ';
-					//ffmpeg -ss 10 -i d.mp4 -vf scale="-1:100,pad=in_h*4/3:ih:(ow-iw)/2"   -preset ultrafast d.png -y
-					var childProcess = require('child_process');
-					var ls = childProcess.exec(str, 		   
-					function (error, stdout, stderr) {
-						cbk(true);
-					});
-				//}
-			});
-		};
-		CP.serial(
-			_f,
-			function(data) {
-				res.sendFile(tmpfn);
-			}, 3000);			
-		
-		break;		
+		break;
 	default:
 		 write404('type error'); 	
 }		
