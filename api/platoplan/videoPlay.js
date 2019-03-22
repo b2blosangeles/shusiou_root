@@ -159,7 +159,28 @@ switch(req.query.code) {
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {};
-		_f['fp'] = function(cbk) { 
+		_f['verification'] = function(cbk) { 
+			if (!phoneId || !vid) {
+				CP.exit = 1
+			}
+			cbk(true);
+		};		
+		_f['sections'] = function(cbk) { 
+			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
+				if (!err && sectionList.length > 1) {
+					sectionList.sort(function(a, b){
+						var x = parseInt(a.replace('.mp4', '')),
+						    y = parseInt(b.replace('.mp4', ''))
+						return x - y
+				    	})
+					cbk(sectionList)
+				} else {
+				       cbk(false);
+					CP.exit = 1
+				}
+			});			
+		};		
+		_f['buildPath'] = function(cbk) { 
 			var fp = new folderP();
 			fp.build(img_dir , function() { cbk(true);});
 		};		
@@ -183,7 +204,11 @@ switch(req.query.code) {
 		CP.serial(
 			_f,
 			function(data) {
-				res.sendFile(tmpfn);
+				if (CP.data.buildPath !== true) {
+					write404('Video ' + phoneId + ':' + vid + ' does not exist!');
+				} else {
+					res.sendFile(tmpfn);
+				}
 			}, 3000);			
 		
 		break;
