@@ -15,15 +15,20 @@ switch(req.query.code) {
 		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
 		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
 		
-		var video_src_dir = cloudPath + phoneId + '/tmp/';
-		var video_dir = videoPath + phoneId + '/' + vid;
+		var video_src_dir = cloudPath + phoneId + '/tmp/' + vid + '/';
+		var video_dir = videoPath + phoneId + '/' + vid + '/';
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {};
-		_f['videoSrc'] = function(cbk) { 
-			pkg.fs.readdir(video_src_dir, function(err, videoList) {
-				if (!err && videoList.indexOf(vid) !== -1) {
-					cbk(videoList)
+		_f['sections'] = function(cbk) { 
+			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
+				if (!err && sectionList.length > 1) {
+					sectionList.sort(function(a, b){
+						var x = parseInt(a.replace('.mp4', '')),
+						    y = parseInt(b.replace('.mp4', ''))
+						return x - y
+				    	})
+					cbk(sectionList)
 				} else {
 				       cbk(false);
 					CP.exit = 1
@@ -36,6 +41,19 @@ switch(req.query.code) {
 			    cbk(true);                                             
 			});			
 		};
+		_f['buildVideoTxt'] = function(cbk) { 
+		    var sectionList = CP.data.sections;
+		    var str = '';
+		    for (var j = 0; j < sectionList.length; j++) {
+			str += "file '" +  sectionList[j] + "'\n";
+		    }
+		    pkg.fs.writeFile(video_dir + '/video.txt', str, function(err) {
+			if(err) {
+			    return console.log(err);
+			}
+			cbk(true)
+		    });
+		};		
 		CP.serial(
 		     _f,
 		     function(data) {
