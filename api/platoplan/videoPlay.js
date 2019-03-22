@@ -53,6 +53,16 @@ switch(req.query.code) {
 			}
 			cbk(true)
 		    });
+		};
+		_f['mp4'] = function(cbk) { 
+			var str = 'cd ' + video_dir + ' &&  cp ' + video_src_dir + '/*.mp4 . ' + 
+			    ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
+
+			var childProcess = require('child_process');
+			var ls = childProcess.exec(str, 		   
+			function (error, stdout, stderr) {
+			    cbk(str);
+			}); 
 		};		
 		CP.serial(
 		     _f,
