@@ -11,13 +11,41 @@ var cloudPath = '/var/mobileCloud/';
 var videoPath = '/tmp/videos/';
 
 switch(req.query.code) {
-	case 'playVideo':
+	case 'playVideo0':
 		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
 		var phoneId = (req.query.phoneId) ? req.query.phoneId : '250885B4-CE64-46EA-BAE3-8BCE39971E03';
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {}; 
+		
+		_f['videoSrc'] = function(cbk) { 
+			var ddr = cloudPath + phoneId + '/tmp/';
+			var videoList = [];
+			pkg.fs.readdir(ddr, function(err, videoList) {
+				if (!err && videoList.indexOf(vid) !== -1)
+					cbk(videoList)
+				} else {
+				       cbk(false);
+					CP.exit = 1
+				}
+			});			
+		};
+		_f['cloudPath'] = function(cbk) { 
+		    pkg.fs.readdir(cloudPath, function(err, items) {
+		       cbk(items)
+		    });
+		};
+		CP.serial(
+		     _f,
+		     function(data) {
+			     res.send(data);
+		     },60000)
+		break;		
+	case 'playVideo':
+		var vid = (req.query.vid) ? req.query.vid : 'video_1553128281';
 
+		var CP = new pkg.crowdProcess();
+		var _f = {}; 
 		_f['cloudPath'] = function(cbk) { 
 		    pkg.fs.readdir(cloudPath, function(err, items) {
 		       cbk(items)
