@@ -109,7 +109,7 @@ switch(req.query.code) {
 		     _f,
 		     function(data) {
 			     if (CP.data.buildPath !== true) {
-				     res.send('Video ' + phoneId + ':' + vid + ' does not exist!');
+				     write404('Video ' + phoneId + ':' + vid + ' does not exist!');
 			     } else {
 				var file_video = video_dir + '/video.mp4';
 				pkg.fs.stat(file_video, function(err, data1) {
