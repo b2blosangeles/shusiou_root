@@ -22,7 +22,7 @@
 <script>
       function playVideo(phoneId, vid) {
             var str = '<video width="360" height="640" autoplay  controls>' +
-                      '<source src="/api/platoplan/videoPlay.api?code=playVideo&vid=' + vid + '"  autoplay type="video/mp4">'+
+                      '<source src="/api/platoplan/videoPlay.api?code=playVideo&phoneId=' + phoneId + '&vid=' + vid + '"  autoplay type="video/mp4">'+
                       '</video>'
                  $('#video_section').html(str);
       }
