@@ -78,7 +78,7 @@ switch(req.query.code) {
 				} else {
 					cbk(true);
 				}
-			}
+			});
 		};		
 		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
