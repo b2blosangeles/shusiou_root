@@ -177,7 +177,13 @@ switch(req.query.code) {
 				CP.exit = 1
 			}
 			cbk(true);
-		};		
+		};
+		_f['img_exist'] = function(cbk) { 
+			pkg.fs.stat(tmpfn, function(err, stat) {
+				if(!err) {  CP.exist = 1; }
+				cbk(true);
+			});
+		}
 		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
 				if (!err && sectionList.length > 1) {
@@ -201,8 +207,8 @@ switch(req.query.code) {
 			var section = s - (s % 3);
 			var file_video =  video_src_dir + section + '.mp4';
 			pkg.fs.stat(file_video, function(err, stat) {
-				// if(!err) { cbk(true);
-				// } else {
+				if(!err) { cbk(true);
+				} else {
 					if (w != 'FULL') str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
 					else str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
 					str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vf scale="-1:180, pad=in_h*4/3:ih:(ow-iw)/2:color=#333333"  -preset ultrafast ' + tmpfn + ' -y ';
@@ -212,7 +218,7 @@ switch(req.query.code) {
 					function (error, stdout, stderr) {
 						cbk(true);
 					});
-				//}
+				}
 			});
 		};
 		CP.serial(
