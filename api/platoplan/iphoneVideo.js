@@ -188,7 +188,7 @@ switch(req.query.code) {
 			var section = s - (s % 3);
 			var file_video =  video_src_dir + section + '.mp4';
 			pkg.fs.stat(file_video, function(err, stat) {
-				if(err) { cbk(false);
+				if(!err) { cbk(true);
 				} else {
 					if (w != 'FULL') str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vf scale=-1:' +  w + '  -preset ultrafast ' + tmpfn + ' -y ';
 					else str = 'ffmpeg -ss ' + 1 + ' -i ' + file_video +' -vframes 1 ' +  tmpfn + ' -y ';
