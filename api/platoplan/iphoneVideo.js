@@ -62,11 +62,23 @@ switch(req.query.code) {
 		
 		var CP = new pkg.crowdProcess();
 		var _f = {};
+		
 		_f['verification'] = function(cbk) { 
 			if (!phoneId || !vid) {
 				CP.exit = 1
 			}
 			cbk(true);
+		};
+		_f['video_exist'] = function(cbk) { 
+			var file_video = video_dir + '/video.mp4';
+			pkg.fs.stat(file_video, function(err, stat) {
+				if (!err) {  
+					cbk(true);
+					CP.exit = 1
+				} else {
+					cbk(true);
+				}
+			}
 		};		
 		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
