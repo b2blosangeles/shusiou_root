@@ -80,7 +80,7 @@ switch(req.query.code) {
 			pkg.fs.stat(file_video, function(err, stat) {
 				if (!err) {  
 					cbk(true);
-					// CP.exit = 1
+					CP.exit = 1
 				} else {
 					cbk(true);
 				}
