@@ -74,7 +74,8 @@ switch(req.query.code) {
 			fp.build(video_dir, function() { 
 			    cbk(true);                                             
 			});			
-		};		
+		};
+		/*
 		_f['video_exist'] = function(cbk) { 
 			var file_video = video_dir + '/video.mp4';
 			pkg.fs.stat(file_video, function(err, stat) {
@@ -85,7 +86,7 @@ switch(req.query.code) {
 					cbk(true);
 				}
 			});
-		};	
+		};*/	
 		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
 				if (!err && sectionList.length > 1) {
