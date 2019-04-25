@@ -15,8 +15,8 @@ function verifiedSection(ddr, list, cbk) {
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
-						if (!stdout.length) {
-							seclist[seclist.length] = error //list[i];
+						if (!error) {
+							seclist[seclist.length] = list[i];
 						}
 						cbk2(true);
 					});
