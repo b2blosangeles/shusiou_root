@@ -59,7 +59,7 @@ switch(req.query.code) {
 		var secid = req.query.secid;
 		
 		var video_file = cloudPath + phoneId + '/tmp/' + vid + '/' + secid;
-		res.send(video_file);			     	
+		res.sendFile(video_file);			     	
 		break;		
 	case 'getVideos':
 		var CP = new pkg.crowdProcess();
