@@ -165,7 +165,7 @@ switch(req.query.code) {
 		};	
 		
 
-		_f['read_sections'] = function(cbk) { 
+		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
 				if (!err && sectionList.length > 1) {
 					verifiedSection(video_src_dir, sectionList, function(list) {
@@ -180,7 +180,8 @@ switch(req.query.code) {
 				//	   cbk(list)
 				//   }) 
 			});			
-		};	
+		};
+		/*
 		_f['sections'] = function(cbk) { 
 			var sectionList = CP.data.read_sections
 			sectionList.sort(function(a, b){
@@ -190,6 +191,7 @@ switch(req.query.code) {
 			})
 			cbk(sectionList)			
 		};
+		*/
 		/*
 		_f['sections'] = function(cbk) { 
 			var sectionList = CP.data.read_sections;
