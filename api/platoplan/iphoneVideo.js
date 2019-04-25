@@ -19,10 +19,12 @@ function verifiedSection(ddr, list, cbk) {
 			    }
 			})(i)
 	}
+	/*
 	CP2.serial(_f2,
 	     function(data) {
 		cbk(seclist);
 		},10000);
+		*/
 }
 
 var folderP = require(env.root_path + '/package/folderP/folderP');
