@@ -23,15 +23,24 @@ switch(req.query.opt) {
                   cbk({success:true, cmd : cmd});
                }); 
             }
-            /*
+           
             _f['verify'] = function(cbk) {
-               var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > ' + tmpSection + ' && cd ' +  tmpPath + 
-                   ' && rm -fr ' + tmpTrunkPath;
-
+               var cmd = 'cd ' + tmpPath + ' && ffmpeg -v error -i ' + tmpSection + ' -f null - ';
                 pkg.exec(cmd, function(error, stdout, stderr) {
-                  cbk({success:true, cmd : cmd});
+                  if (error) cbk(false)
+                  else cbk(true)
                }); 
-            } */          
+            }    
+             _f['clean'] = function(cbk) {
+                if (!CP.data.verify) {
+                   pkg.exec('rm -f ' + tmpSection, function(error, stdout, stderr) {
+                     cbk(true)
+                    }); 
+                } else {
+                  cbk(true)
+                }
+            }  
+            
             CP.serial(
               _f,
               function(data) {
