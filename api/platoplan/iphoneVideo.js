@@ -6,10 +6,23 @@ function write404(msg) {
 
 function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
-	for (var j = 0; j < list.length; j++) {
-		seclist[seclist.length] = list[j]
-	}	
-	cbk(seclist)
+	var CP = new pkg.crowdProcess();
+	var _f = {};
+	for (var i = 0; i < list.length; i++) {
+		_f['s_' + i] = (function(i) {
+			    return function(cbk2) {
+				   seclist[seclist.length] = list[i]
+				   cbk2(true)
+				});
+			    }
+			})(i)
+		
+	}
+	CP.serial(
+	     _f,
+	     function(data) {
+		cbk(seclist);
+		},10000);
 }
 
 var folderP = require(env.root_path + '/package/folderP/folderP');
@@ -42,7 +55,7 @@ switch(req.query.code) {
 				pkg.fs.readdir(ddr, function(err, items1) {
 				   verifiedSection(ddr, items1, function(list) {
 					    for (var j = 0; j < list.length; j++) {
-						videoList[videoList.length] = {phone: items[i], section: list[j]}
+						videoList[videoList.length] = {phone: items[i], ppsection: list[j]}
 					    }
 					   cbk1(true)
 				   }) 
