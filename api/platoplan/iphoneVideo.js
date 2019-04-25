@@ -11,11 +11,13 @@ function verifiedSection(ddr, list, cbk) {
 	for (var i = 0; i < list.length; i++) {
 		_f['s_' + i] = (function(i) {
 			return function(cbk2) {
-					var str = 'cd ' + ddr
+					var str = 'cd ' + ddr + ' && ffmpeg -v error -i ' + list[i] + ' -f null - '
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
-						seclist[seclist.length] = list[i];
+						if (!stdout.length) {
+							seclist[seclist.length] = list[i];
+						}
 						cbk2(true);
 					});
 				}
