@@ -8,7 +8,7 @@ function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
 	var CP = new pkg.crowdProcess();
 	var _f = {};
-	list.sort(function(a, b){
+	list = list.sort(function(a, b){
 			var x = parseInt(a.replace('.mp4', '')),
 			    y = parseInt(b.replace('.mp4', ''))
 			return x - y
