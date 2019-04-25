@@ -179,19 +179,6 @@ switch(req.query.code) {
 			cbk(true)
 		    });
 		};
-		_f['buildVideoTxt'] = function(cbk) { 
-		    var sectionList = CP.data.sections;
-		    var str = '';
-		    for (var j = 0; j < sectionList.length; j++) {
-			str += "file '" +  sectionList[j] + "'\n";
-		    }
-		    pkg.fs.writeFile(video_dir + '/video.txt', str, function(err) {
-			if(err) {
-			    return console.log(err);
-			}
-			cbk(true)
-		    });
-		};
 		_f['mp4'] = function(cbk) { 
 			var str = 'cd ' + video_dir + ' &&  cp ' + video_src_dir + '/*.mp4 . ' + 
 			    ' && ffmpeg -f concat -i video.txt -c copy video.mp4 -y';
