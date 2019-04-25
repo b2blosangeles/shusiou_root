@@ -155,26 +155,26 @@ switch(req.query.code) {
 
 		_f['read_sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
-				 cbk( sectionList)
+				if (!err && sectionList.length > 1) {
+					cbk(sectionList)
+				} else {
+				       cbk(false);
+					CP.exit = 1
+				}
+				// cbk( sectionList)
 				// verifiedSection(video_src_dir, sectionList, function(list) {
 				//	   cbk(list)
 				//   }) 
 			});			
 		};	
 		_f['sections'] = function(cbk) { 
-			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
-				if (!err && sectionList.length > 1) {
-					sectionList.sort(function(a, b){
-						var x = parseInt(a.replace('.mp4', '')),
-						    y = parseInt(b.replace('.mp4', ''))
-						return x - y
-				    	})
-					cbk(sectionList)
-				} else {
-				       cbk(false);
-					CP.exit = 1
-				}
-			});			
+			var sectionList = CP.data.read_sections
+			sectionList.sort(function(a, b){
+				var x = parseInt(a.replace('.mp4', '')),
+				    y = parseInt(b.replace('.mp4', ''))
+				return x - y
+			})
+			cbk(sectionList)			
 		};
 		/*
 		_f['sections'] = function(cbk) { 
