@@ -52,7 +52,7 @@ switch(req.query.code) {
 				pkg.fs.readdir(ddr, function(err, items1) {
 				   verifiedSection(ddr, items1, function(list) {
 					    for (var j = 0; j < list.length; j++) {
-						videoList[videoList.length] = {phone: items[i], ppsection: list[j]}
+						videoList[videoList.length] = {phone: items[i], section: list[j]}
 					    }
 					   cbk1(true)
 				   }) 
