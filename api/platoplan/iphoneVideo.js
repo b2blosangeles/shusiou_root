@@ -5,8 +5,6 @@ function write404(msg) {
 }
 
 function verifiedSection(ddr, list, cbk) {
-	cbk(list);
-	
 	var seclist = [];
 	var CP2 = new pkg.crowdProcess();
 	var _f2 = {};
