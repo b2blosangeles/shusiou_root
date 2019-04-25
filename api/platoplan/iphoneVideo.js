@@ -33,7 +33,7 @@ switch(req.query.code) {
 				var ddr = cloudPath + items[i] + '/tmp/' + vid;
 				pkg.fs.readdir(ddr, function(err, items1) {
 				    for (var j = 0; j < items1.length; j++) {
-					 videoList[videoList.length] = {phone: items[i], video: items1[j]}
+					 videoList[videoList.length] = {phone: items[i], section: items1[j]}
 				    }
 				   cbk1(true)
 				});
