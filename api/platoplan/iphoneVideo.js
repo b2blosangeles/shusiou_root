@@ -13,8 +13,9 @@ function verifiedSection(ddr, list, cbk) {
 	for (var i = 0; i < list.length; i++) {
 		_f2['s_' + i] = (function(i) {
 			return function(cbk2) {
-		   		seclist[seclist.length] = list[i]
-		   		cbk2(true)
+		   		seclist[seclist.length] = list[i];
+		   		cbk2(true);
+				}
 			})(i)
 	}
 	/*
