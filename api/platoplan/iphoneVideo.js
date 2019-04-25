@@ -5,6 +5,9 @@ function write404(msg) {
 }
 
 function verifiedSection(ddr, list, cbk) {
+	for (var j = 0; j < list.length; j++) {
+		videoList[videoList.length] = {phone: list[i], section: list[j]}
+	}	
 	cbk(true)
 }
 
@@ -39,7 +42,7 @@ switch(req.query.code) {
 				    for (var j = 0; j < items1.length; j++) {
 					 videoList[videoList.length] = {phone: items[i], qsection: items1[j]}
 				    }
-				   verifiedSection(ddr, videoList, cbk1)
+				   verifiedSection(ddr, items1, cbk1)
 				//   cbk1(true)
 				});
 			    }
