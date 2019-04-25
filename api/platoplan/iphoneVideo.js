@@ -156,7 +156,9 @@ switch(req.query.code) {
 		_f['read_sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
 				if (!err && sectionList.length > 1) {
-					cbk(sectionList)
+					verifiedSection(video_src_dir, sectionList, function(list) {
+					   cbk(list)
+					}) 
 				} else {
 				       cbk(false);
 					CP.exit = 1
