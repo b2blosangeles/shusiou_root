@@ -13,6 +13,7 @@ var imagePath = '/tmp/videoImgs/';
 
 switch(req.query.code) {
 	case 'getSections':
+		var vid = req.query.vid;
 		var CP = new pkg.crowdProcess();
 		var _f = {}; 
 
@@ -29,7 +30,7 @@ switch(req.query.code) {
 		    for (var i = 0; i < items.length; i++) {
 			_f1['videos_'  + i] = (function(i) {
 			    return function(cbk1) {
-				var ddr = cloudPath + items[i] + '/tmp/';
+				var ddr = cloudPath + items[i] + '/tmp/' + vid;
 				pkg.fs.readdir(ddr, function(err, items1) {
 				    for (var j = 0; j < items1.length; j++) {
 					 videoList[videoList.length] = {phone: items[i], video: items1[j]}
