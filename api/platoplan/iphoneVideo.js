@@ -6,7 +6,7 @@ function write404(msg) {
 
 function verifiedSection(ddr, list, cbk) {
 	cbk(list);
-	/*
+	
 	var seclist = [];
 	var CP = new pkg.crowdProcess();
 	var _f = {};
@@ -19,6 +19,7 @@ function verifiedSection(ddr, list, cbk) {
 			    }
 			})(i)
 	}
+	/*
 	CP.serial(
 	     _f,
 	     function(data) {
