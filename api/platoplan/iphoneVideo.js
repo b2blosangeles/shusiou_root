@@ -6,17 +6,22 @@ function write404(msg) {
 
 function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
-	var CP2 = new pkg.crowdProcess();
-	var _f2 = {};
+	var CP = new pkg.crowdProcess();
+	var _f = {};
 	for (var i = 0; i < list.length; i++) {
-		_f2['s_' + i] = (function(i) {
+		_f['s_' + i] = (function(i) {
 			return function(cbk2) {
-		   		seclist[seclist.length] = list[i];
-		   		cbk2(true);
+					var str = 'cd ' + ddr
+					var childProcess = require('child_process');
+					var ls = childProcess.exec(str, 		   
+					function (error, stdout, stderr) {
+						seclist[seclist.length] = list[i];
+						cbk2(true);
+					});
 				}
 			})(i)
 	}
-	CP2.serial(_f2,
+	CP.serial(_f,
 	     function(data) {
 		cbk(seclist);
 		},10000);
