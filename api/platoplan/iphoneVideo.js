@@ -8,10 +8,10 @@ function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
 	var CP = new pkg.crowdProcess();
 	var _f = {};
-	list = list.sort(function(a, b){
+	list.sort(function(a, b){
 			var x = parseInt(a.replace('.mp4', '')),
 			    y = parseInt(b.replace('.mp4', ''))
-			return y - x
+			return x - y
 		})
 	for (var i = 0; i < list.length; i++) {
 		_f['s_' + i] = (function(i) {
@@ -35,7 +35,7 @@ function verifiedSection(ddr, list, cbk) {
 			}
 			})(i)
 	}
-	CP.parallel(_f,
+	CP.serial(_f,
 	     function(data) {
 		cbk(seclist);
 		},6000);
