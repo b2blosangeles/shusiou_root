@@ -151,20 +151,28 @@ switch(req.query.code) {
 			    cbk(true);                                             
 			});			
 		};	
-		_f['sections'] = function(cbk) { 
+		
+
+		_f['read_sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
-				if (!err && sectionList.length > 1) {
-					sectionList.sort(function(a, b){
-						var x = parseInt(a.replace('.mp4', '')),
-						    y = parseInt(b.replace('.mp4', ''))
-						return x - y
-				    	})
-					cbk(sectionList)
-				} else {
-				       cbk(false);
-					CP.exit = 1
-				}
+				verifiedSection(ddr, items1, function(list) {
+					   cbk(sectionList)
+				   }) 
 			});			
+		};		
+		_f['sections'] = function(cbk) { 
+			var sectionList = CP.data.read_sections;
+			if (!err && sectionList.length > 1) {
+				sectionList.sort(function(a, b){
+					var x = parseInt(a.replace('.mp4', '')),
+					    y = parseInt(b.replace('.mp4', ''))
+					return x - y
+				})
+				cbk(sectionList)
+			} else {
+			       cbk(false);
+				CP.exit = 1
+			}			
 		};
 		_f['buildVideoTxt'] = function(cbk) { 
 		    var sectionList = CP.data.sections;
