@@ -11,7 +11,7 @@ function verifiedSection(ddr, list, cbk) {
 	list = list.sort(function(a, b){
 			var x = parseInt(a.replace('.mp4', '')),
 			    y = parseInt(b.replace('.mp4', ''))
-			return x - y
+			return y - x
 		})
 	for (var i = 0; i < list.length; i++) {
 		_f['s_' + i] = (function(i) {
