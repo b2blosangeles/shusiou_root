@@ -155,9 +155,10 @@ switch(req.query.code) {
 
 		_f['read_sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
-				verifiedSection(video_src_dir, sectionList, function(list) {
-					   cbk(list)
-				   }) 
+				 cbk( sectionList)
+				// verifiedSection(video_src_dir, sectionList, function(list) {
+				//	   cbk(list)
+				//   }) 
 			});			
 		};		
 		_f['sections'] = function(cbk) { 
