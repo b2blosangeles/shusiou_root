@@ -23,6 +23,15 @@ switch(req.query.opt) {
                   cbk({success:true, cmd : cmd});
                }); 
             }
+            /*
+            _f['verify'] = function(cbk) {
+               var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > ' + tmpSection + ' && cd ' +  tmpPath + 
+                   ' && rm -fr ' + tmpTrunkPath;
+
+                pkg.exec(cmd, function(error, stdout, stderr) {
+                  cbk({success:true, cmd : cmd});
+               }); 
+            } */          
             CP.serial(
               _f,
               function(data) {
