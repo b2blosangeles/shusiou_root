@@ -35,7 +35,7 @@ function verifiedSection(ddr, list, cbk) {
 			}
 			})(i)
 	}
-	CP.serial(_f,
+	CP.parallel(_f,
 	     function(data) {
 		cbk(seclist);
 		},10000);
