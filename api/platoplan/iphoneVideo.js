@@ -23,7 +23,7 @@ function verifiedSection(ddr, list, cbk) {
 				}
 			})(i)
 	}
-	CP.parallel(_f,
+	CP.serial(_f,
 	     function(data) {
 		cbk(seclist);
 		},10000);
