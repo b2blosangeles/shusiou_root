@@ -40,7 +40,7 @@ switch(req.query.code) {
 				var ddr = cloudPath + items[i] + '/tmp/' + vid;
 				pkg.fs.readdir(ddr, function(err, items1) {
 				    for (var j = 0; j < items1.length; j++) {
-					 videoList[videoList.length] = {phone: items[i], qsection: items1[j]}
+					// videoList[videoList.length] = {phone: items[i], qsection: items1[j]}
 				    }
 				   verifiedSection(ddr, items1, cbk1)
 				//   cbk1(true)
