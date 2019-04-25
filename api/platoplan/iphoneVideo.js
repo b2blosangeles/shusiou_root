@@ -16,7 +16,7 @@ function verifiedSection(ddr, list, cbk) {
 					var ls = childProcess.exec(str, 		   
 					function (error, stdout, stderr) {
 						if (!stdout.length) {
-							seclist[seclist.length] = str //list[i];
+							seclist[seclist.length] = stdout //list[i];
 						}
 						cbk2(true);
 					});
