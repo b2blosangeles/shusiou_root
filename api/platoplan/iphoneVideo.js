@@ -59,12 +59,7 @@ switch(req.query.code) {
 		var secid = req.query.secid;
 		
 		var video_file = cloudPath + phoneId + '/tmp/' + vid + '/' + secid;
-		pkg.fs.stat(video_file, function(err, data1) {
-			if (err) {  write404(file_video + ' does not exist'); }
-			else {
- 				video_file.pipe(res);
-			}
-		});			     	
+		res.send(video_file);			     	
 		break;		
 	case 'getVideos':
 		var CP = new pkg.crowdProcess();
