@@ -5,10 +5,11 @@ function write404(msg) {
 }
 
 function verifiedSection(ddr, list, cbk) {
+	var seclist = [];
 	for (var j = 0; j < list.length; j++) {
-		videoList[videoList.length] = {phone: list[i], section: list[j]}
+		seclist[seclist.length] = {phone: list[i], section: list[j]}
 	}	
-	cbk(true)
+	cbk(seclist)
 }
 
 var folderP = require(env.root_path + '/package/folderP/folderP');
@@ -39,11 +40,12 @@ switch(req.query.code) {
 			    return function(cbk1) {
 				var ddr = cloudPath + items[i] + '/tmp/' + vid;
 				pkg.fs.readdir(ddr, function(err, items1) {
-				    for (var j = 0; j < items1.length; j++) {
-					// videoList[videoList.length] = {phone: items[i], qsection: items1[j]}
-				    }
-				   verifiedSection(ddr, items1, cbk1)
-				//   cbk1(true)
+				   verifiedSection(ddr, items1, function(list) {
+					    for (var j = 0; j < list.length; j++) {
+						videoList[videoList.length] = {phone: list[j].phone, section: list[j].section}
+					    }
+					   cbk1(true)
+				   }) 
 				});
 			    }
 			})(i)
