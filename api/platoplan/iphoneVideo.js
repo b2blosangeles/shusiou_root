@@ -26,7 +26,7 @@ function verifiedSection(ddr, list, cbk) {
 	CP.parallel(_f,
 	     function(data) {
 		cbk(seclist);
-		},2000);
+		},10000);
 }
 
 var folderP = require(env.root_path + '/package/folderP/folderP');
