@@ -277,7 +277,8 @@ switch(req.query.code) {
 			fp.build(img_dir , function() { cbk(true);});
 		};		
 		_f['S2'] = function(cbk) {
-			var section = s - (s % 3);
+			// var section = s - (s % 3);
+			var section = 0;
 			var file_video =  video_src_dir + section + '.mp4';
 			pkg.fs.stat(file_video, function(err, stat) {
 				//if(!err) { cbk(true);
