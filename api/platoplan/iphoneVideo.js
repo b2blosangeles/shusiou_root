@@ -8,11 +8,6 @@ function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
 	var CP = new pkg.crowdProcess();
 	var _f = {};
-	list.sort(function(a, b){
-			var x = parseInt(a.replace('.mp4', '')),
-			    y = parseInt(b.replace('.mp4', ''))
-			return x - y
-		})
 	for (var i = 0; i < list.length; i++) {
 		_f['s_' + i] = (function(i) {
 			if  (i < 2) {
@@ -35,8 +30,13 @@ function verifiedSection(ddr, list, cbk) {
 			}
 			})(i)
 	}
-	CP.serial(_f,
+	CP.parallel(_f,
 	     function(data) {
+		seclist.sort(function(a, b){
+			var x = parseInt(a.replace('.mp4', '')),
+			    y = parseInt(b.replace('.mp4', ''))
+			return x - y
+		})
 		cbk(seclist);
 		},6000);
 }
