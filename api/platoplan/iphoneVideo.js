@@ -236,7 +236,7 @@ switch(req.query.code) {
 		var vid = req.query.vid;
 		var phoneId = req.query.phoneId;		
 		
-		var s = (req.query.s) ? req.query.s : 1, 
+		var s = (req.query.s) ? req.query.s : 5, 
 		    w='FULL',
 		    str = '';
 		
@@ -278,7 +278,7 @@ switch(req.query.code) {
 		};		
 		_f['S2'] = function(cbk) {
 			var section = s - (s % 3);
-			var file_video =  video_src_dir + '0.mp4';
+			var file_video =  video_src_dir + section + '.mp4';
 			pkg.fs.stat(file_video, function(err, stat) {
 				//if(!err) { cbk(true);
 				//} else {
