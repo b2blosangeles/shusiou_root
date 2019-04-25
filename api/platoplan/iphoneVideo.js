@@ -236,7 +236,7 @@ switch(req.query.code) {
 		var vid = req.query.vid;
 		var phoneId = req.query.phoneId;		
 		
-		var s = (req.query.s) ? req.query.s : 5, 
+		var s = (req.query.s) ? req.query.s : 1, 
 		    w='FULL',
 		    str = '';
 		
