@@ -52,6 +52,19 @@ switch(req.query.code) {
 		     function(data) {
 			res.send(CP.data.videos);
 		     },60000)
+		break;
+	case 'playSection':
+		var vid = req.query.vid;
+		var phoneId = req.query.phoneId;	
+		var secid = req.query.secid;
+		
+		var video_file = cloudPath + phoneId + '/tmp/' + vid + '/' + secid;
+		pkg.fs.stat(video_file, function(err, data1) {
+			if (err) {  write404(file_video + ' does not exist'); }
+			else {
+ 				video.pipe(res);
+			}
+		});			     	
 		break;		
 	case 'getVideos':
 		var CP = new pkg.crowdProcess();
