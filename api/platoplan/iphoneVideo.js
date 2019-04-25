@@ -23,10 +23,10 @@ function verifiedSection(ddr, list, cbk) {
 				}
 			})(i)
 	}
-	CP.serial(_f,
+	CP.parallel(_f,
 	     function(data) {
 		cbk(seclist);
-		},10000);
+		},2000);
 }
 
 var folderP = require(env.root_path + '/package/folderP/folderP');
@@ -67,11 +67,11 @@ switch(req.query.code) {
 			    }
 			})(i)
 		    }
-		    CP1.parallel(
+		    CP1.serial(
 		     _f1,
 		     function(data) {
 			cbk(videoList);
-			},2000)
+			},10000)
 
 		};
 		
