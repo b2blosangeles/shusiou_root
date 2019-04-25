@@ -302,7 +302,7 @@ switch(req.query.code) {
 				} else {
 					res.sendFile(tmpfn);
 				}
-			}, 3000);			
+			}, 9000);			
 		
 		break;
 	default:
