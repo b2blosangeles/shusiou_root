@@ -151,7 +151,7 @@ switch(req.query.code) {
 			    cbk(true);                                             
 			});			
 		};	
-		/*
+		
 
 		_f['read_sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
@@ -160,7 +160,7 @@ switch(req.query.code) {
 				//	   cbk(list)
 				//   }) 
 			});			
-		};	*/
+		};	
 		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
 				if (!err && sectionList.length > 1) {
