@@ -5,6 +5,8 @@ function write404(msg) {
 }
 
 function verifiedSection(ddr, list, cbk) {
+	cbk(list);
+	/*
 	var seclist = [];
 	var CP = new pkg.crowdProcess();
 	var _f = {};
@@ -16,13 +18,13 @@ function verifiedSection(ddr, list, cbk) {
 				});
 			    }
 			})(i)
-		
 	}
 	CP.serial(
 	     _f,
 	     function(data) {
 		cbk(seclist);
 		},10000);
+	*/
 }
 
 var folderP = require(env.root_path + '/package/folderP/folderP');
