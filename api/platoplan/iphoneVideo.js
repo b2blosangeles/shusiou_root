@@ -151,7 +151,7 @@ switch(req.query.code) {
 			    cbk(true);                                             
 			});			
 		};	
-		
+		/*
 
 		_f['read_sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
@@ -160,7 +160,23 @@ switch(req.query.code) {
 				//	   cbk(list)
 				//   }) 
 			});			
-		};		
+		};	*/
+		_f['sections'] = function(cbk) { 
+			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
+				if (!err && sectionList.length > 1) {
+					sectionList.sort(function(a, b){
+						var x = parseInt(a.replace('.mp4', '')),
+						    y = parseInt(b.replace('.mp4', ''))
+						return x - y
+				    	})
+					cbk(sectionList)
+				} else {
+				       cbk(false);
+					CP.exit = 1
+				}
+			});			
+		};
+		/*
 		_f['sections'] = function(cbk) { 
 			var sectionList = CP.data.read_sections;
 			if (!err && sectionList.length > 1) {
@@ -174,7 +190,7 @@ switch(req.query.code) {
 			       cbk(false);
 				CP.exit = 1
 			}			
-		};
+		};*/
 		_f['buildVideoTxt'] = function(cbk) { 
 		    var sectionList = CP.data.sections;
 		    var str = '';
