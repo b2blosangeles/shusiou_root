@@ -154,7 +154,7 @@ switch(req.query.code) {
 		_f['buildVideoTxt'] = function(cbk) { 
 		    var sectionList = CP.data.sections;
 		    var str = '';
-		    for (var j = 0; j < sectionList.length; j++) {
+		    for (var j = 1; j < sectionList.length; j++) {
 			str += "file '" +  sectionList[j] + "'\n";
 		    }
 		    pkg.fs.writeFile(video_dir + '/video.txt', str, function(err) {
