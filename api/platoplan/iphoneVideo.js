@@ -8,9 +8,15 @@ function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
 	var CP = new pkg.crowdProcess();
 	var _f = {};
+	list.sort(function(a, b){
+			var x = parseInt(a.replace('.mp4', '')),
+			    y = parseInt(b.replace('.mp4', ''))
+			return x - y
+		})
 	for (var i = 0; i < list.length; i++) {
 		_f['s_' + i] = (function(i) {
-			return function(cbk2) {
+			if  (i < 2) {
+				return function(cbk2) {
 					var str = 'cd ' + ddr + ' && ffmpeg -v error -i ' + list[i] + ' -f null - '
 					var childProcess = require('child_process');
 					var ls = childProcess.exec(str, 		   
@@ -21,6 +27,12 @@ function verifiedSection(ddr, list, cbk) {
 						cbk2(true);
 					});
 				}
+			} else {
+				return function(cbk2) {
+					seclist[seclist.length] = list[i];
+					cbk2(true);
+				}
+			}
 			})(i)
 	}
 	CP.serial(_f,
