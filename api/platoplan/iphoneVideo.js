@@ -175,38 +175,8 @@ switch(req.query.code) {
 				       cbk(false);
 					CP.exit = 1
 				}
-				// cbk( sectionList)
-				// verifiedSection(video_src_dir, sectionList, function(list) {
-				//	   cbk(list)
-				//   }) 
 			});			
 		};
-		/*
-		_f['sections'] = function(cbk) { 
-			var sectionList = CP.data.read_sections
-			sectionList.sort(function(a, b){
-				var x = parseInt(a.replace('.mp4', '')),
-				    y = parseInt(b.replace('.mp4', ''))
-				return x - y
-			})
-			cbk(sectionList)			
-		};
-		*/
-		/*
-		_f['sections'] = function(cbk) { 
-			var sectionList = CP.data.read_sections;
-			if (!err && sectionList.length > 1) {
-				sectionList.sort(function(a, b){
-					var x = parseInt(a.replace('.mp4', '')),
-					    y = parseInt(b.replace('.mp4', ''))
-					return x - y
-				})
-				cbk(sectionList)
-			} else {
-			       cbk(false);
-				CP.exit = 1
-			}			
-		};*/
 		_f['buildVideoTxt'] = function(cbk) { 
 		    var sectionList = CP.data.sections;
 		    var str = '';
@@ -289,21 +259,19 @@ switch(req.query.code) {
 				cbk(true);
 			});
 		}
+
 		_f['sections'] = function(cbk) { 
 			pkg.fs.readdir(video_src_dir, function(err, sectionList) {
 				if (!err && sectionList.length > 1) {
-					sectionList.sort(function(a, b){
-						var x = parseInt(a.replace('.mp4', '')),
-						    y = parseInt(b.replace('.mp4', ''))
-						return x - y
-				    	})
-					cbk(sectionList)
+					verifiedSection(video_src_dir, sectionList, function(list) {
+					   cbk(list)
+					}) 
 				} else {
 				       cbk(false);
 					CP.exit = 1
 				}
 			});			
-		};		
+		};	
 		_f['buildPath'] = function(cbk) { 
 			var fp = new folderP();
 			fp.build(img_dir , function() { cbk(true);});
