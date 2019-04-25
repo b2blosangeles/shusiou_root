@@ -15,21 +15,27 @@ switch(req.query.opt) {
             items.sort(function(a, b) {
                return parseInt(a) - parseInt(b);
             });
-            var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > ' + tmpSection + ' && cd ' +  tmpPath + 
-                ' && rm -fr ' + tmpTrunkPath;
-             
-             pkg.exec(cmd, function(error, stdout, stderr) {
-               res.send({success:true, cmd : cmd});
-            });              
+            _f['combine'] = function(cbk) {
+               var cmd = 'cd ' + tmpTrunkPath + ' && cat ' + items.join(' ') + ' > ' + tmpSection + ' && cd ' +  tmpPath + 
+                   ' && rm -fr ' + tmpTrunkPath;
+
+                pkg.exec(cmd, function(error, stdout, stderr) {
+                  cbk({success:true, cmd : cmd});
+               }); 
+            }
+            CP.serial(
+              _f,
+              function(data) {
+                res.send({success:true});
+              },10000);
          });   
          break;
    case 'postData':
-
          var videoPath = '/var/mobileCloud/' + req.query.uuid + '/videos/' + req.query.vid + '/';
          var tmpTrunkPath = '/var/mobileCloud/' + req.query.uuid + '/tmpTrunk/' + req.query.vid + '/' + req.query.sec + '/' ;
          var tmpPath = '/var/mobileCloud/' + req.query.uuid + '/tmp/' + req.query.vid + '/' ;
       
-          var CP = new pkg.crowdProcess();
+         var CP = new pkg.crowdProcess();
          var _f = {};     
          _f['videoPath'] = function(cbk) { 
               var fp = new folderP();
