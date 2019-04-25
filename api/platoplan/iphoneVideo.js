@@ -62,7 +62,7 @@ switch(req.query.code) {
 		pkg.fs.stat(video_file, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
- 				video.pipe(res);
+ 				video_file.pipe(res);
 			}
 		});			     	
 		break;		
