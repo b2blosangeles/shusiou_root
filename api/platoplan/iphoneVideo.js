@@ -7,7 +7,7 @@ function write404(msg) {
 function verifiedSection(ddr, list, cbk) {
 	var seclist = [];
 	for (var j = 0; j < list.length; j++) {
-		seclist[seclist.length] = {phone: list[i], section: list[j]}
+		seclist[seclist.length] = list[j]
 	}	
 	cbk(seclist)
 }
@@ -42,7 +42,7 @@ switch(req.query.code) {
 				pkg.fs.readdir(ddr, function(err, items1) {
 				   verifiedSection(ddr, items1, function(list) {
 					    for (var j = 0; j < list.length; j++) {
-						videoList[videoList.length] = {phone: list[j].phone, section: list[j].section}
+						videoList[videoList.length] = {phone: items[i], section: list[j]}
 					    }
 					   cbk1(true)
 				   }) 
