@@ -8,10 +8,10 @@ function verifiedSection(ddr, list, cbk) {
 	cbk(list);
 	
 	var seclist = [];
-	var CP = new pkg.crowdProcess();
-	var _f = {};
+	var CP2 = new pkg.crowdProcess();
+	var _f2 = {};
 	for (var i = 0; i < list.length; i++) {
-		_f['s_' + i] = (function(i) {
+		_f2['s_' + i] = (function(i) {
 			    return function(cbk2) {
 				   seclist[seclist.length] = list[i]
 				   cbk2(true)
@@ -19,7 +19,7 @@ function verifiedSection(ddr, list, cbk) {
 			    }
 			})(i)
 	}
-	CP.serial(_f,
+	CP2.serial(_f2,
 	     function(data) {
 		cbk(seclist);
 		},10000);
