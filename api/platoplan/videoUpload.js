@@ -25,7 +25,7 @@ switch(req.query.opt) {
             }
            
             _f['verify'] = function(cbk) {
-               var cmd = 'cd ' + tmpPath + ' && ffmpeg -v error -i ' + tmpSection + ' -f null - ';
+                var cmd = 'cd ' + tmpPath + ' && ffmpeg -v error -i ' + tmpSection + ' -f null - ';
                 pkg.exec(cmd, function(error, stdout, stderr) {
                   if (error) cbk(false)
                   else cbk(true)
@@ -33,7 +33,7 @@ switch(req.query.opt) {
             }    
              _f['clean'] = function(cbk) {
                 if (!CP.data.verify) {
-                   pkg.exec('rm -f ' + tmpSection, function(error, stdout, stderr) {
+                   pkg.exec('rm -fr ' + tmpSection, function(error, stdout, stderr) {
                      cbk(true)
                     }); 
                 } else {
