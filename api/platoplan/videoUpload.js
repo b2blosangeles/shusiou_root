@@ -23,7 +23,7 @@ switch(req.query.opt) {
                   cbk({success:true, cmd : cmd});
                }); 
             }
-           
+           /*
             _f['verify'] = function(cbk) {
                 var cmd = 'cd ' + tmpPath + ' && ffmpeg -v error -i ' + tmpSection + ' -f null - ';
                 pkg.exec(cmd, function(error, stdout, stderr) {
@@ -39,7 +39,7 @@ switch(req.query.opt) {
                 } else {
                   cbk(true)
                 }
-            }  
+            }  */
             
             CP.serial(
               _f,
