@@ -44,7 +44,7 @@ switch(req.query.opt) {
               _f,
               function(data) {
                 res.send({success:true});
-              },10000);
+              },30000);
          });   
          break;
    case 'postData':
