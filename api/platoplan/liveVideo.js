@@ -120,8 +120,6 @@ CP.serial(
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
-
-				
 				var total = data1.size;
 				var range = req.headers.range;
 				if (range) {
