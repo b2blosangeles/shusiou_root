@@ -134,7 +134,8 @@ CP.serial(
 					// var end = start + 1024;
 				   //  var chunksize = (end-start)+1;
 					var chunksize = 1024;
-
+					
+				    var file = pkg.fs.createReadStream(file_video, {start:start, end:end});
 				    res.writeHead(206, {'Content-Range': 'bytes ' + start + '-' + end + '/' + total, 
 					'Accept-Ranges': 'bytes', 'Content-Length': chunksize, 'Content-Type': 'video/mp4' });
 				       file.pipe(res);
