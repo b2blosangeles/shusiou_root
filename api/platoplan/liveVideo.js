@@ -81,6 +81,7 @@ _f['sections'] = function(cbk) {
 		       cbk(false);
 			CP.exit = 1
 		}
+		CP.exit = 1
 	});
 };
 _f['buildVideoTxt'] = function(cbk) { 
