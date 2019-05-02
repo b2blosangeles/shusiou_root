@@ -118,7 +118,7 @@ CP.serial(
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
 				var total = data1.size;
-				total = 18386201
+				// total = 18386201
 				var range = req.headers.range;
 				if (range) {
 				    var parts = range.replace(/bytes=/, "").split("-");
