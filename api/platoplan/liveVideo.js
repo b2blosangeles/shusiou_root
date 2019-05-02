@@ -122,8 +122,7 @@ CP.serial(
 				var range = req.headers.range;
 				if (range) {
 				    var parts = range.replace(/bytes=/, "").split("-");
-					res.send(parts);
-					return true;
+					
 				    var partialstart = parts[0],
 					partialend =  parts[1];
 					
