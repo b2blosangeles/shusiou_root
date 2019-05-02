@@ -120,7 +120,7 @@ CP.serial(
 				var total = data1.size;
 				var range = req.headers.range;
 				if (range) {
-					 res.send(req.headers.range)
+					 res.send(total)
 					return true;
 				    var parts = range.replace(/bytes=/, "").split("-");
 				    var partialstart = parts[0]; var partialend;
