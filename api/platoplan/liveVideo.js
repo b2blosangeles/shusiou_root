@@ -121,8 +121,6 @@ CP.serial(
 				// total = 18386201
 				var range = req.headers.range;
 				if (range) {
-					res.send(range);
-					return true;
 				    var parts = range.replace(/bytes=/, "").split("-");
 					res.send(parts);
 					return true;
