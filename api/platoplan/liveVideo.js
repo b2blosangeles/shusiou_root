@@ -118,10 +118,9 @@ CP.serial(
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
 				var total = data1.size;
+				total = 38386201
 				var range = req.headers.range;
 				if (range) {
-					 res.send(total + "")
-					return true;
 				    var parts = range.replace(/bytes=/, "").split("-");
 				    var partialstart = parts[0]; var partialend;
 				      partialend =  parts[1];
