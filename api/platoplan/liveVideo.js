@@ -127,6 +127,7 @@ CP.serial(
 					partialend =  parts[1];
 					
 				    var start = parseInt(partialstart, 10);
+					start = 0;
 				    // var end = partialend ? parseInt(partialend, 10) : total-1;
 					var end = partialend ? (start + 1000000) : total-1;
 				    var chunksize = (end-start)+1;
