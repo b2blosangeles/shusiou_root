@@ -82,7 +82,6 @@ _f['sections'] = function(cbk) {
 			CP.exit = 1
 		}
 	});
-	CP.exit = 1
 };
 _f['buildVideoTxt'] = function(cbk) { 
     var sectionList = CP.data.sections;
