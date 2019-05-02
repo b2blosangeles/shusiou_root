@@ -122,8 +122,10 @@ CP.serial(
 				var range = req.headers.range;
 				if (range) {
 				    var parts = range.replace(/bytes=/, "").split("-");
-				    var partialstart = parts[0]; var partialend;
-				      partialend =  parts[1];
+					
+				    var partialstart = parts[0],
+					partialend =  parts[1];
+					
 				    var start = parseInt(partialstart, 10);
 				    var end = partialend ? parseInt(partialend, 10) : total-1;
 				    var chunksize = (end-start)+1;
