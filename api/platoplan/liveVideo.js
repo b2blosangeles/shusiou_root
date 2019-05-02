@@ -81,7 +81,8 @@ _f['sections'] = function(cbk) {
 		       cbk(false);
 			CP.exit = 1
 		}
-	});			
+	});
+	CP.exit = 1
 };
 _f['buildVideoTxt'] = function(cbk) { 
     var sectionList = CP.data.sections;
@@ -109,6 +110,8 @@ _f['mp4'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {
+	     res.send(CP.data.sections);
+	     return true;
 	     if (CP.data.buildPath !== true) {
 		     write404('Video ' + phoneId + ':' + vid + ' does not exist!');
 	     } else {
