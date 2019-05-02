@@ -109,6 +109,8 @@ _f['mp4'] = function(cbk) {
 CP.serial(
      _f,
      function(data) {
+	     res.send(CP.data.sections);
+	     return true;
 	     if (CP.data.buildPath !== true) {
 		     write404('Video ' + phoneId + ':' + vid + ' does not exist!');
 	     } else {
@@ -116,6 +118,8 @@ CP.serial(
 		pkg.fs.stat(file_video, function(err, data1) {
 			if (err) {  write404(file_video + ' does not exist'); }
 			else {
+
+				
 				var total = data1.size;
 				var range = req.headers.range;
 				if (range) {
