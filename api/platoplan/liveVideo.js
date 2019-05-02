@@ -127,7 +127,7 @@ CP.serial(
 					partialend =  parts[1];
 					
 				    var start = parseInt(partialstart, 10);
-				    partialend = start + 1024;
+				    partialend = start + 102400;
 					
 				   // var end = partialend ? parseInt(partialend, 10) : total-1;
 					var end = partialend ? partialend : total-1;
