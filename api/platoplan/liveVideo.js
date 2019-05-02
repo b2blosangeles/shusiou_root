@@ -133,7 +133,7 @@ CP.serial(
 					var end = partialend ? partialend : total-1;
 					// var end = start + 1024;
 				   //  var chunksize = (end-start)+1;
-					var chunksize = 1024;
+					var chunksize = 102400;
 					
 				    var file = pkg.fs.createReadStream(file_video, {start:start, end:end});
 				    res.writeHead(206, {'Content-Range': 'bytes ' + start + '-' + end + '/' + total, 
