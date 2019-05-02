@@ -48,8 +48,8 @@ var cloudPath = '/var/mobileCloud/';
 var videoPath = '/tmp/videos/';
 var imagePath = '/tmp/videoImgs/';
 
-var vid = req.query.vid;
-var phoneId = req.query.phoneId;	
+var vid = (!req.query.vid) ? 'video_1556375425' : req.query.vid;
+var phoneId = (!req.query.phoneId) ? 'D3E6D259-0B48-4A20-8DF0-03668DC66873' : req.query.phoneId;	
 
 var video_src_dir = cloudPath + phoneId + '/tmp/' + vid + '/';
 var video_dir = videoPath + phoneId + '/' + vid + '/';
@@ -139,6 +139,6 @@ CP.serial(
 		});			     
 	     } 
 
-     },60000)	
+     },60000);
 		
 		
